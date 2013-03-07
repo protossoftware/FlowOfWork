@@ -1,0 +1,39 @@
+grammar de.protos.FlowOfWork.core.fow.FoW with org.eclipse.xtext.common.Terminals
+
+generate foW "http://www.protos.de/FlowOfWork/core/fow/FoW"
+
+Model:
+	(
+		activities+=Activity |
+		roles+=Role |
+		workProducts+=WorkProduct
+	)*
+	;
+	
+Role:
+	'Role' name=ID 
+	';'
+;
+
+WorkProduct:
+	'WorkProduct' name=ID 
+	';'
+;
+
+Port:
+	name=ID ':' type=[WorkProduct]
+;
+
+Activity:
+	'Activity' name=ID
+	'role' role=[Role]
+	('input' inPorts+=Port)*
+	('output' outPorts+=Port)*
+	activityRefs+=ActivityRef*
+	';'
+;
+	
+ActivityRef:
+	'subActivity' name=ID ':' type=[Activity];
+
+	
