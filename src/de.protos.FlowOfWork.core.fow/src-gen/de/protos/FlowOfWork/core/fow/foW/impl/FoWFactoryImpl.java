@@ -65,11 +65,16 @@ public class FoWFactoryImpl extends EFactoryImpl implements FoWFactory
     switch (eClass.getClassifierID())
     {
       case FoWPackage.MODEL: return createModel();
+      case FoWPackage.NAMED_ELEMENT: return createNamedElement();
       case FoWPackage.ROLE: return createRole();
+      case FoWPackage.WORK_PRODUCT_TYPE: return createWorkProductType();
       case FoWPackage.WORK_PRODUCT: return createWorkProduct();
+      case FoWPackage.GUIDANCE_TYPE: return createGuidanceType();
+      case FoWPackage.GUIDANCE: return createGuidance();
       case FoWPackage.PORT: return createPort();
       case FoWPackage.ACTIVITY: return createActivity();
       case FoWPackage.ACTIVITY_REF: return createActivityRef();
+      case FoWPackage.TEXTFIELD: return createTextfield();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -91,6 +96,17 @@ public class FoWFactoryImpl extends EFactoryImpl implements FoWFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public NamedElement createNamedElement()
+  {
+    NamedElementImpl namedElement = new NamedElementImpl();
+    return namedElement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Role createRole()
   {
     RoleImpl role = new RoleImpl();
@@ -102,10 +118,43 @@ public class FoWFactoryImpl extends EFactoryImpl implements FoWFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public WorkProductType createWorkProductType()
+  {
+    WorkProductTypeImpl workProductType = new WorkProductTypeImpl();
+    return workProductType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public WorkProduct createWorkProduct()
   {
     WorkProductImpl workProduct = new WorkProductImpl();
     return workProduct;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public GuidanceType createGuidanceType()
+  {
+    GuidanceTypeImpl guidanceType = new GuidanceTypeImpl();
+    return guidanceType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Guidance createGuidance()
+  {
+    GuidanceImpl guidance = new GuidanceImpl();
+    return guidance;
   }
 
   /**
@@ -139,6 +188,17 @@ public class FoWFactoryImpl extends EFactoryImpl implements FoWFactory
   {
     ActivityRefImpl activityRef = new ActivityRefImpl();
     return activityRef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Textfield createTextfield()
+  {
+    TextfieldImpl textfield = new TextfieldImpl();
+    return textfield;
   }
 
   /**

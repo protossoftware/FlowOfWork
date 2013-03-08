@@ -94,13 +94,77 @@ public interface FoWPackage extends EPackage
   int MODEL__WORK_PRODUCTS = 2;
 
   /**
+   * The feature id for the '<em><b>Work Product Types</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MODEL__WORK_PRODUCT_TYPES = 3;
+
+  /**
+   * The feature id for the '<em><b>Guidances</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MODEL__GUIDANCES = 4;
+
+  /**
+   * The feature id for the '<em><b>Guidance Types</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MODEL__GUIDANCE_TYPES = 5;
+
+  /**
    * The number of structural features of the '<em>Model</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODEL_FEATURE_COUNT = 3;
+  int MODEL_FEATURE_COUNT = 6;
+
+  /**
+   * The meta object id for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.NamedElementImpl <em>Named Element</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.protos.FlowOfWork.core.fow.foW.impl.NamedElementImpl
+   * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getNamedElement()
+   * @generated
+   */
+  int NAMED_ELEMENT = 1;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NAMED_ELEMENT__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Textfield</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NAMED_ELEMENT__TEXTFIELD = 1;
+
+  /**
+   * The number of structural features of the '<em>Named Element</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NAMED_ELEMENT_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.RoleImpl <em>Role</em>}' class.
@@ -110,7 +174,7 @@ public interface FoWPackage extends EPackage
    * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getRole()
    * @generated
    */
-  int ROLE = 1;
+  int ROLE = 2;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -119,7 +183,16 @@ public interface FoWPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ROLE__NAME = 0;
+  int ROLE__NAME = NAMED_ELEMENT__NAME;
+
+  /**
+   * The feature id for the '<em><b>Textfield</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ROLE__TEXTFIELD = NAMED_ELEMENT__TEXTFIELD;
 
   /**
    * The number of structural features of the '<em>Role</em>' class.
@@ -128,7 +201,44 @@ public interface FoWPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ROLE_FEATURE_COUNT = 1;
+  int ROLE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.WorkProductTypeImpl <em>Work Product Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.protos.FlowOfWork.core.fow.foW.impl.WorkProductTypeImpl
+   * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getWorkProductType()
+   * @generated
+   */
+  int WORK_PRODUCT_TYPE = 3;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WORK_PRODUCT_TYPE__NAME = NAMED_ELEMENT__NAME;
+
+  /**
+   * The feature id for the '<em><b>Textfield</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WORK_PRODUCT_TYPE__TEXTFIELD = NAMED_ELEMENT__TEXTFIELD;
+
+  /**
+   * The number of structural features of the '<em>Work Product Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WORK_PRODUCT_TYPE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.WorkProductImpl <em>Work Product</em>}' class.
@@ -138,7 +248,7 @@ public interface FoWPackage extends EPackage
    * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getWorkProduct()
    * @generated
    */
-  int WORK_PRODUCT = 2;
+  int WORK_PRODUCT = 4;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -147,7 +257,25 @@ public interface FoWPackage extends EPackage
    * @generated
    * @ordered
    */
-  int WORK_PRODUCT__NAME = 0;
+  int WORK_PRODUCT__NAME = NAMED_ELEMENT__NAME;
+
+  /**
+   * The feature id for the '<em><b>Textfield</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WORK_PRODUCT__TEXTFIELD = NAMED_ELEMENT__TEXTFIELD;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WORK_PRODUCT__TYPE = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Work Product</em>' class.
@@ -156,7 +284,90 @@ public interface FoWPackage extends EPackage
    * @generated
    * @ordered
    */
-  int WORK_PRODUCT_FEATURE_COUNT = 1;
+  int WORK_PRODUCT_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.GuidanceTypeImpl <em>Guidance Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.protos.FlowOfWork.core.fow.foW.impl.GuidanceTypeImpl
+   * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getGuidanceType()
+   * @generated
+   */
+  int GUIDANCE_TYPE = 5;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GUIDANCE_TYPE__NAME = NAMED_ELEMENT__NAME;
+
+  /**
+   * The feature id for the '<em><b>Textfield</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GUIDANCE_TYPE__TEXTFIELD = NAMED_ELEMENT__TEXTFIELD;
+
+  /**
+   * The number of structural features of the '<em>Guidance Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GUIDANCE_TYPE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.GuidanceImpl <em>Guidance</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.protos.FlowOfWork.core.fow.foW.impl.GuidanceImpl
+   * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getGuidance()
+   * @generated
+   */
+  int GUIDANCE = 6;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GUIDANCE__NAME = NAMED_ELEMENT__NAME;
+
+  /**
+   * The feature id for the '<em><b>Textfield</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GUIDANCE__TEXTFIELD = NAMED_ELEMENT__TEXTFIELD;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GUIDANCE__TYPE = NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Guidance</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GUIDANCE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.PortImpl <em>Port</em>}' class.
@@ -166,7 +377,7 @@ public interface FoWPackage extends EPackage
    * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getPort()
    * @generated
    */
-  int PORT = 3;
+  int PORT = 7;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -203,7 +414,7 @@ public interface FoWPackage extends EPackage
    * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getActivity()
    * @generated
    */
-  int ACTIVITY = 4;
+  int ACTIVITY = 8;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -212,7 +423,16 @@ public interface FoWPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ACTIVITY__NAME = 0;
+  int ACTIVITY__NAME = NAMED_ELEMENT__NAME;
+
+  /**
+   * The feature id for the '<em><b>Textfield</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACTIVITY__TEXTFIELD = NAMED_ELEMENT__TEXTFIELD;
 
   /**
    * The feature id for the '<em><b>Role</b></em>' reference.
@@ -221,7 +441,7 @@ public interface FoWPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ACTIVITY__ROLE = 1;
+  int ACTIVITY__ROLE = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>In Ports</b></em>' containment reference list.
@@ -230,7 +450,7 @@ public interface FoWPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ACTIVITY__IN_PORTS = 2;
+  int ACTIVITY__IN_PORTS = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Out Ports</b></em>' containment reference list.
@@ -239,16 +459,25 @@ public interface FoWPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ACTIVITY__OUT_PORTS = 3;
+  int ACTIVITY__OUT_PORTS = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
   /**
-   * The feature id for the '<em><b>Activity Refs</b></em>' containment reference list.
+   * The feature id for the '<em><b>Sub Activities</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ACTIVITY__ACTIVITY_REFS = 4;
+  int ACTIVITY__SUB_ACTIVITIES = NAMED_ELEMENT_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Guidances</b></em>' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACTIVITY__GUIDANCES = NAMED_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The number of structural features of the '<em>Activity</em>' class.
@@ -257,7 +486,7 @@ public interface FoWPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ACTIVITY_FEATURE_COUNT = 5;
+  int ACTIVITY_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 5;
 
   /**
    * The meta object id for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.ActivityRefImpl <em>Activity Ref</em>}' class.
@@ -267,7 +496,7 @@ public interface FoWPackage extends EPackage
    * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getActivityRef()
    * @generated
    */
-  int ACTIVITY_REF = 5;
+  int ACTIVITY_REF = 9;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -295,6 +524,52 @@ public interface FoWPackage extends EPackage
    * @ordered
    */
   int ACTIVITY_REF_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.TextfieldImpl <em>Textfield</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.protos.FlowOfWork.core.fow.foW.impl.TextfieldImpl
+   * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getTextfield()
+   * @generated
+   */
+  int TEXTFIELD = 10;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TEXTFIELD__LABEL = 0;
+
+  /**
+   * The feature id for the '<em><b>Summary</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TEXTFIELD__SUMMARY = 1;
+
+  /**
+   * The feature id for the '<em><b>Description</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TEXTFIELD__DESCRIPTION = 2;
+
+  /**
+   * The number of structural features of the '<em>Textfield</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TEXTFIELD_FEATURE_COUNT = 3;
 
 
   /**
@@ -341,6 +616,71 @@ public interface FoWPackage extends EPackage
   EReference getModel_WorkProducts();
 
   /**
+   * Returns the meta object for the containment reference list '{@link de.protos.FlowOfWork.core.fow.foW.Model#getWorkProductTypes <em>Work Product Types</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Work Product Types</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.Model#getWorkProductTypes()
+   * @see #getModel()
+   * @generated
+   */
+  EReference getModel_WorkProductTypes();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link de.protos.FlowOfWork.core.fow.foW.Model#getGuidances <em>Guidances</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Guidances</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.Model#getGuidances()
+   * @see #getModel()
+   * @generated
+   */
+  EReference getModel_Guidances();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link de.protos.FlowOfWork.core.fow.foW.Model#getGuidanceTypes <em>Guidance Types</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Guidance Types</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.Model#getGuidanceTypes()
+   * @see #getModel()
+   * @generated
+   */
+  EReference getModel_GuidanceTypes();
+
+  /**
+   * Returns the meta object for class '{@link de.protos.FlowOfWork.core.fow.foW.NamedElement <em>Named Element</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Named Element</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.NamedElement
+   * @generated
+   */
+  EClass getNamedElement();
+
+  /**
+   * Returns the meta object for the attribute '{@link de.protos.FlowOfWork.core.fow.foW.NamedElement#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.NamedElement#getName()
+   * @see #getNamedElement()
+   * @generated
+   */
+  EAttribute getNamedElement_Name();
+
+  /**
+   * Returns the meta object for the containment reference '{@link de.protos.FlowOfWork.core.fow.foW.NamedElement#getTextfield <em>Textfield</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Textfield</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.NamedElement#getTextfield()
+   * @see #getNamedElement()
+   * @generated
+   */
+  EReference getNamedElement_Textfield();
+
+  /**
    * Returns the meta object for class '{@link de.protos.FlowOfWork.core.fow.foW.Role <em>Role</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -351,15 +691,14 @@ public interface FoWPackage extends EPackage
   EClass getRole();
 
   /**
-   * Returns the meta object for the attribute '{@link de.protos.FlowOfWork.core.fow.foW.Role#getName <em>Name</em>}'.
+   * Returns the meta object for class '{@link de.protos.FlowOfWork.core.fow.foW.WorkProductType <em>Work Product Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see de.protos.FlowOfWork.core.fow.foW.Role#getName()
-   * @see #getRole()
+   * @return the meta object for class '<em>Work Product Type</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.WorkProductType
    * @generated
    */
-  EAttribute getRole_Name();
+  EClass getWorkProductType();
 
   /**
    * Returns the meta object for class '{@link de.protos.FlowOfWork.core.fow.foW.WorkProduct <em>Work Product</em>}'.
@@ -372,15 +711,46 @@ public interface FoWPackage extends EPackage
   EClass getWorkProduct();
 
   /**
-   * Returns the meta object for the attribute '{@link de.protos.FlowOfWork.core.fow.foW.WorkProduct#getName <em>Name</em>}'.
+   * Returns the meta object for the reference '{@link de.protos.FlowOfWork.core.fow.foW.WorkProduct#getType <em>Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see de.protos.FlowOfWork.core.fow.foW.WorkProduct#getName()
+   * @return the meta object for the reference '<em>Type</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.WorkProduct#getType()
    * @see #getWorkProduct()
    * @generated
    */
-  EAttribute getWorkProduct_Name();
+  EReference getWorkProduct_Type();
+
+  /**
+   * Returns the meta object for class '{@link de.protos.FlowOfWork.core.fow.foW.GuidanceType <em>Guidance Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Guidance Type</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.GuidanceType
+   * @generated
+   */
+  EClass getGuidanceType();
+
+  /**
+   * Returns the meta object for class '{@link de.protos.FlowOfWork.core.fow.foW.Guidance <em>Guidance</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Guidance</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.Guidance
+   * @generated
+   */
+  EClass getGuidance();
+
+  /**
+   * Returns the meta object for the reference '{@link de.protos.FlowOfWork.core.fow.foW.Guidance#getType <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Type</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.Guidance#getType()
+   * @see #getGuidance()
+   * @generated
+   */
+  EReference getGuidance_Type();
 
   /**
    * Returns the meta object for class '{@link de.protos.FlowOfWork.core.fow.foW.Port <em>Port</em>}'.
@@ -425,17 +795,6 @@ public interface FoWPackage extends EPackage
   EClass getActivity();
 
   /**
-   * Returns the meta object for the attribute '{@link de.protos.FlowOfWork.core.fow.foW.Activity#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see de.protos.FlowOfWork.core.fow.foW.Activity#getName()
-   * @see #getActivity()
-   * @generated
-   */
-  EAttribute getActivity_Name();
-
-  /**
    * Returns the meta object for the reference '{@link de.protos.FlowOfWork.core.fow.foW.Activity#getRole <em>Role</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -469,15 +828,26 @@ public interface FoWPackage extends EPackage
   EReference getActivity_OutPorts();
 
   /**
-   * Returns the meta object for the containment reference list '{@link de.protos.FlowOfWork.core.fow.foW.Activity#getActivityRefs <em>Activity Refs</em>}'.
+   * Returns the meta object for the containment reference list '{@link de.protos.FlowOfWork.core.fow.foW.Activity#getSubActivities <em>Sub Activities</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Activity Refs</em>'.
-   * @see de.protos.FlowOfWork.core.fow.foW.Activity#getActivityRefs()
+   * @return the meta object for the containment reference list '<em>Sub Activities</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.Activity#getSubActivities()
    * @see #getActivity()
    * @generated
    */
-  EReference getActivity_ActivityRefs();
+  EReference getActivity_SubActivities();
+
+  /**
+   * Returns the meta object for the reference list '{@link de.protos.FlowOfWork.core.fow.foW.Activity#getGuidances <em>Guidances</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference list '<em>Guidances</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.Activity#getGuidances()
+   * @see #getActivity()
+   * @generated
+   */
+  EReference getActivity_Guidances();
 
   /**
    * Returns the meta object for class '{@link de.protos.FlowOfWork.core.fow.foW.ActivityRef <em>Activity Ref</em>}'.
@@ -510,6 +880,49 @@ public interface FoWPackage extends EPackage
    * @generated
    */
   EReference getActivityRef_Type();
+
+  /**
+   * Returns the meta object for class '{@link de.protos.FlowOfWork.core.fow.foW.Textfield <em>Textfield</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Textfield</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.Textfield
+   * @generated
+   */
+  EClass getTextfield();
+
+  /**
+   * Returns the meta object for the attribute '{@link de.protos.FlowOfWork.core.fow.foW.Textfield#getLabel <em>Label</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Label</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.Textfield#getLabel()
+   * @see #getTextfield()
+   * @generated
+   */
+  EAttribute getTextfield_Label();
+
+  /**
+   * Returns the meta object for the attribute '{@link de.protos.FlowOfWork.core.fow.foW.Textfield#getSummary <em>Summary</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Summary</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.Textfield#getSummary()
+   * @see #getTextfield()
+   * @generated
+   */
+  EAttribute getTextfield_Summary();
+
+  /**
+   * Returns the meta object for the attribute '{@link de.protos.FlowOfWork.core.fow.foW.Textfield#getDescription <em>Description</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Description</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.Textfield#getDescription()
+   * @see #getTextfield()
+   * @generated
+   */
+  EAttribute getTextfield_Description();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -569,6 +982,56 @@ public interface FoWPackage extends EPackage
     EReference MODEL__WORK_PRODUCTS = eINSTANCE.getModel_WorkProducts();
 
     /**
+     * The meta object literal for the '<em><b>Work Product Types</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MODEL__WORK_PRODUCT_TYPES = eINSTANCE.getModel_WorkProductTypes();
+
+    /**
+     * The meta object literal for the '<em><b>Guidances</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MODEL__GUIDANCES = eINSTANCE.getModel_Guidances();
+
+    /**
+     * The meta object literal for the '<em><b>Guidance Types</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MODEL__GUIDANCE_TYPES = eINSTANCE.getModel_GuidanceTypes();
+
+    /**
+     * The meta object literal for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.NamedElementImpl <em>Named Element</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.protos.FlowOfWork.core.fow.foW.impl.NamedElementImpl
+     * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getNamedElement()
+     * @generated
+     */
+    EClass NAMED_ELEMENT = eINSTANCE.getNamedElement();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute NAMED_ELEMENT__NAME = eINSTANCE.getNamedElement_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Textfield</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference NAMED_ELEMENT__TEXTFIELD = eINSTANCE.getNamedElement_Textfield();
+
+    /**
      * The meta object literal for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.RoleImpl <em>Role</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -579,12 +1042,14 @@ public interface FoWPackage extends EPackage
     EClass ROLE = eINSTANCE.getRole();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * The meta object literal for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.WorkProductTypeImpl <em>Work Product Type</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see de.protos.FlowOfWork.core.fow.foW.impl.WorkProductTypeImpl
+     * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getWorkProductType()
      * @generated
      */
-    EAttribute ROLE__NAME = eINSTANCE.getRole_Name();
+    EClass WORK_PRODUCT_TYPE = eINSTANCE.getWorkProductType();
 
     /**
      * The meta object literal for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.WorkProductImpl <em>Work Product</em>}' class.
@@ -597,12 +1062,40 @@ public interface FoWPackage extends EPackage
     EClass WORK_PRODUCT = eINSTANCE.getWorkProduct();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Type</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute WORK_PRODUCT__NAME = eINSTANCE.getWorkProduct_Name();
+    EReference WORK_PRODUCT__TYPE = eINSTANCE.getWorkProduct_Type();
+
+    /**
+     * The meta object literal for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.GuidanceTypeImpl <em>Guidance Type</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.protos.FlowOfWork.core.fow.foW.impl.GuidanceTypeImpl
+     * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getGuidanceType()
+     * @generated
+     */
+    EClass GUIDANCE_TYPE = eINSTANCE.getGuidanceType();
+
+    /**
+     * The meta object literal for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.GuidanceImpl <em>Guidance</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.protos.FlowOfWork.core.fow.foW.impl.GuidanceImpl
+     * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getGuidance()
+     * @generated
+     */
+    EClass GUIDANCE = eINSTANCE.getGuidance();
+
+    /**
+     * The meta object literal for the '<em><b>Type</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference GUIDANCE__TYPE = eINSTANCE.getGuidance_Type();
 
     /**
      * The meta object literal for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.PortImpl <em>Port</em>}' class.
@@ -641,14 +1134,6 @@ public interface FoWPackage extends EPackage
     EClass ACTIVITY = eINSTANCE.getActivity();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute ACTIVITY__NAME = eINSTANCE.getActivity_Name();
-
-    /**
      * The meta object literal for the '<em><b>Role</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -673,12 +1158,20 @@ public interface FoWPackage extends EPackage
     EReference ACTIVITY__OUT_PORTS = eINSTANCE.getActivity_OutPorts();
 
     /**
-     * The meta object literal for the '<em><b>Activity Refs</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Sub Activities</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ACTIVITY__ACTIVITY_REFS = eINSTANCE.getActivity_ActivityRefs();
+    EReference ACTIVITY__SUB_ACTIVITIES = eINSTANCE.getActivity_SubActivities();
+
+    /**
+     * The meta object literal for the '<em><b>Guidances</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ACTIVITY__GUIDANCES = eINSTANCE.getActivity_Guidances();
 
     /**
      * The meta object literal for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.ActivityRefImpl <em>Activity Ref</em>}' class.
@@ -705,6 +1198,40 @@ public interface FoWPackage extends EPackage
      * @generated
      */
     EReference ACTIVITY_REF__TYPE = eINSTANCE.getActivityRef_Type();
+
+    /**
+     * The meta object literal for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.TextfieldImpl <em>Textfield</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.protos.FlowOfWork.core.fow.foW.impl.TextfieldImpl
+     * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getTextfield()
+     * @generated
+     */
+    EClass TEXTFIELD = eINSTANCE.getTextfield();
+
+    /**
+     * The meta object literal for the '<em><b>Label</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TEXTFIELD__LABEL = eINSTANCE.getTextfield_Label();
+
+    /**
+     * The meta object literal for the '<em><b>Summary</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TEXTFIELD__SUMMARY = eINSTANCE.getTextfield_Summary();
+
+    /**
+     * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TEXTFIELD__DESCRIPTION = eINSTANCE.getTextfield_Description();
 
   }
 

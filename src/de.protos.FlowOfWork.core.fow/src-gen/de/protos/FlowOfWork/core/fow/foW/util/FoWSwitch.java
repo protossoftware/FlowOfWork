@@ -79,10 +79,26 @@ public class FoWSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case FoWPackage.NAMED_ELEMENT:
+      {
+        NamedElement namedElement = (NamedElement)theEObject;
+        T result = caseNamedElement(namedElement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case FoWPackage.ROLE:
       {
         Role role = (Role)theEObject;
         T result = caseRole(role);
+        if (result == null) result = caseNamedElement(role);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case FoWPackage.WORK_PRODUCT_TYPE:
+      {
+        WorkProductType workProductType = (WorkProductType)theEObject;
+        T result = caseWorkProductType(workProductType);
+        if (result == null) result = caseNamedElement(workProductType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -90,6 +106,23 @@ public class FoWSwitch<T> extends Switch<T>
       {
         WorkProduct workProduct = (WorkProduct)theEObject;
         T result = caseWorkProduct(workProduct);
+        if (result == null) result = caseNamedElement(workProduct);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case FoWPackage.GUIDANCE_TYPE:
+      {
+        GuidanceType guidanceType = (GuidanceType)theEObject;
+        T result = caseGuidanceType(guidanceType);
+        if (result == null) result = caseNamedElement(guidanceType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case FoWPackage.GUIDANCE:
+      {
+        Guidance guidance = (Guidance)theEObject;
+        T result = caseGuidance(guidance);
+        if (result == null) result = caseNamedElement(guidance);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -104,6 +137,7 @@ public class FoWSwitch<T> extends Switch<T>
       {
         Activity activity = (Activity)theEObject;
         T result = caseActivity(activity);
+        if (result == null) result = caseNamedElement(activity);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -111,6 +145,13 @@ public class FoWSwitch<T> extends Switch<T>
       {
         ActivityRef activityRef = (ActivityRef)theEObject;
         T result = caseActivityRef(activityRef);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case FoWPackage.TEXTFIELD:
+      {
+        Textfield textfield = (Textfield)theEObject;
+        T result = caseTextfield(textfield);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -135,6 +176,22 @@ public class FoWSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Named Element</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Named Element</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseNamedElement(NamedElement object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Role</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -151,6 +208,22 @@ public class FoWSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Work Product Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Work Product Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseWorkProductType(WorkProductType object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Work Product</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -162,6 +235,38 @@ public class FoWSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseWorkProduct(WorkProduct object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Guidance Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Guidance Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGuidanceType(GuidanceType object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Guidance</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Guidance</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGuidance(Guidance object)
   {
     return null;
   }
@@ -210,6 +315,22 @@ public class FoWSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseActivityRef(ActivityRef object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Textfield</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Textfield</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTextfield(Textfield object)
   {
     return null;
   }

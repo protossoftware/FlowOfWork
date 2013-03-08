@@ -5,21 +5,21 @@ package de.protos.FlowOfWork.core.fow.foW;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Work Product</b></em>'.
+ * A representation of the model object '<em><b>Guidance</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.protos.FlowOfWork.core.fow.foW.WorkProduct#getType <em>Type</em>}</li>
+ *   <li>{@link de.protos.FlowOfWork.core.fow.foW.Guidance#getType <em>Type</em>}</li>
  * </ul>
  * </p>
  *
- * @see de.protos.FlowOfWork.core.fow.foW.FoWPackage#getWorkProduct()
+ * @see de.protos.FlowOfWork.core.fow.foW.FoWPackage#getGuidance()
  * @model
  * @generated
  */
-public interface WorkProduct extends NamedElement
+public interface Guidance extends NamedElement
 {
   /**
    * Returns the value of the '<em><b>Type</b></em>' reference.
@@ -30,21 +30,21 @@ public interface WorkProduct extends NamedElement
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Type</em>' reference.
-   * @see #setType(WorkProductType)
-   * @see de.protos.FlowOfWork.core.fow.foW.FoWPackage#getWorkProduct_Type()
+   * @see #setType(GuidanceType)
+   * @see de.protos.FlowOfWork.core.fow.foW.FoWPackage#getGuidance_Type()
    * @model
    * @generated
    */
-  WorkProductType getType();
+  GuidanceType getType();
 
   /**
-   * Sets the value of the '{@link de.protos.FlowOfWork.core.fow.foW.WorkProduct#getType <em>Type</em>}' reference.
+   * Sets the value of the '{@link de.protos.FlowOfWork.core.fow.foW.Guidance#getType <em>Type</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Type</em>' reference.
    * @see #getType()
    * @generated
    */
-  void setType(WorkProductType value);
+  void setType(GuidanceType value);
 
-} // WorkProduct
+} // Guidance

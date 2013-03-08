@@ -6,17 +6,42 @@ Model:
 	(
 		activities+=Activity |
 		roles+=Role |
-		workProducts+=WorkProduct
+		workProducts+=WorkProduct |
+		workProductTypes+=WorkProductType |
+		guidances+=Guidance |
+		guidanceTypes+=GuidanceType
 	)*
 	;
 	
+NamedElement: Role | WorkProductType | WorkProduct | GuidanceType | Guidance | Activity ;
+	
 Role:
 	'Role' name=ID 
+	textfield=Textfield
+	';'
+;
+
+WorkProductType:
+	'WorkProductType' name=ID
+	textfield=Textfield
 	';'
 ;
 
 WorkProduct:
-	'WorkProduct' name=ID 
+	'WorkProduct' name=ID ':' type=[WorkProductType]
+	textfield=Textfield
+	';'
+;
+
+GuidanceType:
+	'GuidanceType' name=ID
+	textfield=Textfield
+	';'
+;
+
+Guidance:
+	'Guidance' name=ID ':' type=[GuidanceType]
+	textfield=Textfield
 	';'
 ;
 
@@ -26,14 +51,22 @@ Port:
 
 Activity:
 	'Activity' name=ID
-	'role' role=[Role]
-	('input' inPorts+=Port)*
-	('output' outPorts+=Port)*
-	activityRefs+=ActivityRef*
+	textfield=Textfield
+	'responsible' role=[Role]
+	('inputs' inPorts+=Port (',' inPorts+=Port)*)? 
+	('outputs' outPorts+=Port (',' outPorts+=Port)*)? 
+	('subActivities' subActivities+=ActivityRef (',' subActivities+=ActivityRef)* )?
+	('guidances' guidances+=[Guidance] (',' guidances+=[Guidance])*)? 
+		
 	';'
 ;
 	
 ActivityRef:
-	'subActivity' name=ID ':' type=[Activity];
+	name=ID ':' type=[Activity];
 
-	
+Textfield:
+	('label' label=STRING)?
+	'summary' summary=STRING
+	('description' description=STRING)?
+;
+

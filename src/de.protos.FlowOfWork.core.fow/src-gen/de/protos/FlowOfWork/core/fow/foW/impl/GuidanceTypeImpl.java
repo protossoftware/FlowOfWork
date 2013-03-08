@@ -3,27 +3,27 @@
 package de.protos.FlowOfWork.core.fow.foW.impl;
 
 import de.protos.FlowOfWork.core.fow.foW.FoWPackage;
-import de.protos.FlowOfWork.core.fow.foW.Role;
+import de.protos.FlowOfWork.core.fow.foW.GuidanceType;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Role</b></em>'.
+ * An implementation of the model object '<em><b>Guidance Type</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class RoleImpl extends NamedElementImpl implements Role
+public class GuidanceTypeImpl extends NamedElementImpl implements GuidanceType
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected RoleImpl()
+  protected GuidanceTypeImpl()
   {
     super();
   }
@@ -36,7 +36,7 @@ public class RoleImpl extends NamedElementImpl implements Role
   @Override
   protected EClass eStaticClass()
   {
-    return FoWPackage.Literals.ROLE;
+    return FoWPackage.Literals.GUIDANCE_TYPE;
   }
 
-} //RoleImpl
+} //GuidanceTypeImpl

@@ -32,6 +32,15 @@ public interface FoWFactory extends EFactory
   Model createModel();
 
   /**
+   * Returns a new object of class '<em>Named Element</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Named Element</em>'.
+   * @generated
+   */
+  NamedElement createNamedElement();
+
+  /**
    * Returns a new object of class '<em>Role</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -41,6 +50,15 @@ public interface FoWFactory extends EFactory
   Role createRole();
 
   /**
+   * Returns a new object of class '<em>Work Product Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Work Product Type</em>'.
+   * @generated
+   */
+  WorkProductType createWorkProductType();
+
+  /**
    * Returns a new object of class '<em>Work Product</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -48,6 +66,24 @@ public interface FoWFactory extends EFactory
    * @generated
    */
   WorkProduct createWorkProduct();
+
+  /**
+   * Returns a new object of class '<em>Guidance Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Guidance Type</em>'.
+   * @generated
+   */
+  GuidanceType createGuidanceType();
+
+  /**
+   * Returns a new object of class '<em>Guidance</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Guidance</em>'.
+   * @generated
+   */
+  Guidance createGuidance();
 
   /**
    * Returns a new object of class '<em>Port</em>'.
@@ -75,6 +111,15 @@ public interface FoWFactory extends EFactory
    * @generated
    */
   ActivityRef createActivityRef();
+
+  /**
+   * Returns a new object of class '<em>Textfield</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Textfield</em>'.
+   * @generated
+   */
+  Textfield createTextfield();
 
   /**
    * Returns the package supported by this factory.

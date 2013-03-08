@@ -6,10 +6,15 @@ import de.protos.FlowOfWork.core.fow.foW.Activity;
 import de.protos.FlowOfWork.core.fow.foW.ActivityRef;
 import de.protos.FlowOfWork.core.fow.foW.FoWFactory;
 import de.protos.FlowOfWork.core.fow.foW.FoWPackage;
+import de.protos.FlowOfWork.core.fow.foW.Guidance;
+import de.protos.FlowOfWork.core.fow.foW.GuidanceType;
 import de.protos.FlowOfWork.core.fow.foW.Model;
+import de.protos.FlowOfWork.core.fow.foW.NamedElement;
 import de.protos.FlowOfWork.core.fow.foW.Port;
 import de.protos.FlowOfWork.core.fow.foW.Role;
+import de.protos.FlowOfWork.core.fow.foW.Textfield;
 import de.protos.FlowOfWork.core.fow.foW.WorkProduct;
+import de.protos.FlowOfWork.core.fow.foW.WorkProductType;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -38,6 +43,13 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass namedElementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass roleEClass = null;
 
   /**
@@ -45,7 +57,28 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass workProductTypeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass workProductEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass guidanceTypeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass guidanceEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -67,6 +100,13 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
    * @generated
    */
   private EClass activityRefEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass textfieldEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -176,6 +216,66 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getModel_WorkProductTypes()
+  {
+    return (EReference)modelEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getModel_Guidances()
+  {
+    return (EReference)modelEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getModel_GuidanceTypes()
+  {
+    return (EReference)modelEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getNamedElement()
+  {
+    return namedElementEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getNamedElement_Name()
+  {
+    return (EAttribute)namedElementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getNamedElement_Textfield()
+  {
+    return (EReference)namedElementEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getRole()
   {
     return roleEClass;
@@ -186,9 +286,9 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getRole_Name()
+  public EClass getWorkProductType()
   {
-    return (EAttribute)roleEClass.getEStructuralFeatures().get(0);
+    return workProductTypeEClass;
   }
 
   /**
@@ -206,9 +306,39 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getWorkProduct_Name()
+  public EReference getWorkProduct_Type()
   {
-    return (EAttribute)workProductEClass.getEStructuralFeatures().get(0);
+    return (EReference)workProductEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getGuidanceType()
+  {
+    return guidanceTypeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getGuidance()
+  {
+    return guidanceEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getGuidance_Type()
+  {
+    return (EReference)guidanceEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -256,19 +386,9 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getActivity_Name()
-  {
-    return (EAttribute)activityEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getActivity_Role()
   {
-    return (EReference)activityEClass.getEStructuralFeatures().get(1);
+    return (EReference)activityEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -278,7 +398,7 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
    */
   public EReference getActivity_InPorts()
   {
-    return (EReference)activityEClass.getEStructuralFeatures().get(2);
+    return (EReference)activityEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -288,6 +408,16 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
    */
   public EReference getActivity_OutPorts()
   {
+    return (EReference)activityEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getActivity_SubActivities()
+  {
     return (EReference)activityEClass.getEStructuralFeatures().get(3);
   }
 
@@ -296,7 +426,7 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getActivity_ActivityRefs()
+  public EReference getActivity_Guidances()
   {
     return (EReference)activityEClass.getEStructuralFeatures().get(4);
   }
@@ -336,6 +466,46 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getTextfield()
+  {
+    return textfieldEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTextfield_Label()
+  {
+    return (EAttribute)textfieldEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTextfield_Summary()
+  {
+    return (EAttribute)textfieldEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTextfield_Description()
+  {
+    return (EAttribute)textfieldEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public FoWFactory getFoWFactory()
   {
     return (FoWFactory)getEFactoryInstance();
@@ -365,27 +535,45 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
     createEReference(modelEClass, MODEL__ACTIVITIES);
     createEReference(modelEClass, MODEL__ROLES);
     createEReference(modelEClass, MODEL__WORK_PRODUCTS);
+    createEReference(modelEClass, MODEL__WORK_PRODUCT_TYPES);
+    createEReference(modelEClass, MODEL__GUIDANCES);
+    createEReference(modelEClass, MODEL__GUIDANCE_TYPES);
+
+    namedElementEClass = createEClass(NAMED_ELEMENT);
+    createEAttribute(namedElementEClass, NAMED_ELEMENT__NAME);
+    createEReference(namedElementEClass, NAMED_ELEMENT__TEXTFIELD);
 
     roleEClass = createEClass(ROLE);
-    createEAttribute(roleEClass, ROLE__NAME);
+
+    workProductTypeEClass = createEClass(WORK_PRODUCT_TYPE);
 
     workProductEClass = createEClass(WORK_PRODUCT);
-    createEAttribute(workProductEClass, WORK_PRODUCT__NAME);
+    createEReference(workProductEClass, WORK_PRODUCT__TYPE);
+
+    guidanceTypeEClass = createEClass(GUIDANCE_TYPE);
+
+    guidanceEClass = createEClass(GUIDANCE);
+    createEReference(guidanceEClass, GUIDANCE__TYPE);
 
     portEClass = createEClass(PORT);
     createEAttribute(portEClass, PORT__NAME);
     createEReference(portEClass, PORT__TYPE);
 
     activityEClass = createEClass(ACTIVITY);
-    createEAttribute(activityEClass, ACTIVITY__NAME);
     createEReference(activityEClass, ACTIVITY__ROLE);
     createEReference(activityEClass, ACTIVITY__IN_PORTS);
     createEReference(activityEClass, ACTIVITY__OUT_PORTS);
-    createEReference(activityEClass, ACTIVITY__ACTIVITY_REFS);
+    createEReference(activityEClass, ACTIVITY__SUB_ACTIVITIES);
+    createEReference(activityEClass, ACTIVITY__GUIDANCES);
 
     activityRefEClass = createEClass(ACTIVITY_REF);
     createEAttribute(activityRefEClass, ACTIVITY_REF__NAME);
     createEReference(activityRefEClass, ACTIVITY_REF__TYPE);
+
+    textfieldEClass = createEClass(TEXTFIELD);
+    createEAttribute(textfieldEClass, TEXTFIELD__LABEL);
+    createEAttribute(textfieldEClass, TEXTFIELD__SUMMARY);
+    createEAttribute(textfieldEClass, TEXTFIELD__DESCRIPTION);
   }
 
   /**
@@ -417,33 +605,57 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    roleEClass.getESuperTypes().add(this.getNamedElement());
+    workProductTypeEClass.getESuperTypes().add(this.getNamedElement());
+    workProductEClass.getESuperTypes().add(this.getNamedElement());
+    guidanceTypeEClass.getESuperTypes().add(this.getNamedElement());
+    guidanceEClass.getESuperTypes().add(this.getNamedElement());
+    activityEClass.getESuperTypes().add(this.getNamedElement());
 
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getModel_Activities(), this.getActivity(), null, "activities", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModel_Roles(), this.getRole(), null, "roles", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModel_WorkProducts(), this.getWorkProduct(), null, "workProducts", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_WorkProductTypes(), this.getWorkProductType(), null, "workProductTypes", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_Guidances(), this.getGuidance(), null, "guidances", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_GuidanceTypes(), this.getGuidanceType(), null, "guidanceTypes", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(namedElementEClass, NamedElement.class, "NamedElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getNamedElement_Textfield(), this.getTextfield(), null, "textfield", null, 0, 1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(roleEClass, Role.class, "Role", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getRole_Name(), ecorePackage.getEString(), "name", null, 0, 1, Role.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(workProductTypeEClass, WorkProductType.class, "WorkProductType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(workProductEClass, WorkProduct.class, "WorkProduct", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getWorkProduct_Name(), ecorePackage.getEString(), "name", null, 0, 1, WorkProduct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getWorkProduct_Type(), this.getWorkProductType(), null, "type", null, 0, 1, WorkProduct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(guidanceTypeEClass, GuidanceType.class, "GuidanceType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(guidanceEClass, Guidance.class, "Guidance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getGuidance_Type(), this.getGuidanceType(), null, "type", null, 0, 1, Guidance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(portEClass, Port.class, "Port", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getPort_Name(), ecorePackage.getEString(), "name", null, 0, 1, Port.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPort_Type(), this.getWorkProduct(), null, "type", null, 0, 1, Port.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(activityEClass, Activity.class, "Activity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getActivity_Name(), ecorePackage.getEString(), "name", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getActivity_Role(), this.getRole(), null, "role", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getActivity_InPorts(), this.getPort(), null, "inPorts", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getActivity_OutPorts(), this.getPort(), null, "outPorts", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getActivity_ActivityRefs(), this.getActivityRef(), null, "activityRefs", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getActivity_SubActivities(), this.getActivityRef(), null, "subActivities", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getActivity_Guidances(), this.getGuidance(), null, "guidances", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(activityRefEClass, ActivityRef.class, "ActivityRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getActivityRef_Name(), ecorePackage.getEString(), "name", null, 0, 1, ActivityRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getActivityRef_Type(), this.getActivity(), null, "type", null, 0, 1, ActivityRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(textfieldEClass, Textfield.class, "Textfield", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTextfield_Label(), ecorePackage.getEString(), "label", null, 0, 1, Textfield.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTextfield_Summary(), ecorePackage.getEString(), "summary", null, 0, 1, Textfield.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTextfield_Description(), ecorePackage.getEString(), "description", null, 0, 1, Textfield.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

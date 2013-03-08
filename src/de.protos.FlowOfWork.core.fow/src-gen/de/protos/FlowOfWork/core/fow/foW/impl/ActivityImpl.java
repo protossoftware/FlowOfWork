@@ -5,6 +5,7 @@ package de.protos.FlowOfWork.core.fow.foW.impl;
 import de.protos.FlowOfWork.core.fow.foW.Activity;
 import de.protos.FlowOfWork.core.fow.foW.ActivityRef;
 import de.protos.FlowOfWork.core.fow.foW.FoWPackage;
+import de.protos.FlowOfWork.core.fow.foW.Guidance;
 import de.protos.FlowOfWork.core.fow.foW.Port;
 import de.protos.FlowOfWork.core.fow.foW.Role;
 
@@ -19,9 +20,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -31,38 +32,18 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.protos.FlowOfWork.core.fow.foW.impl.ActivityImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.protos.FlowOfWork.core.fow.foW.impl.ActivityImpl#getRole <em>Role</em>}</li>
  *   <li>{@link de.protos.FlowOfWork.core.fow.foW.impl.ActivityImpl#getInPorts <em>In Ports</em>}</li>
  *   <li>{@link de.protos.FlowOfWork.core.fow.foW.impl.ActivityImpl#getOutPorts <em>Out Ports</em>}</li>
- *   <li>{@link de.protos.FlowOfWork.core.fow.foW.impl.ActivityImpl#getActivityRefs <em>Activity Refs</em>}</li>
+ *   <li>{@link de.protos.FlowOfWork.core.fow.foW.impl.ActivityImpl#getSubActivities <em>Sub Activities</em>}</li>
+ *   <li>{@link de.protos.FlowOfWork.core.fow.foW.impl.ActivityImpl#getGuidances <em>Guidances</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ActivityImpl extends MinimalEObjectImpl.Container implements Activity
+public class ActivityImpl extends NamedElementImpl implements Activity
 {
-  /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
-
   /**
    * The cached value of the '{@link #getRole() <em>Role</em>}' reference.
    * <!-- begin-user-doc -->
@@ -94,14 +75,24 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
   protected EList<Port> outPorts;
 
   /**
-   * The cached value of the '{@link #getActivityRefs() <em>Activity Refs</em>}' containment reference list.
+   * The cached value of the '{@link #getSubActivities() <em>Sub Activities</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getActivityRefs()
+   * @see #getSubActivities()
    * @generated
    * @ordered
    */
-  protected EList<ActivityRef> activityRefs;
+  protected EList<ActivityRef> subActivities;
+
+  /**
+   * The cached value of the '{@link #getGuidances() <em>Guidances</em>}' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getGuidances()
+   * @generated
+   * @ordered
+   */
+  protected EList<Guidance> guidances;
 
   /**
    * <!-- begin-user-doc -->
@@ -122,29 +113,6 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
   protected EClass eStaticClass()
   {
     return FoWPackage.Literals.ACTIVITY;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getName()
-  {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, FoWPackage.ACTIVITY__NAME, oldName, name));
   }
 
   /**
@@ -223,13 +191,27 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<ActivityRef> getActivityRefs()
+  public EList<ActivityRef> getSubActivities()
   {
-    if (activityRefs == null)
+    if (subActivities == null)
     {
-      activityRefs = new EObjectContainmentEList<ActivityRef>(ActivityRef.class, this, FoWPackage.ACTIVITY__ACTIVITY_REFS);
+      subActivities = new EObjectContainmentEList<ActivityRef>(ActivityRef.class, this, FoWPackage.ACTIVITY__SUB_ACTIVITIES);
     }
-    return activityRefs;
+    return subActivities;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<Guidance> getGuidances()
+  {
+    if (guidances == null)
+    {
+      guidances = new EObjectResolvingEList<Guidance>(Guidance.class, this, FoWPackage.ACTIVITY__GUIDANCES);
+    }
+    return guidances;
   }
 
   /**
@@ -246,8 +228,8 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
         return ((InternalEList<?>)getInPorts()).basicRemove(otherEnd, msgs);
       case FoWPackage.ACTIVITY__OUT_PORTS:
         return ((InternalEList<?>)getOutPorts()).basicRemove(otherEnd, msgs);
-      case FoWPackage.ACTIVITY__ACTIVITY_REFS:
-        return ((InternalEList<?>)getActivityRefs()).basicRemove(otherEnd, msgs);
+      case FoWPackage.ACTIVITY__SUB_ACTIVITIES:
+        return ((InternalEList<?>)getSubActivities()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -262,8 +244,6 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
   {
     switch (featureID)
     {
-      case FoWPackage.ACTIVITY__NAME:
-        return getName();
       case FoWPackage.ACTIVITY__ROLE:
         if (resolve) return getRole();
         return basicGetRole();
@@ -271,8 +251,10 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
         return getInPorts();
       case FoWPackage.ACTIVITY__OUT_PORTS:
         return getOutPorts();
-      case FoWPackage.ACTIVITY__ACTIVITY_REFS:
-        return getActivityRefs();
+      case FoWPackage.ACTIVITY__SUB_ACTIVITIES:
+        return getSubActivities();
+      case FoWPackage.ACTIVITY__GUIDANCES:
+        return getGuidances();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -288,9 +270,6 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
   {
     switch (featureID)
     {
-      case FoWPackage.ACTIVITY__NAME:
-        setName((String)newValue);
-        return;
       case FoWPackage.ACTIVITY__ROLE:
         setRole((Role)newValue);
         return;
@@ -302,9 +281,13 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
         getOutPorts().clear();
         getOutPorts().addAll((Collection<? extends Port>)newValue);
         return;
-      case FoWPackage.ACTIVITY__ACTIVITY_REFS:
-        getActivityRefs().clear();
-        getActivityRefs().addAll((Collection<? extends ActivityRef>)newValue);
+      case FoWPackage.ACTIVITY__SUB_ACTIVITIES:
+        getSubActivities().clear();
+        getSubActivities().addAll((Collection<? extends ActivityRef>)newValue);
+        return;
+      case FoWPackage.ACTIVITY__GUIDANCES:
+        getGuidances().clear();
+        getGuidances().addAll((Collection<? extends Guidance>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -320,9 +303,6 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
   {
     switch (featureID)
     {
-      case FoWPackage.ACTIVITY__NAME:
-        setName(NAME_EDEFAULT);
-        return;
       case FoWPackage.ACTIVITY__ROLE:
         setRole((Role)null);
         return;
@@ -332,8 +312,11 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
       case FoWPackage.ACTIVITY__OUT_PORTS:
         getOutPorts().clear();
         return;
-      case FoWPackage.ACTIVITY__ACTIVITY_REFS:
-        getActivityRefs().clear();
+      case FoWPackage.ACTIVITY__SUB_ACTIVITIES:
+        getSubActivities().clear();
+        return;
+      case FoWPackage.ACTIVITY__GUIDANCES:
+        getGuidances().clear();
         return;
     }
     super.eUnset(featureID);
@@ -349,35 +332,18 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
   {
     switch (featureID)
     {
-      case FoWPackage.ACTIVITY__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case FoWPackage.ACTIVITY__ROLE:
         return role != null;
       case FoWPackage.ACTIVITY__IN_PORTS:
         return inPorts != null && !inPorts.isEmpty();
       case FoWPackage.ACTIVITY__OUT_PORTS:
         return outPorts != null && !outPorts.isEmpty();
-      case FoWPackage.ACTIVITY__ACTIVITY_REFS:
-        return activityRefs != null && !activityRefs.isEmpty();
+      case FoWPackage.ACTIVITY__SUB_ACTIVITIES:
+        return subActivities != null && !subActivities.isEmpty();
+      case FoWPackage.ACTIVITY__GUIDANCES:
+        return guidances != null && !guidances.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
   }
 
 } //ActivityImpl

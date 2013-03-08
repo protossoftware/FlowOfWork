@@ -80,14 +80,34 @@ public class FoWAdapterFactory extends AdapterFactoryImpl
         return createModelAdapter();
       }
       @Override
+      public Adapter caseNamedElement(NamedElement object)
+      {
+        return createNamedElementAdapter();
+      }
+      @Override
       public Adapter caseRole(Role object)
       {
         return createRoleAdapter();
       }
       @Override
+      public Adapter caseWorkProductType(WorkProductType object)
+      {
+        return createWorkProductTypeAdapter();
+      }
+      @Override
       public Adapter caseWorkProduct(WorkProduct object)
       {
         return createWorkProductAdapter();
+      }
+      @Override
+      public Adapter caseGuidanceType(GuidanceType object)
+      {
+        return createGuidanceTypeAdapter();
+      }
+      @Override
+      public Adapter caseGuidance(Guidance object)
+      {
+        return createGuidanceAdapter();
       }
       @Override
       public Adapter casePort(Port object)
@@ -103,6 +123,11 @@ public class FoWAdapterFactory extends AdapterFactoryImpl
       public Adapter caseActivityRef(ActivityRef object)
       {
         return createActivityRefAdapter();
+      }
+      @Override
+      public Adapter caseTextfield(Textfield object)
+      {
+        return createTextfieldAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -142,6 +167,21 @@ public class FoWAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link de.protos.FlowOfWork.core.fow.foW.NamedElement <em>Named Element</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.protos.FlowOfWork.core.fow.foW.NamedElement
+   * @generated
+   */
+  public Adapter createNamedElementAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link de.protos.FlowOfWork.core.fow.foW.Role <em>Role</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -157,6 +197,21 @@ public class FoWAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link de.protos.FlowOfWork.core.fow.foW.WorkProductType <em>Work Product Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.protos.FlowOfWork.core.fow.foW.WorkProductType
+   * @generated
+   */
+  public Adapter createWorkProductTypeAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link de.protos.FlowOfWork.core.fow.foW.WorkProduct <em>Work Product</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -167,6 +222,36 @@ public class FoWAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createWorkProductAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.protos.FlowOfWork.core.fow.foW.GuidanceType <em>Guidance Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.protos.FlowOfWork.core.fow.foW.GuidanceType
+   * @generated
+   */
+  public Adapter createGuidanceTypeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.protos.FlowOfWork.core.fow.foW.Guidance <em>Guidance</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.protos.FlowOfWork.core.fow.foW.Guidance
+   * @generated
+   */
+  public Adapter createGuidanceAdapter()
   {
     return null;
   }
@@ -212,6 +297,21 @@ public class FoWAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createActivityRefAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.protos.FlowOfWork.core.fow.foW.Textfield <em>Textfield</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.protos.FlowOfWork.core.fow.foW.Textfield
+   * @generated
+   */
+  public Adapter createTextfieldAdapter()
   {
     return null;
   }

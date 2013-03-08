@@ -39,15 +39,15 @@ class FoWGenerator implements IGenerator {
 					<col width="2*">
 				</colgroup>
 			  	<tr>
-					<td >
+					<td colspan="1">
 						<b>Purpose:</b>
 					</td>
 					<td colspan="5">
-						<em>Where does the purpose come from?</em>
+						«activity.textfield.summary»
 					</td>
 				</tr>
 			  	<tr>
-					<td>
+					<td colspan="1">
 						<b>Scope:</b>
 					</td>
 					<td colspan="5">
@@ -55,28 +55,80 @@ class FoWGenerator implements IGenerator {
 					</td>
 				</tr>
 			  	<tr>
-					<td>
+					<td colspan="1">
 						<b>Inputs:</b>
 					</td>
-					<td>
-						<ul>
-						«FOR inPort : activity.inPorts»
-							<li>«inPort.name» : «inPort.type.name» </li>
-						«ENDFOR»
-						</ul>
+					<td colspan="2">
+						«IF activity.inPorts.size() > 0»
+							<ul>
+							«FOR inPort : activity.inPorts»
+								<li>«inPort.name» : «inPort.type.name» </li>
+							«ENDFOR»
+							</ul>
+						«ELSE»
+							<em>no inputs</em>
+						«ENDIF»
 					</td>
-					<td>
+					<td colspan="1">
 						<b>Outputs:</b>
 					</td>
-					<td>
-						<ul>
-						«FOR outPort : activity.outPorts»
-							<li>«outPort.name» : «outPort.type.name» </li>
-						«ENDFOR»
-						</ul>
+					<td colspan="2">
+						«IF activity.outPorts.size() > 0»
+							<ul>
+							«FOR outPort : activity.outPorts»
+								<li>«outPort.name» : «outPort.type.name» </li>
+							«ENDFOR»
+							</ul>
+						«ELSE»
+							<em>no outputs</em>
+						«ENDIF»
+					</td>
+				</tr>
+			  	<tr>
+					<td colspan="1">
+						<b>Entry Criteria:</b>
+					</td>
+					<td colspan="2">
+						<em>really needed???</em>
+					</td>
+					<td colspan="1">
+						<b>Exit Criteria:</b>
+					</td>
+					<td colspan="2">
+						<em>really needed???</em>
+					</td>
+				</tr>
+			  	<tr>
+					<td colspan="1">
+						<b>Responsible:</b>
+					</td>
+					<td colspan="5">
+						«activity.role.name»
+					</td>
+				</tr>
+			  	<tr>
+					<td colspan="1">
+						<b>Description:</b>
+					</td>
+					<td colspan="5">
+						«activity.textfield.description»
 					</td>
 				</tr>
 			</table>
+
+		<h2>Activities and Responsibilities</h2>
+		<ul>
+			«FOR subActivity : activity.subActivities»
+				<li>Activity Reference: «subActivity.name» 
+					<ul>
+						<li>Activity Type: «subActivity.type.name»</li>
+						<li>Role: «subActivity.type.role.name»</li>
+					</ul> 
+				</li>
+			«ENDFOR»
+		</ul>
+		<h2>Guidelines</h2>
+
 		</html>
 	'''
 	

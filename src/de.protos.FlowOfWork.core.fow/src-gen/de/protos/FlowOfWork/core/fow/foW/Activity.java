@@ -4,8 +4,6 @@ package de.protos.FlowOfWork.core.fow.foW;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Activity</b></em>'.
@@ -14,11 +12,11 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.protos.FlowOfWork.core.fow.foW.Activity#getName <em>Name</em>}</li>
  *   <li>{@link de.protos.FlowOfWork.core.fow.foW.Activity#getRole <em>Role</em>}</li>
  *   <li>{@link de.protos.FlowOfWork.core.fow.foW.Activity#getInPorts <em>In Ports</em>}</li>
  *   <li>{@link de.protos.FlowOfWork.core.fow.foW.Activity#getOutPorts <em>Out Ports</em>}</li>
- *   <li>{@link de.protos.FlowOfWork.core.fow.foW.Activity#getActivityRefs <em>Activity Refs</em>}</li>
+ *   <li>{@link de.protos.FlowOfWork.core.fow.foW.Activity#getSubActivities <em>Sub Activities</em>}</li>
+ *   <li>{@link de.protos.FlowOfWork.core.fow.foW.Activity#getGuidances <em>Guidances</em>}</li>
  * </ul>
  * </p>
  *
@@ -26,34 +24,8 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Activity extends EObject
+public interface Activity extends NamedElement
 {
-  /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Name</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see de.protos.FlowOfWork.core.fow.foW.FoWPackage#getActivity_Name()
-   * @model
-   * @generated
-   */
-  String getName();
-
-  /**
-   * Sets the value of the '{@link de.protos.FlowOfWork.core.fow.foW.Activity#getName <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
-   * @generated
-   */
-  void setName(String value);
-
   /**
    * Returns the value of the '<em><b>Role</b></em>' reference.
    * <!-- begin-user-doc -->
@@ -113,19 +85,35 @@ public interface Activity extends EObject
   EList<Port> getOutPorts();
 
   /**
-   * Returns the value of the '<em><b>Activity Refs</b></em>' containment reference list.
+   * Returns the value of the '<em><b>Sub Activities</b></em>' containment reference list.
    * The list contents are of type {@link de.protos.FlowOfWork.core.fow.foW.ActivityRef}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Activity Refs</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Sub Activities</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Activity Refs</em>' containment reference list.
-   * @see de.protos.FlowOfWork.core.fow.foW.FoWPackage#getActivity_ActivityRefs()
+   * @return the value of the '<em>Sub Activities</em>' containment reference list.
+   * @see de.protos.FlowOfWork.core.fow.foW.FoWPackage#getActivity_SubActivities()
    * @model containment="true"
    * @generated
    */
-  EList<ActivityRef> getActivityRefs();
+  EList<ActivityRef> getSubActivities();
+
+  /**
+   * Returns the value of the '<em><b>Guidances</b></em>' reference list.
+   * The list contents are of type {@link de.protos.FlowOfWork.core.fow.foW.Guidance}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Guidances</em>' reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Guidances</em>' reference list.
+   * @see de.protos.FlowOfWork.core.fow.foW.FoWPackage#getActivity_Guidances()
+   * @model
+   * @generated
+   */
+  EList<Guidance> getGuidances();
 
 } // Activity

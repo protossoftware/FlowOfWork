@@ -11,27 +11,42 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FoW.ecore#//Model/activities"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FoW.ecore#//Model/roles"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FoW.ecore#//Model/workProducts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FoW.ecore#//Model/workProductTypes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FoW.ecore#//Model/guidances"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FoW.ecore#//Model/guidanceTypes"/>
     </genClasses>
-    <genClasses ecoreClass="FoW.ecore#//Role">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FoW.ecore#//Role/name"/>
+    <genClasses ecoreClass="FoW.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FoW.ecore#//NamedElement/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FoW.ecore#//NamedElement/textfield"/>
     </genClasses>
+    <genClasses ecoreClass="FoW.ecore#//Role"/>
+    <genClasses ecoreClass="FoW.ecore#//WorkProductType"/>
     <genClasses ecoreClass="FoW.ecore#//WorkProduct">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FoW.ecore#//WorkProduct/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FoW.ecore#//WorkProduct/type"/>
+    </genClasses>
+    <genClasses ecoreClass="FoW.ecore#//GuidanceType"/>
+    <genClasses ecoreClass="FoW.ecore#//Guidance">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FoW.ecore#//Guidance/type"/>
     </genClasses>
     <genClasses ecoreClass="FoW.ecore#//Port">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FoW.ecore#//Port/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FoW.ecore#//Port/type"/>
     </genClasses>
     <genClasses ecoreClass="FoW.ecore#//Activity">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FoW.ecore#//Activity/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FoW.ecore#//Activity/role"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FoW.ecore#//Activity/inPorts"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FoW.ecore#//Activity/outPorts"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FoW.ecore#//Activity/activityRefs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FoW.ecore#//Activity/subActivities"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FoW.ecore#//Activity/guidances"/>
     </genClasses>
     <genClasses ecoreClass="FoW.ecore#//ActivityRef">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FoW.ecore#//ActivityRef/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FoW.ecore#//ActivityRef/type"/>
+    </genClasses>
+    <genClasses ecoreClass="FoW.ecore#//Textfield">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FoW.ecore#//Textfield/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FoW.ecore#//Textfield/summary"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FoW.ecore#//Textfield/description"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

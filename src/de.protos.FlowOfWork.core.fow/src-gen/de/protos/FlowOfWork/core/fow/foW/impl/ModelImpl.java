@@ -4,9 +4,12 @@ package de.protos.FlowOfWork.core.fow.foW.impl;
 
 import de.protos.FlowOfWork.core.fow.foW.Activity;
 import de.protos.FlowOfWork.core.fow.foW.FoWPackage;
+import de.protos.FlowOfWork.core.fow.foW.Guidance;
+import de.protos.FlowOfWork.core.fow.foW.GuidanceType;
 import de.protos.FlowOfWork.core.fow.foW.Model;
 import de.protos.FlowOfWork.core.fow.foW.Role;
 import de.protos.FlowOfWork.core.fow.foW.WorkProduct;
+import de.protos.FlowOfWork.core.fow.foW.WorkProductType;
 
 import java.util.Collection;
 
@@ -32,6 +35,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.protos.FlowOfWork.core.fow.foW.impl.ModelImpl#getActivities <em>Activities</em>}</li>
  *   <li>{@link de.protos.FlowOfWork.core.fow.foW.impl.ModelImpl#getRoles <em>Roles</em>}</li>
  *   <li>{@link de.protos.FlowOfWork.core.fow.foW.impl.ModelImpl#getWorkProducts <em>Work Products</em>}</li>
+ *   <li>{@link de.protos.FlowOfWork.core.fow.foW.impl.ModelImpl#getWorkProductTypes <em>Work Product Types</em>}</li>
+ *   <li>{@link de.protos.FlowOfWork.core.fow.foW.impl.ModelImpl#getGuidances <em>Guidances</em>}</li>
+ *   <li>{@link de.protos.FlowOfWork.core.fow.foW.impl.ModelImpl#getGuidanceTypes <em>Guidance Types</em>}</li>
  * </ul>
  * </p>
  *
@@ -68,6 +74,36 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * @ordered
    */
   protected EList<WorkProduct> workProducts;
+
+  /**
+   * The cached value of the '{@link #getWorkProductTypes() <em>Work Product Types</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getWorkProductTypes()
+   * @generated
+   * @ordered
+   */
+  protected EList<WorkProductType> workProductTypes;
+
+  /**
+   * The cached value of the '{@link #getGuidances() <em>Guidances</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getGuidances()
+   * @generated
+   * @ordered
+   */
+  protected EList<Guidance> guidances;
+
+  /**
+   * The cached value of the '{@link #getGuidanceTypes() <em>Guidance Types</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getGuidanceTypes()
+   * @generated
+   * @ordered
+   */
+  protected EList<GuidanceType> guidanceTypes;
 
   /**
    * <!-- begin-user-doc -->
@@ -137,6 +173,48 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<WorkProductType> getWorkProductTypes()
+  {
+    if (workProductTypes == null)
+    {
+      workProductTypes = new EObjectContainmentEList<WorkProductType>(WorkProductType.class, this, FoWPackage.MODEL__WORK_PRODUCT_TYPES);
+    }
+    return workProductTypes;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<Guidance> getGuidances()
+  {
+    if (guidances == null)
+    {
+      guidances = new EObjectContainmentEList<Guidance>(Guidance.class, this, FoWPackage.MODEL__GUIDANCES);
+    }
+    return guidances;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<GuidanceType> getGuidanceTypes()
+  {
+    if (guidanceTypes == null)
+    {
+      guidanceTypes = new EObjectContainmentEList<GuidanceType>(GuidanceType.class, this, FoWPackage.MODEL__GUIDANCE_TYPES);
+    }
+    return guidanceTypes;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -148,6 +226,12 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
         return ((InternalEList<?>)getRoles()).basicRemove(otherEnd, msgs);
       case FoWPackage.MODEL__WORK_PRODUCTS:
         return ((InternalEList<?>)getWorkProducts()).basicRemove(otherEnd, msgs);
+      case FoWPackage.MODEL__WORK_PRODUCT_TYPES:
+        return ((InternalEList<?>)getWorkProductTypes()).basicRemove(otherEnd, msgs);
+      case FoWPackage.MODEL__GUIDANCES:
+        return ((InternalEList<?>)getGuidances()).basicRemove(otherEnd, msgs);
+      case FoWPackage.MODEL__GUIDANCE_TYPES:
+        return ((InternalEList<?>)getGuidanceTypes()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -168,6 +252,12 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
         return getRoles();
       case FoWPackage.MODEL__WORK_PRODUCTS:
         return getWorkProducts();
+      case FoWPackage.MODEL__WORK_PRODUCT_TYPES:
+        return getWorkProductTypes();
+      case FoWPackage.MODEL__GUIDANCES:
+        return getGuidances();
+      case FoWPackage.MODEL__GUIDANCE_TYPES:
+        return getGuidanceTypes();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -195,6 +285,18 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
         getWorkProducts().clear();
         getWorkProducts().addAll((Collection<? extends WorkProduct>)newValue);
         return;
+      case FoWPackage.MODEL__WORK_PRODUCT_TYPES:
+        getWorkProductTypes().clear();
+        getWorkProductTypes().addAll((Collection<? extends WorkProductType>)newValue);
+        return;
+      case FoWPackage.MODEL__GUIDANCES:
+        getGuidances().clear();
+        getGuidances().addAll((Collection<? extends Guidance>)newValue);
+        return;
+      case FoWPackage.MODEL__GUIDANCE_TYPES:
+        getGuidanceTypes().clear();
+        getGuidanceTypes().addAll((Collection<? extends GuidanceType>)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -218,6 +320,15 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
       case FoWPackage.MODEL__WORK_PRODUCTS:
         getWorkProducts().clear();
         return;
+      case FoWPackage.MODEL__WORK_PRODUCT_TYPES:
+        getWorkProductTypes().clear();
+        return;
+      case FoWPackage.MODEL__GUIDANCES:
+        getGuidances().clear();
+        return;
+      case FoWPackage.MODEL__GUIDANCE_TYPES:
+        getGuidanceTypes().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -238,6 +349,12 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
         return roles != null && !roles.isEmpty();
       case FoWPackage.MODEL__WORK_PRODUCTS:
         return workProducts != null && !workProducts.isEmpty();
+      case FoWPackage.MODEL__WORK_PRODUCT_TYPES:
+        return workProductTypes != null && !workProductTypes.isEmpty();
+      case FoWPackage.MODEL__GUIDANCES:
+        return guidances != null && !guidances.isEmpty();
+      case FoWPackage.MODEL__GUIDANCE_TYPES:
+        return guidanceTypes != null && !guidanceTypes.isEmpty();
     }
     return super.eIsSet(featureID);
   }

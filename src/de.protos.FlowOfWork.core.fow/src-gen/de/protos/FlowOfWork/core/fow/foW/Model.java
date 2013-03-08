@@ -17,6 +17,9 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.protos.FlowOfWork.core.fow.foW.Model#getActivities <em>Activities</em>}</li>
  *   <li>{@link de.protos.FlowOfWork.core.fow.foW.Model#getRoles <em>Roles</em>}</li>
  *   <li>{@link de.protos.FlowOfWork.core.fow.foW.Model#getWorkProducts <em>Work Products</em>}</li>
+ *   <li>{@link de.protos.FlowOfWork.core.fow.foW.Model#getWorkProductTypes <em>Work Product Types</em>}</li>
+ *   <li>{@link de.protos.FlowOfWork.core.fow.foW.Model#getGuidances <em>Guidances</em>}</li>
+ *   <li>{@link de.protos.FlowOfWork.core.fow.foW.Model#getGuidanceTypes <em>Guidance Types</em>}</li>
  * </ul>
  * </p>
  *
@@ -73,5 +76,53 @@ public interface Model extends EObject
    * @generated
    */
   EList<WorkProduct> getWorkProducts();
+
+  /**
+   * Returns the value of the '<em><b>Work Product Types</b></em>' containment reference list.
+   * The list contents are of type {@link de.protos.FlowOfWork.core.fow.foW.WorkProductType}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Work Product Types</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Work Product Types</em>' containment reference list.
+   * @see de.protos.FlowOfWork.core.fow.foW.FoWPackage#getModel_WorkProductTypes()
+   * @model containment="true"
+   * @generated
+   */
+  EList<WorkProductType> getWorkProductTypes();
+
+  /**
+   * Returns the value of the '<em><b>Guidances</b></em>' containment reference list.
+   * The list contents are of type {@link de.protos.FlowOfWork.core.fow.foW.Guidance}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Guidances</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Guidances</em>' containment reference list.
+   * @see de.protos.FlowOfWork.core.fow.foW.FoWPackage#getModel_Guidances()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Guidance> getGuidances();
+
+  /**
+   * Returns the value of the '<em><b>Guidance Types</b></em>' containment reference list.
+   * The list contents are of type {@link de.protos.FlowOfWork.core.fow.foW.GuidanceType}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Guidance Types</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Guidance Types</em>' containment reference list.
+   * @see de.protos.FlowOfWork.core.fow.foW.FoWPackage#getModel_GuidanceTypes()
+   * @model containment="true"
+   * @generated
+   */
+  EList<GuidanceType> getGuidanceTypes();
 
 } // Model
