@@ -1,0 +1,106 @@
+GuidanceType Tool
+	summary "summary Tool"
+;
+
+GuidanceType Checklist
+	summary "summary Checklist"
+;
+
+Guidance Compiler : Tool
+ 	summary "summary Compiler"
+;
+
+Guidance RequirmentEngineeringTool : Tool
+ 	summary "summary RequirmentEngineeringTool"
+;
+
+Role RequirementEngineer
+	label "Requirement Engineer"
+	summary "The Requirement Engineer is responsible for requirement engineering"
+;
+
+Role SWArchitect
+	label "SW Architect"
+	summary "The SW Architect is responsible for software architecture"
+;
+
+Role SWDeveloper
+	label "SW Developer"
+	summary "The SW Developer is responsible for software development"
+;
+Role SWTester
+	label "SW Tester"
+	summary "The SW Tester is responsible for software tests"
+;
+
+
+WorkProductType Artifact
+	summary "An Artifact is a Work Product that flows from Activity to Activity"
+;
+
+WorkProductType Outcome
+	summary "An Outcome is a Work Product that is a result external"
+;
+
+WorkProduct RequirementDocument : Artifact
+	label "Requirement Document"
+	summary "summary Requirement Document"
+;
+WorkProduct SWArchitecture: Artifact
+	label "SW Architecture"
+	summary "summary SW Architecture"
+;
+WorkProduct SWCode: Artifact
+	label "SW Code"
+	summary "summary SW Code"
+;
+WorkProduct SWTest: Artifact
+	label "SW Test"
+	summary "summary SW Test"
+;
+
+Activity SWDevelopment
+	label "SW Development"
+	summary "summary SW Development"
+	description "description SW Development"
+	responsible SWDeveloper
+	subActivities req : RequirementEngineering, arch : DevelopSWArchitecture, develop : DevelopSW, test : DevelopSWTest
+;
+
+Activity RequirementEngineering
+	label "Requirement Engineering"
+	summary "summary Requirement Engineering"
+	description "description Requirement Engineering"
+	responsible RequirementEngineer
+	outputs requirements:RequirementDocument
+;
+
+Activity DevelopSWArchitecture
+	label "Develop SW Architecture"
+	summary "summary Develop SW Architecture"
+	description "description Develop SW Architecture"
+	responsible SWArchitect
+	inputs requirements:RequirementDocument
+	outputs architecture:SWArchitecture
+;
+
+Activity DevelopSW
+	label "Develop SW"
+	summary "summary Develop SW"
+	description "description Develop SW"
+	responsible SWDeveloper
+	inputs architecture:SWArchitecture
+	outputs code:SWCode
+;
+
+Activity DevelopSWTest
+	label "Develop SW Test"
+	summary "summary Develop SW Test"
+	description "description Develop SW Test"
+	responsible SWTester
+	inputs code:SWCode
+	outputs test:SWTest
+;
+
+
+
