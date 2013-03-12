@@ -1,0 +1,18 @@
+digraph SWDevelopment{
+	rankdir=TD;
+	subgraph cluster_SWDevelopment {
+		label = "SWDevelopment"
+		color=black
+		subgraph cluster_RequirementEngineering {
+			label = "RequirementEngineering"
+			color=black
+			CreateRequirements [shape=polygon,color=orange,style=filled, sides=5, orientation=-90]
+			ReviewRequirements [shape=pentagon,color=orange,style=filled, orientation=-90]
+		}
+		DevelopSWArchitecture [shape=pentagon,color=orange,style=filled, orientation=-90]
+		DevelopSW [shape=pentagon,color=orange,style=filled, orientation=-90]
+		DevelopSWTest [shape=pentagon,color=orange,style=filled, orientation=-90]
+		CreateRequirements -> ReviewRequirements -> DevelopSWArchitecture -> DevelopSW -> DevelopSWTest
+	}
+	
+}

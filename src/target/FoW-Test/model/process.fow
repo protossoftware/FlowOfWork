@@ -1,5 +1,6 @@
 GuidanceType Tool
 	summary "summary Tool"
+	description "description Tool"
 ;
 
 GuidanceType Checklist
@@ -8,6 +9,7 @@ GuidanceType Checklist
 
 Guidance Compiler : Tool
  	summary "summary Compiler"
+ 	description "description Compiler"
 ;
 
 Guidance RequirmentEngineeringTool : Tool
@@ -17,6 +19,7 @@ Guidance RequirmentEngineeringTool : Tool
 Role RequirementEngineer
 	label "Requirement Engineer"
 	summary "The Requirement Engineer is responsible for requirement engineering"
+	description "description for Requirement Engineer"
 ;
 
 Role SWArchitect
@@ -57,6 +60,7 @@ WorkProduct SWCode: Artifact
 WorkProduct SWTest: Artifact
 	label "SW Test"
 	summary "summary SW Test"
+	description "description of SW Test"
 ;
 
 Activity SWDevelopment
@@ -73,6 +77,21 @@ Activity RequirementEngineering
 	description "description Requirement Engineering"
 	responsible RequirementEngineer
 	outputs requirements:RequirementDocument
+	subActivities create: CreateRequirements, review: ReviewRequirements
+;
+
+Activity CreateRequirements 
+	label "Create Requirements"
+	summary "summary Create Requirements"
+	description "description Create Requirements"
+	responsible RequirementEngineer
+;
+
+Activity ReviewRequirements 
+	label "Review Requirements"
+	summary "summary Review Requirements"
+	description "description Review Requirements"
+	responsible RequirementEngineer
 ;
 
 Activity DevelopSWArchitecture
