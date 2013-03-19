@@ -3,8 +3,10 @@
  */
 package de.protos.FlowOfWork.core.fow.formatting;
 
+import org.eclipse.xtext.Keyword;
 import org.eclipse.xtext.formatting.impl.AbstractDeclarativeFormatter;
 import org.eclipse.xtext.formatting.impl.FormattingConfig;
+import org.eclipse.xtext.util.Pair;
 
 /**
  * This class contains custom formatting description.
@@ -18,10 +20,36 @@ public class FoWFormatter extends AbstractDeclarativeFormatter {
 	
 	@Override
 	protected void configureFormatting(FormattingConfig c) {
-// It's usually a good idea to activate the following three statements.
-// They will add and preserve newlines around comments
-//		c.setLinewrap(0, 1, 2).before(getGrammarAccess().getSL_COMMENTRule());
-//		c.setLinewrap(0, 1, 2).before(getGrammarAccess().getML_COMMENTRule());
-//		c.setLinewrap(0, 1, 1).after(getGrammarAccess().getML_COMMENTRule());
+		de.protos.FlowOfWork.core.fow.services.FoWGrammarAccess grammarAccess = (de.protos.FlowOfWork.core.fow.services.FoWGrammarAccess) getGrammarAccess();
+
+		// It's usually a good idea to activate the following three statements.
+		// They will add and preserve newlines around comments
+		c.setLinewrap(0, 1, 2).before(grammarAccess.getSL_COMMENTRule());
+		c.setLinewrap(0, 1, 2).before(grammarAccess.getML_COMMENTRule());
+		c.setLinewrap(0, 1, 1).after(grammarAccess.getML_COMMENTRule());
+
+		c.setAutoLinewrap(120);
+		
+		for (Keyword k: grammarAccess.findKeywords(";")) {
+			c.setIndentationDecrement().before(k);
+			c.setLinewrap().before(k);
+		}
+
+		for (Keyword k: grammarAccess.findKeywords("GuidanceType", "Guidance", "WorkProduct", "WorkProductType", "Activity", "Role")) {
+			c.setIndentationIncrement().after(k);
+		}
+
+		for (Keyword k: grammarAccess.findKeywords("label", "summary", "description", "responsible", "subActivities", "outputs", "inputs")) {
+			c.setLinewrap().before(k);
+		}
+
+		c.setLinewrap(2).around(grammarAccess.getGuidanceTypeRule());
+		c.setLinewrap(2).around(grammarAccess.getGuidanceRule());
+		c.setLinewrap(2).around(grammarAccess.getWorkProductRule());
+		c.setLinewrap(2).around(grammarAccess.getWorkProductTypeRule());
+		c.setLinewrap(2).around(grammarAccess.getActivityRule());
+		c.setLinewrap(2).around(grammarAccess.getRoleRule());
+
+
 	}
 }

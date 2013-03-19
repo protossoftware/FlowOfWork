@@ -1,3 +1,5 @@
+
+
 GuidanceType Tool
 	summary "summary Tool"
 	description "description Tool"
@@ -8,12 +10,12 @@ GuidanceType Checklist
 ;
 
 Guidance Compiler : Tool
- 	summary "summary Compiler"
- 	description "description Compiler"
+	summary "summary Compiler"
+	description "description Compiler"
 ;
 
 Guidance RequirmentEngineeringTool : Tool
- 	summary "summary RequirmentEngineeringTool"
+	summary "summary RequirmentEngineeringTool"
 ;
 
 Role RequirementEngineer
@@ -31,11 +33,11 @@ Role SWDeveloper
 	label "SW Developer"
 	summary "The SW Developer is responsible for software development"
 ;
+
 Role SWTester
 	label "SW Tester"
 	summary "The SW Tester is responsible for software tests"
 ;
-
 
 WorkProductType Artifact
 	summary "An Artifact is a Work Product that flows from Activity to Activity"
@@ -49,15 +51,18 @@ WorkProduct RequirementDocument : Artifact
 	label "Requirement Document"
 	summary "summary Requirement Document"
 ;
-WorkProduct SWArchitecture: Artifact
+
+WorkProduct SWArchitecture : Artifact
 	label "SW Architecture"
 	summary "summary SW Architecture"
 ;
-WorkProduct SWCode: Artifact
+
+WorkProduct SWCode : Artifact
 	label "SW Code"
 	summary "summary SW Code"
 ;
-WorkProduct SWTest: Artifact
+
+WorkProduct SWTest : Artifact
 	label "SW Test"
 	summary "summary SW Test"
 	description "description of SW Test"
@@ -68,7 +73,8 @@ Activity SWDevelopment
 	summary "summary SW Development"
 	description "description SW Development"
 	responsible SWDeveloper
-	subActivities req : RequirementEngineering, arch : DevelopSWArchitecture, develop : DevelopSW, test : DevelopSWTest
+	subActivities req : RequirementEngineering , arch : DevelopSWArchitecture , develop : DevelopSW , test :
+	DevelopSWTest
 ;
 
 Activity RequirementEngineering
@@ -76,18 +82,18 @@ Activity RequirementEngineering
 	summary "summary Requirement Engineering"
 	description "description Requirement Engineering"
 	responsible RequirementEngineer
-	outputs requirements:RequirementDocument
-	subActivities create: CreateRequirements, review: ReviewRequirements
+	outputs requirements : RequirementDocument
+	subActivities create : CreateRequirements , review : ReviewRequirements
 ;
 
-Activity CreateRequirements 
+Activity CreateRequirements
 	label "Create Requirements"
 	summary "summary Create Requirements"
 	description "description Create Requirements"
 	responsible RequirementEngineer
 ;
 
-Activity ReviewRequirements 
+Activity ReviewRequirements
 	label "Review Requirements"
 	summary "summary Review Requirements"
 	description "description Review Requirements"
@@ -99,8 +105,8 @@ Activity DevelopSWArchitecture
 	summary "summary Develop SW Architecture"
 	description "description Develop SW Architecture"
 	responsible SWArchitect
-	inputs requirements:RequirementDocument
-	outputs architecture:SWArchitecture
+	inputs requirements : RequirementDocument
+	outputs architecture : SWArchitecture
 ;
 
 Activity DevelopSW
@@ -108,8 +114,8 @@ Activity DevelopSW
 	summary "summary Develop SW"
 	description "description Develop SW"
 	responsible SWDeveloper
-	inputs architecture:SWArchitecture
-	outputs code:SWCode
+	inputs architecture : SWArchitecture
+	outputs code : SWCode
 ;
 
 Activity DevelopSWTest
@@ -117,8 +123,8 @@ Activity DevelopSWTest
 	summary "summary Develop SW Test"
 	description "description Develop SW Test"
 	responsible SWTester
-	inputs code:SWCode
-	outputs test:SWTest
+	inputs code : SWCode
+	outputs test : SWTest
 ;
 
 
