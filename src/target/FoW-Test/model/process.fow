@@ -15,7 +15,13 @@ Guidance Compiler : Tool
 ;
 
 Guidance RequirmentEngineeringTool : Tool
-	summary "summary RequirmentEngineeringTool"
+	label "Requirement Engineering Tool"
+	summary "summary RequirementEngineeringTool"
+;
+
+Guidance TestChecklist : Checklist
+	label "Test Checklist"
+	summary "summary Test Checklist"
 ;
 
 Role RequirementEngineer
@@ -84,6 +90,7 @@ Activity RequirementEngineering
 	responsible RequirementEngineer
 	outputs requirements : RequirementDocument
 	subActivities create : CreateRequirements , review : ReviewRequirements
+	guidances RequirmentEngineeringTool 
 ;
 
 Activity CreateRequirements
@@ -98,6 +105,7 @@ Activity ReviewRequirements
 	summary "summary Review Requirements"
 	description "description Review Requirements"
 	responsible RequirementEngineer
+	guidances RequirmentEngineeringTool 
 ;
 
 Activity DevelopSWArchitecture
@@ -125,6 +133,7 @@ Activity DevelopSWTest
 	responsible SWTester
 	inputs code : SWCode
 	outputs test : SWTest
+	guidances TestChecklist
 ;
 
 

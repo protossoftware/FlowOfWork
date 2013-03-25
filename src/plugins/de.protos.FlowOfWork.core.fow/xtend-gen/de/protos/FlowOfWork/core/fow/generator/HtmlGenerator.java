@@ -139,13 +139,10 @@ public class HtmlGenerator {
       {
         for(final NamedElement element : sortedElements) {
           _builder.append("\t");
-          _builder.append("<li><a href=\"");
-          String _name = element.getName();
-          _builder.append(_name, "	");
-          _builder.append(".html\">");
-          String _name_1 = element.getName();
-          _builder.append(_name_1, "	");
-          _builder.append("</a></li>");
+          _builder.append("<li>");
+          CharSequence _generateHTML_HRef = this.generateHTML_HRef(element);
+          _builder.append(_generateHTML_HRef, "	");
+          _builder.append("</li>");
           _builder.newLineIfNotEmpty();
         }
       }
@@ -372,9 +369,9 @@ public class HtmlGenerator {
             _builder.append(_name_1, "				");
             _builder.append(" : ");
             WorkProduct _type = inPort.getType();
-            String _name_2 = _type.getName();
-            _builder.append(_name_2, "				");
-            _builder.append(" </li>");
+            CharSequence _generateHTML_HRef = this.generateHTML_HRef(_type);
+            _builder.append(_generateHTML_HRef, "				");
+            _builder.append("</li>");
             _builder.newLineIfNotEmpty();
           }
         }
@@ -415,13 +412,13 @@ public class HtmlGenerator {
           for(final Port outPort : _outPorts_1) {
             _builder.append("\t\t\t\t");
             _builder.append("<li>");
-            String _name_3 = outPort.getName();
-            _builder.append(_name_3, "				");
+            String _name_2 = outPort.getName();
+            _builder.append(_name_2, "				");
             _builder.append(" : ");
             WorkProduct _type_1 = outPort.getType();
-            String _name_4 = _type_1.getName();
-            _builder.append(_name_4, "				");
-            _builder.append(" </li>");
+            CharSequence _generateHTML_HRef_1 = this.generateHTML_HRef(_type_1);
+            _builder.append(_generateHTML_HRef_1, "				");
+            _builder.append("</a> </li>");
             _builder.newLineIfNotEmpty();
           }
         }
@@ -499,8 +496,8 @@ public class HtmlGenerator {
     _builder.newLine();
     _builder.append("\t\t\t\t");
     Role _role = activity.getRole();
-    String _name_5 = _role.getName();
-    _builder.append(_name_5, "				");
+    CharSequence _generateHTML_HRef_2 = this.generateHTML_HRef(_role);
+    _builder.append(_generateHTML_HRef_2, "				");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t\t");
     _builder.append("</td>");
@@ -547,8 +544,8 @@ public class HtmlGenerator {
       for(final ActivityRef subActivity : _subActivities) {
         _builder.append("\t");
         _builder.append("<li>Activity Reference: ");
-        String _name_6 = subActivity.getName();
-        _builder.append(_name_6, "	");
+        String _name_3 = subActivity.getName();
+        _builder.append(_name_3, "	");
         _builder.append(" ");
         _builder.newLineIfNotEmpty();
         _builder.append("\t");
@@ -559,8 +556,8 @@ public class HtmlGenerator {
         _builder.append("\t\t");
         _builder.append("<li>Activity Type: ");
         Activity _type_2 = subActivity.getType();
-        String _name_7 = _type_2.getName();
-        _builder.append(_name_7, "			");
+        CharSequence _generateHTML_HRef_3 = this.generateHTML_HRef(_type_2);
+        _builder.append(_generateHTML_HRef_3, "			");
         _builder.append("</li>");
         _builder.newLineIfNotEmpty();
         _builder.append("\t");
@@ -568,8 +565,8 @@ public class HtmlGenerator {
         _builder.append("<li>Role: ");
         Activity _type_3 = subActivity.getType();
         Role _role_1 = _type_3.getRole();
-        String _name_8 = _role_1.getName();
-        _builder.append(_name_8, "			");
+        CharSequence _generateHTML_HRef_4 = this.generateHTML_HRef(_role_1);
+        _builder.append(_generateHTML_HRef_4, "			");
         _builder.append("</li>");
         _builder.newLineIfNotEmpty();
         _builder.append("\t");
@@ -583,17 +580,21 @@ public class HtmlGenerator {
     }
     _builder.append("</ul>");
     _builder.newLine();
-    _builder.append("<h2>Guidelines</h2>");
+    _builder.append("<h2>Guidances</h2>");
     _builder.newLine();
+    EList<Guidance> _guidances = activity.getGuidances();
+    CharSequence _generateHTMLForGuidanceList = this.generateHTMLForGuidanceList(_guidances);
+    _builder.append(_generateHTMLForGuidanceList, "");
+    _builder.newLineIfNotEmpty();
     _builder.newLine();
     _builder.append("<h2>SPEM Diagram</h2>");
     _builder.newLine();
     _builder.append("<img src=\"../dot/");
-    String _name_9 = activity.getName();
-    _builder.append(_name_9, "");
+    String _name_4 = activity.getName();
+    _builder.append(_name_4, "");
     _builder.append(".jpg\" alt=\"SPEM Diagram: ");
-    String _name_10 = activity.getName();
-    _builder.append(_name_10, "");
+    String _name_5 = activity.getName();
+    _builder.append(_name_5, "");
     _builder.append("\"> ");
     _builder.newLineIfNotEmpty();
     _builder.newLine();
@@ -609,6 +610,19 @@ public class HtmlGenerator {
       CharSequence _generateHTMLForOneRole = this.generateHTMLForOneRole(role);
       fsa.generateFile(_htmlGenPath, _generateHTMLForOneRole);
     }
+  }
+  
+  private CharSequence generateHTML_HRef(final NamedElement element) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("<a href=\"");
+    String _name = element.getName();
+    _builder.append(_name, "");
+    _builder.append(".html\">");
+    String _label = this.textInfo.getLabel(element);
+    _builder.append(_label, "");
+    _builder.append("</a>");
+    _builder.newLineIfNotEmpty();
+    return _builder;
   }
   
   private CharSequence generateHTMLForOneRole(final Role role) {
@@ -734,6 +748,88 @@ public class HtmlGenerator {
     _builder.append(_description, "	");
     _builder.newLineIfNotEmpty();
     _builder.append("</html>");
+    _builder.newLine();
+    return _builder;
+  }
+  
+  private CharSequence generateHTMLForGuidanceList(final EList<Guidance> guidances) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("<table border=\"1\" width=\"100%\">");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("<colgroup>");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("<col width=\"50%\">");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("<col width=\"50%\">");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("</colgroup>");
+    _builder.newLine();
+    _builder.append("  \t");
+    _builder.append("<tr>");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("<th>");
+    _builder.newLine();
+    _builder.append("\t\t\t");
+    _builder.append("Guidance");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("</th>");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("<th>");
+    _builder.newLine();
+    _builder.append("\t\t\t");
+    _builder.append("Guidance Type");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("</th>");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("</tr>");
+    _builder.newLine();
+    {
+      for(final Guidance guidance : guidances) {
+        _builder.append("\t");
+        _builder.append("<tr>");
+        _builder.newLine();
+        _builder.append("\t");
+        _builder.append("\t");
+        _builder.append("<td>");
+        _builder.newLine();
+        _builder.append("\t");
+        _builder.append("\t\t");
+        CharSequence _generateHTML_HRef = this.generateHTML_HRef(guidance);
+        _builder.append(_generateHTML_HRef, "			");
+        _builder.newLineIfNotEmpty();
+        _builder.append("\t");
+        _builder.append("\t");
+        _builder.append("</td>");
+        _builder.newLine();
+        _builder.append("\t");
+        _builder.append("\t");
+        _builder.append("<td>");
+        _builder.newLine();
+        _builder.append("\t");
+        _builder.append("\t\t");
+        GuidanceType _type = guidance.getType();
+        String _name = _type.getName();
+        _builder.append(_name, "			");
+        _builder.newLineIfNotEmpty();
+        _builder.append("\t");
+        _builder.append("\t");
+        _builder.append("</td>");
+        _builder.newLine();
+        _builder.append("\t");
+        _builder.append("</tr>");
+        _builder.newLine();
+      }
+    }
+    _builder.append("</table>");
     _builder.newLine();
     return _builder;
   }

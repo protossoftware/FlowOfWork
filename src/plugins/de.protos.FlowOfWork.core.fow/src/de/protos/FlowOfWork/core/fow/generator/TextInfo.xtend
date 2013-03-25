@@ -13,13 +13,5 @@ class TextInfo{
 			return element.textfield.label
 		}
 	}
-//	def getDesctription(NamedElement element){
-//		if (element.textfield.description==null){
-//			return ""
-//		}
-//		else {
-//			return element.textfield.description
-//		}
-//	}
 	
 }

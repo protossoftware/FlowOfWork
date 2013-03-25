@@ -68,7 +68,7 @@ class HtmlGenerator {
 		<h1>Index «elementType»<h1>
 		<ul>
 			«FOR element : sortedElements»
-			<li><a href="«element.name».html">«element.name»</a></li>
+			<li>«generateHTML_HRef(element)»</li>
 			«ENDFOR»
 		<ul>
 		<html>
@@ -145,7 +145,7 @@ class HtmlGenerator {
 						«IF activity.inPorts.size() > 0»
 							<ul>
 							«FOR inPort : activity.inPorts»
-								<li>«inPort.name» : «inPort.type.name» </li>
+								<li>«inPort.name» : «generateHTML_HRef(inPort.type)»</li>
 							«ENDFOR»
 							</ul>
 						«ELSE»
@@ -159,7 +159,7 @@ class HtmlGenerator {
 						«IF activity.outPorts.size() > 0»
 							<ul>
 							«FOR outPort : activity.outPorts»
-								<li>«outPort.name» : «outPort.type.name» </li>
+								<li>«outPort.name» : «generateHTML_HRef(outPort.type)»</a> </li>
 							«ENDFOR»
 							</ul>
 						«ELSE»
@@ -186,7 +186,7 @@ class HtmlGenerator {
 						<b>Responsible:</b>
 					</td>
 					<td colspan="3">
-						«activity.role.name»
+						«generateHTML_HRef(activity.role)»
 					</td>
 				</tr>
 			  	<tr>
@@ -204,13 +204,14 @@ class HtmlGenerator {
 			«FOR subActivity : activity.subActivities»
 				<li>Activity Reference: «subActivity.name» 
 					<ul>
-						<li>Activity Type: «subActivity.type.name»</li>
-						<li>Role: «subActivity.type.role.name»</li>
+						<li>Activity Type: «generateHTML_HRef(subActivity.type)»</li>
+						<li>Role: «generateHTML_HRef(subActivity.type.role)»</li>
 					</ul> 
 				</li>
 			«ENDFOR»
 		</ul>
-		<h2>Guidelines</h2>
+		<h2>Guidances</h2>
+		«generateHTMLForGuidanceList(activity.guidances)»
 		
 		<h2>SPEM Diagram</h2>
 		<img src="../dot/«activity.name».jpg" alt="SPEM Diagram: «activity.name»"> 
@@ -224,6 +225,9 @@ class HtmlGenerator {
 		}
 	}
 	
+	def private generateHTML_HRef(NamedElement element) '''
+		<a href="«element.name».html">«textInfo.getLabel(element)»</a>
+	'''
 	 
 	def private generateHTMLForOneRole(Role role) '''
 		<html>
@@ -269,5 +273,32 @@ class HtmlGenerator {
 			<h2>Description</h2>
 			«guidance.textfield.description»
 		</html>
+	'''
+
+	def private generateHTMLForGuidanceList(EList<Guidance> guidances) '''
+		<table border="1" width="100%">
+			<colgroup>
+				<col width="50%">
+				<col width="50%">
+			</colgroup>
+		  	<tr>
+				<th>
+					Guidance
+				</th>
+				<th>
+					Guidance Type
+				</th>
+			</tr>
+			«FOR guidance : guidances»
+				<tr>
+					<td>
+						«generateHTML_HRef(guidance)»
+					</td>
+					<td>
+						«guidance.type.name»
+					</td>
+				</tr>
+			«ENDFOR»
+		</table>
 	'''
 }
