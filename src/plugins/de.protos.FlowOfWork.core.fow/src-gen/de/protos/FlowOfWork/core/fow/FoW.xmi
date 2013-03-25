@@ -52,7 +52,7 @@
           <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
         </elements>
         <elements xsi:type="xtext:Assignment" feature="textfield" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.17"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value=";"/>
       </alternatives>
@@ -67,7 +67,7 @@
           <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
         </elements>
         <elements xsi:type="xtext:Assignment" feature="textfield" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.17"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value=";"/>
       </alternatives>
@@ -91,7 +91,7 @@
           </terminal>
         </elements>
         <elements xsi:type="xtext:Assignment" feature="textfield" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.17"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value=";"/>
       </alternatives>
@@ -106,7 +106,7 @@
           <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
         </elements>
         <elements xsi:type="xtext:Assignment" feature="textfield" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.17"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value=";"/>
       </alternatives>
@@ -130,7 +130,7 @@
           </terminal>
         </elements>
         <elements xsi:type="xtext:Assignment" feature="textfield" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.17"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value=";"/>
       </alternatives>
@@ -164,7 +164,7 @@
           <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
         </elements>
         <elements xsi:type="xtext:Assignment" feature="textfield" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.17"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value="responsible"/>
         <elements xsi:type="xtext:Assignment" feature="role" operator="=">
@@ -233,6 +233,22 @@
             </elements>
           </elements>
         </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="Behavior"/>
+          <elements xsi:type="xtext:Keyword" value="{"/>
+          <elements xsi:type="xtext:Alternatives" cardinality="*">
+            <elements xsi:type="xtext:Assignment" feature="steps" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+            </elements>
+            <elements xsi:type="xtext:Assignment" feature="decisions" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.11"/>
+            </elements>
+            <elements xsi:type="xtext:Assignment" feature="transitions" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.13"/>
+            </elements>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value="}"/>
+        </elements>
         <elements xsi:type="xtext:Keyword" value=";"/>
       </alternatives>
     </rules>
@@ -249,6 +265,119 @@
           <terminal xsi:type="xtext:CrossReference">
             <type metamodel="/0/@metamodelDeclarations.0">
               <classifier xsi:type="ecore:EClass" href="http://www.protos.de/FlowOfWork/core/fow/FoW#//Activity"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+          </terminal>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Node">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EClass" href="http://www.protos.de/FlowOfWork/core/fow/FoW#//Node"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.11"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Decision">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EClass" href="http://www.protos.de/FlowOfWork/core/fow/FoW#//Decision"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Keyword" value="Decision"/>
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value=";"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Step">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EClass" href="http://www.protos.de/FlowOfWork/core/fow/FoW#//Step"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Keyword" value="Step"/>
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value=";"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Transition">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EClass" href="http://www.protos.de/FlowOfWork/core/fow/FoW#//Transition"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.14"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.15"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.16"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="InitialTransition">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EClass" href="http://www.protos.de/FlowOfWork/core/fow/FoW#//InitialTransition"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Keyword" value="Transition"/>
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="initial"/>
+        <elements xsi:type="xtext:Keyword" value="->"/>
+        <elements xsi:type="xtext:Assignment" feature="to" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.0">
+              <classifier xsi:type="ecore:EClass" href="http://www.protos.de/FlowOfWork/core/fow/FoW#//Node"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+          </terminal>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="FinalTransition">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EClass" href="http://www.protos.de/FlowOfWork/core/fow/FoW#//FinalTransition"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Keyword" value="Transition"/>
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="from" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.0">
+              <classifier xsi:type="ecore:EClass" href="http://www.protos.de/FlowOfWork/core/fow/FoW#//Node"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="->"/>
+        <elements xsi:type="xtext:Keyword" value="final"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="NonInitialTransition">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EClass" href="http://www.protos.de/FlowOfWork/core/fow/FoW#//NonInitialTransition"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Keyword" value="Transition"/>
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="from" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.0">
+              <classifier xsi:type="ecore:EClass" href="http://www.protos.de/FlowOfWork/core/fow/FoW#//Node"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="->"/>
+        <elements xsi:type="xtext:Assignment" feature="to" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.0">
+              <classifier xsi:type="ecore:EClass" href="http://www.protos.de/FlowOfWork/core/fow/FoW#//Node"/>
             </type>
             <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
           </terminal>

@@ -56,13 +56,46 @@ Activity:
 	('inputs' inPorts+=Port (',' inPorts+=Port)*)? 
 	('outputs' outPorts+=Port (',' outPorts+=Port)*)? 
 	('subActivities' subActivities+=ActivityRef (',' subActivities+=ActivityRef)* )?
-	('guidances' guidances+=[Guidance] (',' guidances+=[Guidance])*)? 
-		
+	('guidances' guidances+=[Guidance] (',' guidances+=[Guidance])*)?
+	(	'Behavior'  '{'
+		(
+			steps+=Step |
+			decisions+=Decision |
+			transitions+=Transition
+		)*	
+		'}'
+	)?
 	';'
 ;
 	
 ActivityRef:
 	name=ID ':' type=[Activity];
+
+Node: Step | Decision ;
+
+Decision:
+	'Decision' name=ID ';'
+;
+
+Step:
+	'Step' name=ID ';'
+;
+
+Transition: InitialTransition | FinalTransition | NonInitialTransition;
+
+InitialTransition:
+	'Transition' name=ID 'initial' '->' to=[Node]
+;
+
+FinalTransition:
+	'Transition' name=ID  from=[Node] '->' 'final'
+;
+
+NonInitialTransition:
+	'Transition' name=ID from=[Node] '->' to=[Node]
+;
+
+
 
 Textfield:
 	('label' label=STRING)?

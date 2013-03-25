@@ -124,6 +124,15 @@ Activity DevelopSW
 	responsible SWDeveloper
 	inputs architecture : SWArchitecture
 	outputs code : SWCode
+	Behavior {
+		Step Step1;
+		Step Step2;
+		Step Step3;
+		Transition init initial -> Step1
+		Transition tr1 Step1 -> Step2
+		Transition tr2 Step2 -> Step3
+		Transition exit Step1 -> final
+	}
 ;
 
 Activity DevelopSWTest

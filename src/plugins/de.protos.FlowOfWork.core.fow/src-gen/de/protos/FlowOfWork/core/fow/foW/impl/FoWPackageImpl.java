@@ -4,15 +4,22 @@ package de.protos.FlowOfWork.core.fow.foW.impl;
 
 import de.protos.FlowOfWork.core.fow.foW.Activity;
 import de.protos.FlowOfWork.core.fow.foW.ActivityRef;
+import de.protos.FlowOfWork.core.fow.foW.Decision;
+import de.protos.FlowOfWork.core.fow.foW.FinalTransition;
 import de.protos.FlowOfWork.core.fow.foW.FoWFactory;
 import de.protos.FlowOfWork.core.fow.foW.FoWPackage;
 import de.protos.FlowOfWork.core.fow.foW.Guidance;
 import de.protos.FlowOfWork.core.fow.foW.GuidanceType;
+import de.protos.FlowOfWork.core.fow.foW.InitialTransition;
 import de.protos.FlowOfWork.core.fow.foW.Model;
 import de.protos.FlowOfWork.core.fow.foW.NamedElement;
+import de.protos.FlowOfWork.core.fow.foW.Node;
+import de.protos.FlowOfWork.core.fow.foW.NonInitialTransition;
 import de.protos.FlowOfWork.core.fow.foW.Port;
 import de.protos.FlowOfWork.core.fow.foW.Role;
+import de.protos.FlowOfWork.core.fow.foW.Step;
 import de.protos.FlowOfWork.core.fow.foW.Textfield;
+import de.protos.FlowOfWork.core.fow.foW.Transition;
 import de.protos.FlowOfWork.core.fow.foW.WorkProduct;
 import de.protos.FlowOfWork.core.fow.foW.WorkProductType;
 
@@ -100,6 +107,55 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
    * @generated
    */
   private EClass activityRefEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass nodeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass decisionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass stepEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass transitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass initialTransitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass finalTransitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass nonInitialTransitionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -436,6 +492,36 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getActivity_Steps()
+  {
+    return (EReference)activityEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getActivity_Decisions()
+  {
+    return (EReference)activityEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getActivity_Transitions()
+  {
+    return (EReference)activityEClass.getEStructuralFeatures().get(7);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getActivityRef()
   {
     return activityRefEClass;
@@ -459,6 +545,136 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
   public EReference getActivityRef_Type()
   {
     return (EReference)activityRefEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getNode()
+  {
+    return nodeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getNode_Name()
+  {
+    return (EAttribute)nodeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDecision()
+  {
+    return decisionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getStep()
+  {
+    return stepEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTransition()
+  {
+    return transitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTransition_Name()
+  {
+    return (EAttribute)transitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getInitialTransition()
+  {
+    return initialTransitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getInitialTransition_To()
+  {
+    return (EReference)initialTransitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFinalTransition()
+  {
+    return finalTransitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFinalTransition_From()
+  {
+    return (EReference)finalTransitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getNonInitialTransition()
+  {
+    return nonInitialTransitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getNonInitialTransition_From()
+  {
+    return (EReference)nonInitialTransitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getNonInitialTransition_To()
+  {
+    return (EReference)nonInitialTransitionEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -565,10 +781,33 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
     createEReference(activityEClass, ACTIVITY__OUT_PORTS);
     createEReference(activityEClass, ACTIVITY__SUB_ACTIVITIES);
     createEReference(activityEClass, ACTIVITY__GUIDANCES);
+    createEReference(activityEClass, ACTIVITY__STEPS);
+    createEReference(activityEClass, ACTIVITY__DECISIONS);
+    createEReference(activityEClass, ACTIVITY__TRANSITIONS);
 
     activityRefEClass = createEClass(ACTIVITY_REF);
     createEAttribute(activityRefEClass, ACTIVITY_REF__NAME);
     createEReference(activityRefEClass, ACTIVITY_REF__TYPE);
+
+    nodeEClass = createEClass(NODE);
+    createEAttribute(nodeEClass, NODE__NAME);
+
+    decisionEClass = createEClass(DECISION);
+
+    stepEClass = createEClass(STEP);
+
+    transitionEClass = createEClass(TRANSITION);
+    createEAttribute(transitionEClass, TRANSITION__NAME);
+
+    initialTransitionEClass = createEClass(INITIAL_TRANSITION);
+    createEReference(initialTransitionEClass, INITIAL_TRANSITION__TO);
+
+    finalTransitionEClass = createEClass(FINAL_TRANSITION);
+    createEReference(finalTransitionEClass, FINAL_TRANSITION__FROM);
+
+    nonInitialTransitionEClass = createEClass(NON_INITIAL_TRANSITION);
+    createEReference(nonInitialTransitionEClass, NON_INITIAL_TRANSITION__FROM);
+    createEReference(nonInitialTransitionEClass, NON_INITIAL_TRANSITION__TO);
 
     textfieldEClass = createEClass(TEXTFIELD);
     createEAttribute(textfieldEClass, TEXTFIELD__LABEL);
@@ -611,6 +850,11 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
     guidanceTypeEClass.getESuperTypes().add(this.getNamedElement());
     guidanceEClass.getESuperTypes().add(this.getNamedElement());
     activityEClass.getESuperTypes().add(this.getNamedElement());
+    decisionEClass.getESuperTypes().add(this.getNode());
+    stepEClass.getESuperTypes().add(this.getNode());
+    initialTransitionEClass.getESuperTypes().add(this.getTransition());
+    finalTransitionEClass.getESuperTypes().add(this.getTransition());
+    nonInitialTransitionEClass.getESuperTypes().add(this.getTransition());
 
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -647,10 +891,33 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
     initEReference(getActivity_OutPorts(), this.getPort(), null, "outPorts", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getActivity_SubActivities(), this.getActivityRef(), null, "subActivities", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getActivity_Guidances(), this.getGuidance(), null, "guidances", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getActivity_Steps(), this.getStep(), null, "steps", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getActivity_Decisions(), this.getDecision(), null, "decisions", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getActivity_Transitions(), this.getTransition(), null, "transitions", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(activityRefEClass, ActivityRef.class, "ActivityRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getActivityRef_Name(), ecorePackage.getEString(), "name", null, 0, 1, ActivityRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getActivityRef_Type(), this.getActivity(), null, "type", null, 0, 1, ActivityRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(nodeEClass, Node.class, "Node", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getNode_Name(), ecorePackage.getEString(), "name", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(decisionEClass, Decision.class, "Decision", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(stepEClass, Step.class, "Step", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(transitionEClass, Transition.class, "Transition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTransition_Name(), ecorePackage.getEString(), "name", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(initialTransitionEClass, InitialTransition.class, "InitialTransition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getInitialTransition_To(), this.getNode(), null, "to", null, 0, 1, InitialTransition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(finalTransitionEClass, FinalTransition.class, "FinalTransition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getFinalTransition_From(), this.getNode(), null, "from", null, 0, 1, FinalTransition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(nonInitialTransitionEClass, NonInitialTransition.class, "NonInitialTransition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getNonInitialTransition_From(), this.getNode(), null, "from", null, 0, 1, NonInitialTransition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getNonInitialTransition_To(), this.getNode(), null, "to", null, 0, 1, NonInitialTransition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(textfieldEClass, Textfield.class, "Textfield", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getTextfield_Label(), ecorePackage.getEString(), "label", null, 0, 1, Textfield.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -125,6 +125,41 @@ public class FoWAdapterFactory extends AdapterFactoryImpl
         return createActivityRefAdapter();
       }
       @Override
+      public Adapter caseNode(Node object)
+      {
+        return createNodeAdapter();
+      }
+      @Override
+      public Adapter caseDecision(Decision object)
+      {
+        return createDecisionAdapter();
+      }
+      @Override
+      public Adapter caseStep(Step object)
+      {
+        return createStepAdapter();
+      }
+      @Override
+      public Adapter caseTransition(Transition object)
+      {
+        return createTransitionAdapter();
+      }
+      @Override
+      public Adapter caseInitialTransition(InitialTransition object)
+      {
+        return createInitialTransitionAdapter();
+      }
+      @Override
+      public Adapter caseFinalTransition(FinalTransition object)
+      {
+        return createFinalTransitionAdapter();
+      }
+      @Override
+      public Adapter caseNonInitialTransition(NonInitialTransition object)
+      {
+        return createNonInitialTransitionAdapter();
+      }
+      @Override
       public Adapter caseTextfield(Textfield object)
       {
         return createTextfieldAdapter();
@@ -297,6 +332,111 @@ public class FoWAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createActivityRefAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.protos.FlowOfWork.core.fow.foW.Node <em>Node</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.protos.FlowOfWork.core.fow.foW.Node
+   * @generated
+   */
+  public Adapter createNodeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.protos.FlowOfWork.core.fow.foW.Decision <em>Decision</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.protos.FlowOfWork.core.fow.foW.Decision
+   * @generated
+   */
+  public Adapter createDecisionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.protos.FlowOfWork.core.fow.foW.Step <em>Step</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.protos.FlowOfWork.core.fow.foW.Step
+   * @generated
+   */
+  public Adapter createStepAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.protos.FlowOfWork.core.fow.foW.Transition <em>Transition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.protos.FlowOfWork.core.fow.foW.Transition
+   * @generated
+   */
+  public Adapter createTransitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.protos.FlowOfWork.core.fow.foW.InitialTransition <em>Initial Transition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.protos.FlowOfWork.core.fow.foW.InitialTransition
+   * @generated
+   */
+  public Adapter createInitialTransitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.protos.FlowOfWork.core.fow.foW.FinalTransition <em>Final Transition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.protos.FlowOfWork.core.fow.foW.FinalTransition
+   * @generated
+   */
+  public Adapter createFinalTransitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.protos.FlowOfWork.core.fow.foW.NonInitialTransition <em>Non Initial Transition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.protos.FlowOfWork.core.fow.foW.NonInitialTransition
+   * @generated
+   */
+  public Adapter createNonInitialTransitionAdapter()
   {
     return null;
   }

@@ -4,12 +4,17 @@ import com.google.inject.Inject;
 import com.google.inject.Provider;
 import de.protos.FlowOfWork.core.fow.foW.Activity;
 import de.protos.FlowOfWork.core.fow.foW.ActivityRef;
+import de.protos.FlowOfWork.core.fow.foW.Decision;
+import de.protos.FlowOfWork.core.fow.foW.FinalTransition;
 import de.protos.FlowOfWork.core.fow.foW.FoWPackage;
 import de.protos.FlowOfWork.core.fow.foW.Guidance;
 import de.protos.FlowOfWork.core.fow.foW.GuidanceType;
+import de.protos.FlowOfWork.core.fow.foW.InitialTransition;
 import de.protos.FlowOfWork.core.fow.foW.Model;
+import de.protos.FlowOfWork.core.fow.foW.NonInitialTransition;
 import de.protos.FlowOfWork.core.fow.foW.Port;
 import de.protos.FlowOfWork.core.fow.foW.Role;
+import de.protos.FlowOfWork.core.fow.foW.Step;
 import de.protos.FlowOfWork.core.fow.foW.Textfield;
 import de.protos.FlowOfWork.core.fow.foW.WorkProduct;
 import de.protos.FlowOfWork.core.fow.foW.WorkProductType;
@@ -47,6 +52,20 @@ public class FoWSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
+			case FoWPackage.DECISION:
+				if(context == grammarAccess.getDecisionRule() ||
+				   context == grammarAccess.getNodeRule()) {
+					sequence_Decision(context, (Decision) semanticObject); 
+					return; 
+				}
+				else break;
+			case FoWPackage.FINAL_TRANSITION:
+				if(context == grammarAccess.getFinalTransitionRule() ||
+				   context == grammarAccess.getTransitionRule()) {
+					sequence_FinalTransition(context, (FinalTransition) semanticObject); 
+					return; 
+				}
+				else break;
 			case FoWPackage.GUIDANCE:
 				if(context == grammarAccess.getGuidanceRule() ||
 				   context == grammarAccess.getNamedElementRule()) {
@@ -61,9 +80,23 @@ public class FoWSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
+			case FoWPackage.INITIAL_TRANSITION:
+				if(context == grammarAccess.getInitialTransitionRule() ||
+				   context == grammarAccess.getTransitionRule()) {
+					sequence_InitialTransition(context, (InitialTransition) semanticObject); 
+					return; 
+				}
+				else break;
 			case FoWPackage.MODEL:
 				if(context == grammarAccess.getModelRule()) {
 					sequence_Model(context, (Model) semanticObject); 
+					return; 
+				}
+				else break;
+			case FoWPackage.NON_INITIAL_TRANSITION:
+				if(context == grammarAccess.getNonInitialTransitionRule() ||
+				   context == grammarAccess.getTransitionRule()) {
+					sequence_NonInitialTransition(context, (NonInitialTransition) semanticObject); 
 					return; 
 				}
 				else break;
@@ -77,6 +110,13 @@ public class FoWSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				if(context == grammarAccess.getNamedElementRule() ||
 				   context == grammarAccess.getRoleRule()) {
 					sequence_Role(context, (Role) semanticObject); 
+					return; 
+				}
+				else break;
+			case FoWPackage.STEP:
+				if(context == grammarAccess.getNodeRule() ||
+				   context == grammarAccess.getStepRule()) {
+					sequence_Step(context, (Step) semanticObject); 
 					return; 
 				}
 				else break;
@@ -132,11 +172,47 @@ public class FoWSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         (inPorts+=Port inPorts+=Port*)? 
 	 *         (outPorts+=Port outPorts+=Port*)? 
 	 *         (subActivities+=ActivityRef subActivities+=ActivityRef*)? 
-	 *         (guidances+=[Guidance|ID] guidances+=[Guidance|ID]*)?
+	 *         (guidances+=[Guidance|ID] guidances+=[Guidance|ID]*)? 
+	 *         (steps+=Step | decisions+=Decision | transitions+=Transition)*
 	 *     )
 	 */
 	protected void sequence_Activity(EObject context, Activity semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=ID
+	 */
+	protected void sequence_Decision(EObject context, Decision semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, FoWPackage.Literals.NODE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FoWPackage.Literals.NODE__NAME));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getDecisionAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ID from=[Node|ID])
+	 */
+	protected void sequence_FinalTransition(EObject context, FinalTransition semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, FoWPackage.Literals.TRANSITION__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FoWPackage.Literals.TRANSITION__NAME));
+			if(transientValues.isValueTransient(semanticObject, FoWPackage.Literals.FINAL_TRANSITION__FROM) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FoWPackage.Literals.FINAL_TRANSITION__FROM));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getFinalTransitionAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getFinalTransitionAccess().getFromNodeIDTerminalRuleCall_2_0_1(), semanticObject.getFrom());
+		feeder.finish();
 	}
 	
 	
@@ -183,6 +259,25 @@ public class FoWSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
+	 *     (name=ID to=[Node|ID])
+	 */
+	protected void sequence_InitialTransition(EObject context, InitialTransition semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, FoWPackage.Literals.TRANSITION__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FoWPackage.Literals.TRANSITION__NAME));
+			if(transientValues.isValueTransient(semanticObject, FoWPackage.Literals.INITIAL_TRANSITION__TO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FoWPackage.Literals.INITIAL_TRANSITION__TO));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getInitialTransitionAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getInitialTransitionAccess().getToNodeIDTerminalRuleCall_4_0_1(), semanticObject.getTo());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (
 	 *         activities+=Activity | 
 	 *         roles+=Role | 
@@ -194,6 +289,28 @@ public class FoWSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 */
 	protected void sequence_Model(EObject context, Model semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ID from=[Node|ID] to=[Node|ID])
+	 */
+	protected void sequence_NonInitialTransition(EObject context, NonInitialTransition semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, FoWPackage.Literals.TRANSITION__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FoWPackage.Literals.TRANSITION__NAME));
+			if(transientValues.isValueTransient(semanticObject, FoWPackage.Literals.NON_INITIAL_TRANSITION__FROM) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FoWPackage.Literals.NON_INITIAL_TRANSITION__FROM));
+			if(transientValues.isValueTransient(semanticObject, FoWPackage.Literals.NON_INITIAL_TRANSITION__TO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FoWPackage.Literals.NON_INITIAL_TRANSITION__TO));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getNonInitialTransitionAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getNonInitialTransitionAccess().getFromNodeIDTerminalRuleCall_2_0_1(), semanticObject.getFrom());
+		feeder.accept(grammarAccess.getNonInitialTransitionAccess().getToNodeIDTerminalRuleCall_4_0_1(), semanticObject.getTo());
+		feeder.finish();
 	}
 	
 	
@@ -231,6 +348,22 @@ public class FoWSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getRoleAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getRoleAccess().getTextfieldTextfieldParserRuleCall_2_0(), semanticObject.getTextfield());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=ID
+	 */
+	protected void sequence_Step(EObject context, Step semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, FoWPackage.Literals.NODE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FoWPackage.Literals.NODE__NAME));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getStepAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	

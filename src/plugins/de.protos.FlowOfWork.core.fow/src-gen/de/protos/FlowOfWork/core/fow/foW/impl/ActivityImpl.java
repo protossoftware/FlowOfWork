@@ -4,10 +4,13 @@ package de.protos.FlowOfWork.core.fow.foW.impl;
 
 import de.protos.FlowOfWork.core.fow.foW.Activity;
 import de.protos.FlowOfWork.core.fow.foW.ActivityRef;
+import de.protos.FlowOfWork.core.fow.foW.Decision;
 import de.protos.FlowOfWork.core.fow.foW.FoWPackage;
 import de.protos.FlowOfWork.core.fow.foW.Guidance;
 import de.protos.FlowOfWork.core.fow.foW.Port;
 import de.protos.FlowOfWork.core.fow.foW.Role;
+import de.protos.FlowOfWork.core.fow.foW.Step;
+import de.protos.FlowOfWork.core.fow.foW.Transition;
 
 import java.util.Collection;
 
@@ -37,6 +40,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.protos.FlowOfWork.core.fow.foW.impl.ActivityImpl#getOutPorts <em>Out Ports</em>}</li>
  *   <li>{@link de.protos.FlowOfWork.core.fow.foW.impl.ActivityImpl#getSubActivities <em>Sub Activities</em>}</li>
  *   <li>{@link de.protos.FlowOfWork.core.fow.foW.impl.ActivityImpl#getGuidances <em>Guidances</em>}</li>
+ *   <li>{@link de.protos.FlowOfWork.core.fow.foW.impl.ActivityImpl#getSteps <em>Steps</em>}</li>
+ *   <li>{@link de.protos.FlowOfWork.core.fow.foW.impl.ActivityImpl#getDecisions <em>Decisions</em>}</li>
+ *   <li>{@link de.protos.FlowOfWork.core.fow.foW.impl.ActivityImpl#getTransitions <em>Transitions</em>}</li>
  * </ul>
  * </p>
  *
@@ -93,6 +99,36 @@ public class ActivityImpl extends NamedElementImpl implements Activity
    * @ordered
    */
   protected EList<Guidance> guidances;
+
+  /**
+   * The cached value of the '{@link #getSteps() <em>Steps</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSteps()
+   * @generated
+   * @ordered
+   */
+  protected EList<Step> steps;
+
+  /**
+   * The cached value of the '{@link #getDecisions() <em>Decisions</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDecisions()
+   * @generated
+   * @ordered
+   */
+  protected EList<Decision> decisions;
+
+  /**
+   * The cached value of the '{@link #getTransitions() <em>Transitions</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTransitions()
+   * @generated
+   * @ordered
+   */
+  protected EList<Transition> transitions;
 
   /**
    * <!-- begin-user-doc -->
@@ -219,6 +255,48 @@ public class ActivityImpl extends NamedElementImpl implements Activity
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Step> getSteps()
+  {
+    if (steps == null)
+    {
+      steps = new EObjectContainmentEList<Step>(Step.class, this, FoWPackage.ACTIVITY__STEPS);
+    }
+    return steps;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<Decision> getDecisions()
+  {
+    if (decisions == null)
+    {
+      decisions = new EObjectContainmentEList<Decision>(Decision.class, this, FoWPackage.ACTIVITY__DECISIONS);
+    }
+    return decisions;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<Transition> getTransitions()
+  {
+    if (transitions == null)
+    {
+      transitions = new EObjectContainmentEList<Transition>(Transition.class, this, FoWPackage.ACTIVITY__TRANSITIONS);
+    }
+    return transitions;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -230,6 +308,12 @@ public class ActivityImpl extends NamedElementImpl implements Activity
         return ((InternalEList<?>)getOutPorts()).basicRemove(otherEnd, msgs);
       case FoWPackage.ACTIVITY__SUB_ACTIVITIES:
         return ((InternalEList<?>)getSubActivities()).basicRemove(otherEnd, msgs);
+      case FoWPackage.ACTIVITY__STEPS:
+        return ((InternalEList<?>)getSteps()).basicRemove(otherEnd, msgs);
+      case FoWPackage.ACTIVITY__DECISIONS:
+        return ((InternalEList<?>)getDecisions()).basicRemove(otherEnd, msgs);
+      case FoWPackage.ACTIVITY__TRANSITIONS:
+        return ((InternalEList<?>)getTransitions()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -255,6 +339,12 @@ public class ActivityImpl extends NamedElementImpl implements Activity
         return getSubActivities();
       case FoWPackage.ACTIVITY__GUIDANCES:
         return getGuidances();
+      case FoWPackage.ACTIVITY__STEPS:
+        return getSteps();
+      case FoWPackage.ACTIVITY__DECISIONS:
+        return getDecisions();
+      case FoWPackage.ACTIVITY__TRANSITIONS:
+        return getTransitions();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -289,6 +379,18 @@ public class ActivityImpl extends NamedElementImpl implements Activity
         getGuidances().clear();
         getGuidances().addAll((Collection<? extends Guidance>)newValue);
         return;
+      case FoWPackage.ACTIVITY__STEPS:
+        getSteps().clear();
+        getSteps().addAll((Collection<? extends Step>)newValue);
+        return;
+      case FoWPackage.ACTIVITY__DECISIONS:
+        getDecisions().clear();
+        getDecisions().addAll((Collection<? extends Decision>)newValue);
+        return;
+      case FoWPackage.ACTIVITY__TRANSITIONS:
+        getTransitions().clear();
+        getTransitions().addAll((Collection<? extends Transition>)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -318,6 +420,15 @@ public class ActivityImpl extends NamedElementImpl implements Activity
       case FoWPackage.ACTIVITY__GUIDANCES:
         getGuidances().clear();
         return;
+      case FoWPackage.ACTIVITY__STEPS:
+        getSteps().clear();
+        return;
+      case FoWPackage.ACTIVITY__DECISIONS:
+        getDecisions().clear();
+        return;
+      case FoWPackage.ACTIVITY__TRANSITIONS:
+        getTransitions().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -342,6 +453,12 @@ public class ActivityImpl extends NamedElementImpl implements Activity
         return subActivities != null && !subActivities.isEmpty();
       case FoWPackage.ACTIVITY__GUIDANCES:
         return guidances != null && !guidances.isEmpty();
+      case FoWPackage.ACTIVITY__STEPS:
+        return steps != null && !steps.isEmpty();
+      case FoWPackage.ACTIVITY__DECISIONS:
+        return decisions != null && !decisions.isEmpty();
+      case FoWPackage.ACTIVITY__TRANSITIONS:
+        return transitions != null && !transitions.isEmpty();
     }
     return super.eIsSet(featureID);
   }

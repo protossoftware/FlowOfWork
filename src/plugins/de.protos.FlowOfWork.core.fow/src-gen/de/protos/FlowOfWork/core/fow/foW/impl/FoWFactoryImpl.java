@@ -74,6 +74,13 @@ public class FoWFactoryImpl extends EFactoryImpl implements FoWFactory
       case FoWPackage.PORT: return createPort();
       case FoWPackage.ACTIVITY: return createActivity();
       case FoWPackage.ACTIVITY_REF: return createActivityRef();
+      case FoWPackage.NODE: return createNode();
+      case FoWPackage.DECISION: return createDecision();
+      case FoWPackage.STEP: return createStep();
+      case FoWPackage.TRANSITION: return createTransition();
+      case FoWPackage.INITIAL_TRANSITION: return createInitialTransition();
+      case FoWPackage.FINAL_TRANSITION: return createFinalTransition();
+      case FoWPackage.NON_INITIAL_TRANSITION: return createNonInitialTransition();
       case FoWPackage.TEXTFIELD: return createTextfield();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -188,6 +195,83 @@ public class FoWFactoryImpl extends EFactoryImpl implements FoWFactory
   {
     ActivityRefImpl activityRef = new ActivityRefImpl();
     return activityRef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Node createNode()
+  {
+    NodeImpl node = new NodeImpl();
+    return node;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Decision createDecision()
+  {
+    DecisionImpl decision = new DecisionImpl();
+    return decision;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Step createStep()
+  {
+    StepImpl step = new StepImpl();
+    return step;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Transition createTransition()
+  {
+    TransitionImpl transition = new TransitionImpl();
+    return transition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public InitialTransition createInitialTransition()
+  {
+    InitialTransitionImpl initialTransition = new InitialTransitionImpl();
+    return initialTransition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FinalTransition createFinalTransition()
+  {
+    FinalTransitionImpl finalTransition = new FinalTransitionImpl();
+    return finalTransition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NonInitialTransition createNonInitialTransition()
+  {
+    NonInitialTransitionImpl nonInitialTransition = new NonInitialTransitionImpl();
+    return nonInitialTransition;
   }
 
   /**

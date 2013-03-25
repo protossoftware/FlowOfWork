@@ -148,6 +148,60 @@ public class FoWSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case FoWPackage.NODE:
+      {
+        Node node = (Node)theEObject;
+        T result = caseNode(node);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case FoWPackage.DECISION:
+      {
+        Decision decision = (Decision)theEObject;
+        T result = caseDecision(decision);
+        if (result == null) result = caseNode(decision);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case FoWPackage.STEP:
+      {
+        Step step = (Step)theEObject;
+        T result = caseStep(step);
+        if (result == null) result = caseNode(step);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case FoWPackage.TRANSITION:
+      {
+        Transition transition = (Transition)theEObject;
+        T result = caseTransition(transition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case FoWPackage.INITIAL_TRANSITION:
+      {
+        InitialTransition initialTransition = (InitialTransition)theEObject;
+        T result = caseInitialTransition(initialTransition);
+        if (result == null) result = caseTransition(initialTransition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case FoWPackage.FINAL_TRANSITION:
+      {
+        FinalTransition finalTransition = (FinalTransition)theEObject;
+        T result = caseFinalTransition(finalTransition);
+        if (result == null) result = caseTransition(finalTransition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case FoWPackage.NON_INITIAL_TRANSITION:
+      {
+        NonInitialTransition nonInitialTransition = (NonInitialTransition)theEObject;
+        T result = caseNonInitialTransition(nonInitialTransition);
+        if (result == null) result = caseTransition(nonInitialTransition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case FoWPackage.TEXTFIELD:
       {
         Textfield textfield = (Textfield)theEObject;
@@ -315,6 +369,118 @@ public class FoWSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseActivityRef(ActivityRef object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Node</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Node</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseNode(Node object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Decision</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Decision</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDecision(Decision object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Step</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Step</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStep(Step object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Transition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Transition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTransition(Transition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Initial Transition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Initial Transition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInitialTransition(InitialTransition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Final Transition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Final Transition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFinalTransition(FinalTransition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Non Initial Transition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Non Initial Transition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseNonInitialTransition(NonInitialTransition object)
   {
     return null;
   }

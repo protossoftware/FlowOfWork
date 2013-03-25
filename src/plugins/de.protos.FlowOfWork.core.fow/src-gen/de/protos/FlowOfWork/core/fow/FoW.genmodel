@@ -38,10 +38,31 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FoW.ecore#//Activity/outPorts"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FoW.ecore#//Activity/subActivities"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FoW.ecore#//Activity/guidances"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FoW.ecore#//Activity/steps"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FoW.ecore#//Activity/decisions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FoW.ecore#//Activity/transitions"/>
     </genClasses>
     <genClasses ecoreClass="FoW.ecore#//ActivityRef">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FoW.ecore#//ActivityRef/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FoW.ecore#//ActivityRef/type"/>
+    </genClasses>
+    <genClasses ecoreClass="FoW.ecore#//Node">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FoW.ecore#//Node/name"/>
+    </genClasses>
+    <genClasses ecoreClass="FoW.ecore#//Decision"/>
+    <genClasses ecoreClass="FoW.ecore#//Step"/>
+    <genClasses ecoreClass="FoW.ecore#//Transition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FoW.ecore#//Transition/name"/>
+    </genClasses>
+    <genClasses ecoreClass="FoW.ecore#//InitialTransition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FoW.ecore#//InitialTransition/to"/>
+    </genClasses>
+    <genClasses ecoreClass="FoW.ecore#//FinalTransition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FoW.ecore#//FinalTransition/from"/>
+    </genClasses>
+    <genClasses ecoreClass="FoW.ecore#//NonInitialTransition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FoW.ecore#//NonInitialTransition/from"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FoW.ecore#//NonInitialTransition/to"/>
     </genClasses>
     <genClasses ecoreClass="FoW.ecore#//Textfield">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FoW.ecore#//Textfield/label"/>

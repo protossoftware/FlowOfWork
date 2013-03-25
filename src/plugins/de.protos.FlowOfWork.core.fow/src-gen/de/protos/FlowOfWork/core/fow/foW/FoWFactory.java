@@ -113,6 +113,69 @@ public interface FoWFactory extends EFactory
   ActivityRef createActivityRef();
 
   /**
+   * Returns a new object of class '<em>Node</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Node</em>'.
+   * @generated
+   */
+  Node createNode();
+
+  /**
+   * Returns a new object of class '<em>Decision</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Decision</em>'.
+   * @generated
+   */
+  Decision createDecision();
+
+  /**
+   * Returns a new object of class '<em>Step</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Step</em>'.
+   * @generated
+   */
+  Step createStep();
+
+  /**
+   * Returns a new object of class '<em>Transition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Transition</em>'.
+   * @generated
+   */
+  Transition createTransition();
+
+  /**
+   * Returns a new object of class '<em>Initial Transition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Initial Transition</em>'.
+   * @generated
+   */
+  InitialTransition createInitialTransition();
+
+  /**
+   * Returns a new object of class '<em>Final Transition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Final Transition</em>'.
+   * @generated
+   */
+  FinalTransition createFinalTransition();
+
+  /**
+   * Returns a new object of class '<em>Non Initial Transition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Non Initial Transition</em>'.
+   * @generated
+   */
+  NonInitialTransition createNonInitialTransition();
+
+  /**
    * Returns a new object of class '<em>Textfield</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

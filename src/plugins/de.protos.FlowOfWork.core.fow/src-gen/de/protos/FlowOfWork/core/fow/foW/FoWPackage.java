@@ -480,13 +480,40 @@ public interface FoWPackage extends EPackage
   int ACTIVITY__GUIDANCES = NAMED_ELEMENT_FEATURE_COUNT + 4;
 
   /**
+   * The feature id for the '<em><b>Steps</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACTIVITY__STEPS = NAMED_ELEMENT_FEATURE_COUNT + 5;
+
+  /**
+   * The feature id for the '<em><b>Decisions</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACTIVITY__DECISIONS = NAMED_ELEMENT_FEATURE_COUNT + 6;
+
+  /**
+   * The feature id for the '<em><b>Transitions</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACTIVITY__TRANSITIONS = NAMED_ELEMENT_FEATURE_COUNT + 7;
+
+  /**
    * The number of structural features of the '<em>Activity</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ACTIVITY_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 5;
+  int ACTIVITY_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 8;
 
   /**
    * The meta object id for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.ActivityRefImpl <em>Activity Ref</em>}' class.
@@ -526,6 +553,238 @@ public interface FoWPackage extends EPackage
   int ACTIVITY_REF_FEATURE_COUNT = 2;
 
   /**
+   * The meta object id for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.NodeImpl <em>Node</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.protos.FlowOfWork.core.fow.foW.impl.NodeImpl
+   * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getNode()
+   * @generated
+   */
+  int NODE = 10;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NODE__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Node</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NODE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.DecisionImpl <em>Decision</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.protos.FlowOfWork.core.fow.foW.impl.DecisionImpl
+   * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getDecision()
+   * @generated
+   */
+  int DECISION = 11;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DECISION__NAME = NODE__NAME;
+
+  /**
+   * The number of structural features of the '<em>Decision</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DECISION_FEATURE_COUNT = NODE_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.StepImpl <em>Step</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.protos.FlowOfWork.core.fow.foW.impl.StepImpl
+   * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getStep()
+   * @generated
+   */
+  int STEP = 12;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STEP__NAME = NODE__NAME;
+
+  /**
+   * The number of structural features of the '<em>Step</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STEP_FEATURE_COUNT = NODE_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.TransitionImpl <em>Transition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.protos.FlowOfWork.core.fow.foW.impl.TransitionImpl
+   * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getTransition()
+   * @generated
+   */
+  int TRANSITION = 13;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TRANSITION__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Transition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TRANSITION_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.InitialTransitionImpl <em>Initial Transition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.protos.FlowOfWork.core.fow.foW.impl.InitialTransitionImpl
+   * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getInitialTransition()
+   * @generated
+   */
+  int INITIAL_TRANSITION = 14;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIAL_TRANSITION__NAME = TRANSITION__NAME;
+
+  /**
+   * The feature id for the '<em><b>To</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIAL_TRANSITION__TO = TRANSITION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Initial Transition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INITIAL_TRANSITION_FEATURE_COUNT = TRANSITION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.FinalTransitionImpl <em>Final Transition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.protos.FlowOfWork.core.fow.foW.impl.FinalTransitionImpl
+   * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getFinalTransition()
+   * @generated
+   */
+  int FINAL_TRANSITION = 15;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FINAL_TRANSITION__NAME = TRANSITION__NAME;
+
+  /**
+   * The feature id for the '<em><b>From</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FINAL_TRANSITION__FROM = TRANSITION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Final Transition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FINAL_TRANSITION_FEATURE_COUNT = TRANSITION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.NonInitialTransitionImpl <em>Non Initial Transition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.protos.FlowOfWork.core.fow.foW.impl.NonInitialTransitionImpl
+   * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getNonInitialTransition()
+   * @generated
+   */
+  int NON_INITIAL_TRANSITION = 16;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NON_INITIAL_TRANSITION__NAME = TRANSITION__NAME;
+
+  /**
+   * The feature id for the '<em><b>From</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NON_INITIAL_TRANSITION__FROM = TRANSITION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>To</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NON_INITIAL_TRANSITION__TO = TRANSITION_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Non Initial Transition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NON_INITIAL_TRANSITION_FEATURE_COUNT = TRANSITION_FEATURE_COUNT + 2;
+
+  /**
    * The meta object id for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.TextfieldImpl <em>Textfield</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -533,7 +792,7 @@ public interface FoWPackage extends EPackage
    * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getTextfield()
    * @generated
    */
-  int TEXTFIELD = 10;
+  int TEXTFIELD = 17;
 
   /**
    * The feature id for the '<em><b>Label</b></em>' attribute.
@@ -850,6 +1109,39 @@ public interface FoWPackage extends EPackage
   EReference getActivity_Guidances();
 
   /**
+   * Returns the meta object for the containment reference list '{@link de.protos.FlowOfWork.core.fow.foW.Activity#getSteps <em>Steps</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Steps</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.Activity#getSteps()
+   * @see #getActivity()
+   * @generated
+   */
+  EReference getActivity_Steps();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link de.protos.FlowOfWork.core.fow.foW.Activity#getDecisions <em>Decisions</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Decisions</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.Activity#getDecisions()
+   * @see #getActivity()
+   * @generated
+   */
+  EReference getActivity_Decisions();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link de.protos.FlowOfWork.core.fow.foW.Activity#getTransitions <em>Transitions</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Transitions</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.Activity#getTransitions()
+   * @see #getActivity()
+   * @generated
+   */
+  EReference getActivity_Transitions();
+
+  /**
    * Returns the meta object for class '{@link de.protos.FlowOfWork.core.fow.foW.ActivityRef <em>Activity Ref</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -880,6 +1172,142 @@ public interface FoWPackage extends EPackage
    * @generated
    */
   EReference getActivityRef_Type();
+
+  /**
+   * Returns the meta object for class '{@link de.protos.FlowOfWork.core.fow.foW.Node <em>Node</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Node</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.Node
+   * @generated
+   */
+  EClass getNode();
+
+  /**
+   * Returns the meta object for the attribute '{@link de.protos.FlowOfWork.core.fow.foW.Node#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.Node#getName()
+   * @see #getNode()
+   * @generated
+   */
+  EAttribute getNode_Name();
+
+  /**
+   * Returns the meta object for class '{@link de.protos.FlowOfWork.core.fow.foW.Decision <em>Decision</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Decision</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.Decision
+   * @generated
+   */
+  EClass getDecision();
+
+  /**
+   * Returns the meta object for class '{@link de.protos.FlowOfWork.core.fow.foW.Step <em>Step</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Step</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.Step
+   * @generated
+   */
+  EClass getStep();
+
+  /**
+   * Returns the meta object for class '{@link de.protos.FlowOfWork.core.fow.foW.Transition <em>Transition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Transition</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.Transition
+   * @generated
+   */
+  EClass getTransition();
+
+  /**
+   * Returns the meta object for the attribute '{@link de.protos.FlowOfWork.core.fow.foW.Transition#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.Transition#getName()
+   * @see #getTransition()
+   * @generated
+   */
+  EAttribute getTransition_Name();
+
+  /**
+   * Returns the meta object for class '{@link de.protos.FlowOfWork.core.fow.foW.InitialTransition <em>Initial Transition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Initial Transition</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.InitialTransition
+   * @generated
+   */
+  EClass getInitialTransition();
+
+  /**
+   * Returns the meta object for the reference '{@link de.protos.FlowOfWork.core.fow.foW.InitialTransition#getTo <em>To</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>To</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.InitialTransition#getTo()
+   * @see #getInitialTransition()
+   * @generated
+   */
+  EReference getInitialTransition_To();
+
+  /**
+   * Returns the meta object for class '{@link de.protos.FlowOfWork.core.fow.foW.FinalTransition <em>Final Transition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Final Transition</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.FinalTransition
+   * @generated
+   */
+  EClass getFinalTransition();
+
+  /**
+   * Returns the meta object for the reference '{@link de.protos.FlowOfWork.core.fow.foW.FinalTransition#getFrom <em>From</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>From</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.FinalTransition#getFrom()
+   * @see #getFinalTransition()
+   * @generated
+   */
+  EReference getFinalTransition_From();
+
+  /**
+   * Returns the meta object for class '{@link de.protos.FlowOfWork.core.fow.foW.NonInitialTransition <em>Non Initial Transition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Non Initial Transition</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.NonInitialTransition
+   * @generated
+   */
+  EClass getNonInitialTransition();
+
+  /**
+   * Returns the meta object for the reference '{@link de.protos.FlowOfWork.core.fow.foW.NonInitialTransition#getFrom <em>From</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>From</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.NonInitialTransition#getFrom()
+   * @see #getNonInitialTransition()
+   * @generated
+   */
+  EReference getNonInitialTransition_From();
+
+  /**
+   * Returns the meta object for the reference '{@link de.protos.FlowOfWork.core.fow.foW.NonInitialTransition#getTo <em>To</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>To</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.NonInitialTransition#getTo()
+   * @see #getNonInitialTransition()
+   * @generated
+   */
+  EReference getNonInitialTransition_To();
 
   /**
    * Returns the meta object for class '{@link de.protos.FlowOfWork.core.fow.foW.Textfield <em>Textfield</em>}'.
@@ -1174,6 +1602,30 @@ public interface FoWPackage extends EPackage
     EReference ACTIVITY__GUIDANCES = eINSTANCE.getActivity_Guidances();
 
     /**
+     * The meta object literal for the '<em><b>Steps</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ACTIVITY__STEPS = eINSTANCE.getActivity_Steps();
+
+    /**
+     * The meta object literal for the '<em><b>Decisions</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ACTIVITY__DECISIONS = eINSTANCE.getActivity_Decisions();
+
+    /**
+     * The meta object literal for the '<em><b>Transitions</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ACTIVITY__TRANSITIONS = eINSTANCE.getActivity_Transitions();
+
+    /**
      * The meta object literal for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.ActivityRefImpl <em>Activity Ref</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1198,6 +1650,124 @@ public interface FoWPackage extends EPackage
      * @generated
      */
     EReference ACTIVITY_REF__TYPE = eINSTANCE.getActivityRef_Type();
+
+    /**
+     * The meta object literal for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.NodeImpl <em>Node</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.protos.FlowOfWork.core.fow.foW.impl.NodeImpl
+     * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getNode()
+     * @generated
+     */
+    EClass NODE = eINSTANCE.getNode();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute NODE__NAME = eINSTANCE.getNode_Name();
+
+    /**
+     * The meta object literal for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.DecisionImpl <em>Decision</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.protos.FlowOfWork.core.fow.foW.impl.DecisionImpl
+     * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getDecision()
+     * @generated
+     */
+    EClass DECISION = eINSTANCE.getDecision();
+
+    /**
+     * The meta object literal for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.StepImpl <em>Step</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.protos.FlowOfWork.core.fow.foW.impl.StepImpl
+     * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getStep()
+     * @generated
+     */
+    EClass STEP = eINSTANCE.getStep();
+
+    /**
+     * The meta object literal for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.TransitionImpl <em>Transition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.protos.FlowOfWork.core.fow.foW.impl.TransitionImpl
+     * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getTransition()
+     * @generated
+     */
+    EClass TRANSITION = eINSTANCE.getTransition();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TRANSITION__NAME = eINSTANCE.getTransition_Name();
+
+    /**
+     * The meta object literal for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.InitialTransitionImpl <em>Initial Transition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.protos.FlowOfWork.core.fow.foW.impl.InitialTransitionImpl
+     * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getInitialTransition()
+     * @generated
+     */
+    EClass INITIAL_TRANSITION = eINSTANCE.getInitialTransition();
+
+    /**
+     * The meta object literal for the '<em><b>To</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INITIAL_TRANSITION__TO = eINSTANCE.getInitialTransition_To();
+
+    /**
+     * The meta object literal for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.FinalTransitionImpl <em>Final Transition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.protos.FlowOfWork.core.fow.foW.impl.FinalTransitionImpl
+     * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getFinalTransition()
+     * @generated
+     */
+    EClass FINAL_TRANSITION = eINSTANCE.getFinalTransition();
+
+    /**
+     * The meta object literal for the '<em><b>From</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FINAL_TRANSITION__FROM = eINSTANCE.getFinalTransition_From();
+
+    /**
+     * The meta object literal for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.NonInitialTransitionImpl <em>Non Initial Transition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.protos.FlowOfWork.core.fow.foW.impl.NonInitialTransitionImpl
+     * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getNonInitialTransition()
+     * @generated
+     */
+    EClass NON_INITIAL_TRANSITION = eINSTANCE.getNonInitialTransition();
+
+    /**
+     * The meta object literal for the '<em><b>From</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference NON_INITIAL_TRANSITION__FROM = eINSTANCE.getNonInitialTransition_From();
+
+    /**
+     * The meta object literal for the '<em><b>To</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference NON_INITIAL_TRANSITION__TO = eINSTANCE.getNonInitialTransition_To();
 
     /**
      * The meta object literal for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.TextfieldImpl <em>Textfield</em>}' class.

@@ -17,6 +17,9 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.protos.FlowOfWork.core.fow.foW.Activity#getOutPorts <em>Out Ports</em>}</li>
  *   <li>{@link de.protos.FlowOfWork.core.fow.foW.Activity#getSubActivities <em>Sub Activities</em>}</li>
  *   <li>{@link de.protos.FlowOfWork.core.fow.foW.Activity#getGuidances <em>Guidances</em>}</li>
+ *   <li>{@link de.protos.FlowOfWork.core.fow.foW.Activity#getSteps <em>Steps</em>}</li>
+ *   <li>{@link de.protos.FlowOfWork.core.fow.foW.Activity#getDecisions <em>Decisions</em>}</li>
+ *   <li>{@link de.protos.FlowOfWork.core.fow.foW.Activity#getTransitions <em>Transitions</em>}</li>
  * </ul>
  * </p>
  *
@@ -115,5 +118,53 @@ public interface Activity extends NamedElement
    * @generated
    */
   EList<Guidance> getGuidances();
+
+  /**
+   * Returns the value of the '<em><b>Steps</b></em>' containment reference list.
+   * The list contents are of type {@link de.protos.FlowOfWork.core.fow.foW.Step}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Steps</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Steps</em>' containment reference list.
+   * @see de.protos.FlowOfWork.core.fow.foW.FoWPackage#getActivity_Steps()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Step> getSteps();
+
+  /**
+   * Returns the value of the '<em><b>Decisions</b></em>' containment reference list.
+   * The list contents are of type {@link de.protos.FlowOfWork.core.fow.foW.Decision}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Decisions</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Decisions</em>' containment reference list.
+   * @see de.protos.FlowOfWork.core.fow.foW.FoWPackage#getActivity_Decisions()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Decision> getDecisions();
+
+  /**
+   * Returns the value of the '<em><b>Transitions</b></em>' containment reference list.
+   * The list contents are of type {@link de.protos.FlowOfWork.core.fow.foW.Transition}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Transitions</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Transitions</em>' containment reference list.
+   * @see de.protos.FlowOfWork.core.fow.foW.FoWPackage#getActivity_Transitions()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Transition> getTransitions();
 
 } // Activity

@@ -39,6 +39,9 @@ public class FoWParser extends AbstractContentAssistParser {
 				{
 					put(grammarAccess.getModelAccess().getAlternatives(), "rule__Model__Alternatives");
 					put(grammarAccess.getNamedElementAccess().getAlternatives(), "rule__NamedElement__Alternatives");
+					put(grammarAccess.getActivityAccess().getAlternatives_9_2(), "rule__Activity__Alternatives_9_2");
+					put(grammarAccess.getNodeAccess().getAlternatives(), "rule__Node__Alternatives");
+					put(grammarAccess.getTransitionAccess().getAlternatives(), "rule__Transition__Alternatives");
 					put(grammarAccess.getRoleAccess().getGroup(), "rule__Role__Group__0");
 					put(grammarAccess.getWorkProductTypeAccess().getGroup(), "rule__WorkProductType__Group__0");
 					put(grammarAccess.getWorkProductAccess().getGroup(), "rule__WorkProduct__Group__0");
@@ -54,7 +57,13 @@ public class FoWParser extends AbstractContentAssistParser {
 					put(grammarAccess.getActivityAccess().getGroup_7_2(), "rule__Activity__Group_7_2__0");
 					put(grammarAccess.getActivityAccess().getGroup_8(), "rule__Activity__Group_8__0");
 					put(grammarAccess.getActivityAccess().getGroup_8_2(), "rule__Activity__Group_8_2__0");
+					put(grammarAccess.getActivityAccess().getGroup_9(), "rule__Activity__Group_9__0");
 					put(grammarAccess.getActivityRefAccess().getGroup(), "rule__ActivityRef__Group__0");
+					put(grammarAccess.getDecisionAccess().getGroup(), "rule__Decision__Group__0");
+					put(grammarAccess.getStepAccess().getGroup(), "rule__Step__Group__0");
+					put(grammarAccess.getInitialTransitionAccess().getGroup(), "rule__InitialTransition__Group__0");
+					put(grammarAccess.getFinalTransitionAccess().getGroup(), "rule__FinalTransition__Group__0");
+					put(grammarAccess.getNonInitialTransitionAccess().getGroup(), "rule__NonInitialTransition__Group__0");
 					put(grammarAccess.getTextfieldAccess().getGroup(), "rule__Textfield__Group__0");
 					put(grammarAccess.getTextfieldAccess().getGroup_0(), "rule__Textfield__Group_0__0");
 					put(grammarAccess.getTextfieldAccess().getGroup_3(), "rule__Textfield__Group_3__0");
@@ -89,8 +98,20 @@ public class FoWParser extends AbstractContentAssistParser {
 					put(grammarAccess.getActivityAccess().getSubActivitiesAssignment_7_2_1(), "rule__Activity__SubActivitiesAssignment_7_2_1");
 					put(grammarAccess.getActivityAccess().getGuidancesAssignment_8_1(), "rule__Activity__GuidancesAssignment_8_1");
 					put(grammarAccess.getActivityAccess().getGuidancesAssignment_8_2_1(), "rule__Activity__GuidancesAssignment_8_2_1");
+					put(grammarAccess.getActivityAccess().getStepsAssignment_9_2_0(), "rule__Activity__StepsAssignment_9_2_0");
+					put(grammarAccess.getActivityAccess().getDecisionsAssignment_9_2_1(), "rule__Activity__DecisionsAssignment_9_2_1");
+					put(grammarAccess.getActivityAccess().getTransitionsAssignment_9_2_2(), "rule__Activity__TransitionsAssignment_9_2_2");
 					put(grammarAccess.getActivityRefAccess().getNameAssignment_0(), "rule__ActivityRef__NameAssignment_0");
 					put(grammarAccess.getActivityRefAccess().getTypeAssignment_2(), "rule__ActivityRef__TypeAssignment_2");
+					put(grammarAccess.getDecisionAccess().getNameAssignment_1(), "rule__Decision__NameAssignment_1");
+					put(grammarAccess.getStepAccess().getNameAssignment_1(), "rule__Step__NameAssignment_1");
+					put(grammarAccess.getInitialTransitionAccess().getNameAssignment_1(), "rule__InitialTransition__NameAssignment_1");
+					put(grammarAccess.getInitialTransitionAccess().getToAssignment_4(), "rule__InitialTransition__ToAssignment_4");
+					put(grammarAccess.getFinalTransitionAccess().getNameAssignment_1(), "rule__FinalTransition__NameAssignment_1");
+					put(grammarAccess.getFinalTransitionAccess().getFromAssignment_2(), "rule__FinalTransition__FromAssignment_2");
+					put(grammarAccess.getNonInitialTransitionAccess().getNameAssignment_1(), "rule__NonInitialTransition__NameAssignment_1");
+					put(grammarAccess.getNonInitialTransitionAccess().getFromAssignment_2(), "rule__NonInitialTransition__FromAssignment_2");
+					put(grammarAccess.getNonInitialTransitionAccess().getToAssignment_4(), "rule__NonInitialTransition__ToAssignment_4");
 					put(grammarAccess.getTextfieldAccess().getLabelAssignment_0_1(), "rule__Textfield__LabelAssignment_0_1");
 					put(grammarAccess.getTextfieldAccess().getSummaryAssignment_2(), "rule__Textfield__SummaryAssignment_2");
 					put(grammarAccess.getTextfieldAccess().getDescriptionAssignment_3_1(), "rule__Textfield__DescriptionAssignment_3_1");

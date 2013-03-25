@@ -43,10 +43,34 @@
         eType="#//ActivityRef" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="guidances" unique="false"
         upperBound="-1" eType="#//Guidance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="steps" upperBound="-1"
+        eType="#//Step" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="decisions" upperBound="-1"
+        eType="#//Decision" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transitions" upperBound="-1"
+        eType="#//Transition" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ActivityRef">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//Activity"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Node">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Decision" eSuperTypes="#//Node"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Step" eSuperTypes="#//Node"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Transition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InitialTransition" eSuperTypes="#//Transition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="to" eType="#//Node"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FinalTransition" eSuperTypes="#//Transition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="from" eType="#//Node"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NonInitialTransition" eSuperTypes="#//Transition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="from" eType="#//Node"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="to" eType="#//Node"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Textfield">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

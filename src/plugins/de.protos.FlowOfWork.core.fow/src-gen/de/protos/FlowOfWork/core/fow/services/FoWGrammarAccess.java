@@ -421,7 +421,18 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cGuidancesAssignment_8_2_1 = (Assignment)cGroup_8_2.eContents().get(1);
 		private final CrossReference cGuidancesGuidanceCrossReference_8_2_1_0 = (CrossReference)cGuidancesAssignment_8_2_1.eContents().get(0);
 		private final RuleCall cGuidancesGuidanceIDTerminalRuleCall_8_2_1_0_1 = (RuleCall)cGuidancesGuidanceCrossReference_8_2_1_0.eContents().get(1);
-		private final Keyword cSemicolonKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
+		private final Keyword cBehaviorKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_9_1 = (Keyword)cGroup_9.eContents().get(1);
+		private final Alternatives cAlternatives_9_2 = (Alternatives)cGroup_9.eContents().get(2);
+		private final Assignment cStepsAssignment_9_2_0 = (Assignment)cAlternatives_9_2.eContents().get(0);
+		private final RuleCall cStepsStepParserRuleCall_9_2_0_0 = (RuleCall)cStepsAssignment_9_2_0.eContents().get(0);
+		private final Assignment cDecisionsAssignment_9_2_1 = (Assignment)cAlternatives_9_2.eContents().get(1);
+		private final RuleCall cDecisionsDecisionParserRuleCall_9_2_1_0 = (RuleCall)cDecisionsAssignment_9_2_1.eContents().get(0);
+		private final Assignment cTransitionsAssignment_9_2_2 = (Assignment)cAlternatives_9_2.eContents().get(2);
+		private final RuleCall cTransitionsTransitionParserRuleCall_9_2_2_0 = (RuleCall)cTransitionsAssignment_9_2_2.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_9_3 = (Keyword)cGroup_9.eContents().get(3);
+		private final Keyword cSemicolonKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
 		//Activity:
 		//
@@ -429,14 +440,18 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 		//
 		//	("outputs" outPorts+=Port ("," outPorts+=Port)*)? ("subActivities" subActivities+=ActivityRef (","
 		//
-		//	subActivities+=ActivityRef)*)? ("guidances" guidances+=[Guidance] ("," guidances+=[Guidance])*)? ";";
+		//	subActivities+=ActivityRef)*)? ("guidances" guidances+=[Guidance] ("," guidances+=[Guidance])*)? ("Behavior" "{"
+		//
+		//	(steps+=Step | decisions+=Decision | transitions+=Transition)* "}")? ";";
 		public ParserRule getRule() { return rule; }
 
 		//"Activity" name=ID textfield=Textfield "responsible" role=[Role] ("inputs" inPorts+=Port ("," inPorts+=Port)*)?
 		//
 		//("outputs" outPorts+=Port ("," outPorts+=Port)*)? ("subActivities" subActivities+=ActivityRef (","
 		//
-		//subActivities+=ActivityRef)*)? ("guidances" guidances+=[Guidance] ("," guidances+=[Guidance])*)? ";"
+		//subActivities+=ActivityRef)*)? ("guidances" guidances+=[Guidance] ("," guidances+=[Guidance])*)? ("Behavior" "{"
+		//
+		//(steps+=Step | decisions+=Decision | transitions+=Transition)* "}")? ";"
 		public Group getGroup() { return cGroup; }
 
 		//"Activity"
@@ -568,8 +583,41 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getGuidancesGuidanceIDTerminalRuleCall_8_2_1_0_1() { return cGuidancesGuidanceIDTerminalRuleCall_8_2_1_0_1; }
 
+		//("Behavior" "{" (steps+=Step | decisions+=Decision | transitions+=Transition)* "}")?
+		public Group getGroup_9() { return cGroup_9; }
+
+		//"Behavior"
+		public Keyword getBehaviorKeyword_9_0() { return cBehaviorKeyword_9_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_9_1() { return cLeftCurlyBracketKeyword_9_1; }
+
+		//(steps+=Step | decisions+=Decision | transitions+=Transition)*
+		public Alternatives getAlternatives_9_2() { return cAlternatives_9_2; }
+
+		//steps+=Step
+		public Assignment getStepsAssignment_9_2_0() { return cStepsAssignment_9_2_0; }
+
+		//Step
+		public RuleCall getStepsStepParserRuleCall_9_2_0_0() { return cStepsStepParserRuleCall_9_2_0_0; }
+
+		//decisions+=Decision
+		public Assignment getDecisionsAssignment_9_2_1() { return cDecisionsAssignment_9_2_1; }
+
+		//Decision
+		public RuleCall getDecisionsDecisionParserRuleCall_9_2_1_0() { return cDecisionsDecisionParserRuleCall_9_2_1_0; }
+
+		//transitions+=Transition
+		public Assignment getTransitionsAssignment_9_2_2() { return cTransitionsAssignment_9_2_2; }
+
+		//Transition
+		public RuleCall getTransitionsTransitionParserRuleCall_9_2_2_0() { return cTransitionsTransitionParserRuleCall_9_2_2_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_9_3() { return cRightCurlyBracketKeyword_9_3; }
+
 		//";"
-		public Keyword getSemicolonKeyword_9() { return cSemicolonKeyword_9; }
+		public Keyword getSemicolonKeyword_10() { return cSemicolonKeyword_10; }
 	}
 
 	public class ActivityRefElements extends AbstractParserRuleElementFinder {
@@ -607,6 +655,253 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 
 		//ID
 		public RuleCall getTypeActivityIDTerminalRuleCall_2_0_1() { return cTypeActivityIDTerminalRuleCall_2_0_1; }
+	}
+
+	public class NodeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Node");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cStepParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cDecisionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//Node:
+		//
+		//	Step | Decision;
+		public ParserRule getRule() { return rule; }
+
+		//Step | Decision
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//Step
+		public RuleCall getStepParserRuleCall_0() { return cStepParserRuleCall_0; }
+
+		//Decision
+		public RuleCall getDecisionParserRuleCall_1() { return cDecisionParserRuleCall_1; }
+	}
+
+	public class DecisionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Decision");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cDecisionKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		
+		//Decision:
+		//
+		//	"Decision" name=ID ";";
+		public ParserRule getRule() { return rule; }
+
+		//"Decision" name=ID ";"
+		public Group getGroup() { return cGroup; }
+
+		//"Decision"
+		public Keyword getDecisionKeyword_0() { return cDecisionKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
+	}
+
+	public class StepElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Step");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cStepKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		
+		//Step:
+		//
+		//	"Step" name=ID ";";
+		public ParserRule getRule() { return rule; }
+
+		//"Step" name=ID ";"
+		public Group getGroup() { return cGroup; }
+
+		//"Step"
+		public Keyword getStepKeyword_0() { return cStepKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
+	}
+
+	public class TransitionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Transition");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cInitialTransitionParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cFinalTransitionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cNonInitialTransitionParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		
+		//Transition:
+		//
+		//	InitialTransition | FinalTransition | NonInitialTransition;
+		public ParserRule getRule() { return rule; }
+
+		//InitialTransition | FinalTransition | NonInitialTransition
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//InitialTransition
+		public RuleCall getInitialTransitionParserRuleCall_0() { return cInitialTransitionParserRuleCall_0; }
+
+		//FinalTransition
+		public RuleCall getFinalTransitionParserRuleCall_1() { return cFinalTransitionParserRuleCall_1; }
+
+		//NonInitialTransition
+		public RuleCall getNonInitialTransitionParserRuleCall_2() { return cNonInitialTransitionParserRuleCall_2; }
+	}
+
+	public class InitialTransitionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "InitialTransition");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cTransitionKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cInitialKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cHyphenMinusGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cToAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final CrossReference cToNodeCrossReference_4_0 = (CrossReference)cToAssignment_4.eContents().get(0);
+		private final RuleCall cToNodeIDTerminalRuleCall_4_0_1 = (RuleCall)cToNodeCrossReference_4_0.eContents().get(1);
+		
+		//InitialTransition:
+		//
+		//	"Transition" name=ID "initial" "->" to=[Node];
+		public ParserRule getRule() { return rule; }
+
+		//"Transition" name=ID "initial" "->" to=[Node]
+		public Group getGroup() { return cGroup; }
+
+		//"Transition"
+		public Keyword getTransitionKeyword_0() { return cTransitionKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//"initial"
+		public Keyword getInitialKeyword_2() { return cInitialKeyword_2; }
+
+		//"->"
+		public Keyword getHyphenMinusGreaterThanSignKeyword_3() { return cHyphenMinusGreaterThanSignKeyword_3; }
+
+		//to=[Node]
+		public Assignment getToAssignment_4() { return cToAssignment_4; }
+
+		//[Node]
+		public CrossReference getToNodeCrossReference_4_0() { return cToNodeCrossReference_4_0; }
+
+		//ID
+		public RuleCall getToNodeIDTerminalRuleCall_4_0_1() { return cToNodeIDTerminalRuleCall_4_0_1; }
+	}
+
+	public class FinalTransitionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "FinalTransition");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cTransitionKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Assignment cFromAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cFromNodeCrossReference_2_0 = (CrossReference)cFromAssignment_2.eContents().get(0);
+		private final RuleCall cFromNodeIDTerminalRuleCall_2_0_1 = (RuleCall)cFromNodeCrossReference_2_0.eContents().get(1);
+		private final Keyword cHyphenMinusGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cFinalKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		
+		//FinalTransition:
+		//
+		//	"Transition" name=ID from=[Node] "->" "final";
+		public ParserRule getRule() { return rule; }
+
+		//"Transition" name=ID from=[Node] "->" "final"
+		public Group getGroup() { return cGroup; }
+
+		//"Transition"
+		public Keyword getTransitionKeyword_0() { return cTransitionKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//from=[Node]
+		public Assignment getFromAssignment_2() { return cFromAssignment_2; }
+
+		//[Node]
+		public CrossReference getFromNodeCrossReference_2_0() { return cFromNodeCrossReference_2_0; }
+
+		//ID
+		public RuleCall getFromNodeIDTerminalRuleCall_2_0_1() { return cFromNodeIDTerminalRuleCall_2_0_1; }
+
+		//"->"
+		public Keyword getHyphenMinusGreaterThanSignKeyword_3() { return cHyphenMinusGreaterThanSignKeyword_3; }
+
+		//"final"
+		public Keyword getFinalKeyword_4() { return cFinalKeyword_4; }
+	}
+
+	public class NonInitialTransitionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "NonInitialTransition");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cTransitionKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Assignment cFromAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cFromNodeCrossReference_2_0 = (CrossReference)cFromAssignment_2.eContents().get(0);
+		private final RuleCall cFromNodeIDTerminalRuleCall_2_0_1 = (RuleCall)cFromNodeCrossReference_2_0.eContents().get(1);
+		private final Keyword cHyphenMinusGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cToAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final CrossReference cToNodeCrossReference_4_0 = (CrossReference)cToAssignment_4.eContents().get(0);
+		private final RuleCall cToNodeIDTerminalRuleCall_4_0_1 = (RuleCall)cToNodeCrossReference_4_0.eContents().get(1);
+		
+		//NonInitialTransition:
+		//
+		//	"Transition" name=ID from=[Node] "->" to=[Node];
+		public ParserRule getRule() { return rule; }
+
+		//"Transition" name=ID from=[Node] "->" to=[Node]
+		public Group getGroup() { return cGroup; }
+
+		//"Transition"
+		public Keyword getTransitionKeyword_0() { return cTransitionKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//from=[Node]
+		public Assignment getFromAssignment_2() { return cFromAssignment_2; }
+
+		//[Node]
+		public CrossReference getFromNodeCrossReference_2_0() { return cFromNodeCrossReference_2_0; }
+
+		//ID
+		public RuleCall getFromNodeIDTerminalRuleCall_2_0_1() { return cFromNodeIDTerminalRuleCall_2_0_1; }
+
+		//"->"
+		public Keyword getHyphenMinusGreaterThanSignKeyword_3() { return cHyphenMinusGreaterThanSignKeyword_3; }
+
+		//to=[Node]
+		public Assignment getToAssignment_4() { return cToAssignment_4; }
+
+		//[Node]
+		public CrossReference getToNodeCrossReference_4_0() { return cToNodeCrossReference_4_0; }
+
+		//ID
+		public RuleCall getToNodeIDTerminalRuleCall_4_0_1() { return cToNodeIDTerminalRuleCall_4_0_1; }
 	}
 
 	public class TextfieldElements extends AbstractParserRuleElementFinder {
@@ -677,6 +972,13 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 	private PortElements pPort;
 	private ActivityElements pActivity;
 	private ActivityRefElements pActivityRef;
+	private NodeElements pNode;
+	private DecisionElements pDecision;
+	private StepElements pStep;
+	private TransitionElements pTransition;
+	private InitialTransitionElements pInitialTransition;
+	private FinalTransitionElements pFinalTransition;
+	private NonInitialTransitionElements pNonInitialTransition;
 	private TextfieldElements pTextfield;
 	
 	private final Grammar grammar;
@@ -813,7 +1115,9 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 	//
 	//	("outputs" outPorts+=Port ("," outPorts+=Port)*)? ("subActivities" subActivities+=ActivityRef (","
 	//
-	//	subActivities+=ActivityRef)*)? ("guidances" guidances+=[Guidance] ("," guidances+=[Guidance])*)? ";";
+	//	subActivities+=ActivityRef)*)? ("guidances" guidances+=[Guidance] ("," guidances+=[Guidance])*)? ("Behavior" "{"
+	//
+	//	(steps+=Step | decisions+=Decision | transitions+=Transition)* "}")? ";";
 	public ActivityElements getActivityAccess() {
 		return (pActivity != null) ? pActivity : (pActivity = new ActivityElements());
 	}
@@ -831,6 +1135,83 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getActivityRefRule() {
 		return getActivityRefAccess().getRule();
+	}
+
+	//Node:
+	//
+	//	Step | Decision;
+	public NodeElements getNodeAccess() {
+		return (pNode != null) ? pNode : (pNode = new NodeElements());
+	}
+	
+	public ParserRule getNodeRule() {
+		return getNodeAccess().getRule();
+	}
+
+	//Decision:
+	//
+	//	"Decision" name=ID ";";
+	public DecisionElements getDecisionAccess() {
+		return (pDecision != null) ? pDecision : (pDecision = new DecisionElements());
+	}
+	
+	public ParserRule getDecisionRule() {
+		return getDecisionAccess().getRule();
+	}
+
+	//Step:
+	//
+	//	"Step" name=ID ";";
+	public StepElements getStepAccess() {
+		return (pStep != null) ? pStep : (pStep = new StepElements());
+	}
+	
+	public ParserRule getStepRule() {
+		return getStepAccess().getRule();
+	}
+
+	//Transition:
+	//
+	//	InitialTransition | FinalTransition | NonInitialTransition;
+	public TransitionElements getTransitionAccess() {
+		return (pTransition != null) ? pTransition : (pTransition = new TransitionElements());
+	}
+	
+	public ParserRule getTransitionRule() {
+		return getTransitionAccess().getRule();
+	}
+
+	//InitialTransition:
+	//
+	//	"Transition" name=ID "initial" "->" to=[Node];
+	public InitialTransitionElements getInitialTransitionAccess() {
+		return (pInitialTransition != null) ? pInitialTransition : (pInitialTransition = new InitialTransitionElements());
+	}
+	
+	public ParserRule getInitialTransitionRule() {
+		return getInitialTransitionAccess().getRule();
+	}
+
+	//FinalTransition:
+	//
+	//	"Transition" name=ID from=[Node] "->" "final";
+	public FinalTransitionElements getFinalTransitionAccess() {
+		return (pFinalTransition != null) ? pFinalTransition : (pFinalTransition = new FinalTransitionElements());
+	}
+	
+	public ParserRule getFinalTransitionRule() {
+		return getFinalTransitionAccess().getRule();
+	}
+
+	//NonInitialTransition:
+	//
+	//	"Transition" name=ID from=[Node] "->" to=[Node];
+	public NonInitialTransitionElements getNonInitialTransitionAccess() {
+		return (pNonInitialTransition != null) ? pNonInitialTransition : (pNonInitialTransition = new NonInitialTransitionElements());
+	}
+	
+	public ParserRule getNonInitialTransitionRule() {
+		return getNonInitialTransitionAccess().getRule();
 	}
 
 	//Textfield:
