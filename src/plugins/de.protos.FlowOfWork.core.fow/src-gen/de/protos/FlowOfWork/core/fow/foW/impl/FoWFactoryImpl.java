@@ -80,6 +80,7 @@ public class FoWFactoryImpl extends EFactoryImpl implements FoWFactory
       case FoWPackage.TRANSITION: return createTransition();
       case FoWPackage.INITIAL_TRANSITION: return createInitialTransition();
       case FoWPackage.FINAL_TRANSITION: return createFinalTransition();
+      case FoWPackage.DECISION_TRANSITION: return createDecisionTransition();
       case FoWPackage.NON_INITIAL_TRANSITION: return createNonInitialTransition();
       case FoWPackage.TEXTFIELD: return createTextfield();
       default:
@@ -261,6 +262,17 @@ public class FoWFactoryImpl extends EFactoryImpl implements FoWFactory
   {
     FinalTransitionImpl finalTransition = new FinalTransitionImpl();
     return finalTransition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DecisionTransition createDecisionTransition()
+  {
+    DecisionTransitionImpl decisionTransition = new DecisionTransitionImpl();
+    return decisionTransition;
   }
 
   /**

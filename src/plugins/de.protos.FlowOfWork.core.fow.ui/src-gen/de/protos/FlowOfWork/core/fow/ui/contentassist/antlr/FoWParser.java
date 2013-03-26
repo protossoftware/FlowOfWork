@@ -63,6 +63,7 @@ public class FoWParser extends AbstractContentAssistParser {
 					put(grammarAccess.getStepAccess().getGroup(), "rule__Step__Group__0");
 					put(grammarAccess.getInitialTransitionAccess().getGroup(), "rule__InitialTransition__Group__0");
 					put(grammarAccess.getFinalTransitionAccess().getGroup(), "rule__FinalTransition__Group__0");
+					put(grammarAccess.getDecisionTransitionAccess().getGroup(), "rule__DecisionTransition__Group__0");
 					put(grammarAccess.getNonInitialTransitionAccess().getGroup(), "rule__NonInitialTransition__Group__0");
 					put(grammarAccess.getTextfieldAccess().getGroup(), "rule__Textfield__Group__0");
 					put(grammarAccess.getTextfieldAccess().getGroup_0(), "rule__Textfield__Group_0__0");
@@ -105,13 +106,13 @@ public class FoWParser extends AbstractContentAssistParser {
 					put(grammarAccess.getActivityRefAccess().getTypeAssignment_2(), "rule__ActivityRef__TypeAssignment_2");
 					put(grammarAccess.getDecisionAccess().getNameAssignment_1(), "rule__Decision__NameAssignment_1");
 					put(grammarAccess.getStepAccess().getNameAssignment_1(), "rule__Step__NameAssignment_1");
-					put(grammarAccess.getInitialTransitionAccess().getNameAssignment_1(), "rule__InitialTransition__NameAssignment_1");
-					put(grammarAccess.getInitialTransitionAccess().getToAssignment_4(), "rule__InitialTransition__ToAssignment_4");
-					put(grammarAccess.getFinalTransitionAccess().getNameAssignment_1(), "rule__FinalTransition__NameAssignment_1");
-					put(grammarAccess.getFinalTransitionAccess().getFromAssignment_2(), "rule__FinalTransition__FromAssignment_2");
-					put(grammarAccess.getNonInitialTransitionAccess().getNameAssignment_1(), "rule__NonInitialTransition__NameAssignment_1");
-					put(grammarAccess.getNonInitialTransitionAccess().getFromAssignment_2(), "rule__NonInitialTransition__FromAssignment_2");
-					put(grammarAccess.getNonInitialTransitionAccess().getToAssignment_4(), "rule__NonInitialTransition__ToAssignment_4");
+					put(grammarAccess.getInitialTransitionAccess().getToAssignment_3(), "rule__InitialTransition__ToAssignment_3");
+					put(grammarAccess.getFinalTransitionAccess().getFromAssignment_1(), "rule__FinalTransition__FromAssignment_1");
+					put(grammarAccess.getDecisionTransitionAccess().getFromAssignment_1(), "rule__DecisionTransition__FromAssignment_1");
+					put(grammarAccess.getDecisionTransitionAccess().getToAssignment_3(), "rule__DecisionTransition__ToAssignment_3");
+					put(grammarAccess.getDecisionTransitionAccess().getGuardAssignment_4(), "rule__DecisionTransition__GuardAssignment_4");
+					put(grammarAccess.getNonInitialTransitionAccess().getFromAssignment_1(), "rule__NonInitialTransition__FromAssignment_1");
+					put(grammarAccess.getNonInitialTransitionAccess().getToAssignment_3(), "rule__NonInitialTransition__ToAssignment_3");
 					put(grammarAccess.getTextfieldAccess().getLabelAssignment_0_1(), "rule__Textfield__LabelAssignment_0_1");
 					put(grammarAccess.getTextfieldAccess().getSummaryAssignment_2(), "rule__Textfield__SummaryAssignment_2");
 					put(grammarAccess.getTextfieldAccess().getDescriptionAssignment_3_1(), "rule__Textfield__DescriptionAssignment_3_1");

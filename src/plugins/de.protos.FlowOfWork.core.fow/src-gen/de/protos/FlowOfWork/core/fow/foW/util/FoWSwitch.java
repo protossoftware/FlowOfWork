@@ -194,6 +194,14 @@ public class FoWSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case FoWPackage.DECISION_TRANSITION:
+      {
+        DecisionTransition decisionTransition = (DecisionTransition)theEObject;
+        T result = caseDecisionTransition(decisionTransition);
+        if (result == null) result = caseTransition(decisionTransition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case FoWPackage.NON_INITIAL_TRANSITION:
       {
         NonInitialTransition nonInitialTransition = (NonInitialTransition)theEObject;
@@ -465,6 +473,22 @@ public class FoWSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseFinalTransition(FinalTransition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Decision Transition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Decision Transition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDecisionTransition(DecisionTransition object)
   {
     return null;
   }

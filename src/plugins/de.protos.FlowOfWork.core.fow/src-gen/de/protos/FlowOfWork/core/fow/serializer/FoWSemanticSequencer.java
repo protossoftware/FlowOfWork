@@ -5,6 +5,7 @@ import com.google.inject.Provider;
 import de.protos.FlowOfWork.core.fow.foW.Activity;
 import de.protos.FlowOfWork.core.fow.foW.ActivityRef;
 import de.protos.FlowOfWork.core.fow.foW.Decision;
+import de.protos.FlowOfWork.core.fow.foW.DecisionTransition;
 import de.protos.FlowOfWork.core.fow.foW.FinalTransition;
 import de.protos.FlowOfWork.core.fow.foW.FoWPackage;
 import de.protos.FlowOfWork.core.fow.foW.Guidance;
@@ -56,6 +57,13 @@ public class FoWSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				if(context == grammarAccess.getDecisionRule() ||
 				   context == grammarAccess.getNodeRule()) {
 					sequence_Decision(context, (Decision) semanticObject); 
+					return; 
+				}
+				else break;
+			case FoWPackage.DECISION_TRANSITION:
+				if(context == grammarAccess.getDecisionTransitionRule() ||
+				   context == grammarAccess.getTransitionRule()) {
+					sequence_DecisionTransition(context, (DecisionTransition) semanticObject); 
 					return; 
 				}
 				else break;
@@ -183,6 +191,28 @@ public class FoWSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
+	 *     (from=[Decision|ID] to=[Node|ID] guard=STRING)
+	 */
+	protected void sequence_DecisionTransition(EObject context, DecisionTransition semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, FoWPackage.Literals.DECISION_TRANSITION__FROM) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FoWPackage.Literals.DECISION_TRANSITION__FROM));
+			if(transientValues.isValueTransient(semanticObject, FoWPackage.Literals.DECISION_TRANSITION__TO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FoWPackage.Literals.DECISION_TRANSITION__TO));
+			if(transientValues.isValueTransient(semanticObject, FoWPackage.Literals.DECISION_TRANSITION__GUARD) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FoWPackage.Literals.DECISION_TRANSITION__GUARD));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getDecisionTransitionAccess().getFromDecisionIDTerminalRuleCall_1_0_1(), semanticObject.getFrom());
+		feeder.accept(grammarAccess.getDecisionTransitionAccess().getToNodeIDTerminalRuleCall_3_0_1(), semanticObject.getTo());
+		feeder.accept(grammarAccess.getDecisionTransitionAccess().getGuardSTRINGTerminalRuleCall_4_0(), semanticObject.getGuard());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     name=ID
 	 */
 	protected void sequence_Decision(EObject context, Decision semanticObject) {
@@ -199,19 +229,16 @@ public class FoWSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID from=[Node|ID])
+	 *     from=[Node|ID]
 	 */
 	protected void sequence_FinalTransition(EObject context, FinalTransition semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, FoWPackage.Literals.TRANSITION__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FoWPackage.Literals.TRANSITION__NAME));
 			if(transientValues.isValueTransient(semanticObject, FoWPackage.Literals.FINAL_TRANSITION__FROM) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FoWPackage.Literals.FINAL_TRANSITION__FROM));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getFinalTransitionAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getFinalTransitionAccess().getFromNodeIDTerminalRuleCall_2_0_1(), semanticObject.getFrom());
+		feeder.accept(grammarAccess.getFinalTransitionAccess().getFromNodeIDTerminalRuleCall_1_0_1(), semanticObject.getFrom());
 		feeder.finish();
 	}
 	
@@ -259,19 +286,16 @@ public class FoWSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID to=[Node|ID])
+	 *     to=[Node|ID]
 	 */
 	protected void sequence_InitialTransition(EObject context, InitialTransition semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, FoWPackage.Literals.TRANSITION__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FoWPackage.Literals.TRANSITION__NAME));
 			if(transientValues.isValueTransient(semanticObject, FoWPackage.Literals.INITIAL_TRANSITION__TO) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FoWPackage.Literals.INITIAL_TRANSITION__TO));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInitialTransitionAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getInitialTransitionAccess().getToNodeIDTerminalRuleCall_4_0_1(), semanticObject.getTo());
+		feeder.accept(grammarAccess.getInitialTransitionAccess().getToNodeIDTerminalRuleCall_3_0_1(), semanticObject.getTo());
 		feeder.finish();
 	}
 	
@@ -294,12 +318,10 @@ public class FoWSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID from=[Node|ID] to=[Node|ID])
+	 *     (from=[Node|ID] to=[Node|ID])
 	 */
 	protected void sequence_NonInitialTransition(EObject context, NonInitialTransition semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, FoWPackage.Literals.TRANSITION__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FoWPackage.Literals.TRANSITION__NAME));
 			if(transientValues.isValueTransient(semanticObject, FoWPackage.Literals.NON_INITIAL_TRANSITION__FROM) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FoWPackage.Literals.NON_INITIAL_TRANSITION__FROM));
 			if(transientValues.isValueTransient(semanticObject, FoWPackage.Literals.NON_INITIAL_TRANSITION__TO) == ValueTransient.YES)
@@ -307,9 +329,8 @@ public class FoWSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getNonInitialTransitionAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getNonInitialTransitionAccess().getFromNodeIDTerminalRuleCall_2_0_1(), semanticObject.getFrom());
-		feeder.accept(grammarAccess.getNonInitialTransitionAccess().getToNodeIDTerminalRuleCall_4_0_1(), semanticObject.getTo());
+		feeder.accept(grammarAccess.getNonInitialTransitionAccess().getFromNodeIDTerminalRuleCall_1_0_1(), semanticObject.getFrom());
+		feeder.accept(grammarAccess.getNonInitialTransitionAccess().getToNodeIDTerminalRuleCall_3_0_1(), semanticObject.getTo());
 		feeder.finish();
 	}
 	

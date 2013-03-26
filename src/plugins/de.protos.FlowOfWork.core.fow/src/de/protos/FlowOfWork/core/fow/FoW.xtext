@@ -74,25 +74,29 @@ ActivityRef:
 Node: Step | Decision ;
 
 Decision:
-	'Decision' name=ID ';'
+	'Decision' name=ID
 ;
 
 Step:
-	'Step' name=ID ';'
+	'Step' name=ID
 ;
 
-Transition: InitialTransition | FinalTransition | NonInitialTransition;
+Transition: InitialTransition | FinalTransition | NonInitialTransition | DecisionTransition;
 
 InitialTransition:
-	'Transition' name=ID 'initial' '->' to=[Node]
+	'Transition' 'initial' 'to' to=[Node]
 ;
 
 FinalTransition:
-	'Transition' name=ID  from=[Node] '->' 'final'
+	'Transition' from=[Node] 'to' 'final'
+;
+
+DecisionTransition:
+	'Transition' from=[Decision] 'to' to=[Node] guard=STRING
 ;
 
 NonInitialTransition:
-	'Transition' name=ID from=[Node] '->' to=[Node]
+	'Transition' from=[Node] 'to' to=[Node]
 ;
 
 

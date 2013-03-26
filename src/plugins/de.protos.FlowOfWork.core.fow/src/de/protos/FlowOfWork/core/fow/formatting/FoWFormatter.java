@@ -35,11 +35,19 @@ public class FoWFormatter extends AbstractDeclarativeFormatter {
 			c.setLinewrap().before(k);
 		}
 
+		for (Pair<Keyword, Keyword> pair : grammarAccess.findKeywordPairs("{", "}")) {
+			c.setLinewrap().after(pair.getFirst());
+			c.setIndentationIncrement().after(pair.getFirst());
+			c.setLinewrap().before(pair.getSecond());
+			c.setIndentationDecrement().before(pair.getSecond());
+			c.setSpace(" ").between(pair.getFirst(), pair.getSecond());
+		}		
+
 		for (Keyword k: grammarAccess.findKeywords("GuidanceType", "Guidance", "WorkProduct", "WorkProductType", "Activity", "Role")) {
 			c.setIndentationIncrement().after(k);
 		}
 
-		for (Keyword k: grammarAccess.findKeywords("label", "summary", "description", "responsible", "subActivities", "outputs", "inputs")) {
+		for (Keyword k: grammarAccess.findKeywords("label", "summary", "description", "responsible", "subActivities", "outputs", "inputs", "guidances", "Step", "Transition", "Decision", "Behavior")) {
 			c.setLinewrap().before(k);
 		}
 

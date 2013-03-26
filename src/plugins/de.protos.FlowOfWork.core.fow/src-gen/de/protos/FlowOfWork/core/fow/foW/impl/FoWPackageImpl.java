@@ -5,6 +5,7 @@ package de.protos.FlowOfWork.core.fow.foW.impl;
 import de.protos.FlowOfWork.core.fow.foW.Activity;
 import de.protos.FlowOfWork.core.fow.foW.ActivityRef;
 import de.protos.FlowOfWork.core.fow.foW.Decision;
+import de.protos.FlowOfWork.core.fow.foW.DecisionTransition;
 import de.protos.FlowOfWork.core.fow.foW.FinalTransition;
 import de.protos.FlowOfWork.core.fow.foW.FoWFactory;
 import de.protos.FlowOfWork.core.fow.foW.FoWPackage;
@@ -149,6 +150,13 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
    * @generated
    */
   private EClass finalTransitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass decisionTransitionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -602,16 +610,6 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getTransition_Name()
-  {
-    return (EAttribute)transitionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getInitialTransition()
   {
     return initialTransitionEClass;
@@ -645,6 +643,46 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
   public EReference getFinalTransition_From()
   {
     return (EReference)finalTransitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDecisionTransition()
+  {
+    return decisionTransitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDecisionTransition_From()
+  {
+    return (EReference)decisionTransitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDecisionTransition_To()
+  {
+    return (EReference)decisionTransitionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getDecisionTransition_Guard()
+  {
+    return (EAttribute)decisionTransitionEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -797,13 +835,17 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
     stepEClass = createEClass(STEP);
 
     transitionEClass = createEClass(TRANSITION);
-    createEAttribute(transitionEClass, TRANSITION__NAME);
 
     initialTransitionEClass = createEClass(INITIAL_TRANSITION);
     createEReference(initialTransitionEClass, INITIAL_TRANSITION__TO);
 
     finalTransitionEClass = createEClass(FINAL_TRANSITION);
     createEReference(finalTransitionEClass, FINAL_TRANSITION__FROM);
+
+    decisionTransitionEClass = createEClass(DECISION_TRANSITION);
+    createEReference(decisionTransitionEClass, DECISION_TRANSITION__FROM);
+    createEReference(decisionTransitionEClass, DECISION_TRANSITION__TO);
+    createEAttribute(decisionTransitionEClass, DECISION_TRANSITION__GUARD);
 
     nonInitialTransitionEClass = createEClass(NON_INITIAL_TRANSITION);
     createEReference(nonInitialTransitionEClass, NON_INITIAL_TRANSITION__FROM);
@@ -854,6 +896,7 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
     stepEClass.getESuperTypes().add(this.getNode());
     initialTransitionEClass.getESuperTypes().add(this.getTransition());
     finalTransitionEClass.getESuperTypes().add(this.getTransition());
+    decisionTransitionEClass.getESuperTypes().add(this.getTransition());
     nonInitialTransitionEClass.getESuperTypes().add(this.getTransition());
 
     // Initialize classes and features; add operations and parameters
@@ -907,13 +950,17 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
     initEClass(stepEClass, Step.class, "Step", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(transitionEClass, Transition.class, "Transition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getTransition_Name(), ecorePackage.getEString(), "name", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(initialTransitionEClass, InitialTransition.class, "InitialTransition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getInitialTransition_To(), this.getNode(), null, "to", null, 0, 1, InitialTransition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(finalTransitionEClass, FinalTransition.class, "FinalTransition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getFinalTransition_From(), this.getNode(), null, "from", null, 0, 1, FinalTransition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(decisionTransitionEClass, DecisionTransition.class, "DecisionTransition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDecisionTransition_From(), this.getDecision(), null, "from", null, 0, 1, DecisionTransition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDecisionTransition_To(), this.getNode(), null, "to", null, 0, 1, DecisionTransition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDecisionTransition_Guard(), ecorePackage.getEString(), "guard", null, 0, 1, DecisionTransition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(nonInitialTransitionEClass, NonInitialTransition.class, "NonInitialTransition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getNonInitialTransition_From(), this.getNode(), null, "from", null, 0, 1, NonInitialTransition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

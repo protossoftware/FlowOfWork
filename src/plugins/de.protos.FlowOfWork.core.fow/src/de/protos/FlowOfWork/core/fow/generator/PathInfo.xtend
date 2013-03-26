@@ -2,9 +2,6 @@ package de.protos.FlowOfWork.core.fow.generator
 
 import com.google.inject.Singleton
 import de.protos.FlowOfWork.core.fow.foW.Activity
-import de.protos.FlowOfWork.core.fow.foW.Role
-import de.protos.FlowOfWork.core.fow.foW.WorkProduct
-import de.protos.FlowOfWork.core.fow.foW.Guidance
 import de.protos.FlowOfWork.core.fow.foW.NamedElement
 
 @Singleton
@@ -45,6 +42,17 @@ class PathInfo {
 	
 	def getDotGenPath(Activity activity) {
 		return getDotGenPath + activity.name + ".dot" 
+	}
+
+	def getJpgGenPath(Activity activity) {
+		return getDotGenPath + activity.name + ".jpg" 
+	}
+	
+	def getDotActivityBehaviorPath(Activity activity) {
+		return getDotGenPath + activity.name + "_Behavior.dot" 
+	}
+	def getJpgActivityBehaviorPath(Activity activity) {
+		return getDotGenPath + activity.name + "_Behavior.jpg" 
 	}
 	
 }

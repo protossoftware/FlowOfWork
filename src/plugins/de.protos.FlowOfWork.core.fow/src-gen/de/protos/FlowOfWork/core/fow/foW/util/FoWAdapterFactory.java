@@ -155,6 +155,11 @@ public class FoWAdapterFactory extends AdapterFactoryImpl
         return createFinalTransitionAdapter();
       }
       @Override
+      public Adapter caseDecisionTransition(DecisionTransition object)
+      {
+        return createDecisionTransitionAdapter();
+      }
+      @Override
       public Adapter caseNonInitialTransition(NonInitialTransition object)
       {
         return createNonInitialTransitionAdapter();
@@ -422,6 +427,21 @@ public class FoWAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createFinalTransitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.protos.FlowOfWork.core.fow.foW.DecisionTransition <em>Decision Transition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.protos.FlowOfWork.core.fow.foW.DecisionTransition
+   * @generated
+   */
+  public Adapter createDecisionTransitionAdapter()
   {
     return null;
   }

@@ -13,6 +13,8 @@ import de.protos.FlowOfWork.core.fow.foW.NamedElement
 import org.eclipse.emf.common.util.EList
 import org.eclipse.emf.common.util.BasicEList
 
+import static extension de.protos.FlowOfWork.core.fow.generator.MetamodelHelpers.*
+
 @Singleton
 class HtmlGenerator {
 	
@@ -112,7 +114,7 @@ class HtmlGenerator {
 	 
 	def private generateHTMLForOneActivity(Activity activity) '''
 		<html>
-			<h1>Activity: «activity.name»</h1>
+			<h1>Activity: «textInfo.getLabel(activity)»</h1> 
 			
 			<table border="1" width="100%">
 				<colgroup>
@@ -199,23 +201,39 @@ class HtmlGenerator {
 				</tr>
 			</table>
 
-		<h2>Activities and Responsibilities</h2>
-		<ul>
-			«FOR subActivity : activity.subActivities»
-				<li>Activity Reference: «subActivity.name» 
-					<ul>
-						<li>Activity Type: «generateHTML_HRef(subActivity.type)»</li>
-						<li>Role: «generateHTML_HRef(subActivity.type.role)»</li>
-					</ul> 
-				</li>
-			«ENDFOR»
-		</ul>
-		<h2>Guidances</h2>
-		«generateHTMLForGuidanceList(activity.guidances)»
+		<h2>Activities and Responsibilities (Sub Activities)</h2>
+		«IF activity.guidances.emptyList»
+			<p><em>no sub activities</em></p>
+		«ELSE»
+			<ul>
+				«FOR subActivity : activity.subActivities»
+					<li>Activity Reference: «subActivity.name» 
+						<ul>
+							<li>Activity Type: «generateHTML_HRef(subActivity.type)»</li>
+							<li>Role: «generateHTML_HRef(subActivity.type.role)»</li>
+						</ul> 
+					</li>
+				«ENDFOR»
+			</ul>
+		«ENDIF»
 		
-		<h2>SPEM Diagram</h2>
-		<img src="../dot/«activity.name».jpg" alt="SPEM Diagram: «activity.name»"> 
+		<h2>Guidances</h2>
+		«IF activity.guidances.emptyList»
+			<p><em>no guidances</em></p>
+		«ELSE»
+			«generateHTMLForGuidanceList(activity.guidances)»
+		«ENDIF»
+		
+		<h2>Structure Diagram</h2>
+		<img src="../dot/«activity.name».jpg" alt="Activity Diagram: «activity.name»"> 
 
+		<h2>Behavior Diagram</h2>
+		«IF activity.hasBehavior»		
+			<img src="../dot/«activity.name»_Behavior.jpg" alt="Behavior Diagram: «activity.name»_Behavior"> 
+		«ELSE»
+			<p><em>no behavior</em></p>
+		«ENDIF»
+		
 		</html>
 	'''
 	

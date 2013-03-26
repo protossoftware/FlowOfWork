@@ -167,6 +167,15 @@ public interface FoWFactory extends EFactory
   FinalTransition createFinalTransition();
 
   /**
+   * Returns a new object of class '<em>Decision Transition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Decision Transition</em>'.
+   * @generated
+   */
+  DecisionTransition createDecisionTransition();
+
+  /**
    * Returns a new object of class '<em>Non Initial Transition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

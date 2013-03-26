@@ -13,6 +13,7 @@ import de.protos.FlowOfWork.core.fow.foW.Role;
 import de.protos.FlowOfWork.core.fow.foW.Textfield;
 import de.protos.FlowOfWork.core.fow.foW.WorkProduct;
 import de.protos.FlowOfWork.core.fow.foW.WorkProductType;
+import de.protos.FlowOfWork.core.fow.generator.MetamodelHelpers;
 import de.protos.FlowOfWork.core.fow.generator.PathInfo;
 import de.protos.FlowOfWork.core.fow.generator.TextInfo;
 import java.util.List;
@@ -260,9 +261,9 @@ public class HtmlGenerator {
     _builder.newLine();
     _builder.append("\t");
     _builder.append("<h1>Activity: ");
-    String _name = activity.getName();
-    _builder.append(_name, "	");
-    _builder.append("</h1>");
+    String _label = this.textInfo.getLabel(activity);
+    _builder.append(_label, "	");
+    _builder.append("</h1> ");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
     _builder.newLine();
@@ -365,8 +366,8 @@ public class HtmlGenerator {
           for(final Port inPort : _inPorts_1) {
             _builder.append("\t\t\t\t");
             _builder.append("<li>");
-            String _name_1 = inPort.getName();
-            _builder.append(_name_1, "				");
+            String _name = inPort.getName();
+            _builder.append(_name, "				");
             _builder.append(" : ");
             WorkProduct _type = inPort.getType();
             CharSequence _generateHTML_HRef = this.generateHTML_HRef(_type);
@@ -412,8 +413,8 @@ public class HtmlGenerator {
           for(final Port outPort : _outPorts_1) {
             _builder.append("\t\t\t\t");
             _builder.append("<li>");
-            String _name_2 = outPort.getName();
-            _builder.append(_name_2, "				");
+            String _name_1 = outPort.getName();
+            _builder.append(_name_1, "				");
             _builder.append(" : ");
             WorkProduct _type_1 = outPort.getType();
             CharSequence _generateHTML_HRef_1 = this.generateHTML_HRef(_type_1);
@@ -535,68 +536,106 @@ public class HtmlGenerator {
     _builder.append("</table>");
     _builder.newLine();
     _builder.newLine();
-    _builder.append("<h2>Activities and Responsibilities</h2>");
-    _builder.newLine();
-    _builder.append("<ul>");
+    _builder.append("<h2>Activities and Responsibilities (Sub Activities)</h2>");
     _builder.newLine();
     {
-      EList<ActivityRef> _subActivities = activity.getSubActivities();
-      for(final ActivityRef subActivity : _subActivities) {
-        _builder.append("\t");
-        _builder.append("<li>Activity Reference: ");
-        String _name_3 = subActivity.getName();
-        _builder.append(_name_3, "	");
-        _builder.append(" ");
-        _builder.newLineIfNotEmpty();
-        _builder.append("\t");
-        _builder.append("\t");
+      EList<Guidance> _guidances = activity.getGuidances();
+      boolean _emptyList = MetamodelHelpers.emptyList(_guidances);
+      if (_emptyList) {
+        _builder.append("<p><em>no sub activities</em></p>");
+        _builder.newLine();
+      } else {
         _builder.append("<ul>");
         _builder.newLine();
-        _builder.append("\t");
-        _builder.append("\t\t");
-        _builder.append("<li>Activity Type: ");
-        Activity _type_2 = subActivity.getType();
-        CharSequence _generateHTML_HRef_3 = this.generateHTML_HRef(_type_2);
-        _builder.append(_generateHTML_HRef_3, "			");
-        _builder.append("</li>");
-        _builder.newLineIfNotEmpty();
-        _builder.append("\t");
-        _builder.append("\t\t");
-        _builder.append("<li>Role: ");
-        Activity _type_3 = subActivity.getType();
-        Role _role_1 = _type_3.getRole();
-        CharSequence _generateHTML_HRef_4 = this.generateHTML_HRef(_role_1);
-        _builder.append(_generateHTML_HRef_4, "			");
-        _builder.append("</li>");
-        _builder.newLineIfNotEmpty();
-        _builder.append("\t");
-        _builder.append("\t");
-        _builder.append("</ul> ");
-        _builder.newLine();
-        _builder.append("\t");
-        _builder.append("</li>");
+        {
+          EList<ActivityRef> _subActivities = activity.getSubActivities();
+          for(final ActivityRef subActivity : _subActivities) {
+            _builder.append("\t");
+            _builder.append("<li>Activity Reference: ");
+            String _name_2 = subActivity.getName();
+            _builder.append(_name_2, "	");
+            _builder.append(" ");
+            _builder.newLineIfNotEmpty();
+            _builder.append("\t");
+            _builder.append("\t");
+            _builder.append("<ul>");
+            _builder.newLine();
+            _builder.append("\t");
+            _builder.append("\t\t");
+            _builder.append("<li>Activity Type: ");
+            Activity _type_2 = subActivity.getType();
+            CharSequence _generateHTML_HRef_3 = this.generateHTML_HRef(_type_2);
+            _builder.append(_generateHTML_HRef_3, "			");
+            _builder.append("</li>");
+            _builder.newLineIfNotEmpty();
+            _builder.append("\t");
+            _builder.append("\t\t");
+            _builder.append("<li>Role: ");
+            Activity _type_3 = subActivity.getType();
+            Role _role_1 = _type_3.getRole();
+            CharSequence _generateHTML_HRef_4 = this.generateHTML_HRef(_role_1);
+            _builder.append(_generateHTML_HRef_4, "			");
+            _builder.append("</li>");
+            _builder.newLineIfNotEmpty();
+            _builder.append("\t");
+            _builder.append("\t");
+            _builder.append("</ul> ");
+            _builder.newLine();
+            _builder.append("\t");
+            _builder.append("</li>");
+            _builder.newLine();
+          }
+        }
+        _builder.append("</ul>");
         _builder.newLine();
       }
     }
-    _builder.append("</ul>");
     _builder.newLine();
     _builder.append("<h2>Guidances</h2>");
     _builder.newLine();
-    EList<Guidance> _guidances = activity.getGuidances();
-    CharSequence _generateHTMLForGuidanceList = this.generateHTMLForGuidanceList(_guidances);
-    _builder.append(_generateHTMLForGuidanceList, "");
-    _builder.newLineIfNotEmpty();
+    {
+      EList<Guidance> _guidances_1 = activity.getGuidances();
+      boolean _emptyList_1 = MetamodelHelpers.emptyList(_guidances_1);
+      if (_emptyList_1) {
+        _builder.append("<p><em>no guidances</em></p>");
+        _builder.newLine();
+      } else {
+        EList<Guidance> _guidances_2 = activity.getGuidances();
+        CharSequence _generateHTMLForGuidanceList = this.generateHTMLForGuidanceList(_guidances_2);
+        _builder.append(_generateHTMLForGuidanceList, "");
+        _builder.newLineIfNotEmpty();
+      }
+    }
     _builder.newLine();
-    _builder.append("<h2>SPEM Diagram</h2>");
+    _builder.append("<h2>Structure Diagram</h2>");
     _builder.newLine();
     _builder.append("<img src=\"../dot/");
+    String _name_3 = activity.getName();
+    _builder.append(_name_3, "");
+    _builder.append(".jpg\" alt=\"Activity Diagram: ");
     String _name_4 = activity.getName();
     _builder.append(_name_4, "");
-    _builder.append(".jpg\" alt=\"SPEM Diagram: ");
-    String _name_5 = activity.getName();
-    _builder.append(_name_5, "");
     _builder.append("\"> ");
     _builder.newLineIfNotEmpty();
+    _builder.newLine();
+    _builder.append("<h2>Behavior Diagram</h2>");
+    _builder.newLine();
+    {
+      boolean _hasBehavior = MetamodelHelpers.hasBehavior(activity);
+      if (_hasBehavior) {
+        _builder.append("<img src=\"../dot/");
+        String _name_5 = activity.getName();
+        _builder.append(_name_5, "");
+        _builder.append("_Behavior.jpg\" alt=\"Behavior Diagram: ");
+        String _name_6 = activity.getName();
+        _builder.append(_name_6, "");
+        _builder.append("_Behavior\"> ");
+        _builder.newLineIfNotEmpty();
+      } else {
+        _builder.append("<p><em>no behavior</em></p>");
+        _builder.newLine();
+      }
+    }
     _builder.newLine();
     _builder.append("</html>");
     _builder.newLine();

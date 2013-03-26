@@ -34,4 +34,25 @@ public class PathInfo {
     String _plus = (_dotGenPath + _name);
     return (_plus + ".dot");
   }
+  
+  public String getJpgGenPath(final Activity activity) {
+    String _dotGenPath = this.getDotGenPath();
+    String _name = activity.getName();
+    String _plus = (_dotGenPath + _name);
+    return (_plus + ".jpg");
+  }
+  
+  public String getDotActivityBehaviorPath(final Activity activity) {
+    String _dotGenPath = this.getDotGenPath();
+    String _name = activity.getName();
+    String _plus = (_dotGenPath + _name);
+    return (_plus + "_Behavior.dot");
+  }
+  
+  public String getJpgActivityBehaviorPath(final Activity activity) {
+    String _dotGenPath = this.getDotGenPath();
+    String _name = activity.getName();
+    String _plus = (_dotGenPath + _name);
+    return (_plus + "_Behavior.jpg");
+  }
 }

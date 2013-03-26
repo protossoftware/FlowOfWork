@@ -36,7 +36,7 @@ Role SWArchitect
 ;
 
 Role SWDeveloper
-	label "SW Developer"
+	label "Software Developer"
 	summary "The SW Developer is responsible for software development"
 ;
 
@@ -90,7 +90,7 @@ Activity RequirementEngineering
 	responsible RequirementEngineer
 	outputs requirements : RequirementDocument
 	subActivities create : CreateRequirements , review : ReviewRequirements
-	guidances RequirmentEngineeringTool 
+	guidances RequirmentEngineeringTool
 ;
 
 Activity CreateRequirements
@@ -105,7 +105,7 @@ Activity ReviewRequirements
 	summary "summary Review Requirements"
 	description "description Review Requirements"
 	responsible RequirementEngineer
-	guidances RequirmentEngineeringTool 
+	guidances RequirmentEngineeringTool
 ;
 
 Activity DevelopSWArchitecture
@@ -125,13 +125,28 @@ Activity DevelopSW
 	inputs architecture : SWArchitecture
 	outputs code : SWCode
 	Behavior {
-		Step Step1;
-		Step Step2;
-		Step Step3;
-		Transition init initial -> Step1
-		Transition tr1 Step1 -> Step2
-		Transition tr2 Step2 -> Step3
-		Transition exit Step1 -> final
+		Step Step1
+		Step Step2
+		Step Step3
+		Step Step4
+		Step Step5
+		Step Step6
+		Decision d1
+		Decision d2
+		Transition initial to Step1
+		Transition Step1 to d1
+		Transition d1 to Step2 "OK"
+		Transition d1 to Step3 "Not OK"
+		Transition d1 to d2 "Unclear"
+		Transition Step2 to final
+		Transition Step3 to Step4
+		Transition Step3 to Step5
+		Transition Step4 to Step6
+		Transition Step5 to Step6
+		Transition d2 to Step2 "OK"
+		Transition d2 to Step4 "Unclear"
+		Transition d2 to Step6 "Not OK"
+		Transition Step6 to final
 	}
 ;
 

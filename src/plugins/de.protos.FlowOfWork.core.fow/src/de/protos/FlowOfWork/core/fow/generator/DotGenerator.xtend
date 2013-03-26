@@ -5,6 +5,15 @@ import org.eclipse.xtext.generator.IFileSystemAccess
 import de.protos.FlowOfWork.core.fow.foW.Activity
 import com.google.inject.Singleton
 import com.google.inject.Inject
+import de.protos.FlowOfWork.core.fow.foW.Transition
+import de.protos.FlowOfWork.core.fow.foW.InitialTransition
+import de.protos.FlowOfWork.core.fow.foW.FinalTransition
+import de.protos.FlowOfWork.core.fow.foW.NonInitialTransition
+import de.protos.FlowOfWork.core.fow.foW.Step
+
+import org.eclipse.emf.common.util.EList
+import de.protos.FlowOfWork.core.fow.foW.Decision
+import de.protos.FlowOfWork.core.fow.foW.DecisionTransition
 
 @Singleton
 class DotGenerator {
@@ -12,15 +21,16 @@ class DotGenerator {
 	@Inject PathInfo pathInfo
 
 	def generateDot(Model model, IFileSystemAccess fsa) {
-		generateActivityDiagramForAllActivities(model, fsa)
+		generateActivityDiagramsForAllActivities(model, fsa)
+		generateDotMakefile(fsa)
 	}
 	
-	def private generateActivityDiagramForAllActivities(Model model, IFileSystemAccess fsa) {
+	def private generateActivityDiagramsForAllActivities(Model model, IFileSystemAccess fsa) {
 		for (activity : model.activities){
 			fsa.generateFile(pathInfo.getDotGenPath(activity), generateDeepActivityDiagramForOneActivity(activity))
+			if (activity.hasBehavior)
+				fsa.generateFile(pathInfo.getDotActivityBehaviorPath(activity), generateActivityBehavior(activity))
 		}
-		
-		generateDotMakefile(fsa)
 	}
 
 	def private generateDeepActivityDiagramForOneActivity(Activity activity) '''
@@ -49,6 +59,60 @@ class DotGenerator {
 		}
 	}
 
+
+	def private generateActivityBehavior(Activity activity) '''
+		digraph «activity.name»_Behavior{
+			rankdir=TD;
+			«generateAllSteps(activity.steps)»
+			«generateAllDecisions(activity.decisions)»
+			«generateAllTransitions(activity.transitions)»
+		}	
+	'''
+	def hasBehavior(Activity activity){
+		return emptyList(activity.steps)
+	}
+	def emptyList(EList list){
+		if (list == null)
+			return false
+		else if (list.empty)
+			return false
+		else
+			return true
+	}
+	
+	def private generateAllSteps(EList<Step> steps)'''
+		«FOR step : steps»
+			«step.name» [shape=ellipse]
+		«ENDFOR»
+	'''
+	
+	def private generateAllDecisions(EList<Decision> decisions)'''
+		«FOR decision : decisions»
+			«decision.name» [shape=diamond]
+		«ENDFOR»
+	'''
+	
+	// Transitions
+	def private generateAllTransitions(EList<Transition> transitions)'''
+		«FOR transition : transitions»
+			«generateTransition(transition)»
+		«ENDFOR»
+	'''
+	
+	def private dispatch generateTransition(InitialTransition transition)'''
+		i [shape = circle, color=black, style=filled] 
+		i -> «transition.to.name»
+	'''
+	def private dispatch generateTransition(FinalTransition transition)'''
+		f [shape = doublecircle, color=black, style=filled] 
+		«transition.from.name» -> f
+	'''
+	def private dispatch generateTransition(NonInitialTransition transition)'''
+		«transition.from.name» -> «transition.to.name»
+	'''
+	def private dispatch generateTransition(DecisionTransition transition)'''
+		«transition.from.name» -> «transition.to.name» [label="[«transition.guard»]"]
+	'''
 
 	// makefile generator for dot
 	def private generateDotMakefile(IFileSystemAccess fsa) {
