@@ -539,8 +539,8 @@ public class HtmlGenerator {
     _builder.append("<h2>Activities and Responsibilities (Sub Activities)</h2>");
     _builder.newLine();
     {
-      EList<Guidance> _guidances = activity.getGuidances();
-      boolean _emptyList = MetamodelHelpers.emptyList(_guidances);
+      EList<ActivityRef> _subActivities = activity.getSubActivities();
+      boolean _emptyList = MetamodelHelpers.emptyList(_subActivities);
       if (_emptyList) {
         _builder.append("<p><em>no sub activities</em></p>");
         _builder.newLine();
@@ -548,8 +548,8 @@ public class HtmlGenerator {
         _builder.append("<ul>");
         _builder.newLine();
         {
-          EList<ActivityRef> _subActivities = activity.getSubActivities();
-          for(final ActivityRef subActivity : _subActivities) {
+          EList<ActivityRef> _subActivities_1 = activity.getSubActivities();
+          for(final ActivityRef subActivity : _subActivities_1) {
             _builder.append("\t");
             _builder.append("<li>Activity Reference: ");
             String _name_2 = subActivity.getName();
@@ -594,14 +594,14 @@ public class HtmlGenerator {
     _builder.append("<h2>Guidances</h2>");
     _builder.newLine();
     {
-      EList<Guidance> _guidances_1 = activity.getGuidances();
-      boolean _emptyList_1 = MetamodelHelpers.emptyList(_guidances_1);
+      EList<Guidance> _guidances = activity.getGuidances();
+      boolean _emptyList_1 = MetamodelHelpers.emptyList(_guidances);
       if (_emptyList_1) {
         _builder.append("<p><em>no guidances</em></p>");
         _builder.newLine();
       } else {
-        EList<Guidance> _guidances_2 = activity.getGuidances();
-        CharSequence _generateHTMLForGuidanceList = this.generateHTMLForGuidanceList(_guidances_2);
+        EList<Guidance> _guidances_1 = activity.getGuidances();
+        CharSequence _generateHTMLForGuidanceList = this.generateHTMLForGuidanceList(_guidances_1);
         _builder.append(_generateHTMLForGuidanceList, "");
         _builder.newLineIfNotEmpty();
       }

@@ -202,7 +202,7 @@ class HtmlGenerator {
 			</table>
 
 		<h2>Activities and Responsibilities (Sub Activities)</h2>
-		«IF activity.guidances.emptyList»
+		«IF activity.subActivities.emptyList»
 			<p><em>no sub activities</em></p>
 		«ELSE»
 			<ul>
