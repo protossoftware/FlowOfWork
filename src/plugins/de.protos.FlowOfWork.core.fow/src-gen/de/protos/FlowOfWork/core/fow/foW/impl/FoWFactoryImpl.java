@@ -71,6 +71,7 @@ public class FoWFactoryImpl extends EFactoryImpl implements FoWFactory
       case FoWPackage.WORK_PRODUCT: return createWorkProduct();
       case FoWPackage.GUIDANCE_TYPE: return createGuidanceType();
       case FoWPackage.GUIDANCE: return createGuidance();
+      case FoWPackage.STATE: return createState();
       case FoWPackage.PORT: return createPort();
       case FoWPackage.ACTIVITY: return createActivity();
       case FoWPackage.ACTIVITY_REF: return createActivityRef();
@@ -163,6 +164,17 @@ public class FoWFactoryImpl extends EFactoryImpl implements FoWFactory
   {
     GuidanceImpl guidance = new GuidanceImpl();
     return guidance;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public State createState()
+  {
+    StateImpl state = new StateImpl();
+    return state;
   }
 
   /**

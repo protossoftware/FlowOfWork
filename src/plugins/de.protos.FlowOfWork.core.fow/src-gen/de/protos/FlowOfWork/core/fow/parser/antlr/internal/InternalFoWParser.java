@@ -21,7 +21,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalFoWParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Role'", "';'", "'WorkProductType'", "'WorkProduct'", "':'", "'GuidanceType'", "'Guidance'", "'Activity'", "'responsible'", "'inputs'", "','", "'outputs'", "'subActivities'", "'guidances'", "'Behavior'", "'{'", "'}'", "'Decision'", "'Step'", "'Transition'", "'initial'", "'to'", "'final'", "'label'", "'summary'", "'description'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Role'", "';'", "'WorkProductType'", "'WorkProduct'", "':'", "'GuidanceType'", "'Guidance'", "'State'", "'('", "')'", "'Activity'", "'responsible'", "'inputs'", "','", "'outputs'", "'subActivities'", "'guidances'", "'Behavior'", "'{'", "'}'", "'Decision'", "'Step'", "'Transition'", "'initial'", "'to'", "'final'", "'label'", "'summary'", "'description'"
     };
     public static final int RULE_ID=4;
     public static final int T__29=29;
@@ -51,8 +51,11 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
     public static final int T__18=18;
     public static final int T__36=36;
     public static final int T__17=17;
+    public static final int T__37=37;
     public static final int T__12=12;
+    public static final int T__38=38;
     public static final int T__11=11;
+    public static final int T__39=39;
     public static final int T__14=14;
     public static final int T__13=13;
     public static final int RULE_INT=6;
@@ -133,7 +136,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleModel"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:76:1: ruleModel returns [EObject current=null] : ( ( (lv_activities_0_0= ruleActivity ) ) | ( (lv_roles_1_0= ruleRole ) ) | ( (lv_workProducts_2_0= ruleWorkProduct ) ) | ( (lv_workProductTypes_3_0= ruleWorkProductType ) ) | ( (lv_guidances_4_0= ruleGuidance ) ) | ( (lv_guidanceTypes_5_0= ruleGuidanceType ) ) )* ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:76:1: ruleModel returns [EObject current=null] : ( ( (lv_activities_0_0= ruleActivity ) ) | ( (lv_roles_1_0= ruleRole ) ) | ( (lv_workProducts_2_0= ruleWorkProduct ) ) | ( (lv_workProductTypes_3_0= ruleWorkProductType ) ) | ( (lv_guidances_4_0= ruleGuidance ) ) | ( (lv_guidanceTypes_5_0= ruleGuidanceType ) ) | ( (lv_states_6_0= ruleState ) ) )* ;
     public final EObject ruleModel() throws RecognitionException {
         EObject current = null;
 
@@ -149,19 +152,21 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
         EObject lv_guidanceTypes_5_0 = null;
 
+        EObject lv_states_6_0 = null;
+
 
          enterRule(); 
             
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:79:28: ( ( ( (lv_activities_0_0= ruleActivity ) ) | ( (lv_roles_1_0= ruleRole ) ) | ( (lv_workProducts_2_0= ruleWorkProduct ) ) | ( (lv_workProductTypes_3_0= ruleWorkProductType ) ) | ( (lv_guidances_4_0= ruleGuidance ) ) | ( (lv_guidanceTypes_5_0= ruleGuidanceType ) ) )* )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:80:1: ( ( (lv_activities_0_0= ruleActivity ) ) | ( (lv_roles_1_0= ruleRole ) ) | ( (lv_workProducts_2_0= ruleWorkProduct ) ) | ( (lv_workProductTypes_3_0= ruleWorkProductType ) ) | ( (lv_guidances_4_0= ruleGuidance ) ) | ( (lv_guidanceTypes_5_0= ruleGuidanceType ) ) )*
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:79:28: ( ( ( (lv_activities_0_0= ruleActivity ) ) | ( (lv_roles_1_0= ruleRole ) ) | ( (lv_workProducts_2_0= ruleWorkProduct ) ) | ( (lv_workProductTypes_3_0= ruleWorkProductType ) ) | ( (lv_guidances_4_0= ruleGuidance ) ) | ( (lv_guidanceTypes_5_0= ruleGuidanceType ) ) | ( (lv_states_6_0= ruleState ) ) )* )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:80:1: ( ( (lv_activities_0_0= ruleActivity ) ) | ( (lv_roles_1_0= ruleRole ) ) | ( (lv_workProducts_2_0= ruleWorkProduct ) ) | ( (lv_workProductTypes_3_0= ruleWorkProductType ) ) | ( (lv_guidances_4_0= ruleGuidance ) ) | ( (lv_guidanceTypes_5_0= ruleGuidanceType ) ) | ( (lv_states_6_0= ruleState ) ) )*
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:80:1: ( ( (lv_activities_0_0= ruleActivity ) ) | ( (lv_roles_1_0= ruleRole ) ) | ( (lv_workProducts_2_0= ruleWorkProduct ) ) | ( (lv_workProductTypes_3_0= ruleWorkProductType ) ) | ( (lv_guidances_4_0= ruleGuidance ) ) | ( (lv_guidanceTypes_5_0= ruleGuidanceType ) ) )*
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:80:1: ( ( (lv_activities_0_0= ruleActivity ) ) | ( (lv_roles_1_0= ruleRole ) ) | ( (lv_workProducts_2_0= ruleWorkProduct ) ) | ( (lv_workProductTypes_3_0= ruleWorkProductType ) ) | ( (lv_guidances_4_0= ruleGuidance ) ) | ( (lv_guidanceTypes_5_0= ruleGuidanceType ) ) | ( (lv_states_6_0= ruleState ) ) )*
             loop1:
             do {
-                int alt1=7;
+                int alt1=8;
                 switch ( input.LA(1) ) {
-                case 18:
+                case 21:
                     {
                     alt1=1;
                     }
@@ -189,6 +194,11 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
                 case 16:
                     {
                     alt1=6;
+                    }
+                    break;
+                case 18:
+                    {
+                    alt1=7;
                     }
                     break;
 
@@ -417,6 +427,43 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
             	    }
             	    break;
+            	case 7 :
+            	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:194:6: ( (lv_states_6_0= ruleState ) )
+            	    {
+            	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:194:6: ( (lv_states_6_0= ruleState ) )
+            	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:195:1: (lv_states_6_0= ruleState )
+            	    {
+            	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:195:1: (lv_states_6_0= ruleState )
+            	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:196:3: lv_states_6_0= ruleState
+            	    {
+            	     
+            	    	        newCompositeNode(grammarAccess.getModelAccess().getStatesStateParserRuleCall_6_0()); 
+            	    	    
+            	    pushFollow(FOLLOW_ruleState_in_ruleModel293);
+            	    lv_states_6_0=ruleState();
+
+            	    state._fsp--;
+
+
+            	    	        if (current==null) {
+            	    	            current = createModelElementForParent(grammarAccess.getModelRule());
+            	    	        }
+            	           		add(
+            	           			current, 
+            	           			"states",
+            	            		lv_states_6_0, 
+            	            		"State");
+            	    	        afterParserOrEnumRuleCall();
+            	    	    
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+            	    break;
 
             	default :
             	    break loop1;
@@ -441,7 +488,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRole"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:203:1: entryRuleRole returns [EObject current=null] : iv_ruleRole= ruleRole EOF ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:222:1: entryRuleRole returns [EObject current=null] : iv_ruleRole= ruleRole EOF ;
     public final EObject entryRuleRole() throws RecognitionException {
         EObject current = null;
 
@@ -449,17 +496,17 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:204:2: (iv_ruleRole= ruleRole EOF )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:205:2: iv_ruleRole= ruleRole EOF
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:223:2: (iv_ruleRole= ruleRole EOF )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:224:2: iv_ruleRole= ruleRole EOF
             {
              newCompositeNode(grammarAccess.getRoleRule()); 
-            pushFollow(FOLLOW_ruleRole_in_entryRuleRole305);
+            pushFollow(FOLLOW_ruleRole_in_entryRuleRole332);
             iv_ruleRole=ruleRole();
 
             state._fsp--;
 
              current =iv_ruleRole; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRole315); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRole342); 
 
             }
 
@@ -477,7 +524,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRole"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:212:1: ruleRole returns [EObject current=null] : (otherlv_0= 'Role' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= ';' ) ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:231:1: ruleRole returns [EObject current=null] : (otherlv_0= 'Role' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= ';' ) ;
     public final EObject ruleRole() throws RecognitionException {
         EObject current = null;
 
@@ -490,23 +537,23 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:215:28: ( (otherlv_0= 'Role' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= ';' ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:216:1: (otherlv_0= 'Role' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= ';' )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:234:28: ( (otherlv_0= 'Role' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= ';' ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:235:1: (otherlv_0= 'Role' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= ';' )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:216:1: (otherlv_0= 'Role' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= ';' )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:216:3: otherlv_0= 'Role' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= ';'
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:235:1: (otherlv_0= 'Role' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= ';' )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:235:3: otherlv_0= 'Role' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= ';'
             {
-            otherlv_0=(Token)match(input,11,FOLLOW_11_in_ruleRole352); 
+            otherlv_0=(Token)match(input,11,FOLLOW_11_in_ruleRole379); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getRoleAccess().getRoleKeyword_0());
                 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:220:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:221:1: (lv_name_1_0= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:239:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:240:1: (lv_name_1_0= RULE_ID )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:221:1: (lv_name_1_0= RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:222:3: lv_name_1_0= RULE_ID
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:240:1: (lv_name_1_0= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:241:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRole369); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRole396); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getRoleAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -526,16 +573,16 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:238:2: ( (lv_textfield_2_0= ruleTextfield ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:239:1: (lv_textfield_2_0= ruleTextfield )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:257:2: ( (lv_textfield_2_0= ruleTextfield ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:258:1: (lv_textfield_2_0= ruleTextfield )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:239:1: (lv_textfield_2_0= ruleTextfield )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:240:3: lv_textfield_2_0= ruleTextfield
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:258:1: (lv_textfield_2_0= ruleTextfield )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:259:3: lv_textfield_2_0= ruleTextfield
             {
              
             	        newCompositeNode(grammarAccess.getRoleAccess().getTextfieldTextfieldParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleTextfield_in_ruleRole395);
+            pushFollow(FOLLOW_ruleTextfield_in_ruleRole422);
             lv_textfield_2_0=ruleTextfield();
 
             state._fsp--;
@@ -557,7 +604,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,12,FOLLOW_12_in_ruleRole407); 
+            otherlv_3=(Token)match(input,12,FOLLOW_12_in_ruleRole434); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getRoleAccess().getSemicolonKeyword_3());
                 
@@ -582,7 +629,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleWorkProductType"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:268:1: entryRuleWorkProductType returns [EObject current=null] : iv_ruleWorkProductType= ruleWorkProductType EOF ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:287:1: entryRuleWorkProductType returns [EObject current=null] : iv_ruleWorkProductType= ruleWorkProductType EOF ;
     public final EObject entryRuleWorkProductType() throws RecognitionException {
         EObject current = null;
 
@@ -590,17 +637,17 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:269:2: (iv_ruleWorkProductType= ruleWorkProductType EOF )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:270:2: iv_ruleWorkProductType= ruleWorkProductType EOF
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:288:2: (iv_ruleWorkProductType= ruleWorkProductType EOF )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:289:2: iv_ruleWorkProductType= ruleWorkProductType EOF
             {
              newCompositeNode(grammarAccess.getWorkProductTypeRule()); 
-            pushFollow(FOLLOW_ruleWorkProductType_in_entryRuleWorkProductType443);
+            pushFollow(FOLLOW_ruleWorkProductType_in_entryRuleWorkProductType470);
             iv_ruleWorkProductType=ruleWorkProductType();
 
             state._fsp--;
 
              current =iv_ruleWorkProductType; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleWorkProductType453); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleWorkProductType480); 
 
             }
 
@@ -618,7 +665,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleWorkProductType"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:277:1: ruleWorkProductType returns [EObject current=null] : (otherlv_0= 'WorkProductType' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= ';' ) ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:296:1: ruleWorkProductType returns [EObject current=null] : (otherlv_0= 'WorkProductType' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= ';' ) ;
     public final EObject ruleWorkProductType() throws RecognitionException {
         EObject current = null;
 
@@ -631,23 +678,23 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:280:28: ( (otherlv_0= 'WorkProductType' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= ';' ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:281:1: (otherlv_0= 'WorkProductType' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= ';' )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:299:28: ( (otherlv_0= 'WorkProductType' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= ';' ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:300:1: (otherlv_0= 'WorkProductType' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= ';' )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:281:1: (otherlv_0= 'WorkProductType' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= ';' )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:281:3: otherlv_0= 'WorkProductType' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= ';'
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:300:1: (otherlv_0= 'WorkProductType' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= ';' )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:300:3: otherlv_0= 'WorkProductType' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= ';'
             {
-            otherlv_0=(Token)match(input,13,FOLLOW_13_in_ruleWorkProductType490); 
+            otherlv_0=(Token)match(input,13,FOLLOW_13_in_ruleWorkProductType517); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getWorkProductTypeAccess().getWorkProductTypeKeyword_0());
                 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:285:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:286:1: (lv_name_1_0= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:304:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:305:1: (lv_name_1_0= RULE_ID )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:286:1: (lv_name_1_0= RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:287:3: lv_name_1_0= RULE_ID
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:305:1: (lv_name_1_0= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:306:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleWorkProductType507); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleWorkProductType534); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getWorkProductTypeAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -667,16 +714,16 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:303:2: ( (lv_textfield_2_0= ruleTextfield ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:304:1: (lv_textfield_2_0= ruleTextfield )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:322:2: ( (lv_textfield_2_0= ruleTextfield ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:323:1: (lv_textfield_2_0= ruleTextfield )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:304:1: (lv_textfield_2_0= ruleTextfield )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:305:3: lv_textfield_2_0= ruleTextfield
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:323:1: (lv_textfield_2_0= ruleTextfield )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:324:3: lv_textfield_2_0= ruleTextfield
             {
              
             	        newCompositeNode(grammarAccess.getWorkProductTypeAccess().getTextfieldTextfieldParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleTextfield_in_ruleWorkProductType533);
+            pushFollow(FOLLOW_ruleTextfield_in_ruleWorkProductType560);
             lv_textfield_2_0=ruleTextfield();
 
             state._fsp--;
@@ -698,7 +745,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,12,FOLLOW_12_in_ruleWorkProductType545); 
+            otherlv_3=(Token)match(input,12,FOLLOW_12_in_ruleWorkProductType572); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getWorkProductTypeAccess().getSemicolonKeyword_3());
                 
@@ -723,7 +770,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleWorkProduct"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:333:1: entryRuleWorkProduct returns [EObject current=null] : iv_ruleWorkProduct= ruleWorkProduct EOF ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:352:1: entryRuleWorkProduct returns [EObject current=null] : iv_ruleWorkProduct= ruleWorkProduct EOF ;
     public final EObject entryRuleWorkProduct() throws RecognitionException {
         EObject current = null;
 
@@ -731,17 +778,17 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:334:2: (iv_ruleWorkProduct= ruleWorkProduct EOF )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:335:2: iv_ruleWorkProduct= ruleWorkProduct EOF
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:353:2: (iv_ruleWorkProduct= ruleWorkProduct EOF )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:354:2: iv_ruleWorkProduct= ruleWorkProduct EOF
             {
              newCompositeNode(grammarAccess.getWorkProductRule()); 
-            pushFollow(FOLLOW_ruleWorkProduct_in_entryRuleWorkProduct581);
+            pushFollow(FOLLOW_ruleWorkProduct_in_entryRuleWorkProduct608);
             iv_ruleWorkProduct=ruleWorkProduct();
 
             state._fsp--;
 
              current =iv_ruleWorkProduct; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleWorkProduct591); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleWorkProduct618); 
 
             }
 
@@ -759,7 +806,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleWorkProduct"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:342:1: ruleWorkProduct returns [EObject current=null] : (otherlv_0= 'WorkProduct' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( (otherlv_3= RULE_ID ) ) ( (lv_textfield_4_0= ruleTextfield ) ) otherlv_5= ';' ) ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:361:1: ruleWorkProduct returns [EObject current=null] : (otherlv_0= 'WorkProduct' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( (otherlv_3= RULE_ID ) ) ( (lv_textfield_4_0= ruleTextfield ) ) otherlv_5= ';' ) ;
     public final EObject ruleWorkProduct() throws RecognitionException {
         EObject current = null;
 
@@ -774,23 +821,23 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:345:28: ( (otherlv_0= 'WorkProduct' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( (otherlv_3= RULE_ID ) ) ( (lv_textfield_4_0= ruleTextfield ) ) otherlv_5= ';' ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:346:1: (otherlv_0= 'WorkProduct' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( (otherlv_3= RULE_ID ) ) ( (lv_textfield_4_0= ruleTextfield ) ) otherlv_5= ';' )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:364:28: ( (otherlv_0= 'WorkProduct' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( (otherlv_3= RULE_ID ) ) ( (lv_textfield_4_0= ruleTextfield ) ) otherlv_5= ';' ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:365:1: (otherlv_0= 'WorkProduct' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( (otherlv_3= RULE_ID ) ) ( (lv_textfield_4_0= ruleTextfield ) ) otherlv_5= ';' )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:346:1: (otherlv_0= 'WorkProduct' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( (otherlv_3= RULE_ID ) ) ( (lv_textfield_4_0= ruleTextfield ) ) otherlv_5= ';' )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:346:3: otherlv_0= 'WorkProduct' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( (otherlv_3= RULE_ID ) ) ( (lv_textfield_4_0= ruleTextfield ) ) otherlv_5= ';'
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:365:1: (otherlv_0= 'WorkProduct' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( (otherlv_3= RULE_ID ) ) ( (lv_textfield_4_0= ruleTextfield ) ) otherlv_5= ';' )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:365:3: otherlv_0= 'WorkProduct' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( (otherlv_3= RULE_ID ) ) ( (lv_textfield_4_0= ruleTextfield ) ) otherlv_5= ';'
             {
-            otherlv_0=(Token)match(input,14,FOLLOW_14_in_ruleWorkProduct628); 
+            otherlv_0=(Token)match(input,14,FOLLOW_14_in_ruleWorkProduct655); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getWorkProductAccess().getWorkProductKeyword_0());
                 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:350:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:351:1: (lv_name_1_0= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:369:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:370:1: (lv_name_1_0= RULE_ID )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:351:1: (lv_name_1_0= RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:352:3: lv_name_1_0= RULE_ID
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:370:1: (lv_name_1_0= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:371:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleWorkProduct645); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleWorkProduct672); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getWorkProductAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -810,22 +857,22 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,15,FOLLOW_15_in_ruleWorkProduct662); 
+            otherlv_2=(Token)match(input,15,FOLLOW_15_in_ruleWorkProduct689); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getWorkProductAccess().getColonKeyword_2());
                 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:372:1: ( (otherlv_3= RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:373:1: (otherlv_3= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:391:1: ( (otherlv_3= RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:392:1: (otherlv_3= RULE_ID )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:373:1: (otherlv_3= RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:374:3: otherlv_3= RULE_ID
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:392:1: (otherlv_3= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:393:3: otherlv_3= RULE_ID
             {
 
             			if (current==null) {
             	            current = createModelElement(grammarAccess.getWorkProductRule());
             	        }
                     
-            otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleWorkProduct682); 
+            otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleWorkProduct709); 
 
             		newLeafNode(otherlv_3, grammarAccess.getWorkProductAccess().getTypeWorkProductTypeCrossReference_3_0()); 
             	
@@ -835,16 +882,16 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:385:2: ( (lv_textfield_4_0= ruleTextfield ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:386:1: (lv_textfield_4_0= ruleTextfield )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:404:2: ( (lv_textfield_4_0= ruleTextfield ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:405:1: (lv_textfield_4_0= ruleTextfield )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:386:1: (lv_textfield_4_0= ruleTextfield )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:387:3: lv_textfield_4_0= ruleTextfield
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:405:1: (lv_textfield_4_0= ruleTextfield )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:406:3: lv_textfield_4_0= ruleTextfield
             {
              
             	        newCompositeNode(grammarAccess.getWorkProductAccess().getTextfieldTextfieldParserRuleCall_4_0()); 
             	    
-            pushFollow(FOLLOW_ruleTextfield_in_ruleWorkProduct703);
+            pushFollow(FOLLOW_ruleTextfield_in_ruleWorkProduct730);
             lv_textfield_4_0=ruleTextfield();
 
             state._fsp--;
@@ -866,7 +913,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,12,FOLLOW_12_in_ruleWorkProduct715); 
+            otherlv_5=(Token)match(input,12,FOLLOW_12_in_ruleWorkProduct742); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getWorkProductAccess().getSemicolonKeyword_5());
                 
@@ -891,7 +938,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGuidanceType"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:415:1: entryRuleGuidanceType returns [EObject current=null] : iv_ruleGuidanceType= ruleGuidanceType EOF ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:434:1: entryRuleGuidanceType returns [EObject current=null] : iv_ruleGuidanceType= ruleGuidanceType EOF ;
     public final EObject entryRuleGuidanceType() throws RecognitionException {
         EObject current = null;
 
@@ -899,17 +946,17 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:416:2: (iv_ruleGuidanceType= ruleGuidanceType EOF )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:417:2: iv_ruleGuidanceType= ruleGuidanceType EOF
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:435:2: (iv_ruleGuidanceType= ruleGuidanceType EOF )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:436:2: iv_ruleGuidanceType= ruleGuidanceType EOF
             {
              newCompositeNode(grammarAccess.getGuidanceTypeRule()); 
-            pushFollow(FOLLOW_ruleGuidanceType_in_entryRuleGuidanceType751);
+            pushFollow(FOLLOW_ruleGuidanceType_in_entryRuleGuidanceType778);
             iv_ruleGuidanceType=ruleGuidanceType();
 
             state._fsp--;
 
              current =iv_ruleGuidanceType; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleGuidanceType761); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleGuidanceType788); 
 
             }
 
@@ -927,7 +974,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGuidanceType"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:424:1: ruleGuidanceType returns [EObject current=null] : (otherlv_0= 'GuidanceType' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= ';' ) ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:443:1: ruleGuidanceType returns [EObject current=null] : (otherlv_0= 'GuidanceType' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= ';' ) ;
     public final EObject ruleGuidanceType() throws RecognitionException {
         EObject current = null;
 
@@ -940,23 +987,23 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:427:28: ( (otherlv_0= 'GuidanceType' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= ';' ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:428:1: (otherlv_0= 'GuidanceType' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= ';' )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:446:28: ( (otherlv_0= 'GuidanceType' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= ';' ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:447:1: (otherlv_0= 'GuidanceType' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= ';' )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:428:1: (otherlv_0= 'GuidanceType' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= ';' )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:428:3: otherlv_0= 'GuidanceType' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= ';'
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:447:1: (otherlv_0= 'GuidanceType' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= ';' )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:447:3: otherlv_0= 'GuidanceType' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= ';'
             {
-            otherlv_0=(Token)match(input,16,FOLLOW_16_in_ruleGuidanceType798); 
+            otherlv_0=(Token)match(input,16,FOLLOW_16_in_ruleGuidanceType825); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getGuidanceTypeAccess().getGuidanceTypeKeyword_0());
                 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:432:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:433:1: (lv_name_1_0= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:451:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:452:1: (lv_name_1_0= RULE_ID )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:433:1: (lv_name_1_0= RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:434:3: lv_name_1_0= RULE_ID
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:452:1: (lv_name_1_0= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:453:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleGuidanceType815); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleGuidanceType842); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getGuidanceTypeAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -976,16 +1023,16 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:450:2: ( (lv_textfield_2_0= ruleTextfield ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:451:1: (lv_textfield_2_0= ruleTextfield )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:469:2: ( (lv_textfield_2_0= ruleTextfield ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:470:1: (lv_textfield_2_0= ruleTextfield )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:451:1: (lv_textfield_2_0= ruleTextfield )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:452:3: lv_textfield_2_0= ruleTextfield
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:470:1: (lv_textfield_2_0= ruleTextfield )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:471:3: lv_textfield_2_0= ruleTextfield
             {
              
             	        newCompositeNode(grammarAccess.getGuidanceTypeAccess().getTextfieldTextfieldParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleTextfield_in_ruleGuidanceType841);
+            pushFollow(FOLLOW_ruleTextfield_in_ruleGuidanceType868);
             lv_textfield_2_0=ruleTextfield();
 
             state._fsp--;
@@ -1007,7 +1054,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,12,FOLLOW_12_in_ruleGuidanceType853); 
+            otherlv_3=(Token)match(input,12,FOLLOW_12_in_ruleGuidanceType880); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getGuidanceTypeAccess().getSemicolonKeyword_3());
                 
@@ -1032,7 +1079,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGuidance"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:480:1: entryRuleGuidance returns [EObject current=null] : iv_ruleGuidance= ruleGuidance EOF ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:499:1: entryRuleGuidance returns [EObject current=null] : iv_ruleGuidance= ruleGuidance EOF ;
     public final EObject entryRuleGuidance() throws RecognitionException {
         EObject current = null;
 
@@ -1040,17 +1087,17 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:481:2: (iv_ruleGuidance= ruleGuidance EOF )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:482:2: iv_ruleGuidance= ruleGuidance EOF
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:500:2: (iv_ruleGuidance= ruleGuidance EOF )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:501:2: iv_ruleGuidance= ruleGuidance EOF
             {
              newCompositeNode(grammarAccess.getGuidanceRule()); 
-            pushFollow(FOLLOW_ruleGuidance_in_entryRuleGuidance889);
+            pushFollow(FOLLOW_ruleGuidance_in_entryRuleGuidance916);
             iv_ruleGuidance=ruleGuidance();
 
             state._fsp--;
 
              current =iv_ruleGuidance; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleGuidance899); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleGuidance926); 
 
             }
 
@@ -1068,7 +1115,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGuidance"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:489:1: ruleGuidance returns [EObject current=null] : (otherlv_0= 'Guidance' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( (otherlv_3= RULE_ID ) ) ( (lv_textfield_4_0= ruleTextfield ) ) otherlv_5= ';' ) ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:508:1: ruleGuidance returns [EObject current=null] : (otherlv_0= 'Guidance' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( (otherlv_3= RULE_ID ) ) ( (lv_textfield_4_0= ruleTextfield ) ) otherlv_5= ';' ) ;
     public final EObject ruleGuidance() throws RecognitionException {
         EObject current = null;
 
@@ -1083,23 +1130,23 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:492:28: ( (otherlv_0= 'Guidance' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( (otherlv_3= RULE_ID ) ) ( (lv_textfield_4_0= ruleTextfield ) ) otherlv_5= ';' ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:493:1: (otherlv_0= 'Guidance' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( (otherlv_3= RULE_ID ) ) ( (lv_textfield_4_0= ruleTextfield ) ) otherlv_5= ';' )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:511:28: ( (otherlv_0= 'Guidance' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( (otherlv_3= RULE_ID ) ) ( (lv_textfield_4_0= ruleTextfield ) ) otherlv_5= ';' ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:512:1: (otherlv_0= 'Guidance' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( (otherlv_3= RULE_ID ) ) ( (lv_textfield_4_0= ruleTextfield ) ) otherlv_5= ';' )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:493:1: (otherlv_0= 'Guidance' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( (otherlv_3= RULE_ID ) ) ( (lv_textfield_4_0= ruleTextfield ) ) otherlv_5= ';' )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:493:3: otherlv_0= 'Guidance' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( (otherlv_3= RULE_ID ) ) ( (lv_textfield_4_0= ruleTextfield ) ) otherlv_5= ';'
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:512:1: (otherlv_0= 'Guidance' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( (otherlv_3= RULE_ID ) ) ( (lv_textfield_4_0= ruleTextfield ) ) otherlv_5= ';' )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:512:3: otherlv_0= 'Guidance' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ':' ( (otherlv_3= RULE_ID ) ) ( (lv_textfield_4_0= ruleTextfield ) ) otherlv_5= ';'
             {
-            otherlv_0=(Token)match(input,17,FOLLOW_17_in_ruleGuidance936); 
+            otherlv_0=(Token)match(input,17,FOLLOW_17_in_ruleGuidance963); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getGuidanceAccess().getGuidanceKeyword_0());
                 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:497:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:498:1: (lv_name_1_0= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:516:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:517:1: (lv_name_1_0= RULE_ID )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:498:1: (lv_name_1_0= RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:499:3: lv_name_1_0= RULE_ID
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:517:1: (lv_name_1_0= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:518:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleGuidance953); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleGuidance980); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getGuidanceAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -1119,22 +1166,22 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,15,FOLLOW_15_in_ruleGuidance970); 
+            otherlv_2=(Token)match(input,15,FOLLOW_15_in_ruleGuidance997); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getGuidanceAccess().getColonKeyword_2());
                 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:519:1: ( (otherlv_3= RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:520:1: (otherlv_3= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:538:1: ( (otherlv_3= RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:539:1: (otherlv_3= RULE_ID )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:520:1: (otherlv_3= RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:521:3: otherlv_3= RULE_ID
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:539:1: (otherlv_3= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:540:3: otherlv_3= RULE_ID
             {
 
             			if (current==null) {
             	            current = createModelElement(grammarAccess.getGuidanceRule());
             	        }
                     
-            otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleGuidance990); 
+            otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleGuidance1017); 
 
             		newLeafNode(otherlv_3, grammarAccess.getGuidanceAccess().getTypeGuidanceTypeCrossReference_3_0()); 
             	
@@ -1144,16 +1191,16 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:532:2: ( (lv_textfield_4_0= ruleTextfield ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:533:1: (lv_textfield_4_0= ruleTextfield )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:551:2: ( (lv_textfield_4_0= ruleTextfield ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:552:1: (lv_textfield_4_0= ruleTextfield )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:533:1: (lv_textfield_4_0= ruleTextfield )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:534:3: lv_textfield_4_0= ruleTextfield
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:552:1: (lv_textfield_4_0= ruleTextfield )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:553:3: lv_textfield_4_0= ruleTextfield
             {
              
             	        newCompositeNode(grammarAccess.getGuidanceAccess().getTextfieldTextfieldParserRuleCall_4_0()); 
             	    
-            pushFollow(FOLLOW_ruleTextfield_in_ruleGuidance1011);
+            pushFollow(FOLLOW_ruleTextfield_in_ruleGuidance1038);
             lv_textfield_4_0=ruleTextfield();
 
             state._fsp--;
@@ -1175,7 +1222,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,12,FOLLOW_12_in_ruleGuidance1023); 
+            otherlv_5=(Token)match(input,12,FOLLOW_12_in_ruleGuidance1050); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getGuidanceAccess().getSemicolonKeyword_5());
                 
@@ -1199,8 +1246,116 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleGuidance"
 
 
+    // $ANTLR start "entryRuleState"
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:581:1: entryRuleState returns [EObject current=null] : iv_ruleState= ruleState EOF ;
+    public final EObject entryRuleState() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleState = null;
+
+
+        try {
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:582:2: (iv_ruleState= ruleState EOF )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:583:2: iv_ruleState= ruleState EOF
+            {
+             newCompositeNode(grammarAccess.getStateRule()); 
+            pushFollow(FOLLOW_ruleState_in_entryRuleState1086);
+            iv_ruleState=ruleState();
+
+            state._fsp--;
+
+             current =iv_ruleState; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleState1096); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleState"
+
+
+    // $ANTLR start "ruleState"
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:590:1: ruleState returns [EObject current=null] : (otherlv_0= 'State' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' ) ;
+    public final EObject ruleState() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        Token lv_name_1_0=null;
+        Token otherlv_2=null;
+
+         enterRule(); 
+            
+        try {
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:593:28: ( (otherlv_0= 'State' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:594:1: (otherlv_0= 'State' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' )
+            {
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:594:1: (otherlv_0= 'State' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:594:3: otherlv_0= 'State' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';'
+            {
+            otherlv_0=(Token)match(input,18,FOLLOW_18_in_ruleState1133); 
+
+                	newLeafNode(otherlv_0, grammarAccess.getStateAccess().getStateKeyword_0());
+                
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:598:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:599:1: (lv_name_1_0= RULE_ID )
+            {
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:599:1: (lv_name_1_0= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:600:3: lv_name_1_0= RULE_ID
+            {
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleState1150); 
+
+            			newLeafNode(lv_name_1_0, grammarAccess.getStateAccess().getNameIDTerminalRuleCall_1_0()); 
+            		
+
+            	        if (current==null) {
+            	            current = createModelElement(grammarAccess.getStateRule());
+            	        }
+                   		setWithLastConsumed(
+                   			current, 
+                   			"name",
+                    		lv_name_1_0, 
+                    		"ID");
+            	    
+
+            }
+
+
+            }
+
+            otherlv_2=(Token)match(input,12,FOLLOW_12_in_ruleState1167); 
+
+                	newLeafNode(otherlv_2, grammarAccess.getStateAccess().getSemicolonKeyword_2());
+                
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleState"
+
+
     // $ANTLR start "entryRulePort"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:562:1: entryRulePort returns [EObject current=null] : iv_rulePort= rulePort EOF ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:628:1: entryRulePort returns [EObject current=null] : iv_rulePort= rulePort EOF ;
     public final EObject entryRulePort() throws RecognitionException {
         EObject current = null;
 
@@ -1208,17 +1363,17 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:563:2: (iv_rulePort= rulePort EOF )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:564:2: iv_rulePort= rulePort EOF
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:629:2: (iv_rulePort= rulePort EOF )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:630:2: iv_rulePort= rulePort EOF
             {
              newCompositeNode(grammarAccess.getPortRule()); 
-            pushFollow(FOLLOW_rulePort_in_entryRulePort1059);
+            pushFollow(FOLLOW_rulePort_in_entryRulePort1203);
             iv_rulePort=rulePort();
 
             state._fsp--;
 
              current =iv_rulePort; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePort1069); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulePort1213); 
 
             }
 
@@ -1236,71 +1391,88 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePort"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:571:1: rulePort returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) ) ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:637:1: rulePort returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) (otherlv_1= '(' ( (otherlv_2= RULE_ID ) ) otherlv_3= ')' )? ) ;
     public final EObject rulePort() throws RecognitionException {
         EObject current = null;
 
-        Token lv_name_0_0=null;
+        Token otherlv_0=null;
         Token otherlv_1=null;
         Token otherlv_2=null;
+        Token otherlv_3=null;
 
          enterRule(); 
             
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:574:28: ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:575:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:640:28: ( ( ( (otherlv_0= RULE_ID ) ) (otherlv_1= '(' ( (otherlv_2= RULE_ID ) ) otherlv_3= ')' )? ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:641:1: ( ( (otherlv_0= RULE_ID ) ) (otherlv_1= '(' ( (otherlv_2= RULE_ID ) ) otherlv_3= ')' )? )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:575:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:575:2: ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (otherlv_2= RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:641:1: ( ( (otherlv_0= RULE_ID ) ) (otherlv_1= '(' ( (otherlv_2= RULE_ID ) ) otherlv_3= ')' )? )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:641:2: ( (otherlv_0= RULE_ID ) ) (otherlv_1= '(' ( (otherlv_2= RULE_ID ) ) otherlv_3= ')' )?
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:575:2: ( (lv_name_0_0= RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:576:1: (lv_name_0_0= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:641:2: ( (otherlv_0= RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:642:1: (otherlv_0= RULE_ID )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:576:1: (lv_name_0_0= RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:577:3: lv_name_0_0= RULE_ID
-            {
-            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePort1111); 
-
-            			newLeafNode(lv_name_0_0, grammarAccess.getPortAccess().getNameIDTerminalRuleCall_0_0()); 
-            		
-
-            	        if (current==null) {
-            	            current = createModelElement(grammarAccess.getPortRule());
-            	        }
-                   		setWithLastConsumed(
-                   			current, 
-                   			"name",
-                    		lv_name_0_0, 
-                    		"ID");
-            	    
-
-            }
-
-
-            }
-
-            otherlv_1=(Token)match(input,15,FOLLOW_15_in_rulePort1128); 
-
-                	newLeafNode(otherlv_1, grammarAccess.getPortAccess().getColonKeyword_1());
-                
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:597:1: ( (otherlv_2= RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:598:1: (otherlv_2= RULE_ID )
-            {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:598:1: (otherlv_2= RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:599:3: otherlv_2= RULE_ID
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:642:1: (otherlv_0= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:643:3: otherlv_0= RULE_ID
             {
 
             			if (current==null) {
             	            current = createModelElement(grammarAccess.getPortRule());
             	        }
                     
-            otherlv_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePort1148); 
+            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePort1258); 
 
-            		newLeafNode(otherlv_2, grammarAccess.getPortAccess().getTypeWorkProductCrossReference_2_0()); 
+            		newLeafNode(otherlv_0, grammarAccess.getPortAccess().getTypeWorkProductCrossReference_0_0()); 
             	
 
             }
 
+
+            }
+
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:654:2: (otherlv_1= '(' ( (otherlv_2= RULE_ID ) ) otherlv_3= ')' )?
+            int alt2=2;
+            int LA2_0 = input.LA(1);
+
+            if ( (LA2_0==19) ) {
+                alt2=1;
+            }
+            switch (alt2) {
+                case 1 :
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:654:4: otherlv_1= '(' ( (otherlv_2= RULE_ID ) ) otherlv_3= ')'
+                    {
+                    otherlv_1=(Token)match(input,19,FOLLOW_19_in_rulePort1271); 
+
+                        	newLeafNode(otherlv_1, grammarAccess.getPortAccess().getLeftParenthesisKeyword_1_0());
+                        
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:658:1: ( (otherlv_2= RULE_ID ) )
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:659:1: (otherlv_2= RULE_ID )
+                    {
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:659:1: (otherlv_2= RULE_ID )
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:660:3: otherlv_2= RULE_ID
+                    {
+
+                    			if (current==null) {
+                    	            current = createModelElement(grammarAccess.getPortRule());
+                    	        }
+                            
+                    otherlv_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePort1291); 
+
+                    		newLeafNode(otherlv_2, grammarAccess.getPortAccess().getStateStateCrossReference_1_1_0()); 
+                    	
+
+                    }
+
+
+                    }
+
+                    otherlv_3=(Token)match(input,20,FOLLOW_20_in_rulePort1303); 
+
+                        	newLeafNode(otherlv_3, grammarAccess.getPortAccess().getRightParenthesisKeyword_1_2());
+                        
+
+                    }
+                    break;
 
             }
 
@@ -1325,7 +1497,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleActivity"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:618:1: entryRuleActivity returns [EObject current=null] : iv_ruleActivity= ruleActivity EOF ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:683:1: entryRuleActivity returns [EObject current=null] : iv_ruleActivity= ruleActivity EOF ;
     public final EObject entryRuleActivity() throws RecognitionException {
         EObject current = null;
 
@@ -1333,17 +1505,17 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:619:2: (iv_ruleActivity= ruleActivity EOF )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:620:2: iv_ruleActivity= ruleActivity EOF
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:684:2: (iv_ruleActivity= ruleActivity EOF )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:685:2: iv_ruleActivity= ruleActivity EOF
             {
              newCompositeNode(grammarAccess.getActivityRule()); 
-            pushFollow(FOLLOW_ruleActivity_in_entryRuleActivity1184);
+            pushFollow(FOLLOW_ruleActivity_in_entryRuleActivity1341);
             iv_ruleActivity=ruleActivity();
 
             state._fsp--;
 
              current =iv_ruleActivity; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleActivity1194); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleActivity1351); 
 
             }
 
@@ -1361,7 +1533,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleActivity"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:627:1: ruleActivity returns [EObject current=null] : (otherlv_0= 'Activity' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= 'responsible' ( (otherlv_4= RULE_ID ) ) (otherlv_5= 'inputs' ( (lv_inPorts_6_0= rulePort ) ) (otherlv_7= ',' ( (lv_inPorts_8_0= rulePort ) ) )* )? (otherlv_9= 'outputs' ( (lv_outPorts_10_0= rulePort ) ) (otherlv_11= ',' ( (lv_outPorts_12_0= rulePort ) ) )* )? (otherlv_13= 'subActivities' ( (lv_subActivities_14_0= ruleActivityRef ) ) (otherlv_15= ',' ( (lv_subActivities_16_0= ruleActivityRef ) ) )* )? (otherlv_17= 'guidances' ( (otherlv_18= RULE_ID ) ) (otherlv_19= ',' ( (otherlv_20= RULE_ID ) ) )* )? (otherlv_21= 'Behavior' otherlv_22= '{' ( ( (lv_steps_23_0= ruleStep ) ) | ( (lv_decisions_24_0= ruleDecision ) ) | ( (lv_transitions_25_0= ruleTransition ) ) )* otherlv_26= '}' )? otherlv_27= ';' ) ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:692:1: ruleActivity returns [EObject current=null] : (otherlv_0= 'Activity' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= 'responsible' ( (otherlv_4= RULE_ID ) ) (otherlv_5= 'inputs' ( (lv_inPorts_6_0= rulePort ) ) (otherlv_7= ',' ( (lv_inPorts_8_0= rulePort ) ) )* )? (otherlv_9= 'outputs' ( (lv_outPorts_10_0= rulePort ) ) (otherlv_11= ',' ( (lv_outPorts_12_0= rulePort ) ) )* )? (otherlv_13= 'subActivities' ( (lv_subActivities_14_0= ruleActivityRef ) ) (otherlv_15= ',' ( (lv_subActivities_16_0= ruleActivityRef ) ) )* )? (otherlv_17= 'guidances' ( (otherlv_18= RULE_ID ) ) (otherlv_19= ',' ( (otherlv_20= RULE_ID ) ) )* )? (otherlv_21= 'Behavior' otherlv_22= '{' ( ( (lv_steps_23_0= ruleStep ) ) | ( (lv_decisions_24_0= ruleDecision ) ) | ( (lv_transitions_25_0= ruleTransition ) ) )* otherlv_26= '}' )? otherlv_27= ';' ) ;
     public final EObject ruleActivity() throws RecognitionException {
         EObject current = null;
 
@@ -1407,23 +1579,23 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:630:28: ( (otherlv_0= 'Activity' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= 'responsible' ( (otherlv_4= RULE_ID ) ) (otherlv_5= 'inputs' ( (lv_inPorts_6_0= rulePort ) ) (otherlv_7= ',' ( (lv_inPorts_8_0= rulePort ) ) )* )? (otherlv_9= 'outputs' ( (lv_outPorts_10_0= rulePort ) ) (otherlv_11= ',' ( (lv_outPorts_12_0= rulePort ) ) )* )? (otherlv_13= 'subActivities' ( (lv_subActivities_14_0= ruleActivityRef ) ) (otherlv_15= ',' ( (lv_subActivities_16_0= ruleActivityRef ) ) )* )? (otherlv_17= 'guidances' ( (otherlv_18= RULE_ID ) ) (otherlv_19= ',' ( (otherlv_20= RULE_ID ) ) )* )? (otherlv_21= 'Behavior' otherlv_22= '{' ( ( (lv_steps_23_0= ruleStep ) ) | ( (lv_decisions_24_0= ruleDecision ) ) | ( (lv_transitions_25_0= ruleTransition ) ) )* otherlv_26= '}' )? otherlv_27= ';' ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:631:1: (otherlv_0= 'Activity' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= 'responsible' ( (otherlv_4= RULE_ID ) ) (otherlv_5= 'inputs' ( (lv_inPorts_6_0= rulePort ) ) (otherlv_7= ',' ( (lv_inPorts_8_0= rulePort ) ) )* )? (otherlv_9= 'outputs' ( (lv_outPorts_10_0= rulePort ) ) (otherlv_11= ',' ( (lv_outPorts_12_0= rulePort ) ) )* )? (otherlv_13= 'subActivities' ( (lv_subActivities_14_0= ruleActivityRef ) ) (otherlv_15= ',' ( (lv_subActivities_16_0= ruleActivityRef ) ) )* )? (otherlv_17= 'guidances' ( (otherlv_18= RULE_ID ) ) (otherlv_19= ',' ( (otherlv_20= RULE_ID ) ) )* )? (otherlv_21= 'Behavior' otherlv_22= '{' ( ( (lv_steps_23_0= ruleStep ) ) | ( (lv_decisions_24_0= ruleDecision ) ) | ( (lv_transitions_25_0= ruleTransition ) ) )* otherlv_26= '}' )? otherlv_27= ';' )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:695:28: ( (otherlv_0= 'Activity' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= 'responsible' ( (otherlv_4= RULE_ID ) ) (otherlv_5= 'inputs' ( (lv_inPorts_6_0= rulePort ) ) (otherlv_7= ',' ( (lv_inPorts_8_0= rulePort ) ) )* )? (otherlv_9= 'outputs' ( (lv_outPorts_10_0= rulePort ) ) (otherlv_11= ',' ( (lv_outPorts_12_0= rulePort ) ) )* )? (otherlv_13= 'subActivities' ( (lv_subActivities_14_0= ruleActivityRef ) ) (otherlv_15= ',' ( (lv_subActivities_16_0= ruleActivityRef ) ) )* )? (otherlv_17= 'guidances' ( (otherlv_18= RULE_ID ) ) (otherlv_19= ',' ( (otherlv_20= RULE_ID ) ) )* )? (otherlv_21= 'Behavior' otherlv_22= '{' ( ( (lv_steps_23_0= ruleStep ) ) | ( (lv_decisions_24_0= ruleDecision ) ) | ( (lv_transitions_25_0= ruleTransition ) ) )* otherlv_26= '}' )? otherlv_27= ';' ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:696:1: (otherlv_0= 'Activity' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= 'responsible' ( (otherlv_4= RULE_ID ) ) (otherlv_5= 'inputs' ( (lv_inPorts_6_0= rulePort ) ) (otherlv_7= ',' ( (lv_inPorts_8_0= rulePort ) ) )* )? (otherlv_9= 'outputs' ( (lv_outPorts_10_0= rulePort ) ) (otherlv_11= ',' ( (lv_outPorts_12_0= rulePort ) ) )* )? (otherlv_13= 'subActivities' ( (lv_subActivities_14_0= ruleActivityRef ) ) (otherlv_15= ',' ( (lv_subActivities_16_0= ruleActivityRef ) ) )* )? (otherlv_17= 'guidances' ( (otherlv_18= RULE_ID ) ) (otherlv_19= ',' ( (otherlv_20= RULE_ID ) ) )* )? (otherlv_21= 'Behavior' otherlv_22= '{' ( ( (lv_steps_23_0= ruleStep ) ) | ( (lv_decisions_24_0= ruleDecision ) ) | ( (lv_transitions_25_0= ruleTransition ) ) )* otherlv_26= '}' )? otherlv_27= ';' )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:631:1: (otherlv_0= 'Activity' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= 'responsible' ( (otherlv_4= RULE_ID ) ) (otherlv_5= 'inputs' ( (lv_inPorts_6_0= rulePort ) ) (otherlv_7= ',' ( (lv_inPorts_8_0= rulePort ) ) )* )? (otherlv_9= 'outputs' ( (lv_outPorts_10_0= rulePort ) ) (otherlv_11= ',' ( (lv_outPorts_12_0= rulePort ) ) )* )? (otherlv_13= 'subActivities' ( (lv_subActivities_14_0= ruleActivityRef ) ) (otherlv_15= ',' ( (lv_subActivities_16_0= ruleActivityRef ) ) )* )? (otherlv_17= 'guidances' ( (otherlv_18= RULE_ID ) ) (otherlv_19= ',' ( (otherlv_20= RULE_ID ) ) )* )? (otherlv_21= 'Behavior' otherlv_22= '{' ( ( (lv_steps_23_0= ruleStep ) ) | ( (lv_decisions_24_0= ruleDecision ) ) | ( (lv_transitions_25_0= ruleTransition ) ) )* otherlv_26= '}' )? otherlv_27= ';' )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:631:3: otherlv_0= 'Activity' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= 'responsible' ( (otherlv_4= RULE_ID ) ) (otherlv_5= 'inputs' ( (lv_inPorts_6_0= rulePort ) ) (otherlv_7= ',' ( (lv_inPorts_8_0= rulePort ) ) )* )? (otherlv_9= 'outputs' ( (lv_outPorts_10_0= rulePort ) ) (otherlv_11= ',' ( (lv_outPorts_12_0= rulePort ) ) )* )? (otherlv_13= 'subActivities' ( (lv_subActivities_14_0= ruleActivityRef ) ) (otherlv_15= ',' ( (lv_subActivities_16_0= ruleActivityRef ) ) )* )? (otherlv_17= 'guidances' ( (otherlv_18= RULE_ID ) ) (otherlv_19= ',' ( (otherlv_20= RULE_ID ) ) )* )? (otherlv_21= 'Behavior' otherlv_22= '{' ( ( (lv_steps_23_0= ruleStep ) ) | ( (lv_decisions_24_0= ruleDecision ) ) | ( (lv_transitions_25_0= ruleTransition ) ) )* otherlv_26= '}' )? otherlv_27= ';'
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:696:1: (otherlv_0= 'Activity' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= 'responsible' ( (otherlv_4= RULE_ID ) ) (otherlv_5= 'inputs' ( (lv_inPorts_6_0= rulePort ) ) (otherlv_7= ',' ( (lv_inPorts_8_0= rulePort ) ) )* )? (otherlv_9= 'outputs' ( (lv_outPorts_10_0= rulePort ) ) (otherlv_11= ',' ( (lv_outPorts_12_0= rulePort ) ) )* )? (otherlv_13= 'subActivities' ( (lv_subActivities_14_0= ruleActivityRef ) ) (otherlv_15= ',' ( (lv_subActivities_16_0= ruleActivityRef ) ) )* )? (otherlv_17= 'guidances' ( (otherlv_18= RULE_ID ) ) (otherlv_19= ',' ( (otherlv_20= RULE_ID ) ) )* )? (otherlv_21= 'Behavior' otherlv_22= '{' ( ( (lv_steps_23_0= ruleStep ) ) | ( (lv_decisions_24_0= ruleDecision ) ) | ( (lv_transitions_25_0= ruleTransition ) ) )* otherlv_26= '}' )? otherlv_27= ';' )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:696:3: otherlv_0= 'Activity' ( (lv_name_1_0= RULE_ID ) ) ( (lv_textfield_2_0= ruleTextfield ) ) otherlv_3= 'responsible' ( (otherlv_4= RULE_ID ) ) (otherlv_5= 'inputs' ( (lv_inPorts_6_0= rulePort ) ) (otherlv_7= ',' ( (lv_inPorts_8_0= rulePort ) ) )* )? (otherlv_9= 'outputs' ( (lv_outPorts_10_0= rulePort ) ) (otherlv_11= ',' ( (lv_outPorts_12_0= rulePort ) ) )* )? (otherlv_13= 'subActivities' ( (lv_subActivities_14_0= ruleActivityRef ) ) (otherlv_15= ',' ( (lv_subActivities_16_0= ruleActivityRef ) ) )* )? (otherlv_17= 'guidances' ( (otherlv_18= RULE_ID ) ) (otherlv_19= ',' ( (otherlv_20= RULE_ID ) ) )* )? (otherlv_21= 'Behavior' otherlv_22= '{' ( ( (lv_steps_23_0= ruleStep ) ) | ( (lv_decisions_24_0= ruleDecision ) ) | ( (lv_transitions_25_0= ruleTransition ) ) )* otherlv_26= '}' )? otherlv_27= ';'
             {
-            otherlv_0=(Token)match(input,18,FOLLOW_18_in_ruleActivity1231); 
+            otherlv_0=(Token)match(input,21,FOLLOW_21_in_ruleActivity1388); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getActivityAccess().getActivityKeyword_0());
                 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:635:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:636:1: (lv_name_1_0= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:700:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:701:1: (lv_name_1_0= RULE_ID )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:636:1: (lv_name_1_0= RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:637:3: lv_name_1_0= RULE_ID
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:701:1: (lv_name_1_0= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:702:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleActivity1248); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleActivity1405); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getActivityAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -1443,16 +1615,16 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:653:2: ( (lv_textfield_2_0= ruleTextfield ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:654:1: (lv_textfield_2_0= ruleTextfield )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:718:2: ( (lv_textfield_2_0= ruleTextfield ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:719:1: (lv_textfield_2_0= ruleTextfield )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:654:1: (lv_textfield_2_0= ruleTextfield )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:655:3: lv_textfield_2_0= ruleTextfield
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:719:1: (lv_textfield_2_0= ruleTextfield )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:720:3: lv_textfield_2_0= ruleTextfield
             {
              
             	        newCompositeNode(grammarAccess.getActivityAccess().getTextfieldTextfieldParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleTextfield_in_ruleActivity1274);
+            pushFollow(FOLLOW_ruleTextfield_in_ruleActivity1431);
             lv_textfield_2_0=ruleTextfield();
 
             state._fsp--;
@@ -1474,22 +1646,22 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,19,FOLLOW_19_in_ruleActivity1286); 
+            otherlv_3=(Token)match(input,22,FOLLOW_22_in_ruleActivity1443); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getActivityAccess().getResponsibleKeyword_3());
                 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:675:1: ( (otherlv_4= RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:676:1: (otherlv_4= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:740:1: ( (otherlv_4= RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:741:1: (otherlv_4= RULE_ID )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:676:1: (otherlv_4= RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:677:3: otherlv_4= RULE_ID
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:741:1: (otherlv_4= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:742:3: otherlv_4= RULE_ID
             {
 
             			if (current==null) {
             	            current = createModelElement(grammarAccess.getActivityRule());
             	        }
                     
-            otherlv_4=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleActivity1306); 
+            otherlv_4=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleActivity1463); 
 
             		newLeafNode(otherlv_4, grammarAccess.getActivityAccess().getRoleRoleCrossReference_4_0()); 
             	
@@ -1499,31 +1671,31 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:688:2: (otherlv_5= 'inputs' ( (lv_inPorts_6_0= rulePort ) ) (otherlv_7= ',' ( (lv_inPorts_8_0= rulePort ) ) )* )?
-            int alt3=2;
-            int LA3_0 = input.LA(1);
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:753:2: (otherlv_5= 'inputs' ( (lv_inPorts_6_0= rulePort ) ) (otherlv_7= ',' ( (lv_inPorts_8_0= rulePort ) ) )* )?
+            int alt4=2;
+            int LA4_0 = input.LA(1);
 
-            if ( (LA3_0==20) ) {
-                alt3=1;
+            if ( (LA4_0==23) ) {
+                alt4=1;
             }
-            switch (alt3) {
+            switch (alt4) {
                 case 1 :
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:688:4: otherlv_5= 'inputs' ( (lv_inPorts_6_0= rulePort ) ) (otherlv_7= ',' ( (lv_inPorts_8_0= rulePort ) ) )*
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:753:4: otherlv_5= 'inputs' ( (lv_inPorts_6_0= rulePort ) ) (otherlv_7= ',' ( (lv_inPorts_8_0= rulePort ) ) )*
                     {
-                    otherlv_5=(Token)match(input,20,FOLLOW_20_in_ruleActivity1319); 
+                    otherlv_5=(Token)match(input,23,FOLLOW_23_in_ruleActivity1476); 
 
                         	newLeafNode(otherlv_5, grammarAccess.getActivityAccess().getInputsKeyword_5_0());
                         
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:692:1: ( (lv_inPorts_6_0= rulePort ) )
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:693:1: (lv_inPorts_6_0= rulePort )
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:757:1: ( (lv_inPorts_6_0= rulePort ) )
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:758:1: (lv_inPorts_6_0= rulePort )
                     {
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:693:1: (lv_inPorts_6_0= rulePort )
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:694:3: lv_inPorts_6_0= rulePort
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:758:1: (lv_inPorts_6_0= rulePort )
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:759:3: lv_inPorts_6_0= rulePort
                     {
                      
                     	        newCompositeNode(grammarAccess.getActivityAccess().getInPortsPortParserRuleCall_5_1_0()); 
                     	    
-                    pushFollow(FOLLOW_rulePort_in_ruleActivity1340);
+                    pushFollow(FOLLOW_rulePort_in_ruleActivity1497);
                     lv_inPorts_6_0=rulePort();
 
                     state._fsp--;
@@ -1545,35 +1717,35 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:710:2: (otherlv_7= ',' ( (lv_inPorts_8_0= rulePort ) ) )*
-                    loop2:
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:775:2: (otherlv_7= ',' ( (lv_inPorts_8_0= rulePort ) ) )*
+                    loop3:
                     do {
-                        int alt2=2;
-                        int LA2_0 = input.LA(1);
+                        int alt3=2;
+                        int LA3_0 = input.LA(1);
 
-                        if ( (LA2_0==21) ) {
-                            alt2=1;
+                        if ( (LA3_0==24) ) {
+                            alt3=1;
                         }
 
 
-                        switch (alt2) {
+                        switch (alt3) {
                     	case 1 :
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:710:4: otherlv_7= ',' ( (lv_inPorts_8_0= rulePort ) )
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:775:4: otherlv_7= ',' ( (lv_inPorts_8_0= rulePort ) )
                     	    {
-                    	    otherlv_7=(Token)match(input,21,FOLLOW_21_in_ruleActivity1353); 
+                    	    otherlv_7=(Token)match(input,24,FOLLOW_24_in_ruleActivity1510); 
 
                     	        	newLeafNode(otherlv_7, grammarAccess.getActivityAccess().getCommaKeyword_5_2_0());
                     	        
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:714:1: ( (lv_inPorts_8_0= rulePort ) )
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:715:1: (lv_inPorts_8_0= rulePort )
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:779:1: ( (lv_inPorts_8_0= rulePort ) )
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:780:1: (lv_inPorts_8_0= rulePort )
                     	    {
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:715:1: (lv_inPorts_8_0= rulePort )
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:716:3: lv_inPorts_8_0= rulePort
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:780:1: (lv_inPorts_8_0= rulePort )
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:781:3: lv_inPorts_8_0= rulePort
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getActivityAccess().getInPortsPortParserRuleCall_5_2_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_rulePort_in_ruleActivity1374);
+                    	    pushFollow(FOLLOW_rulePort_in_ruleActivity1531);
                     	    lv_inPorts_8_0=rulePort();
 
                     	    state._fsp--;
@@ -1600,7 +1772,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop2;
+                    	    break loop3;
                         }
                     } while (true);
 
@@ -1610,31 +1782,31 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:732:6: (otherlv_9= 'outputs' ( (lv_outPorts_10_0= rulePort ) ) (otherlv_11= ',' ( (lv_outPorts_12_0= rulePort ) ) )* )?
-            int alt5=2;
-            int LA5_0 = input.LA(1);
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:797:6: (otherlv_9= 'outputs' ( (lv_outPorts_10_0= rulePort ) ) (otherlv_11= ',' ( (lv_outPorts_12_0= rulePort ) ) )* )?
+            int alt6=2;
+            int LA6_0 = input.LA(1);
 
-            if ( (LA5_0==22) ) {
-                alt5=1;
+            if ( (LA6_0==25) ) {
+                alt6=1;
             }
-            switch (alt5) {
+            switch (alt6) {
                 case 1 :
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:732:8: otherlv_9= 'outputs' ( (lv_outPorts_10_0= rulePort ) ) (otherlv_11= ',' ( (lv_outPorts_12_0= rulePort ) ) )*
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:797:8: otherlv_9= 'outputs' ( (lv_outPorts_10_0= rulePort ) ) (otherlv_11= ',' ( (lv_outPorts_12_0= rulePort ) ) )*
                     {
-                    otherlv_9=(Token)match(input,22,FOLLOW_22_in_ruleActivity1391); 
+                    otherlv_9=(Token)match(input,25,FOLLOW_25_in_ruleActivity1548); 
 
                         	newLeafNode(otherlv_9, grammarAccess.getActivityAccess().getOutputsKeyword_6_0());
                         
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:736:1: ( (lv_outPorts_10_0= rulePort ) )
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:737:1: (lv_outPorts_10_0= rulePort )
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:801:1: ( (lv_outPorts_10_0= rulePort ) )
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:802:1: (lv_outPorts_10_0= rulePort )
                     {
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:737:1: (lv_outPorts_10_0= rulePort )
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:738:3: lv_outPorts_10_0= rulePort
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:802:1: (lv_outPorts_10_0= rulePort )
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:803:3: lv_outPorts_10_0= rulePort
                     {
                      
                     	        newCompositeNode(grammarAccess.getActivityAccess().getOutPortsPortParserRuleCall_6_1_0()); 
                     	    
-                    pushFollow(FOLLOW_rulePort_in_ruleActivity1412);
+                    pushFollow(FOLLOW_rulePort_in_ruleActivity1569);
                     lv_outPorts_10_0=rulePort();
 
                     state._fsp--;
@@ -1656,35 +1828,35 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:754:2: (otherlv_11= ',' ( (lv_outPorts_12_0= rulePort ) ) )*
-                    loop4:
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:819:2: (otherlv_11= ',' ( (lv_outPorts_12_0= rulePort ) ) )*
+                    loop5:
                     do {
-                        int alt4=2;
-                        int LA4_0 = input.LA(1);
+                        int alt5=2;
+                        int LA5_0 = input.LA(1);
 
-                        if ( (LA4_0==21) ) {
-                            alt4=1;
+                        if ( (LA5_0==24) ) {
+                            alt5=1;
                         }
 
 
-                        switch (alt4) {
+                        switch (alt5) {
                     	case 1 :
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:754:4: otherlv_11= ',' ( (lv_outPorts_12_0= rulePort ) )
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:819:4: otherlv_11= ',' ( (lv_outPorts_12_0= rulePort ) )
                     	    {
-                    	    otherlv_11=(Token)match(input,21,FOLLOW_21_in_ruleActivity1425); 
+                    	    otherlv_11=(Token)match(input,24,FOLLOW_24_in_ruleActivity1582); 
 
                     	        	newLeafNode(otherlv_11, grammarAccess.getActivityAccess().getCommaKeyword_6_2_0());
                     	        
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:758:1: ( (lv_outPorts_12_0= rulePort ) )
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:759:1: (lv_outPorts_12_0= rulePort )
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:823:1: ( (lv_outPorts_12_0= rulePort ) )
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:824:1: (lv_outPorts_12_0= rulePort )
                     	    {
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:759:1: (lv_outPorts_12_0= rulePort )
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:760:3: lv_outPorts_12_0= rulePort
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:824:1: (lv_outPorts_12_0= rulePort )
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:825:3: lv_outPorts_12_0= rulePort
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getActivityAccess().getOutPortsPortParserRuleCall_6_2_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_rulePort_in_ruleActivity1446);
+                    	    pushFollow(FOLLOW_rulePort_in_ruleActivity1603);
                     	    lv_outPorts_12_0=rulePort();
 
                     	    state._fsp--;
@@ -1711,7 +1883,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop4;
+                    	    break loop5;
                         }
                     } while (true);
 
@@ -1721,31 +1893,31 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:776:6: (otherlv_13= 'subActivities' ( (lv_subActivities_14_0= ruleActivityRef ) ) (otherlv_15= ',' ( (lv_subActivities_16_0= ruleActivityRef ) ) )* )?
-            int alt7=2;
-            int LA7_0 = input.LA(1);
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:841:6: (otherlv_13= 'subActivities' ( (lv_subActivities_14_0= ruleActivityRef ) ) (otherlv_15= ',' ( (lv_subActivities_16_0= ruleActivityRef ) ) )* )?
+            int alt8=2;
+            int LA8_0 = input.LA(1);
 
-            if ( (LA7_0==23) ) {
-                alt7=1;
+            if ( (LA8_0==26) ) {
+                alt8=1;
             }
-            switch (alt7) {
+            switch (alt8) {
                 case 1 :
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:776:8: otherlv_13= 'subActivities' ( (lv_subActivities_14_0= ruleActivityRef ) ) (otherlv_15= ',' ( (lv_subActivities_16_0= ruleActivityRef ) ) )*
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:841:8: otherlv_13= 'subActivities' ( (lv_subActivities_14_0= ruleActivityRef ) ) (otherlv_15= ',' ( (lv_subActivities_16_0= ruleActivityRef ) ) )*
                     {
-                    otherlv_13=(Token)match(input,23,FOLLOW_23_in_ruleActivity1463); 
+                    otherlv_13=(Token)match(input,26,FOLLOW_26_in_ruleActivity1620); 
 
                         	newLeafNode(otherlv_13, grammarAccess.getActivityAccess().getSubActivitiesKeyword_7_0());
                         
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:780:1: ( (lv_subActivities_14_0= ruleActivityRef ) )
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:781:1: (lv_subActivities_14_0= ruleActivityRef )
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:845:1: ( (lv_subActivities_14_0= ruleActivityRef ) )
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:846:1: (lv_subActivities_14_0= ruleActivityRef )
                     {
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:781:1: (lv_subActivities_14_0= ruleActivityRef )
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:782:3: lv_subActivities_14_0= ruleActivityRef
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:846:1: (lv_subActivities_14_0= ruleActivityRef )
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:847:3: lv_subActivities_14_0= ruleActivityRef
                     {
                      
                     	        newCompositeNode(grammarAccess.getActivityAccess().getSubActivitiesActivityRefParserRuleCall_7_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleActivityRef_in_ruleActivity1484);
+                    pushFollow(FOLLOW_ruleActivityRef_in_ruleActivity1641);
                     lv_subActivities_14_0=ruleActivityRef();
 
                     state._fsp--;
@@ -1767,35 +1939,35 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:798:2: (otherlv_15= ',' ( (lv_subActivities_16_0= ruleActivityRef ) ) )*
-                    loop6:
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:863:2: (otherlv_15= ',' ( (lv_subActivities_16_0= ruleActivityRef ) ) )*
+                    loop7:
                     do {
-                        int alt6=2;
-                        int LA6_0 = input.LA(1);
+                        int alt7=2;
+                        int LA7_0 = input.LA(1);
 
-                        if ( (LA6_0==21) ) {
-                            alt6=1;
+                        if ( (LA7_0==24) ) {
+                            alt7=1;
                         }
 
 
-                        switch (alt6) {
+                        switch (alt7) {
                     	case 1 :
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:798:4: otherlv_15= ',' ( (lv_subActivities_16_0= ruleActivityRef ) )
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:863:4: otherlv_15= ',' ( (lv_subActivities_16_0= ruleActivityRef ) )
                     	    {
-                    	    otherlv_15=(Token)match(input,21,FOLLOW_21_in_ruleActivity1497); 
+                    	    otherlv_15=(Token)match(input,24,FOLLOW_24_in_ruleActivity1654); 
 
                     	        	newLeafNode(otherlv_15, grammarAccess.getActivityAccess().getCommaKeyword_7_2_0());
                     	        
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:802:1: ( (lv_subActivities_16_0= ruleActivityRef ) )
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:803:1: (lv_subActivities_16_0= ruleActivityRef )
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:867:1: ( (lv_subActivities_16_0= ruleActivityRef ) )
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:868:1: (lv_subActivities_16_0= ruleActivityRef )
                     	    {
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:803:1: (lv_subActivities_16_0= ruleActivityRef )
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:804:3: lv_subActivities_16_0= ruleActivityRef
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:868:1: (lv_subActivities_16_0= ruleActivityRef )
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:869:3: lv_subActivities_16_0= ruleActivityRef
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getActivityAccess().getSubActivitiesActivityRefParserRuleCall_7_2_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleActivityRef_in_ruleActivity1518);
+                    	    pushFollow(FOLLOW_ruleActivityRef_in_ruleActivity1675);
                     	    lv_subActivities_16_0=ruleActivityRef();
 
                     	    state._fsp--;
@@ -1822,7 +1994,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop6;
+                    	    break loop7;
                         }
                     } while (true);
 
@@ -1832,33 +2004,33 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:820:6: (otherlv_17= 'guidances' ( (otherlv_18= RULE_ID ) ) (otherlv_19= ',' ( (otherlv_20= RULE_ID ) ) )* )?
-            int alt9=2;
-            int LA9_0 = input.LA(1);
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:885:6: (otherlv_17= 'guidances' ( (otherlv_18= RULE_ID ) ) (otherlv_19= ',' ( (otherlv_20= RULE_ID ) ) )* )?
+            int alt10=2;
+            int LA10_0 = input.LA(1);
 
-            if ( (LA9_0==24) ) {
-                alt9=1;
+            if ( (LA10_0==27) ) {
+                alt10=1;
             }
-            switch (alt9) {
+            switch (alt10) {
                 case 1 :
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:820:8: otherlv_17= 'guidances' ( (otherlv_18= RULE_ID ) ) (otherlv_19= ',' ( (otherlv_20= RULE_ID ) ) )*
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:885:8: otherlv_17= 'guidances' ( (otherlv_18= RULE_ID ) ) (otherlv_19= ',' ( (otherlv_20= RULE_ID ) ) )*
                     {
-                    otherlv_17=(Token)match(input,24,FOLLOW_24_in_ruleActivity1535); 
+                    otherlv_17=(Token)match(input,27,FOLLOW_27_in_ruleActivity1692); 
 
                         	newLeafNode(otherlv_17, grammarAccess.getActivityAccess().getGuidancesKeyword_8_0());
                         
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:824:1: ( (otherlv_18= RULE_ID ) )
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:825:1: (otherlv_18= RULE_ID )
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:889:1: ( (otherlv_18= RULE_ID ) )
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:890:1: (otherlv_18= RULE_ID )
                     {
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:825:1: (otherlv_18= RULE_ID )
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:826:3: otherlv_18= RULE_ID
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:890:1: (otherlv_18= RULE_ID )
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:891:3: otherlv_18= RULE_ID
                     {
 
                     			if (current==null) {
                     	            current = createModelElement(grammarAccess.getActivityRule());
                     	        }
                             
-                    otherlv_18=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleActivity1555); 
+                    otherlv_18=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleActivity1712); 
 
                     		newLeafNode(otherlv_18, grammarAccess.getActivityAccess().getGuidancesGuidanceCrossReference_8_1_0()); 
                     	
@@ -1868,37 +2040,37 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:837:2: (otherlv_19= ',' ( (otherlv_20= RULE_ID ) ) )*
-                    loop8:
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:902:2: (otherlv_19= ',' ( (otherlv_20= RULE_ID ) ) )*
+                    loop9:
                     do {
-                        int alt8=2;
-                        int LA8_0 = input.LA(1);
+                        int alt9=2;
+                        int LA9_0 = input.LA(1);
 
-                        if ( (LA8_0==21) ) {
-                            alt8=1;
+                        if ( (LA9_0==24) ) {
+                            alt9=1;
                         }
 
 
-                        switch (alt8) {
+                        switch (alt9) {
                     	case 1 :
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:837:4: otherlv_19= ',' ( (otherlv_20= RULE_ID ) )
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:902:4: otherlv_19= ',' ( (otherlv_20= RULE_ID ) )
                     	    {
-                    	    otherlv_19=(Token)match(input,21,FOLLOW_21_in_ruleActivity1568); 
+                    	    otherlv_19=(Token)match(input,24,FOLLOW_24_in_ruleActivity1725); 
 
                     	        	newLeafNode(otherlv_19, grammarAccess.getActivityAccess().getCommaKeyword_8_2_0());
                     	        
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:841:1: ( (otherlv_20= RULE_ID ) )
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:842:1: (otherlv_20= RULE_ID )
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:906:1: ( (otherlv_20= RULE_ID ) )
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:907:1: (otherlv_20= RULE_ID )
                     	    {
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:842:1: (otherlv_20= RULE_ID )
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:843:3: otherlv_20= RULE_ID
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:907:1: (otherlv_20= RULE_ID )
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:908:3: otherlv_20= RULE_ID
                     	    {
 
                     	    			if (current==null) {
                     	    	            current = createModelElement(grammarAccess.getActivityRule());
                     	    	        }
                     	            
-                    	    otherlv_20=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleActivity1588); 
+                    	    otherlv_20=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleActivity1745); 
 
                     	    		newLeafNode(otherlv_20, grammarAccess.getActivityAccess().getGuidancesGuidanceCrossReference_8_2_1_0()); 
                     	    	
@@ -1913,7 +2085,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop8;
+                    	    break loop9;
                         }
                     } while (true);
 
@@ -1923,62 +2095,62 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:854:6: (otherlv_21= 'Behavior' otherlv_22= '{' ( ( (lv_steps_23_0= ruleStep ) ) | ( (lv_decisions_24_0= ruleDecision ) ) | ( (lv_transitions_25_0= ruleTransition ) ) )* otherlv_26= '}' )?
-            int alt11=2;
-            int LA11_0 = input.LA(1);
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:919:6: (otherlv_21= 'Behavior' otherlv_22= '{' ( ( (lv_steps_23_0= ruleStep ) ) | ( (lv_decisions_24_0= ruleDecision ) ) | ( (lv_transitions_25_0= ruleTransition ) ) )* otherlv_26= '}' )?
+            int alt12=2;
+            int LA12_0 = input.LA(1);
 
-            if ( (LA11_0==25) ) {
-                alt11=1;
+            if ( (LA12_0==28) ) {
+                alt12=1;
             }
-            switch (alt11) {
+            switch (alt12) {
                 case 1 :
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:854:8: otherlv_21= 'Behavior' otherlv_22= '{' ( ( (lv_steps_23_0= ruleStep ) ) | ( (lv_decisions_24_0= ruleDecision ) ) | ( (lv_transitions_25_0= ruleTransition ) ) )* otherlv_26= '}'
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:919:8: otherlv_21= 'Behavior' otherlv_22= '{' ( ( (lv_steps_23_0= ruleStep ) ) | ( (lv_decisions_24_0= ruleDecision ) ) | ( (lv_transitions_25_0= ruleTransition ) ) )* otherlv_26= '}'
                     {
-                    otherlv_21=(Token)match(input,25,FOLLOW_25_in_ruleActivity1605); 
+                    otherlv_21=(Token)match(input,28,FOLLOW_28_in_ruleActivity1762); 
 
                         	newLeafNode(otherlv_21, grammarAccess.getActivityAccess().getBehaviorKeyword_9_0());
                         
-                    otherlv_22=(Token)match(input,26,FOLLOW_26_in_ruleActivity1617); 
+                    otherlv_22=(Token)match(input,29,FOLLOW_29_in_ruleActivity1774); 
 
                         	newLeafNode(otherlv_22, grammarAccess.getActivityAccess().getLeftCurlyBracketKeyword_9_1());
                         
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:862:1: ( ( (lv_steps_23_0= ruleStep ) ) | ( (lv_decisions_24_0= ruleDecision ) ) | ( (lv_transitions_25_0= ruleTransition ) ) )*
-                    loop10:
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:927:1: ( ( (lv_steps_23_0= ruleStep ) ) | ( (lv_decisions_24_0= ruleDecision ) ) | ( (lv_transitions_25_0= ruleTransition ) ) )*
+                    loop11:
                     do {
-                        int alt10=4;
+                        int alt11=4;
                         switch ( input.LA(1) ) {
-                        case 29:
+                        case 32:
                             {
-                            alt10=1;
+                            alt11=1;
                             }
                             break;
-                        case 28:
+                        case 31:
                             {
-                            alt10=2;
+                            alt11=2;
                             }
                             break;
-                        case 30:
+                        case 33:
                             {
-                            alt10=3;
+                            alt11=3;
                             }
                             break;
 
                         }
 
-                        switch (alt10) {
+                        switch (alt11) {
                     	case 1 :
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:862:2: ( (lv_steps_23_0= ruleStep ) )
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:927:2: ( (lv_steps_23_0= ruleStep ) )
                     	    {
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:862:2: ( (lv_steps_23_0= ruleStep ) )
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:863:1: (lv_steps_23_0= ruleStep )
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:927:2: ( (lv_steps_23_0= ruleStep ) )
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:928:1: (lv_steps_23_0= ruleStep )
                     	    {
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:863:1: (lv_steps_23_0= ruleStep )
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:864:3: lv_steps_23_0= ruleStep
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:928:1: (lv_steps_23_0= ruleStep )
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:929:3: lv_steps_23_0= ruleStep
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getActivityAccess().getStepsStepParserRuleCall_9_2_0_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleStep_in_ruleActivity1639);
+                    	    pushFollow(FOLLOW_ruleStep_in_ruleActivity1796);
                     	    lv_steps_23_0=ruleStep();
 
                     	    state._fsp--;
@@ -2004,18 +2176,18 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:881:6: ( (lv_decisions_24_0= ruleDecision ) )
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:946:6: ( (lv_decisions_24_0= ruleDecision ) )
                     	    {
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:881:6: ( (lv_decisions_24_0= ruleDecision ) )
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:882:1: (lv_decisions_24_0= ruleDecision )
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:946:6: ( (lv_decisions_24_0= ruleDecision ) )
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:947:1: (lv_decisions_24_0= ruleDecision )
                     	    {
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:882:1: (lv_decisions_24_0= ruleDecision )
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:883:3: lv_decisions_24_0= ruleDecision
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:947:1: (lv_decisions_24_0= ruleDecision )
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:948:3: lv_decisions_24_0= ruleDecision
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getActivityAccess().getDecisionsDecisionParserRuleCall_9_2_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleDecision_in_ruleActivity1666);
+                    	    pushFollow(FOLLOW_ruleDecision_in_ruleActivity1823);
                     	    lv_decisions_24_0=ruleDecision();
 
                     	    state._fsp--;
@@ -2041,18 +2213,18 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
                     	    }
                     	    break;
                     	case 3 :
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:900:6: ( (lv_transitions_25_0= ruleTransition ) )
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:965:6: ( (lv_transitions_25_0= ruleTransition ) )
                     	    {
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:900:6: ( (lv_transitions_25_0= ruleTransition ) )
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:901:1: (lv_transitions_25_0= ruleTransition )
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:965:6: ( (lv_transitions_25_0= ruleTransition ) )
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:966:1: (lv_transitions_25_0= ruleTransition )
                     	    {
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:901:1: (lv_transitions_25_0= ruleTransition )
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:902:3: lv_transitions_25_0= ruleTransition
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:966:1: (lv_transitions_25_0= ruleTransition )
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:967:3: lv_transitions_25_0= ruleTransition
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getActivityAccess().getTransitionsTransitionParserRuleCall_9_2_2_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleTransition_in_ruleActivity1693);
+                    	    pushFollow(FOLLOW_ruleTransition_in_ruleActivity1850);
                     	    lv_transitions_25_0=ruleTransition();
 
                     	    state._fsp--;
@@ -2079,11 +2251,11 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop10;
+                    	    break loop11;
                         }
                     } while (true);
 
-                    otherlv_26=(Token)match(input,27,FOLLOW_27_in_ruleActivity1707); 
+                    otherlv_26=(Token)match(input,30,FOLLOW_30_in_ruleActivity1864); 
 
                         	newLeafNode(otherlv_26, grammarAccess.getActivityAccess().getRightCurlyBracketKeyword_9_3());
                         
@@ -2093,7 +2265,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_27=(Token)match(input,12,FOLLOW_12_in_ruleActivity1721); 
+            otherlv_27=(Token)match(input,12,FOLLOW_12_in_ruleActivity1878); 
 
                 	newLeafNode(otherlv_27, grammarAccess.getActivityAccess().getSemicolonKeyword_10());
                 
@@ -2118,7 +2290,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleActivityRef"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:934:1: entryRuleActivityRef returns [EObject current=null] : iv_ruleActivityRef= ruleActivityRef EOF ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:999:1: entryRuleActivityRef returns [EObject current=null] : iv_ruleActivityRef= ruleActivityRef EOF ;
     public final EObject entryRuleActivityRef() throws RecognitionException {
         EObject current = null;
 
@@ -2126,17 +2298,17 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:935:2: (iv_ruleActivityRef= ruleActivityRef EOF )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:936:2: iv_ruleActivityRef= ruleActivityRef EOF
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1000:2: (iv_ruleActivityRef= ruleActivityRef EOF )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1001:2: iv_ruleActivityRef= ruleActivityRef EOF
             {
              newCompositeNode(grammarAccess.getActivityRefRule()); 
-            pushFollow(FOLLOW_ruleActivityRef_in_entryRuleActivityRef1757);
+            pushFollow(FOLLOW_ruleActivityRef_in_entryRuleActivityRef1914);
             iv_ruleActivityRef=ruleActivityRef();
 
             state._fsp--;
 
              current =iv_ruleActivityRef; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleActivityRef1767); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleActivityRef1924); 
 
             }
 
@@ -2154,71 +2326,33 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleActivityRef"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:943:1: ruleActivityRef returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) ) ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1008:1: ruleActivityRef returns [EObject current=null] : ( (otherlv_0= RULE_ID ) ) ;
     public final EObject ruleActivityRef() throws RecognitionException {
         EObject current = null;
 
-        Token lv_name_0_0=null;
-        Token otherlv_1=null;
-        Token otherlv_2=null;
+        Token otherlv_0=null;
 
          enterRule(); 
             
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:946:28: ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:947:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1011:28: ( ( (otherlv_0= RULE_ID ) ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1012:1: ( (otherlv_0= RULE_ID ) )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:947:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:947:2: ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (otherlv_2= RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1012:1: ( (otherlv_0= RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1013:1: (otherlv_0= RULE_ID )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:947:2: ( (lv_name_0_0= RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:948:1: (lv_name_0_0= RULE_ID )
-            {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:948:1: (lv_name_0_0= RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:949:3: lv_name_0_0= RULE_ID
-            {
-            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleActivityRef1809); 
-
-            			newLeafNode(lv_name_0_0, grammarAccess.getActivityRefAccess().getNameIDTerminalRuleCall_0_0()); 
-            		
-
-            	        if (current==null) {
-            	            current = createModelElement(grammarAccess.getActivityRefRule());
-            	        }
-                   		setWithLastConsumed(
-                   			current, 
-                   			"name",
-                    		lv_name_0_0, 
-                    		"ID");
-            	    
-
-            }
-
-
-            }
-
-            otherlv_1=(Token)match(input,15,FOLLOW_15_in_ruleActivityRef1826); 
-
-                	newLeafNode(otherlv_1, grammarAccess.getActivityRefAccess().getColonKeyword_1());
-                
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:969:1: ( (otherlv_2= RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:970:1: (otherlv_2= RULE_ID )
-            {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:970:1: (otherlv_2= RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:971:3: otherlv_2= RULE_ID
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1013:1: (otherlv_0= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1014:3: otherlv_0= RULE_ID
             {
 
             			if (current==null) {
             	            current = createModelElement(grammarAccess.getActivityRefRule());
             	        }
                     
-            otherlv_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleActivityRef1846); 
+            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleActivityRef1968); 
 
-            		newLeafNode(otherlv_2, grammarAccess.getActivityRefAccess().getTypeActivityCrossReference_2_0()); 
+            		newLeafNode(otherlv_0, grammarAccess.getActivityRefAccess().getTypeActivityCrossReference_0()); 
             	
-
-            }
-
 
             }
 
@@ -2243,7 +2377,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDecision"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:992:1: entryRuleDecision returns [EObject current=null] : iv_ruleDecision= ruleDecision EOF ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1035:1: entryRuleDecision returns [EObject current=null] : iv_ruleDecision= ruleDecision EOF ;
     public final EObject entryRuleDecision() throws RecognitionException {
         EObject current = null;
 
@@ -2251,17 +2385,17 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:993:2: (iv_ruleDecision= ruleDecision EOF )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:994:2: iv_ruleDecision= ruleDecision EOF
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1036:2: (iv_ruleDecision= ruleDecision EOF )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1037:2: iv_ruleDecision= ruleDecision EOF
             {
              newCompositeNode(grammarAccess.getDecisionRule()); 
-            pushFollow(FOLLOW_ruleDecision_in_entryRuleDecision1884);
+            pushFollow(FOLLOW_ruleDecision_in_entryRuleDecision2005);
             iv_ruleDecision=ruleDecision();
 
             state._fsp--;
 
              current =iv_ruleDecision; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDecision1894); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDecision2015); 
 
             }
 
@@ -2279,7 +2413,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDecision"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1001:1: ruleDecision returns [EObject current=null] : (otherlv_0= 'Decision' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1044:1: ruleDecision returns [EObject current=null] : (otherlv_0= 'Decision' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleDecision() throws RecognitionException {
         EObject current = null;
 
@@ -2289,23 +2423,23 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1004:28: ( (otherlv_0= 'Decision' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1005:1: (otherlv_0= 'Decision' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1047:28: ( (otherlv_0= 'Decision' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1048:1: (otherlv_0= 'Decision' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1005:1: (otherlv_0= 'Decision' ( (lv_name_1_0= RULE_ID ) ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1005:3: otherlv_0= 'Decision' ( (lv_name_1_0= RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1048:1: (otherlv_0= 'Decision' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1048:3: otherlv_0= 'Decision' ( (lv_name_1_0= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,28,FOLLOW_28_in_ruleDecision1931); 
+            otherlv_0=(Token)match(input,31,FOLLOW_31_in_ruleDecision2052); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getDecisionAccess().getDecisionKeyword_0());
                 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1009:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1010:1: (lv_name_1_0= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1052:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1053:1: (lv_name_1_0= RULE_ID )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1010:1: (lv_name_1_0= RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1011:3: lv_name_1_0= RULE_ID
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1053:1: (lv_name_1_0= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1054:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDecision1948); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDecision2069); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getDecisionAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -2346,7 +2480,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStep"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1035:1: entryRuleStep returns [EObject current=null] : iv_ruleStep= ruleStep EOF ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1078:1: entryRuleStep returns [EObject current=null] : iv_ruleStep= ruleStep EOF ;
     public final EObject entryRuleStep() throws RecognitionException {
         EObject current = null;
 
@@ -2354,17 +2488,17 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1036:2: (iv_ruleStep= ruleStep EOF )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1037:2: iv_ruleStep= ruleStep EOF
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1079:2: (iv_ruleStep= ruleStep EOF )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1080:2: iv_ruleStep= ruleStep EOF
             {
              newCompositeNode(grammarAccess.getStepRule()); 
-            pushFollow(FOLLOW_ruleStep_in_entryRuleStep1989);
+            pushFollow(FOLLOW_ruleStep_in_entryRuleStep2110);
             iv_ruleStep=ruleStep();
 
             state._fsp--;
 
              current =iv_ruleStep; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleStep1999); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleStep2120); 
 
             }
 
@@ -2382,7 +2516,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStep"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1044:1: ruleStep returns [EObject current=null] : (otherlv_0= 'Step' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1087:1: ruleStep returns [EObject current=null] : (otherlv_0= 'Step' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleStep() throws RecognitionException {
         EObject current = null;
 
@@ -2392,23 +2526,23 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1047:28: ( (otherlv_0= 'Step' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1048:1: (otherlv_0= 'Step' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1090:28: ( (otherlv_0= 'Step' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1091:1: (otherlv_0= 'Step' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1048:1: (otherlv_0= 'Step' ( (lv_name_1_0= RULE_ID ) ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1048:3: otherlv_0= 'Step' ( (lv_name_1_0= RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1091:1: (otherlv_0= 'Step' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1091:3: otherlv_0= 'Step' ( (lv_name_1_0= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,29,FOLLOW_29_in_ruleStep2036); 
+            otherlv_0=(Token)match(input,32,FOLLOW_32_in_ruleStep2157); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getStepAccess().getStepKeyword_0());
                 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1052:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1053:1: (lv_name_1_0= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1095:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1096:1: (lv_name_1_0= RULE_ID )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1053:1: (lv_name_1_0= RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1054:3: lv_name_1_0= RULE_ID
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1096:1: (lv_name_1_0= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1097:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleStep2053); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleStep2174); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getStepAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -2449,7 +2583,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTransition"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1078:1: entryRuleTransition returns [EObject current=null] : iv_ruleTransition= ruleTransition EOF ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1121:1: entryRuleTransition returns [EObject current=null] : iv_ruleTransition= ruleTransition EOF ;
     public final EObject entryRuleTransition() throws RecognitionException {
         EObject current = null;
 
@@ -2457,17 +2591,17 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1079:2: (iv_ruleTransition= ruleTransition EOF )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1080:2: iv_ruleTransition= ruleTransition EOF
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1122:2: (iv_ruleTransition= ruleTransition EOF )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1123:2: iv_ruleTransition= ruleTransition EOF
             {
              newCompositeNode(grammarAccess.getTransitionRule()); 
-            pushFollow(FOLLOW_ruleTransition_in_entryRuleTransition2094);
+            pushFollow(FOLLOW_ruleTransition_in_entryRuleTransition2215);
             iv_ruleTransition=ruleTransition();
 
             state._fsp--;
 
              current =iv_ruleTransition; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTransition2104); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTransition2225); 
 
             }
 
@@ -2485,7 +2619,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTransition"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1087:1: ruleTransition returns [EObject current=null] : (this_InitialTransition_0= ruleInitialTransition | this_FinalTransition_1= ruleFinalTransition | this_NonInitialTransition_2= ruleNonInitialTransition | this_DecisionTransition_3= ruleDecisionTransition ) ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1130:1: ruleTransition returns [EObject current=null] : (this_InitialTransition_0= ruleInitialTransition | this_FinalTransition_1= ruleFinalTransition | this_NonInitialTransition_2= ruleNonInitialTransition | this_DecisionTransition_3= ruleDecisionTransition ) ;
     public final EObject ruleTransition() throws RecognitionException {
         EObject current = null;
 
@@ -2501,79 +2635,79 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1090:28: ( (this_InitialTransition_0= ruleInitialTransition | this_FinalTransition_1= ruleFinalTransition | this_NonInitialTransition_2= ruleNonInitialTransition | this_DecisionTransition_3= ruleDecisionTransition ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1091:1: (this_InitialTransition_0= ruleInitialTransition | this_FinalTransition_1= ruleFinalTransition | this_NonInitialTransition_2= ruleNonInitialTransition | this_DecisionTransition_3= ruleDecisionTransition )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1133:28: ( (this_InitialTransition_0= ruleInitialTransition | this_FinalTransition_1= ruleFinalTransition | this_NonInitialTransition_2= ruleNonInitialTransition | this_DecisionTransition_3= ruleDecisionTransition ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1134:1: (this_InitialTransition_0= ruleInitialTransition | this_FinalTransition_1= ruleFinalTransition | this_NonInitialTransition_2= ruleNonInitialTransition | this_DecisionTransition_3= ruleDecisionTransition )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1091:1: (this_InitialTransition_0= ruleInitialTransition | this_FinalTransition_1= ruleFinalTransition | this_NonInitialTransition_2= ruleNonInitialTransition | this_DecisionTransition_3= ruleDecisionTransition )
-            int alt12=4;
-            int LA12_0 = input.LA(1);
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1134:1: (this_InitialTransition_0= ruleInitialTransition | this_FinalTransition_1= ruleFinalTransition | this_NonInitialTransition_2= ruleNonInitialTransition | this_DecisionTransition_3= ruleDecisionTransition )
+            int alt13=4;
+            int LA13_0 = input.LA(1);
 
-            if ( (LA12_0==30) ) {
-                int LA12_1 = input.LA(2);
+            if ( (LA13_0==33) ) {
+                int LA13_1 = input.LA(2);
 
-                if ( (LA12_1==RULE_ID) ) {
-                    int LA12_2 = input.LA(3);
+                if ( (LA13_1==RULE_ID) ) {
+                    int LA13_2 = input.LA(3);
 
-                    if ( (LA12_2==32) ) {
-                        int LA12_4 = input.LA(4);
+                    if ( (LA13_2==35) ) {
+                        int LA13_4 = input.LA(4);
 
-                        if ( (LA12_4==33) ) {
-                            alt12=2;
-                        }
-                        else if ( (LA12_4==RULE_ID) ) {
-                            int LA12_6 = input.LA(5);
+                        if ( (LA13_4==RULE_ID) ) {
+                            int LA13_5 = input.LA(5);
 
-                            if ( (LA12_6==RULE_STRING) ) {
-                                alt12=4;
+                            if ( (LA13_5==RULE_STRING) ) {
+                                alt13=4;
                             }
-                            else if ( (LA12_6==EOF||(LA12_6>=27 && LA12_6<=30)) ) {
-                                alt12=3;
+                            else if ( (LA13_5==EOF||(LA13_5>=30 && LA13_5<=33)) ) {
+                                alt13=3;
                             }
                             else {
                                 NoViableAltException nvae =
-                                    new NoViableAltException("", 12, 6, input);
+                                    new NoViableAltException("", 13, 5, input);
 
                                 throw nvae;
                             }
                         }
+                        else if ( (LA13_4==36) ) {
+                            alt13=2;
+                        }
                         else {
                             NoViableAltException nvae =
-                                new NoViableAltException("", 12, 4, input);
+                                new NoViableAltException("", 13, 4, input);
 
                             throw nvae;
                         }
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 12, 2, input);
+                            new NoViableAltException("", 13, 2, input);
 
                         throw nvae;
                     }
                 }
-                else if ( (LA12_1==31) ) {
-                    alt12=1;
+                else if ( (LA13_1==34) ) {
+                    alt13=1;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 12, 1, input);
+                        new NoViableAltException("", 13, 1, input);
 
                     throw nvae;
                 }
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 12, 0, input);
+                    new NoViableAltException("", 13, 0, input);
 
                 throw nvae;
             }
-            switch (alt12) {
+            switch (alt13) {
                 case 1 :
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1092:5: this_InitialTransition_0= ruleInitialTransition
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1135:5: this_InitialTransition_0= ruleInitialTransition
                     {
                      
                             newCompositeNode(grammarAccess.getTransitionAccess().getInitialTransitionParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleInitialTransition_in_ruleTransition2151);
+                    pushFollow(FOLLOW_ruleInitialTransition_in_ruleTransition2272);
                     this_InitialTransition_0=ruleInitialTransition();
 
                     state._fsp--;
@@ -2586,12 +2720,12 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1102:5: this_FinalTransition_1= ruleFinalTransition
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1145:5: this_FinalTransition_1= ruleFinalTransition
                     {
                      
                             newCompositeNode(grammarAccess.getTransitionAccess().getFinalTransitionParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleFinalTransition_in_ruleTransition2178);
+                    pushFollow(FOLLOW_ruleFinalTransition_in_ruleTransition2299);
                     this_FinalTransition_1=ruleFinalTransition();
 
                     state._fsp--;
@@ -2604,12 +2738,12 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1112:5: this_NonInitialTransition_2= ruleNonInitialTransition
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1155:5: this_NonInitialTransition_2= ruleNonInitialTransition
                     {
                      
                             newCompositeNode(grammarAccess.getTransitionAccess().getNonInitialTransitionParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleNonInitialTransition_in_ruleTransition2205);
+                    pushFollow(FOLLOW_ruleNonInitialTransition_in_ruleTransition2326);
                     this_NonInitialTransition_2=ruleNonInitialTransition();
 
                     state._fsp--;
@@ -2622,12 +2756,12 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1122:5: this_DecisionTransition_3= ruleDecisionTransition
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1165:5: this_DecisionTransition_3= ruleDecisionTransition
                     {
                      
                             newCompositeNode(grammarAccess.getTransitionAccess().getDecisionTransitionParserRuleCall_3()); 
                         
-                    pushFollow(FOLLOW_ruleDecisionTransition_in_ruleTransition2232);
+                    pushFollow(FOLLOW_ruleDecisionTransition_in_ruleTransition2353);
                     this_DecisionTransition_3=ruleDecisionTransition();
 
                     state._fsp--;
@@ -2660,7 +2794,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInitialTransition"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1138:1: entryRuleInitialTransition returns [EObject current=null] : iv_ruleInitialTransition= ruleInitialTransition EOF ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1181:1: entryRuleInitialTransition returns [EObject current=null] : iv_ruleInitialTransition= ruleInitialTransition EOF ;
     public final EObject entryRuleInitialTransition() throws RecognitionException {
         EObject current = null;
 
@@ -2668,17 +2802,17 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1139:2: (iv_ruleInitialTransition= ruleInitialTransition EOF )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1140:2: iv_ruleInitialTransition= ruleInitialTransition EOF
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1182:2: (iv_ruleInitialTransition= ruleInitialTransition EOF )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1183:2: iv_ruleInitialTransition= ruleInitialTransition EOF
             {
              newCompositeNode(grammarAccess.getInitialTransitionRule()); 
-            pushFollow(FOLLOW_ruleInitialTransition_in_entryRuleInitialTransition2267);
+            pushFollow(FOLLOW_ruleInitialTransition_in_entryRuleInitialTransition2388);
             iv_ruleInitialTransition=ruleInitialTransition();
 
             state._fsp--;
 
              current =iv_ruleInitialTransition; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleInitialTransition2277); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleInitialTransition2398); 
 
             }
 
@@ -2696,7 +2830,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInitialTransition"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1147:1: ruleInitialTransition returns [EObject current=null] : (otherlv_0= 'Transition' otherlv_1= 'initial' otherlv_2= 'to' ( (otherlv_3= RULE_ID ) ) ) ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1190:1: ruleInitialTransition returns [EObject current=null] : (otherlv_0= 'Transition' otherlv_1= 'initial' otherlv_2= 'to' ( (otherlv_3= RULE_ID ) ) ) ;
     public final EObject ruleInitialTransition() throws RecognitionException {
         EObject current = null;
 
@@ -2708,36 +2842,36 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1150:28: ( (otherlv_0= 'Transition' otherlv_1= 'initial' otherlv_2= 'to' ( (otherlv_3= RULE_ID ) ) ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1151:1: (otherlv_0= 'Transition' otherlv_1= 'initial' otherlv_2= 'to' ( (otherlv_3= RULE_ID ) ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1193:28: ( (otherlv_0= 'Transition' otherlv_1= 'initial' otherlv_2= 'to' ( (otherlv_3= RULE_ID ) ) ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1194:1: (otherlv_0= 'Transition' otherlv_1= 'initial' otherlv_2= 'to' ( (otherlv_3= RULE_ID ) ) )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1151:1: (otherlv_0= 'Transition' otherlv_1= 'initial' otherlv_2= 'to' ( (otherlv_3= RULE_ID ) ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1151:3: otherlv_0= 'Transition' otherlv_1= 'initial' otherlv_2= 'to' ( (otherlv_3= RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1194:1: (otherlv_0= 'Transition' otherlv_1= 'initial' otherlv_2= 'to' ( (otherlv_3= RULE_ID ) ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1194:3: otherlv_0= 'Transition' otherlv_1= 'initial' otherlv_2= 'to' ( (otherlv_3= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,30,FOLLOW_30_in_ruleInitialTransition2314); 
+            otherlv_0=(Token)match(input,33,FOLLOW_33_in_ruleInitialTransition2435); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getInitialTransitionAccess().getTransitionKeyword_0());
                 
-            otherlv_1=(Token)match(input,31,FOLLOW_31_in_ruleInitialTransition2326); 
+            otherlv_1=(Token)match(input,34,FOLLOW_34_in_ruleInitialTransition2447); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getInitialTransitionAccess().getInitialKeyword_1());
                 
-            otherlv_2=(Token)match(input,32,FOLLOW_32_in_ruleInitialTransition2338); 
+            otherlv_2=(Token)match(input,35,FOLLOW_35_in_ruleInitialTransition2459); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getInitialTransitionAccess().getToKeyword_2());
                 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1163:1: ( (otherlv_3= RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1164:1: (otherlv_3= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1206:1: ( (otherlv_3= RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1207:1: (otherlv_3= RULE_ID )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1164:1: (otherlv_3= RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1165:3: otherlv_3= RULE_ID
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1207:1: (otherlv_3= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1208:3: otherlv_3= RULE_ID
             {
 
             			if (current==null) {
             	            current = createModelElement(grammarAccess.getInitialTransitionRule());
             	        }
                     
-            otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleInitialTransition2358); 
+            otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleInitialTransition2479); 
 
             		newLeafNode(otherlv_3, grammarAccess.getInitialTransitionAccess().getToNodeCrossReference_3_0()); 
             	
@@ -2768,7 +2902,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFinalTransition"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1184:1: entryRuleFinalTransition returns [EObject current=null] : iv_ruleFinalTransition= ruleFinalTransition EOF ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1227:1: entryRuleFinalTransition returns [EObject current=null] : iv_ruleFinalTransition= ruleFinalTransition EOF ;
     public final EObject entryRuleFinalTransition() throws RecognitionException {
         EObject current = null;
 
@@ -2776,17 +2910,17 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1185:2: (iv_ruleFinalTransition= ruleFinalTransition EOF )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1186:2: iv_ruleFinalTransition= ruleFinalTransition EOF
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1228:2: (iv_ruleFinalTransition= ruleFinalTransition EOF )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1229:2: iv_ruleFinalTransition= ruleFinalTransition EOF
             {
              newCompositeNode(grammarAccess.getFinalTransitionRule()); 
-            pushFollow(FOLLOW_ruleFinalTransition_in_entryRuleFinalTransition2394);
+            pushFollow(FOLLOW_ruleFinalTransition_in_entryRuleFinalTransition2515);
             iv_ruleFinalTransition=ruleFinalTransition();
 
             state._fsp--;
 
              current =iv_ruleFinalTransition; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFinalTransition2404); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFinalTransition2525); 
 
             }
 
@@ -2804,7 +2938,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFinalTransition"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1193:1: ruleFinalTransition returns [EObject current=null] : (otherlv_0= 'Transition' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'to' otherlv_3= 'final' ) ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1236:1: ruleFinalTransition returns [EObject current=null] : (otherlv_0= 'Transition' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'to' otherlv_3= 'final' ) ;
     public final EObject ruleFinalTransition() throws RecognitionException {
         EObject current = null;
 
@@ -2816,28 +2950,28 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1196:28: ( (otherlv_0= 'Transition' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'to' otherlv_3= 'final' ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1197:1: (otherlv_0= 'Transition' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'to' otherlv_3= 'final' )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1239:28: ( (otherlv_0= 'Transition' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'to' otherlv_3= 'final' ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1240:1: (otherlv_0= 'Transition' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'to' otherlv_3= 'final' )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1197:1: (otherlv_0= 'Transition' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'to' otherlv_3= 'final' )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1197:3: otherlv_0= 'Transition' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'to' otherlv_3= 'final'
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1240:1: (otherlv_0= 'Transition' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'to' otherlv_3= 'final' )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1240:3: otherlv_0= 'Transition' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'to' otherlv_3= 'final'
             {
-            otherlv_0=(Token)match(input,30,FOLLOW_30_in_ruleFinalTransition2441); 
+            otherlv_0=(Token)match(input,33,FOLLOW_33_in_ruleFinalTransition2562); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getFinalTransitionAccess().getTransitionKeyword_0());
                 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1201:1: ( (otherlv_1= RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1202:1: (otherlv_1= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1244:1: ( (otherlv_1= RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1245:1: (otherlv_1= RULE_ID )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1202:1: (otherlv_1= RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1203:3: otherlv_1= RULE_ID
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1245:1: (otherlv_1= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1246:3: otherlv_1= RULE_ID
             {
 
             			if (current==null) {
             	            current = createModelElement(grammarAccess.getFinalTransitionRule());
             	        }
                     
-            otherlv_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFinalTransition2461); 
+            otherlv_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFinalTransition2582); 
 
             		newLeafNode(otherlv_1, grammarAccess.getFinalTransitionAccess().getFromNodeCrossReference_1_0()); 
             	
@@ -2847,11 +2981,11 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,32,FOLLOW_32_in_ruleFinalTransition2473); 
+            otherlv_2=(Token)match(input,35,FOLLOW_35_in_ruleFinalTransition2594); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getFinalTransitionAccess().getToKeyword_2());
                 
-            otherlv_3=(Token)match(input,33,FOLLOW_33_in_ruleFinalTransition2485); 
+            otherlv_3=(Token)match(input,36,FOLLOW_36_in_ruleFinalTransition2606); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getFinalTransitionAccess().getFinalKeyword_3());
                 
@@ -2876,7 +3010,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDecisionTransition"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1230:1: entryRuleDecisionTransition returns [EObject current=null] : iv_ruleDecisionTransition= ruleDecisionTransition EOF ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1273:1: entryRuleDecisionTransition returns [EObject current=null] : iv_ruleDecisionTransition= ruleDecisionTransition EOF ;
     public final EObject entryRuleDecisionTransition() throws RecognitionException {
         EObject current = null;
 
@@ -2884,17 +3018,17 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1231:2: (iv_ruleDecisionTransition= ruleDecisionTransition EOF )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1232:2: iv_ruleDecisionTransition= ruleDecisionTransition EOF
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1274:2: (iv_ruleDecisionTransition= ruleDecisionTransition EOF )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1275:2: iv_ruleDecisionTransition= ruleDecisionTransition EOF
             {
              newCompositeNode(grammarAccess.getDecisionTransitionRule()); 
-            pushFollow(FOLLOW_ruleDecisionTransition_in_entryRuleDecisionTransition2521);
+            pushFollow(FOLLOW_ruleDecisionTransition_in_entryRuleDecisionTransition2642);
             iv_ruleDecisionTransition=ruleDecisionTransition();
 
             state._fsp--;
 
              current =iv_ruleDecisionTransition; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDecisionTransition2531); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDecisionTransition2652); 
 
             }
 
@@ -2912,7 +3046,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDecisionTransition"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1239:1: ruleDecisionTransition returns [EObject current=null] : (otherlv_0= 'Transition' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'to' ( (otherlv_3= RULE_ID ) ) ( (lv_guard_4_0= RULE_STRING ) ) ) ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1282:1: ruleDecisionTransition returns [EObject current=null] : (otherlv_0= 'Transition' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'to' ( (otherlv_3= RULE_ID ) ) ( (lv_guard_4_0= RULE_STRING ) ) ) ;
     public final EObject ruleDecisionTransition() throws RecognitionException {
         EObject current = null;
 
@@ -2925,28 +3059,28 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1242:28: ( (otherlv_0= 'Transition' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'to' ( (otherlv_3= RULE_ID ) ) ( (lv_guard_4_0= RULE_STRING ) ) ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1243:1: (otherlv_0= 'Transition' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'to' ( (otherlv_3= RULE_ID ) ) ( (lv_guard_4_0= RULE_STRING ) ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1285:28: ( (otherlv_0= 'Transition' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'to' ( (otherlv_3= RULE_ID ) ) ( (lv_guard_4_0= RULE_STRING ) ) ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1286:1: (otherlv_0= 'Transition' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'to' ( (otherlv_3= RULE_ID ) ) ( (lv_guard_4_0= RULE_STRING ) ) )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1243:1: (otherlv_0= 'Transition' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'to' ( (otherlv_3= RULE_ID ) ) ( (lv_guard_4_0= RULE_STRING ) ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1243:3: otherlv_0= 'Transition' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'to' ( (otherlv_3= RULE_ID ) ) ( (lv_guard_4_0= RULE_STRING ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1286:1: (otherlv_0= 'Transition' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'to' ( (otherlv_3= RULE_ID ) ) ( (lv_guard_4_0= RULE_STRING ) ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1286:3: otherlv_0= 'Transition' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'to' ( (otherlv_3= RULE_ID ) ) ( (lv_guard_4_0= RULE_STRING ) )
             {
-            otherlv_0=(Token)match(input,30,FOLLOW_30_in_ruleDecisionTransition2568); 
+            otherlv_0=(Token)match(input,33,FOLLOW_33_in_ruleDecisionTransition2689); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getDecisionTransitionAccess().getTransitionKeyword_0());
                 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1247:1: ( (otherlv_1= RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1248:1: (otherlv_1= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1290:1: ( (otherlv_1= RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1291:1: (otherlv_1= RULE_ID )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1248:1: (otherlv_1= RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1249:3: otherlv_1= RULE_ID
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1291:1: (otherlv_1= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1292:3: otherlv_1= RULE_ID
             {
 
             			if (current==null) {
             	            current = createModelElement(grammarAccess.getDecisionTransitionRule());
             	        }
                     
-            otherlv_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDecisionTransition2588); 
+            otherlv_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDecisionTransition2709); 
 
             		newLeafNode(otherlv_1, grammarAccess.getDecisionTransitionAccess().getFromDecisionCrossReference_1_0()); 
             	
@@ -2956,22 +3090,22 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,32,FOLLOW_32_in_ruleDecisionTransition2600); 
+            otherlv_2=(Token)match(input,35,FOLLOW_35_in_ruleDecisionTransition2721); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getDecisionTransitionAccess().getToKeyword_2());
                 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1264:1: ( (otherlv_3= RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1265:1: (otherlv_3= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1307:1: ( (otherlv_3= RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1308:1: (otherlv_3= RULE_ID )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1265:1: (otherlv_3= RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1266:3: otherlv_3= RULE_ID
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1308:1: (otherlv_3= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1309:3: otherlv_3= RULE_ID
             {
 
             			if (current==null) {
             	            current = createModelElement(grammarAccess.getDecisionTransitionRule());
             	        }
                     
-            otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDecisionTransition2620); 
+            otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDecisionTransition2741); 
 
             		newLeafNode(otherlv_3, grammarAccess.getDecisionTransitionAccess().getToNodeCrossReference_3_0()); 
             	
@@ -2981,13 +3115,13 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1277:2: ( (lv_guard_4_0= RULE_STRING ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1278:1: (lv_guard_4_0= RULE_STRING )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1320:2: ( (lv_guard_4_0= RULE_STRING ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1321:1: (lv_guard_4_0= RULE_STRING )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1278:1: (lv_guard_4_0= RULE_STRING )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1279:3: lv_guard_4_0= RULE_STRING
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1321:1: (lv_guard_4_0= RULE_STRING )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1322:3: lv_guard_4_0= RULE_STRING
             {
-            lv_guard_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleDecisionTransition2637); 
+            lv_guard_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleDecisionTransition2758); 
 
             			newLeafNode(lv_guard_4_0, grammarAccess.getDecisionTransitionAccess().getGuardSTRINGTerminalRuleCall_4_0()); 
             		
@@ -3028,7 +3162,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNonInitialTransition"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1303:1: entryRuleNonInitialTransition returns [EObject current=null] : iv_ruleNonInitialTransition= ruleNonInitialTransition EOF ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1346:1: entryRuleNonInitialTransition returns [EObject current=null] : iv_ruleNonInitialTransition= ruleNonInitialTransition EOF ;
     public final EObject entryRuleNonInitialTransition() throws RecognitionException {
         EObject current = null;
 
@@ -3036,17 +3170,17 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1304:2: (iv_ruleNonInitialTransition= ruleNonInitialTransition EOF )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1305:2: iv_ruleNonInitialTransition= ruleNonInitialTransition EOF
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1347:2: (iv_ruleNonInitialTransition= ruleNonInitialTransition EOF )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1348:2: iv_ruleNonInitialTransition= ruleNonInitialTransition EOF
             {
              newCompositeNode(grammarAccess.getNonInitialTransitionRule()); 
-            pushFollow(FOLLOW_ruleNonInitialTransition_in_entryRuleNonInitialTransition2678);
+            pushFollow(FOLLOW_ruleNonInitialTransition_in_entryRuleNonInitialTransition2799);
             iv_ruleNonInitialTransition=ruleNonInitialTransition();
 
             state._fsp--;
 
              current =iv_ruleNonInitialTransition; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNonInitialTransition2688); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNonInitialTransition2809); 
 
             }
 
@@ -3064,7 +3198,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNonInitialTransition"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1312:1: ruleNonInitialTransition returns [EObject current=null] : (otherlv_0= 'Transition' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'to' ( (otherlv_3= RULE_ID ) ) ) ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1355:1: ruleNonInitialTransition returns [EObject current=null] : (otherlv_0= 'Transition' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'to' ( (otherlv_3= RULE_ID ) ) ) ;
     public final EObject ruleNonInitialTransition() throws RecognitionException {
         EObject current = null;
 
@@ -3076,28 +3210,28 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1315:28: ( (otherlv_0= 'Transition' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'to' ( (otherlv_3= RULE_ID ) ) ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1316:1: (otherlv_0= 'Transition' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'to' ( (otherlv_3= RULE_ID ) ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1358:28: ( (otherlv_0= 'Transition' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'to' ( (otherlv_3= RULE_ID ) ) ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1359:1: (otherlv_0= 'Transition' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'to' ( (otherlv_3= RULE_ID ) ) )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1316:1: (otherlv_0= 'Transition' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'to' ( (otherlv_3= RULE_ID ) ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1316:3: otherlv_0= 'Transition' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'to' ( (otherlv_3= RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1359:1: (otherlv_0= 'Transition' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'to' ( (otherlv_3= RULE_ID ) ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1359:3: otherlv_0= 'Transition' ( (otherlv_1= RULE_ID ) ) otherlv_2= 'to' ( (otherlv_3= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,30,FOLLOW_30_in_ruleNonInitialTransition2725); 
+            otherlv_0=(Token)match(input,33,FOLLOW_33_in_ruleNonInitialTransition2846); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getNonInitialTransitionAccess().getTransitionKeyword_0());
                 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1320:1: ( (otherlv_1= RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1321:1: (otherlv_1= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1363:1: ( (otherlv_1= RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1364:1: (otherlv_1= RULE_ID )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1321:1: (otherlv_1= RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1322:3: otherlv_1= RULE_ID
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1364:1: (otherlv_1= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1365:3: otherlv_1= RULE_ID
             {
 
             			if (current==null) {
             	            current = createModelElement(grammarAccess.getNonInitialTransitionRule());
             	        }
                     
-            otherlv_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNonInitialTransition2745); 
+            otherlv_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNonInitialTransition2866); 
 
             		newLeafNode(otherlv_1, grammarAccess.getNonInitialTransitionAccess().getFromNodeCrossReference_1_0()); 
             	
@@ -3107,22 +3241,22 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,32,FOLLOW_32_in_ruleNonInitialTransition2757); 
+            otherlv_2=(Token)match(input,35,FOLLOW_35_in_ruleNonInitialTransition2878); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getNonInitialTransitionAccess().getToKeyword_2());
                 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1337:1: ( (otherlv_3= RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1338:1: (otherlv_3= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1380:1: ( (otherlv_3= RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1381:1: (otherlv_3= RULE_ID )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1338:1: (otherlv_3= RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1339:3: otherlv_3= RULE_ID
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1381:1: (otherlv_3= RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1382:3: otherlv_3= RULE_ID
             {
 
             			if (current==null) {
             	            current = createModelElement(grammarAccess.getNonInitialTransitionRule());
             	        }
                     
-            otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNonInitialTransition2777); 
+            otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNonInitialTransition2898); 
 
             		newLeafNode(otherlv_3, grammarAccess.getNonInitialTransitionAccess().getToNodeCrossReference_3_0()); 
             	
@@ -3153,7 +3287,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTextfield"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1358:1: entryRuleTextfield returns [EObject current=null] : iv_ruleTextfield= ruleTextfield EOF ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1401:1: entryRuleTextfield returns [EObject current=null] : iv_ruleTextfield= ruleTextfield EOF ;
     public final EObject entryRuleTextfield() throws RecognitionException {
         EObject current = null;
 
@@ -3161,17 +3295,17 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1359:2: (iv_ruleTextfield= ruleTextfield EOF )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1360:2: iv_ruleTextfield= ruleTextfield EOF
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1402:2: (iv_ruleTextfield= ruleTextfield EOF )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1403:2: iv_ruleTextfield= ruleTextfield EOF
             {
              newCompositeNode(grammarAccess.getTextfieldRule()); 
-            pushFollow(FOLLOW_ruleTextfield_in_entryRuleTextfield2813);
+            pushFollow(FOLLOW_ruleTextfield_in_entryRuleTextfield2934);
             iv_ruleTextfield=ruleTextfield();
 
             state._fsp--;
 
              current =iv_ruleTextfield; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTextfield2823); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTextfield2944); 
 
             }
 
@@ -3189,7 +3323,7 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTextfield"
-    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1367:1: ruleTextfield returns [EObject current=null] : ( (otherlv_0= 'label' ( (lv_label_1_0= RULE_STRING ) ) )? otherlv_2= 'summary' ( (lv_summary_3_0= RULE_STRING ) ) (otherlv_4= 'description' ( (lv_description_5_0= RULE_STRING ) ) )? ) ;
+    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1410:1: ruleTextfield returns [EObject current=null] : ( (otherlv_0= 'label' ( (lv_label_1_0= RULE_STRING ) ) )? otherlv_2= 'summary' ( (lv_summary_3_0= RULE_STRING ) ) (otherlv_4= 'description' ( (lv_description_5_0= RULE_STRING ) ) )? ) ;
     public final EObject ruleTextfield() throws RecognitionException {
         EObject current = null;
 
@@ -3203,34 +3337,34 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1370:28: ( ( (otherlv_0= 'label' ( (lv_label_1_0= RULE_STRING ) ) )? otherlv_2= 'summary' ( (lv_summary_3_0= RULE_STRING ) ) (otherlv_4= 'description' ( (lv_description_5_0= RULE_STRING ) ) )? ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1371:1: ( (otherlv_0= 'label' ( (lv_label_1_0= RULE_STRING ) ) )? otherlv_2= 'summary' ( (lv_summary_3_0= RULE_STRING ) ) (otherlv_4= 'description' ( (lv_description_5_0= RULE_STRING ) ) )? )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1413:28: ( ( (otherlv_0= 'label' ( (lv_label_1_0= RULE_STRING ) ) )? otherlv_2= 'summary' ( (lv_summary_3_0= RULE_STRING ) ) (otherlv_4= 'description' ( (lv_description_5_0= RULE_STRING ) ) )? ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1414:1: ( (otherlv_0= 'label' ( (lv_label_1_0= RULE_STRING ) ) )? otherlv_2= 'summary' ( (lv_summary_3_0= RULE_STRING ) ) (otherlv_4= 'description' ( (lv_description_5_0= RULE_STRING ) ) )? )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1371:1: ( (otherlv_0= 'label' ( (lv_label_1_0= RULE_STRING ) ) )? otherlv_2= 'summary' ( (lv_summary_3_0= RULE_STRING ) ) (otherlv_4= 'description' ( (lv_description_5_0= RULE_STRING ) ) )? )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1371:2: (otherlv_0= 'label' ( (lv_label_1_0= RULE_STRING ) ) )? otherlv_2= 'summary' ( (lv_summary_3_0= RULE_STRING ) ) (otherlv_4= 'description' ( (lv_description_5_0= RULE_STRING ) ) )?
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1414:1: ( (otherlv_0= 'label' ( (lv_label_1_0= RULE_STRING ) ) )? otherlv_2= 'summary' ( (lv_summary_3_0= RULE_STRING ) ) (otherlv_4= 'description' ( (lv_description_5_0= RULE_STRING ) ) )? )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1414:2: (otherlv_0= 'label' ( (lv_label_1_0= RULE_STRING ) ) )? otherlv_2= 'summary' ( (lv_summary_3_0= RULE_STRING ) ) (otherlv_4= 'description' ( (lv_description_5_0= RULE_STRING ) ) )?
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1371:2: (otherlv_0= 'label' ( (lv_label_1_0= RULE_STRING ) ) )?
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1414:2: (otherlv_0= 'label' ( (lv_label_1_0= RULE_STRING ) ) )?
+            int alt14=2;
+            int LA14_0 = input.LA(1);
 
-            if ( (LA13_0==34) ) {
-                alt13=1;
+            if ( (LA14_0==37) ) {
+                alt14=1;
             }
-            switch (alt13) {
+            switch (alt14) {
                 case 1 :
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1371:4: otherlv_0= 'label' ( (lv_label_1_0= RULE_STRING ) )
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1414:4: otherlv_0= 'label' ( (lv_label_1_0= RULE_STRING ) )
                     {
-                    otherlv_0=(Token)match(input,34,FOLLOW_34_in_ruleTextfield2861); 
+                    otherlv_0=(Token)match(input,37,FOLLOW_37_in_ruleTextfield2982); 
 
                         	newLeafNode(otherlv_0, grammarAccess.getTextfieldAccess().getLabelKeyword_0_0());
                         
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1375:1: ( (lv_label_1_0= RULE_STRING ) )
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1376:1: (lv_label_1_0= RULE_STRING )
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1418:1: ( (lv_label_1_0= RULE_STRING ) )
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1419:1: (lv_label_1_0= RULE_STRING )
                     {
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1376:1: (lv_label_1_0= RULE_STRING )
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1377:3: lv_label_1_0= RULE_STRING
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1419:1: (lv_label_1_0= RULE_STRING )
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1420:3: lv_label_1_0= RULE_STRING
                     {
-                    lv_label_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleTextfield2878); 
+                    lv_label_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleTextfield2999); 
 
                     			newLeafNode(lv_label_1_0, grammarAccess.getTextfieldAccess().getLabelSTRINGTerminalRuleCall_0_1_0()); 
                     		
@@ -3256,17 +3390,17 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,35,FOLLOW_35_in_ruleTextfield2897); 
+            otherlv_2=(Token)match(input,38,FOLLOW_38_in_ruleTextfield3018); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getTextfieldAccess().getSummaryKeyword_1());
                 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1397:1: ( (lv_summary_3_0= RULE_STRING ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1398:1: (lv_summary_3_0= RULE_STRING )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1440:1: ( (lv_summary_3_0= RULE_STRING ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1441:1: (lv_summary_3_0= RULE_STRING )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1398:1: (lv_summary_3_0= RULE_STRING )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1399:3: lv_summary_3_0= RULE_STRING
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1441:1: (lv_summary_3_0= RULE_STRING )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1442:3: lv_summary_3_0= RULE_STRING
             {
-            lv_summary_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleTextfield2914); 
+            lv_summary_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleTextfield3035); 
 
             			newLeafNode(lv_summary_3_0, grammarAccess.getTextfieldAccess().getSummarySTRINGTerminalRuleCall_2_0()); 
             		
@@ -3286,28 +3420,28 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1415:2: (otherlv_4= 'description' ( (lv_description_5_0= RULE_STRING ) ) )?
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1458:2: (otherlv_4= 'description' ( (lv_description_5_0= RULE_STRING ) ) )?
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            if ( (LA14_0==36) ) {
-                alt14=1;
+            if ( (LA15_0==39) ) {
+                alt15=1;
             }
-            switch (alt14) {
+            switch (alt15) {
                 case 1 :
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1415:4: otherlv_4= 'description' ( (lv_description_5_0= RULE_STRING ) )
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1458:4: otherlv_4= 'description' ( (lv_description_5_0= RULE_STRING ) )
                     {
-                    otherlv_4=(Token)match(input,36,FOLLOW_36_in_ruleTextfield2932); 
+                    otherlv_4=(Token)match(input,39,FOLLOW_39_in_ruleTextfield3053); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getTextfieldAccess().getDescriptionKeyword_3_0());
                         
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1419:1: ( (lv_description_5_0= RULE_STRING ) )
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1420:1: (lv_description_5_0= RULE_STRING )
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1462:1: ( (lv_description_5_0= RULE_STRING ) )
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1463:1: (lv_description_5_0= RULE_STRING )
                     {
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1420:1: (lv_description_5_0= RULE_STRING )
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1421:3: lv_description_5_0= RULE_STRING
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1463:1: (lv_description_5_0= RULE_STRING )
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1464:3: lv_description_5_0= RULE_STRING
                     {
-                    lv_description_5_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleTextfield2949); 
+                    lv_description_5_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleTextfield3070); 
 
                     			newLeafNode(lv_description_5_0, grammarAccess.getTextfieldAccess().getDescriptionSTRINGTerminalRuleCall_3_1_0()); 
                     		
@@ -3359,132 +3493,137 @@ public class InternalFoWParser extends AbstractInternalAntlrParser {
 
     public static final BitSet FOLLOW_ruleModel_in_entryRuleModel75 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleModel85 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleActivity_in_ruleModel131 = new BitSet(new long[]{0x0000000000076802L});
-    public static final BitSet FOLLOW_ruleRole_in_ruleModel158 = new BitSet(new long[]{0x0000000000076802L});
-    public static final BitSet FOLLOW_ruleWorkProduct_in_ruleModel185 = new BitSet(new long[]{0x0000000000076802L});
-    public static final BitSet FOLLOW_ruleWorkProductType_in_ruleModel212 = new BitSet(new long[]{0x0000000000076802L});
-    public static final BitSet FOLLOW_ruleGuidance_in_ruleModel239 = new BitSet(new long[]{0x0000000000076802L});
-    public static final BitSet FOLLOW_ruleGuidanceType_in_ruleModel266 = new BitSet(new long[]{0x0000000000076802L});
-    public static final BitSet FOLLOW_ruleRole_in_entryRuleRole305 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRole315 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_ruleRole352 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleRole369 = new BitSet(new long[]{0x0000000C00000000L});
-    public static final BitSet FOLLOW_ruleTextfield_in_ruleRole395 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleRole407 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWorkProductType_in_entryRuleWorkProductType443 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleWorkProductType453 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_ruleWorkProductType490 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleWorkProductType507 = new BitSet(new long[]{0x0000000C00000000L});
-    public static final BitSet FOLLOW_ruleTextfield_in_ruleWorkProductType533 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleWorkProductType545 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWorkProduct_in_entryRuleWorkProduct581 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleWorkProduct591 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_ruleWorkProduct628 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleWorkProduct645 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_ruleWorkProduct662 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleWorkProduct682 = new BitSet(new long[]{0x0000000C00000000L});
-    public static final BitSet FOLLOW_ruleTextfield_in_ruleWorkProduct703 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleWorkProduct715 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGuidanceType_in_entryRuleGuidanceType751 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleGuidanceType761 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_ruleGuidanceType798 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleGuidanceType815 = new BitSet(new long[]{0x0000000C00000000L});
-    public static final BitSet FOLLOW_ruleTextfield_in_ruleGuidanceType841 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleGuidanceType853 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGuidance_in_entryRuleGuidance889 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleGuidance899 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_ruleGuidance936 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleGuidance953 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_ruleGuidance970 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleGuidance990 = new BitSet(new long[]{0x0000000C00000000L});
-    public static final BitSet FOLLOW_ruleTextfield_in_ruleGuidance1011 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleGuidance1023 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePort_in_entryRulePort1059 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePort1069 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulePort1111 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_rulePort1128 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulePort1148 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleActivity_in_entryRuleActivity1184 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleActivity1194 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_ruleActivity1231 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleActivity1248 = new BitSet(new long[]{0x0000000C00000000L});
-    public static final BitSet FOLLOW_ruleTextfield_in_ruleActivity1274 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleActivity1286 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleActivity1306 = new BitSet(new long[]{0x0000000003D01000L});
-    public static final BitSet FOLLOW_20_in_ruleActivity1319 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rulePort_in_ruleActivity1340 = new BitSet(new long[]{0x0000000003E01000L});
-    public static final BitSet FOLLOW_21_in_ruleActivity1353 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rulePort_in_ruleActivity1374 = new BitSet(new long[]{0x0000000003E01000L});
-    public static final BitSet FOLLOW_22_in_ruleActivity1391 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rulePort_in_ruleActivity1412 = new BitSet(new long[]{0x0000000003A01000L});
-    public static final BitSet FOLLOW_21_in_ruleActivity1425 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rulePort_in_ruleActivity1446 = new BitSet(new long[]{0x0000000003A01000L});
-    public static final BitSet FOLLOW_23_in_ruleActivity1463 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleActivityRef_in_ruleActivity1484 = new BitSet(new long[]{0x0000000003201000L});
-    public static final BitSet FOLLOW_21_in_ruleActivity1497 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleActivityRef_in_ruleActivity1518 = new BitSet(new long[]{0x0000000003201000L});
-    public static final BitSet FOLLOW_24_in_ruleActivity1535 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleActivity1555 = new BitSet(new long[]{0x0000000002201000L});
-    public static final BitSet FOLLOW_21_in_ruleActivity1568 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleActivity1588 = new BitSet(new long[]{0x0000000002201000L});
-    public static final BitSet FOLLOW_25_in_ruleActivity1605 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_26_in_ruleActivity1617 = new BitSet(new long[]{0x0000000078000000L});
-    public static final BitSet FOLLOW_ruleStep_in_ruleActivity1639 = new BitSet(new long[]{0x0000000078000000L});
-    public static final BitSet FOLLOW_ruleDecision_in_ruleActivity1666 = new BitSet(new long[]{0x0000000078000000L});
-    public static final BitSet FOLLOW_ruleTransition_in_ruleActivity1693 = new BitSet(new long[]{0x0000000078000000L});
-    public static final BitSet FOLLOW_27_in_ruleActivity1707 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleActivity1721 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleActivityRef_in_entryRuleActivityRef1757 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleActivityRef1767 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleActivityRef1809 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_ruleActivityRef1826 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleActivityRef1846 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDecision_in_entryRuleDecision1884 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDecision1894 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_ruleDecision1931 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDecision1948 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStep_in_entryRuleStep1989 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleStep1999 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_ruleStep2036 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleStep2053 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTransition_in_entryRuleTransition2094 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTransition2104 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInitialTransition_in_ruleTransition2151 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFinalTransition_in_ruleTransition2178 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNonInitialTransition_in_ruleTransition2205 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDecisionTransition_in_ruleTransition2232 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInitialTransition_in_entryRuleInitialTransition2267 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleInitialTransition2277 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_ruleInitialTransition2314 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_31_in_ruleInitialTransition2326 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleInitialTransition2338 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleInitialTransition2358 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFinalTransition_in_entryRuleFinalTransition2394 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFinalTransition2404 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_ruleFinalTransition2441 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleFinalTransition2461 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleFinalTransition2473 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_33_in_ruleFinalTransition2485 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDecisionTransition_in_entryRuleDecisionTransition2521 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDecisionTransition2531 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_ruleDecisionTransition2568 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDecisionTransition2588 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleDecisionTransition2600 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDecisionTransition2620 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleDecisionTransition2637 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNonInitialTransition_in_entryRuleNonInitialTransition2678 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNonInitialTransition2688 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_ruleNonInitialTransition2725 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleNonInitialTransition2745 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleNonInitialTransition2757 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleNonInitialTransition2777 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTextfield_in_entryRuleTextfield2813 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTextfield2823 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_ruleTextfield2861 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleTextfield2878 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_35_in_ruleTextfield2897 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleTextfield2914 = new BitSet(new long[]{0x0000001000000002L});
-    public static final BitSet FOLLOW_36_in_ruleTextfield2932 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleTextfield2949 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleActivity_in_ruleModel131 = new BitSet(new long[]{0x0000000000276802L});
+    public static final BitSet FOLLOW_ruleRole_in_ruleModel158 = new BitSet(new long[]{0x0000000000276802L});
+    public static final BitSet FOLLOW_ruleWorkProduct_in_ruleModel185 = new BitSet(new long[]{0x0000000000276802L});
+    public static final BitSet FOLLOW_ruleWorkProductType_in_ruleModel212 = new BitSet(new long[]{0x0000000000276802L});
+    public static final BitSet FOLLOW_ruleGuidance_in_ruleModel239 = new BitSet(new long[]{0x0000000000276802L});
+    public static final BitSet FOLLOW_ruleGuidanceType_in_ruleModel266 = new BitSet(new long[]{0x0000000000276802L});
+    public static final BitSet FOLLOW_ruleState_in_ruleModel293 = new BitSet(new long[]{0x0000000000276802L});
+    public static final BitSet FOLLOW_ruleRole_in_entryRuleRole332 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRole342 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_11_in_ruleRole379 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleRole396 = new BitSet(new long[]{0x0000006000000000L});
+    public static final BitSet FOLLOW_ruleTextfield_in_ruleRole422 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_ruleRole434 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWorkProductType_in_entryRuleWorkProductType470 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleWorkProductType480 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_ruleWorkProductType517 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleWorkProductType534 = new BitSet(new long[]{0x0000006000000000L});
+    public static final BitSet FOLLOW_ruleTextfield_in_ruleWorkProductType560 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_ruleWorkProductType572 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWorkProduct_in_entryRuleWorkProduct608 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleWorkProduct618 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_ruleWorkProduct655 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleWorkProduct672 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleWorkProduct689 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleWorkProduct709 = new BitSet(new long[]{0x0000006000000000L});
+    public static final BitSet FOLLOW_ruleTextfield_in_ruleWorkProduct730 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_ruleWorkProduct742 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGuidanceType_in_entryRuleGuidanceType778 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleGuidanceType788 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_ruleGuidanceType825 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleGuidanceType842 = new BitSet(new long[]{0x0000006000000000L});
+    public static final BitSet FOLLOW_ruleTextfield_in_ruleGuidanceType868 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_ruleGuidanceType880 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGuidance_in_entryRuleGuidance916 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleGuidance926 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_ruleGuidance963 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleGuidance980 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleGuidance997 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleGuidance1017 = new BitSet(new long[]{0x0000006000000000L});
+    public static final BitSet FOLLOW_ruleTextfield_in_ruleGuidance1038 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_ruleGuidance1050 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleState_in_entryRuleState1086 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleState1096 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_ruleState1133 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleState1150 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_ruleState1167 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePort_in_entryRulePort1203 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePort1213 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulePort1258 = new BitSet(new long[]{0x0000000000080002L});
+    public static final BitSet FOLLOW_19_in_rulePort1271 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulePort1291 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_20_in_rulePort1303 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleActivity_in_entryRuleActivity1341 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleActivity1351 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_ruleActivity1388 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleActivity1405 = new BitSet(new long[]{0x0000006000000000L});
+    public static final BitSet FOLLOW_ruleTextfield_in_ruleActivity1431 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_22_in_ruleActivity1443 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleActivity1463 = new BitSet(new long[]{0x000000001E801000L});
+    public static final BitSet FOLLOW_23_in_ruleActivity1476 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rulePort_in_ruleActivity1497 = new BitSet(new long[]{0x000000001F001000L});
+    public static final BitSet FOLLOW_24_in_ruleActivity1510 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rulePort_in_ruleActivity1531 = new BitSet(new long[]{0x000000001F001000L});
+    public static final BitSet FOLLOW_25_in_ruleActivity1548 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rulePort_in_ruleActivity1569 = new BitSet(new long[]{0x000000001D001000L});
+    public static final BitSet FOLLOW_24_in_ruleActivity1582 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rulePort_in_ruleActivity1603 = new BitSet(new long[]{0x000000001D001000L});
+    public static final BitSet FOLLOW_26_in_ruleActivity1620 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleActivityRef_in_ruleActivity1641 = new BitSet(new long[]{0x0000000019001000L});
+    public static final BitSet FOLLOW_24_in_ruleActivity1654 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleActivityRef_in_ruleActivity1675 = new BitSet(new long[]{0x0000000019001000L});
+    public static final BitSet FOLLOW_27_in_ruleActivity1692 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleActivity1712 = new BitSet(new long[]{0x0000000011001000L});
+    public static final BitSet FOLLOW_24_in_ruleActivity1725 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleActivity1745 = new BitSet(new long[]{0x0000000011001000L});
+    public static final BitSet FOLLOW_28_in_ruleActivity1762 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_ruleActivity1774 = new BitSet(new long[]{0x00000003C0000000L});
+    public static final BitSet FOLLOW_ruleStep_in_ruleActivity1796 = new BitSet(new long[]{0x00000003C0000000L});
+    public static final BitSet FOLLOW_ruleDecision_in_ruleActivity1823 = new BitSet(new long[]{0x00000003C0000000L});
+    public static final BitSet FOLLOW_ruleTransition_in_ruleActivity1850 = new BitSet(new long[]{0x00000003C0000000L});
+    public static final BitSet FOLLOW_30_in_ruleActivity1864 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_ruleActivity1878 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleActivityRef_in_entryRuleActivityRef1914 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleActivityRef1924 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleActivityRef1968 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDecision_in_entryRuleDecision2005 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDecision2015 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_ruleDecision2052 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleDecision2069 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStep_in_entryRuleStep2110 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleStep2120 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_ruleStep2157 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleStep2174 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTransition_in_entryRuleTransition2215 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTransition2225 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInitialTransition_in_ruleTransition2272 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFinalTransition_in_ruleTransition2299 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNonInitialTransition_in_ruleTransition2326 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDecisionTransition_in_ruleTransition2353 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInitialTransition_in_entryRuleInitialTransition2388 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleInitialTransition2398 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_ruleInitialTransition2435 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_34_in_ruleInitialTransition2447 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_ruleInitialTransition2459 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleInitialTransition2479 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFinalTransition_in_entryRuleFinalTransition2515 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFinalTransition2525 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_ruleFinalTransition2562 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleFinalTransition2582 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_ruleFinalTransition2594 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_ruleFinalTransition2606 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDecisionTransition_in_entryRuleDecisionTransition2642 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDecisionTransition2652 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_ruleDecisionTransition2689 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleDecisionTransition2709 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_ruleDecisionTransition2721 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleDecisionTransition2741 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleDecisionTransition2758 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNonInitialTransition_in_entryRuleNonInitialTransition2799 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNonInitialTransition2809 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_ruleNonInitialTransition2846 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleNonInitialTransition2866 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_ruleNonInitialTransition2878 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleNonInitialTransition2898 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTextfield_in_entryRuleTextfield2934 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTextfield2944 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_ruleTextfield2982 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleTextfield2999 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_38_in_ruleTextfield3018 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleTextfield3035 = new BitSet(new long[]{0x0000008000000002L});
+    public static final BitSet FOLLOW_39_in_ruleTextfield3053 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleTextfield3070 = new BitSet(new long[]{0x0000000000000002L});
 
 }

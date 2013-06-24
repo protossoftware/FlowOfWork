@@ -190,6 +190,25 @@ ruleModel returns [EObject current=null]
 	    }
 
 )
+)
+    |(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getModelAccess().getStatesStateParserRuleCall_6_0()); 
+	    }
+		lv_states_6_0=ruleState		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getModelRule());
+	        }
+       		add(
+       			$current, 
+       			"states",
+        		lv_states_6_0, 
+        		"State");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
 ))*
 ;
 
@@ -558,6 +577,53 @@ ruleGuidance returns [EObject current=null]
 
 
 
+// Entry rule entryRuleState
+entryRuleState returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getStateRule()); }
+	 iv_ruleState=ruleState 
+	 { $current=$iv_ruleState.current; } 
+	 EOF 
+;
+
+// Rule State
+ruleState returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='State' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getStateAccess().getStateKeyword_0());
+    }
+(
+(
+		lv_name_1_0=RULE_ID
+		{
+			newLeafNode(lv_name_1_0, grammarAccess.getStateAccess().getNameIDTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getStateRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"ID");
+	    }
+
+)
+)	otherlv_2=';' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getStateAccess().getSemicolonKeyword_2());
+    }
+)
+;
+
+
+
+
+
 // Entry rule entryRulePort
 entryRulePort returns [EObject current=null] 
 	:
@@ -574,25 +640,20 @@ rulePort returns [EObject current=null]
     @after { leaveRule(); }:
 ((
 (
-		lv_name_0_0=RULE_ID
 		{
-			newLeafNode(lv_name_0_0, grammarAccess.getPortAccess().getNameIDTerminalRuleCall_0_0()); 
-		}
-		{
-	        if ($current==null) {
+			if ($current==null) {
 	            $current = createModelElement(grammarAccess.getPortRule());
 	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"name",
-        		lv_name_0_0, 
-        		"ID");
-	    }
+        }
+	otherlv_0=RULE_ID
+	{
+		newLeafNode(otherlv_0, grammarAccess.getPortAccess().getTypeWorkProductCrossReference_0_0()); 
+	}
 
 )
-)	otherlv_1=':' 
+)(	otherlv_1='(' 
     {
-    	newLeafNode(otherlv_1, grammarAccess.getPortAccess().getColonKeyword_1());
+    	newLeafNode(otherlv_1, grammarAccess.getPortAccess().getLeftParenthesisKeyword_1_0());
     }
 (
 (
@@ -603,11 +664,15 @@ rulePort returns [EObject current=null]
         }
 	otherlv_2=RULE_ID
 	{
-		newLeafNode(otherlv_2, grammarAccess.getPortAccess().getTypeWorkProductCrossReference_2_0()); 
+		newLeafNode(otherlv_2, grammarAccess.getPortAccess().getStateStateCrossReference_1_1_0()); 
 	}
 
 )
-))
+)	otherlv_3=')' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getPortAccess().getRightParenthesisKeyword_1_2());
+    }
+)?)
 ;
 
 
@@ -944,28 +1009,6 @@ ruleActivityRef returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-((
-(
-		lv_name_0_0=RULE_ID
-		{
-			newLeafNode(lv_name_0_0, grammarAccess.getActivityRefAccess().getNameIDTerminalRuleCall_0_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getActivityRefRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"name",
-        		lv_name_0_0, 
-        		"ID");
-	    }
-
-)
-)	otherlv_1=':' 
-    {
-    	newLeafNode(otherlv_1, grammarAccess.getActivityRefAccess().getColonKeyword_1());
-    }
 (
 (
 		{
@@ -973,13 +1016,13 @@ ruleActivityRef returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getActivityRefRule());
 	        }
         }
-	otherlv_2=RULE_ID
+	otherlv_0=RULE_ID
 	{
-		newLeafNode(otherlv_2, grammarAccess.getActivityRefAccess().getTypeActivityCrossReference_2_0()); 
+		newLeafNode(otherlv_0, grammarAccess.getActivityRefAccess().getTypeActivityCrossReference_0()); 
 	}
 
 )
-))
+)
 ;
 
 

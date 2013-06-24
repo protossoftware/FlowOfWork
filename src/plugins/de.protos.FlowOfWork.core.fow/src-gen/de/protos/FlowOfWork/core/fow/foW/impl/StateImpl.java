@@ -2,49 +2,57 @@
  */
 package de.protos.FlowOfWork.core.fow.foW.impl;
 
-import de.protos.FlowOfWork.core.fow.foW.Activity;
-import de.protos.FlowOfWork.core.fow.foW.ActivityRef;
 import de.protos.FlowOfWork.core.fow.foW.FoWPackage;
+import de.protos.FlowOfWork.core.fow.foW.State;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Activity Ref</b></em>'.
+ * An implementation of the model object '<em><b>State</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.protos.FlowOfWork.core.fow.foW.impl.ActivityRefImpl#getType <em>Type</em>}</li>
+ *   <li>{@link de.protos.FlowOfWork.core.fow.foW.impl.StateImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ActivityRefImpl extends MinimalEObjectImpl.Container implements ActivityRef
+public class StateImpl extends MinimalEObjectImpl.Container implements State
 {
   /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' reference.
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getType()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected Activity type;
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ActivityRefImpl()
+  protected StateImpl()
   {
     super();
   }
@@ -57,7 +65,7 @@ public class ActivityRefImpl extends MinimalEObjectImpl.Container implements Act
   @Override
   protected EClass eStaticClass()
   {
-    return FoWPackage.Literals.ACTIVITY_REF;
+    return FoWPackage.Literals.STATE;
   }
 
   /**
@@ -65,19 +73,9 @@ public class ActivityRefImpl extends MinimalEObjectImpl.Container implements Act
    * <!-- end-user-doc -->
    * @generated
    */
-  public Activity getType()
+  public String getName()
   {
-    if (type != null && type.eIsProxy())
-    {
-      InternalEObject oldType = (InternalEObject)type;
-      type = (Activity)eResolveProxy(oldType);
-      if (type != oldType)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, FoWPackage.ACTIVITY_REF__TYPE, oldType, type));
-      }
-    }
-    return type;
+    return name;
   }
 
   /**
@@ -85,22 +83,12 @@ public class ActivityRefImpl extends MinimalEObjectImpl.Container implements Act
    * <!-- end-user-doc -->
    * @generated
    */
-  public Activity basicGetType()
+  public void setName(String newName)
   {
-    return type;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setType(Activity newType)
-  {
-    Activity oldType = type;
-    type = newType;
+    String oldName = name;
+    name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, FoWPackage.ACTIVITY_REF__TYPE, oldType, type));
+      eNotify(new ENotificationImpl(this, Notification.SET, FoWPackage.STATE__NAME, oldName, name));
   }
 
   /**
@@ -113,9 +101,8 @@ public class ActivityRefImpl extends MinimalEObjectImpl.Container implements Act
   {
     switch (featureID)
     {
-      case FoWPackage.ACTIVITY_REF__TYPE:
-        if (resolve) return getType();
-        return basicGetType();
+      case FoWPackage.STATE__NAME:
+        return getName();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -130,8 +117,8 @@ public class ActivityRefImpl extends MinimalEObjectImpl.Container implements Act
   {
     switch (featureID)
     {
-      case FoWPackage.ACTIVITY_REF__TYPE:
-        setType((Activity)newValue);
+      case FoWPackage.STATE__NAME:
+        setName((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -147,8 +134,8 @@ public class ActivityRefImpl extends MinimalEObjectImpl.Container implements Act
   {
     switch (featureID)
     {
-      case FoWPackage.ACTIVITY_REF__TYPE:
-        setType((Activity)null);
+      case FoWPackage.STATE__NAME:
+        setName(NAME_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -164,10 +151,27 @@ public class ActivityRefImpl extends MinimalEObjectImpl.Container implements Act
   {
     switch (featureID)
     {
-      case FoWPackage.ACTIVITY_REF__TYPE:
-        return type != null;
+      case FoWPackage.STATE__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
     }
     return super.eIsSet(featureID);
   }
 
-} //ActivityRefImpl
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (name: ");
+    result.append(name);
+    result.append(')');
+    return result.toString();
+  }
+
+} //StateImpl

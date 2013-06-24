@@ -34,17 +34,19 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cGuidancesGuidanceParserRuleCall_4_0 = (RuleCall)cGuidancesAssignment_4.eContents().get(0);
 		private final Assignment cGuidanceTypesAssignment_5 = (Assignment)cAlternatives.eContents().get(5);
 		private final RuleCall cGuidanceTypesGuidanceTypeParserRuleCall_5_0 = (RuleCall)cGuidanceTypesAssignment_5.eContents().get(0);
+		private final Assignment cStatesAssignment_6 = (Assignment)cAlternatives.eContents().get(6);
+		private final RuleCall cStatesStateParserRuleCall_6_0 = (RuleCall)cStatesAssignment_6.eContents().get(0);
 		
 		//Model:
 		//
 		//	(activities+=Activity | roles+=Role | workProducts+=WorkProduct | workProductTypes+=WorkProductType |
 		//
-		//	guidances+=Guidance | guidanceTypes+=GuidanceType)*;
+		//	guidances+=Guidance | guidanceTypes+=GuidanceType | states+=State)*;
 		public ParserRule getRule() { return rule; }
 
 		//(activities+=Activity | roles+=Role | workProducts+=WorkProduct | workProductTypes+=WorkProductType |
 		//
-		//guidances+=Guidance | guidanceTypes+=GuidanceType)*
+		//guidances+=Guidance | guidanceTypes+=GuidanceType | states+=State)*
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//activities+=Activity
@@ -82,6 +84,12 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 
 		//GuidanceType
 		public RuleCall getGuidanceTypesGuidanceTypeParserRuleCall_5_0() { return cGuidanceTypesGuidanceTypeParserRuleCall_5_0; }
+
+		//states+=State
+		public Assignment getStatesAssignment_6() { return cStatesAssignment_6; }
+
+		//State
+		public RuleCall getStatesStateParserRuleCall_6_0() { return cStatesStateParserRuleCall_6_0; }
 	}
 
 	public class NamedElementElements extends AbstractParserRuleElementFinder {
@@ -211,10 +219,14 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//WorkProduct:
 		//
-		//	"WorkProduct" name=ID ":" type=[WorkProductType] textfield=Textfield ";";
+		//	"WorkProduct" name=ID ":" type=[WorkProductType] textfield=Textfield //('States' states+=State (',' states+=State)*)? 
+		//
+		//	";";
 		public ParserRule getRule() { return rule; }
 
-		//"WorkProduct" name=ID ":" type=[WorkProductType] textfield=Textfield ";"
+		//"WorkProduct" name=ID ":" type=[WorkProductType] textfield=Textfield //('States' states+=State (',' states+=State)*)? 
+		//
+		//";"
 		public Group getGroup() { return cGroup; }
 
 		//"WorkProduct"
@@ -244,6 +256,8 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 		//Textfield
 		public RuleCall getTextfieldTextfieldParserRuleCall_4_0() { return cTextfieldTextfieldParserRuleCall_4_0; }
 
+		////('States' states+=State (',' states+=State)*)? 
+		//
 		//";"
 		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
 	}
@@ -338,41 +352,82 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
 	}
 
+	public class StateElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "State");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cStateKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		
+		//State:
+		//
+		//	"State" name=ID ";";
+		public ParserRule getRule() { return rule; }
+
+		//"State" name=ID ";"
+		public Group getGroup() { return cGroup; }
+
+		//"State"
+		public Keyword getStateKeyword_0() { return cStateKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
+	}
+
 	public class PortElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Port");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
-		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final CrossReference cTypeWorkProductCrossReference_2_0 = (CrossReference)cTypeAssignment_2.eContents().get(0);
-		private final RuleCall cTypeWorkProductIDTerminalRuleCall_2_0_1 = (RuleCall)cTypeWorkProductCrossReference_2_0.eContents().get(1);
+		private final Assignment cTypeAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final CrossReference cTypeWorkProductCrossReference_0_0 = (CrossReference)cTypeAssignment_0.eContents().get(0);
+		private final RuleCall cTypeWorkProductIDTerminalRuleCall_0_0_1 = (RuleCall)cTypeWorkProductCrossReference_0_0.eContents().get(1);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cLeftParenthesisKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cStateAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final CrossReference cStateStateCrossReference_1_1_0 = (CrossReference)cStateAssignment_1_1.eContents().get(0);
+		private final RuleCall cStateStateIDTerminalRuleCall_1_1_0_1 = (RuleCall)cStateStateCrossReference_1_1_0.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
 		
 		//Port:
 		//
-		//	name=ID ":" type=[WorkProduct];
+		//	type=[WorkProduct] ("(" state=[State] ")")?;
 		public ParserRule getRule() { return rule; }
 
-		//name=ID ":" type=[WorkProduct]
+		//type=[WorkProduct] ("(" state=[State] ")")?
 		public Group getGroup() { return cGroup; }
 
-		//name=ID
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
-
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
-
-		//":"
-		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
-
 		//type=[WorkProduct]
-		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
+		public Assignment getTypeAssignment_0() { return cTypeAssignment_0; }
 
 		//[WorkProduct]
-		public CrossReference getTypeWorkProductCrossReference_2_0() { return cTypeWorkProductCrossReference_2_0; }
+		public CrossReference getTypeWorkProductCrossReference_0_0() { return cTypeWorkProductCrossReference_0_0; }
 
 		//ID
-		public RuleCall getTypeWorkProductIDTerminalRuleCall_2_0_1() { return cTypeWorkProductIDTerminalRuleCall_2_0_1; }
+		public RuleCall getTypeWorkProductIDTerminalRuleCall_0_0_1() { return cTypeWorkProductIDTerminalRuleCall_0_0_1; }
+
+		//("(" state=[State] ")")?
+		public Group getGroup_1() { return cGroup_1; }
+
+		//"("
+		public Keyword getLeftParenthesisKeyword_1_0() { return cLeftParenthesisKeyword_1_0; }
+
+		//state=[State]
+		public Assignment getStateAssignment_1_1() { return cStateAssignment_1_1; }
+
+		//[State]
+		public CrossReference getStateStateCrossReference_1_1_0() { return cStateStateCrossReference_1_1_0; }
+
+		//ID
+		public RuleCall getStateStateIDTerminalRuleCall_1_1_0_1() { return cStateStateIDTerminalRuleCall_1_1_0_1; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_1_2() { return cRightParenthesisKeyword_1_2; }
 	}
 
 	public class ActivityElements extends AbstractParserRuleElementFinder {
@@ -622,39 +677,23 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class ActivityRefElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ActivityRef");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
-		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final CrossReference cTypeActivityCrossReference_2_0 = (CrossReference)cTypeAssignment_2.eContents().get(0);
-		private final RuleCall cTypeActivityIDTerminalRuleCall_2_0_1 = (RuleCall)cTypeActivityCrossReference_2_0.eContents().get(1);
+		private final Assignment cTypeAssignment = (Assignment)rule.eContents().get(1);
+		private final CrossReference cTypeActivityCrossReference_0 = (CrossReference)cTypeAssignment.eContents().get(0);
+		private final RuleCall cTypeActivityIDTerminalRuleCall_0_1 = (RuleCall)cTypeActivityCrossReference_0.eContents().get(1);
 		
 		//ActivityRef:
 		//
-		//	name=ID ":" type=[Activity];
+		//	type=[Activity];
 		public ParserRule getRule() { return rule; }
 
-		//name=ID ":" type=[Activity]
-		public Group getGroup() { return cGroup; }
-
-		//name=ID
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
-
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
-
-		//":"
-		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
-
 		//type=[Activity]
-		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
+		public Assignment getTypeAssignment() { return cTypeAssignment; }
 
 		//[Activity]
-		public CrossReference getTypeActivityCrossReference_2_0() { return cTypeActivityCrossReference_2_0; }
+		public CrossReference getTypeActivityCrossReference_0() { return cTypeActivityCrossReference_0; }
 
 		//ID
-		public RuleCall getTypeActivityIDTerminalRuleCall_2_0_1() { return cTypeActivityIDTerminalRuleCall_2_0_1; }
+		public RuleCall getTypeActivityIDTerminalRuleCall_0_1() { return cTypeActivityIDTerminalRuleCall_0_1; }
 	}
 
 	public class NodeElements extends AbstractParserRuleElementFinder {
@@ -994,6 +1033,7 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 	private WorkProductElements pWorkProduct;
 	private GuidanceTypeElements pGuidanceType;
 	private GuidanceElements pGuidance;
+	private StateElements pState;
 	private PortElements pPort;
 	private ActivityElements pActivity;
 	private ActivityRefElements pActivityRef;
@@ -1049,7 +1089,7 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 	//
 	//	(activities+=Activity | roles+=Role | workProducts+=WorkProduct | workProductTypes+=WorkProductType |
 	//
-	//	guidances+=Guidance | guidanceTypes+=GuidanceType)*;
+	//	guidances+=Guidance | guidanceTypes+=GuidanceType | states+=State)*;
 	public ModelElements getModelAccess() {
 		return (pModel != null) ? pModel : (pModel = new ModelElements());
 	}
@@ -1093,7 +1133,9 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 
 	//WorkProduct:
 	//
-	//	"WorkProduct" name=ID ":" type=[WorkProductType] textfield=Textfield ";";
+	//	"WorkProduct" name=ID ":" type=[WorkProductType] textfield=Textfield //('States' states+=State (',' states+=State)*)? 
+	//
+	//	";";
 	public WorkProductElements getWorkProductAccess() {
 		return (pWorkProduct != null) ? pWorkProduct : (pWorkProduct = new WorkProductElements());
 	}
@@ -1124,9 +1166,20 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 		return getGuidanceAccess().getRule();
 	}
 
+	//State:
+	//
+	//	"State" name=ID ";";
+	public StateElements getStateAccess() {
+		return (pState != null) ? pState : (pState = new StateElements());
+	}
+	
+	public ParserRule getStateRule() {
+		return getStateAccess().getRule();
+	}
+
 	//Port:
 	//
-	//	name=ID ":" type=[WorkProduct];
+	//	type=[WorkProduct] ("(" state=[State] ")")?;
 	public PortElements getPortAccess() {
 		return (pPort != null) ? pPort : (pPort = new PortElements());
 	}
@@ -1154,7 +1207,7 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 
 	//ActivityRef:
 	//
-	//	name=ID ":" type=[Activity];
+	//	type=[Activity];
 	public ActivityRefElements getActivityRefAccess() {
 		return (pActivityRef != null) ? pActivityRef : (pActivityRef = new ActivityRefElements());
 	}

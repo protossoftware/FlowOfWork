@@ -1,0 +1,17 @@
+SMAP
+PathInfo.java
+Xtend
+*S Xtend
+*F
++ 0 PathInfo.xtend
+src/de/protos/FlowOfWork/core/fow/generator/PathInfo.xtend
+*L
+10:11
+16:15,2
+20:20,4
+40:27,2
+44:32,4
+48:39,4
+52:46,4
+55:53,4
+*E

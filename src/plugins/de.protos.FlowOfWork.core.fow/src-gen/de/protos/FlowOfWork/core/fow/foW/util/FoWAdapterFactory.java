@@ -110,6 +110,11 @@ public class FoWAdapterFactory extends AdapterFactoryImpl
         return createGuidanceAdapter();
       }
       @Override
+      public Adapter caseState(State object)
+      {
+        return createStateAdapter();
+      }
+      @Override
       public Adapter casePort(Port object)
       {
         return createPortAdapter();
@@ -292,6 +297,21 @@ public class FoWAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createGuidanceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.protos.FlowOfWork.core.fow.foW.State <em>State</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.protos.FlowOfWork.core.fow.foW.State
+   * @generated
+   */
+  public Adapter createStateAdapter()
   {
     return null;
   }

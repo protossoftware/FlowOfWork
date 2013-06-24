@@ -1,0 +1,11 @@
+SMAP
+FoWGenerator.java
+Xtend
+*S Xtend
+*F
++ 0 FoWGenerator.xtend
+src/de/protos/FlowOfWork/core/fow/generator/FoWGenerator.xtend
+*L
+16:23,3
+17:26,3
+*E

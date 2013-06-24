@@ -41,8 +41,11 @@ public class InternalFoWLexer extends Lexer {
     public static final int T__17=17;
     public static final int T__36=36;
     public static final int T__12=12;
+    public static final int T__37=37;
     public static final int T__11=11;
+    public static final int T__38=38;
     public static final int T__14=14;
+    public static final int T__39=39;
     public static final int T__13=13;
     public static final int RULE_INT=6;
     public static final int RULE_WS=9;
@@ -210,10 +213,10 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:18:7: ( 'Activity' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:18:9: 'Activity'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:18:7: ( 'State' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:18:9: 'State'
             {
-            match("Activity"); 
+            match("State"); 
 
 
             }
@@ -231,11 +234,10 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:19:7: ( 'responsible' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:19:9: 'responsible'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:19:7: ( '(' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:19:9: '('
             {
-            match("responsible"); 
-
+            match('('); 
 
             }
 
@@ -252,11 +254,10 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:20:7: ( 'inputs' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:20:9: 'inputs'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:20:7: ( ')' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:20:9: ')'
             {
-            match("inputs"); 
-
+            match(')'); 
 
             }
 
@@ -273,10 +274,11 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:21:7: ( ',' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:21:9: ','
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:21:7: ( 'Activity' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:21:9: 'Activity'
             {
-            match(','); 
+            match("Activity"); 
+
 
             }
 
@@ -293,10 +295,10 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:22:7: ( 'outputs' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:22:9: 'outputs'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:22:7: ( 'responsible' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:22:9: 'responsible'
             {
-            match("outputs"); 
+            match("responsible"); 
 
 
             }
@@ -314,10 +316,10 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:23:7: ( 'subActivities' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:23:9: 'subActivities'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:23:7: ( 'inputs' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:23:9: 'inputs'
             {
-            match("subActivities"); 
+            match("inputs"); 
 
 
             }
@@ -335,11 +337,10 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:24:7: ( 'guidances' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:24:9: 'guidances'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:24:7: ( ',' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:24:9: ','
             {
-            match("guidances"); 
-
+            match(','); 
 
             }
 
@@ -356,10 +357,10 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:25:7: ( 'Behavior' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:25:9: 'Behavior'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:25:7: ( 'outputs' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:25:9: 'outputs'
             {
-            match("Behavior"); 
+            match("outputs"); 
 
 
             }
@@ -377,10 +378,11 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:26:7: ( '{' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:26:9: '{'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:26:7: ( 'subActivities' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:26:9: 'subActivities'
             {
-            match('{'); 
+            match("subActivities"); 
+
 
             }
 
@@ -397,10 +399,11 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:27:7: ( '}' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:27:9: '}'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:27:7: ( 'guidances' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:27:9: 'guidances'
             {
-            match('}'); 
+            match("guidances"); 
+
 
             }
 
@@ -417,10 +420,10 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:28:7: ( 'Decision' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:28:9: 'Decision'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:28:7: ( 'Behavior' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:28:9: 'Behavior'
             {
-            match("Decision"); 
+            match("Behavior"); 
 
 
             }
@@ -438,11 +441,10 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:29:7: ( 'Step' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:29:9: 'Step'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:29:7: ( '{' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:29:9: '{'
             {
-            match("Step"); 
-
+            match('{'); 
 
             }
 
@@ -459,11 +461,10 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:30:7: ( 'Transition' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:30:9: 'Transition'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:30:7: ( '}' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:30:9: '}'
             {
-            match("Transition"); 
-
+            match('}'); 
 
             }
 
@@ -480,10 +481,10 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:31:7: ( 'initial' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:31:9: 'initial'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:31:7: ( 'Decision' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:31:9: 'Decision'
             {
-            match("initial"); 
+            match("Decision"); 
 
 
             }
@@ -501,10 +502,10 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:32:7: ( 'to' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:32:9: 'to'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:32:7: ( 'Step' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:32:9: 'Step'
             {
-            match("to"); 
+            match("Step"); 
 
 
             }
@@ -522,10 +523,10 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:33:7: ( 'final' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:33:9: 'final'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:33:7: ( 'Transition' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:33:9: 'Transition'
             {
-            match("final"); 
+            match("Transition"); 
 
 
             }
@@ -543,10 +544,10 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:34:7: ( 'summary' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:34:9: 'summary'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:34:7: ( 'initial' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:34:9: 'initial'
             {
-            match("summary"); 
+            match("initial"); 
 
 
             }
@@ -564,10 +565,10 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:35:7: ( 'label' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:35:9: 'label'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:35:7: ( 'to' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:35:9: 'to'
             {
-            match("label"); 
+            match("to"); 
 
 
             }
@@ -585,10 +586,10 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:36:7: ( 'description' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:36:9: 'description'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:36:7: ( 'final' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:36:9: 'final'
             {
-            match("description"); 
+            match("final"); 
 
 
             }
@@ -601,15 +602,78 @@ public class InternalFoWLexer extends Lexer {
     }
     // $ANTLR end "T__36"
 
+    // $ANTLR start "T__37"
+    public final void mT__37() throws RecognitionException {
+        try {
+            int _type = T__37;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:37:7: ( 'summary' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:37:9: 'summary'
+            {
+            match("summary"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__37"
+
+    // $ANTLR start "T__38"
+    public final void mT__38() throws RecognitionException {
+        try {
+            int _type = T__38;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:38:7: ( 'label' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:38:9: 'label'
+            {
+            match("label"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__38"
+
+    // $ANTLR start "T__39"
+    public final void mT__39() throws RecognitionException {
+        try {
+            int _type = T__39;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:39:7: ( 'description' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:39:9: 'description'
+            {
+            match("description"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__39"
+
     // $ANTLR start "RULE_ID"
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4400:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4400:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4518:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4518:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4400:11: ( '^' )?
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4518:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -618,7 +682,7 @@ public class InternalFoWLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4400:11: '^'
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4518:11: '^'
                     {
                     match('^'); 
 
@@ -636,7 +700,7 @@ public class InternalFoWLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4400:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4518:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -685,10 +749,10 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4402:10: ( ( '0' .. '9' )+ )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4402:12: ( '0' .. '9' )+
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4520:10: ( ( '0' .. '9' )+ )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4520:12: ( '0' .. '9' )+
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4402:12: ( '0' .. '9' )+
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4520:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -702,7 +766,7 @@ public class InternalFoWLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4402:13: '0' .. '9'
+            	    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4520:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -734,10 +798,10 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4404:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4404:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4522:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4522:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4404:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4522:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -755,10 +819,10 @@ public class InternalFoWLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4404:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4522:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4404:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4522:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -774,7 +838,7 @@ public class InternalFoWLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4404:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4522:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -790,7 +854,7 @@ public class InternalFoWLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4404:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4522:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -815,10 +879,10 @@ public class InternalFoWLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4404:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4522:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4404:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4522:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -834,7 +898,7 @@ public class InternalFoWLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4404:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4522:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -850,7 +914,7 @@ public class InternalFoWLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4404:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4522:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -893,12 +957,12 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4406:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4406:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4524:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4524:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4406:24: ( options {greedy=false; } : . )*
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4524:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -923,7 +987,7 @@ public class InternalFoWLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4406:52: .
+            	    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4524:52: .
             	    {
             	    matchAny(); 
 
@@ -953,12 +1017,12 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4408:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4408:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4526:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4526:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4408:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4526:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -971,7 +1035,7 @@ public class InternalFoWLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4408:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4526:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -991,7 +1055,7 @@ public class InternalFoWLexer extends Lexer {
                 }
             } while (true);
 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4408:40: ( ( '\\r' )? '\\n' )?
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4526:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1000,9 +1064,9 @@ public class InternalFoWLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4408:41: ( '\\r' )? '\\n'
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4526:41: ( '\\r' )? '\\n'
                     {
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4408:41: ( '\\r' )?
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4526:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -1011,7 +1075,7 @@ public class InternalFoWLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4408:41: '\\r'
+                            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4526:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1043,10 +1107,10 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4410:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4410:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4528:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4528:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4410:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4528:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -1100,8 +1164,8 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4412:16: ( . )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4412:18: .
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4530:16: ( . )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4530:18: .
             {
             matchAny(); 
 
@@ -1116,8 +1180,8 @@ public class InternalFoWLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt12=33;
+        // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt12=36;
         alt12 = dfa12.predict(input);
         switch (alt12) {
             case 1 :
@@ -1303,49 +1367,70 @@ public class InternalFoWLexer extends Lexer {
                 }
                 break;
             case 27 :
-                // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1:166: RULE_ID
+                // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1:166: T__37
+                {
+                mT__37(); 
+
+                }
+                break;
+            case 28 :
+                // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1:172: T__38
+                {
+                mT__38(); 
+
+                }
+                break;
+            case 29 :
+                // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1:178: T__39
+                {
+                mT__39(); 
+
+                }
+                break;
+            case 30 :
+                // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1:184: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 28 :
-                // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1:174: RULE_INT
+            case 31 :
+                // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1:192: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 29 :
-                // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1:183: RULE_STRING
+            case 32 :
+                // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1:201: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 30 :
-                // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1:195: RULE_ML_COMMENT
+            case 33 :
+                // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1:213: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 31 :
-                // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1:211: RULE_SL_COMMENT
+            case 34 :
+                // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1:229: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 32 :
-                // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1:227: RULE_WS
+            case 35 :
+                // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1:245: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 33 :
-                // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1:235: RULE_ANY_OTHER
+            case 36 :
+                // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1:253: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1359,132 +1444,134 @@ public class InternalFoWLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\1\40\1\uffff\1\40\1\uffff\4\40\1\uffff\4\40\2\uffff\7"+
-        "\40\1\36\2\uffff\3\36\2\uffff\1\40\2\uffff\1\40\1\uffff\4\40\1\uffff"+
-        "\4\40\2\uffff\3\40\1\112\3\40\5\uffff\17\40\1\uffff\3\40\1\140\14"+
-        "\40\1\155\4\40\1\uffff\14\40\1\uffff\1\40\1\177\1\u0080\5\40\1\u0086"+
-        "\10\40\2\uffff\5\40\1\uffff\1\u0094\1\u0095\1\40\1\u0097\6\40\1"+
-        "\u009f\1\u00a0\1\40\2\uffff\1\40\1\uffff\1\40\1\u00a4\1\u00a5\4"+
-        "\40\2\uffff\2\40\1\u00ac\2\uffff\6\40\1\uffff\1\u00b3\1\40\1\u00b6"+
-        "\1\40\1\u00b8\1\40\1\uffff\1\u00ba\1\40\1\uffff\1\u00bc\1\uffff"+
-        "\1\40\1\uffff\1\40\1\uffff\1\u00bf\1\40\1\uffff\1\u00c1\1\uffff";
+        "\1\uffff\1\42\1\uffff\1\42\1\uffff\2\42\2\uffff\3\42\1\uffff\4"+
+        "\42\2\uffff\6\42\1\40\2\uffff\3\40\2\uffff\1\42\2\uffff\1\42\1\uffff"+
+        "\2\42\2\uffff\3\42\1\uffff\4\42\2\uffff\2\42\1\117\3\42\5\uffff"+
+        "\20\42\1\uffff\3\42\1\146\3\42\1\152\16\42\1\uffff\2\42\1\173\1"+
+        "\uffff\13\42\1\u0087\1\u0088\3\42\1\uffff\2\42\1\u008e\10\42\2\uffff"+
+        "\5\42\1\uffff\1\u009c\1\u009d\1\42\1\u009f\6\42\1\u00a7\1\u00a8"+
+        "\1\42\2\uffff\1\42\1\uffff\1\42\1\u00ac\1\u00ad\4\42\2\uffff\2\42"+
+        "\1\u00b4\2\uffff\6\42\1\uffff\1\u00bb\1\42\1\u00be\1\42\1\u00c0"+
+        "\1\42\1\uffff\1\u00c2\1\42\1\uffff\1\u00c4\1\uffff\1\42\1\uffff"+
+        "\1\42\1\uffff\1\u00c7\1\42\1\uffff\1\u00c9\1\uffff";
     static final String DFA12_eofS =
-        "\u00c2\uffff";
+        "\u00ca\uffff";
     static final String DFA12_minS =
-        "\1\0\1\157\1\uffff\1\157\1\uffff\1\165\1\143\1\145\1\156\1\uffff"+
-        "\3\165\1\145\2\uffff\1\145\1\164\1\162\1\157\1\151\1\141\1\145\1"+
-        "\101\2\uffff\2\0\1\52\2\uffff\1\154\2\uffff\1\162\1\uffff\1\151"+
-        "\1\164\1\163\1\151\1\uffff\1\164\1\142\1\151\1\150\2\uffff\1\143"+
-        "\1\145\1\141\1\60\1\156\1\142\1\163\5\uffff\1\145\1\153\1\144\1"+
-        "\151\1\160\1\165\1\164\1\160\1\101\1\155\1\144\1\141\1\151\1\160"+
-        "\1\156\1\uffff\1\141\1\145\1\143\1\60\1\120\1\141\1\166\1\157\1"+
-        "\164\1\151\1\165\1\143\2\141\1\166\1\163\1\60\1\163\2\154\1\162"+
-        "\1\uffff\1\162\1\156\1\151\1\156\1\163\1\141\2\164\1\162\1\156\2"+
-        "\151\1\uffff\1\151\2\60\1\151\1\157\1\143\1\164\1\163\1\60\1\154"+
-        "\1\163\1\151\1\171\1\143\2\157\1\164\2\uffff\1\160\1\144\1\145\1"+
-        "\171\1\151\1\uffff\2\60\1\166\1\60\1\145\1\162\1\156\1\151\1\164"+
-        "\1\165\2\60\1\142\2\uffff\1\151\1\uffff\1\163\2\60\1\157\1\151\1"+
-        "\143\1\171\2\uffff\1\154\1\164\1\60\2\uffff\1\156\1\157\1\164\1"+
-        "\160\1\145\1\151\1\uffff\1\60\1\156\1\60\1\145\1\60\1\145\1\uffff"+
-        "\1\60\1\171\1\uffff\1\60\1\uffff\1\163\1\uffff\1\160\1\uffff\1\60"+
-        "\1\145\1\uffff\1\60\1\uffff";
+        "\1\0\1\157\1\uffff\1\157\1\uffff\1\165\1\164\2\uffff\1\143\1\145"+
+        "\1\156\1\uffff\3\165\1\145\2\uffff\1\145\1\162\1\157\1\151\1\141"+
+        "\1\145\1\101\2\uffff\2\0\1\52\2\uffff\1\154\2\uffff\1\162\1\uffff"+
+        "\1\151\1\141\2\uffff\1\164\1\163\1\151\1\uffff\1\164\1\142\1\151"+
+        "\1\150\2\uffff\1\143\1\141\1\60\1\156\1\142\1\163\5\uffff\1\145"+
+        "\1\153\1\144\1\164\1\160\1\151\1\160\1\165\1\164\1\160\1\101\1\155"+
+        "\1\144\1\141\1\151\1\156\1\uffff\1\141\1\145\1\143\1\60\1\120\1"+
+        "\141\1\145\1\60\1\166\1\157\1\164\1\151\1\165\1\143\2\141\1\166"+
+        "\2\163\2\154\1\162\1\uffff\1\162\1\156\1\60\1\uffff\1\151\1\156"+
+        "\1\163\1\141\2\164\1\162\1\156\3\151\2\60\1\151\1\157\1\143\1\uffff"+
+        "\1\164\1\163\1\60\1\154\1\163\1\151\1\171\1\143\2\157\1\164\2\uffff"+
+        "\1\160\1\144\1\145\1\171\1\151\1\uffff\2\60\1\166\1\60\1\145\1\162"+
+        "\1\156\1\151\1\164\1\165\2\60\1\142\2\uffff\1\151\1\uffff\1\163"+
+        "\2\60\1\157\1\151\1\143\1\171\2\uffff\1\154\1\164\1\60\2\uffff\1"+
+        "\156\1\157\1\164\1\160\1\145\1\151\1\uffff\1\60\1\156\1\60\1\145"+
+        "\1\60\1\145\1\uffff\1\60\1\171\1\uffff\1\60\1\uffff\1\163\1\uffff"+
+        "\1\160\1\uffff\1\60\1\145\1\uffff\1\60\1\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\157\1\uffff\1\157\1\uffff\1\165\1\143\1\145\1\156\1"+
-        "\uffff\3\165\1\145\2\uffff\1\145\1\164\1\162\1\157\1\151\1\141\1"+
-        "\145\1\172\2\uffff\2\uffff\1\57\2\uffff\1\154\2\uffff\1\162\1\uffff"+
-        "\1\151\1\164\1\163\1\160\1\uffff\1\164\1\155\1\151\1\150\2\uffff"+
-        "\1\143\1\145\1\141\1\172\1\156\1\142\1\163\5\uffff\1\145\1\153\1"+
-        "\144\1\151\1\160\1\165\1\164\1\160\1\101\1\155\1\144\1\141\1\151"+
-        "\1\160\1\156\1\uffff\1\141\1\145\1\143\1\172\1\120\1\141\1\166\1"+
-        "\157\1\164\1\151\1\165\1\143\2\141\1\166\1\163\1\172\1\163\2\154"+
-        "\1\162\1\uffff\1\162\1\156\1\151\1\156\1\163\1\141\2\164\1\162\1"+
-        "\156\2\151\1\uffff\1\151\2\172\1\151\1\157\1\143\1\164\1\163\1\172"+
-        "\1\154\1\163\1\151\1\171\1\143\2\157\1\164\2\uffff\1\160\1\144\1"+
-        "\145\1\171\1\151\1\uffff\2\172\1\166\1\172\1\145\1\162\1\156\1\151"+
-        "\1\164\1\165\2\172\1\142\2\uffff\1\151\1\uffff\1\163\2\172\1\157"+
-        "\1\151\1\143\1\171\2\uffff\1\154\1\164\1\172\2\uffff\1\156\1\157"+
-        "\1\164\1\160\1\145\1\151\1\uffff\1\172\1\156\1\172\1\145\1\172\1"+
-        "\145\1\uffff\1\172\1\171\1\uffff\1\172\1\uffff\1\163\1\uffff\1\160"+
-        "\1\uffff\1\172\1\145\1\uffff\1\172\1\uffff";
+        "\1\uffff\1\157\1\uffff\1\157\1\uffff\1\165\1\164\2\uffff\1\143"+
+        "\1\145\1\156\1\uffff\3\165\1\145\2\uffff\1\145\1\162\1\157\1\151"+
+        "\1\141\1\145\1\172\2\uffff\2\uffff\1\57\2\uffff\1\154\2\uffff\1"+
+        "\162\1\uffff\1\151\1\145\2\uffff\1\164\1\163\1\160\1\uffff\1\164"+
+        "\1\155\1\151\1\150\2\uffff\1\143\1\141\1\172\1\156\1\142\1\163\5"+
+        "\uffff\1\145\1\153\1\144\1\164\1\160\1\151\1\160\1\165\1\164\1\160"+
+        "\1\101\1\155\1\144\1\141\1\151\1\156\1\uffff\1\141\1\145\1\143\1"+
+        "\172\1\120\1\141\1\145\1\172\1\166\1\157\1\164\1\151\1\165\1\143"+
+        "\2\141\1\166\2\163\2\154\1\162\1\uffff\1\162\1\156\1\172\1\uffff"+
+        "\1\151\1\156\1\163\1\141\2\164\1\162\1\156\3\151\2\172\1\151\1\157"+
+        "\1\143\1\uffff\1\164\1\163\1\172\1\154\1\163\1\151\1\171\1\143\2"+
+        "\157\1\164\2\uffff\1\160\1\144\1\145\1\171\1\151\1\uffff\2\172\1"+
+        "\166\1\172\1\145\1\162\1\156\1\151\1\164\1\165\2\172\1\142\2\uffff"+
+        "\1\151\1\uffff\1\163\2\172\1\157\1\151\1\143\1\171\2\uffff\1\154"+
+        "\1\164\1\172\2\uffff\1\156\1\157\1\164\1\160\1\145\1\151\1\uffff"+
+        "\1\172\1\156\1\172\1\145\1\172\1\145\1\uffff\1\172\1\171\1\uffff"+
+        "\1\172\1\uffff\1\163\1\uffff\1\160\1\uffff\1\172\1\145\1\uffff\1"+
+        "\172\1\uffff";
     static final String DFA12_acceptS =
-        "\2\uffff\1\2\1\uffff\1\5\4\uffff\1\13\4\uffff\1\20\1\21\10\uffff"+
-        "\1\33\1\34\3\uffff\1\40\1\41\1\uffff\1\33\1\2\1\uffff\1\5\4\uffff"+
-        "\1\13\4\uffff\1\20\1\21\7\uffff\1\34\1\35\1\36\1\37\1\40\17\uffff"+
-        "\1\26\25\uffff\1\1\14\uffff\1\23\21\uffff\1\27\1\31\5\uffff\1\12"+
-        "\15\uffff\1\25\1\14\1\uffff\1\30\7\uffff\1\7\1\10\3\uffff\1\17\1"+
-        "\22\6\uffff\1\16\6\uffff\1\24\2\uffff\1\4\1\uffff\1\11\1\uffff\1"+
-        "\32\1\uffff\1\6\2\uffff\1\15\1\uffff\1\3";
+        "\2\uffff\1\2\1\uffff\1\5\2\uffff\1\11\1\12\3\uffff\1\16\4\uffff"+
+        "\1\23\1\24\7\uffff\1\36\1\37\3\uffff\1\43\1\44\1\uffff\1\36\1\2"+
+        "\1\uffff\1\5\2\uffff\1\11\1\12\3\uffff\1\16\4\uffff\1\23\1\24\6"+
+        "\uffff\1\37\1\40\1\41\1\42\1\43\20\uffff\1\31\26\uffff\1\1\3\uffff"+
+        "\1\26\20\uffff\1\10\13\uffff\1\32\1\34\5\uffff\1\15\15\uffff\1\30"+
+        "\1\17\1\uffff\1\33\7\uffff\1\7\1\13\3\uffff\1\22\1\25\6\uffff\1"+
+        "\21\6\uffff\1\27\2\uffff\1\4\1\uffff\1\14\1\uffff\1\35\1\uffff\1"+
+        "\6\2\uffff\1\20\1\uffff\1\3";
     static final String DFA12_specialS =
-        "\1\2\31\uffff\1\0\1\1\u00a6\uffff}>";
+        "\1\1\33\uffff\1\2\1\0\u00ac\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\36\2\35\2\36\1\35\22\36\1\35\1\36\1\32\4\36\1\33\4\36\1"+
-            "\11\2\36\1\34\12\31\1\4\1\2\5\36\1\6\1\15\1\30\1\20\2\30\1\5"+
-            "\12\30\1\1\1\21\1\22\2\30\1\3\3\30\3\36\1\27\1\30\1\36\3\30"+
-            "\1\26\1\30\1\24\1\14\1\30\1\10\2\30\1\25\2\30\1\12\2\30\1\7"+
-            "\1\13\1\23\6\30\1\16\1\36\1\17\uff82\36",
-            "\1\37",
-            "",
-            "\1\42",
+            "\11\40\2\37\2\40\1\37\22\40\1\37\1\40\1\34\4\40\1\35\1\7\1"+
+            "\10\2\40\1\14\2\40\1\36\12\33\1\4\1\2\5\40\1\11\1\20\1\32\1"+
+            "\23\2\32\1\5\12\32\1\1\1\6\1\24\2\32\1\3\3\32\3\40\1\31\1\32"+
+            "\1\40\3\32\1\30\1\32\1\26\1\17\1\32\1\13\2\32\1\27\2\32\1\15"+
+            "\2\32\1\12\1\16\1\25\6\32\1\21\1\40\1\22\uff82\40",
+            "\1\41",
             "",
             "\1\44",
-            "\1\45",
+            "",
             "\1\46",
             "\1\47",
             "",
-            "\1\51",
+            "",
             "\1\52",
             "\1\53",
             "\1\54",
             "",
-            "",
+            "\1\56",
             "\1\57",
             "\1\60",
             "\1\61",
-            "\1\62",
-            "\1\63",
+            "",
+            "",
             "\1\64",
             "\1\65",
-            "\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\66",
+            "\1\67",
+            "\1\70",
+            "\1\71",
+            "\32\42\4\uffff\1\42\1\uffff\32\42",
             "",
             "",
-            "\0\67",
-            "\0\67",
-            "\1\70\4\uffff\1\71",
+            "\0\73",
+            "\0\73",
+            "\1\74\4\uffff\1\75",
             "",
             "",
-            "\1\73",
-            "",
-            "",
-            "\1\74",
-            "",
-            "\1\75",
-            "\1\76",
             "\1\77",
-            "\1\101\6\uffff\1\100",
             "",
-            "\1\102",
-            "\1\103\12\uffff\1\104",
+            "",
+            "\1\100",
+            "",
+            "\1\101",
+            "\1\102\3\uffff\1\103",
+            "",
+            "",
+            "\1\104",
             "\1\105",
-            "\1\106",
+            "\1\107\6\uffff\1\106",
             "",
-            "",
-            "\1\107",
             "\1\110",
-            "\1\111",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\111\12\uffff\1\112",
             "\1\113",
             "\1\114",
+            "",
+            "",
             "\1\115",
-            "",
-            "",
-            "",
-            "",
-            "",
             "\1\116",
-            "\1\117",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\120",
             "\1\121",
             "\1\122",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\123",
             "\1\124",
             "\1\125",
@@ -1495,29 +1582,28 @@ public class InternalFoWLexer extends Lexer {
             "\1\132",
             "\1\133",
             "\1\134",
-            "",
             "\1\135",
             "\1\136",
             "\1\137",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\140",
             "\1\141",
             "\1\142",
+            "",
             "\1\143",
             "\1\144",
             "\1\145",
-            "\1\146",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\147",
             "\1\150",
             "\1\151",
-            "\1\152",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\153",
             "\1\154",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\155",
             "\1\156",
             "\1\157",
             "\1\160",
             "\1\161",
-            "",
             "\1\162",
             "\1\163",
             "\1\164",
@@ -1525,97 +1611,107 @@ public class InternalFoWLexer extends Lexer {
             "\1\166",
             "\1\167",
             "\1\170",
+            "",
             "\1\171",
             "\1\172",
-            "\1\173",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "",
             "\1\174",
             "\1\175",
-            "",
             "\1\176",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\177",
+            "\1\u0080",
             "\1\u0081",
             "\1\u0082",
             "\1\u0083",
             "\1\u0084",
             "\1\u0085",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\1\u0087",
-            "\1\u0088",
+            "\1\u0086",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\u0089",
             "\1\u008a",
             "\1\u008b",
+            "",
             "\1\u008c",
             "\1\u008d",
-            "\1\u008e",
-            "",
-            "",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\u008f",
             "\1\u0090",
             "\1\u0091",
             "\1\u0092",
             "\1\u0093",
-            "",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\u0094",
+            "\1\u0095",
             "\1\u0096",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "",
+            "",
+            "\1\u0097",
             "\1\u0098",
             "\1\u0099",
             "\1\u009a",
             "\1\u009b",
-            "\1\u009c",
-            "\1\u009d",
-            "\12\40\7\uffff\23\40\1\u009e\6\40\4\uffff\1\40\1\uffff\32"+
-            "\40",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\u009e",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\u00a0",
             "\1\u00a1",
-            "",
-            "",
             "\1\u00a2",
-            "",
             "\1\u00a3",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\1\u00a6",
-            "\1\u00a7",
-            "\1\u00a8",
+            "\1\u00a4",
+            "\1\u00a5",
+            "\12\42\7\uffff\23\42\1\u00a6\6\42\4\uffff\1\42\1\uffff\32"+
+            "\42",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\u00a9",
             "",
             "",
             "\1\u00aa",
+            "",
             "\1\u00ab",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "",
-            "",
-            "\1\u00ad",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\u00ae",
             "\1\u00af",
             "\1\u00b0",
             "\1\u00b1",
+            "",
+            "",
             "\1\u00b2",
+            "\1\u00b3",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\1\u00b4",
-            "\12\40\7\uffff\23\40\1\u00b5\6\40\4\uffff\1\40\1\uffff\32"+
-            "\40",
+            "",
+            "\1\u00b5",
+            "\1\u00b6",
             "\1\u00b7",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\u00b8",
             "\1\u00b9",
+            "\1\u00ba",
             "",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\1\u00bb",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\u00bc",
+            "\12\42\7\uffff\23\42\1\u00bd\6\42\4\uffff\1\42\1\uffff\32"+
+            "\42",
+            "\1\u00bf",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\u00c1",
             "",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\u00c3",
             "",
-            "\1\u00bd",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "",
-            "\1\u00be",
+            "\1\u00c5",
             "",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\1\u00c0",
+            "\1\u00c6",
             "",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\u00c8",
+            "",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             ""
     };
 
@@ -1649,33 +1745,23 @@ public class InternalFoWLexer extends Lexer {
             this.transition = DFA12_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA12_26 = input.LA(1);
+                        int LA12_29 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_26>='\u0000' && LA12_26<='\uFFFF')) ) {s = 55;}
+                        if ( ((LA12_29>='\u0000' && LA12_29<='\uFFFF')) ) {s = 59;}
 
-                        else s = 30;
+                        else s = 32;
 
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA12_27 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_27>='\u0000' && LA12_27<='\uFFFF')) ) {s = 55;}
-
-                        else s = 30;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
                         int LA12_0 = input.LA(1);
 
                         s = -1;
@@ -1689,55 +1775,69 @@ public class InternalFoWLexer extends Lexer {
 
                         else if ( (LA12_0=='G') ) {s = 5;}
 
-                        else if ( (LA12_0=='A') ) {s = 6;}
+                        else if ( (LA12_0=='S') ) {s = 6;}
 
-                        else if ( (LA12_0=='r') ) {s = 7;}
+                        else if ( (LA12_0=='(') ) {s = 7;}
 
-                        else if ( (LA12_0=='i') ) {s = 8;}
+                        else if ( (LA12_0==')') ) {s = 8;}
 
-                        else if ( (LA12_0==',') ) {s = 9;}
+                        else if ( (LA12_0=='A') ) {s = 9;}
 
-                        else if ( (LA12_0=='o') ) {s = 10;}
+                        else if ( (LA12_0=='r') ) {s = 10;}
 
-                        else if ( (LA12_0=='s') ) {s = 11;}
+                        else if ( (LA12_0=='i') ) {s = 11;}
 
-                        else if ( (LA12_0=='g') ) {s = 12;}
+                        else if ( (LA12_0==',') ) {s = 12;}
 
-                        else if ( (LA12_0=='B') ) {s = 13;}
+                        else if ( (LA12_0=='o') ) {s = 13;}
 
-                        else if ( (LA12_0=='{') ) {s = 14;}
+                        else if ( (LA12_0=='s') ) {s = 14;}
 
-                        else if ( (LA12_0=='}') ) {s = 15;}
+                        else if ( (LA12_0=='g') ) {s = 15;}
 
-                        else if ( (LA12_0=='D') ) {s = 16;}
+                        else if ( (LA12_0=='B') ) {s = 16;}
 
-                        else if ( (LA12_0=='S') ) {s = 17;}
+                        else if ( (LA12_0=='{') ) {s = 17;}
 
-                        else if ( (LA12_0=='T') ) {s = 18;}
+                        else if ( (LA12_0=='}') ) {s = 18;}
 
-                        else if ( (LA12_0=='t') ) {s = 19;}
+                        else if ( (LA12_0=='D') ) {s = 19;}
 
-                        else if ( (LA12_0=='f') ) {s = 20;}
+                        else if ( (LA12_0=='T') ) {s = 20;}
 
-                        else if ( (LA12_0=='l') ) {s = 21;}
+                        else if ( (LA12_0=='t') ) {s = 21;}
 
-                        else if ( (LA12_0=='d') ) {s = 22;}
+                        else if ( (LA12_0=='f') ) {s = 22;}
 
-                        else if ( (LA12_0=='^') ) {s = 23;}
+                        else if ( (LA12_0=='l') ) {s = 23;}
 
-                        else if ( (LA12_0=='C'||(LA12_0>='E' && LA12_0<='F')||(LA12_0>='H' && LA12_0<='Q')||(LA12_0>='U' && LA12_0<='V')||(LA12_0>='X' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='c')||LA12_0=='e'||LA12_0=='h'||(LA12_0>='j' && LA12_0<='k')||(LA12_0>='m' && LA12_0<='n')||(LA12_0>='p' && LA12_0<='q')||(LA12_0>='u' && LA12_0<='z')) ) {s = 24;}
+                        else if ( (LA12_0=='d') ) {s = 24;}
 
-                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 25;}
+                        else if ( (LA12_0=='^') ) {s = 25;}
 
-                        else if ( (LA12_0=='\"') ) {s = 26;}
+                        else if ( (LA12_0=='C'||(LA12_0>='E' && LA12_0<='F')||(LA12_0>='H' && LA12_0<='Q')||(LA12_0>='U' && LA12_0<='V')||(LA12_0>='X' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='c')||LA12_0=='e'||LA12_0=='h'||(LA12_0>='j' && LA12_0<='k')||(LA12_0>='m' && LA12_0<='n')||(LA12_0>='p' && LA12_0<='q')||(LA12_0>='u' && LA12_0<='z')) ) {s = 26;}
 
-                        else if ( (LA12_0=='\'') ) {s = 27;}
+                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 27;}
 
-                        else if ( (LA12_0=='/') ) {s = 28;}
+                        else if ( (LA12_0=='\"') ) {s = 28;}
 
-                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 29;}
+                        else if ( (LA12_0=='\'') ) {s = 29;}
 
-                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='+')||(LA12_0>='-' && LA12_0<='.')||(LA12_0>='<' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 30;}
+                        else if ( (LA12_0=='/') ) {s = 30;}
+
+                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 31;}
+
+                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='*' && LA12_0<='+')||(LA12_0>='-' && LA12_0<='.')||(LA12_0>='<' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 32;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA12_28 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_28>='\u0000' && LA12_28<='\uFFFF')) ) {s = 59;}
+
+                        else s = 32;
 
                         if ( s>=0 ) return s;
                         break;

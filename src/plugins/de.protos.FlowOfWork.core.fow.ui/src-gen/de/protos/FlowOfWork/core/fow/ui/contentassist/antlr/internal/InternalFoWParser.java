@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalFoWParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Role'", "';'", "'WorkProductType'", "'WorkProduct'", "':'", "'GuidanceType'", "'Guidance'", "'Activity'", "'responsible'", "'inputs'", "','", "'outputs'", "'subActivities'", "'guidances'", "'Behavior'", "'{'", "'}'", "'Decision'", "'Step'", "'Transition'", "'initial'", "'to'", "'final'", "'summary'", "'label'", "'description'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Role'", "';'", "'WorkProductType'", "'WorkProduct'", "':'", "'GuidanceType'", "'Guidance'", "'State'", "'('", "')'", "'Activity'", "'responsible'", "'inputs'", "','", "'outputs'", "'subActivities'", "'guidances'", "'Behavior'", "'{'", "'}'", "'Decision'", "'Step'", "'Transition'", "'initial'", "'to'", "'final'", "'summary'", "'label'", "'description'"
     };
     public static final int RULE_ID=4;
     public static final int T__29=29;
@@ -52,8 +52,11 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
     public static final int T__18=18;
     public static final int T__36=36;
     public static final int T__17=17;
+    public static final int T__37=37;
     public static final int T__12=12;
+    public static final int T__38=38;
     public static final int T__11=11;
+    public static final int T__39=39;
     public static final int T__14=14;
     public static final int T__13=13;
     public static final int RULE_INT=6;
@@ -146,7 +149,7 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==11||(LA1_0>=13 && LA1_0<=14)||(LA1_0>=16 && LA1_0<=18)) ) {
+                if ( (LA1_0==11||(LA1_0>=13 && LA1_0<=14)||(LA1_0>=16 && LA1_0<=18)||LA1_0==21) ) {
                     alt1=1;
                 }
 
@@ -576,21 +579,98 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleGuidance"
 
 
+    // $ANTLR start "entryRuleState"
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:230:1: entryRuleState : ruleState EOF ;
+    public final void entryRuleState() throws RecognitionException {
+        try {
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:231:1: ( ruleState EOF )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:232:1: ruleState EOF
+            {
+             before(grammarAccess.getStateRule()); 
+            pushFollow(FOLLOW_ruleState_in_entryRuleState424);
+            ruleState();
+
+            state._fsp--;
+
+             after(grammarAccess.getStateRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleState431); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleState"
+
+
+    // $ANTLR start "ruleState"
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:239:1: ruleState : ( ( rule__State__Group__0 ) ) ;
+    public final void ruleState() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:243:2: ( ( ( rule__State__Group__0 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:244:1: ( ( rule__State__Group__0 ) )
+            {
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:244:1: ( ( rule__State__Group__0 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:245:1: ( rule__State__Group__0 )
+            {
+             before(grammarAccess.getStateAccess().getGroup()); 
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:246:1: ( rule__State__Group__0 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:246:2: rule__State__Group__0
+            {
+            pushFollow(FOLLOW_rule__State__Group__0_in_ruleState457);
+            rule__State__Group__0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getStateAccess().getGroup()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleState"
+
+
     // $ANTLR start "entryRulePort"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:230:1: entryRulePort : rulePort EOF ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:258:1: entryRulePort : rulePort EOF ;
     public final void entryRulePort() throws RecognitionException {
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:231:1: ( rulePort EOF )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:232:1: rulePort EOF
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:259:1: ( rulePort EOF )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:260:1: rulePort EOF
             {
              before(grammarAccess.getPortRule()); 
-            pushFollow(FOLLOW_rulePort_in_entryRulePort424);
+            pushFollow(FOLLOW_rulePort_in_entryRulePort484);
             rulePort();
 
             state._fsp--;
 
              after(grammarAccess.getPortRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePort431); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulePort491); 
 
             }
 
@@ -607,23 +687,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rulePort"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:239:1: rulePort : ( ( rule__Port__Group__0 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:267:1: rulePort : ( ( rule__Port__Group__0 ) ) ;
     public final void rulePort() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:243:2: ( ( ( rule__Port__Group__0 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:244:1: ( ( rule__Port__Group__0 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:271:2: ( ( ( rule__Port__Group__0 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:272:1: ( ( rule__Port__Group__0 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:244:1: ( ( rule__Port__Group__0 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:245:1: ( rule__Port__Group__0 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:272:1: ( ( rule__Port__Group__0 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:273:1: ( rule__Port__Group__0 )
             {
              before(grammarAccess.getPortAccess().getGroup()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:246:1: ( rule__Port__Group__0 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:246:2: rule__Port__Group__0
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:274:1: ( rule__Port__Group__0 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:274:2: rule__Port__Group__0
             {
-            pushFollow(FOLLOW_rule__Port__Group__0_in_rulePort457);
+            pushFollow(FOLLOW_rule__Port__Group__0_in_rulePort517);
             rule__Port__Group__0();
 
             state._fsp--;
@@ -654,20 +734,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleActivity"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:258:1: entryRuleActivity : ruleActivity EOF ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:286:1: entryRuleActivity : ruleActivity EOF ;
     public final void entryRuleActivity() throws RecognitionException {
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:259:1: ( ruleActivity EOF )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:260:1: ruleActivity EOF
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:287:1: ( ruleActivity EOF )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:288:1: ruleActivity EOF
             {
              before(grammarAccess.getActivityRule()); 
-            pushFollow(FOLLOW_ruleActivity_in_entryRuleActivity484);
+            pushFollow(FOLLOW_ruleActivity_in_entryRuleActivity544);
             ruleActivity();
 
             state._fsp--;
 
              after(grammarAccess.getActivityRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleActivity491); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleActivity551); 
 
             }
 
@@ -684,23 +764,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleActivity"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:267:1: ruleActivity : ( ( rule__Activity__Group__0 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:295:1: ruleActivity : ( ( rule__Activity__Group__0 ) ) ;
     public final void ruleActivity() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:271:2: ( ( ( rule__Activity__Group__0 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:272:1: ( ( rule__Activity__Group__0 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:299:2: ( ( ( rule__Activity__Group__0 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:300:1: ( ( rule__Activity__Group__0 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:272:1: ( ( rule__Activity__Group__0 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:273:1: ( rule__Activity__Group__0 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:300:1: ( ( rule__Activity__Group__0 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:301:1: ( rule__Activity__Group__0 )
             {
              before(grammarAccess.getActivityAccess().getGroup()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:274:1: ( rule__Activity__Group__0 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:274:2: rule__Activity__Group__0
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:302:1: ( rule__Activity__Group__0 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:302:2: rule__Activity__Group__0
             {
-            pushFollow(FOLLOW_rule__Activity__Group__0_in_ruleActivity517);
+            pushFollow(FOLLOW_rule__Activity__Group__0_in_ruleActivity577);
             rule__Activity__Group__0();
 
             state._fsp--;
@@ -731,20 +811,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleActivityRef"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:286:1: entryRuleActivityRef : ruleActivityRef EOF ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:314:1: entryRuleActivityRef : ruleActivityRef EOF ;
     public final void entryRuleActivityRef() throws RecognitionException {
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:287:1: ( ruleActivityRef EOF )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:288:1: ruleActivityRef EOF
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:315:1: ( ruleActivityRef EOF )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:316:1: ruleActivityRef EOF
             {
              before(grammarAccess.getActivityRefRule()); 
-            pushFollow(FOLLOW_ruleActivityRef_in_entryRuleActivityRef544);
+            pushFollow(FOLLOW_ruleActivityRef_in_entryRuleActivityRef604);
             ruleActivityRef();
 
             state._fsp--;
 
              after(grammarAccess.getActivityRefRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleActivityRef551); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleActivityRef611); 
 
             }
 
@@ -761,31 +841,31 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleActivityRef"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:295:1: ruleActivityRef : ( ( rule__ActivityRef__Group__0 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:323:1: ruleActivityRef : ( ( rule__ActivityRef__TypeAssignment ) ) ;
     public final void ruleActivityRef() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:299:2: ( ( ( rule__ActivityRef__Group__0 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:300:1: ( ( rule__ActivityRef__Group__0 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:327:2: ( ( ( rule__ActivityRef__TypeAssignment ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:328:1: ( ( rule__ActivityRef__TypeAssignment ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:300:1: ( ( rule__ActivityRef__Group__0 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:301:1: ( rule__ActivityRef__Group__0 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:328:1: ( ( rule__ActivityRef__TypeAssignment ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:329:1: ( rule__ActivityRef__TypeAssignment )
             {
-             before(grammarAccess.getActivityRefAccess().getGroup()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:302:1: ( rule__ActivityRef__Group__0 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:302:2: rule__ActivityRef__Group__0
+             before(grammarAccess.getActivityRefAccess().getTypeAssignment()); 
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:330:1: ( rule__ActivityRef__TypeAssignment )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:330:2: rule__ActivityRef__TypeAssignment
             {
-            pushFollow(FOLLOW_rule__ActivityRef__Group__0_in_ruleActivityRef577);
-            rule__ActivityRef__Group__0();
+            pushFollow(FOLLOW_rule__ActivityRef__TypeAssignment_in_ruleActivityRef637);
+            rule__ActivityRef__TypeAssignment();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getActivityRefAccess().getGroup()); 
+             after(grammarAccess.getActivityRefAccess().getTypeAssignment()); 
 
             }
 
@@ -808,20 +888,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleDecision"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:316:1: entryRuleDecision : ruleDecision EOF ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:344:1: entryRuleDecision : ruleDecision EOF ;
     public final void entryRuleDecision() throws RecognitionException {
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:317:1: ( ruleDecision EOF )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:318:1: ruleDecision EOF
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:345:1: ( ruleDecision EOF )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:346:1: ruleDecision EOF
             {
              before(grammarAccess.getDecisionRule()); 
-            pushFollow(FOLLOW_ruleDecision_in_entryRuleDecision606);
+            pushFollow(FOLLOW_ruleDecision_in_entryRuleDecision666);
             ruleDecision();
 
             state._fsp--;
 
              after(grammarAccess.getDecisionRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDecision613); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDecision673); 
 
             }
 
@@ -838,23 +918,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleDecision"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:325:1: ruleDecision : ( ( rule__Decision__Group__0 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:353:1: ruleDecision : ( ( rule__Decision__Group__0 ) ) ;
     public final void ruleDecision() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:329:2: ( ( ( rule__Decision__Group__0 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:330:1: ( ( rule__Decision__Group__0 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:357:2: ( ( ( rule__Decision__Group__0 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:358:1: ( ( rule__Decision__Group__0 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:330:1: ( ( rule__Decision__Group__0 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:331:1: ( rule__Decision__Group__0 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:358:1: ( ( rule__Decision__Group__0 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:359:1: ( rule__Decision__Group__0 )
             {
              before(grammarAccess.getDecisionAccess().getGroup()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:332:1: ( rule__Decision__Group__0 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:332:2: rule__Decision__Group__0
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:360:1: ( rule__Decision__Group__0 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:360:2: rule__Decision__Group__0
             {
-            pushFollow(FOLLOW_rule__Decision__Group__0_in_ruleDecision639);
+            pushFollow(FOLLOW_rule__Decision__Group__0_in_ruleDecision699);
             rule__Decision__Group__0();
 
             state._fsp--;
@@ -885,20 +965,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleStep"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:344:1: entryRuleStep : ruleStep EOF ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:372:1: entryRuleStep : ruleStep EOF ;
     public final void entryRuleStep() throws RecognitionException {
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:345:1: ( ruleStep EOF )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:346:1: ruleStep EOF
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:373:1: ( ruleStep EOF )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:374:1: ruleStep EOF
             {
              before(grammarAccess.getStepRule()); 
-            pushFollow(FOLLOW_ruleStep_in_entryRuleStep666);
+            pushFollow(FOLLOW_ruleStep_in_entryRuleStep726);
             ruleStep();
 
             state._fsp--;
 
              after(grammarAccess.getStepRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleStep673); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleStep733); 
 
             }
 
@@ -915,23 +995,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleStep"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:353:1: ruleStep : ( ( rule__Step__Group__0 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:381:1: ruleStep : ( ( rule__Step__Group__0 ) ) ;
     public final void ruleStep() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:357:2: ( ( ( rule__Step__Group__0 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:358:1: ( ( rule__Step__Group__0 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:385:2: ( ( ( rule__Step__Group__0 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:386:1: ( ( rule__Step__Group__0 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:358:1: ( ( rule__Step__Group__0 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:359:1: ( rule__Step__Group__0 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:386:1: ( ( rule__Step__Group__0 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:387:1: ( rule__Step__Group__0 )
             {
              before(grammarAccess.getStepAccess().getGroup()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:360:1: ( rule__Step__Group__0 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:360:2: rule__Step__Group__0
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:388:1: ( rule__Step__Group__0 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:388:2: rule__Step__Group__0
             {
-            pushFollow(FOLLOW_rule__Step__Group__0_in_ruleStep699);
+            pushFollow(FOLLOW_rule__Step__Group__0_in_ruleStep759);
             rule__Step__Group__0();
 
             state._fsp--;
@@ -962,20 +1042,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleTransition"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:372:1: entryRuleTransition : ruleTransition EOF ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:400:1: entryRuleTransition : ruleTransition EOF ;
     public final void entryRuleTransition() throws RecognitionException {
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:373:1: ( ruleTransition EOF )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:374:1: ruleTransition EOF
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:401:1: ( ruleTransition EOF )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:402:1: ruleTransition EOF
             {
              before(grammarAccess.getTransitionRule()); 
-            pushFollow(FOLLOW_ruleTransition_in_entryRuleTransition726);
+            pushFollow(FOLLOW_ruleTransition_in_entryRuleTransition786);
             ruleTransition();
 
             state._fsp--;
 
              after(grammarAccess.getTransitionRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTransition733); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTransition793); 
 
             }
 
@@ -992,23 +1072,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleTransition"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:381:1: ruleTransition : ( ( rule__Transition__Alternatives ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:409:1: ruleTransition : ( ( rule__Transition__Alternatives ) ) ;
     public final void ruleTransition() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:385:2: ( ( ( rule__Transition__Alternatives ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:386:1: ( ( rule__Transition__Alternatives ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:413:2: ( ( ( rule__Transition__Alternatives ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:414:1: ( ( rule__Transition__Alternatives ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:386:1: ( ( rule__Transition__Alternatives ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:387:1: ( rule__Transition__Alternatives )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:414:1: ( ( rule__Transition__Alternatives ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:415:1: ( rule__Transition__Alternatives )
             {
              before(grammarAccess.getTransitionAccess().getAlternatives()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:388:1: ( rule__Transition__Alternatives )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:388:2: rule__Transition__Alternatives
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:416:1: ( rule__Transition__Alternatives )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:416:2: rule__Transition__Alternatives
             {
-            pushFollow(FOLLOW_rule__Transition__Alternatives_in_ruleTransition759);
+            pushFollow(FOLLOW_rule__Transition__Alternatives_in_ruleTransition819);
             rule__Transition__Alternatives();
 
             state._fsp--;
@@ -1039,20 +1119,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleInitialTransition"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:400:1: entryRuleInitialTransition : ruleInitialTransition EOF ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:428:1: entryRuleInitialTransition : ruleInitialTransition EOF ;
     public final void entryRuleInitialTransition() throws RecognitionException {
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:401:1: ( ruleInitialTransition EOF )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:402:1: ruleInitialTransition EOF
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:429:1: ( ruleInitialTransition EOF )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:430:1: ruleInitialTransition EOF
             {
              before(grammarAccess.getInitialTransitionRule()); 
-            pushFollow(FOLLOW_ruleInitialTransition_in_entryRuleInitialTransition786);
+            pushFollow(FOLLOW_ruleInitialTransition_in_entryRuleInitialTransition846);
             ruleInitialTransition();
 
             state._fsp--;
 
              after(grammarAccess.getInitialTransitionRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleInitialTransition793); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleInitialTransition853); 
 
             }
 
@@ -1069,23 +1149,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleInitialTransition"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:409:1: ruleInitialTransition : ( ( rule__InitialTransition__Group__0 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:437:1: ruleInitialTransition : ( ( rule__InitialTransition__Group__0 ) ) ;
     public final void ruleInitialTransition() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:413:2: ( ( ( rule__InitialTransition__Group__0 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:414:1: ( ( rule__InitialTransition__Group__0 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:441:2: ( ( ( rule__InitialTransition__Group__0 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:442:1: ( ( rule__InitialTransition__Group__0 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:414:1: ( ( rule__InitialTransition__Group__0 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:415:1: ( rule__InitialTransition__Group__0 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:442:1: ( ( rule__InitialTransition__Group__0 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:443:1: ( rule__InitialTransition__Group__0 )
             {
              before(grammarAccess.getInitialTransitionAccess().getGroup()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:416:1: ( rule__InitialTransition__Group__0 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:416:2: rule__InitialTransition__Group__0
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:444:1: ( rule__InitialTransition__Group__0 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:444:2: rule__InitialTransition__Group__0
             {
-            pushFollow(FOLLOW_rule__InitialTransition__Group__0_in_ruleInitialTransition819);
+            pushFollow(FOLLOW_rule__InitialTransition__Group__0_in_ruleInitialTransition879);
             rule__InitialTransition__Group__0();
 
             state._fsp--;
@@ -1116,20 +1196,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleFinalTransition"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:428:1: entryRuleFinalTransition : ruleFinalTransition EOF ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:456:1: entryRuleFinalTransition : ruleFinalTransition EOF ;
     public final void entryRuleFinalTransition() throws RecognitionException {
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:429:1: ( ruleFinalTransition EOF )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:430:1: ruleFinalTransition EOF
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:457:1: ( ruleFinalTransition EOF )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:458:1: ruleFinalTransition EOF
             {
              before(grammarAccess.getFinalTransitionRule()); 
-            pushFollow(FOLLOW_ruleFinalTransition_in_entryRuleFinalTransition846);
+            pushFollow(FOLLOW_ruleFinalTransition_in_entryRuleFinalTransition906);
             ruleFinalTransition();
 
             state._fsp--;
 
              after(grammarAccess.getFinalTransitionRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFinalTransition853); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFinalTransition913); 
 
             }
 
@@ -1146,23 +1226,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleFinalTransition"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:437:1: ruleFinalTransition : ( ( rule__FinalTransition__Group__0 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:465:1: ruleFinalTransition : ( ( rule__FinalTransition__Group__0 ) ) ;
     public final void ruleFinalTransition() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:441:2: ( ( ( rule__FinalTransition__Group__0 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:442:1: ( ( rule__FinalTransition__Group__0 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:469:2: ( ( ( rule__FinalTransition__Group__0 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:470:1: ( ( rule__FinalTransition__Group__0 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:442:1: ( ( rule__FinalTransition__Group__0 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:443:1: ( rule__FinalTransition__Group__0 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:470:1: ( ( rule__FinalTransition__Group__0 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:471:1: ( rule__FinalTransition__Group__0 )
             {
              before(grammarAccess.getFinalTransitionAccess().getGroup()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:444:1: ( rule__FinalTransition__Group__0 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:444:2: rule__FinalTransition__Group__0
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:472:1: ( rule__FinalTransition__Group__0 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:472:2: rule__FinalTransition__Group__0
             {
-            pushFollow(FOLLOW_rule__FinalTransition__Group__0_in_ruleFinalTransition879);
+            pushFollow(FOLLOW_rule__FinalTransition__Group__0_in_ruleFinalTransition939);
             rule__FinalTransition__Group__0();
 
             state._fsp--;
@@ -1193,20 +1273,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleDecisionTransition"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:456:1: entryRuleDecisionTransition : ruleDecisionTransition EOF ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:484:1: entryRuleDecisionTransition : ruleDecisionTransition EOF ;
     public final void entryRuleDecisionTransition() throws RecognitionException {
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:457:1: ( ruleDecisionTransition EOF )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:458:1: ruleDecisionTransition EOF
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:485:1: ( ruleDecisionTransition EOF )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:486:1: ruleDecisionTransition EOF
             {
              before(grammarAccess.getDecisionTransitionRule()); 
-            pushFollow(FOLLOW_ruleDecisionTransition_in_entryRuleDecisionTransition906);
+            pushFollow(FOLLOW_ruleDecisionTransition_in_entryRuleDecisionTransition966);
             ruleDecisionTransition();
 
             state._fsp--;
 
              after(grammarAccess.getDecisionTransitionRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDecisionTransition913); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDecisionTransition973); 
 
             }
 
@@ -1223,23 +1303,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleDecisionTransition"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:465:1: ruleDecisionTransition : ( ( rule__DecisionTransition__Group__0 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:493:1: ruleDecisionTransition : ( ( rule__DecisionTransition__Group__0 ) ) ;
     public final void ruleDecisionTransition() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:469:2: ( ( ( rule__DecisionTransition__Group__0 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:470:1: ( ( rule__DecisionTransition__Group__0 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:497:2: ( ( ( rule__DecisionTransition__Group__0 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:498:1: ( ( rule__DecisionTransition__Group__0 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:470:1: ( ( rule__DecisionTransition__Group__0 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:471:1: ( rule__DecisionTransition__Group__0 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:498:1: ( ( rule__DecisionTransition__Group__0 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:499:1: ( rule__DecisionTransition__Group__0 )
             {
              before(grammarAccess.getDecisionTransitionAccess().getGroup()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:472:1: ( rule__DecisionTransition__Group__0 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:472:2: rule__DecisionTransition__Group__0
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:500:1: ( rule__DecisionTransition__Group__0 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:500:2: rule__DecisionTransition__Group__0
             {
-            pushFollow(FOLLOW_rule__DecisionTransition__Group__0_in_ruleDecisionTransition939);
+            pushFollow(FOLLOW_rule__DecisionTransition__Group__0_in_ruleDecisionTransition999);
             rule__DecisionTransition__Group__0();
 
             state._fsp--;
@@ -1270,20 +1350,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleNonInitialTransition"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:484:1: entryRuleNonInitialTransition : ruleNonInitialTransition EOF ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:512:1: entryRuleNonInitialTransition : ruleNonInitialTransition EOF ;
     public final void entryRuleNonInitialTransition() throws RecognitionException {
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:485:1: ( ruleNonInitialTransition EOF )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:486:1: ruleNonInitialTransition EOF
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:513:1: ( ruleNonInitialTransition EOF )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:514:1: ruleNonInitialTransition EOF
             {
              before(grammarAccess.getNonInitialTransitionRule()); 
-            pushFollow(FOLLOW_ruleNonInitialTransition_in_entryRuleNonInitialTransition966);
+            pushFollow(FOLLOW_ruleNonInitialTransition_in_entryRuleNonInitialTransition1026);
             ruleNonInitialTransition();
 
             state._fsp--;
 
              after(grammarAccess.getNonInitialTransitionRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNonInitialTransition973); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNonInitialTransition1033); 
 
             }
 
@@ -1300,23 +1380,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleNonInitialTransition"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:493:1: ruleNonInitialTransition : ( ( rule__NonInitialTransition__Group__0 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:521:1: ruleNonInitialTransition : ( ( rule__NonInitialTransition__Group__0 ) ) ;
     public final void ruleNonInitialTransition() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:497:2: ( ( ( rule__NonInitialTransition__Group__0 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:498:1: ( ( rule__NonInitialTransition__Group__0 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:525:2: ( ( ( rule__NonInitialTransition__Group__0 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:526:1: ( ( rule__NonInitialTransition__Group__0 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:498:1: ( ( rule__NonInitialTransition__Group__0 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:499:1: ( rule__NonInitialTransition__Group__0 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:526:1: ( ( rule__NonInitialTransition__Group__0 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:527:1: ( rule__NonInitialTransition__Group__0 )
             {
              before(grammarAccess.getNonInitialTransitionAccess().getGroup()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:500:1: ( rule__NonInitialTransition__Group__0 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:500:2: rule__NonInitialTransition__Group__0
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:528:1: ( rule__NonInitialTransition__Group__0 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:528:2: rule__NonInitialTransition__Group__0
             {
-            pushFollow(FOLLOW_rule__NonInitialTransition__Group__0_in_ruleNonInitialTransition999);
+            pushFollow(FOLLOW_rule__NonInitialTransition__Group__0_in_ruleNonInitialTransition1059);
             rule__NonInitialTransition__Group__0();
 
             state._fsp--;
@@ -1347,20 +1427,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleTextfield"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:512:1: entryRuleTextfield : ruleTextfield EOF ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:540:1: entryRuleTextfield : ruleTextfield EOF ;
     public final void entryRuleTextfield() throws RecognitionException {
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:513:1: ( ruleTextfield EOF )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:514:1: ruleTextfield EOF
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:541:1: ( ruleTextfield EOF )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:542:1: ruleTextfield EOF
             {
              before(grammarAccess.getTextfieldRule()); 
-            pushFollow(FOLLOW_ruleTextfield_in_entryRuleTextfield1026);
+            pushFollow(FOLLOW_ruleTextfield_in_entryRuleTextfield1086);
             ruleTextfield();
 
             state._fsp--;
 
              after(grammarAccess.getTextfieldRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTextfield1033); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTextfield1093); 
 
             }
 
@@ -1377,23 +1457,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleTextfield"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:521:1: ruleTextfield : ( ( rule__Textfield__Group__0 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:549:1: ruleTextfield : ( ( rule__Textfield__Group__0 ) ) ;
     public final void ruleTextfield() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:525:2: ( ( ( rule__Textfield__Group__0 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:526:1: ( ( rule__Textfield__Group__0 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:553:2: ( ( ( rule__Textfield__Group__0 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:554:1: ( ( rule__Textfield__Group__0 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:526:1: ( ( rule__Textfield__Group__0 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:527:1: ( rule__Textfield__Group__0 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:554:1: ( ( rule__Textfield__Group__0 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:555:1: ( rule__Textfield__Group__0 )
             {
              before(grammarAccess.getTextfieldAccess().getGroup()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:528:1: ( rule__Textfield__Group__0 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:528:2: rule__Textfield__Group__0
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:556:1: ( rule__Textfield__Group__0 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:556:2: rule__Textfield__Group__0
             {
-            pushFollow(FOLLOW_rule__Textfield__Group__0_in_ruleTextfield1059);
+            pushFollow(FOLLOW_rule__Textfield__Group__0_in_ruleTextfield1119);
             rule__Textfield__Group__0();
 
             state._fsp--;
@@ -1424,16 +1504,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Alternatives"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:540:1: rule__Model__Alternatives : ( ( ( rule__Model__ActivitiesAssignment_0 ) ) | ( ( rule__Model__RolesAssignment_1 ) ) | ( ( rule__Model__WorkProductsAssignment_2 ) ) | ( ( rule__Model__WorkProductTypesAssignment_3 ) ) | ( ( rule__Model__GuidancesAssignment_4 ) ) | ( ( rule__Model__GuidanceTypesAssignment_5 ) ) );
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:568:1: rule__Model__Alternatives : ( ( ( rule__Model__ActivitiesAssignment_0 ) ) | ( ( rule__Model__RolesAssignment_1 ) ) | ( ( rule__Model__WorkProductsAssignment_2 ) ) | ( ( rule__Model__WorkProductTypesAssignment_3 ) ) | ( ( rule__Model__GuidancesAssignment_4 ) ) | ( ( rule__Model__GuidanceTypesAssignment_5 ) ) | ( ( rule__Model__StatesAssignment_6 ) ) );
     public final void rule__Model__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:544:1: ( ( ( rule__Model__ActivitiesAssignment_0 ) ) | ( ( rule__Model__RolesAssignment_1 ) ) | ( ( rule__Model__WorkProductsAssignment_2 ) ) | ( ( rule__Model__WorkProductTypesAssignment_3 ) ) | ( ( rule__Model__GuidancesAssignment_4 ) ) | ( ( rule__Model__GuidanceTypesAssignment_5 ) ) )
-            int alt2=6;
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:572:1: ( ( ( rule__Model__ActivitiesAssignment_0 ) ) | ( ( rule__Model__RolesAssignment_1 ) ) | ( ( rule__Model__WorkProductsAssignment_2 ) ) | ( ( rule__Model__WorkProductTypesAssignment_3 ) ) | ( ( rule__Model__GuidancesAssignment_4 ) ) | ( ( rule__Model__GuidanceTypesAssignment_5 ) ) | ( ( rule__Model__StatesAssignment_6 ) ) )
+            int alt2=7;
             switch ( input.LA(1) ) {
-            case 18:
+            case 21:
                 {
                 alt2=1;
                 }
@@ -1463,6 +1543,11 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
                 alt2=6;
                 }
                 break;
+            case 18:
+                {
+                alt2=7;
+                }
+                break;
             default:
                 NoViableAltException nvae =
                     new NoViableAltException("", 2, 0, input);
@@ -1472,16 +1557,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
             switch (alt2) {
                 case 1 :
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:545:1: ( ( rule__Model__ActivitiesAssignment_0 ) )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:573:1: ( ( rule__Model__ActivitiesAssignment_0 ) )
                     {
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:545:1: ( ( rule__Model__ActivitiesAssignment_0 ) )
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:546:1: ( rule__Model__ActivitiesAssignment_0 )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:573:1: ( ( rule__Model__ActivitiesAssignment_0 ) )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:574:1: ( rule__Model__ActivitiesAssignment_0 )
                     {
                      before(grammarAccess.getModelAccess().getActivitiesAssignment_0()); 
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:547:1: ( rule__Model__ActivitiesAssignment_0 )
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:547:2: rule__Model__ActivitiesAssignment_0
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:575:1: ( rule__Model__ActivitiesAssignment_0 )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:575:2: rule__Model__ActivitiesAssignment_0
                     {
-                    pushFollow(FOLLOW_rule__Model__ActivitiesAssignment_0_in_rule__Model__Alternatives1095);
+                    pushFollow(FOLLOW_rule__Model__ActivitiesAssignment_0_in_rule__Model__Alternatives1155);
                     rule__Model__ActivitiesAssignment_0();
 
                     state._fsp--;
@@ -1497,16 +1582,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:551:6: ( ( rule__Model__RolesAssignment_1 ) )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:579:6: ( ( rule__Model__RolesAssignment_1 ) )
                     {
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:551:6: ( ( rule__Model__RolesAssignment_1 ) )
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:552:1: ( rule__Model__RolesAssignment_1 )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:579:6: ( ( rule__Model__RolesAssignment_1 ) )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:580:1: ( rule__Model__RolesAssignment_1 )
                     {
                      before(grammarAccess.getModelAccess().getRolesAssignment_1()); 
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:553:1: ( rule__Model__RolesAssignment_1 )
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:553:2: rule__Model__RolesAssignment_1
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:581:1: ( rule__Model__RolesAssignment_1 )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:581:2: rule__Model__RolesAssignment_1
                     {
-                    pushFollow(FOLLOW_rule__Model__RolesAssignment_1_in_rule__Model__Alternatives1113);
+                    pushFollow(FOLLOW_rule__Model__RolesAssignment_1_in_rule__Model__Alternatives1173);
                     rule__Model__RolesAssignment_1();
 
                     state._fsp--;
@@ -1522,16 +1607,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:557:6: ( ( rule__Model__WorkProductsAssignment_2 ) )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:585:6: ( ( rule__Model__WorkProductsAssignment_2 ) )
                     {
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:557:6: ( ( rule__Model__WorkProductsAssignment_2 ) )
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:558:1: ( rule__Model__WorkProductsAssignment_2 )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:585:6: ( ( rule__Model__WorkProductsAssignment_2 ) )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:586:1: ( rule__Model__WorkProductsAssignment_2 )
                     {
                      before(grammarAccess.getModelAccess().getWorkProductsAssignment_2()); 
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:559:1: ( rule__Model__WorkProductsAssignment_2 )
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:559:2: rule__Model__WorkProductsAssignment_2
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:587:1: ( rule__Model__WorkProductsAssignment_2 )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:587:2: rule__Model__WorkProductsAssignment_2
                     {
-                    pushFollow(FOLLOW_rule__Model__WorkProductsAssignment_2_in_rule__Model__Alternatives1131);
+                    pushFollow(FOLLOW_rule__Model__WorkProductsAssignment_2_in_rule__Model__Alternatives1191);
                     rule__Model__WorkProductsAssignment_2();
 
                     state._fsp--;
@@ -1547,16 +1632,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:563:6: ( ( rule__Model__WorkProductTypesAssignment_3 ) )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:591:6: ( ( rule__Model__WorkProductTypesAssignment_3 ) )
                     {
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:563:6: ( ( rule__Model__WorkProductTypesAssignment_3 ) )
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:564:1: ( rule__Model__WorkProductTypesAssignment_3 )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:591:6: ( ( rule__Model__WorkProductTypesAssignment_3 ) )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:592:1: ( rule__Model__WorkProductTypesAssignment_3 )
                     {
                      before(grammarAccess.getModelAccess().getWorkProductTypesAssignment_3()); 
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:565:1: ( rule__Model__WorkProductTypesAssignment_3 )
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:565:2: rule__Model__WorkProductTypesAssignment_3
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:593:1: ( rule__Model__WorkProductTypesAssignment_3 )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:593:2: rule__Model__WorkProductTypesAssignment_3
                     {
-                    pushFollow(FOLLOW_rule__Model__WorkProductTypesAssignment_3_in_rule__Model__Alternatives1149);
+                    pushFollow(FOLLOW_rule__Model__WorkProductTypesAssignment_3_in_rule__Model__Alternatives1209);
                     rule__Model__WorkProductTypesAssignment_3();
 
                     state._fsp--;
@@ -1572,16 +1657,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:569:6: ( ( rule__Model__GuidancesAssignment_4 ) )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:597:6: ( ( rule__Model__GuidancesAssignment_4 ) )
                     {
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:569:6: ( ( rule__Model__GuidancesAssignment_4 ) )
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:570:1: ( rule__Model__GuidancesAssignment_4 )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:597:6: ( ( rule__Model__GuidancesAssignment_4 ) )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:598:1: ( rule__Model__GuidancesAssignment_4 )
                     {
                      before(grammarAccess.getModelAccess().getGuidancesAssignment_4()); 
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:571:1: ( rule__Model__GuidancesAssignment_4 )
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:571:2: rule__Model__GuidancesAssignment_4
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:599:1: ( rule__Model__GuidancesAssignment_4 )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:599:2: rule__Model__GuidancesAssignment_4
                     {
-                    pushFollow(FOLLOW_rule__Model__GuidancesAssignment_4_in_rule__Model__Alternatives1167);
+                    pushFollow(FOLLOW_rule__Model__GuidancesAssignment_4_in_rule__Model__Alternatives1227);
                     rule__Model__GuidancesAssignment_4();
 
                     state._fsp--;
@@ -1597,16 +1682,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 6 :
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:575:6: ( ( rule__Model__GuidanceTypesAssignment_5 ) )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:603:6: ( ( rule__Model__GuidanceTypesAssignment_5 ) )
                     {
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:575:6: ( ( rule__Model__GuidanceTypesAssignment_5 ) )
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:576:1: ( rule__Model__GuidanceTypesAssignment_5 )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:603:6: ( ( rule__Model__GuidanceTypesAssignment_5 ) )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:604:1: ( rule__Model__GuidanceTypesAssignment_5 )
                     {
                      before(grammarAccess.getModelAccess().getGuidanceTypesAssignment_5()); 
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:577:1: ( rule__Model__GuidanceTypesAssignment_5 )
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:577:2: rule__Model__GuidanceTypesAssignment_5
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:605:1: ( rule__Model__GuidanceTypesAssignment_5 )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:605:2: rule__Model__GuidanceTypesAssignment_5
                     {
-                    pushFollow(FOLLOW_rule__Model__GuidanceTypesAssignment_5_in_rule__Model__Alternatives1185);
+                    pushFollow(FOLLOW_rule__Model__GuidanceTypesAssignment_5_in_rule__Model__Alternatives1245);
                     rule__Model__GuidanceTypesAssignment_5();
 
                     state._fsp--;
@@ -1615,6 +1700,31 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
                     }
 
                      after(grammarAccess.getModelAccess().getGuidanceTypesAssignment_5()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 7 :
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:609:6: ( ( rule__Model__StatesAssignment_6 ) )
+                    {
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:609:6: ( ( rule__Model__StatesAssignment_6 ) )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:610:1: ( rule__Model__StatesAssignment_6 )
+                    {
+                     before(grammarAccess.getModelAccess().getStatesAssignment_6()); 
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:611:1: ( rule__Model__StatesAssignment_6 )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:611:2: rule__Model__StatesAssignment_6
+                    {
+                    pushFollow(FOLLOW_rule__Model__StatesAssignment_6_in_rule__Model__Alternatives1263);
+                    rule__Model__StatesAssignment_6();
+
+                    state._fsp--;
+
+
+                    }
+
+                     after(grammarAccess.getModelAccess().getStatesAssignment_6()); 
 
                     }
 
@@ -1639,26 +1749,26 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Alternatives_9_2"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:587:1: rule__Activity__Alternatives_9_2 : ( ( ( rule__Activity__StepsAssignment_9_2_0 ) ) | ( ( rule__Activity__DecisionsAssignment_9_2_1 ) ) | ( ( rule__Activity__TransitionsAssignment_9_2_2 ) ) );
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:621:1: rule__Activity__Alternatives_9_2 : ( ( ( rule__Activity__StepsAssignment_9_2_0 ) ) | ( ( rule__Activity__DecisionsAssignment_9_2_1 ) ) | ( ( rule__Activity__TransitionsAssignment_9_2_2 ) ) );
     public final void rule__Activity__Alternatives_9_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:591:1: ( ( ( rule__Activity__StepsAssignment_9_2_0 ) ) | ( ( rule__Activity__DecisionsAssignment_9_2_1 ) ) | ( ( rule__Activity__TransitionsAssignment_9_2_2 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:625:1: ( ( ( rule__Activity__StepsAssignment_9_2_0 ) ) | ( ( rule__Activity__DecisionsAssignment_9_2_1 ) ) | ( ( rule__Activity__TransitionsAssignment_9_2_2 ) ) )
             int alt3=3;
             switch ( input.LA(1) ) {
-            case 29:
+            case 32:
                 {
                 alt3=1;
                 }
                 break;
-            case 28:
+            case 31:
                 {
                 alt3=2;
                 }
                 break;
-            case 30:
+            case 33:
                 {
                 alt3=3;
                 }
@@ -1672,16 +1782,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
             switch (alt3) {
                 case 1 :
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:592:1: ( ( rule__Activity__StepsAssignment_9_2_0 ) )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:626:1: ( ( rule__Activity__StepsAssignment_9_2_0 ) )
                     {
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:592:1: ( ( rule__Activity__StepsAssignment_9_2_0 ) )
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:593:1: ( rule__Activity__StepsAssignment_9_2_0 )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:626:1: ( ( rule__Activity__StepsAssignment_9_2_0 ) )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:627:1: ( rule__Activity__StepsAssignment_9_2_0 )
                     {
                      before(grammarAccess.getActivityAccess().getStepsAssignment_9_2_0()); 
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:594:1: ( rule__Activity__StepsAssignment_9_2_0 )
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:594:2: rule__Activity__StepsAssignment_9_2_0
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:628:1: ( rule__Activity__StepsAssignment_9_2_0 )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:628:2: rule__Activity__StepsAssignment_9_2_0
                     {
-                    pushFollow(FOLLOW_rule__Activity__StepsAssignment_9_2_0_in_rule__Activity__Alternatives_9_21219);
+                    pushFollow(FOLLOW_rule__Activity__StepsAssignment_9_2_0_in_rule__Activity__Alternatives_9_21297);
                     rule__Activity__StepsAssignment_9_2_0();
 
                     state._fsp--;
@@ -1697,16 +1807,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:598:6: ( ( rule__Activity__DecisionsAssignment_9_2_1 ) )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:632:6: ( ( rule__Activity__DecisionsAssignment_9_2_1 ) )
                     {
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:598:6: ( ( rule__Activity__DecisionsAssignment_9_2_1 ) )
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:599:1: ( rule__Activity__DecisionsAssignment_9_2_1 )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:632:6: ( ( rule__Activity__DecisionsAssignment_9_2_1 ) )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:633:1: ( rule__Activity__DecisionsAssignment_9_2_1 )
                     {
                      before(grammarAccess.getActivityAccess().getDecisionsAssignment_9_2_1()); 
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:600:1: ( rule__Activity__DecisionsAssignment_9_2_1 )
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:600:2: rule__Activity__DecisionsAssignment_9_2_1
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:634:1: ( rule__Activity__DecisionsAssignment_9_2_1 )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:634:2: rule__Activity__DecisionsAssignment_9_2_1
                     {
-                    pushFollow(FOLLOW_rule__Activity__DecisionsAssignment_9_2_1_in_rule__Activity__Alternatives_9_21237);
+                    pushFollow(FOLLOW_rule__Activity__DecisionsAssignment_9_2_1_in_rule__Activity__Alternatives_9_21315);
                     rule__Activity__DecisionsAssignment_9_2_1();
 
                     state._fsp--;
@@ -1722,16 +1832,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:604:6: ( ( rule__Activity__TransitionsAssignment_9_2_2 ) )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:638:6: ( ( rule__Activity__TransitionsAssignment_9_2_2 ) )
                     {
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:604:6: ( ( rule__Activity__TransitionsAssignment_9_2_2 ) )
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:605:1: ( rule__Activity__TransitionsAssignment_9_2_2 )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:638:6: ( ( rule__Activity__TransitionsAssignment_9_2_2 ) )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:639:1: ( rule__Activity__TransitionsAssignment_9_2_2 )
                     {
                      before(grammarAccess.getActivityAccess().getTransitionsAssignment_9_2_2()); 
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:606:1: ( rule__Activity__TransitionsAssignment_9_2_2 )
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:606:2: rule__Activity__TransitionsAssignment_9_2_2
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:640:1: ( rule__Activity__TransitionsAssignment_9_2_2 )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:640:2: rule__Activity__TransitionsAssignment_9_2_2
                     {
-                    pushFollow(FOLLOW_rule__Activity__TransitionsAssignment_9_2_2_in_rule__Activity__Alternatives_9_21255);
+                    pushFollow(FOLLOW_rule__Activity__TransitionsAssignment_9_2_2_in_rule__Activity__Alternatives_9_21333);
                     rule__Activity__TransitionsAssignment_9_2_2();
 
                     state._fsp--;
@@ -1764,23 +1874,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Transition__Alternatives"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:616:1: rule__Transition__Alternatives : ( ( ruleInitialTransition ) | ( ruleFinalTransition ) | ( ruleNonInitialTransition ) | ( ruleDecisionTransition ) );
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:650:1: rule__Transition__Alternatives : ( ( ruleInitialTransition ) | ( ruleFinalTransition ) | ( ruleNonInitialTransition ) | ( ruleDecisionTransition ) );
     public final void rule__Transition__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:620:1: ( ( ruleInitialTransition ) | ( ruleFinalTransition ) | ( ruleNonInitialTransition ) | ( ruleDecisionTransition ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:654:1: ( ( ruleInitialTransition ) | ( ruleFinalTransition ) | ( ruleNonInitialTransition ) | ( ruleDecisionTransition ) )
             int alt4=4;
             int LA4_0 = input.LA(1);
 
-            if ( (LA4_0==30) ) {
+            if ( (LA4_0==33) ) {
                 int LA4_1 = input.LA(2);
 
                 if ( (LA4_1==RULE_ID) ) {
                     int LA4_2 = input.LA(3);
 
-                    if ( (LA4_2==32) ) {
+                    if ( (LA4_2==35) ) {
                         int LA4_4 = input.LA(4);
 
                         if ( (LA4_4==RULE_ID) ) {
@@ -1789,7 +1899,7 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
                             if ( (LA4_5==RULE_STRING) ) {
                                 alt4=4;
                             }
-                            else if ( (LA4_5==EOF||(LA4_5>=27 && LA4_5<=30)) ) {
+                            else if ( (LA4_5==EOF||(LA4_5>=30 && LA4_5<=33)) ) {
                                 alt4=3;
                             }
                             else {
@@ -1799,7 +1909,7 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
                                 throw nvae;
                             }
                         }
-                        else if ( (LA4_4==33) ) {
+                        else if ( (LA4_4==36) ) {
                             alt4=2;
                         }
                         else {
@@ -1816,7 +1926,7 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
                         throw nvae;
                     }
                 }
-                else if ( (LA4_1==31) ) {
+                else if ( (LA4_1==34) ) {
                     alt4=1;
                 }
                 else {
@@ -1834,13 +1944,13 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
             }
             switch (alt4) {
                 case 1 :
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:621:1: ( ruleInitialTransition )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:655:1: ( ruleInitialTransition )
                     {
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:621:1: ( ruleInitialTransition )
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:622:1: ruleInitialTransition
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:655:1: ( ruleInitialTransition )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:656:1: ruleInitialTransition
                     {
                      before(grammarAccess.getTransitionAccess().getInitialTransitionParserRuleCall_0()); 
-                    pushFollow(FOLLOW_ruleInitialTransition_in_rule__Transition__Alternatives1289);
+                    pushFollow(FOLLOW_ruleInitialTransition_in_rule__Transition__Alternatives1367);
                     ruleInitialTransition();
 
                     state._fsp--;
@@ -1853,13 +1963,13 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:627:6: ( ruleFinalTransition )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:661:6: ( ruleFinalTransition )
                     {
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:627:6: ( ruleFinalTransition )
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:628:1: ruleFinalTransition
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:661:6: ( ruleFinalTransition )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:662:1: ruleFinalTransition
                     {
                      before(grammarAccess.getTransitionAccess().getFinalTransitionParserRuleCall_1()); 
-                    pushFollow(FOLLOW_ruleFinalTransition_in_rule__Transition__Alternatives1306);
+                    pushFollow(FOLLOW_ruleFinalTransition_in_rule__Transition__Alternatives1384);
                     ruleFinalTransition();
 
                     state._fsp--;
@@ -1872,13 +1982,13 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:633:6: ( ruleNonInitialTransition )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:667:6: ( ruleNonInitialTransition )
                     {
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:633:6: ( ruleNonInitialTransition )
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:634:1: ruleNonInitialTransition
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:667:6: ( ruleNonInitialTransition )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:668:1: ruleNonInitialTransition
                     {
                      before(grammarAccess.getTransitionAccess().getNonInitialTransitionParserRuleCall_2()); 
-                    pushFollow(FOLLOW_ruleNonInitialTransition_in_rule__Transition__Alternatives1323);
+                    pushFollow(FOLLOW_ruleNonInitialTransition_in_rule__Transition__Alternatives1401);
                     ruleNonInitialTransition();
 
                     state._fsp--;
@@ -1891,13 +2001,13 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:639:6: ( ruleDecisionTransition )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:673:6: ( ruleDecisionTransition )
                     {
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:639:6: ( ruleDecisionTransition )
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:640:1: ruleDecisionTransition
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:673:6: ( ruleDecisionTransition )
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:674:1: ruleDecisionTransition
                     {
                      before(grammarAccess.getTransitionAccess().getDecisionTransitionParserRuleCall_3()); 
-                    pushFollow(FOLLOW_ruleDecisionTransition_in_rule__Transition__Alternatives1340);
+                    pushFollow(FOLLOW_ruleDecisionTransition_in_rule__Transition__Alternatives1418);
                     ruleDecisionTransition();
 
                     state._fsp--;
@@ -1927,21 +2037,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group__0"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:652:1: rule__Role__Group__0 : rule__Role__Group__0__Impl rule__Role__Group__1 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:686:1: rule__Role__Group__0 : rule__Role__Group__0__Impl rule__Role__Group__1 ;
     public final void rule__Role__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:656:1: ( rule__Role__Group__0__Impl rule__Role__Group__1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:657:2: rule__Role__Group__0__Impl rule__Role__Group__1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:690:1: ( rule__Role__Group__0__Impl rule__Role__Group__1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:691:2: rule__Role__Group__0__Impl rule__Role__Group__1
             {
-            pushFollow(FOLLOW_rule__Role__Group__0__Impl_in_rule__Role__Group__01370);
+            pushFollow(FOLLOW_rule__Role__Group__0__Impl_in_rule__Role__Group__01448);
             rule__Role__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Role__Group__1_in_rule__Role__Group__01373);
+            pushFollow(FOLLOW_rule__Role__Group__1_in_rule__Role__Group__01451);
             rule__Role__Group__1();
 
             state._fsp--;
@@ -1965,20 +2075,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group__0__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:664:1: rule__Role__Group__0__Impl : ( 'Role' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:698:1: rule__Role__Group__0__Impl : ( 'Role' ) ;
     public final void rule__Role__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:668:1: ( ( 'Role' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:669:1: ( 'Role' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:702:1: ( ( 'Role' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:703:1: ( 'Role' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:669:1: ( 'Role' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:670:1: 'Role'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:703:1: ( 'Role' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:704:1: 'Role'
             {
              before(grammarAccess.getRoleAccess().getRoleKeyword_0()); 
-            match(input,11,FOLLOW_11_in_rule__Role__Group__0__Impl1401); 
+            match(input,11,FOLLOW_11_in_rule__Role__Group__0__Impl1479); 
              after(grammarAccess.getRoleAccess().getRoleKeyword_0()); 
 
             }
@@ -2002,21 +2112,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group__1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:683:1: rule__Role__Group__1 : rule__Role__Group__1__Impl rule__Role__Group__2 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:717:1: rule__Role__Group__1 : rule__Role__Group__1__Impl rule__Role__Group__2 ;
     public final void rule__Role__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:687:1: ( rule__Role__Group__1__Impl rule__Role__Group__2 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:688:2: rule__Role__Group__1__Impl rule__Role__Group__2
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:721:1: ( rule__Role__Group__1__Impl rule__Role__Group__2 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:722:2: rule__Role__Group__1__Impl rule__Role__Group__2
             {
-            pushFollow(FOLLOW_rule__Role__Group__1__Impl_in_rule__Role__Group__11432);
+            pushFollow(FOLLOW_rule__Role__Group__1__Impl_in_rule__Role__Group__11510);
             rule__Role__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Role__Group__2_in_rule__Role__Group__11435);
+            pushFollow(FOLLOW_rule__Role__Group__2_in_rule__Role__Group__11513);
             rule__Role__Group__2();
 
             state._fsp--;
@@ -2040,23 +2150,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group__1__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:695:1: rule__Role__Group__1__Impl : ( ( rule__Role__NameAssignment_1 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:729:1: rule__Role__Group__1__Impl : ( ( rule__Role__NameAssignment_1 ) ) ;
     public final void rule__Role__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:699:1: ( ( ( rule__Role__NameAssignment_1 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:700:1: ( ( rule__Role__NameAssignment_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:733:1: ( ( ( rule__Role__NameAssignment_1 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:734:1: ( ( rule__Role__NameAssignment_1 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:700:1: ( ( rule__Role__NameAssignment_1 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:701:1: ( rule__Role__NameAssignment_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:734:1: ( ( rule__Role__NameAssignment_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:735:1: ( rule__Role__NameAssignment_1 )
             {
              before(grammarAccess.getRoleAccess().getNameAssignment_1()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:702:1: ( rule__Role__NameAssignment_1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:702:2: rule__Role__NameAssignment_1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:736:1: ( rule__Role__NameAssignment_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:736:2: rule__Role__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Role__NameAssignment_1_in_rule__Role__Group__1__Impl1462);
+            pushFollow(FOLLOW_rule__Role__NameAssignment_1_in_rule__Role__Group__1__Impl1540);
             rule__Role__NameAssignment_1();
 
             state._fsp--;
@@ -2087,21 +2197,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group__2"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:712:1: rule__Role__Group__2 : rule__Role__Group__2__Impl rule__Role__Group__3 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:746:1: rule__Role__Group__2 : rule__Role__Group__2__Impl rule__Role__Group__3 ;
     public final void rule__Role__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:716:1: ( rule__Role__Group__2__Impl rule__Role__Group__3 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:717:2: rule__Role__Group__2__Impl rule__Role__Group__3
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:750:1: ( rule__Role__Group__2__Impl rule__Role__Group__3 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:751:2: rule__Role__Group__2__Impl rule__Role__Group__3
             {
-            pushFollow(FOLLOW_rule__Role__Group__2__Impl_in_rule__Role__Group__21492);
+            pushFollow(FOLLOW_rule__Role__Group__2__Impl_in_rule__Role__Group__21570);
             rule__Role__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Role__Group__3_in_rule__Role__Group__21495);
+            pushFollow(FOLLOW_rule__Role__Group__3_in_rule__Role__Group__21573);
             rule__Role__Group__3();
 
             state._fsp--;
@@ -2125,23 +2235,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group__2__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:724:1: rule__Role__Group__2__Impl : ( ( rule__Role__TextfieldAssignment_2 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:758:1: rule__Role__Group__2__Impl : ( ( rule__Role__TextfieldAssignment_2 ) ) ;
     public final void rule__Role__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:728:1: ( ( ( rule__Role__TextfieldAssignment_2 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:729:1: ( ( rule__Role__TextfieldAssignment_2 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:762:1: ( ( ( rule__Role__TextfieldAssignment_2 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:763:1: ( ( rule__Role__TextfieldAssignment_2 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:729:1: ( ( rule__Role__TextfieldAssignment_2 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:730:1: ( rule__Role__TextfieldAssignment_2 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:763:1: ( ( rule__Role__TextfieldAssignment_2 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:764:1: ( rule__Role__TextfieldAssignment_2 )
             {
              before(grammarAccess.getRoleAccess().getTextfieldAssignment_2()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:731:1: ( rule__Role__TextfieldAssignment_2 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:731:2: rule__Role__TextfieldAssignment_2
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:765:1: ( rule__Role__TextfieldAssignment_2 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:765:2: rule__Role__TextfieldAssignment_2
             {
-            pushFollow(FOLLOW_rule__Role__TextfieldAssignment_2_in_rule__Role__Group__2__Impl1522);
+            pushFollow(FOLLOW_rule__Role__TextfieldAssignment_2_in_rule__Role__Group__2__Impl1600);
             rule__Role__TextfieldAssignment_2();
 
             state._fsp--;
@@ -2172,16 +2282,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group__3"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:741:1: rule__Role__Group__3 : rule__Role__Group__3__Impl ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:775:1: rule__Role__Group__3 : rule__Role__Group__3__Impl ;
     public final void rule__Role__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:745:1: ( rule__Role__Group__3__Impl )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:746:2: rule__Role__Group__3__Impl
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:779:1: ( rule__Role__Group__3__Impl )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:780:2: rule__Role__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__Role__Group__3__Impl_in_rule__Role__Group__31552);
+            pushFollow(FOLLOW_rule__Role__Group__3__Impl_in_rule__Role__Group__31630);
             rule__Role__Group__3__Impl();
 
             state._fsp--;
@@ -2205,20 +2315,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__Group__3__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:752:1: rule__Role__Group__3__Impl : ( ';' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:786:1: rule__Role__Group__3__Impl : ( ';' ) ;
     public final void rule__Role__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:756:1: ( ( ';' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:757:1: ( ';' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:790:1: ( ( ';' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:791:1: ( ';' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:757:1: ( ';' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:758:1: ';'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:791:1: ( ';' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:792:1: ';'
             {
              before(grammarAccess.getRoleAccess().getSemicolonKeyword_3()); 
-            match(input,12,FOLLOW_12_in_rule__Role__Group__3__Impl1580); 
+            match(input,12,FOLLOW_12_in_rule__Role__Group__3__Impl1658); 
              after(grammarAccess.getRoleAccess().getSemicolonKeyword_3()); 
 
             }
@@ -2242,21 +2352,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WorkProductType__Group__0"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:779:1: rule__WorkProductType__Group__0 : rule__WorkProductType__Group__0__Impl rule__WorkProductType__Group__1 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:813:1: rule__WorkProductType__Group__0 : rule__WorkProductType__Group__0__Impl rule__WorkProductType__Group__1 ;
     public final void rule__WorkProductType__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:783:1: ( rule__WorkProductType__Group__0__Impl rule__WorkProductType__Group__1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:784:2: rule__WorkProductType__Group__0__Impl rule__WorkProductType__Group__1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:817:1: ( rule__WorkProductType__Group__0__Impl rule__WorkProductType__Group__1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:818:2: rule__WorkProductType__Group__0__Impl rule__WorkProductType__Group__1
             {
-            pushFollow(FOLLOW_rule__WorkProductType__Group__0__Impl_in_rule__WorkProductType__Group__01619);
+            pushFollow(FOLLOW_rule__WorkProductType__Group__0__Impl_in_rule__WorkProductType__Group__01697);
             rule__WorkProductType__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__WorkProductType__Group__1_in_rule__WorkProductType__Group__01622);
+            pushFollow(FOLLOW_rule__WorkProductType__Group__1_in_rule__WorkProductType__Group__01700);
             rule__WorkProductType__Group__1();
 
             state._fsp--;
@@ -2280,20 +2390,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WorkProductType__Group__0__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:791:1: rule__WorkProductType__Group__0__Impl : ( 'WorkProductType' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:825:1: rule__WorkProductType__Group__0__Impl : ( 'WorkProductType' ) ;
     public final void rule__WorkProductType__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:795:1: ( ( 'WorkProductType' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:796:1: ( 'WorkProductType' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:829:1: ( ( 'WorkProductType' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:830:1: ( 'WorkProductType' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:796:1: ( 'WorkProductType' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:797:1: 'WorkProductType'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:830:1: ( 'WorkProductType' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:831:1: 'WorkProductType'
             {
              before(grammarAccess.getWorkProductTypeAccess().getWorkProductTypeKeyword_0()); 
-            match(input,13,FOLLOW_13_in_rule__WorkProductType__Group__0__Impl1650); 
+            match(input,13,FOLLOW_13_in_rule__WorkProductType__Group__0__Impl1728); 
              after(grammarAccess.getWorkProductTypeAccess().getWorkProductTypeKeyword_0()); 
 
             }
@@ -2317,21 +2427,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WorkProductType__Group__1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:810:1: rule__WorkProductType__Group__1 : rule__WorkProductType__Group__1__Impl rule__WorkProductType__Group__2 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:844:1: rule__WorkProductType__Group__1 : rule__WorkProductType__Group__1__Impl rule__WorkProductType__Group__2 ;
     public final void rule__WorkProductType__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:814:1: ( rule__WorkProductType__Group__1__Impl rule__WorkProductType__Group__2 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:815:2: rule__WorkProductType__Group__1__Impl rule__WorkProductType__Group__2
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:848:1: ( rule__WorkProductType__Group__1__Impl rule__WorkProductType__Group__2 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:849:2: rule__WorkProductType__Group__1__Impl rule__WorkProductType__Group__2
             {
-            pushFollow(FOLLOW_rule__WorkProductType__Group__1__Impl_in_rule__WorkProductType__Group__11681);
+            pushFollow(FOLLOW_rule__WorkProductType__Group__1__Impl_in_rule__WorkProductType__Group__11759);
             rule__WorkProductType__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__WorkProductType__Group__2_in_rule__WorkProductType__Group__11684);
+            pushFollow(FOLLOW_rule__WorkProductType__Group__2_in_rule__WorkProductType__Group__11762);
             rule__WorkProductType__Group__2();
 
             state._fsp--;
@@ -2355,23 +2465,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WorkProductType__Group__1__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:822:1: rule__WorkProductType__Group__1__Impl : ( ( rule__WorkProductType__NameAssignment_1 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:856:1: rule__WorkProductType__Group__1__Impl : ( ( rule__WorkProductType__NameAssignment_1 ) ) ;
     public final void rule__WorkProductType__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:826:1: ( ( ( rule__WorkProductType__NameAssignment_1 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:827:1: ( ( rule__WorkProductType__NameAssignment_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:860:1: ( ( ( rule__WorkProductType__NameAssignment_1 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:861:1: ( ( rule__WorkProductType__NameAssignment_1 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:827:1: ( ( rule__WorkProductType__NameAssignment_1 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:828:1: ( rule__WorkProductType__NameAssignment_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:861:1: ( ( rule__WorkProductType__NameAssignment_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:862:1: ( rule__WorkProductType__NameAssignment_1 )
             {
              before(grammarAccess.getWorkProductTypeAccess().getNameAssignment_1()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:829:1: ( rule__WorkProductType__NameAssignment_1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:829:2: rule__WorkProductType__NameAssignment_1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:863:1: ( rule__WorkProductType__NameAssignment_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:863:2: rule__WorkProductType__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__WorkProductType__NameAssignment_1_in_rule__WorkProductType__Group__1__Impl1711);
+            pushFollow(FOLLOW_rule__WorkProductType__NameAssignment_1_in_rule__WorkProductType__Group__1__Impl1789);
             rule__WorkProductType__NameAssignment_1();
 
             state._fsp--;
@@ -2402,21 +2512,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WorkProductType__Group__2"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:839:1: rule__WorkProductType__Group__2 : rule__WorkProductType__Group__2__Impl rule__WorkProductType__Group__3 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:873:1: rule__WorkProductType__Group__2 : rule__WorkProductType__Group__2__Impl rule__WorkProductType__Group__3 ;
     public final void rule__WorkProductType__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:843:1: ( rule__WorkProductType__Group__2__Impl rule__WorkProductType__Group__3 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:844:2: rule__WorkProductType__Group__2__Impl rule__WorkProductType__Group__3
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:877:1: ( rule__WorkProductType__Group__2__Impl rule__WorkProductType__Group__3 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:878:2: rule__WorkProductType__Group__2__Impl rule__WorkProductType__Group__3
             {
-            pushFollow(FOLLOW_rule__WorkProductType__Group__2__Impl_in_rule__WorkProductType__Group__21741);
+            pushFollow(FOLLOW_rule__WorkProductType__Group__2__Impl_in_rule__WorkProductType__Group__21819);
             rule__WorkProductType__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__WorkProductType__Group__3_in_rule__WorkProductType__Group__21744);
+            pushFollow(FOLLOW_rule__WorkProductType__Group__3_in_rule__WorkProductType__Group__21822);
             rule__WorkProductType__Group__3();
 
             state._fsp--;
@@ -2440,23 +2550,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WorkProductType__Group__2__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:851:1: rule__WorkProductType__Group__2__Impl : ( ( rule__WorkProductType__TextfieldAssignment_2 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:885:1: rule__WorkProductType__Group__2__Impl : ( ( rule__WorkProductType__TextfieldAssignment_2 ) ) ;
     public final void rule__WorkProductType__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:855:1: ( ( ( rule__WorkProductType__TextfieldAssignment_2 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:856:1: ( ( rule__WorkProductType__TextfieldAssignment_2 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:889:1: ( ( ( rule__WorkProductType__TextfieldAssignment_2 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:890:1: ( ( rule__WorkProductType__TextfieldAssignment_2 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:856:1: ( ( rule__WorkProductType__TextfieldAssignment_2 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:857:1: ( rule__WorkProductType__TextfieldAssignment_2 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:890:1: ( ( rule__WorkProductType__TextfieldAssignment_2 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:891:1: ( rule__WorkProductType__TextfieldAssignment_2 )
             {
              before(grammarAccess.getWorkProductTypeAccess().getTextfieldAssignment_2()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:858:1: ( rule__WorkProductType__TextfieldAssignment_2 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:858:2: rule__WorkProductType__TextfieldAssignment_2
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:892:1: ( rule__WorkProductType__TextfieldAssignment_2 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:892:2: rule__WorkProductType__TextfieldAssignment_2
             {
-            pushFollow(FOLLOW_rule__WorkProductType__TextfieldAssignment_2_in_rule__WorkProductType__Group__2__Impl1771);
+            pushFollow(FOLLOW_rule__WorkProductType__TextfieldAssignment_2_in_rule__WorkProductType__Group__2__Impl1849);
             rule__WorkProductType__TextfieldAssignment_2();
 
             state._fsp--;
@@ -2487,16 +2597,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WorkProductType__Group__3"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:868:1: rule__WorkProductType__Group__3 : rule__WorkProductType__Group__3__Impl ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:902:1: rule__WorkProductType__Group__3 : rule__WorkProductType__Group__3__Impl ;
     public final void rule__WorkProductType__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:872:1: ( rule__WorkProductType__Group__3__Impl )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:873:2: rule__WorkProductType__Group__3__Impl
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:906:1: ( rule__WorkProductType__Group__3__Impl )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:907:2: rule__WorkProductType__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__WorkProductType__Group__3__Impl_in_rule__WorkProductType__Group__31801);
+            pushFollow(FOLLOW_rule__WorkProductType__Group__3__Impl_in_rule__WorkProductType__Group__31879);
             rule__WorkProductType__Group__3__Impl();
 
             state._fsp--;
@@ -2520,20 +2630,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WorkProductType__Group__3__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:879:1: rule__WorkProductType__Group__3__Impl : ( ';' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:913:1: rule__WorkProductType__Group__3__Impl : ( ';' ) ;
     public final void rule__WorkProductType__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:883:1: ( ( ';' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:884:1: ( ';' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:917:1: ( ( ';' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:918:1: ( ';' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:884:1: ( ';' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:885:1: ';'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:918:1: ( ';' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:919:1: ';'
             {
              before(grammarAccess.getWorkProductTypeAccess().getSemicolonKeyword_3()); 
-            match(input,12,FOLLOW_12_in_rule__WorkProductType__Group__3__Impl1829); 
+            match(input,12,FOLLOW_12_in_rule__WorkProductType__Group__3__Impl1907); 
              after(grammarAccess.getWorkProductTypeAccess().getSemicolonKeyword_3()); 
 
             }
@@ -2557,21 +2667,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WorkProduct__Group__0"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:906:1: rule__WorkProduct__Group__0 : rule__WorkProduct__Group__0__Impl rule__WorkProduct__Group__1 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:940:1: rule__WorkProduct__Group__0 : rule__WorkProduct__Group__0__Impl rule__WorkProduct__Group__1 ;
     public final void rule__WorkProduct__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:910:1: ( rule__WorkProduct__Group__0__Impl rule__WorkProduct__Group__1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:911:2: rule__WorkProduct__Group__0__Impl rule__WorkProduct__Group__1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:944:1: ( rule__WorkProduct__Group__0__Impl rule__WorkProduct__Group__1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:945:2: rule__WorkProduct__Group__0__Impl rule__WorkProduct__Group__1
             {
-            pushFollow(FOLLOW_rule__WorkProduct__Group__0__Impl_in_rule__WorkProduct__Group__01868);
+            pushFollow(FOLLOW_rule__WorkProduct__Group__0__Impl_in_rule__WorkProduct__Group__01946);
             rule__WorkProduct__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__WorkProduct__Group__1_in_rule__WorkProduct__Group__01871);
+            pushFollow(FOLLOW_rule__WorkProduct__Group__1_in_rule__WorkProduct__Group__01949);
             rule__WorkProduct__Group__1();
 
             state._fsp--;
@@ -2595,20 +2705,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WorkProduct__Group__0__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:918:1: rule__WorkProduct__Group__0__Impl : ( 'WorkProduct' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:952:1: rule__WorkProduct__Group__0__Impl : ( 'WorkProduct' ) ;
     public final void rule__WorkProduct__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:922:1: ( ( 'WorkProduct' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:923:1: ( 'WorkProduct' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:956:1: ( ( 'WorkProduct' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:957:1: ( 'WorkProduct' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:923:1: ( 'WorkProduct' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:924:1: 'WorkProduct'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:957:1: ( 'WorkProduct' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:958:1: 'WorkProduct'
             {
              before(grammarAccess.getWorkProductAccess().getWorkProductKeyword_0()); 
-            match(input,14,FOLLOW_14_in_rule__WorkProduct__Group__0__Impl1899); 
+            match(input,14,FOLLOW_14_in_rule__WorkProduct__Group__0__Impl1977); 
              after(grammarAccess.getWorkProductAccess().getWorkProductKeyword_0()); 
 
             }
@@ -2632,21 +2742,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WorkProduct__Group__1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:937:1: rule__WorkProduct__Group__1 : rule__WorkProduct__Group__1__Impl rule__WorkProduct__Group__2 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:971:1: rule__WorkProduct__Group__1 : rule__WorkProduct__Group__1__Impl rule__WorkProduct__Group__2 ;
     public final void rule__WorkProduct__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:941:1: ( rule__WorkProduct__Group__1__Impl rule__WorkProduct__Group__2 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:942:2: rule__WorkProduct__Group__1__Impl rule__WorkProduct__Group__2
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:975:1: ( rule__WorkProduct__Group__1__Impl rule__WorkProduct__Group__2 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:976:2: rule__WorkProduct__Group__1__Impl rule__WorkProduct__Group__2
             {
-            pushFollow(FOLLOW_rule__WorkProduct__Group__1__Impl_in_rule__WorkProduct__Group__11930);
+            pushFollow(FOLLOW_rule__WorkProduct__Group__1__Impl_in_rule__WorkProduct__Group__12008);
             rule__WorkProduct__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__WorkProduct__Group__2_in_rule__WorkProduct__Group__11933);
+            pushFollow(FOLLOW_rule__WorkProduct__Group__2_in_rule__WorkProduct__Group__12011);
             rule__WorkProduct__Group__2();
 
             state._fsp--;
@@ -2670,23 +2780,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WorkProduct__Group__1__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:949:1: rule__WorkProduct__Group__1__Impl : ( ( rule__WorkProduct__NameAssignment_1 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:983:1: rule__WorkProduct__Group__1__Impl : ( ( rule__WorkProduct__NameAssignment_1 ) ) ;
     public final void rule__WorkProduct__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:953:1: ( ( ( rule__WorkProduct__NameAssignment_1 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:954:1: ( ( rule__WorkProduct__NameAssignment_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:987:1: ( ( ( rule__WorkProduct__NameAssignment_1 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:988:1: ( ( rule__WorkProduct__NameAssignment_1 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:954:1: ( ( rule__WorkProduct__NameAssignment_1 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:955:1: ( rule__WorkProduct__NameAssignment_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:988:1: ( ( rule__WorkProduct__NameAssignment_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:989:1: ( rule__WorkProduct__NameAssignment_1 )
             {
              before(grammarAccess.getWorkProductAccess().getNameAssignment_1()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:956:1: ( rule__WorkProduct__NameAssignment_1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:956:2: rule__WorkProduct__NameAssignment_1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:990:1: ( rule__WorkProduct__NameAssignment_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:990:2: rule__WorkProduct__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__WorkProduct__NameAssignment_1_in_rule__WorkProduct__Group__1__Impl1960);
+            pushFollow(FOLLOW_rule__WorkProduct__NameAssignment_1_in_rule__WorkProduct__Group__1__Impl2038);
             rule__WorkProduct__NameAssignment_1();
 
             state._fsp--;
@@ -2717,21 +2827,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WorkProduct__Group__2"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:966:1: rule__WorkProduct__Group__2 : rule__WorkProduct__Group__2__Impl rule__WorkProduct__Group__3 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1000:1: rule__WorkProduct__Group__2 : rule__WorkProduct__Group__2__Impl rule__WorkProduct__Group__3 ;
     public final void rule__WorkProduct__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:970:1: ( rule__WorkProduct__Group__2__Impl rule__WorkProduct__Group__3 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:971:2: rule__WorkProduct__Group__2__Impl rule__WorkProduct__Group__3
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1004:1: ( rule__WorkProduct__Group__2__Impl rule__WorkProduct__Group__3 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1005:2: rule__WorkProduct__Group__2__Impl rule__WorkProduct__Group__3
             {
-            pushFollow(FOLLOW_rule__WorkProduct__Group__2__Impl_in_rule__WorkProduct__Group__21990);
+            pushFollow(FOLLOW_rule__WorkProduct__Group__2__Impl_in_rule__WorkProduct__Group__22068);
             rule__WorkProduct__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__WorkProduct__Group__3_in_rule__WorkProduct__Group__21993);
+            pushFollow(FOLLOW_rule__WorkProduct__Group__3_in_rule__WorkProduct__Group__22071);
             rule__WorkProduct__Group__3();
 
             state._fsp--;
@@ -2755,20 +2865,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WorkProduct__Group__2__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:978:1: rule__WorkProduct__Group__2__Impl : ( ':' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1012:1: rule__WorkProduct__Group__2__Impl : ( ':' ) ;
     public final void rule__WorkProduct__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:982:1: ( ( ':' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:983:1: ( ':' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1016:1: ( ( ':' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1017:1: ( ':' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:983:1: ( ':' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:984:1: ':'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1017:1: ( ':' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1018:1: ':'
             {
              before(grammarAccess.getWorkProductAccess().getColonKeyword_2()); 
-            match(input,15,FOLLOW_15_in_rule__WorkProduct__Group__2__Impl2021); 
+            match(input,15,FOLLOW_15_in_rule__WorkProduct__Group__2__Impl2099); 
              after(grammarAccess.getWorkProductAccess().getColonKeyword_2()); 
 
             }
@@ -2792,21 +2902,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WorkProduct__Group__3"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:997:1: rule__WorkProduct__Group__3 : rule__WorkProduct__Group__3__Impl rule__WorkProduct__Group__4 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1031:1: rule__WorkProduct__Group__3 : rule__WorkProduct__Group__3__Impl rule__WorkProduct__Group__4 ;
     public final void rule__WorkProduct__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1001:1: ( rule__WorkProduct__Group__3__Impl rule__WorkProduct__Group__4 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1002:2: rule__WorkProduct__Group__3__Impl rule__WorkProduct__Group__4
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1035:1: ( rule__WorkProduct__Group__3__Impl rule__WorkProduct__Group__4 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1036:2: rule__WorkProduct__Group__3__Impl rule__WorkProduct__Group__4
             {
-            pushFollow(FOLLOW_rule__WorkProduct__Group__3__Impl_in_rule__WorkProduct__Group__32052);
+            pushFollow(FOLLOW_rule__WorkProduct__Group__3__Impl_in_rule__WorkProduct__Group__32130);
             rule__WorkProduct__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__WorkProduct__Group__4_in_rule__WorkProduct__Group__32055);
+            pushFollow(FOLLOW_rule__WorkProduct__Group__4_in_rule__WorkProduct__Group__32133);
             rule__WorkProduct__Group__4();
 
             state._fsp--;
@@ -2830,23 +2940,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WorkProduct__Group__3__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1009:1: rule__WorkProduct__Group__3__Impl : ( ( rule__WorkProduct__TypeAssignment_3 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1043:1: rule__WorkProduct__Group__3__Impl : ( ( rule__WorkProduct__TypeAssignment_3 ) ) ;
     public final void rule__WorkProduct__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1013:1: ( ( ( rule__WorkProduct__TypeAssignment_3 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1014:1: ( ( rule__WorkProduct__TypeAssignment_3 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1047:1: ( ( ( rule__WorkProduct__TypeAssignment_3 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1048:1: ( ( rule__WorkProduct__TypeAssignment_3 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1014:1: ( ( rule__WorkProduct__TypeAssignment_3 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1015:1: ( rule__WorkProduct__TypeAssignment_3 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1048:1: ( ( rule__WorkProduct__TypeAssignment_3 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1049:1: ( rule__WorkProduct__TypeAssignment_3 )
             {
              before(grammarAccess.getWorkProductAccess().getTypeAssignment_3()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1016:1: ( rule__WorkProduct__TypeAssignment_3 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1016:2: rule__WorkProduct__TypeAssignment_3
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1050:1: ( rule__WorkProduct__TypeAssignment_3 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1050:2: rule__WorkProduct__TypeAssignment_3
             {
-            pushFollow(FOLLOW_rule__WorkProduct__TypeAssignment_3_in_rule__WorkProduct__Group__3__Impl2082);
+            pushFollow(FOLLOW_rule__WorkProduct__TypeAssignment_3_in_rule__WorkProduct__Group__3__Impl2160);
             rule__WorkProduct__TypeAssignment_3();
 
             state._fsp--;
@@ -2877,21 +2987,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WorkProduct__Group__4"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1026:1: rule__WorkProduct__Group__4 : rule__WorkProduct__Group__4__Impl rule__WorkProduct__Group__5 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1060:1: rule__WorkProduct__Group__4 : rule__WorkProduct__Group__4__Impl rule__WorkProduct__Group__5 ;
     public final void rule__WorkProduct__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1030:1: ( rule__WorkProduct__Group__4__Impl rule__WorkProduct__Group__5 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1031:2: rule__WorkProduct__Group__4__Impl rule__WorkProduct__Group__5
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1064:1: ( rule__WorkProduct__Group__4__Impl rule__WorkProduct__Group__5 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1065:2: rule__WorkProduct__Group__4__Impl rule__WorkProduct__Group__5
             {
-            pushFollow(FOLLOW_rule__WorkProduct__Group__4__Impl_in_rule__WorkProduct__Group__42112);
+            pushFollow(FOLLOW_rule__WorkProduct__Group__4__Impl_in_rule__WorkProduct__Group__42190);
             rule__WorkProduct__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__WorkProduct__Group__5_in_rule__WorkProduct__Group__42115);
+            pushFollow(FOLLOW_rule__WorkProduct__Group__5_in_rule__WorkProduct__Group__42193);
             rule__WorkProduct__Group__5();
 
             state._fsp--;
@@ -2915,23 +3025,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WorkProduct__Group__4__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1038:1: rule__WorkProduct__Group__4__Impl : ( ( rule__WorkProduct__TextfieldAssignment_4 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1072:1: rule__WorkProduct__Group__4__Impl : ( ( rule__WorkProduct__TextfieldAssignment_4 ) ) ;
     public final void rule__WorkProduct__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1042:1: ( ( ( rule__WorkProduct__TextfieldAssignment_4 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1043:1: ( ( rule__WorkProduct__TextfieldAssignment_4 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1076:1: ( ( ( rule__WorkProduct__TextfieldAssignment_4 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1077:1: ( ( rule__WorkProduct__TextfieldAssignment_4 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1043:1: ( ( rule__WorkProduct__TextfieldAssignment_4 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1044:1: ( rule__WorkProduct__TextfieldAssignment_4 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1077:1: ( ( rule__WorkProduct__TextfieldAssignment_4 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1078:1: ( rule__WorkProduct__TextfieldAssignment_4 )
             {
              before(grammarAccess.getWorkProductAccess().getTextfieldAssignment_4()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1045:1: ( rule__WorkProduct__TextfieldAssignment_4 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1045:2: rule__WorkProduct__TextfieldAssignment_4
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1079:1: ( rule__WorkProduct__TextfieldAssignment_4 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1079:2: rule__WorkProduct__TextfieldAssignment_4
             {
-            pushFollow(FOLLOW_rule__WorkProduct__TextfieldAssignment_4_in_rule__WorkProduct__Group__4__Impl2142);
+            pushFollow(FOLLOW_rule__WorkProduct__TextfieldAssignment_4_in_rule__WorkProduct__Group__4__Impl2220);
             rule__WorkProduct__TextfieldAssignment_4();
 
             state._fsp--;
@@ -2962,16 +3072,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WorkProduct__Group__5"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1055:1: rule__WorkProduct__Group__5 : rule__WorkProduct__Group__5__Impl ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1089:1: rule__WorkProduct__Group__5 : rule__WorkProduct__Group__5__Impl ;
     public final void rule__WorkProduct__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1059:1: ( rule__WorkProduct__Group__5__Impl )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1060:2: rule__WorkProduct__Group__5__Impl
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1093:1: ( rule__WorkProduct__Group__5__Impl )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1094:2: rule__WorkProduct__Group__5__Impl
             {
-            pushFollow(FOLLOW_rule__WorkProduct__Group__5__Impl_in_rule__WorkProduct__Group__52172);
+            pushFollow(FOLLOW_rule__WorkProduct__Group__5__Impl_in_rule__WorkProduct__Group__52250);
             rule__WorkProduct__Group__5__Impl();
 
             state._fsp--;
@@ -2995,20 +3105,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WorkProduct__Group__5__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1066:1: rule__WorkProduct__Group__5__Impl : ( ';' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1100:1: rule__WorkProduct__Group__5__Impl : ( ';' ) ;
     public final void rule__WorkProduct__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1070:1: ( ( ';' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1071:1: ( ';' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1104:1: ( ( ';' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1105:1: ( ';' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1071:1: ( ';' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1072:1: ';'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1105:1: ( ';' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1106:1: ';'
             {
              before(grammarAccess.getWorkProductAccess().getSemicolonKeyword_5()); 
-            match(input,12,FOLLOW_12_in_rule__WorkProduct__Group__5__Impl2200); 
+            match(input,12,FOLLOW_12_in_rule__WorkProduct__Group__5__Impl2278); 
              after(grammarAccess.getWorkProductAccess().getSemicolonKeyword_5()); 
 
             }
@@ -3032,21 +3142,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GuidanceType__Group__0"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1097:1: rule__GuidanceType__Group__0 : rule__GuidanceType__Group__0__Impl rule__GuidanceType__Group__1 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1131:1: rule__GuidanceType__Group__0 : rule__GuidanceType__Group__0__Impl rule__GuidanceType__Group__1 ;
     public final void rule__GuidanceType__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1101:1: ( rule__GuidanceType__Group__0__Impl rule__GuidanceType__Group__1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1102:2: rule__GuidanceType__Group__0__Impl rule__GuidanceType__Group__1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1135:1: ( rule__GuidanceType__Group__0__Impl rule__GuidanceType__Group__1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1136:2: rule__GuidanceType__Group__0__Impl rule__GuidanceType__Group__1
             {
-            pushFollow(FOLLOW_rule__GuidanceType__Group__0__Impl_in_rule__GuidanceType__Group__02243);
+            pushFollow(FOLLOW_rule__GuidanceType__Group__0__Impl_in_rule__GuidanceType__Group__02321);
             rule__GuidanceType__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__GuidanceType__Group__1_in_rule__GuidanceType__Group__02246);
+            pushFollow(FOLLOW_rule__GuidanceType__Group__1_in_rule__GuidanceType__Group__02324);
             rule__GuidanceType__Group__1();
 
             state._fsp--;
@@ -3070,20 +3180,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GuidanceType__Group__0__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1109:1: rule__GuidanceType__Group__0__Impl : ( 'GuidanceType' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1143:1: rule__GuidanceType__Group__0__Impl : ( 'GuidanceType' ) ;
     public final void rule__GuidanceType__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1113:1: ( ( 'GuidanceType' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1114:1: ( 'GuidanceType' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1147:1: ( ( 'GuidanceType' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1148:1: ( 'GuidanceType' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1114:1: ( 'GuidanceType' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1115:1: 'GuidanceType'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1148:1: ( 'GuidanceType' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1149:1: 'GuidanceType'
             {
              before(grammarAccess.getGuidanceTypeAccess().getGuidanceTypeKeyword_0()); 
-            match(input,16,FOLLOW_16_in_rule__GuidanceType__Group__0__Impl2274); 
+            match(input,16,FOLLOW_16_in_rule__GuidanceType__Group__0__Impl2352); 
              after(grammarAccess.getGuidanceTypeAccess().getGuidanceTypeKeyword_0()); 
 
             }
@@ -3107,21 +3217,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GuidanceType__Group__1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1128:1: rule__GuidanceType__Group__1 : rule__GuidanceType__Group__1__Impl rule__GuidanceType__Group__2 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1162:1: rule__GuidanceType__Group__1 : rule__GuidanceType__Group__1__Impl rule__GuidanceType__Group__2 ;
     public final void rule__GuidanceType__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1132:1: ( rule__GuidanceType__Group__1__Impl rule__GuidanceType__Group__2 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1133:2: rule__GuidanceType__Group__1__Impl rule__GuidanceType__Group__2
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1166:1: ( rule__GuidanceType__Group__1__Impl rule__GuidanceType__Group__2 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1167:2: rule__GuidanceType__Group__1__Impl rule__GuidanceType__Group__2
             {
-            pushFollow(FOLLOW_rule__GuidanceType__Group__1__Impl_in_rule__GuidanceType__Group__12305);
+            pushFollow(FOLLOW_rule__GuidanceType__Group__1__Impl_in_rule__GuidanceType__Group__12383);
             rule__GuidanceType__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__GuidanceType__Group__2_in_rule__GuidanceType__Group__12308);
+            pushFollow(FOLLOW_rule__GuidanceType__Group__2_in_rule__GuidanceType__Group__12386);
             rule__GuidanceType__Group__2();
 
             state._fsp--;
@@ -3145,23 +3255,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GuidanceType__Group__1__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1140:1: rule__GuidanceType__Group__1__Impl : ( ( rule__GuidanceType__NameAssignment_1 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1174:1: rule__GuidanceType__Group__1__Impl : ( ( rule__GuidanceType__NameAssignment_1 ) ) ;
     public final void rule__GuidanceType__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1144:1: ( ( ( rule__GuidanceType__NameAssignment_1 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1145:1: ( ( rule__GuidanceType__NameAssignment_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1178:1: ( ( ( rule__GuidanceType__NameAssignment_1 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1179:1: ( ( rule__GuidanceType__NameAssignment_1 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1145:1: ( ( rule__GuidanceType__NameAssignment_1 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1146:1: ( rule__GuidanceType__NameAssignment_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1179:1: ( ( rule__GuidanceType__NameAssignment_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1180:1: ( rule__GuidanceType__NameAssignment_1 )
             {
              before(grammarAccess.getGuidanceTypeAccess().getNameAssignment_1()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1147:1: ( rule__GuidanceType__NameAssignment_1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1147:2: rule__GuidanceType__NameAssignment_1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1181:1: ( rule__GuidanceType__NameAssignment_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1181:2: rule__GuidanceType__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__GuidanceType__NameAssignment_1_in_rule__GuidanceType__Group__1__Impl2335);
+            pushFollow(FOLLOW_rule__GuidanceType__NameAssignment_1_in_rule__GuidanceType__Group__1__Impl2413);
             rule__GuidanceType__NameAssignment_1();
 
             state._fsp--;
@@ -3192,21 +3302,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GuidanceType__Group__2"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1157:1: rule__GuidanceType__Group__2 : rule__GuidanceType__Group__2__Impl rule__GuidanceType__Group__3 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1191:1: rule__GuidanceType__Group__2 : rule__GuidanceType__Group__2__Impl rule__GuidanceType__Group__3 ;
     public final void rule__GuidanceType__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1161:1: ( rule__GuidanceType__Group__2__Impl rule__GuidanceType__Group__3 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1162:2: rule__GuidanceType__Group__2__Impl rule__GuidanceType__Group__3
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1195:1: ( rule__GuidanceType__Group__2__Impl rule__GuidanceType__Group__3 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1196:2: rule__GuidanceType__Group__2__Impl rule__GuidanceType__Group__3
             {
-            pushFollow(FOLLOW_rule__GuidanceType__Group__2__Impl_in_rule__GuidanceType__Group__22365);
+            pushFollow(FOLLOW_rule__GuidanceType__Group__2__Impl_in_rule__GuidanceType__Group__22443);
             rule__GuidanceType__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__GuidanceType__Group__3_in_rule__GuidanceType__Group__22368);
+            pushFollow(FOLLOW_rule__GuidanceType__Group__3_in_rule__GuidanceType__Group__22446);
             rule__GuidanceType__Group__3();
 
             state._fsp--;
@@ -3230,23 +3340,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GuidanceType__Group__2__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1169:1: rule__GuidanceType__Group__2__Impl : ( ( rule__GuidanceType__TextfieldAssignment_2 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1203:1: rule__GuidanceType__Group__2__Impl : ( ( rule__GuidanceType__TextfieldAssignment_2 ) ) ;
     public final void rule__GuidanceType__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1173:1: ( ( ( rule__GuidanceType__TextfieldAssignment_2 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1174:1: ( ( rule__GuidanceType__TextfieldAssignment_2 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1207:1: ( ( ( rule__GuidanceType__TextfieldAssignment_2 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1208:1: ( ( rule__GuidanceType__TextfieldAssignment_2 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1174:1: ( ( rule__GuidanceType__TextfieldAssignment_2 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1175:1: ( rule__GuidanceType__TextfieldAssignment_2 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1208:1: ( ( rule__GuidanceType__TextfieldAssignment_2 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1209:1: ( rule__GuidanceType__TextfieldAssignment_2 )
             {
              before(grammarAccess.getGuidanceTypeAccess().getTextfieldAssignment_2()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1176:1: ( rule__GuidanceType__TextfieldAssignment_2 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1176:2: rule__GuidanceType__TextfieldAssignment_2
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1210:1: ( rule__GuidanceType__TextfieldAssignment_2 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1210:2: rule__GuidanceType__TextfieldAssignment_2
             {
-            pushFollow(FOLLOW_rule__GuidanceType__TextfieldAssignment_2_in_rule__GuidanceType__Group__2__Impl2395);
+            pushFollow(FOLLOW_rule__GuidanceType__TextfieldAssignment_2_in_rule__GuidanceType__Group__2__Impl2473);
             rule__GuidanceType__TextfieldAssignment_2();
 
             state._fsp--;
@@ -3277,16 +3387,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GuidanceType__Group__3"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1186:1: rule__GuidanceType__Group__3 : rule__GuidanceType__Group__3__Impl ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1220:1: rule__GuidanceType__Group__3 : rule__GuidanceType__Group__3__Impl ;
     public final void rule__GuidanceType__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1190:1: ( rule__GuidanceType__Group__3__Impl )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1191:2: rule__GuidanceType__Group__3__Impl
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1224:1: ( rule__GuidanceType__Group__3__Impl )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1225:2: rule__GuidanceType__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__GuidanceType__Group__3__Impl_in_rule__GuidanceType__Group__32425);
+            pushFollow(FOLLOW_rule__GuidanceType__Group__3__Impl_in_rule__GuidanceType__Group__32503);
             rule__GuidanceType__Group__3__Impl();
 
             state._fsp--;
@@ -3310,20 +3420,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GuidanceType__Group__3__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1197:1: rule__GuidanceType__Group__3__Impl : ( ';' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1231:1: rule__GuidanceType__Group__3__Impl : ( ';' ) ;
     public final void rule__GuidanceType__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1201:1: ( ( ';' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1202:1: ( ';' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1235:1: ( ( ';' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1236:1: ( ';' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1202:1: ( ';' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1203:1: ';'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1236:1: ( ';' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1237:1: ';'
             {
              before(grammarAccess.getGuidanceTypeAccess().getSemicolonKeyword_3()); 
-            match(input,12,FOLLOW_12_in_rule__GuidanceType__Group__3__Impl2453); 
+            match(input,12,FOLLOW_12_in_rule__GuidanceType__Group__3__Impl2531); 
              after(grammarAccess.getGuidanceTypeAccess().getSemicolonKeyword_3()); 
 
             }
@@ -3347,21 +3457,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Guidance__Group__0"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1224:1: rule__Guidance__Group__0 : rule__Guidance__Group__0__Impl rule__Guidance__Group__1 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1258:1: rule__Guidance__Group__0 : rule__Guidance__Group__0__Impl rule__Guidance__Group__1 ;
     public final void rule__Guidance__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1228:1: ( rule__Guidance__Group__0__Impl rule__Guidance__Group__1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1229:2: rule__Guidance__Group__0__Impl rule__Guidance__Group__1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1262:1: ( rule__Guidance__Group__0__Impl rule__Guidance__Group__1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1263:2: rule__Guidance__Group__0__Impl rule__Guidance__Group__1
             {
-            pushFollow(FOLLOW_rule__Guidance__Group__0__Impl_in_rule__Guidance__Group__02492);
+            pushFollow(FOLLOW_rule__Guidance__Group__0__Impl_in_rule__Guidance__Group__02570);
             rule__Guidance__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Guidance__Group__1_in_rule__Guidance__Group__02495);
+            pushFollow(FOLLOW_rule__Guidance__Group__1_in_rule__Guidance__Group__02573);
             rule__Guidance__Group__1();
 
             state._fsp--;
@@ -3385,20 +3495,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Guidance__Group__0__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1236:1: rule__Guidance__Group__0__Impl : ( 'Guidance' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1270:1: rule__Guidance__Group__0__Impl : ( 'Guidance' ) ;
     public final void rule__Guidance__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1240:1: ( ( 'Guidance' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1241:1: ( 'Guidance' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1274:1: ( ( 'Guidance' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1275:1: ( 'Guidance' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1241:1: ( 'Guidance' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1242:1: 'Guidance'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1275:1: ( 'Guidance' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1276:1: 'Guidance'
             {
              before(grammarAccess.getGuidanceAccess().getGuidanceKeyword_0()); 
-            match(input,17,FOLLOW_17_in_rule__Guidance__Group__0__Impl2523); 
+            match(input,17,FOLLOW_17_in_rule__Guidance__Group__0__Impl2601); 
              after(grammarAccess.getGuidanceAccess().getGuidanceKeyword_0()); 
 
             }
@@ -3422,21 +3532,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Guidance__Group__1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1255:1: rule__Guidance__Group__1 : rule__Guidance__Group__1__Impl rule__Guidance__Group__2 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1289:1: rule__Guidance__Group__1 : rule__Guidance__Group__1__Impl rule__Guidance__Group__2 ;
     public final void rule__Guidance__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1259:1: ( rule__Guidance__Group__1__Impl rule__Guidance__Group__2 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1260:2: rule__Guidance__Group__1__Impl rule__Guidance__Group__2
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1293:1: ( rule__Guidance__Group__1__Impl rule__Guidance__Group__2 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1294:2: rule__Guidance__Group__1__Impl rule__Guidance__Group__2
             {
-            pushFollow(FOLLOW_rule__Guidance__Group__1__Impl_in_rule__Guidance__Group__12554);
+            pushFollow(FOLLOW_rule__Guidance__Group__1__Impl_in_rule__Guidance__Group__12632);
             rule__Guidance__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Guidance__Group__2_in_rule__Guidance__Group__12557);
+            pushFollow(FOLLOW_rule__Guidance__Group__2_in_rule__Guidance__Group__12635);
             rule__Guidance__Group__2();
 
             state._fsp--;
@@ -3460,23 +3570,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Guidance__Group__1__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1267:1: rule__Guidance__Group__1__Impl : ( ( rule__Guidance__NameAssignment_1 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1301:1: rule__Guidance__Group__1__Impl : ( ( rule__Guidance__NameAssignment_1 ) ) ;
     public final void rule__Guidance__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1271:1: ( ( ( rule__Guidance__NameAssignment_1 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1272:1: ( ( rule__Guidance__NameAssignment_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1305:1: ( ( ( rule__Guidance__NameAssignment_1 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1306:1: ( ( rule__Guidance__NameAssignment_1 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1272:1: ( ( rule__Guidance__NameAssignment_1 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1273:1: ( rule__Guidance__NameAssignment_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1306:1: ( ( rule__Guidance__NameAssignment_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1307:1: ( rule__Guidance__NameAssignment_1 )
             {
              before(grammarAccess.getGuidanceAccess().getNameAssignment_1()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1274:1: ( rule__Guidance__NameAssignment_1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1274:2: rule__Guidance__NameAssignment_1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1308:1: ( rule__Guidance__NameAssignment_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1308:2: rule__Guidance__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Guidance__NameAssignment_1_in_rule__Guidance__Group__1__Impl2584);
+            pushFollow(FOLLOW_rule__Guidance__NameAssignment_1_in_rule__Guidance__Group__1__Impl2662);
             rule__Guidance__NameAssignment_1();
 
             state._fsp--;
@@ -3507,21 +3617,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Guidance__Group__2"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1284:1: rule__Guidance__Group__2 : rule__Guidance__Group__2__Impl rule__Guidance__Group__3 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1318:1: rule__Guidance__Group__2 : rule__Guidance__Group__2__Impl rule__Guidance__Group__3 ;
     public final void rule__Guidance__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1288:1: ( rule__Guidance__Group__2__Impl rule__Guidance__Group__3 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1289:2: rule__Guidance__Group__2__Impl rule__Guidance__Group__3
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1322:1: ( rule__Guidance__Group__2__Impl rule__Guidance__Group__3 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1323:2: rule__Guidance__Group__2__Impl rule__Guidance__Group__3
             {
-            pushFollow(FOLLOW_rule__Guidance__Group__2__Impl_in_rule__Guidance__Group__22614);
+            pushFollow(FOLLOW_rule__Guidance__Group__2__Impl_in_rule__Guidance__Group__22692);
             rule__Guidance__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Guidance__Group__3_in_rule__Guidance__Group__22617);
+            pushFollow(FOLLOW_rule__Guidance__Group__3_in_rule__Guidance__Group__22695);
             rule__Guidance__Group__3();
 
             state._fsp--;
@@ -3545,20 +3655,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Guidance__Group__2__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1296:1: rule__Guidance__Group__2__Impl : ( ':' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1330:1: rule__Guidance__Group__2__Impl : ( ':' ) ;
     public final void rule__Guidance__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1300:1: ( ( ':' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1301:1: ( ':' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1334:1: ( ( ':' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1335:1: ( ':' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1301:1: ( ':' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1302:1: ':'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1335:1: ( ':' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1336:1: ':'
             {
              before(grammarAccess.getGuidanceAccess().getColonKeyword_2()); 
-            match(input,15,FOLLOW_15_in_rule__Guidance__Group__2__Impl2645); 
+            match(input,15,FOLLOW_15_in_rule__Guidance__Group__2__Impl2723); 
              after(grammarAccess.getGuidanceAccess().getColonKeyword_2()); 
 
             }
@@ -3582,21 +3692,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Guidance__Group__3"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1315:1: rule__Guidance__Group__3 : rule__Guidance__Group__3__Impl rule__Guidance__Group__4 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1349:1: rule__Guidance__Group__3 : rule__Guidance__Group__3__Impl rule__Guidance__Group__4 ;
     public final void rule__Guidance__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1319:1: ( rule__Guidance__Group__3__Impl rule__Guidance__Group__4 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1320:2: rule__Guidance__Group__3__Impl rule__Guidance__Group__4
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1353:1: ( rule__Guidance__Group__3__Impl rule__Guidance__Group__4 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1354:2: rule__Guidance__Group__3__Impl rule__Guidance__Group__4
             {
-            pushFollow(FOLLOW_rule__Guidance__Group__3__Impl_in_rule__Guidance__Group__32676);
+            pushFollow(FOLLOW_rule__Guidance__Group__3__Impl_in_rule__Guidance__Group__32754);
             rule__Guidance__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Guidance__Group__4_in_rule__Guidance__Group__32679);
+            pushFollow(FOLLOW_rule__Guidance__Group__4_in_rule__Guidance__Group__32757);
             rule__Guidance__Group__4();
 
             state._fsp--;
@@ -3620,23 +3730,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Guidance__Group__3__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1327:1: rule__Guidance__Group__3__Impl : ( ( rule__Guidance__TypeAssignment_3 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1361:1: rule__Guidance__Group__3__Impl : ( ( rule__Guidance__TypeAssignment_3 ) ) ;
     public final void rule__Guidance__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1331:1: ( ( ( rule__Guidance__TypeAssignment_3 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1332:1: ( ( rule__Guidance__TypeAssignment_3 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1365:1: ( ( ( rule__Guidance__TypeAssignment_3 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1366:1: ( ( rule__Guidance__TypeAssignment_3 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1332:1: ( ( rule__Guidance__TypeAssignment_3 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1333:1: ( rule__Guidance__TypeAssignment_3 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1366:1: ( ( rule__Guidance__TypeAssignment_3 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1367:1: ( rule__Guidance__TypeAssignment_3 )
             {
              before(grammarAccess.getGuidanceAccess().getTypeAssignment_3()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1334:1: ( rule__Guidance__TypeAssignment_3 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1334:2: rule__Guidance__TypeAssignment_3
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1368:1: ( rule__Guidance__TypeAssignment_3 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1368:2: rule__Guidance__TypeAssignment_3
             {
-            pushFollow(FOLLOW_rule__Guidance__TypeAssignment_3_in_rule__Guidance__Group__3__Impl2706);
+            pushFollow(FOLLOW_rule__Guidance__TypeAssignment_3_in_rule__Guidance__Group__3__Impl2784);
             rule__Guidance__TypeAssignment_3();
 
             state._fsp--;
@@ -3667,21 +3777,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Guidance__Group__4"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1344:1: rule__Guidance__Group__4 : rule__Guidance__Group__4__Impl rule__Guidance__Group__5 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1378:1: rule__Guidance__Group__4 : rule__Guidance__Group__4__Impl rule__Guidance__Group__5 ;
     public final void rule__Guidance__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1348:1: ( rule__Guidance__Group__4__Impl rule__Guidance__Group__5 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1349:2: rule__Guidance__Group__4__Impl rule__Guidance__Group__5
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1382:1: ( rule__Guidance__Group__4__Impl rule__Guidance__Group__5 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1383:2: rule__Guidance__Group__4__Impl rule__Guidance__Group__5
             {
-            pushFollow(FOLLOW_rule__Guidance__Group__4__Impl_in_rule__Guidance__Group__42736);
+            pushFollow(FOLLOW_rule__Guidance__Group__4__Impl_in_rule__Guidance__Group__42814);
             rule__Guidance__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Guidance__Group__5_in_rule__Guidance__Group__42739);
+            pushFollow(FOLLOW_rule__Guidance__Group__5_in_rule__Guidance__Group__42817);
             rule__Guidance__Group__5();
 
             state._fsp--;
@@ -3705,23 +3815,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Guidance__Group__4__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1356:1: rule__Guidance__Group__4__Impl : ( ( rule__Guidance__TextfieldAssignment_4 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1390:1: rule__Guidance__Group__4__Impl : ( ( rule__Guidance__TextfieldAssignment_4 ) ) ;
     public final void rule__Guidance__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1360:1: ( ( ( rule__Guidance__TextfieldAssignment_4 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1361:1: ( ( rule__Guidance__TextfieldAssignment_4 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1394:1: ( ( ( rule__Guidance__TextfieldAssignment_4 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1395:1: ( ( rule__Guidance__TextfieldAssignment_4 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1361:1: ( ( rule__Guidance__TextfieldAssignment_4 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1362:1: ( rule__Guidance__TextfieldAssignment_4 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1395:1: ( ( rule__Guidance__TextfieldAssignment_4 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1396:1: ( rule__Guidance__TextfieldAssignment_4 )
             {
              before(grammarAccess.getGuidanceAccess().getTextfieldAssignment_4()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1363:1: ( rule__Guidance__TextfieldAssignment_4 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1363:2: rule__Guidance__TextfieldAssignment_4
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1397:1: ( rule__Guidance__TextfieldAssignment_4 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1397:2: rule__Guidance__TextfieldAssignment_4
             {
-            pushFollow(FOLLOW_rule__Guidance__TextfieldAssignment_4_in_rule__Guidance__Group__4__Impl2766);
+            pushFollow(FOLLOW_rule__Guidance__TextfieldAssignment_4_in_rule__Guidance__Group__4__Impl2844);
             rule__Guidance__TextfieldAssignment_4();
 
             state._fsp--;
@@ -3752,16 +3862,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Guidance__Group__5"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1373:1: rule__Guidance__Group__5 : rule__Guidance__Group__5__Impl ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1407:1: rule__Guidance__Group__5 : rule__Guidance__Group__5__Impl ;
     public final void rule__Guidance__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1377:1: ( rule__Guidance__Group__5__Impl )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1378:2: rule__Guidance__Group__5__Impl
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1411:1: ( rule__Guidance__Group__5__Impl )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1412:2: rule__Guidance__Group__5__Impl
             {
-            pushFollow(FOLLOW_rule__Guidance__Group__5__Impl_in_rule__Guidance__Group__52796);
+            pushFollow(FOLLOW_rule__Guidance__Group__5__Impl_in_rule__Guidance__Group__52874);
             rule__Guidance__Group__5__Impl();
 
             state._fsp--;
@@ -3785,20 +3895,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Guidance__Group__5__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1384:1: rule__Guidance__Group__5__Impl : ( ';' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1418:1: rule__Guidance__Group__5__Impl : ( ';' ) ;
     public final void rule__Guidance__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1388:1: ( ( ';' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1389:1: ( ';' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1422:1: ( ( ';' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1423:1: ( ';' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1389:1: ( ';' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1390:1: ';'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1423:1: ( ';' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1424:1: ';'
             {
              before(grammarAccess.getGuidanceAccess().getSemicolonKeyword_5()); 
-            match(input,12,FOLLOW_12_in_rule__Guidance__Group__5__Impl2824); 
+            match(input,12,FOLLOW_12_in_rule__Guidance__Group__5__Impl2902); 
              after(grammarAccess.getGuidanceAccess().getSemicolonKeyword_5()); 
 
             }
@@ -3821,22 +3931,252 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Guidance__Group__5__Impl"
 
 
+    // $ANTLR start "rule__State__Group__0"
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1449:1: rule__State__Group__0 : rule__State__Group__0__Impl rule__State__Group__1 ;
+    public final void rule__State__Group__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1453:1: ( rule__State__Group__0__Impl rule__State__Group__1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1454:2: rule__State__Group__0__Impl rule__State__Group__1
+            {
+            pushFollow(FOLLOW_rule__State__Group__0__Impl_in_rule__State__Group__02945);
+            rule__State__Group__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__State__Group__1_in_rule__State__Group__02948);
+            rule__State__Group__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__State__Group__0"
+
+
+    // $ANTLR start "rule__State__Group__0__Impl"
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1461:1: rule__State__Group__0__Impl : ( 'State' ) ;
+    public final void rule__State__Group__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1465:1: ( ( 'State' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1466:1: ( 'State' )
+            {
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1466:1: ( 'State' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1467:1: 'State'
+            {
+             before(grammarAccess.getStateAccess().getStateKeyword_0()); 
+            match(input,18,FOLLOW_18_in_rule__State__Group__0__Impl2976); 
+             after(grammarAccess.getStateAccess().getStateKeyword_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__State__Group__0__Impl"
+
+
+    // $ANTLR start "rule__State__Group__1"
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1480:1: rule__State__Group__1 : rule__State__Group__1__Impl rule__State__Group__2 ;
+    public final void rule__State__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1484:1: ( rule__State__Group__1__Impl rule__State__Group__2 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1485:2: rule__State__Group__1__Impl rule__State__Group__2
+            {
+            pushFollow(FOLLOW_rule__State__Group__1__Impl_in_rule__State__Group__13007);
+            rule__State__Group__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__State__Group__2_in_rule__State__Group__13010);
+            rule__State__Group__2();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__State__Group__1"
+
+
+    // $ANTLR start "rule__State__Group__1__Impl"
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1492:1: rule__State__Group__1__Impl : ( ( rule__State__NameAssignment_1 ) ) ;
+    public final void rule__State__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1496:1: ( ( ( rule__State__NameAssignment_1 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1497:1: ( ( rule__State__NameAssignment_1 ) )
+            {
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1497:1: ( ( rule__State__NameAssignment_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1498:1: ( rule__State__NameAssignment_1 )
+            {
+             before(grammarAccess.getStateAccess().getNameAssignment_1()); 
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1499:1: ( rule__State__NameAssignment_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1499:2: rule__State__NameAssignment_1
+            {
+            pushFollow(FOLLOW_rule__State__NameAssignment_1_in_rule__State__Group__1__Impl3037);
+            rule__State__NameAssignment_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getStateAccess().getNameAssignment_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__State__Group__1__Impl"
+
+
+    // $ANTLR start "rule__State__Group__2"
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1509:1: rule__State__Group__2 : rule__State__Group__2__Impl ;
+    public final void rule__State__Group__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1513:1: ( rule__State__Group__2__Impl )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1514:2: rule__State__Group__2__Impl
+            {
+            pushFollow(FOLLOW_rule__State__Group__2__Impl_in_rule__State__Group__23067);
+            rule__State__Group__2__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__State__Group__2"
+
+
+    // $ANTLR start "rule__State__Group__2__Impl"
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1520:1: rule__State__Group__2__Impl : ( ';' ) ;
+    public final void rule__State__Group__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1524:1: ( ( ';' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1525:1: ( ';' )
+            {
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1525:1: ( ';' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1526:1: ';'
+            {
+             before(grammarAccess.getStateAccess().getSemicolonKeyword_2()); 
+            match(input,12,FOLLOW_12_in_rule__State__Group__2__Impl3095); 
+             after(grammarAccess.getStateAccess().getSemicolonKeyword_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__State__Group__2__Impl"
+
+
     // $ANTLR start "rule__Port__Group__0"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1415:1: rule__Port__Group__0 : rule__Port__Group__0__Impl rule__Port__Group__1 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1545:1: rule__Port__Group__0 : rule__Port__Group__0__Impl rule__Port__Group__1 ;
     public final void rule__Port__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1419:1: ( rule__Port__Group__0__Impl rule__Port__Group__1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1420:2: rule__Port__Group__0__Impl rule__Port__Group__1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1549:1: ( rule__Port__Group__0__Impl rule__Port__Group__1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1550:2: rule__Port__Group__0__Impl rule__Port__Group__1
             {
-            pushFollow(FOLLOW_rule__Port__Group__0__Impl_in_rule__Port__Group__02867);
+            pushFollow(FOLLOW_rule__Port__Group__0__Impl_in_rule__Port__Group__03132);
             rule__Port__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Port__Group__1_in_rule__Port__Group__02870);
+            pushFollow(FOLLOW_rule__Port__Group__1_in_rule__Port__Group__03135);
             rule__Port__Group__1();
 
             state._fsp--;
@@ -3860,31 +4200,31 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Port__Group__0__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1427:1: rule__Port__Group__0__Impl : ( ( rule__Port__NameAssignment_0 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1557:1: rule__Port__Group__0__Impl : ( ( rule__Port__TypeAssignment_0 ) ) ;
     public final void rule__Port__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1431:1: ( ( ( rule__Port__NameAssignment_0 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1432:1: ( ( rule__Port__NameAssignment_0 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1561:1: ( ( ( rule__Port__TypeAssignment_0 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1562:1: ( ( rule__Port__TypeAssignment_0 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1432:1: ( ( rule__Port__NameAssignment_0 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1433:1: ( rule__Port__NameAssignment_0 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1562:1: ( ( rule__Port__TypeAssignment_0 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1563:1: ( rule__Port__TypeAssignment_0 )
             {
-             before(grammarAccess.getPortAccess().getNameAssignment_0()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1434:1: ( rule__Port__NameAssignment_0 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1434:2: rule__Port__NameAssignment_0
+             before(grammarAccess.getPortAccess().getTypeAssignment_0()); 
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1564:1: ( rule__Port__TypeAssignment_0 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1564:2: rule__Port__TypeAssignment_0
             {
-            pushFollow(FOLLOW_rule__Port__NameAssignment_0_in_rule__Port__Group__0__Impl2897);
-            rule__Port__NameAssignment_0();
+            pushFollow(FOLLOW_rule__Port__TypeAssignment_0_in_rule__Port__Group__0__Impl3162);
+            rule__Port__TypeAssignment_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getPortAccess().getNameAssignment_0()); 
+             after(grammarAccess.getPortAccess().getTypeAssignment_0()); 
 
             }
 
@@ -3907,22 +4247,17 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Port__Group__1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1444:1: rule__Port__Group__1 : rule__Port__Group__1__Impl rule__Port__Group__2 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1574:1: rule__Port__Group__1 : rule__Port__Group__1__Impl ;
     public final void rule__Port__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1448:1: ( rule__Port__Group__1__Impl rule__Port__Group__2 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1449:2: rule__Port__Group__1__Impl rule__Port__Group__2
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1578:1: ( rule__Port__Group__1__Impl )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1579:2: rule__Port__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Port__Group__1__Impl_in_rule__Port__Group__12927);
+            pushFollow(FOLLOW_rule__Port__Group__1__Impl_in_rule__Port__Group__13192);
             rule__Port__Group__1__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__Port__Group__2_in_rule__Port__Group__12930);
-            rule__Port__Group__2();
 
             state._fsp--;
 
@@ -3945,21 +4280,42 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Port__Group__1__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1456:1: rule__Port__Group__1__Impl : ( ':' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1585:1: rule__Port__Group__1__Impl : ( ( rule__Port__Group_1__0 )? ) ;
     public final void rule__Port__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1460:1: ( ( ':' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1461:1: ( ':' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1589:1: ( ( ( rule__Port__Group_1__0 )? ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1590:1: ( ( rule__Port__Group_1__0 )? )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1461:1: ( ':' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1462:1: ':'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1590:1: ( ( rule__Port__Group_1__0 )? )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1591:1: ( rule__Port__Group_1__0 )?
             {
-             before(grammarAccess.getPortAccess().getColonKeyword_1()); 
-            match(input,15,FOLLOW_15_in_rule__Port__Group__1__Impl2958); 
-             after(grammarAccess.getPortAccess().getColonKeyword_1()); 
+             before(grammarAccess.getPortAccess().getGroup_1()); 
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1592:1: ( rule__Port__Group_1__0 )?
+            int alt5=2;
+            int LA5_0 = input.LA(1);
+
+            if ( (LA5_0==19) ) {
+                alt5=1;
+            }
+            switch (alt5) {
+                case 1 :
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1592:2: rule__Port__Group_1__0
+                    {
+                    pushFollow(FOLLOW_rule__Port__Group_1__0_in_rule__Port__Group__1__Impl3219);
+                    rule__Port__Group_1__0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getPortAccess().getGroup_1()); 
 
             }
 
@@ -3981,18 +4337,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Port__Group__1__Impl"
 
 
-    // $ANTLR start "rule__Port__Group__2"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1475:1: rule__Port__Group__2 : rule__Port__Group__2__Impl ;
-    public final void rule__Port__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__Port__Group_1__0"
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1606:1: rule__Port__Group_1__0 : rule__Port__Group_1__0__Impl rule__Port__Group_1__1 ;
+    public final void rule__Port__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1479:1: ( rule__Port__Group__2__Impl )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1480:2: rule__Port__Group__2__Impl
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1610:1: ( rule__Port__Group_1__0__Impl rule__Port__Group_1__1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1611:2: rule__Port__Group_1__0__Impl rule__Port__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Port__Group__2__Impl_in_rule__Port__Group__22989);
-            rule__Port__Group__2__Impl();
+            pushFollow(FOLLOW_rule__Port__Group_1__0__Impl_in_rule__Port__Group_1__03254);
+            rule__Port__Group_1__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Port__Group_1__1_in_rule__Port__Group_1__03257);
+            rule__Port__Group_1__1();
 
             state._fsp--;
 
@@ -4011,35 +4372,25 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Port__Group__2"
+    // $ANTLR end "rule__Port__Group_1__0"
 
 
-    // $ANTLR start "rule__Port__Group__2__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1486:1: rule__Port__Group__2__Impl : ( ( rule__Port__TypeAssignment_2 ) ) ;
-    public final void rule__Port__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Port__Group_1__0__Impl"
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1618:1: rule__Port__Group_1__0__Impl : ( '(' ) ;
+    public final void rule__Port__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1490:1: ( ( ( rule__Port__TypeAssignment_2 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1491:1: ( ( rule__Port__TypeAssignment_2 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1622:1: ( ( '(' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1623:1: ( '(' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1491:1: ( ( rule__Port__TypeAssignment_2 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1492:1: ( rule__Port__TypeAssignment_2 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1623:1: ( '(' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1624:1: '('
             {
-             before(grammarAccess.getPortAccess().getTypeAssignment_2()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1493:1: ( rule__Port__TypeAssignment_2 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1493:2: rule__Port__TypeAssignment_2
-            {
-            pushFollow(FOLLOW_rule__Port__TypeAssignment_2_in_rule__Port__Group__2__Impl3016);
-            rule__Port__TypeAssignment_2();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getPortAccess().getTypeAssignment_2()); 
+             before(grammarAccess.getPortAccess().getLeftParenthesisKeyword_1_0()); 
+            match(input,19,FOLLOW_19_in_rule__Port__Group_1__0__Impl3285); 
+             after(grammarAccess.getPortAccess().getLeftParenthesisKeyword_1_0()); 
 
             }
 
@@ -4058,25 +4409,180 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Port__Group__2__Impl"
+    // $ANTLR end "rule__Port__Group_1__0__Impl"
+
+
+    // $ANTLR start "rule__Port__Group_1__1"
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1637:1: rule__Port__Group_1__1 : rule__Port__Group_1__1__Impl rule__Port__Group_1__2 ;
+    public final void rule__Port__Group_1__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1641:1: ( rule__Port__Group_1__1__Impl rule__Port__Group_1__2 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1642:2: rule__Port__Group_1__1__Impl rule__Port__Group_1__2
+            {
+            pushFollow(FOLLOW_rule__Port__Group_1__1__Impl_in_rule__Port__Group_1__13316);
+            rule__Port__Group_1__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Port__Group_1__2_in_rule__Port__Group_1__13319);
+            rule__Port__Group_1__2();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Port__Group_1__1"
+
+
+    // $ANTLR start "rule__Port__Group_1__1__Impl"
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1649:1: rule__Port__Group_1__1__Impl : ( ( rule__Port__StateAssignment_1_1 ) ) ;
+    public final void rule__Port__Group_1__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1653:1: ( ( ( rule__Port__StateAssignment_1_1 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1654:1: ( ( rule__Port__StateAssignment_1_1 ) )
+            {
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1654:1: ( ( rule__Port__StateAssignment_1_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1655:1: ( rule__Port__StateAssignment_1_1 )
+            {
+             before(grammarAccess.getPortAccess().getStateAssignment_1_1()); 
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1656:1: ( rule__Port__StateAssignment_1_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1656:2: rule__Port__StateAssignment_1_1
+            {
+            pushFollow(FOLLOW_rule__Port__StateAssignment_1_1_in_rule__Port__Group_1__1__Impl3346);
+            rule__Port__StateAssignment_1_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getPortAccess().getStateAssignment_1_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Port__Group_1__1__Impl"
+
+
+    // $ANTLR start "rule__Port__Group_1__2"
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1666:1: rule__Port__Group_1__2 : rule__Port__Group_1__2__Impl ;
+    public final void rule__Port__Group_1__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1670:1: ( rule__Port__Group_1__2__Impl )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1671:2: rule__Port__Group_1__2__Impl
+            {
+            pushFollow(FOLLOW_rule__Port__Group_1__2__Impl_in_rule__Port__Group_1__23376);
+            rule__Port__Group_1__2__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Port__Group_1__2"
+
+
+    // $ANTLR start "rule__Port__Group_1__2__Impl"
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1677:1: rule__Port__Group_1__2__Impl : ( ')' ) ;
+    public final void rule__Port__Group_1__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1681:1: ( ( ')' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1682:1: ( ')' )
+            {
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1682:1: ( ')' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1683:1: ')'
+            {
+             before(grammarAccess.getPortAccess().getRightParenthesisKeyword_1_2()); 
+            match(input,20,FOLLOW_20_in_rule__Port__Group_1__2__Impl3404); 
+             after(grammarAccess.getPortAccess().getRightParenthesisKeyword_1_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Port__Group_1__2__Impl"
 
 
     // $ANTLR start "rule__Activity__Group__0"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1509:1: rule__Activity__Group__0 : rule__Activity__Group__0__Impl rule__Activity__Group__1 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1702:1: rule__Activity__Group__0 : rule__Activity__Group__0__Impl rule__Activity__Group__1 ;
     public final void rule__Activity__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1513:1: ( rule__Activity__Group__0__Impl rule__Activity__Group__1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1514:2: rule__Activity__Group__0__Impl rule__Activity__Group__1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1706:1: ( rule__Activity__Group__0__Impl rule__Activity__Group__1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1707:2: rule__Activity__Group__0__Impl rule__Activity__Group__1
             {
-            pushFollow(FOLLOW_rule__Activity__Group__0__Impl_in_rule__Activity__Group__03052);
+            pushFollow(FOLLOW_rule__Activity__Group__0__Impl_in_rule__Activity__Group__03441);
             rule__Activity__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Activity__Group__1_in_rule__Activity__Group__03055);
+            pushFollow(FOLLOW_rule__Activity__Group__1_in_rule__Activity__Group__03444);
             rule__Activity__Group__1();
 
             state._fsp--;
@@ -4100,20 +4606,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group__0__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1521:1: rule__Activity__Group__0__Impl : ( 'Activity' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1714:1: rule__Activity__Group__0__Impl : ( 'Activity' ) ;
     public final void rule__Activity__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1525:1: ( ( 'Activity' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1526:1: ( 'Activity' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1718:1: ( ( 'Activity' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1719:1: ( 'Activity' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1526:1: ( 'Activity' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1527:1: 'Activity'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1719:1: ( 'Activity' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1720:1: 'Activity'
             {
              before(grammarAccess.getActivityAccess().getActivityKeyword_0()); 
-            match(input,18,FOLLOW_18_in_rule__Activity__Group__0__Impl3083); 
+            match(input,21,FOLLOW_21_in_rule__Activity__Group__0__Impl3472); 
              after(grammarAccess.getActivityAccess().getActivityKeyword_0()); 
 
             }
@@ -4137,21 +4643,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group__1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1540:1: rule__Activity__Group__1 : rule__Activity__Group__1__Impl rule__Activity__Group__2 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1733:1: rule__Activity__Group__1 : rule__Activity__Group__1__Impl rule__Activity__Group__2 ;
     public final void rule__Activity__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1544:1: ( rule__Activity__Group__1__Impl rule__Activity__Group__2 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1545:2: rule__Activity__Group__1__Impl rule__Activity__Group__2
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1737:1: ( rule__Activity__Group__1__Impl rule__Activity__Group__2 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1738:2: rule__Activity__Group__1__Impl rule__Activity__Group__2
             {
-            pushFollow(FOLLOW_rule__Activity__Group__1__Impl_in_rule__Activity__Group__13114);
+            pushFollow(FOLLOW_rule__Activity__Group__1__Impl_in_rule__Activity__Group__13503);
             rule__Activity__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Activity__Group__2_in_rule__Activity__Group__13117);
+            pushFollow(FOLLOW_rule__Activity__Group__2_in_rule__Activity__Group__13506);
             rule__Activity__Group__2();
 
             state._fsp--;
@@ -4175,23 +4681,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group__1__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1552:1: rule__Activity__Group__1__Impl : ( ( rule__Activity__NameAssignment_1 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1745:1: rule__Activity__Group__1__Impl : ( ( rule__Activity__NameAssignment_1 ) ) ;
     public final void rule__Activity__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1556:1: ( ( ( rule__Activity__NameAssignment_1 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1557:1: ( ( rule__Activity__NameAssignment_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1749:1: ( ( ( rule__Activity__NameAssignment_1 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1750:1: ( ( rule__Activity__NameAssignment_1 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1557:1: ( ( rule__Activity__NameAssignment_1 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1558:1: ( rule__Activity__NameAssignment_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1750:1: ( ( rule__Activity__NameAssignment_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1751:1: ( rule__Activity__NameAssignment_1 )
             {
              before(grammarAccess.getActivityAccess().getNameAssignment_1()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1559:1: ( rule__Activity__NameAssignment_1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1559:2: rule__Activity__NameAssignment_1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1752:1: ( rule__Activity__NameAssignment_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1752:2: rule__Activity__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Activity__NameAssignment_1_in_rule__Activity__Group__1__Impl3144);
+            pushFollow(FOLLOW_rule__Activity__NameAssignment_1_in_rule__Activity__Group__1__Impl3533);
             rule__Activity__NameAssignment_1();
 
             state._fsp--;
@@ -4222,21 +4728,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group__2"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1569:1: rule__Activity__Group__2 : rule__Activity__Group__2__Impl rule__Activity__Group__3 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1762:1: rule__Activity__Group__2 : rule__Activity__Group__2__Impl rule__Activity__Group__3 ;
     public final void rule__Activity__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1573:1: ( rule__Activity__Group__2__Impl rule__Activity__Group__3 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1574:2: rule__Activity__Group__2__Impl rule__Activity__Group__3
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1766:1: ( rule__Activity__Group__2__Impl rule__Activity__Group__3 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1767:2: rule__Activity__Group__2__Impl rule__Activity__Group__3
             {
-            pushFollow(FOLLOW_rule__Activity__Group__2__Impl_in_rule__Activity__Group__23174);
+            pushFollow(FOLLOW_rule__Activity__Group__2__Impl_in_rule__Activity__Group__23563);
             rule__Activity__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Activity__Group__3_in_rule__Activity__Group__23177);
+            pushFollow(FOLLOW_rule__Activity__Group__3_in_rule__Activity__Group__23566);
             rule__Activity__Group__3();
 
             state._fsp--;
@@ -4260,23 +4766,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group__2__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1581:1: rule__Activity__Group__2__Impl : ( ( rule__Activity__TextfieldAssignment_2 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1774:1: rule__Activity__Group__2__Impl : ( ( rule__Activity__TextfieldAssignment_2 ) ) ;
     public final void rule__Activity__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1585:1: ( ( ( rule__Activity__TextfieldAssignment_2 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1586:1: ( ( rule__Activity__TextfieldAssignment_2 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1778:1: ( ( ( rule__Activity__TextfieldAssignment_2 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1779:1: ( ( rule__Activity__TextfieldAssignment_2 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1586:1: ( ( rule__Activity__TextfieldAssignment_2 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1587:1: ( rule__Activity__TextfieldAssignment_2 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1779:1: ( ( rule__Activity__TextfieldAssignment_2 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1780:1: ( rule__Activity__TextfieldAssignment_2 )
             {
              before(grammarAccess.getActivityAccess().getTextfieldAssignment_2()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1588:1: ( rule__Activity__TextfieldAssignment_2 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1588:2: rule__Activity__TextfieldAssignment_2
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1781:1: ( rule__Activity__TextfieldAssignment_2 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1781:2: rule__Activity__TextfieldAssignment_2
             {
-            pushFollow(FOLLOW_rule__Activity__TextfieldAssignment_2_in_rule__Activity__Group__2__Impl3204);
+            pushFollow(FOLLOW_rule__Activity__TextfieldAssignment_2_in_rule__Activity__Group__2__Impl3593);
             rule__Activity__TextfieldAssignment_2();
 
             state._fsp--;
@@ -4307,21 +4813,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group__3"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1598:1: rule__Activity__Group__3 : rule__Activity__Group__3__Impl rule__Activity__Group__4 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1791:1: rule__Activity__Group__3 : rule__Activity__Group__3__Impl rule__Activity__Group__4 ;
     public final void rule__Activity__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1602:1: ( rule__Activity__Group__3__Impl rule__Activity__Group__4 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1603:2: rule__Activity__Group__3__Impl rule__Activity__Group__4
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1795:1: ( rule__Activity__Group__3__Impl rule__Activity__Group__4 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1796:2: rule__Activity__Group__3__Impl rule__Activity__Group__4
             {
-            pushFollow(FOLLOW_rule__Activity__Group__3__Impl_in_rule__Activity__Group__33234);
+            pushFollow(FOLLOW_rule__Activity__Group__3__Impl_in_rule__Activity__Group__33623);
             rule__Activity__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Activity__Group__4_in_rule__Activity__Group__33237);
+            pushFollow(FOLLOW_rule__Activity__Group__4_in_rule__Activity__Group__33626);
             rule__Activity__Group__4();
 
             state._fsp--;
@@ -4345,20 +4851,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group__3__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1610:1: rule__Activity__Group__3__Impl : ( 'responsible' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1803:1: rule__Activity__Group__3__Impl : ( 'responsible' ) ;
     public final void rule__Activity__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1614:1: ( ( 'responsible' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1615:1: ( 'responsible' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1807:1: ( ( 'responsible' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1808:1: ( 'responsible' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1615:1: ( 'responsible' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1616:1: 'responsible'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1808:1: ( 'responsible' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1809:1: 'responsible'
             {
              before(grammarAccess.getActivityAccess().getResponsibleKeyword_3()); 
-            match(input,19,FOLLOW_19_in_rule__Activity__Group__3__Impl3265); 
+            match(input,22,FOLLOW_22_in_rule__Activity__Group__3__Impl3654); 
              after(grammarAccess.getActivityAccess().getResponsibleKeyword_3()); 
 
             }
@@ -4382,21 +4888,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group__4"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1629:1: rule__Activity__Group__4 : rule__Activity__Group__4__Impl rule__Activity__Group__5 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1822:1: rule__Activity__Group__4 : rule__Activity__Group__4__Impl rule__Activity__Group__5 ;
     public final void rule__Activity__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1633:1: ( rule__Activity__Group__4__Impl rule__Activity__Group__5 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1634:2: rule__Activity__Group__4__Impl rule__Activity__Group__5
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1826:1: ( rule__Activity__Group__4__Impl rule__Activity__Group__5 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1827:2: rule__Activity__Group__4__Impl rule__Activity__Group__5
             {
-            pushFollow(FOLLOW_rule__Activity__Group__4__Impl_in_rule__Activity__Group__43296);
+            pushFollow(FOLLOW_rule__Activity__Group__4__Impl_in_rule__Activity__Group__43685);
             rule__Activity__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Activity__Group__5_in_rule__Activity__Group__43299);
+            pushFollow(FOLLOW_rule__Activity__Group__5_in_rule__Activity__Group__43688);
             rule__Activity__Group__5();
 
             state._fsp--;
@@ -4420,23 +4926,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group__4__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1641:1: rule__Activity__Group__4__Impl : ( ( rule__Activity__RoleAssignment_4 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1834:1: rule__Activity__Group__4__Impl : ( ( rule__Activity__RoleAssignment_4 ) ) ;
     public final void rule__Activity__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1645:1: ( ( ( rule__Activity__RoleAssignment_4 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1646:1: ( ( rule__Activity__RoleAssignment_4 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1838:1: ( ( ( rule__Activity__RoleAssignment_4 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1839:1: ( ( rule__Activity__RoleAssignment_4 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1646:1: ( ( rule__Activity__RoleAssignment_4 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1647:1: ( rule__Activity__RoleAssignment_4 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1839:1: ( ( rule__Activity__RoleAssignment_4 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1840:1: ( rule__Activity__RoleAssignment_4 )
             {
              before(grammarAccess.getActivityAccess().getRoleAssignment_4()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1648:1: ( rule__Activity__RoleAssignment_4 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1648:2: rule__Activity__RoleAssignment_4
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1841:1: ( rule__Activity__RoleAssignment_4 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1841:2: rule__Activity__RoleAssignment_4
             {
-            pushFollow(FOLLOW_rule__Activity__RoleAssignment_4_in_rule__Activity__Group__4__Impl3326);
+            pushFollow(FOLLOW_rule__Activity__RoleAssignment_4_in_rule__Activity__Group__4__Impl3715);
             rule__Activity__RoleAssignment_4();
 
             state._fsp--;
@@ -4467,21 +4973,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group__5"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1658:1: rule__Activity__Group__5 : rule__Activity__Group__5__Impl rule__Activity__Group__6 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1851:1: rule__Activity__Group__5 : rule__Activity__Group__5__Impl rule__Activity__Group__6 ;
     public final void rule__Activity__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1662:1: ( rule__Activity__Group__5__Impl rule__Activity__Group__6 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1663:2: rule__Activity__Group__5__Impl rule__Activity__Group__6
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1855:1: ( rule__Activity__Group__5__Impl rule__Activity__Group__6 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1856:2: rule__Activity__Group__5__Impl rule__Activity__Group__6
             {
-            pushFollow(FOLLOW_rule__Activity__Group__5__Impl_in_rule__Activity__Group__53356);
+            pushFollow(FOLLOW_rule__Activity__Group__5__Impl_in_rule__Activity__Group__53745);
             rule__Activity__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Activity__Group__6_in_rule__Activity__Group__53359);
+            pushFollow(FOLLOW_rule__Activity__Group__6_in_rule__Activity__Group__53748);
             rule__Activity__Group__6();
 
             state._fsp--;
@@ -4505,31 +5011,31 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group__5__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1670:1: rule__Activity__Group__5__Impl : ( ( rule__Activity__Group_5__0 )? ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1863:1: rule__Activity__Group__5__Impl : ( ( rule__Activity__Group_5__0 )? ) ;
     public final void rule__Activity__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1674:1: ( ( ( rule__Activity__Group_5__0 )? ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1675:1: ( ( rule__Activity__Group_5__0 )? )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1867:1: ( ( ( rule__Activity__Group_5__0 )? ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1868:1: ( ( rule__Activity__Group_5__0 )? )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1675:1: ( ( rule__Activity__Group_5__0 )? )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1676:1: ( rule__Activity__Group_5__0 )?
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1868:1: ( ( rule__Activity__Group_5__0 )? )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1869:1: ( rule__Activity__Group_5__0 )?
             {
              before(grammarAccess.getActivityAccess().getGroup_5()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1677:1: ( rule__Activity__Group_5__0 )?
-            int alt5=2;
-            int LA5_0 = input.LA(1);
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1870:1: ( rule__Activity__Group_5__0 )?
+            int alt6=2;
+            int LA6_0 = input.LA(1);
 
-            if ( (LA5_0==20) ) {
-                alt5=1;
+            if ( (LA6_0==23) ) {
+                alt6=1;
             }
-            switch (alt5) {
+            switch (alt6) {
                 case 1 :
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1677:2: rule__Activity__Group_5__0
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1870:2: rule__Activity__Group_5__0
                     {
-                    pushFollow(FOLLOW_rule__Activity__Group_5__0_in_rule__Activity__Group__5__Impl3386);
+                    pushFollow(FOLLOW_rule__Activity__Group_5__0_in_rule__Activity__Group__5__Impl3775);
                     rule__Activity__Group_5__0();
 
                     state._fsp--;
@@ -4563,21 +5069,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group__6"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1687:1: rule__Activity__Group__6 : rule__Activity__Group__6__Impl rule__Activity__Group__7 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1880:1: rule__Activity__Group__6 : rule__Activity__Group__6__Impl rule__Activity__Group__7 ;
     public final void rule__Activity__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1691:1: ( rule__Activity__Group__6__Impl rule__Activity__Group__7 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1692:2: rule__Activity__Group__6__Impl rule__Activity__Group__7
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1884:1: ( rule__Activity__Group__6__Impl rule__Activity__Group__7 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1885:2: rule__Activity__Group__6__Impl rule__Activity__Group__7
             {
-            pushFollow(FOLLOW_rule__Activity__Group__6__Impl_in_rule__Activity__Group__63417);
+            pushFollow(FOLLOW_rule__Activity__Group__6__Impl_in_rule__Activity__Group__63806);
             rule__Activity__Group__6__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Activity__Group__7_in_rule__Activity__Group__63420);
+            pushFollow(FOLLOW_rule__Activity__Group__7_in_rule__Activity__Group__63809);
             rule__Activity__Group__7();
 
             state._fsp--;
@@ -4601,31 +5107,31 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group__6__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1699:1: rule__Activity__Group__6__Impl : ( ( rule__Activity__Group_6__0 )? ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1892:1: rule__Activity__Group__6__Impl : ( ( rule__Activity__Group_6__0 )? ) ;
     public final void rule__Activity__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1703:1: ( ( ( rule__Activity__Group_6__0 )? ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1704:1: ( ( rule__Activity__Group_6__0 )? )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1896:1: ( ( ( rule__Activity__Group_6__0 )? ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1897:1: ( ( rule__Activity__Group_6__0 )? )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1704:1: ( ( rule__Activity__Group_6__0 )? )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1705:1: ( rule__Activity__Group_6__0 )?
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1897:1: ( ( rule__Activity__Group_6__0 )? )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1898:1: ( rule__Activity__Group_6__0 )?
             {
              before(grammarAccess.getActivityAccess().getGroup_6()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1706:1: ( rule__Activity__Group_6__0 )?
-            int alt6=2;
-            int LA6_0 = input.LA(1);
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1899:1: ( rule__Activity__Group_6__0 )?
+            int alt7=2;
+            int LA7_0 = input.LA(1);
 
-            if ( (LA6_0==22) ) {
-                alt6=1;
+            if ( (LA7_0==25) ) {
+                alt7=1;
             }
-            switch (alt6) {
+            switch (alt7) {
                 case 1 :
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1706:2: rule__Activity__Group_6__0
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1899:2: rule__Activity__Group_6__0
                     {
-                    pushFollow(FOLLOW_rule__Activity__Group_6__0_in_rule__Activity__Group__6__Impl3447);
+                    pushFollow(FOLLOW_rule__Activity__Group_6__0_in_rule__Activity__Group__6__Impl3836);
                     rule__Activity__Group_6__0();
 
                     state._fsp--;
@@ -4659,21 +5165,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group__7"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1716:1: rule__Activity__Group__7 : rule__Activity__Group__7__Impl rule__Activity__Group__8 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1909:1: rule__Activity__Group__7 : rule__Activity__Group__7__Impl rule__Activity__Group__8 ;
     public final void rule__Activity__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1720:1: ( rule__Activity__Group__7__Impl rule__Activity__Group__8 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1721:2: rule__Activity__Group__7__Impl rule__Activity__Group__8
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1913:1: ( rule__Activity__Group__7__Impl rule__Activity__Group__8 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1914:2: rule__Activity__Group__7__Impl rule__Activity__Group__8
             {
-            pushFollow(FOLLOW_rule__Activity__Group__7__Impl_in_rule__Activity__Group__73478);
+            pushFollow(FOLLOW_rule__Activity__Group__7__Impl_in_rule__Activity__Group__73867);
             rule__Activity__Group__7__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Activity__Group__8_in_rule__Activity__Group__73481);
+            pushFollow(FOLLOW_rule__Activity__Group__8_in_rule__Activity__Group__73870);
             rule__Activity__Group__8();
 
             state._fsp--;
@@ -4697,31 +5203,31 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group__7__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1728:1: rule__Activity__Group__7__Impl : ( ( rule__Activity__Group_7__0 )? ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1921:1: rule__Activity__Group__7__Impl : ( ( rule__Activity__Group_7__0 )? ) ;
     public final void rule__Activity__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1732:1: ( ( ( rule__Activity__Group_7__0 )? ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1733:1: ( ( rule__Activity__Group_7__0 )? )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1925:1: ( ( ( rule__Activity__Group_7__0 )? ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1926:1: ( ( rule__Activity__Group_7__0 )? )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1733:1: ( ( rule__Activity__Group_7__0 )? )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1734:1: ( rule__Activity__Group_7__0 )?
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1926:1: ( ( rule__Activity__Group_7__0 )? )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1927:1: ( rule__Activity__Group_7__0 )?
             {
              before(grammarAccess.getActivityAccess().getGroup_7()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1735:1: ( rule__Activity__Group_7__0 )?
-            int alt7=2;
-            int LA7_0 = input.LA(1);
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1928:1: ( rule__Activity__Group_7__0 )?
+            int alt8=2;
+            int LA8_0 = input.LA(1);
 
-            if ( (LA7_0==23) ) {
-                alt7=1;
+            if ( (LA8_0==26) ) {
+                alt8=1;
             }
-            switch (alt7) {
+            switch (alt8) {
                 case 1 :
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1735:2: rule__Activity__Group_7__0
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1928:2: rule__Activity__Group_7__0
                     {
-                    pushFollow(FOLLOW_rule__Activity__Group_7__0_in_rule__Activity__Group__7__Impl3508);
+                    pushFollow(FOLLOW_rule__Activity__Group_7__0_in_rule__Activity__Group__7__Impl3897);
                     rule__Activity__Group_7__0();
 
                     state._fsp--;
@@ -4755,21 +5261,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group__8"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1745:1: rule__Activity__Group__8 : rule__Activity__Group__8__Impl rule__Activity__Group__9 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1938:1: rule__Activity__Group__8 : rule__Activity__Group__8__Impl rule__Activity__Group__9 ;
     public final void rule__Activity__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1749:1: ( rule__Activity__Group__8__Impl rule__Activity__Group__9 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1750:2: rule__Activity__Group__8__Impl rule__Activity__Group__9
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1942:1: ( rule__Activity__Group__8__Impl rule__Activity__Group__9 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1943:2: rule__Activity__Group__8__Impl rule__Activity__Group__9
             {
-            pushFollow(FOLLOW_rule__Activity__Group__8__Impl_in_rule__Activity__Group__83539);
+            pushFollow(FOLLOW_rule__Activity__Group__8__Impl_in_rule__Activity__Group__83928);
             rule__Activity__Group__8__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Activity__Group__9_in_rule__Activity__Group__83542);
+            pushFollow(FOLLOW_rule__Activity__Group__9_in_rule__Activity__Group__83931);
             rule__Activity__Group__9();
 
             state._fsp--;
@@ -4793,31 +5299,31 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group__8__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1757:1: rule__Activity__Group__8__Impl : ( ( rule__Activity__Group_8__0 )? ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1950:1: rule__Activity__Group__8__Impl : ( ( rule__Activity__Group_8__0 )? ) ;
     public final void rule__Activity__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1761:1: ( ( ( rule__Activity__Group_8__0 )? ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1762:1: ( ( rule__Activity__Group_8__0 )? )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1954:1: ( ( ( rule__Activity__Group_8__0 )? ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1955:1: ( ( rule__Activity__Group_8__0 )? )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1762:1: ( ( rule__Activity__Group_8__0 )? )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1763:1: ( rule__Activity__Group_8__0 )?
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1955:1: ( ( rule__Activity__Group_8__0 )? )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1956:1: ( rule__Activity__Group_8__0 )?
             {
              before(grammarAccess.getActivityAccess().getGroup_8()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1764:1: ( rule__Activity__Group_8__0 )?
-            int alt8=2;
-            int LA8_0 = input.LA(1);
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1957:1: ( rule__Activity__Group_8__0 )?
+            int alt9=2;
+            int LA9_0 = input.LA(1);
 
-            if ( (LA8_0==24) ) {
-                alt8=1;
+            if ( (LA9_0==27) ) {
+                alt9=1;
             }
-            switch (alt8) {
+            switch (alt9) {
                 case 1 :
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1764:2: rule__Activity__Group_8__0
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1957:2: rule__Activity__Group_8__0
                     {
-                    pushFollow(FOLLOW_rule__Activity__Group_8__0_in_rule__Activity__Group__8__Impl3569);
+                    pushFollow(FOLLOW_rule__Activity__Group_8__0_in_rule__Activity__Group__8__Impl3958);
                     rule__Activity__Group_8__0();
 
                     state._fsp--;
@@ -4851,21 +5357,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group__9"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1774:1: rule__Activity__Group__9 : rule__Activity__Group__9__Impl rule__Activity__Group__10 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1967:1: rule__Activity__Group__9 : rule__Activity__Group__9__Impl rule__Activity__Group__10 ;
     public final void rule__Activity__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1778:1: ( rule__Activity__Group__9__Impl rule__Activity__Group__10 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1779:2: rule__Activity__Group__9__Impl rule__Activity__Group__10
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1971:1: ( rule__Activity__Group__9__Impl rule__Activity__Group__10 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1972:2: rule__Activity__Group__9__Impl rule__Activity__Group__10
             {
-            pushFollow(FOLLOW_rule__Activity__Group__9__Impl_in_rule__Activity__Group__93600);
+            pushFollow(FOLLOW_rule__Activity__Group__9__Impl_in_rule__Activity__Group__93989);
             rule__Activity__Group__9__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Activity__Group__10_in_rule__Activity__Group__93603);
+            pushFollow(FOLLOW_rule__Activity__Group__10_in_rule__Activity__Group__93992);
             rule__Activity__Group__10();
 
             state._fsp--;
@@ -4889,31 +5395,31 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group__9__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1786:1: rule__Activity__Group__9__Impl : ( ( rule__Activity__Group_9__0 )? ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1979:1: rule__Activity__Group__9__Impl : ( ( rule__Activity__Group_9__0 )? ) ;
     public final void rule__Activity__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1790:1: ( ( ( rule__Activity__Group_9__0 )? ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1791:1: ( ( rule__Activity__Group_9__0 )? )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1983:1: ( ( ( rule__Activity__Group_9__0 )? ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1984:1: ( ( rule__Activity__Group_9__0 )? )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1791:1: ( ( rule__Activity__Group_9__0 )? )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1792:1: ( rule__Activity__Group_9__0 )?
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1984:1: ( ( rule__Activity__Group_9__0 )? )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1985:1: ( rule__Activity__Group_9__0 )?
             {
              before(grammarAccess.getActivityAccess().getGroup_9()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1793:1: ( rule__Activity__Group_9__0 )?
-            int alt9=2;
-            int LA9_0 = input.LA(1);
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1986:1: ( rule__Activity__Group_9__0 )?
+            int alt10=2;
+            int LA10_0 = input.LA(1);
 
-            if ( (LA9_0==25) ) {
-                alt9=1;
+            if ( (LA10_0==28) ) {
+                alt10=1;
             }
-            switch (alt9) {
+            switch (alt10) {
                 case 1 :
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1793:2: rule__Activity__Group_9__0
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1986:2: rule__Activity__Group_9__0
                     {
-                    pushFollow(FOLLOW_rule__Activity__Group_9__0_in_rule__Activity__Group__9__Impl3630);
+                    pushFollow(FOLLOW_rule__Activity__Group_9__0_in_rule__Activity__Group__9__Impl4019);
                     rule__Activity__Group_9__0();
 
                     state._fsp--;
@@ -4947,16 +5453,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group__10"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1803:1: rule__Activity__Group__10 : rule__Activity__Group__10__Impl ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1996:1: rule__Activity__Group__10 : rule__Activity__Group__10__Impl ;
     public final void rule__Activity__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1807:1: ( rule__Activity__Group__10__Impl )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1808:2: rule__Activity__Group__10__Impl
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2000:1: ( rule__Activity__Group__10__Impl )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2001:2: rule__Activity__Group__10__Impl
             {
-            pushFollow(FOLLOW_rule__Activity__Group__10__Impl_in_rule__Activity__Group__103661);
+            pushFollow(FOLLOW_rule__Activity__Group__10__Impl_in_rule__Activity__Group__104050);
             rule__Activity__Group__10__Impl();
 
             state._fsp--;
@@ -4980,20 +5486,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group__10__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1814:1: rule__Activity__Group__10__Impl : ( ';' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2007:1: rule__Activity__Group__10__Impl : ( ';' ) ;
     public final void rule__Activity__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1818:1: ( ( ';' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1819:1: ( ';' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2011:1: ( ( ';' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2012:1: ( ';' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1819:1: ( ';' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1820:1: ';'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2012:1: ( ';' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2013:1: ';'
             {
              before(grammarAccess.getActivityAccess().getSemicolonKeyword_10()); 
-            match(input,12,FOLLOW_12_in_rule__Activity__Group__10__Impl3689); 
+            match(input,12,FOLLOW_12_in_rule__Activity__Group__10__Impl4078); 
              after(grammarAccess.getActivityAccess().getSemicolonKeyword_10()); 
 
             }
@@ -5017,21 +5523,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_5__0"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1855:1: rule__Activity__Group_5__0 : rule__Activity__Group_5__0__Impl rule__Activity__Group_5__1 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2048:1: rule__Activity__Group_5__0 : rule__Activity__Group_5__0__Impl rule__Activity__Group_5__1 ;
     public final void rule__Activity__Group_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1859:1: ( rule__Activity__Group_5__0__Impl rule__Activity__Group_5__1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1860:2: rule__Activity__Group_5__0__Impl rule__Activity__Group_5__1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2052:1: ( rule__Activity__Group_5__0__Impl rule__Activity__Group_5__1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2053:2: rule__Activity__Group_5__0__Impl rule__Activity__Group_5__1
             {
-            pushFollow(FOLLOW_rule__Activity__Group_5__0__Impl_in_rule__Activity__Group_5__03742);
+            pushFollow(FOLLOW_rule__Activity__Group_5__0__Impl_in_rule__Activity__Group_5__04131);
             rule__Activity__Group_5__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Activity__Group_5__1_in_rule__Activity__Group_5__03745);
+            pushFollow(FOLLOW_rule__Activity__Group_5__1_in_rule__Activity__Group_5__04134);
             rule__Activity__Group_5__1();
 
             state._fsp--;
@@ -5055,20 +5561,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_5__0__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1867:1: rule__Activity__Group_5__0__Impl : ( 'inputs' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2060:1: rule__Activity__Group_5__0__Impl : ( 'inputs' ) ;
     public final void rule__Activity__Group_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1871:1: ( ( 'inputs' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1872:1: ( 'inputs' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2064:1: ( ( 'inputs' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2065:1: ( 'inputs' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1872:1: ( 'inputs' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1873:1: 'inputs'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2065:1: ( 'inputs' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2066:1: 'inputs'
             {
              before(grammarAccess.getActivityAccess().getInputsKeyword_5_0()); 
-            match(input,20,FOLLOW_20_in_rule__Activity__Group_5__0__Impl3773); 
+            match(input,23,FOLLOW_23_in_rule__Activity__Group_5__0__Impl4162); 
              after(grammarAccess.getActivityAccess().getInputsKeyword_5_0()); 
 
             }
@@ -5092,21 +5598,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_5__1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1886:1: rule__Activity__Group_5__1 : rule__Activity__Group_5__1__Impl rule__Activity__Group_5__2 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2079:1: rule__Activity__Group_5__1 : rule__Activity__Group_5__1__Impl rule__Activity__Group_5__2 ;
     public final void rule__Activity__Group_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1890:1: ( rule__Activity__Group_5__1__Impl rule__Activity__Group_5__2 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1891:2: rule__Activity__Group_5__1__Impl rule__Activity__Group_5__2
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2083:1: ( rule__Activity__Group_5__1__Impl rule__Activity__Group_5__2 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2084:2: rule__Activity__Group_5__1__Impl rule__Activity__Group_5__2
             {
-            pushFollow(FOLLOW_rule__Activity__Group_5__1__Impl_in_rule__Activity__Group_5__13804);
+            pushFollow(FOLLOW_rule__Activity__Group_5__1__Impl_in_rule__Activity__Group_5__14193);
             rule__Activity__Group_5__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Activity__Group_5__2_in_rule__Activity__Group_5__13807);
+            pushFollow(FOLLOW_rule__Activity__Group_5__2_in_rule__Activity__Group_5__14196);
             rule__Activity__Group_5__2();
 
             state._fsp--;
@@ -5130,23 +5636,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_5__1__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1898:1: rule__Activity__Group_5__1__Impl : ( ( rule__Activity__InPortsAssignment_5_1 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2091:1: rule__Activity__Group_5__1__Impl : ( ( rule__Activity__InPortsAssignment_5_1 ) ) ;
     public final void rule__Activity__Group_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1902:1: ( ( ( rule__Activity__InPortsAssignment_5_1 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1903:1: ( ( rule__Activity__InPortsAssignment_5_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2095:1: ( ( ( rule__Activity__InPortsAssignment_5_1 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2096:1: ( ( rule__Activity__InPortsAssignment_5_1 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1903:1: ( ( rule__Activity__InPortsAssignment_5_1 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1904:1: ( rule__Activity__InPortsAssignment_5_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2096:1: ( ( rule__Activity__InPortsAssignment_5_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2097:1: ( rule__Activity__InPortsAssignment_5_1 )
             {
              before(grammarAccess.getActivityAccess().getInPortsAssignment_5_1()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1905:1: ( rule__Activity__InPortsAssignment_5_1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1905:2: rule__Activity__InPortsAssignment_5_1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2098:1: ( rule__Activity__InPortsAssignment_5_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2098:2: rule__Activity__InPortsAssignment_5_1
             {
-            pushFollow(FOLLOW_rule__Activity__InPortsAssignment_5_1_in_rule__Activity__Group_5__1__Impl3834);
+            pushFollow(FOLLOW_rule__Activity__InPortsAssignment_5_1_in_rule__Activity__Group_5__1__Impl4223);
             rule__Activity__InPortsAssignment_5_1();
 
             state._fsp--;
@@ -5177,16 +5683,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_5__2"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1915:1: rule__Activity__Group_5__2 : rule__Activity__Group_5__2__Impl ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2108:1: rule__Activity__Group_5__2 : rule__Activity__Group_5__2__Impl ;
     public final void rule__Activity__Group_5__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1919:1: ( rule__Activity__Group_5__2__Impl )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1920:2: rule__Activity__Group_5__2__Impl
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2112:1: ( rule__Activity__Group_5__2__Impl )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2113:2: rule__Activity__Group_5__2__Impl
             {
-            pushFollow(FOLLOW_rule__Activity__Group_5__2__Impl_in_rule__Activity__Group_5__23864);
+            pushFollow(FOLLOW_rule__Activity__Group_5__2__Impl_in_rule__Activity__Group_5__24253);
             rule__Activity__Group_5__2__Impl();
 
             state._fsp--;
@@ -5210,35 +5716,35 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_5__2__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1926:1: rule__Activity__Group_5__2__Impl : ( ( rule__Activity__Group_5_2__0 )* ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2119:1: rule__Activity__Group_5__2__Impl : ( ( rule__Activity__Group_5_2__0 )* ) ;
     public final void rule__Activity__Group_5__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1930:1: ( ( ( rule__Activity__Group_5_2__0 )* ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1931:1: ( ( rule__Activity__Group_5_2__0 )* )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2123:1: ( ( ( rule__Activity__Group_5_2__0 )* ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2124:1: ( ( rule__Activity__Group_5_2__0 )* )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1931:1: ( ( rule__Activity__Group_5_2__0 )* )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1932:1: ( rule__Activity__Group_5_2__0 )*
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2124:1: ( ( rule__Activity__Group_5_2__0 )* )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2125:1: ( rule__Activity__Group_5_2__0 )*
             {
              before(grammarAccess.getActivityAccess().getGroup_5_2()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1933:1: ( rule__Activity__Group_5_2__0 )*
-            loop10:
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2126:1: ( rule__Activity__Group_5_2__0 )*
+            loop11:
             do {
-                int alt10=2;
-                int LA10_0 = input.LA(1);
+                int alt11=2;
+                int LA11_0 = input.LA(1);
 
-                if ( (LA10_0==21) ) {
-                    alt10=1;
+                if ( (LA11_0==24) ) {
+                    alt11=1;
                 }
 
 
-                switch (alt10) {
+                switch (alt11) {
             	case 1 :
-            	    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1933:2: rule__Activity__Group_5_2__0
+            	    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2126:2: rule__Activity__Group_5_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__Activity__Group_5_2__0_in_rule__Activity__Group_5__2__Impl3891);
+            	    pushFollow(FOLLOW_rule__Activity__Group_5_2__0_in_rule__Activity__Group_5__2__Impl4280);
             	    rule__Activity__Group_5_2__0();
 
             	    state._fsp--;
@@ -5248,7 +5754,7 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop10;
+            	    break loop11;
                 }
             } while (true);
 
@@ -5275,21 +5781,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_5_2__0"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1949:1: rule__Activity__Group_5_2__0 : rule__Activity__Group_5_2__0__Impl rule__Activity__Group_5_2__1 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2142:1: rule__Activity__Group_5_2__0 : rule__Activity__Group_5_2__0__Impl rule__Activity__Group_5_2__1 ;
     public final void rule__Activity__Group_5_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1953:1: ( rule__Activity__Group_5_2__0__Impl rule__Activity__Group_5_2__1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1954:2: rule__Activity__Group_5_2__0__Impl rule__Activity__Group_5_2__1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2146:1: ( rule__Activity__Group_5_2__0__Impl rule__Activity__Group_5_2__1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2147:2: rule__Activity__Group_5_2__0__Impl rule__Activity__Group_5_2__1
             {
-            pushFollow(FOLLOW_rule__Activity__Group_5_2__0__Impl_in_rule__Activity__Group_5_2__03928);
+            pushFollow(FOLLOW_rule__Activity__Group_5_2__0__Impl_in_rule__Activity__Group_5_2__04317);
             rule__Activity__Group_5_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Activity__Group_5_2__1_in_rule__Activity__Group_5_2__03931);
+            pushFollow(FOLLOW_rule__Activity__Group_5_2__1_in_rule__Activity__Group_5_2__04320);
             rule__Activity__Group_5_2__1();
 
             state._fsp--;
@@ -5313,20 +5819,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_5_2__0__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1961:1: rule__Activity__Group_5_2__0__Impl : ( ',' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2154:1: rule__Activity__Group_5_2__0__Impl : ( ',' ) ;
     public final void rule__Activity__Group_5_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1965:1: ( ( ',' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1966:1: ( ',' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2158:1: ( ( ',' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2159:1: ( ',' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1966:1: ( ',' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1967:1: ','
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2159:1: ( ',' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2160:1: ','
             {
              before(grammarAccess.getActivityAccess().getCommaKeyword_5_2_0()); 
-            match(input,21,FOLLOW_21_in_rule__Activity__Group_5_2__0__Impl3959); 
+            match(input,24,FOLLOW_24_in_rule__Activity__Group_5_2__0__Impl4348); 
              after(grammarAccess.getActivityAccess().getCommaKeyword_5_2_0()); 
 
             }
@@ -5350,16 +5856,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_5_2__1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1980:1: rule__Activity__Group_5_2__1 : rule__Activity__Group_5_2__1__Impl ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2173:1: rule__Activity__Group_5_2__1 : rule__Activity__Group_5_2__1__Impl ;
     public final void rule__Activity__Group_5_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1984:1: ( rule__Activity__Group_5_2__1__Impl )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1985:2: rule__Activity__Group_5_2__1__Impl
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2177:1: ( rule__Activity__Group_5_2__1__Impl )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2178:2: rule__Activity__Group_5_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Activity__Group_5_2__1__Impl_in_rule__Activity__Group_5_2__13990);
+            pushFollow(FOLLOW_rule__Activity__Group_5_2__1__Impl_in_rule__Activity__Group_5_2__14379);
             rule__Activity__Group_5_2__1__Impl();
 
             state._fsp--;
@@ -5383,23 +5889,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_5_2__1__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1991:1: rule__Activity__Group_5_2__1__Impl : ( ( rule__Activity__InPortsAssignment_5_2_1 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2184:1: rule__Activity__Group_5_2__1__Impl : ( ( rule__Activity__InPortsAssignment_5_2_1 ) ) ;
     public final void rule__Activity__Group_5_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1995:1: ( ( ( rule__Activity__InPortsAssignment_5_2_1 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1996:1: ( ( rule__Activity__InPortsAssignment_5_2_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2188:1: ( ( ( rule__Activity__InPortsAssignment_5_2_1 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2189:1: ( ( rule__Activity__InPortsAssignment_5_2_1 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1996:1: ( ( rule__Activity__InPortsAssignment_5_2_1 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1997:1: ( rule__Activity__InPortsAssignment_5_2_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2189:1: ( ( rule__Activity__InPortsAssignment_5_2_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2190:1: ( rule__Activity__InPortsAssignment_5_2_1 )
             {
              before(grammarAccess.getActivityAccess().getInPortsAssignment_5_2_1()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1998:1: ( rule__Activity__InPortsAssignment_5_2_1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:1998:2: rule__Activity__InPortsAssignment_5_2_1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2191:1: ( rule__Activity__InPortsAssignment_5_2_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2191:2: rule__Activity__InPortsAssignment_5_2_1
             {
-            pushFollow(FOLLOW_rule__Activity__InPortsAssignment_5_2_1_in_rule__Activity__Group_5_2__1__Impl4017);
+            pushFollow(FOLLOW_rule__Activity__InPortsAssignment_5_2_1_in_rule__Activity__Group_5_2__1__Impl4406);
             rule__Activity__InPortsAssignment_5_2_1();
 
             state._fsp--;
@@ -5430,21 +5936,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_6__0"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2012:1: rule__Activity__Group_6__0 : rule__Activity__Group_6__0__Impl rule__Activity__Group_6__1 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2205:1: rule__Activity__Group_6__0 : rule__Activity__Group_6__0__Impl rule__Activity__Group_6__1 ;
     public final void rule__Activity__Group_6__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2016:1: ( rule__Activity__Group_6__0__Impl rule__Activity__Group_6__1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2017:2: rule__Activity__Group_6__0__Impl rule__Activity__Group_6__1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2209:1: ( rule__Activity__Group_6__0__Impl rule__Activity__Group_6__1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2210:2: rule__Activity__Group_6__0__Impl rule__Activity__Group_6__1
             {
-            pushFollow(FOLLOW_rule__Activity__Group_6__0__Impl_in_rule__Activity__Group_6__04051);
+            pushFollow(FOLLOW_rule__Activity__Group_6__0__Impl_in_rule__Activity__Group_6__04440);
             rule__Activity__Group_6__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Activity__Group_6__1_in_rule__Activity__Group_6__04054);
+            pushFollow(FOLLOW_rule__Activity__Group_6__1_in_rule__Activity__Group_6__04443);
             rule__Activity__Group_6__1();
 
             state._fsp--;
@@ -5468,20 +5974,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_6__0__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2024:1: rule__Activity__Group_6__0__Impl : ( 'outputs' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2217:1: rule__Activity__Group_6__0__Impl : ( 'outputs' ) ;
     public final void rule__Activity__Group_6__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2028:1: ( ( 'outputs' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2029:1: ( 'outputs' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2221:1: ( ( 'outputs' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2222:1: ( 'outputs' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2029:1: ( 'outputs' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2030:1: 'outputs'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2222:1: ( 'outputs' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2223:1: 'outputs'
             {
              before(grammarAccess.getActivityAccess().getOutputsKeyword_6_0()); 
-            match(input,22,FOLLOW_22_in_rule__Activity__Group_6__0__Impl4082); 
+            match(input,25,FOLLOW_25_in_rule__Activity__Group_6__0__Impl4471); 
              after(grammarAccess.getActivityAccess().getOutputsKeyword_6_0()); 
 
             }
@@ -5505,21 +6011,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_6__1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2043:1: rule__Activity__Group_6__1 : rule__Activity__Group_6__1__Impl rule__Activity__Group_6__2 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2236:1: rule__Activity__Group_6__1 : rule__Activity__Group_6__1__Impl rule__Activity__Group_6__2 ;
     public final void rule__Activity__Group_6__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2047:1: ( rule__Activity__Group_6__1__Impl rule__Activity__Group_6__2 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2048:2: rule__Activity__Group_6__1__Impl rule__Activity__Group_6__2
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2240:1: ( rule__Activity__Group_6__1__Impl rule__Activity__Group_6__2 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2241:2: rule__Activity__Group_6__1__Impl rule__Activity__Group_6__2
             {
-            pushFollow(FOLLOW_rule__Activity__Group_6__1__Impl_in_rule__Activity__Group_6__14113);
+            pushFollow(FOLLOW_rule__Activity__Group_6__1__Impl_in_rule__Activity__Group_6__14502);
             rule__Activity__Group_6__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Activity__Group_6__2_in_rule__Activity__Group_6__14116);
+            pushFollow(FOLLOW_rule__Activity__Group_6__2_in_rule__Activity__Group_6__14505);
             rule__Activity__Group_6__2();
 
             state._fsp--;
@@ -5543,23 +6049,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_6__1__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2055:1: rule__Activity__Group_6__1__Impl : ( ( rule__Activity__OutPortsAssignment_6_1 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2248:1: rule__Activity__Group_6__1__Impl : ( ( rule__Activity__OutPortsAssignment_6_1 ) ) ;
     public final void rule__Activity__Group_6__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2059:1: ( ( ( rule__Activity__OutPortsAssignment_6_1 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2060:1: ( ( rule__Activity__OutPortsAssignment_6_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2252:1: ( ( ( rule__Activity__OutPortsAssignment_6_1 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2253:1: ( ( rule__Activity__OutPortsAssignment_6_1 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2060:1: ( ( rule__Activity__OutPortsAssignment_6_1 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2061:1: ( rule__Activity__OutPortsAssignment_6_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2253:1: ( ( rule__Activity__OutPortsAssignment_6_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2254:1: ( rule__Activity__OutPortsAssignment_6_1 )
             {
              before(grammarAccess.getActivityAccess().getOutPortsAssignment_6_1()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2062:1: ( rule__Activity__OutPortsAssignment_6_1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2062:2: rule__Activity__OutPortsAssignment_6_1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2255:1: ( rule__Activity__OutPortsAssignment_6_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2255:2: rule__Activity__OutPortsAssignment_6_1
             {
-            pushFollow(FOLLOW_rule__Activity__OutPortsAssignment_6_1_in_rule__Activity__Group_6__1__Impl4143);
+            pushFollow(FOLLOW_rule__Activity__OutPortsAssignment_6_1_in_rule__Activity__Group_6__1__Impl4532);
             rule__Activity__OutPortsAssignment_6_1();
 
             state._fsp--;
@@ -5590,16 +6096,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_6__2"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2072:1: rule__Activity__Group_6__2 : rule__Activity__Group_6__2__Impl ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2265:1: rule__Activity__Group_6__2 : rule__Activity__Group_6__2__Impl ;
     public final void rule__Activity__Group_6__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2076:1: ( rule__Activity__Group_6__2__Impl )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2077:2: rule__Activity__Group_6__2__Impl
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2269:1: ( rule__Activity__Group_6__2__Impl )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2270:2: rule__Activity__Group_6__2__Impl
             {
-            pushFollow(FOLLOW_rule__Activity__Group_6__2__Impl_in_rule__Activity__Group_6__24173);
+            pushFollow(FOLLOW_rule__Activity__Group_6__2__Impl_in_rule__Activity__Group_6__24562);
             rule__Activity__Group_6__2__Impl();
 
             state._fsp--;
@@ -5623,35 +6129,35 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_6__2__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2083:1: rule__Activity__Group_6__2__Impl : ( ( rule__Activity__Group_6_2__0 )* ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2276:1: rule__Activity__Group_6__2__Impl : ( ( rule__Activity__Group_6_2__0 )* ) ;
     public final void rule__Activity__Group_6__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2087:1: ( ( ( rule__Activity__Group_6_2__0 )* ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2088:1: ( ( rule__Activity__Group_6_2__0 )* )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2280:1: ( ( ( rule__Activity__Group_6_2__0 )* ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2281:1: ( ( rule__Activity__Group_6_2__0 )* )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2088:1: ( ( rule__Activity__Group_6_2__0 )* )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2089:1: ( rule__Activity__Group_6_2__0 )*
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2281:1: ( ( rule__Activity__Group_6_2__0 )* )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2282:1: ( rule__Activity__Group_6_2__0 )*
             {
              before(grammarAccess.getActivityAccess().getGroup_6_2()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2090:1: ( rule__Activity__Group_6_2__0 )*
-            loop11:
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2283:1: ( rule__Activity__Group_6_2__0 )*
+            loop12:
             do {
-                int alt11=2;
-                int LA11_0 = input.LA(1);
+                int alt12=2;
+                int LA12_0 = input.LA(1);
 
-                if ( (LA11_0==21) ) {
-                    alt11=1;
+                if ( (LA12_0==24) ) {
+                    alt12=1;
                 }
 
 
-                switch (alt11) {
+                switch (alt12) {
             	case 1 :
-            	    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2090:2: rule__Activity__Group_6_2__0
+            	    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2283:2: rule__Activity__Group_6_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__Activity__Group_6_2__0_in_rule__Activity__Group_6__2__Impl4200);
+            	    pushFollow(FOLLOW_rule__Activity__Group_6_2__0_in_rule__Activity__Group_6__2__Impl4589);
             	    rule__Activity__Group_6_2__0();
 
             	    state._fsp--;
@@ -5661,7 +6167,7 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop11;
+            	    break loop12;
                 }
             } while (true);
 
@@ -5688,21 +6194,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_6_2__0"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2106:1: rule__Activity__Group_6_2__0 : rule__Activity__Group_6_2__0__Impl rule__Activity__Group_6_2__1 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2299:1: rule__Activity__Group_6_2__0 : rule__Activity__Group_6_2__0__Impl rule__Activity__Group_6_2__1 ;
     public final void rule__Activity__Group_6_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2110:1: ( rule__Activity__Group_6_2__0__Impl rule__Activity__Group_6_2__1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2111:2: rule__Activity__Group_6_2__0__Impl rule__Activity__Group_6_2__1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2303:1: ( rule__Activity__Group_6_2__0__Impl rule__Activity__Group_6_2__1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2304:2: rule__Activity__Group_6_2__0__Impl rule__Activity__Group_6_2__1
             {
-            pushFollow(FOLLOW_rule__Activity__Group_6_2__0__Impl_in_rule__Activity__Group_6_2__04237);
+            pushFollow(FOLLOW_rule__Activity__Group_6_2__0__Impl_in_rule__Activity__Group_6_2__04626);
             rule__Activity__Group_6_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Activity__Group_6_2__1_in_rule__Activity__Group_6_2__04240);
+            pushFollow(FOLLOW_rule__Activity__Group_6_2__1_in_rule__Activity__Group_6_2__04629);
             rule__Activity__Group_6_2__1();
 
             state._fsp--;
@@ -5726,20 +6232,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_6_2__0__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2118:1: rule__Activity__Group_6_2__0__Impl : ( ',' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2311:1: rule__Activity__Group_6_2__0__Impl : ( ',' ) ;
     public final void rule__Activity__Group_6_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2122:1: ( ( ',' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2123:1: ( ',' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2315:1: ( ( ',' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2316:1: ( ',' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2123:1: ( ',' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2124:1: ','
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2316:1: ( ',' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2317:1: ','
             {
              before(grammarAccess.getActivityAccess().getCommaKeyword_6_2_0()); 
-            match(input,21,FOLLOW_21_in_rule__Activity__Group_6_2__0__Impl4268); 
+            match(input,24,FOLLOW_24_in_rule__Activity__Group_6_2__0__Impl4657); 
              after(grammarAccess.getActivityAccess().getCommaKeyword_6_2_0()); 
 
             }
@@ -5763,16 +6269,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_6_2__1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2137:1: rule__Activity__Group_6_2__1 : rule__Activity__Group_6_2__1__Impl ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2330:1: rule__Activity__Group_6_2__1 : rule__Activity__Group_6_2__1__Impl ;
     public final void rule__Activity__Group_6_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2141:1: ( rule__Activity__Group_6_2__1__Impl )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2142:2: rule__Activity__Group_6_2__1__Impl
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2334:1: ( rule__Activity__Group_6_2__1__Impl )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2335:2: rule__Activity__Group_6_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Activity__Group_6_2__1__Impl_in_rule__Activity__Group_6_2__14299);
+            pushFollow(FOLLOW_rule__Activity__Group_6_2__1__Impl_in_rule__Activity__Group_6_2__14688);
             rule__Activity__Group_6_2__1__Impl();
 
             state._fsp--;
@@ -5796,23 +6302,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_6_2__1__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2148:1: rule__Activity__Group_6_2__1__Impl : ( ( rule__Activity__OutPortsAssignment_6_2_1 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2341:1: rule__Activity__Group_6_2__1__Impl : ( ( rule__Activity__OutPortsAssignment_6_2_1 ) ) ;
     public final void rule__Activity__Group_6_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2152:1: ( ( ( rule__Activity__OutPortsAssignment_6_2_1 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2153:1: ( ( rule__Activity__OutPortsAssignment_6_2_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2345:1: ( ( ( rule__Activity__OutPortsAssignment_6_2_1 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2346:1: ( ( rule__Activity__OutPortsAssignment_6_2_1 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2153:1: ( ( rule__Activity__OutPortsAssignment_6_2_1 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2154:1: ( rule__Activity__OutPortsAssignment_6_2_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2346:1: ( ( rule__Activity__OutPortsAssignment_6_2_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2347:1: ( rule__Activity__OutPortsAssignment_6_2_1 )
             {
              before(grammarAccess.getActivityAccess().getOutPortsAssignment_6_2_1()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2155:1: ( rule__Activity__OutPortsAssignment_6_2_1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2155:2: rule__Activity__OutPortsAssignment_6_2_1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2348:1: ( rule__Activity__OutPortsAssignment_6_2_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2348:2: rule__Activity__OutPortsAssignment_6_2_1
             {
-            pushFollow(FOLLOW_rule__Activity__OutPortsAssignment_6_2_1_in_rule__Activity__Group_6_2__1__Impl4326);
+            pushFollow(FOLLOW_rule__Activity__OutPortsAssignment_6_2_1_in_rule__Activity__Group_6_2__1__Impl4715);
             rule__Activity__OutPortsAssignment_6_2_1();
 
             state._fsp--;
@@ -5843,21 +6349,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_7__0"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2169:1: rule__Activity__Group_7__0 : rule__Activity__Group_7__0__Impl rule__Activity__Group_7__1 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2362:1: rule__Activity__Group_7__0 : rule__Activity__Group_7__0__Impl rule__Activity__Group_7__1 ;
     public final void rule__Activity__Group_7__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2173:1: ( rule__Activity__Group_7__0__Impl rule__Activity__Group_7__1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2174:2: rule__Activity__Group_7__0__Impl rule__Activity__Group_7__1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2366:1: ( rule__Activity__Group_7__0__Impl rule__Activity__Group_7__1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2367:2: rule__Activity__Group_7__0__Impl rule__Activity__Group_7__1
             {
-            pushFollow(FOLLOW_rule__Activity__Group_7__0__Impl_in_rule__Activity__Group_7__04360);
+            pushFollow(FOLLOW_rule__Activity__Group_7__0__Impl_in_rule__Activity__Group_7__04749);
             rule__Activity__Group_7__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Activity__Group_7__1_in_rule__Activity__Group_7__04363);
+            pushFollow(FOLLOW_rule__Activity__Group_7__1_in_rule__Activity__Group_7__04752);
             rule__Activity__Group_7__1();
 
             state._fsp--;
@@ -5881,20 +6387,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_7__0__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2181:1: rule__Activity__Group_7__0__Impl : ( 'subActivities' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2374:1: rule__Activity__Group_7__0__Impl : ( 'subActivities' ) ;
     public final void rule__Activity__Group_7__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2185:1: ( ( 'subActivities' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2186:1: ( 'subActivities' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2378:1: ( ( 'subActivities' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2379:1: ( 'subActivities' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2186:1: ( 'subActivities' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2187:1: 'subActivities'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2379:1: ( 'subActivities' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2380:1: 'subActivities'
             {
              before(grammarAccess.getActivityAccess().getSubActivitiesKeyword_7_0()); 
-            match(input,23,FOLLOW_23_in_rule__Activity__Group_7__0__Impl4391); 
+            match(input,26,FOLLOW_26_in_rule__Activity__Group_7__0__Impl4780); 
              after(grammarAccess.getActivityAccess().getSubActivitiesKeyword_7_0()); 
 
             }
@@ -5918,21 +6424,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_7__1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2200:1: rule__Activity__Group_7__1 : rule__Activity__Group_7__1__Impl rule__Activity__Group_7__2 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2393:1: rule__Activity__Group_7__1 : rule__Activity__Group_7__1__Impl rule__Activity__Group_7__2 ;
     public final void rule__Activity__Group_7__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2204:1: ( rule__Activity__Group_7__1__Impl rule__Activity__Group_7__2 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2205:2: rule__Activity__Group_7__1__Impl rule__Activity__Group_7__2
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2397:1: ( rule__Activity__Group_7__1__Impl rule__Activity__Group_7__2 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2398:2: rule__Activity__Group_7__1__Impl rule__Activity__Group_7__2
             {
-            pushFollow(FOLLOW_rule__Activity__Group_7__1__Impl_in_rule__Activity__Group_7__14422);
+            pushFollow(FOLLOW_rule__Activity__Group_7__1__Impl_in_rule__Activity__Group_7__14811);
             rule__Activity__Group_7__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Activity__Group_7__2_in_rule__Activity__Group_7__14425);
+            pushFollow(FOLLOW_rule__Activity__Group_7__2_in_rule__Activity__Group_7__14814);
             rule__Activity__Group_7__2();
 
             state._fsp--;
@@ -5956,23 +6462,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_7__1__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2212:1: rule__Activity__Group_7__1__Impl : ( ( rule__Activity__SubActivitiesAssignment_7_1 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2405:1: rule__Activity__Group_7__1__Impl : ( ( rule__Activity__SubActivitiesAssignment_7_1 ) ) ;
     public final void rule__Activity__Group_7__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2216:1: ( ( ( rule__Activity__SubActivitiesAssignment_7_1 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2217:1: ( ( rule__Activity__SubActivitiesAssignment_7_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2409:1: ( ( ( rule__Activity__SubActivitiesAssignment_7_1 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2410:1: ( ( rule__Activity__SubActivitiesAssignment_7_1 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2217:1: ( ( rule__Activity__SubActivitiesAssignment_7_1 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2218:1: ( rule__Activity__SubActivitiesAssignment_7_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2410:1: ( ( rule__Activity__SubActivitiesAssignment_7_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2411:1: ( rule__Activity__SubActivitiesAssignment_7_1 )
             {
              before(grammarAccess.getActivityAccess().getSubActivitiesAssignment_7_1()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2219:1: ( rule__Activity__SubActivitiesAssignment_7_1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2219:2: rule__Activity__SubActivitiesAssignment_7_1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2412:1: ( rule__Activity__SubActivitiesAssignment_7_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2412:2: rule__Activity__SubActivitiesAssignment_7_1
             {
-            pushFollow(FOLLOW_rule__Activity__SubActivitiesAssignment_7_1_in_rule__Activity__Group_7__1__Impl4452);
+            pushFollow(FOLLOW_rule__Activity__SubActivitiesAssignment_7_1_in_rule__Activity__Group_7__1__Impl4841);
             rule__Activity__SubActivitiesAssignment_7_1();
 
             state._fsp--;
@@ -6003,16 +6509,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_7__2"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2229:1: rule__Activity__Group_7__2 : rule__Activity__Group_7__2__Impl ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2422:1: rule__Activity__Group_7__2 : rule__Activity__Group_7__2__Impl ;
     public final void rule__Activity__Group_7__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2233:1: ( rule__Activity__Group_7__2__Impl )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2234:2: rule__Activity__Group_7__2__Impl
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2426:1: ( rule__Activity__Group_7__2__Impl )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2427:2: rule__Activity__Group_7__2__Impl
             {
-            pushFollow(FOLLOW_rule__Activity__Group_7__2__Impl_in_rule__Activity__Group_7__24482);
+            pushFollow(FOLLOW_rule__Activity__Group_7__2__Impl_in_rule__Activity__Group_7__24871);
             rule__Activity__Group_7__2__Impl();
 
             state._fsp--;
@@ -6036,35 +6542,35 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_7__2__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2240:1: rule__Activity__Group_7__2__Impl : ( ( rule__Activity__Group_7_2__0 )* ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2433:1: rule__Activity__Group_7__2__Impl : ( ( rule__Activity__Group_7_2__0 )* ) ;
     public final void rule__Activity__Group_7__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2244:1: ( ( ( rule__Activity__Group_7_2__0 )* ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2245:1: ( ( rule__Activity__Group_7_2__0 )* )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2437:1: ( ( ( rule__Activity__Group_7_2__0 )* ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2438:1: ( ( rule__Activity__Group_7_2__0 )* )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2245:1: ( ( rule__Activity__Group_7_2__0 )* )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2246:1: ( rule__Activity__Group_7_2__0 )*
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2438:1: ( ( rule__Activity__Group_7_2__0 )* )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2439:1: ( rule__Activity__Group_7_2__0 )*
             {
              before(grammarAccess.getActivityAccess().getGroup_7_2()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2247:1: ( rule__Activity__Group_7_2__0 )*
-            loop12:
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2440:1: ( rule__Activity__Group_7_2__0 )*
+            loop13:
             do {
-                int alt12=2;
-                int LA12_0 = input.LA(1);
+                int alt13=2;
+                int LA13_0 = input.LA(1);
 
-                if ( (LA12_0==21) ) {
-                    alt12=1;
+                if ( (LA13_0==24) ) {
+                    alt13=1;
                 }
 
 
-                switch (alt12) {
+                switch (alt13) {
             	case 1 :
-            	    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2247:2: rule__Activity__Group_7_2__0
+            	    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2440:2: rule__Activity__Group_7_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__Activity__Group_7_2__0_in_rule__Activity__Group_7__2__Impl4509);
+            	    pushFollow(FOLLOW_rule__Activity__Group_7_2__0_in_rule__Activity__Group_7__2__Impl4898);
             	    rule__Activity__Group_7_2__0();
 
             	    state._fsp--;
@@ -6074,7 +6580,7 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop12;
+            	    break loop13;
                 }
             } while (true);
 
@@ -6101,21 +6607,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_7_2__0"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2263:1: rule__Activity__Group_7_2__0 : rule__Activity__Group_7_2__0__Impl rule__Activity__Group_7_2__1 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2456:1: rule__Activity__Group_7_2__0 : rule__Activity__Group_7_2__0__Impl rule__Activity__Group_7_2__1 ;
     public final void rule__Activity__Group_7_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2267:1: ( rule__Activity__Group_7_2__0__Impl rule__Activity__Group_7_2__1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2268:2: rule__Activity__Group_7_2__0__Impl rule__Activity__Group_7_2__1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2460:1: ( rule__Activity__Group_7_2__0__Impl rule__Activity__Group_7_2__1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2461:2: rule__Activity__Group_7_2__0__Impl rule__Activity__Group_7_2__1
             {
-            pushFollow(FOLLOW_rule__Activity__Group_7_2__0__Impl_in_rule__Activity__Group_7_2__04546);
+            pushFollow(FOLLOW_rule__Activity__Group_7_2__0__Impl_in_rule__Activity__Group_7_2__04935);
             rule__Activity__Group_7_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Activity__Group_7_2__1_in_rule__Activity__Group_7_2__04549);
+            pushFollow(FOLLOW_rule__Activity__Group_7_2__1_in_rule__Activity__Group_7_2__04938);
             rule__Activity__Group_7_2__1();
 
             state._fsp--;
@@ -6139,20 +6645,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_7_2__0__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2275:1: rule__Activity__Group_7_2__0__Impl : ( ',' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2468:1: rule__Activity__Group_7_2__0__Impl : ( ',' ) ;
     public final void rule__Activity__Group_7_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2279:1: ( ( ',' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2280:1: ( ',' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2472:1: ( ( ',' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2473:1: ( ',' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2280:1: ( ',' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2281:1: ','
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2473:1: ( ',' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2474:1: ','
             {
              before(grammarAccess.getActivityAccess().getCommaKeyword_7_2_0()); 
-            match(input,21,FOLLOW_21_in_rule__Activity__Group_7_2__0__Impl4577); 
+            match(input,24,FOLLOW_24_in_rule__Activity__Group_7_2__0__Impl4966); 
              after(grammarAccess.getActivityAccess().getCommaKeyword_7_2_0()); 
 
             }
@@ -6176,16 +6682,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_7_2__1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2294:1: rule__Activity__Group_7_2__1 : rule__Activity__Group_7_2__1__Impl ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2487:1: rule__Activity__Group_7_2__1 : rule__Activity__Group_7_2__1__Impl ;
     public final void rule__Activity__Group_7_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2298:1: ( rule__Activity__Group_7_2__1__Impl )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2299:2: rule__Activity__Group_7_2__1__Impl
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2491:1: ( rule__Activity__Group_7_2__1__Impl )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2492:2: rule__Activity__Group_7_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Activity__Group_7_2__1__Impl_in_rule__Activity__Group_7_2__14608);
+            pushFollow(FOLLOW_rule__Activity__Group_7_2__1__Impl_in_rule__Activity__Group_7_2__14997);
             rule__Activity__Group_7_2__1__Impl();
 
             state._fsp--;
@@ -6209,23 +6715,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_7_2__1__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2305:1: rule__Activity__Group_7_2__1__Impl : ( ( rule__Activity__SubActivitiesAssignment_7_2_1 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2498:1: rule__Activity__Group_7_2__1__Impl : ( ( rule__Activity__SubActivitiesAssignment_7_2_1 ) ) ;
     public final void rule__Activity__Group_7_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2309:1: ( ( ( rule__Activity__SubActivitiesAssignment_7_2_1 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2310:1: ( ( rule__Activity__SubActivitiesAssignment_7_2_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2502:1: ( ( ( rule__Activity__SubActivitiesAssignment_7_2_1 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2503:1: ( ( rule__Activity__SubActivitiesAssignment_7_2_1 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2310:1: ( ( rule__Activity__SubActivitiesAssignment_7_2_1 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2311:1: ( rule__Activity__SubActivitiesAssignment_7_2_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2503:1: ( ( rule__Activity__SubActivitiesAssignment_7_2_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2504:1: ( rule__Activity__SubActivitiesAssignment_7_2_1 )
             {
              before(grammarAccess.getActivityAccess().getSubActivitiesAssignment_7_2_1()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2312:1: ( rule__Activity__SubActivitiesAssignment_7_2_1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2312:2: rule__Activity__SubActivitiesAssignment_7_2_1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2505:1: ( rule__Activity__SubActivitiesAssignment_7_2_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2505:2: rule__Activity__SubActivitiesAssignment_7_2_1
             {
-            pushFollow(FOLLOW_rule__Activity__SubActivitiesAssignment_7_2_1_in_rule__Activity__Group_7_2__1__Impl4635);
+            pushFollow(FOLLOW_rule__Activity__SubActivitiesAssignment_7_2_1_in_rule__Activity__Group_7_2__1__Impl5024);
             rule__Activity__SubActivitiesAssignment_7_2_1();
 
             state._fsp--;
@@ -6256,21 +6762,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_8__0"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2326:1: rule__Activity__Group_8__0 : rule__Activity__Group_8__0__Impl rule__Activity__Group_8__1 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2519:1: rule__Activity__Group_8__0 : rule__Activity__Group_8__0__Impl rule__Activity__Group_8__1 ;
     public final void rule__Activity__Group_8__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2330:1: ( rule__Activity__Group_8__0__Impl rule__Activity__Group_8__1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2331:2: rule__Activity__Group_8__0__Impl rule__Activity__Group_8__1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2523:1: ( rule__Activity__Group_8__0__Impl rule__Activity__Group_8__1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2524:2: rule__Activity__Group_8__0__Impl rule__Activity__Group_8__1
             {
-            pushFollow(FOLLOW_rule__Activity__Group_8__0__Impl_in_rule__Activity__Group_8__04669);
+            pushFollow(FOLLOW_rule__Activity__Group_8__0__Impl_in_rule__Activity__Group_8__05058);
             rule__Activity__Group_8__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Activity__Group_8__1_in_rule__Activity__Group_8__04672);
+            pushFollow(FOLLOW_rule__Activity__Group_8__1_in_rule__Activity__Group_8__05061);
             rule__Activity__Group_8__1();
 
             state._fsp--;
@@ -6294,20 +6800,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_8__0__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2338:1: rule__Activity__Group_8__0__Impl : ( 'guidances' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2531:1: rule__Activity__Group_8__0__Impl : ( 'guidances' ) ;
     public final void rule__Activity__Group_8__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2342:1: ( ( 'guidances' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2343:1: ( 'guidances' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2535:1: ( ( 'guidances' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2536:1: ( 'guidances' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2343:1: ( 'guidances' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2344:1: 'guidances'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2536:1: ( 'guidances' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2537:1: 'guidances'
             {
              before(grammarAccess.getActivityAccess().getGuidancesKeyword_8_0()); 
-            match(input,24,FOLLOW_24_in_rule__Activity__Group_8__0__Impl4700); 
+            match(input,27,FOLLOW_27_in_rule__Activity__Group_8__0__Impl5089); 
              after(grammarAccess.getActivityAccess().getGuidancesKeyword_8_0()); 
 
             }
@@ -6331,21 +6837,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_8__1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2357:1: rule__Activity__Group_8__1 : rule__Activity__Group_8__1__Impl rule__Activity__Group_8__2 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2550:1: rule__Activity__Group_8__1 : rule__Activity__Group_8__1__Impl rule__Activity__Group_8__2 ;
     public final void rule__Activity__Group_8__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2361:1: ( rule__Activity__Group_8__1__Impl rule__Activity__Group_8__2 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2362:2: rule__Activity__Group_8__1__Impl rule__Activity__Group_8__2
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2554:1: ( rule__Activity__Group_8__1__Impl rule__Activity__Group_8__2 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2555:2: rule__Activity__Group_8__1__Impl rule__Activity__Group_8__2
             {
-            pushFollow(FOLLOW_rule__Activity__Group_8__1__Impl_in_rule__Activity__Group_8__14731);
+            pushFollow(FOLLOW_rule__Activity__Group_8__1__Impl_in_rule__Activity__Group_8__15120);
             rule__Activity__Group_8__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Activity__Group_8__2_in_rule__Activity__Group_8__14734);
+            pushFollow(FOLLOW_rule__Activity__Group_8__2_in_rule__Activity__Group_8__15123);
             rule__Activity__Group_8__2();
 
             state._fsp--;
@@ -6369,23 +6875,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_8__1__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2369:1: rule__Activity__Group_8__1__Impl : ( ( rule__Activity__GuidancesAssignment_8_1 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2562:1: rule__Activity__Group_8__1__Impl : ( ( rule__Activity__GuidancesAssignment_8_1 ) ) ;
     public final void rule__Activity__Group_8__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2373:1: ( ( ( rule__Activity__GuidancesAssignment_8_1 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2374:1: ( ( rule__Activity__GuidancesAssignment_8_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2566:1: ( ( ( rule__Activity__GuidancesAssignment_8_1 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2567:1: ( ( rule__Activity__GuidancesAssignment_8_1 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2374:1: ( ( rule__Activity__GuidancesAssignment_8_1 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2375:1: ( rule__Activity__GuidancesAssignment_8_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2567:1: ( ( rule__Activity__GuidancesAssignment_8_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2568:1: ( rule__Activity__GuidancesAssignment_8_1 )
             {
              before(grammarAccess.getActivityAccess().getGuidancesAssignment_8_1()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2376:1: ( rule__Activity__GuidancesAssignment_8_1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2376:2: rule__Activity__GuidancesAssignment_8_1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2569:1: ( rule__Activity__GuidancesAssignment_8_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2569:2: rule__Activity__GuidancesAssignment_8_1
             {
-            pushFollow(FOLLOW_rule__Activity__GuidancesAssignment_8_1_in_rule__Activity__Group_8__1__Impl4761);
+            pushFollow(FOLLOW_rule__Activity__GuidancesAssignment_8_1_in_rule__Activity__Group_8__1__Impl5150);
             rule__Activity__GuidancesAssignment_8_1();
 
             state._fsp--;
@@ -6416,16 +6922,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_8__2"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2386:1: rule__Activity__Group_8__2 : rule__Activity__Group_8__2__Impl ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2579:1: rule__Activity__Group_8__2 : rule__Activity__Group_8__2__Impl ;
     public final void rule__Activity__Group_8__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2390:1: ( rule__Activity__Group_8__2__Impl )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2391:2: rule__Activity__Group_8__2__Impl
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2583:1: ( rule__Activity__Group_8__2__Impl )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2584:2: rule__Activity__Group_8__2__Impl
             {
-            pushFollow(FOLLOW_rule__Activity__Group_8__2__Impl_in_rule__Activity__Group_8__24791);
+            pushFollow(FOLLOW_rule__Activity__Group_8__2__Impl_in_rule__Activity__Group_8__25180);
             rule__Activity__Group_8__2__Impl();
 
             state._fsp--;
@@ -6449,35 +6955,35 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_8__2__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2397:1: rule__Activity__Group_8__2__Impl : ( ( rule__Activity__Group_8_2__0 )* ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2590:1: rule__Activity__Group_8__2__Impl : ( ( rule__Activity__Group_8_2__0 )* ) ;
     public final void rule__Activity__Group_8__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2401:1: ( ( ( rule__Activity__Group_8_2__0 )* ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2402:1: ( ( rule__Activity__Group_8_2__0 )* )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2594:1: ( ( ( rule__Activity__Group_8_2__0 )* ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2595:1: ( ( rule__Activity__Group_8_2__0 )* )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2402:1: ( ( rule__Activity__Group_8_2__0 )* )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2403:1: ( rule__Activity__Group_8_2__0 )*
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2595:1: ( ( rule__Activity__Group_8_2__0 )* )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2596:1: ( rule__Activity__Group_8_2__0 )*
             {
              before(grammarAccess.getActivityAccess().getGroup_8_2()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2404:1: ( rule__Activity__Group_8_2__0 )*
-            loop13:
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2597:1: ( rule__Activity__Group_8_2__0 )*
+            loop14:
             do {
-                int alt13=2;
-                int LA13_0 = input.LA(1);
+                int alt14=2;
+                int LA14_0 = input.LA(1);
 
-                if ( (LA13_0==21) ) {
-                    alt13=1;
+                if ( (LA14_0==24) ) {
+                    alt14=1;
                 }
 
 
-                switch (alt13) {
+                switch (alt14) {
             	case 1 :
-            	    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2404:2: rule__Activity__Group_8_2__0
+            	    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2597:2: rule__Activity__Group_8_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__Activity__Group_8_2__0_in_rule__Activity__Group_8__2__Impl4818);
+            	    pushFollow(FOLLOW_rule__Activity__Group_8_2__0_in_rule__Activity__Group_8__2__Impl5207);
             	    rule__Activity__Group_8_2__0();
 
             	    state._fsp--;
@@ -6487,7 +6993,7 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop13;
+            	    break loop14;
                 }
             } while (true);
 
@@ -6514,21 +7020,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_8_2__0"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2420:1: rule__Activity__Group_8_2__0 : rule__Activity__Group_8_2__0__Impl rule__Activity__Group_8_2__1 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2613:1: rule__Activity__Group_8_2__0 : rule__Activity__Group_8_2__0__Impl rule__Activity__Group_8_2__1 ;
     public final void rule__Activity__Group_8_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2424:1: ( rule__Activity__Group_8_2__0__Impl rule__Activity__Group_8_2__1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2425:2: rule__Activity__Group_8_2__0__Impl rule__Activity__Group_8_2__1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2617:1: ( rule__Activity__Group_8_2__0__Impl rule__Activity__Group_8_2__1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2618:2: rule__Activity__Group_8_2__0__Impl rule__Activity__Group_8_2__1
             {
-            pushFollow(FOLLOW_rule__Activity__Group_8_2__0__Impl_in_rule__Activity__Group_8_2__04855);
+            pushFollow(FOLLOW_rule__Activity__Group_8_2__0__Impl_in_rule__Activity__Group_8_2__05244);
             rule__Activity__Group_8_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Activity__Group_8_2__1_in_rule__Activity__Group_8_2__04858);
+            pushFollow(FOLLOW_rule__Activity__Group_8_2__1_in_rule__Activity__Group_8_2__05247);
             rule__Activity__Group_8_2__1();
 
             state._fsp--;
@@ -6552,20 +7058,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_8_2__0__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2432:1: rule__Activity__Group_8_2__0__Impl : ( ',' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2625:1: rule__Activity__Group_8_2__0__Impl : ( ',' ) ;
     public final void rule__Activity__Group_8_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2436:1: ( ( ',' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2437:1: ( ',' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2629:1: ( ( ',' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2630:1: ( ',' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2437:1: ( ',' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2438:1: ','
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2630:1: ( ',' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2631:1: ','
             {
              before(grammarAccess.getActivityAccess().getCommaKeyword_8_2_0()); 
-            match(input,21,FOLLOW_21_in_rule__Activity__Group_8_2__0__Impl4886); 
+            match(input,24,FOLLOW_24_in_rule__Activity__Group_8_2__0__Impl5275); 
              after(grammarAccess.getActivityAccess().getCommaKeyword_8_2_0()); 
 
             }
@@ -6589,16 +7095,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_8_2__1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2451:1: rule__Activity__Group_8_2__1 : rule__Activity__Group_8_2__1__Impl ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2644:1: rule__Activity__Group_8_2__1 : rule__Activity__Group_8_2__1__Impl ;
     public final void rule__Activity__Group_8_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2455:1: ( rule__Activity__Group_8_2__1__Impl )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2456:2: rule__Activity__Group_8_2__1__Impl
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2648:1: ( rule__Activity__Group_8_2__1__Impl )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2649:2: rule__Activity__Group_8_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Activity__Group_8_2__1__Impl_in_rule__Activity__Group_8_2__14917);
+            pushFollow(FOLLOW_rule__Activity__Group_8_2__1__Impl_in_rule__Activity__Group_8_2__15306);
             rule__Activity__Group_8_2__1__Impl();
 
             state._fsp--;
@@ -6622,23 +7128,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_8_2__1__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2462:1: rule__Activity__Group_8_2__1__Impl : ( ( rule__Activity__GuidancesAssignment_8_2_1 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2655:1: rule__Activity__Group_8_2__1__Impl : ( ( rule__Activity__GuidancesAssignment_8_2_1 ) ) ;
     public final void rule__Activity__Group_8_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2466:1: ( ( ( rule__Activity__GuidancesAssignment_8_2_1 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2467:1: ( ( rule__Activity__GuidancesAssignment_8_2_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2659:1: ( ( ( rule__Activity__GuidancesAssignment_8_2_1 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2660:1: ( ( rule__Activity__GuidancesAssignment_8_2_1 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2467:1: ( ( rule__Activity__GuidancesAssignment_8_2_1 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2468:1: ( rule__Activity__GuidancesAssignment_8_2_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2660:1: ( ( rule__Activity__GuidancesAssignment_8_2_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2661:1: ( rule__Activity__GuidancesAssignment_8_2_1 )
             {
              before(grammarAccess.getActivityAccess().getGuidancesAssignment_8_2_1()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2469:1: ( rule__Activity__GuidancesAssignment_8_2_1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2469:2: rule__Activity__GuidancesAssignment_8_2_1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2662:1: ( rule__Activity__GuidancesAssignment_8_2_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2662:2: rule__Activity__GuidancesAssignment_8_2_1
             {
-            pushFollow(FOLLOW_rule__Activity__GuidancesAssignment_8_2_1_in_rule__Activity__Group_8_2__1__Impl4944);
+            pushFollow(FOLLOW_rule__Activity__GuidancesAssignment_8_2_1_in_rule__Activity__Group_8_2__1__Impl5333);
             rule__Activity__GuidancesAssignment_8_2_1();
 
             state._fsp--;
@@ -6669,21 +7175,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_9__0"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2483:1: rule__Activity__Group_9__0 : rule__Activity__Group_9__0__Impl rule__Activity__Group_9__1 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2676:1: rule__Activity__Group_9__0 : rule__Activity__Group_9__0__Impl rule__Activity__Group_9__1 ;
     public final void rule__Activity__Group_9__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2487:1: ( rule__Activity__Group_9__0__Impl rule__Activity__Group_9__1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2488:2: rule__Activity__Group_9__0__Impl rule__Activity__Group_9__1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2680:1: ( rule__Activity__Group_9__0__Impl rule__Activity__Group_9__1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2681:2: rule__Activity__Group_9__0__Impl rule__Activity__Group_9__1
             {
-            pushFollow(FOLLOW_rule__Activity__Group_9__0__Impl_in_rule__Activity__Group_9__04978);
+            pushFollow(FOLLOW_rule__Activity__Group_9__0__Impl_in_rule__Activity__Group_9__05367);
             rule__Activity__Group_9__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Activity__Group_9__1_in_rule__Activity__Group_9__04981);
+            pushFollow(FOLLOW_rule__Activity__Group_9__1_in_rule__Activity__Group_9__05370);
             rule__Activity__Group_9__1();
 
             state._fsp--;
@@ -6707,20 +7213,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_9__0__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2495:1: rule__Activity__Group_9__0__Impl : ( 'Behavior' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2688:1: rule__Activity__Group_9__0__Impl : ( 'Behavior' ) ;
     public final void rule__Activity__Group_9__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2499:1: ( ( 'Behavior' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2500:1: ( 'Behavior' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2692:1: ( ( 'Behavior' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2693:1: ( 'Behavior' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2500:1: ( 'Behavior' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2501:1: 'Behavior'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2693:1: ( 'Behavior' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2694:1: 'Behavior'
             {
              before(grammarAccess.getActivityAccess().getBehaviorKeyword_9_0()); 
-            match(input,25,FOLLOW_25_in_rule__Activity__Group_9__0__Impl5009); 
+            match(input,28,FOLLOW_28_in_rule__Activity__Group_9__0__Impl5398); 
              after(grammarAccess.getActivityAccess().getBehaviorKeyword_9_0()); 
 
             }
@@ -6744,21 +7250,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_9__1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2514:1: rule__Activity__Group_9__1 : rule__Activity__Group_9__1__Impl rule__Activity__Group_9__2 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2707:1: rule__Activity__Group_9__1 : rule__Activity__Group_9__1__Impl rule__Activity__Group_9__2 ;
     public final void rule__Activity__Group_9__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2518:1: ( rule__Activity__Group_9__1__Impl rule__Activity__Group_9__2 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2519:2: rule__Activity__Group_9__1__Impl rule__Activity__Group_9__2
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2711:1: ( rule__Activity__Group_9__1__Impl rule__Activity__Group_9__2 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2712:2: rule__Activity__Group_9__1__Impl rule__Activity__Group_9__2
             {
-            pushFollow(FOLLOW_rule__Activity__Group_9__1__Impl_in_rule__Activity__Group_9__15040);
+            pushFollow(FOLLOW_rule__Activity__Group_9__1__Impl_in_rule__Activity__Group_9__15429);
             rule__Activity__Group_9__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Activity__Group_9__2_in_rule__Activity__Group_9__15043);
+            pushFollow(FOLLOW_rule__Activity__Group_9__2_in_rule__Activity__Group_9__15432);
             rule__Activity__Group_9__2();
 
             state._fsp--;
@@ -6782,20 +7288,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_9__1__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2526:1: rule__Activity__Group_9__1__Impl : ( '{' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2719:1: rule__Activity__Group_9__1__Impl : ( '{' ) ;
     public final void rule__Activity__Group_9__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2530:1: ( ( '{' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2531:1: ( '{' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2723:1: ( ( '{' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2724:1: ( '{' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2531:1: ( '{' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2532:1: '{'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2724:1: ( '{' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2725:1: '{'
             {
              before(grammarAccess.getActivityAccess().getLeftCurlyBracketKeyword_9_1()); 
-            match(input,26,FOLLOW_26_in_rule__Activity__Group_9__1__Impl5071); 
+            match(input,29,FOLLOW_29_in_rule__Activity__Group_9__1__Impl5460); 
              after(grammarAccess.getActivityAccess().getLeftCurlyBracketKeyword_9_1()); 
 
             }
@@ -6819,21 +7325,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_9__2"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2545:1: rule__Activity__Group_9__2 : rule__Activity__Group_9__2__Impl rule__Activity__Group_9__3 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2738:1: rule__Activity__Group_9__2 : rule__Activity__Group_9__2__Impl rule__Activity__Group_9__3 ;
     public final void rule__Activity__Group_9__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2549:1: ( rule__Activity__Group_9__2__Impl rule__Activity__Group_9__3 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2550:2: rule__Activity__Group_9__2__Impl rule__Activity__Group_9__3
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2742:1: ( rule__Activity__Group_9__2__Impl rule__Activity__Group_9__3 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2743:2: rule__Activity__Group_9__2__Impl rule__Activity__Group_9__3
             {
-            pushFollow(FOLLOW_rule__Activity__Group_9__2__Impl_in_rule__Activity__Group_9__25102);
+            pushFollow(FOLLOW_rule__Activity__Group_9__2__Impl_in_rule__Activity__Group_9__25491);
             rule__Activity__Group_9__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Activity__Group_9__3_in_rule__Activity__Group_9__25105);
+            pushFollow(FOLLOW_rule__Activity__Group_9__3_in_rule__Activity__Group_9__25494);
             rule__Activity__Group_9__3();
 
             state._fsp--;
@@ -6857,35 +7363,35 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_9__2__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2557:1: rule__Activity__Group_9__2__Impl : ( ( rule__Activity__Alternatives_9_2 )* ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2750:1: rule__Activity__Group_9__2__Impl : ( ( rule__Activity__Alternatives_9_2 )* ) ;
     public final void rule__Activity__Group_9__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2561:1: ( ( ( rule__Activity__Alternatives_9_2 )* ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2562:1: ( ( rule__Activity__Alternatives_9_2 )* )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2754:1: ( ( ( rule__Activity__Alternatives_9_2 )* ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2755:1: ( ( rule__Activity__Alternatives_9_2 )* )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2562:1: ( ( rule__Activity__Alternatives_9_2 )* )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2563:1: ( rule__Activity__Alternatives_9_2 )*
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2755:1: ( ( rule__Activity__Alternatives_9_2 )* )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2756:1: ( rule__Activity__Alternatives_9_2 )*
             {
              before(grammarAccess.getActivityAccess().getAlternatives_9_2()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2564:1: ( rule__Activity__Alternatives_9_2 )*
-            loop14:
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2757:1: ( rule__Activity__Alternatives_9_2 )*
+            loop15:
             do {
-                int alt14=2;
-                int LA14_0 = input.LA(1);
+                int alt15=2;
+                int LA15_0 = input.LA(1);
 
-                if ( ((LA14_0>=28 && LA14_0<=30)) ) {
-                    alt14=1;
+                if ( ((LA15_0>=31 && LA15_0<=33)) ) {
+                    alt15=1;
                 }
 
 
-                switch (alt14) {
+                switch (alt15) {
             	case 1 :
-            	    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2564:2: rule__Activity__Alternatives_9_2
+            	    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2757:2: rule__Activity__Alternatives_9_2
             	    {
-            	    pushFollow(FOLLOW_rule__Activity__Alternatives_9_2_in_rule__Activity__Group_9__2__Impl5132);
+            	    pushFollow(FOLLOW_rule__Activity__Alternatives_9_2_in_rule__Activity__Group_9__2__Impl5521);
             	    rule__Activity__Alternatives_9_2();
 
             	    state._fsp--;
@@ -6895,7 +7401,7 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop14;
+            	    break loop15;
                 }
             } while (true);
 
@@ -6922,16 +7428,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_9__3"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2574:1: rule__Activity__Group_9__3 : rule__Activity__Group_9__3__Impl ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2767:1: rule__Activity__Group_9__3 : rule__Activity__Group_9__3__Impl ;
     public final void rule__Activity__Group_9__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2578:1: ( rule__Activity__Group_9__3__Impl )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2579:2: rule__Activity__Group_9__3__Impl
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2771:1: ( rule__Activity__Group_9__3__Impl )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2772:2: rule__Activity__Group_9__3__Impl
             {
-            pushFollow(FOLLOW_rule__Activity__Group_9__3__Impl_in_rule__Activity__Group_9__35163);
+            pushFollow(FOLLOW_rule__Activity__Group_9__3__Impl_in_rule__Activity__Group_9__35552);
             rule__Activity__Group_9__3__Impl();
 
             state._fsp--;
@@ -6955,20 +7461,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__Group_9__3__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2585:1: rule__Activity__Group_9__3__Impl : ( '}' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2778:1: rule__Activity__Group_9__3__Impl : ( '}' ) ;
     public final void rule__Activity__Group_9__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2589:1: ( ( '}' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2590:1: ( '}' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2782:1: ( ( '}' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2783:1: ( '}' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2590:1: ( '}' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2591:1: '}'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2783:1: ( '}' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2784:1: '}'
             {
              before(grammarAccess.getActivityAccess().getRightCurlyBracketKeyword_9_3()); 
-            match(input,27,FOLLOW_27_in_rule__Activity__Group_9__3__Impl5191); 
+            match(input,30,FOLLOW_30_in_rule__Activity__Group_9__3__Impl5580); 
              after(grammarAccess.getActivityAccess().getRightCurlyBracketKeyword_9_3()); 
 
             }
@@ -6991,262 +7497,22 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Activity__Group_9__3__Impl"
 
 
-    // $ANTLR start "rule__ActivityRef__Group__0"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2612:1: rule__ActivityRef__Group__0 : rule__ActivityRef__Group__0__Impl rule__ActivityRef__Group__1 ;
-    public final void rule__ActivityRef__Group__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2616:1: ( rule__ActivityRef__Group__0__Impl rule__ActivityRef__Group__1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2617:2: rule__ActivityRef__Group__0__Impl rule__ActivityRef__Group__1
-            {
-            pushFollow(FOLLOW_rule__ActivityRef__Group__0__Impl_in_rule__ActivityRef__Group__05230);
-            rule__ActivityRef__Group__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__ActivityRef__Group__1_in_rule__ActivityRef__Group__05233);
-            rule__ActivityRef__Group__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ActivityRef__Group__0"
-
-
-    // $ANTLR start "rule__ActivityRef__Group__0__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2624:1: rule__ActivityRef__Group__0__Impl : ( ( rule__ActivityRef__NameAssignment_0 ) ) ;
-    public final void rule__ActivityRef__Group__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2628:1: ( ( ( rule__ActivityRef__NameAssignment_0 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2629:1: ( ( rule__ActivityRef__NameAssignment_0 ) )
-            {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2629:1: ( ( rule__ActivityRef__NameAssignment_0 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2630:1: ( rule__ActivityRef__NameAssignment_0 )
-            {
-             before(grammarAccess.getActivityRefAccess().getNameAssignment_0()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2631:1: ( rule__ActivityRef__NameAssignment_0 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2631:2: rule__ActivityRef__NameAssignment_0
-            {
-            pushFollow(FOLLOW_rule__ActivityRef__NameAssignment_0_in_rule__ActivityRef__Group__0__Impl5260);
-            rule__ActivityRef__NameAssignment_0();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getActivityRefAccess().getNameAssignment_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ActivityRef__Group__0__Impl"
-
-
-    // $ANTLR start "rule__ActivityRef__Group__1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2641:1: rule__ActivityRef__Group__1 : rule__ActivityRef__Group__1__Impl rule__ActivityRef__Group__2 ;
-    public final void rule__ActivityRef__Group__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2645:1: ( rule__ActivityRef__Group__1__Impl rule__ActivityRef__Group__2 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2646:2: rule__ActivityRef__Group__1__Impl rule__ActivityRef__Group__2
-            {
-            pushFollow(FOLLOW_rule__ActivityRef__Group__1__Impl_in_rule__ActivityRef__Group__15290);
-            rule__ActivityRef__Group__1__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__ActivityRef__Group__2_in_rule__ActivityRef__Group__15293);
-            rule__ActivityRef__Group__2();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ActivityRef__Group__1"
-
-
-    // $ANTLR start "rule__ActivityRef__Group__1__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2653:1: rule__ActivityRef__Group__1__Impl : ( ':' ) ;
-    public final void rule__ActivityRef__Group__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2657:1: ( ( ':' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2658:1: ( ':' )
-            {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2658:1: ( ':' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2659:1: ':'
-            {
-             before(grammarAccess.getActivityRefAccess().getColonKeyword_1()); 
-            match(input,15,FOLLOW_15_in_rule__ActivityRef__Group__1__Impl5321); 
-             after(grammarAccess.getActivityRefAccess().getColonKeyword_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ActivityRef__Group__1__Impl"
-
-
-    // $ANTLR start "rule__ActivityRef__Group__2"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2672:1: rule__ActivityRef__Group__2 : rule__ActivityRef__Group__2__Impl ;
-    public final void rule__ActivityRef__Group__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2676:1: ( rule__ActivityRef__Group__2__Impl )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2677:2: rule__ActivityRef__Group__2__Impl
-            {
-            pushFollow(FOLLOW_rule__ActivityRef__Group__2__Impl_in_rule__ActivityRef__Group__25352);
-            rule__ActivityRef__Group__2__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ActivityRef__Group__2"
-
-
-    // $ANTLR start "rule__ActivityRef__Group__2__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2683:1: rule__ActivityRef__Group__2__Impl : ( ( rule__ActivityRef__TypeAssignment_2 ) ) ;
-    public final void rule__ActivityRef__Group__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2687:1: ( ( ( rule__ActivityRef__TypeAssignment_2 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2688:1: ( ( rule__ActivityRef__TypeAssignment_2 ) )
-            {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2688:1: ( ( rule__ActivityRef__TypeAssignment_2 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2689:1: ( rule__ActivityRef__TypeAssignment_2 )
-            {
-             before(grammarAccess.getActivityRefAccess().getTypeAssignment_2()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2690:1: ( rule__ActivityRef__TypeAssignment_2 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2690:2: rule__ActivityRef__TypeAssignment_2
-            {
-            pushFollow(FOLLOW_rule__ActivityRef__TypeAssignment_2_in_rule__ActivityRef__Group__2__Impl5379);
-            rule__ActivityRef__TypeAssignment_2();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getActivityRefAccess().getTypeAssignment_2()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ActivityRef__Group__2__Impl"
-
-
     // $ANTLR start "rule__Decision__Group__0"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2706:1: rule__Decision__Group__0 : rule__Decision__Group__0__Impl rule__Decision__Group__1 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2805:1: rule__Decision__Group__0 : rule__Decision__Group__0__Impl rule__Decision__Group__1 ;
     public final void rule__Decision__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2710:1: ( rule__Decision__Group__0__Impl rule__Decision__Group__1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2711:2: rule__Decision__Group__0__Impl rule__Decision__Group__1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2809:1: ( rule__Decision__Group__0__Impl rule__Decision__Group__1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2810:2: rule__Decision__Group__0__Impl rule__Decision__Group__1
             {
-            pushFollow(FOLLOW_rule__Decision__Group__0__Impl_in_rule__Decision__Group__05415);
+            pushFollow(FOLLOW_rule__Decision__Group__0__Impl_in_rule__Decision__Group__05619);
             rule__Decision__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Decision__Group__1_in_rule__Decision__Group__05418);
+            pushFollow(FOLLOW_rule__Decision__Group__1_in_rule__Decision__Group__05622);
             rule__Decision__Group__1();
 
             state._fsp--;
@@ -7270,20 +7536,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Decision__Group__0__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2718:1: rule__Decision__Group__0__Impl : ( 'Decision' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2817:1: rule__Decision__Group__0__Impl : ( 'Decision' ) ;
     public final void rule__Decision__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2722:1: ( ( 'Decision' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2723:1: ( 'Decision' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2821:1: ( ( 'Decision' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2822:1: ( 'Decision' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2723:1: ( 'Decision' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2724:1: 'Decision'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2822:1: ( 'Decision' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2823:1: 'Decision'
             {
              before(grammarAccess.getDecisionAccess().getDecisionKeyword_0()); 
-            match(input,28,FOLLOW_28_in_rule__Decision__Group__0__Impl5446); 
+            match(input,31,FOLLOW_31_in_rule__Decision__Group__0__Impl5650); 
              after(grammarAccess.getDecisionAccess().getDecisionKeyword_0()); 
 
             }
@@ -7307,16 +7573,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Decision__Group__1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2737:1: rule__Decision__Group__1 : rule__Decision__Group__1__Impl ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2836:1: rule__Decision__Group__1 : rule__Decision__Group__1__Impl ;
     public final void rule__Decision__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2741:1: ( rule__Decision__Group__1__Impl )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2742:2: rule__Decision__Group__1__Impl
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2840:1: ( rule__Decision__Group__1__Impl )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2841:2: rule__Decision__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Decision__Group__1__Impl_in_rule__Decision__Group__15477);
+            pushFollow(FOLLOW_rule__Decision__Group__1__Impl_in_rule__Decision__Group__15681);
             rule__Decision__Group__1__Impl();
 
             state._fsp--;
@@ -7340,23 +7606,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Decision__Group__1__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2748:1: rule__Decision__Group__1__Impl : ( ( rule__Decision__NameAssignment_1 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2847:1: rule__Decision__Group__1__Impl : ( ( rule__Decision__NameAssignment_1 ) ) ;
     public final void rule__Decision__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2752:1: ( ( ( rule__Decision__NameAssignment_1 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2753:1: ( ( rule__Decision__NameAssignment_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2851:1: ( ( ( rule__Decision__NameAssignment_1 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2852:1: ( ( rule__Decision__NameAssignment_1 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2753:1: ( ( rule__Decision__NameAssignment_1 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2754:1: ( rule__Decision__NameAssignment_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2852:1: ( ( rule__Decision__NameAssignment_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2853:1: ( rule__Decision__NameAssignment_1 )
             {
              before(grammarAccess.getDecisionAccess().getNameAssignment_1()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2755:1: ( rule__Decision__NameAssignment_1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2755:2: rule__Decision__NameAssignment_1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2854:1: ( rule__Decision__NameAssignment_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2854:2: rule__Decision__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Decision__NameAssignment_1_in_rule__Decision__Group__1__Impl5504);
+            pushFollow(FOLLOW_rule__Decision__NameAssignment_1_in_rule__Decision__Group__1__Impl5708);
             rule__Decision__NameAssignment_1();
 
             state._fsp--;
@@ -7387,21 +7653,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Step__Group__0"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2769:1: rule__Step__Group__0 : rule__Step__Group__0__Impl rule__Step__Group__1 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2868:1: rule__Step__Group__0 : rule__Step__Group__0__Impl rule__Step__Group__1 ;
     public final void rule__Step__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2773:1: ( rule__Step__Group__0__Impl rule__Step__Group__1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2774:2: rule__Step__Group__0__Impl rule__Step__Group__1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2872:1: ( rule__Step__Group__0__Impl rule__Step__Group__1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2873:2: rule__Step__Group__0__Impl rule__Step__Group__1
             {
-            pushFollow(FOLLOW_rule__Step__Group__0__Impl_in_rule__Step__Group__05538);
+            pushFollow(FOLLOW_rule__Step__Group__0__Impl_in_rule__Step__Group__05742);
             rule__Step__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Step__Group__1_in_rule__Step__Group__05541);
+            pushFollow(FOLLOW_rule__Step__Group__1_in_rule__Step__Group__05745);
             rule__Step__Group__1();
 
             state._fsp--;
@@ -7425,20 +7691,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Step__Group__0__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2781:1: rule__Step__Group__0__Impl : ( 'Step' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2880:1: rule__Step__Group__0__Impl : ( 'Step' ) ;
     public final void rule__Step__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2785:1: ( ( 'Step' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2786:1: ( 'Step' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2884:1: ( ( 'Step' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2885:1: ( 'Step' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2786:1: ( 'Step' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2787:1: 'Step'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2885:1: ( 'Step' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2886:1: 'Step'
             {
              before(grammarAccess.getStepAccess().getStepKeyword_0()); 
-            match(input,29,FOLLOW_29_in_rule__Step__Group__0__Impl5569); 
+            match(input,32,FOLLOW_32_in_rule__Step__Group__0__Impl5773); 
              after(grammarAccess.getStepAccess().getStepKeyword_0()); 
 
             }
@@ -7462,16 +7728,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Step__Group__1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2800:1: rule__Step__Group__1 : rule__Step__Group__1__Impl ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2899:1: rule__Step__Group__1 : rule__Step__Group__1__Impl ;
     public final void rule__Step__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2804:1: ( rule__Step__Group__1__Impl )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2805:2: rule__Step__Group__1__Impl
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2903:1: ( rule__Step__Group__1__Impl )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2904:2: rule__Step__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Step__Group__1__Impl_in_rule__Step__Group__15600);
+            pushFollow(FOLLOW_rule__Step__Group__1__Impl_in_rule__Step__Group__15804);
             rule__Step__Group__1__Impl();
 
             state._fsp--;
@@ -7495,23 +7761,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Step__Group__1__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2811:1: rule__Step__Group__1__Impl : ( ( rule__Step__NameAssignment_1 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2910:1: rule__Step__Group__1__Impl : ( ( rule__Step__NameAssignment_1 ) ) ;
     public final void rule__Step__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2815:1: ( ( ( rule__Step__NameAssignment_1 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2816:1: ( ( rule__Step__NameAssignment_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2914:1: ( ( ( rule__Step__NameAssignment_1 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2915:1: ( ( rule__Step__NameAssignment_1 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2816:1: ( ( rule__Step__NameAssignment_1 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2817:1: ( rule__Step__NameAssignment_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2915:1: ( ( rule__Step__NameAssignment_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2916:1: ( rule__Step__NameAssignment_1 )
             {
              before(grammarAccess.getStepAccess().getNameAssignment_1()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2818:1: ( rule__Step__NameAssignment_1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2818:2: rule__Step__NameAssignment_1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2917:1: ( rule__Step__NameAssignment_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2917:2: rule__Step__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Step__NameAssignment_1_in_rule__Step__Group__1__Impl5627);
+            pushFollow(FOLLOW_rule__Step__NameAssignment_1_in_rule__Step__Group__1__Impl5831);
             rule__Step__NameAssignment_1();
 
             state._fsp--;
@@ -7542,21 +7808,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InitialTransition__Group__0"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2832:1: rule__InitialTransition__Group__0 : rule__InitialTransition__Group__0__Impl rule__InitialTransition__Group__1 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2931:1: rule__InitialTransition__Group__0 : rule__InitialTransition__Group__0__Impl rule__InitialTransition__Group__1 ;
     public final void rule__InitialTransition__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2836:1: ( rule__InitialTransition__Group__0__Impl rule__InitialTransition__Group__1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2837:2: rule__InitialTransition__Group__0__Impl rule__InitialTransition__Group__1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2935:1: ( rule__InitialTransition__Group__0__Impl rule__InitialTransition__Group__1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2936:2: rule__InitialTransition__Group__0__Impl rule__InitialTransition__Group__1
             {
-            pushFollow(FOLLOW_rule__InitialTransition__Group__0__Impl_in_rule__InitialTransition__Group__05661);
+            pushFollow(FOLLOW_rule__InitialTransition__Group__0__Impl_in_rule__InitialTransition__Group__05865);
             rule__InitialTransition__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__InitialTransition__Group__1_in_rule__InitialTransition__Group__05664);
+            pushFollow(FOLLOW_rule__InitialTransition__Group__1_in_rule__InitialTransition__Group__05868);
             rule__InitialTransition__Group__1();
 
             state._fsp--;
@@ -7580,20 +7846,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InitialTransition__Group__0__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2844:1: rule__InitialTransition__Group__0__Impl : ( 'Transition' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2943:1: rule__InitialTransition__Group__0__Impl : ( 'Transition' ) ;
     public final void rule__InitialTransition__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2848:1: ( ( 'Transition' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2849:1: ( 'Transition' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2947:1: ( ( 'Transition' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2948:1: ( 'Transition' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2849:1: ( 'Transition' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2850:1: 'Transition'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2948:1: ( 'Transition' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2949:1: 'Transition'
             {
              before(grammarAccess.getInitialTransitionAccess().getTransitionKeyword_0()); 
-            match(input,30,FOLLOW_30_in_rule__InitialTransition__Group__0__Impl5692); 
+            match(input,33,FOLLOW_33_in_rule__InitialTransition__Group__0__Impl5896); 
              after(grammarAccess.getInitialTransitionAccess().getTransitionKeyword_0()); 
 
             }
@@ -7617,21 +7883,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InitialTransition__Group__1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2863:1: rule__InitialTransition__Group__1 : rule__InitialTransition__Group__1__Impl rule__InitialTransition__Group__2 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2962:1: rule__InitialTransition__Group__1 : rule__InitialTransition__Group__1__Impl rule__InitialTransition__Group__2 ;
     public final void rule__InitialTransition__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2867:1: ( rule__InitialTransition__Group__1__Impl rule__InitialTransition__Group__2 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2868:2: rule__InitialTransition__Group__1__Impl rule__InitialTransition__Group__2
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2966:1: ( rule__InitialTransition__Group__1__Impl rule__InitialTransition__Group__2 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2967:2: rule__InitialTransition__Group__1__Impl rule__InitialTransition__Group__2
             {
-            pushFollow(FOLLOW_rule__InitialTransition__Group__1__Impl_in_rule__InitialTransition__Group__15723);
+            pushFollow(FOLLOW_rule__InitialTransition__Group__1__Impl_in_rule__InitialTransition__Group__15927);
             rule__InitialTransition__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__InitialTransition__Group__2_in_rule__InitialTransition__Group__15726);
+            pushFollow(FOLLOW_rule__InitialTransition__Group__2_in_rule__InitialTransition__Group__15930);
             rule__InitialTransition__Group__2();
 
             state._fsp--;
@@ -7655,20 +7921,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InitialTransition__Group__1__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2875:1: rule__InitialTransition__Group__1__Impl : ( 'initial' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2974:1: rule__InitialTransition__Group__1__Impl : ( 'initial' ) ;
     public final void rule__InitialTransition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2879:1: ( ( 'initial' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2880:1: ( 'initial' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2978:1: ( ( 'initial' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2979:1: ( 'initial' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2880:1: ( 'initial' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2881:1: 'initial'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2979:1: ( 'initial' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2980:1: 'initial'
             {
              before(grammarAccess.getInitialTransitionAccess().getInitialKeyword_1()); 
-            match(input,31,FOLLOW_31_in_rule__InitialTransition__Group__1__Impl5754); 
+            match(input,34,FOLLOW_34_in_rule__InitialTransition__Group__1__Impl5958); 
              after(grammarAccess.getInitialTransitionAccess().getInitialKeyword_1()); 
 
             }
@@ -7692,21 +7958,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InitialTransition__Group__2"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2894:1: rule__InitialTransition__Group__2 : rule__InitialTransition__Group__2__Impl rule__InitialTransition__Group__3 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2993:1: rule__InitialTransition__Group__2 : rule__InitialTransition__Group__2__Impl rule__InitialTransition__Group__3 ;
     public final void rule__InitialTransition__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2898:1: ( rule__InitialTransition__Group__2__Impl rule__InitialTransition__Group__3 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2899:2: rule__InitialTransition__Group__2__Impl rule__InitialTransition__Group__3
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2997:1: ( rule__InitialTransition__Group__2__Impl rule__InitialTransition__Group__3 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2998:2: rule__InitialTransition__Group__2__Impl rule__InitialTransition__Group__3
             {
-            pushFollow(FOLLOW_rule__InitialTransition__Group__2__Impl_in_rule__InitialTransition__Group__25785);
+            pushFollow(FOLLOW_rule__InitialTransition__Group__2__Impl_in_rule__InitialTransition__Group__25989);
             rule__InitialTransition__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__InitialTransition__Group__3_in_rule__InitialTransition__Group__25788);
+            pushFollow(FOLLOW_rule__InitialTransition__Group__3_in_rule__InitialTransition__Group__25992);
             rule__InitialTransition__Group__3();
 
             state._fsp--;
@@ -7730,20 +7996,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InitialTransition__Group__2__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2906:1: rule__InitialTransition__Group__2__Impl : ( 'to' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3005:1: rule__InitialTransition__Group__2__Impl : ( 'to' ) ;
     public final void rule__InitialTransition__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2910:1: ( ( 'to' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2911:1: ( 'to' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3009:1: ( ( 'to' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3010:1: ( 'to' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2911:1: ( 'to' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2912:1: 'to'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3010:1: ( 'to' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3011:1: 'to'
             {
              before(grammarAccess.getInitialTransitionAccess().getToKeyword_2()); 
-            match(input,32,FOLLOW_32_in_rule__InitialTransition__Group__2__Impl5816); 
+            match(input,35,FOLLOW_35_in_rule__InitialTransition__Group__2__Impl6020); 
              after(grammarAccess.getInitialTransitionAccess().getToKeyword_2()); 
 
             }
@@ -7767,16 +8033,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InitialTransition__Group__3"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2925:1: rule__InitialTransition__Group__3 : rule__InitialTransition__Group__3__Impl ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3024:1: rule__InitialTransition__Group__3 : rule__InitialTransition__Group__3__Impl ;
     public final void rule__InitialTransition__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2929:1: ( rule__InitialTransition__Group__3__Impl )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2930:2: rule__InitialTransition__Group__3__Impl
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3028:1: ( rule__InitialTransition__Group__3__Impl )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3029:2: rule__InitialTransition__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__InitialTransition__Group__3__Impl_in_rule__InitialTransition__Group__35847);
+            pushFollow(FOLLOW_rule__InitialTransition__Group__3__Impl_in_rule__InitialTransition__Group__36051);
             rule__InitialTransition__Group__3__Impl();
 
             state._fsp--;
@@ -7800,23 +8066,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InitialTransition__Group__3__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2936:1: rule__InitialTransition__Group__3__Impl : ( ( rule__InitialTransition__ToAssignment_3 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3035:1: rule__InitialTransition__Group__3__Impl : ( ( rule__InitialTransition__ToAssignment_3 ) ) ;
     public final void rule__InitialTransition__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2940:1: ( ( ( rule__InitialTransition__ToAssignment_3 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2941:1: ( ( rule__InitialTransition__ToAssignment_3 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3039:1: ( ( ( rule__InitialTransition__ToAssignment_3 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3040:1: ( ( rule__InitialTransition__ToAssignment_3 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2941:1: ( ( rule__InitialTransition__ToAssignment_3 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2942:1: ( rule__InitialTransition__ToAssignment_3 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3040:1: ( ( rule__InitialTransition__ToAssignment_3 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3041:1: ( rule__InitialTransition__ToAssignment_3 )
             {
              before(grammarAccess.getInitialTransitionAccess().getToAssignment_3()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2943:1: ( rule__InitialTransition__ToAssignment_3 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2943:2: rule__InitialTransition__ToAssignment_3
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3042:1: ( rule__InitialTransition__ToAssignment_3 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3042:2: rule__InitialTransition__ToAssignment_3
             {
-            pushFollow(FOLLOW_rule__InitialTransition__ToAssignment_3_in_rule__InitialTransition__Group__3__Impl5874);
+            pushFollow(FOLLOW_rule__InitialTransition__ToAssignment_3_in_rule__InitialTransition__Group__3__Impl6078);
             rule__InitialTransition__ToAssignment_3();
 
             state._fsp--;
@@ -7847,21 +8113,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FinalTransition__Group__0"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2961:1: rule__FinalTransition__Group__0 : rule__FinalTransition__Group__0__Impl rule__FinalTransition__Group__1 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3060:1: rule__FinalTransition__Group__0 : rule__FinalTransition__Group__0__Impl rule__FinalTransition__Group__1 ;
     public final void rule__FinalTransition__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2965:1: ( rule__FinalTransition__Group__0__Impl rule__FinalTransition__Group__1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2966:2: rule__FinalTransition__Group__0__Impl rule__FinalTransition__Group__1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3064:1: ( rule__FinalTransition__Group__0__Impl rule__FinalTransition__Group__1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3065:2: rule__FinalTransition__Group__0__Impl rule__FinalTransition__Group__1
             {
-            pushFollow(FOLLOW_rule__FinalTransition__Group__0__Impl_in_rule__FinalTransition__Group__05912);
+            pushFollow(FOLLOW_rule__FinalTransition__Group__0__Impl_in_rule__FinalTransition__Group__06116);
             rule__FinalTransition__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__FinalTransition__Group__1_in_rule__FinalTransition__Group__05915);
+            pushFollow(FOLLOW_rule__FinalTransition__Group__1_in_rule__FinalTransition__Group__06119);
             rule__FinalTransition__Group__1();
 
             state._fsp--;
@@ -7885,20 +8151,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FinalTransition__Group__0__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2973:1: rule__FinalTransition__Group__0__Impl : ( 'Transition' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3072:1: rule__FinalTransition__Group__0__Impl : ( 'Transition' ) ;
     public final void rule__FinalTransition__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2977:1: ( ( 'Transition' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2978:1: ( 'Transition' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3076:1: ( ( 'Transition' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3077:1: ( 'Transition' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2978:1: ( 'Transition' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2979:1: 'Transition'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3077:1: ( 'Transition' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3078:1: 'Transition'
             {
              before(grammarAccess.getFinalTransitionAccess().getTransitionKeyword_0()); 
-            match(input,30,FOLLOW_30_in_rule__FinalTransition__Group__0__Impl5943); 
+            match(input,33,FOLLOW_33_in_rule__FinalTransition__Group__0__Impl6147); 
              after(grammarAccess.getFinalTransitionAccess().getTransitionKeyword_0()); 
 
             }
@@ -7922,21 +8188,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FinalTransition__Group__1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2992:1: rule__FinalTransition__Group__1 : rule__FinalTransition__Group__1__Impl rule__FinalTransition__Group__2 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3091:1: rule__FinalTransition__Group__1 : rule__FinalTransition__Group__1__Impl rule__FinalTransition__Group__2 ;
     public final void rule__FinalTransition__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2996:1: ( rule__FinalTransition__Group__1__Impl rule__FinalTransition__Group__2 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:2997:2: rule__FinalTransition__Group__1__Impl rule__FinalTransition__Group__2
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3095:1: ( rule__FinalTransition__Group__1__Impl rule__FinalTransition__Group__2 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3096:2: rule__FinalTransition__Group__1__Impl rule__FinalTransition__Group__2
             {
-            pushFollow(FOLLOW_rule__FinalTransition__Group__1__Impl_in_rule__FinalTransition__Group__15974);
+            pushFollow(FOLLOW_rule__FinalTransition__Group__1__Impl_in_rule__FinalTransition__Group__16178);
             rule__FinalTransition__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__FinalTransition__Group__2_in_rule__FinalTransition__Group__15977);
+            pushFollow(FOLLOW_rule__FinalTransition__Group__2_in_rule__FinalTransition__Group__16181);
             rule__FinalTransition__Group__2();
 
             state._fsp--;
@@ -7960,23 +8226,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FinalTransition__Group__1__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3004:1: rule__FinalTransition__Group__1__Impl : ( ( rule__FinalTransition__FromAssignment_1 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3103:1: rule__FinalTransition__Group__1__Impl : ( ( rule__FinalTransition__FromAssignment_1 ) ) ;
     public final void rule__FinalTransition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3008:1: ( ( ( rule__FinalTransition__FromAssignment_1 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3009:1: ( ( rule__FinalTransition__FromAssignment_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3107:1: ( ( ( rule__FinalTransition__FromAssignment_1 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3108:1: ( ( rule__FinalTransition__FromAssignment_1 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3009:1: ( ( rule__FinalTransition__FromAssignment_1 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3010:1: ( rule__FinalTransition__FromAssignment_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3108:1: ( ( rule__FinalTransition__FromAssignment_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3109:1: ( rule__FinalTransition__FromAssignment_1 )
             {
              before(grammarAccess.getFinalTransitionAccess().getFromAssignment_1()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3011:1: ( rule__FinalTransition__FromAssignment_1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3011:2: rule__FinalTransition__FromAssignment_1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3110:1: ( rule__FinalTransition__FromAssignment_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3110:2: rule__FinalTransition__FromAssignment_1
             {
-            pushFollow(FOLLOW_rule__FinalTransition__FromAssignment_1_in_rule__FinalTransition__Group__1__Impl6004);
+            pushFollow(FOLLOW_rule__FinalTransition__FromAssignment_1_in_rule__FinalTransition__Group__1__Impl6208);
             rule__FinalTransition__FromAssignment_1();
 
             state._fsp--;
@@ -8007,21 +8273,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FinalTransition__Group__2"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3021:1: rule__FinalTransition__Group__2 : rule__FinalTransition__Group__2__Impl rule__FinalTransition__Group__3 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3120:1: rule__FinalTransition__Group__2 : rule__FinalTransition__Group__2__Impl rule__FinalTransition__Group__3 ;
     public final void rule__FinalTransition__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3025:1: ( rule__FinalTransition__Group__2__Impl rule__FinalTransition__Group__3 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3026:2: rule__FinalTransition__Group__2__Impl rule__FinalTransition__Group__3
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3124:1: ( rule__FinalTransition__Group__2__Impl rule__FinalTransition__Group__3 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3125:2: rule__FinalTransition__Group__2__Impl rule__FinalTransition__Group__3
             {
-            pushFollow(FOLLOW_rule__FinalTransition__Group__2__Impl_in_rule__FinalTransition__Group__26034);
+            pushFollow(FOLLOW_rule__FinalTransition__Group__2__Impl_in_rule__FinalTransition__Group__26238);
             rule__FinalTransition__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__FinalTransition__Group__3_in_rule__FinalTransition__Group__26037);
+            pushFollow(FOLLOW_rule__FinalTransition__Group__3_in_rule__FinalTransition__Group__26241);
             rule__FinalTransition__Group__3();
 
             state._fsp--;
@@ -8045,20 +8311,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FinalTransition__Group__2__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3033:1: rule__FinalTransition__Group__2__Impl : ( 'to' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3132:1: rule__FinalTransition__Group__2__Impl : ( 'to' ) ;
     public final void rule__FinalTransition__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3037:1: ( ( 'to' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3038:1: ( 'to' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3136:1: ( ( 'to' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3137:1: ( 'to' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3038:1: ( 'to' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3039:1: 'to'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3137:1: ( 'to' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3138:1: 'to'
             {
              before(grammarAccess.getFinalTransitionAccess().getToKeyword_2()); 
-            match(input,32,FOLLOW_32_in_rule__FinalTransition__Group__2__Impl6065); 
+            match(input,35,FOLLOW_35_in_rule__FinalTransition__Group__2__Impl6269); 
              after(grammarAccess.getFinalTransitionAccess().getToKeyword_2()); 
 
             }
@@ -8082,16 +8348,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FinalTransition__Group__3"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3052:1: rule__FinalTransition__Group__3 : rule__FinalTransition__Group__3__Impl ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3151:1: rule__FinalTransition__Group__3 : rule__FinalTransition__Group__3__Impl ;
     public final void rule__FinalTransition__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3056:1: ( rule__FinalTransition__Group__3__Impl )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3057:2: rule__FinalTransition__Group__3__Impl
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3155:1: ( rule__FinalTransition__Group__3__Impl )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3156:2: rule__FinalTransition__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__FinalTransition__Group__3__Impl_in_rule__FinalTransition__Group__36096);
+            pushFollow(FOLLOW_rule__FinalTransition__Group__3__Impl_in_rule__FinalTransition__Group__36300);
             rule__FinalTransition__Group__3__Impl();
 
             state._fsp--;
@@ -8115,20 +8381,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FinalTransition__Group__3__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3063:1: rule__FinalTransition__Group__3__Impl : ( 'final' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3162:1: rule__FinalTransition__Group__3__Impl : ( 'final' ) ;
     public final void rule__FinalTransition__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3067:1: ( ( 'final' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3068:1: ( 'final' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3166:1: ( ( 'final' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3167:1: ( 'final' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3068:1: ( 'final' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3069:1: 'final'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3167:1: ( 'final' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3168:1: 'final'
             {
              before(grammarAccess.getFinalTransitionAccess().getFinalKeyword_3()); 
-            match(input,33,FOLLOW_33_in_rule__FinalTransition__Group__3__Impl6124); 
+            match(input,36,FOLLOW_36_in_rule__FinalTransition__Group__3__Impl6328); 
              after(grammarAccess.getFinalTransitionAccess().getFinalKeyword_3()); 
 
             }
@@ -8152,21 +8418,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecisionTransition__Group__0"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3090:1: rule__DecisionTransition__Group__0 : rule__DecisionTransition__Group__0__Impl rule__DecisionTransition__Group__1 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3189:1: rule__DecisionTransition__Group__0 : rule__DecisionTransition__Group__0__Impl rule__DecisionTransition__Group__1 ;
     public final void rule__DecisionTransition__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3094:1: ( rule__DecisionTransition__Group__0__Impl rule__DecisionTransition__Group__1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3095:2: rule__DecisionTransition__Group__0__Impl rule__DecisionTransition__Group__1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3193:1: ( rule__DecisionTransition__Group__0__Impl rule__DecisionTransition__Group__1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3194:2: rule__DecisionTransition__Group__0__Impl rule__DecisionTransition__Group__1
             {
-            pushFollow(FOLLOW_rule__DecisionTransition__Group__0__Impl_in_rule__DecisionTransition__Group__06163);
+            pushFollow(FOLLOW_rule__DecisionTransition__Group__0__Impl_in_rule__DecisionTransition__Group__06367);
             rule__DecisionTransition__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__DecisionTransition__Group__1_in_rule__DecisionTransition__Group__06166);
+            pushFollow(FOLLOW_rule__DecisionTransition__Group__1_in_rule__DecisionTransition__Group__06370);
             rule__DecisionTransition__Group__1();
 
             state._fsp--;
@@ -8190,20 +8456,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecisionTransition__Group__0__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3102:1: rule__DecisionTransition__Group__0__Impl : ( 'Transition' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3201:1: rule__DecisionTransition__Group__0__Impl : ( 'Transition' ) ;
     public final void rule__DecisionTransition__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3106:1: ( ( 'Transition' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3107:1: ( 'Transition' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3205:1: ( ( 'Transition' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3206:1: ( 'Transition' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3107:1: ( 'Transition' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3108:1: 'Transition'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3206:1: ( 'Transition' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3207:1: 'Transition'
             {
              before(grammarAccess.getDecisionTransitionAccess().getTransitionKeyword_0()); 
-            match(input,30,FOLLOW_30_in_rule__DecisionTransition__Group__0__Impl6194); 
+            match(input,33,FOLLOW_33_in_rule__DecisionTransition__Group__0__Impl6398); 
              after(grammarAccess.getDecisionTransitionAccess().getTransitionKeyword_0()); 
 
             }
@@ -8227,21 +8493,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecisionTransition__Group__1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3121:1: rule__DecisionTransition__Group__1 : rule__DecisionTransition__Group__1__Impl rule__DecisionTransition__Group__2 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3220:1: rule__DecisionTransition__Group__1 : rule__DecisionTransition__Group__1__Impl rule__DecisionTransition__Group__2 ;
     public final void rule__DecisionTransition__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3125:1: ( rule__DecisionTransition__Group__1__Impl rule__DecisionTransition__Group__2 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3126:2: rule__DecisionTransition__Group__1__Impl rule__DecisionTransition__Group__2
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3224:1: ( rule__DecisionTransition__Group__1__Impl rule__DecisionTransition__Group__2 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3225:2: rule__DecisionTransition__Group__1__Impl rule__DecisionTransition__Group__2
             {
-            pushFollow(FOLLOW_rule__DecisionTransition__Group__1__Impl_in_rule__DecisionTransition__Group__16225);
+            pushFollow(FOLLOW_rule__DecisionTransition__Group__1__Impl_in_rule__DecisionTransition__Group__16429);
             rule__DecisionTransition__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__DecisionTransition__Group__2_in_rule__DecisionTransition__Group__16228);
+            pushFollow(FOLLOW_rule__DecisionTransition__Group__2_in_rule__DecisionTransition__Group__16432);
             rule__DecisionTransition__Group__2();
 
             state._fsp--;
@@ -8265,23 +8531,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecisionTransition__Group__1__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3133:1: rule__DecisionTransition__Group__1__Impl : ( ( rule__DecisionTransition__FromAssignment_1 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3232:1: rule__DecisionTransition__Group__1__Impl : ( ( rule__DecisionTransition__FromAssignment_1 ) ) ;
     public final void rule__DecisionTransition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3137:1: ( ( ( rule__DecisionTransition__FromAssignment_1 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3138:1: ( ( rule__DecisionTransition__FromAssignment_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3236:1: ( ( ( rule__DecisionTransition__FromAssignment_1 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3237:1: ( ( rule__DecisionTransition__FromAssignment_1 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3138:1: ( ( rule__DecisionTransition__FromAssignment_1 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3139:1: ( rule__DecisionTransition__FromAssignment_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3237:1: ( ( rule__DecisionTransition__FromAssignment_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3238:1: ( rule__DecisionTransition__FromAssignment_1 )
             {
              before(grammarAccess.getDecisionTransitionAccess().getFromAssignment_1()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3140:1: ( rule__DecisionTransition__FromAssignment_1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3140:2: rule__DecisionTransition__FromAssignment_1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3239:1: ( rule__DecisionTransition__FromAssignment_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3239:2: rule__DecisionTransition__FromAssignment_1
             {
-            pushFollow(FOLLOW_rule__DecisionTransition__FromAssignment_1_in_rule__DecisionTransition__Group__1__Impl6255);
+            pushFollow(FOLLOW_rule__DecisionTransition__FromAssignment_1_in_rule__DecisionTransition__Group__1__Impl6459);
             rule__DecisionTransition__FromAssignment_1();
 
             state._fsp--;
@@ -8312,21 +8578,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecisionTransition__Group__2"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3150:1: rule__DecisionTransition__Group__2 : rule__DecisionTransition__Group__2__Impl rule__DecisionTransition__Group__3 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3249:1: rule__DecisionTransition__Group__2 : rule__DecisionTransition__Group__2__Impl rule__DecisionTransition__Group__3 ;
     public final void rule__DecisionTransition__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3154:1: ( rule__DecisionTransition__Group__2__Impl rule__DecisionTransition__Group__3 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3155:2: rule__DecisionTransition__Group__2__Impl rule__DecisionTransition__Group__3
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3253:1: ( rule__DecisionTransition__Group__2__Impl rule__DecisionTransition__Group__3 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3254:2: rule__DecisionTransition__Group__2__Impl rule__DecisionTransition__Group__3
             {
-            pushFollow(FOLLOW_rule__DecisionTransition__Group__2__Impl_in_rule__DecisionTransition__Group__26285);
+            pushFollow(FOLLOW_rule__DecisionTransition__Group__2__Impl_in_rule__DecisionTransition__Group__26489);
             rule__DecisionTransition__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__DecisionTransition__Group__3_in_rule__DecisionTransition__Group__26288);
+            pushFollow(FOLLOW_rule__DecisionTransition__Group__3_in_rule__DecisionTransition__Group__26492);
             rule__DecisionTransition__Group__3();
 
             state._fsp--;
@@ -8350,20 +8616,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecisionTransition__Group__2__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3162:1: rule__DecisionTransition__Group__2__Impl : ( 'to' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3261:1: rule__DecisionTransition__Group__2__Impl : ( 'to' ) ;
     public final void rule__DecisionTransition__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3166:1: ( ( 'to' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3167:1: ( 'to' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3265:1: ( ( 'to' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3266:1: ( 'to' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3167:1: ( 'to' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3168:1: 'to'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3266:1: ( 'to' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3267:1: 'to'
             {
              before(grammarAccess.getDecisionTransitionAccess().getToKeyword_2()); 
-            match(input,32,FOLLOW_32_in_rule__DecisionTransition__Group__2__Impl6316); 
+            match(input,35,FOLLOW_35_in_rule__DecisionTransition__Group__2__Impl6520); 
              after(grammarAccess.getDecisionTransitionAccess().getToKeyword_2()); 
 
             }
@@ -8387,21 +8653,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecisionTransition__Group__3"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3181:1: rule__DecisionTransition__Group__3 : rule__DecisionTransition__Group__3__Impl rule__DecisionTransition__Group__4 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3280:1: rule__DecisionTransition__Group__3 : rule__DecisionTransition__Group__3__Impl rule__DecisionTransition__Group__4 ;
     public final void rule__DecisionTransition__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3185:1: ( rule__DecisionTransition__Group__3__Impl rule__DecisionTransition__Group__4 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3186:2: rule__DecisionTransition__Group__3__Impl rule__DecisionTransition__Group__4
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3284:1: ( rule__DecisionTransition__Group__3__Impl rule__DecisionTransition__Group__4 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3285:2: rule__DecisionTransition__Group__3__Impl rule__DecisionTransition__Group__4
             {
-            pushFollow(FOLLOW_rule__DecisionTransition__Group__3__Impl_in_rule__DecisionTransition__Group__36347);
+            pushFollow(FOLLOW_rule__DecisionTransition__Group__3__Impl_in_rule__DecisionTransition__Group__36551);
             rule__DecisionTransition__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__DecisionTransition__Group__4_in_rule__DecisionTransition__Group__36350);
+            pushFollow(FOLLOW_rule__DecisionTransition__Group__4_in_rule__DecisionTransition__Group__36554);
             rule__DecisionTransition__Group__4();
 
             state._fsp--;
@@ -8425,23 +8691,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecisionTransition__Group__3__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3193:1: rule__DecisionTransition__Group__3__Impl : ( ( rule__DecisionTransition__ToAssignment_3 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3292:1: rule__DecisionTransition__Group__3__Impl : ( ( rule__DecisionTransition__ToAssignment_3 ) ) ;
     public final void rule__DecisionTransition__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3197:1: ( ( ( rule__DecisionTransition__ToAssignment_3 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3198:1: ( ( rule__DecisionTransition__ToAssignment_3 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3296:1: ( ( ( rule__DecisionTransition__ToAssignment_3 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3297:1: ( ( rule__DecisionTransition__ToAssignment_3 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3198:1: ( ( rule__DecisionTransition__ToAssignment_3 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3199:1: ( rule__DecisionTransition__ToAssignment_3 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3297:1: ( ( rule__DecisionTransition__ToAssignment_3 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3298:1: ( rule__DecisionTransition__ToAssignment_3 )
             {
              before(grammarAccess.getDecisionTransitionAccess().getToAssignment_3()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3200:1: ( rule__DecisionTransition__ToAssignment_3 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3200:2: rule__DecisionTransition__ToAssignment_3
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3299:1: ( rule__DecisionTransition__ToAssignment_3 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3299:2: rule__DecisionTransition__ToAssignment_3
             {
-            pushFollow(FOLLOW_rule__DecisionTransition__ToAssignment_3_in_rule__DecisionTransition__Group__3__Impl6377);
+            pushFollow(FOLLOW_rule__DecisionTransition__ToAssignment_3_in_rule__DecisionTransition__Group__3__Impl6581);
             rule__DecisionTransition__ToAssignment_3();
 
             state._fsp--;
@@ -8472,16 +8738,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecisionTransition__Group__4"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3210:1: rule__DecisionTransition__Group__4 : rule__DecisionTransition__Group__4__Impl ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3309:1: rule__DecisionTransition__Group__4 : rule__DecisionTransition__Group__4__Impl ;
     public final void rule__DecisionTransition__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3214:1: ( rule__DecisionTransition__Group__4__Impl )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3215:2: rule__DecisionTransition__Group__4__Impl
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3313:1: ( rule__DecisionTransition__Group__4__Impl )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3314:2: rule__DecisionTransition__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__DecisionTransition__Group__4__Impl_in_rule__DecisionTransition__Group__46407);
+            pushFollow(FOLLOW_rule__DecisionTransition__Group__4__Impl_in_rule__DecisionTransition__Group__46611);
             rule__DecisionTransition__Group__4__Impl();
 
             state._fsp--;
@@ -8505,23 +8771,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecisionTransition__Group__4__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3221:1: rule__DecisionTransition__Group__4__Impl : ( ( rule__DecisionTransition__GuardAssignment_4 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3320:1: rule__DecisionTransition__Group__4__Impl : ( ( rule__DecisionTransition__GuardAssignment_4 ) ) ;
     public final void rule__DecisionTransition__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3225:1: ( ( ( rule__DecisionTransition__GuardAssignment_4 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3226:1: ( ( rule__DecisionTransition__GuardAssignment_4 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3324:1: ( ( ( rule__DecisionTransition__GuardAssignment_4 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3325:1: ( ( rule__DecisionTransition__GuardAssignment_4 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3226:1: ( ( rule__DecisionTransition__GuardAssignment_4 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3227:1: ( rule__DecisionTransition__GuardAssignment_4 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3325:1: ( ( rule__DecisionTransition__GuardAssignment_4 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3326:1: ( rule__DecisionTransition__GuardAssignment_4 )
             {
              before(grammarAccess.getDecisionTransitionAccess().getGuardAssignment_4()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3228:1: ( rule__DecisionTransition__GuardAssignment_4 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3228:2: rule__DecisionTransition__GuardAssignment_4
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3327:1: ( rule__DecisionTransition__GuardAssignment_4 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3327:2: rule__DecisionTransition__GuardAssignment_4
             {
-            pushFollow(FOLLOW_rule__DecisionTransition__GuardAssignment_4_in_rule__DecisionTransition__Group__4__Impl6434);
+            pushFollow(FOLLOW_rule__DecisionTransition__GuardAssignment_4_in_rule__DecisionTransition__Group__4__Impl6638);
             rule__DecisionTransition__GuardAssignment_4();
 
             state._fsp--;
@@ -8552,21 +8818,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NonInitialTransition__Group__0"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3248:1: rule__NonInitialTransition__Group__0 : rule__NonInitialTransition__Group__0__Impl rule__NonInitialTransition__Group__1 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3347:1: rule__NonInitialTransition__Group__0 : rule__NonInitialTransition__Group__0__Impl rule__NonInitialTransition__Group__1 ;
     public final void rule__NonInitialTransition__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3252:1: ( rule__NonInitialTransition__Group__0__Impl rule__NonInitialTransition__Group__1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3253:2: rule__NonInitialTransition__Group__0__Impl rule__NonInitialTransition__Group__1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3351:1: ( rule__NonInitialTransition__Group__0__Impl rule__NonInitialTransition__Group__1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3352:2: rule__NonInitialTransition__Group__0__Impl rule__NonInitialTransition__Group__1
             {
-            pushFollow(FOLLOW_rule__NonInitialTransition__Group__0__Impl_in_rule__NonInitialTransition__Group__06474);
+            pushFollow(FOLLOW_rule__NonInitialTransition__Group__0__Impl_in_rule__NonInitialTransition__Group__06678);
             rule__NonInitialTransition__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__NonInitialTransition__Group__1_in_rule__NonInitialTransition__Group__06477);
+            pushFollow(FOLLOW_rule__NonInitialTransition__Group__1_in_rule__NonInitialTransition__Group__06681);
             rule__NonInitialTransition__Group__1();
 
             state._fsp--;
@@ -8590,20 +8856,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NonInitialTransition__Group__0__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3260:1: rule__NonInitialTransition__Group__0__Impl : ( 'Transition' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3359:1: rule__NonInitialTransition__Group__0__Impl : ( 'Transition' ) ;
     public final void rule__NonInitialTransition__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3264:1: ( ( 'Transition' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3265:1: ( 'Transition' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3363:1: ( ( 'Transition' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3364:1: ( 'Transition' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3265:1: ( 'Transition' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3266:1: 'Transition'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3364:1: ( 'Transition' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3365:1: 'Transition'
             {
              before(grammarAccess.getNonInitialTransitionAccess().getTransitionKeyword_0()); 
-            match(input,30,FOLLOW_30_in_rule__NonInitialTransition__Group__0__Impl6505); 
+            match(input,33,FOLLOW_33_in_rule__NonInitialTransition__Group__0__Impl6709); 
              after(grammarAccess.getNonInitialTransitionAccess().getTransitionKeyword_0()); 
 
             }
@@ -8627,21 +8893,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NonInitialTransition__Group__1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3279:1: rule__NonInitialTransition__Group__1 : rule__NonInitialTransition__Group__1__Impl rule__NonInitialTransition__Group__2 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3378:1: rule__NonInitialTransition__Group__1 : rule__NonInitialTransition__Group__1__Impl rule__NonInitialTransition__Group__2 ;
     public final void rule__NonInitialTransition__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3283:1: ( rule__NonInitialTransition__Group__1__Impl rule__NonInitialTransition__Group__2 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3284:2: rule__NonInitialTransition__Group__1__Impl rule__NonInitialTransition__Group__2
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3382:1: ( rule__NonInitialTransition__Group__1__Impl rule__NonInitialTransition__Group__2 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3383:2: rule__NonInitialTransition__Group__1__Impl rule__NonInitialTransition__Group__2
             {
-            pushFollow(FOLLOW_rule__NonInitialTransition__Group__1__Impl_in_rule__NonInitialTransition__Group__16536);
+            pushFollow(FOLLOW_rule__NonInitialTransition__Group__1__Impl_in_rule__NonInitialTransition__Group__16740);
             rule__NonInitialTransition__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__NonInitialTransition__Group__2_in_rule__NonInitialTransition__Group__16539);
+            pushFollow(FOLLOW_rule__NonInitialTransition__Group__2_in_rule__NonInitialTransition__Group__16743);
             rule__NonInitialTransition__Group__2();
 
             state._fsp--;
@@ -8665,23 +8931,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NonInitialTransition__Group__1__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3291:1: rule__NonInitialTransition__Group__1__Impl : ( ( rule__NonInitialTransition__FromAssignment_1 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3390:1: rule__NonInitialTransition__Group__1__Impl : ( ( rule__NonInitialTransition__FromAssignment_1 ) ) ;
     public final void rule__NonInitialTransition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3295:1: ( ( ( rule__NonInitialTransition__FromAssignment_1 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3296:1: ( ( rule__NonInitialTransition__FromAssignment_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3394:1: ( ( ( rule__NonInitialTransition__FromAssignment_1 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3395:1: ( ( rule__NonInitialTransition__FromAssignment_1 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3296:1: ( ( rule__NonInitialTransition__FromAssignment_1 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3297:1: ( rule__NonInitialTransition__FromAssignment_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3395:1: ( ( rule__NonInitialTransition__FromAssignment_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3396:1: ( rule__NonInitialTransition__FromAssignment_1 )
             {
              before(grammarAccess.getNonInitialTransitionAccess().getFromAssignment_1()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3298:1: ( rule__NonInitialTransition__FromAssignment_1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3298:2: rule__NonInitialTransition__FromAssignment_1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3397:1: ( rule__NonInitialTransition__FromAssignment_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3397:2: rule__NonInitialTransition__FromAssignment_1
             {
-            pushFollow(FOLLOW_rule__NonInitialTransition__FromAssignment_1_in_rule__NonInitialTransition__Group__1__Impl6566);
+            pushFollow(FOLLOW_rule__NonInitialTransition__FromAssignment_1_in_rule__NonInitialTransition__Group__1__Impl6770);
             rule__NonInitialTransition__FromAssignment_1();
 
             state._fsp--;
@@ -8712,21 +8978,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NonInitialTransition__Group__2"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3308:1: rule__NonInitialTransition__Group__2 : rule__NonInitialTransition__Group__2__Impl rule__NonInitialTransition__Group__3 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3407:1: rule__NonInitialTransition__Group__2 : rule__NonInitialTransition__Group__2__Impl rule__NonInitialTransition__Group__3 ;
     public final void rule__NonInitialTransition__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3312:1: ( rule__NonInitialTransition__Group__2__Impl rule__NonInitialTransition__Group__3 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3313:2: rule__NonInitialTransition__Group__2__Impl rule__NonInitialTransition__Group__3
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3411:1: ( rule__NonInitialTransition__Group__2__Impl rule__NonInitialTransition__Group__3 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3412:2: rule__NonInitialTransition__Group__2__Impl rule__NonInitialTransition__Group__3
             {
-            pushFollow(FOLLOW_rule__NonInitialTransition__Group__2__Impl_in_rule__NonInitialTransition__Group__26596);
+            pushFollow(FOLLOW_rule__NonInitialTransition__Group__2__Impl_in_rule__NonInitialTransition__Group__26800);
             rule__NonInitialTransition__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__NonInitialTransition__Group__3_in_rule__NonInitialTransition__Group__26599);
+            pushFollow(FOLLOW_rule__NonInitialTransition__Group__3_in_rule__NonInitialTransition__Group__26803);
             rule__NonInitialTransition__Group__3();
 
             state._fsp--;
@@ -8750,20 +9016,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NonInitialTransition__Group__2__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3320:1: rule__NonInitialTransition__Group__2__Impl : ( 'to' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3419:1: rule__NonInitialTransition__Group__2__Impl : ( 'to' ) ;
     public final void rule__NonInitialTransition__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3324:1: ( ( 'to' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3325:1: ( 'to' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3423:1: ( ( 'to' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3424:1: ( 'to' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3325:1: ( 'to' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3326:1: 'to'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3424:1: ( 'to' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3425:1: 'to'
             {
              before(grammarAccess.getNonInitialTransitionAccess().getToKeyword_2()); 
-            match(input,32,FOLLOW_32_in_rule__NonInitialTransition__Group__2__Impl6627); 
+            match(input,35,FOLLOW_35_in_rule__NonInitialTransition__Group__2__Impl6831); 
              after(grammarAccess.getNonInitialTransitionAccess().getToKeyword_2()); 
 
             }
@@ -8787,16 +9053,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NonInitialTransition__Group__3"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3339:1: rule__NonInitialTransition__Group__3 : rule__NonInitialTransition__Group__3__Impl ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3438:1: rule__NonInitialTransition__Group__3 : rule__NonInitialTransition__Group__3__Impl ;
     public final void rule__NonInitialTransition__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3343:1: ( rule__NonInitialTransition__Group__3__Impl )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3344:2: rule__NonInitialTransition__Group__3__Impl
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3442:1: ( rule__NonInitialTransition__Group__3__Impl )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3443:2: rule__NonInitialTransition__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__NonInitialTransition__Group__3__Impl_in_rule__NonInitialTransition__Group__36658);
+            pushFollow(FOLLOW_rule__NonInitialTransition__Group__3__Impl_in_rule__NonInitialTransition__Group__36862);
             rule__NonInitialTransition__Group__3__Impl();
 
             state._fsp--;
@@ -8820,23 +9086,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NonInitialTransition__Group__3__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3350:1: rule__NonInitialTransition__Group__3__Impl : ( ( rule__NonInitialTransition__ToAssignment_3 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3449:1: rule__NonInitialTransition__Group__3__Impl : ( ( rule__NonInitialTransition__ToAssignment_3 ) ) ;
     public final void rule__NonInitialTransition__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3354:1: ( ( ( rule__NonInitialTransition__ToAssignment_3 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3355:1: ( ( rule__NonInitialTransition__ToAssignment_3 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3453:1: ( ( ( rule__NonInitialTransition__ToAssignment_3 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3454:1: ( ( rule__NonInitialTransition__ToAssignment_3 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3355:1: ( ( rule__NonInitialTransition__ToAssignment_3 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3356:1: ( rule__NonInitialTransition__ToAssignment_3 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3454:1: ( ( rule__NonInitialTransition__ToAssignment_3 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3455:1: ( rule__NonInitialTransition__ToAssignment_3 )
             {
              before(grammarAccess.getNonInitialTransitionAccess().getToAssignment_3()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3357:1: ( rule__NonInitialTransition__ToAssignment_3 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3357:2: rule__NonInitialTransition__ToAssignment_3
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3456:1: ( rule__NonInitialTransition__ToAssignment_3 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3456:2: rule__NonInitialTransition__ToAssignment_3
             {
-            pushFollow(FOLLOW_rule__NonInitialTransition__ToAssignment_3_in_rule__NonInitialTransition__Group__3__Impl6685);
+            pushFollow(FOLLOW_rule__NonInitialTransition__ToAssignment_3_in_rule__NonInitialTransition__Group__3__Impl6889);
             rule__NonInitialTransition__ToAssignment_3();
 
             state._fsp--;
@@ -8867,21 +9133,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Textfield__Group__0"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3375:1: rule__Textfield__Group__0 : rule__Textfield__Group__0__Impl rule__Textfield__Group__1 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3474:1: rule__Textfield__Group__0 : rule__Textfield__Group__0__Impl rule__Textfield__Group__1 ;
     public final void rule__Textfield__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3379:1: ( rule__Textfield__Group__0__Impl rule__Textfield__Group__1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3380:2: rule__Textfield__Group__0__Impl rule__Textfield__Group__1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3478:1: ( rule__Textfield__Group__0__Impl rule__Textfield__Group__1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3479:2: rule__Textfield__Group__0__Impl rule__Textfield__Group__1
             {
-            pushFollow(FOLLOW_rule__Textfield__Group__0__Impl_in_rule__Textfield__Group__06723);
+            pushFollow(FOLLOW_rule__Textfield__Group__0__Impl_in_rule__Textfield__Group__06927);
             rule__Textfield__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Textfield__Group__1_in_rule__Textfield__Group__06726);
+            pushFollow(FOLLOW_rule__Textfield__Group__1_in_rule__Textfield__Group__06930);
             rule__Textfield__Group__1();
 
             state._fsp--;
@@ -8905,31 +9171,31 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Textfield__Group__0__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3387:1: rule__Textfield__Group__0__Impl : ( ( rule__Textfield__Group_0__0 )? ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3486:1: rule__Textfield__Group__0__Impl : ( ( rule__Textfield__Group_0__0 )? ) ;
     public final void rule__Textfield__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3391:1: ( ( ( rule__Textfield__Group_0__0 )? ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3392:1: ( ( rule__Textfield__Group_0__0 )? )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3490:1: ( ( ( rule__Textfield__Group_0__0 )? ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3491:1: ( ( rule__Textfield__Group_0__0 )? )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3392:1: ( ( rule__Textfield__Group_0__0 )? )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3393:1: ( rule__Textfield__Group_0__0 )?
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3491:1: ( ( rule__Textfield__Group_0__0 )? )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3492:1: ( rule__Textfield__Group_0__0 )?
             {
              before(grammarAccess.getTextfieldAccess().getGroup_0()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3394:1: ( rule__Textfield__Group_0__0 )?
-            int alt15=2;
-            int LA15_0 = input.LA(1);
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3493:1: ( rule__Textfield__Group_0__0 )?
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( (LA15_0==35) ) {
-                alt15=1;
+            if ( (LA16_0==38) ) {
+                alt16=1;
             }
-            switch (alt15) {
+            switch (alt16) {
                 case 1 :
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3394:2: rule__Textfield__Group_0__0
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3493:2: rule__Textfield__Group_0__0
                     {
-                    pushFollow(FOLLOW_rule__Textfield__Group_0__0_in_rule__Textfield__Group__0__Impl6753);
+                    pushFollow(FOLLOW_rule__Textfield__Group_0__0_in_rule__Textfield__Group__0__Impl6957);
                     rule__Textfield__Group_0__0();
 
                     state._fsp--;
@@ -8963,21 +9229,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Textfield__Group__1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3404:1: rule__Textfield__Group__1 : rule__Textfield__Group__1__Impl rule__Textfield__Group__2 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3503:1: rule__Textfield__Group__1 : rule__Textfield__Group__1__Impl rule__Textfield__Group__2 ;
     public final void rule__Textfield__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3408:1: ( rule__Textfield__Group__1__Impl rule__Textfield__Group__2 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3409:2: rule__Textfield__Group__1__Impl rule__Textfield__Group__2
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3507:1: ( rule__Textfield__Group__1__Impl rule__Textfield__Group__2 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3508:2: rule__Textfield__Group__1__Impl rule__Textfield__Group__2
             {
-            pushFollow(FOLLOW_rule__Textfield__Group__1__Impl_in_rule__Textfield__Group__16784);
+            pushFollow(FOLLOW_rule__Textfield__Group__1__Impl_in_rule__Textfield__Group__16988);
             rule__Textfield__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Textfield__Group__2_in_rule__Textfield__Group__16787);
+            pushFollow(FOLLOW_rule__Textfield__Group__2_in_rule__Textfield__Group__16991);
             rule__Textfield__Group__2();
 
             state._fsp--;
@@ -9001,20 +9267,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Textfield__Group__1__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3416:1: rule__Textfield__Group__1__Impl : ( 'summary' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3515:1: rule__Textfield__Group__1__Impl : ( 'summary' ) ;
     public final void rule__Textfield__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3420:1: ( ( 'summary' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3421:1: ( 'summary' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3519:1: ( ( 'summary' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3520:1: ( 'summary' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3421:1: ( 'summary' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3422:1: 'summary'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3520:1: ( 'summary' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3521:1: 'summary'
             {
              before(grammarAccess.getTextfieldAccess().getSummaryKeyword_1()); 
-            match(input,34,FOLLOW_34_in_rule__Textfield__Group__1__Impl6815); 
+            match(input,37,FOLLOW_37_in_rule__Textfield__Group__1__Impl7019); 
              after(grammarAccess.getTextfieldAccess().getSummaryKeyword_1()); 
 
             }
@@ -9038,21 +9304,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Textfield__Group__2"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3435:1: rule__Textfield__Group__2 : rule__Textfield__Group__2__Impl rule__Textfield__Group__3 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3534:1: rule__Textfield__Group__2 : rule__Textfield__Group__2__Impl rule__Textfield__Group__3 ;
     public final void rule__Textfield__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3439:1: ( rule__Textfield__Group__2__Impl rule__Textfield__Group__3 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3440:2: rule__Textfield__Group__2__Impl rule__Textfield__Group__3
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3538:1: ( rule__Textfield__Group__2__Impl rule__Textfield__Group__3 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3539:2: rule__Textfield__Group__2__Impl rule__Textfield__Group__3
             {
-            pushFollow(FOLLOW_rule__Textfield__Group__2__Impl_in_rule__Textfield__Group__26846);
+            pushFollow(FOLLOW_rule__Textfield__Group__2__Impl_in_rule__Textfield__Group__27050);
             rule__Textfield__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Textfield__Group__3_in_rule__Textfield__Group__26849);
+            pushFollow(FOLLOW_rule__Textfield__Group__3_in_rule__Textfield__Group__27053);
             rule__Textfield__Group__3();
 
             state._fsp--;
@@ -9076,23 +9342,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Textfield__Group__2__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3447:1: rule__Textfield__Group__2__Impl : ( ( rule__Textfield__SummaryAssignment_2 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3546:1: rule__Textfield__Group__2__Impl : ( ( rule__Textfield__SummaryAssignment_2 ) ) ;
     public final void rule__Textfield__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3451:1: ( ( ( rule__Textfield__SummaryAssignment_2 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3452:1: ( ( rule__Textfield__SummaryAssignment_2 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3550:1: ( ( ( rule__Textfield__SummaryAssignment_2 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3551:1: ( ( rule__Textfield__SummaryAssignment_2 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3452:1: ( ( rule__Textfield__SummaryAssignment_2 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3453:1: ( rule__Textfield__SummaryAssignment_2 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3551:1: ( ( rule__Textfield__SummaryAssignment_2 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3552:1: ( rule__Textfield__SummaryAssignment_2 )
             {
              before(grammarAccess.getTextfieldAccess().getSummaryAssignment_2()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3454:1: ( rule__Textfield__SummaryAssignment_2 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3454:2: rule__Textfield__SummaryAssignment_2
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3553:1: ( rule__Textfield__SummaryAssignment_2 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3553:2: rule__Textfield__SummaryAssignment_2
             {
-            pushFollow(FOLLOW_rule__Textfield__SummaryAssignment_2_in_rule__Textfield__Group__2__Impl6876);
+            pushFollow(FOLLOW_rule__Textfield__SummaryAssignment_2_in_rule__Textfield__Group__2__Impl7080);
             rule__Textfield__SummaryAssignment_2();
 
             state._fsp--;
@@ -9123,16 +9389,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Textfield__Group__3"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3464:1: rule__Textfield__Group__3 : rule__Textfield__Group__3__Impl ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3563:1: rule__Textfield__Group__3 : rule__Textfield__Group__3__Impl ;
     public final void rule__Textfield__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3468:1: ( rule__Textfield__Group__3__Impl )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3469:2: rule__Textfield__Group__3__Impl
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3567:1: ( rule__Textfield__Group__3__Impl )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3568:2: rule__Textfield__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__Textfield__Group__3__Impl_in_rule__Textfield__Group__36906);
+            pushFollow(FOLLOW_rule__Textfield__Group__3__Impl_in_rule__Textfield__Group__37110);
             rule__Textfield__Group__3__Impl();
 
             state._fsp--;
@@ -9156,31 +9422,31 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Textfield__Group__3__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3475:1: rule__Textfield__Group__3__Impl : ( ( rule__Textfield__Group_3__0 )? ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3574:1: rule__Textfield__Group__3__Impl : ( ( rule__Textfield__Group_3__0 )? ) ;
     public final void rule__Textfield__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3479:1: ( ( ( rule__Textfield__Group_3__0 )? ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3480:1: ( ( rule__Textfield__Group_3__0 )? )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3578:1: ( ( ( rule__Textfield__Group_3__0 )? ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3579:1: ( ( rule__Textfield__Group_3__0 )? )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3480:1: ( ( rule__Textfield__Group_3__0 )? )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3481:1: ( rule__Textfield__Group_3__0 )?
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3579:1: ( ( rule__Textfield__Group_3__0 )? )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3580:1: ( rule__Textfield__Group_3__0 )?
             {
              before(grammarAccess.getTextfieldAccess().getGroup_3()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3482:1: ( rule__Textfield__Group_3__0 )?
-            int alt16=2;
-            int LA16_0 = input.LA(1);
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3581:1: ( rule__Textfield__Group_3__0 )?
+            int alt17=2;
+            int LA17_0 = input.LA(1);
 
-            if ( (LA16_0==36) ) {
-                alt16=1;
+            if ( (LA17_0==39) ) {
+                alt17=1;
             }
-            switch (alt16) {
+            switch (alt17) {
                 case 1 :
-                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3482:2: rule__Textfield__Group_3__0
+                    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3581:2: rule__Textfield__Group_3__0
                     {
-                    pushFollow(FOLLOW_rule__Textfield__Group_3__0_in_rule__Textfield__Group__3__Impl6933);
+                    pushFollow(FOLLOW_rule__Textfield__Group_3__0_in_rule__Textfield__Group__3__Impl7137);
                     rule__Textfield__Group_3__0();
 
                     state._fsp--;
@@ -9214,21 +9480,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Textfield__Group_0__0"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3500:1: rule__Textfield__Group_0__0 : rule__Textfield__Group_0__0__Impl rule__Textfield__Group_0__1 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3599:1: rule__Textfield__Group_0__0 : rule__Textfield__Group_0__0__Impl rule__Textfield__Group_0__1 ;
     public final void rule__Textfield__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3504:1: ( rule__Textfield__Group_0__0__Impl rule__Textfield__Group_0__1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3505:2: rule__Textfield__Group_0__0__Impl rule__Textfield__Group_0__1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3603:1: ( rule__Textfield__Group_0__0__Impl rule__Textfield__Group_0__1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3604:2: rule__Textfield__Group_0__0__Impl rule__Textfield__Group_0__1
             {
-            pushFollow(FOLLOW_rule__Textfield__Group_0__0__Impl_in_rule__Textfield__Group_0__06972);
+            pushFollow(FOLLOW_rule__Textfield__Group_0__0__Impl_in_rule__Textfield__Group_0__07176);
             rule__Textfield__Group_0__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Textfield__Group_0__1_in_rule__Textfield__Group_0__06975);
+            pushFollow(FOLLOW_rule__Textfield__Group_0__1_in_rule__Textfield__Group_0__07179);
             rule__Textfield__Group_0__1();
 
             state._fsp--;
@@ -9252,20 +9518,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Textfield__Group_0__0__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3512:1: rule__Textfield__Group_0__0__Impl : ( 'label' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3611:1: rule__Textfield__Group_0__0__Impl : ( 'label' ) ;
     public final void rule__Textfield__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3516:1: ( ( 'label' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3517:1: ( 'label' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3615:1: ( ( 'label' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3616:1: ( 'label' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3517:1: ( 'label' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3518:1: 'label'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3616:1: ( 'label' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3617:1: 'label'
             {
              before(grammarAccess.getTextfieldAccess().getLabelKeyword_0_0()); 
-            match(input,35,FOLLOW_35_in_rule__Textfield__Group_0__0__Impl7003); 
+            match(input,38,FOLLOW_38_in_rule__Textfield__Group_0__0__Impl7207); 
              after(grammarAccess.getTextfieldAccess().getLabelKeyword_0_0()); 
 
             }
@@ -9289,16 +9555,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Textfield__Group_0__1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3531:1: rule__Textfield__Group_0__1 : rule__Textfield__Group_0__1__Impl ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3630:1: rule__Textfield__Group_0__1 : rule__Textfield__Group_0__1__Impl ;
     public final void rule__Textfield__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3535:1: ( rule__Textfield__Group_0__1__Impl )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3536:2: rule__Textfield__Group_0__1__Impl
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3634:1: ( rule__Textfield__Group_0__1__Impl )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3635:2: rule__Textfield__Group_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__Textfield__Group_0__1__Impl_in_rule__Textfield__Group_0__17034);
+            pushFollow(FOLLOW_rule__Textfield__Group_0__1__Impl_in_rule__Textfield__Group_0__17238);
             rule__Textfield__Group_0__1__Impl();
 
             state._fsp--;
@@ -9322,23 +9588,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Textfield__Group_0__1__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3542:1: rule__Textfield__Group_0__1__Impl : ( ( rule__Textfield__LabelAssignment_0_1 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3641:1: rule__Textfield__Group_0__1__Impl : ( ( rule__Textfield__LabelAssignment_0_1 ) ) ;
     public final void rule__Textfield__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3546:1: ( ( ( rule__Textfield__LabelAssignment_0_1 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3547:1: ( ( rule__Textfield__LabelAssignment_0_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3645:1: ( ( ( rule__Textfield__LabelAssignment_0_1 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3646:1: ( ( rule__Textfield__LabelAssignment_0_1 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3547:1: ( ( rule__Textfield__LabelAssignment_0_1 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3548:1: ( rule__Textfield__LabelAssignment_0_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3646:1: ( ( rule__Textfield__LabelAssignment_0_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3647:1: ( rule__Textfield__LabelAssignment_0_1 )
             {
              before(grammarAccess.getTextfieldAccess().getLabelAssignment_0_1()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3549:1: ( rule__Textfield__LabelAssignment_0_1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3549:2: rule__Textfield__LabelAssignment_0_1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3648:1: ( rule__Textfield__LabelAssignment_0_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3648:2: rule__Textfield__LabelAssignment_0_1
             {
-            pushFollow(FOLLOW_rule__Textfield__LabelAssignment_0_1_in_rule__Textfield__Group_0__1__Impl7061);
+            pushFollow(FOLLOW_rule__Textfield__LabelAssignment_0_1_in_rule__Textfield__Group_0__1__Impl7265);
             rule__Textfield__LabelAssignment_0_1();
 
             state._fsp--;
@@ -9369,21 +9635,21 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Textfield__Group_3__0"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3563:1: rule__Textfield__Group_3__0 : rule__Textfield__Group_3__0__Impl rule__Textfield__Group_3__1 ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3662:1: rule__Textfield__Group_3__0 : rule__Textfield__Group_3__0__Impl rule__Textfield__Group_3__1 ;
     public final void rule__Textfield__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3567:1: ( rule__Textfield__Group_3__0__Impl rule__Textfield__Group_3__1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3568:2: rule__Textfield__Group_3__0__Impl rule__Textfield__Group_3__1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3666:1: ( rule__Textfield__Group_3__0__Impl rule__Textfield__Group_3__1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3667:2: rule__Textfield__Group_3__0__Impl rule__Textfield__Group_3__1
             {
-            pushFollow(FOLLOW_rule__Textfield__Group_3__0__Impl_in_rule__Textfield__Group_3__07095);
+            pushFollow(FOLLOW_rule__Textfield__Group_3__0__Impl_in_rule__Textfield__Group_3__07299);
             rule__Textfield__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Textfield__Group_3__1_in_rule__Textfield__Group_3__07098);
+            pushFollow(FOLLOW_rule__Textfield__Group_3__1_in_rule__Textfield__Group_3__07302);
             rule__Textfield__Group_3__1();
 
             state._fsp--;
@@ -9407,20 +9673,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Textfield__Group_3__0__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3575:1: rule__Textfield__Group_3__0__Impl : ( 'description' ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3674:1: rule__Textfield__Group_3__0__Impl : ( 'description' ) ;
     public final void rule__Textfield__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3579:1: ( ( 'description' ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3580:1: ( 'description' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3678:1: ( ( 'description' ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3679:1: ( 'description' )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3580:1: ( 'description' )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3581:1: 'description'
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3679:1: ( 'description' )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3680:1: 'description'
             {
              before(grammarAccess.getTextfieldAccess().getDescriptionKeyword_3_0()); 
-            match(input,36,FOLLOW_36_in_rule__Textfield__Group_3__0__Impl7126); 
+            match(input,39,FOLLOW_39_in_rule__Textfield__Group_3__0__Impl7330); 
              after(grammarAccess.getTextfieldAccess().getDescriptionKeyword_3_0()); 
 
             }
@@ -9444,16 +9710,16 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Textfield__Group_3__1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3594:1: rule__Textfield__Group_3__1 : rule__Textfield__Group_3__1__Impl ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3693:1: rule__Textfield__Group_3__1 : rule__Textfield__Group_3__1__Impl ;
     public final void rule__Textfield__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3598:1: ( rule__Textfield__Group_3__1__Impl )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3599:2: rule__Textfield__Group_3__1__Impl
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3697:1: ( rule__Textfield__Group_3__1__Impl )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3698:2: rule__Textfield__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__Textfield__Group_3__1__Impl_in_rule__Textfield__Group_3__17157);
+            pushFollow(FOLLOW_rule__Textfield__Group_3__1__Impl_in_rule__Textfield__Group_3__17361);
             rule__Textfield__Group_3__1__Impl();
 
             state._fsp--;
@@ -9477,23 +9743,23 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Textfield__Group_3__1__Impl"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3605:1: rule__Textfield__Group_3__1__Impl : ( ( rule__Textfield__DescriptionAssignment_3_1 ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3704:1: rule__Textfield__Group_3__1__Impl : ( ( rule__Textfield__DescriptionAssignment_3_1 ) ) ;
     public final void rule__Textfield__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3609:1: ( ( ( rule__Textfield__DescriptionAssignment_3_1 ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3610:1: ( ( rule__Textfield__DescriptionAssignment_3_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3708:1: ( ( ( rule__Textfield__DescriptionAssignment_3_1 ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3709:1: ( ( rule__Textfield__DescriptionAssignment_3_1 ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3610:1: ( ( rule__Textfield__DescriptionAssignment_3_1 ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3611:1: ( rule__Textfield__DescriptionAssignment_3_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3709:1: ( ( rule__Textfield__DescriptionAssignment_3_1 ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3710:1: ( rule__Textfield__DescriptionAssignment_3_1 )
             {
              before(grammarAccess.getTextfieldAccess().getDescriptionAssignment_3_1()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3612:1: ( rule__Textfield__DescriptionAssignment_3_1 )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3612:2: rule__Textfield__DescriptionAssignment_3_1
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3711:1: ( rule__Textfield__DescriptionAssignment_3_1 )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3711:2: rule__Textfield__DescriptionAssignment_3_1
             {
-            pushFollow(FOLLOW_rule__Textfield__DescriptionAssignment_3_1_in_rule__Textfield__Group_3__1__Impl7184);
+            pushFollow(FOLLOW_rule__Textfield__DescriptionAssignment_3_1_in_rule__Textfield__Group_3__1__Impl7388);
             rule__Textfield__DescriptionAssignment_3_1();
 
             state._fsp--;
@@ -9524,20 +9790,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__ActivitiesAssignment_0"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3627:1: rule__Model__ActivitiesAssignment_0 : ( ruleActivity ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3726:1: rule__Model__ActivitiesAssignment_0 : ( ruleActivity ) ;
     public final void rule__Model__ActivitiesAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3631:1: ( ( ruleActivity ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3632:1: ( ruleActivity )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3730:1: ( ( ruleActivity ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3731:1: ( ruleActivity )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3632:1: ( ruleActivity )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3633:1: ruleActivity
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3731:1: ( ruleActivity )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3732:1: ruleActivity
             {
              before(grammarAccess.getModelAccess().getActivitiesActivityParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleActivity_in_rule__Model__ActivitiesAssignment_07223);
+            pushFollow(FOLLOW_ruleActivity_in_rule__Model__ActivitiesAssignment_07427);
             ruleActivity();
 
             state._fsp--;
@@ -9565,20 +9831,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__RolesAssignment_1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3642:1: rule__Model__RolesAssignment_1 : ( ruleRole ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3741:1: rule__Model__RolesAssignment_1 : ( ruleRole ) ;
     public final void rule__Model__RolesAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3646:1: ( ( ruleRole ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3647:1: ( ruleRole )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3745:1: ( ( ruleRole ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3746:1: ( ruleRole )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3647:1: ( ruleRole )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3648:1: ruleRole
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3746:1: ( ruleRole )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3747:1: ruleRole
             {
              before(grammarAccess.getModelAccess().getRolesRoleParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleRole_in_rule__Model__RolesAssignment_17254);
+            pushFollow(FOLLOW_ruleRole_in_rule__Model__RolesAssignment_17458);
             ruleRole();
 
             state._fsp--;
@@ -9606,20 +9872,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__WorkProductsAssignment_2"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3657:1: rule__Model__WorkProductsAssignment_2 : ( ruleWorkProduct ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3756:1: rule__Model__WorkProductsAssignment_2 : ( ruleWorkProduct ) ;
     public final void rule__Model__WorkProductsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3661:1: ( ( ruleWorkProduct ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3662:1: ( ruleWorkProduct )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3760:1: ( ( ruleWorkProduct ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3761:1: ( ruleWorkProduct )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3662:1: ( ruleWorkProduct )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3663:1: ruleWorkProduct
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3761:1: ( ruleWorkProduct )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3762:1: ruleWorkProduct
             {
              before(grammarAccess.getModelAccess().getWorkProductsWorkProductParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleWorkProduct_in_rule__Model__WorkProductsAssignment_27285);
+            pushFollow(FOLLOW_ruleWorkProduct_in_rule__Model__WorkProductsAssignment_27489);
             ruleWorkProduct();
 
             state._fsp--;
@@ -9647,20 +9913,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__WorkProductTypesAssignment_3"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3672:1: rule__Model__WorkProductTypesAssignment_3 : ( ruleWorkProductType ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3771:1: rule__Model__WorkProductTypesAssignment_3 : ( ruleWorkProductType ) ;
     public final void rule__Model__WorkProductTypesAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3676:1: ( ( ruleWorkProductType ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3677:1: ( ruleWorkProductType )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3775:1: ( ( ruleWorkProductType ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3776:1: ( ruleWorkProductType )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3677:1: ( ruleWorkProductType )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3678:1: ruleWorkProductType
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3776:1: ( ruleWorkProductType )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3777:1: ruleWorkProductType
             {
              before(grammarAccess.getModelAccess().getWorkProductTypesWorkProductTypeParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleWorkProductType_in_rule__Model__WorkProductTypesAssignment_37316);
+            pushFollow(FOLLOW_ruleWorkProductType_in_rule__Model__WorkProductTypesAssignment_37520);
             ruleWorkProductType();
 
             state._fsp--;
@@ -9688,20 +9954,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__GuidancesAssignment_4"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3687:1: rule__Model__GuidancesAssignment_4 : ( ruleGuidance ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3786:1: rule__Model__GuidancesAssignment_4 : ( ruleGuidance ) ;
     public final void rule__Model__GuidancesAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3691:1: ( ( ruleGuidance ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3692:1: ( ruleGuidance )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3790:1: ( ( ruleGuidance ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3791:1: ( ruleGuidance )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3692:1: ( ruleGuidance )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3693:1: ruleGuidance
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3791:1: ( ruleGuidance )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3792:1: ruleGuidance
             {
              before(grammarAccess.getModelAccess().getGuidancesGuidanceParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_ruleGuidance_in_rule__Model__GuidancesAssignment_47347);
+            pushFollow(FOLLOW_ruleGuidance_in_rule__Model__GuidancesAssignment_47551);
             ruleGuidance();
 
             state._fsp--;
@@ -9729,20 +9995,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__GuidanceTypesAssignment_5"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3702:1: rule__Model__GuidanceTypesAssignment_5 : ( ruleGuidanceType ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3801:1: rule__Model__GuidanceTypesAssignment_5 : ( ruleGuidanceType ) ;
     public final void rule__Model__GuidanceTypesAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3706:1: ( ( ruleGuidanceType ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3707:1: ( ruleGuidanceType )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3805:1: ( ( ruleGuidanceType ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3806:1: ( ruleGuidanceType )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3707:1: ( ruleGuidanceType )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3708:1: ruleGuidanceType
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3806:1: ( ruleGuidanceType )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3807:1: ruleGuidanceType
             {
              before(grammarAccess.getModelAccess().getGuidanceTypesGuidanceTypeParserRuleCall_5_0()); 
-            pushFollow(FOLLOW_ruleGuidanceType_in_rule__Model__GuidanceTypesAssignment_57378);
+            pushFollow(FOLLOW_ruleGuidanceType_in_rule__Model__GuidanceTypesAssignment_57582);
             ruleGuidanceType();
 
             state._fsp--;
@@ -9769,21 +10035,62 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Model__GuidanceTypesAssignment_5"
 
 
+    // $ANTLR start "rule__Model__StatesAssignment_6"
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3816:1: rule__Model__StatesAssignment_6 : ( ruleState ) ;
+    public final void rule__Model__StatesAssignment_6() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3820:1: ( ( ruleState ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3821:1: ( ruleState )
+            {
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3821:1: ( ruleState )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3822:1: ruleState
+            {
+             before(grammarAccess.getModelAccess().getStatesStateParserRuleCall_6_0()); 
+            pushFollow(FOLLOW_ruleState_in_rule__Model__StatesAssignment_67613);
+            ruleState();
+
+            state._fsp--;
+
+             after(grammarAccess.getModelAccess().getStatesStateParserRuleCall_6_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Model__StatesAssignment_6"
+
+
     // $ANTLR start "rule__Role__NameAssignment_1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3717:1: rule__Role__NameAssignment_1 : ( RULE_ID ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3831:1: rule__Role__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Role__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3721:1: ( ( RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3722:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3835:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3836:1: ( RULE_ID )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3722:1: ( RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3723:1: RULE_ID
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3836:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3837:1: RULE_ID
             {
              before(grammarAccess.getRoleAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Role__NameAssignment_17409); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Role__NameAssignment_17644); 
              after(grammarAccess.getRoleAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -9807,20 +10114,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Role__TextfieldAssignment_2"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3732:1: rule__Role__TextfieldAssignment_2 : ( ruleTextfield ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3846:1: rule__Role__TextfieldAssignment_2 : ( ruleTextfield ) ;
     public final void rule__Role__TextfieldAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3736:1: ( ( ruleTextfield ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3737:1: ( ruleTextfield )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3850:1: ( ( ruleTextfield ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3851:1: ( ruleTextfield )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3737:1: ( ruleTextfield )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3738:1: ruleTextfield
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3851:1: ( ruleTextfield )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3852:1: ruleTextfield
             {
              before(grammarAccess.getRoleAccess().getTextfieldTextfieldParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleTextfield_in_rule__Role__TextfieldAssignment_27440);
+            pushFollow(FOLLOW_ruleTextfield_in_rule__Role__TextfieldAssignment_27675);
             ruleTextfield();
 
             state._fsp--;
@@ -9848,20 +10155,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WorkProductType__NameAssignment_1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3747:1: rule__WorkProductType__NameAssignment_1 : ( RULE_ID ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3861:1: rule__WorkProductType__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__WorkProductType__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3751:1: ( ( RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3752:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3865:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3866:1: ( RULE_ID )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3752:1: ( RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3753:1: RULE_ID
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3866:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3867:1: RULE_ID
             {
              before(grammarAccess.getWorkProductTypeAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__WorkProductType__NameAssignment_17471); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__WorkProductType__NameAssignment_17706); 
              after(grammarAccess.getWorkProductTypeAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -9885,20 +10192,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WorkProductType__TextfieldAssignment_2"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3762:1: rule__WorkProductType__TextfieldAssignment_2 : ( ruleTextfield ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3876:1: rule__WorkProductType__TextfieldAssignment_2 : ( ruleTextfield ) ;
     public final void rule__WorkProductType__TextfieldAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3766:1: ( ( ruleTextfield ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3767:1: ( ruleTextfield )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3880:1: ( ( ruleTextfield ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3881:1: ( ruleTextfield )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3767:1: ( ruleTextfield )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3768:1: ruleTextfield
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3881:1: ( ruleTextfield )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3882:1: ruleTextfield
             {
              before(grammarAccess.getWorkProductTypeAccess().getTextfieldTextfieldParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleTextfield_in_rule__WorkProductType__TextfieldAssignment_27502);
+            pushFollow(FOLLOW_ruleTextfield_in_rule__WorkProductType__TextfieldAssignment_27737);
             ruleTextfield();
 
             state._fsp--;
@@ -9926,20 +10233,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WorkProduct__NameAssignment_1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3777:1: rule__WorkProduct__NameAssignment_1 : ( RULE_ID ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3891:1: rule__WorkProduct__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__WorkProduct__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3781:1: ( ( RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3782:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3895:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3896:1: ( RULE_ID )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3782:1: ( RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3783:1: RULE_ID
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3896:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3897:1: RULE_ID
             {
              before(grammarAccess.getWorkProductAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__WorkProduct__NameAssignment_17533); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__WorkProduct__NameAssignment_17768); 
              after(grammarAccess.getWorkProductAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -9963,24 +10270,24 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WorkProduct__TypeAssignment_3"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3792:1: rule__WorkProduct__TypeAssignment_3 : ( ( RULE_ID ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3906:1: rule__WorkProduct__TypeAssignment_3 : ( ( RULE_ID ) ) ;
     public final void rule__WorkProduct__TypeAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3796:1: ( ( ( RULE_ID ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3797:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3910:1: ( ( ( RULE_ID ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3911:1: ( ( RULE_ID ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3797:1: ( ( RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3798:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3911:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3912:1: ( RULE_ID )
             {
              before(grammarAccess.getWorkProductAccess().getTypeWorkProductTypeCrossReference_3_0()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3799:1: ( RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3800:1: RULE_ID
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3913:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3914:1: RULE_ID
             {
              before(grammarAccess.getWorkProductAccess().getTypeWorkProductTypeIDTerminalRuleCall_3_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__WorkProduct__TypeAssignment_37568); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__WorkProduct__TypeAssignment_37803); 
              after(grammarAccess.getWorkProductAccess().getTypeWorkProductTypeIDTerminalRuleCall_3_0_1()); 
 
             }
@@ -10008,20 +10315,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WorkProduct__TextfieldAssignment_4"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3811:1: rule__WorkProduct__TextfieldAssignment_4 : ( ruleTextfield ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3925:1: rule__WorkProduct__TextfieldAssignment_4 : ( ruleTextfield ) ;
     public final void rule__WorkProduct__TextfieldAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3815:1: ( ( ruleTextfield ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3816:1: ( ruleTextfield )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3929:1: ( ( ruleTextfield ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3930:1: ( ruleTextfield )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3816:1: ( ruleTextfield )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3817:1: ruleTextfield
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3930:1: ( ruleTextfield )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3931:1: ruleTextfield
             {
              before(grammarAccess.getWorkProductAccess().getTextfieldTextfieldParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_ruleTextfield_in_rule__WorkProduct__TextfieldAssignment_47603);
+            pushFollow(FOLLOW_ruleTextfield_in_rule__WorkProduct__TextfieldAssignment_47838);
             ruleTextfield();
 
             state._fsp--;
@@ -10049,20 +10356,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GuidanceType__NameAssignment_1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3826:1: rule__GuidanceType__NameAssignment_1 : ( RULE_ID ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3940:1: rule__GuidanceType__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__GuidanceType__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3830:1: ( ( RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3831:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3944:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3945:1: ( RULE_ID )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3831:1: ( RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3832:1: RULE_ID
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3945:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3946:1: RULE_ID
             {
              before(grammarAccess.getGuidanceTypeAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__GuidanceType__NameAssignment_17634); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__GuidanceType__NameAssignment_17869); 
              after(grammarAccess.getGuidanceTypeAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -10086,20 +10393,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GuidanceType__TextfieldAssignment_2"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3841:1: rule__GuidanceType__TextfieldAssignment_2 : ( ruleTextfield ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3955:1: rule__GuidanceType__TextfieldAssignment_2 : ( ruleTextfield ) ;
     public final void rule__GuidanceType__TextfieldAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3845:1: ( ( ruleTextfield ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3846:1: ( ruleTextfield )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3959:1: ( ( ruleTextfield ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3960:1: ( ruleTextfield )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3846:1: ( ruleTextfield )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3847:1: ruleTextfield
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3960:1: ( ruleTextfield )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3961:1: ruleTextfield
             {
              before(grammarAccess.getGuidanceTypeAccess().getTextfieldTextfieldParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleTextfield_in_rule__GuidanceType__TextfieldAssignment_27665);
+            pushFollow(FOLLOW_ruleTextfield_in_rule__GuidanceType__TextfieldAssignment_27900);
             ruleTextfield();
 
             state._fsp--;
@@ -10127,20 +10434,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Guidance__NameAssignment_1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3856:1: rule__Guidance__NameAssignment_1 : ( RULE_ID ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3970:1: rule__Guidance__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Guidance__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3860:1: ( ( RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3861:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3974:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3975:1: ( RULE_ID )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3861:1: ( RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3862:1: RULE_ID
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3975:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3976:1: RULE_ID
             {
              before(grammarAccess.getGuidanceAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Guidance__NameAssignment_17696); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Guidance__NameAssignment_17931); 
              after(grammarAccess.getGuidanceAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -10164,24 +10471,24 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Guidance__TypeAssignment_3"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3871:1: rule__Guidance__TypeAssignment_3 : ( ( RULE_ID ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3985:1: rule__Guidance__TypeAssignment_3 : ( ( RULE_ID ) ) ;
     public final void rule__Guidance__TypeAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3875:1: ( ( ( RULE_ID ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3876:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3989:1: ( ( ( RULE_ID ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3990:1: ( ( RULE_ID ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3876:1: ( ( RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3877:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3990:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3991:1: ( RULE_ID )
             {
              before(grammarAccess.getGuidanceAccess().getTypeGuidanceTypeCrossReference_3_0()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3878:1: ( RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3879:1: RULE_ID
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3992:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3993:1: RULE_ID
             {
              before(grammarAccess.getGuidanceAccess().getTypeGuidanceTypeIDTerminalRuleCall_3_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Guidance__TypeAssignment_37731); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Guidance__TypeAssignment_37966); 
              after(grammarAccess.getGuidanceAccess().getTypeGuidanceTypeIDTerminalRuleCall_3_0_1()); 
 
             }
@@ -10209,20 +10516,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Guidance__TextfieldAssignment_4"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3890:1: rule__Guidance__TextfieldAssignment_4 : ( ruleTextfield ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4004:1: rule__Guidance__TextfieldAssignment_4 : ( ruleTextfield ) ;
     public final void rule__Guidance__TextfieldAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3894:1: ( ( ruleTextfield ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3895:1: ( ruleTextfield )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4008:1: ( ( ruleTextfield ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4009:1: ( ruleTextfield )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3895:1: ( ruleTextfield )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3896:1: ruleTextfield
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4009:1: ( ruleTextfield )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4010:1: ruleTextfield
             {
              before(grammarAccess.getGuidanceAccess().getTextfieldTextfieldParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_ruleTextfield_in_rule__Guidance__TextfieldAssignment_47766);
+            pushFollow(FOLLOW_ruleTextfield_in_rule__Guidance__TextfieldAssignment_48001);
             ruleTextfield();
 
             state._fsp--;
@@ -10249,22 +10556,22 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Guidance__TextfieldAssignment_4"
 
 
-    // $ANTLR start "rule__Port__NameAssignment_0"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3905:1: rule__Port__NameAssignment_0 : ( RULE_ID ) ;
-    public final void rule__Port__NameAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__State__NameAssignment_1"
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4019:1: rule__State__NameAssignment_1 : ( RULE_ID ) ;
+    public final void rule__State__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3909:1: ( ( RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3910:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4023:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4024:1: ( RULE_ID )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3910:1: ( RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3911:1: RULE_ID
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4024:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4025:1: RULE_ID
             {
-             before(grammarAccess.getPortAccess().getNameIDTerminalRuleCall_0_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Port__NameAssignment_07797); 
-             after(grammarAccess.getPortAccess().getNameIDTerminalRuleCall_0_0()); 
+             before(grammarAccess.getStateAccess().getNameIDTerminalRuleCall_1_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__State__NameAssignment_18032); 
+             after(grammarAccess.getStateAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
 
@@ -10283,33 +10590,33 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Port__NameAssignment_0"
+    // $ANTLR end "rule__State__NameAssignment_1"
 
 
-    // $ANTLR start "rule__Port__TypeAssignment_2"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3920:1: rule__Port__TypeAssignment_2 : ( ( RULE_ID ) ) ;
-    public final void rule__Port__TypeAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__Port__TypeAssignment_0"
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4034:1: rule__Port__TypeAssignment_0 : ( ( RULE_ID ) ) ;
+    public final void rule__Port__TypeAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3924:1: ( ( ( RULE_ID ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3925:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4038:1: ( ( ( RULE_ID ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4039:1: ( ( RULE_ID ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3925:1: ( ( RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3926:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4039:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4040:1: ( RULE_ID )
             {
-             before(grammarAccess.getPortAccess().getTypeWorkProductCrossReference_2_0()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3927:1: ( RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3928:1: RULE_ID
+             before(grammarAccess.getPortAccess().getTypeWorkProductCrossReference_0_0()); 
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4041:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4042:1: RULE_ID
             {
-             before(grammarAccess.getPortAccess().getTypeWorkProductIDTerminalRuleCall_2_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Port__TypeAssignment_27832); 
-             after(grammarAccess.getPortAccess().getTypeWorkProductIDTerminalRuleCall_2_0_1()); 
+             before(grammarAccess.getPortAccess().getTypeWorkProductIDTerminalRuleCall_0_0_1()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Port__TypeAssignment_08067); 
+             after(grammarAccess.getPortAccess().getTypeWorkProductIDTerminalRuleCall_0_0_1()); 
 
             }
 
-             after(grammarAccess.getPortAccess().getTypeWorkProductCrossReference_2_0()); 
+             after(grammarAccess.getPortAccess().getTypeWorkProductCrossReference_0_0()); 
 
             }
 
@@ -10328,24 +10635,69 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Port__TypeAssignment_2"
+    // $ANTLR end "rule__Port__TypeAssignment_0"
+
+
+    // $ANTLR start "rule__Port__StateAssignment_1_1"
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4053:1: rule__Port__StateAssignment_1_1 : ( ( RULE_ID ) ) ;
+    public final void rule__Port__StateAssignment_1_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4057:1: ( ( ( RULE_ID ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4058:1: ( ( RULE_ID ) )
+            {
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4058:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4059:1: ( RULE_ID )
+            {
+             before(grammarAccess.getPortAccess().getStateStateCrossReference_1_1_0()); 
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4060:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4061:1: RULE_ID
+            {
+             before(grammarAccess.getPortAccess().getStateStateIDTerminalRuleCall_1_1_0_1()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Port__StateAssignment_1_18106); 
+             after(grammarAccess.getPortAccess().getStateStateIDTerminalRuleCall_1_1_0_1()); 
+
+            }
+
+             after(grammarAccess.getPortAccess().getStateStateCrossReference_1_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Port__StateAssignment_1_1"
 
 
     // $ANTLR start "rule__Activity__NameAssignment_1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3939:1: rule__Activity__NameAssignment_1 : ( RULE_ID ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4072:1: rule__Activity__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Activity__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3943:1: ( ( RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3944:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4076:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4077:1: ( RULE_ID )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3944:1: ( RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3945:1: RULE_ID
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4077:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4078:1: RULE_ID
             {
              before(grammarAccess.getActivityAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Activity__NameAssignment_17867); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Activity__NameAssignment_18141); 
              after(grammarAccess.getActivityAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -10369,20 +10721,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__TextfieldAssignment_2"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3954:1: rule__Activity__TextfieldAssignment_2 : ( ruleTextfield ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4087:1: rule__Activity__TextfieldAssignment_2 : ( ruleTextfield ) ;
     public final void rule__Activity__TextfieldAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3958:1: ( ( ruleTextfield ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3959:1: ( ruleTextfield )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4091:1: ( ( ruleTextfield ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4092:1: ( ruleTextfield )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3959:1: ( ruleTextfield )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3960:1: ruleTextfield
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4092:1: ( ruleTextfield )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4093:1: ruleTextfield
             {
              before(grammarAccess.getActivityAccess().getTextfieldTextfieldParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleTextfield_in_rule__Activity__TextfieldAssignment_27898);
+            pushFollow(FOLLOW_ruleTextfield_in_rule__Activity__TextfieldAssignment_28172);
             ruleTextfield();
 
             state._fsp--;
@@ -10410,24 +10762,24 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__RoleAssignment_4"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3969:1: rule__Activity__RoleAssignment_4 : ( ( RULE_ID ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4102:1: rule__Activity__RoleAssignment_4 : ( ( RULE_ID ) ) ;
     public final void rule__Activity__RoleAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3973:1: ( ( ( RULE_ID ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3974:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4106:1: ( ( ( RULE_ID ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4107:1: ( ( RULE_ID ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3974:1: ( ( RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3975:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4107:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4108:1: ( RULE_ID )
             {
              before(grammarAccess.getActivityAccess().getRoleRoleCrossReference_4_0()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3976:1: ( RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3977:1: RULE_ID
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4109:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4110:1: RULE_ID
             {
              before(grammarAccess.getActivityAccess().getRoleRoleIDTerminalRuleCall_4_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Activity__RoleAssignment_47933); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Activity__RoleAssignment_48207); 
              after(grammarAccess.getActivityAccess().getRoleRoleIDTerminalRuleCall_4_0_1()); 
 
             }
@@ -10455,20 +10807,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__InPortsAssignment_5_1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3988:1: rule__Activity__InPortsAssignment_5_1 : ( rulePort ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4121:1: rule__Activity__InPortsAssignment_5_1 : ( rulePort ) ;
     public final void rule__Activity__InPortsAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3992:1: ( ( rulePort ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3993:1: ( rulePort )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4125:1: ( ( rulePort ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4126:1: ( rulePort )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3993:1: ( rulePort )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:3994:1: rulePort
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4126:1: ( rulePort )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4127:1: rulePort
             {
              before(grammarAccess.getActivityAccess().getInPortsPortParserRuleCall_5_1_0()); 
-            pushFollow(FOLLOW_rulePort_in_rule__Activity__InPortsAssignment_5_17968);
+            pushFollow(FOLLOW_rulePort_in_rule__Activity__InPortsAssignment_5_18242);
             rulePort();
 
             state._fsp--;
@@ -10496,20 +10848,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__InPortsAssignment_5_2_1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4003:1: rule__Activity__InPortsAssignment_5_2_1 : ( rulePort ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4136:1: rule__Activity__InPortsAssignment_5_2_1 : ( rulePort ) ;
     public final void rule__Activity__InPortsAssignment_5_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4007:1: ( ( rulePort ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4008:1: ( rulePort )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4140:1: ( ( rulePort ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4141:1: ( rulePort )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4008:1: ( rulePort )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4009:1: rulePort
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4141:1: ( rulePort )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4142:1: rulePort
             {
              before(grammarAccess.getActivityAccess().getInPortsPortParserRuleCall_5_2_1_0()); 
-            pushFollow(FOLLOW_rulePort_in_rule__Activity__InPortsAssignment_5_2_17999);
+            pushFollow(FOLLOW_rulePort_in_rule__Activity__InPortsAssignment_5_2_18273);
             rulePort();
 
             state._fsp--;
@@ -10537,20 +10889,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__OutPortsAssignment_6_1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4018:1: rule__Activity__OutPortsAssignment_6_1 : ( rulePort ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4151:1: rule__Activity__OutPortsAssignment_6_1 : ( rulePort ) ;
     public final void rule__Activity__OutPortsAssignment_6_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4022:1: ( ( rulePort ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4023:1: ( rulePort )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4155:1: ( ( rulePort ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4156:1: ( rulePort )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4023:1: ( rulePort )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4024:1: rulePort
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4156:1: ( rulePort )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4157:1: rulePort
             {
              before(grammarAccess.getActivityAccess().getOutPortsPortParserRuleCall_6_1_0()); 
-            pushFollow(FOLLOW_rulePort_in_rule__Activity__OutPortsAssignment_6_18030);
+            pushFollow(FOLLOW_rulePort_in_rule__Activity__OutPortsAssignment_6_18304);
             rulePort();
 
             state._fsp--;
@@ -10578,20 +10930,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__OutPortsAssignment_6_2_1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4033:1: rule__Activity__OutPortsAssignment_6_2_1 : ( rulePort ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4166:1: rule__Activity__OutPortsAssignment_6_2_1 : ( rulePort ) ;
     public final void rule__Activity__OutPortsAssignment_6_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4037:1: ( ( rulePort ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4038:1: ( rulePort )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4170:1: ( ( rulePort ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4171:1: ( rulePort )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4038:1: ( rulePort )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4039:1: rulePort
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4171:1: ( rulePort )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4172:1: rulePort
             {
              before(grammarAccess.getActivityAccess().getOutPortsPortParserRuleCall_6_2_1_0()); 
-            pushFollow(FOLLOW_rulePort_in_rule__Activity__OutPortsAssignment_6_2_18061);
+            pushFollow(FOLLOW_rulePort_in_rule__Activity__OutPortsAssignment_6_2_18335);
             rulePort();
 
             state._fsp--;
@@ -10619,20 +10971,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__SubActivitiesAssignment_7_1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4048:1: rule__Activity__SubActivitiesAssignment_7_1 : ( ruleActivityRef ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4181:1: rule__Activity__SubActivitiesAssignment_7_1 : ( ruleActivityRef ) ;
     public final void rule__Activity__SubActivitiesAssignment_7_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4052:1: ( ( ruleActivityRef ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4053:1: ( ruleActivityRef )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4185:1: ( ( ruleActivityRef ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4186:1: ( ruleActivityRef )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4053:1: ( ruleActivityRef )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4054:1: ruleActivityRef
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4186:1: ( ruleActivityRef )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4187:1: ruleActivityRef
             {
              before(grammarAccess.getActivityAccess().getSubActivitiesActivityRefParserRuleCall_7_1_0()); 
-            pushFollow(FOLLOW_ruleActivityRef_in_rule__Activity__SubActivitiesAssignment_7_18092);
+            pushFollow(FOLLOW_ruleActivityRef_in_rule__Activity__SubActivitiesAssignment_7_18366);
             ruleActivityRef();
 
             state._fsp--;
@@ -10660,20 +11012,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__SubActivitiesAssignment_7_2_1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4063:1: rule__Activity__SubActivitiesAssignment_7_2_1 : ( ruleActivityRef ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4196:1: rule__Activity__SubActivitiesAssignment_7_2_1 : ( ruleActivityRef ) ;
     public final void rule__Activity__SubActivitiesAssignment_7_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4067:1: ( ( ruleActivityRef ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4068:1: ( ruleActivityRef )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4200:1: ( ( ruleActivityRef ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4201:1: ( ruleActivityRef )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4068:1: ( ruleActivityRef )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4069:1: ruleActivityRef
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4201:1: ( ruleActivityRef )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4202:1: ruleActivityRef
             {
              before(grammarAccess.getActivityAccess().getSubActivitiesActivityRefParserRuleCall_7_2_1_0()); 
-            pushFollow(FOLLOW_ruleActivityRef_in_rule__Activity__SubActivitiesAssignment_7_2_18123);
+            pushFollow(FOLLOW_ruleActivityRef_in_rule__Activity__SubActivitiesAssignment_7_2_18397);
             ruleActivityRef();
 
             state._fsp--;
@@ -10701,24 +11053,24 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__GuidancesAssignment_8_1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4078:1: rule__Activity__GuidancesAssignment_8_1 : ( ( RULE_ID ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4211:1: rule__Activity__GuidancesAssignment_8_1 : ( ( RULE_ID ) ) ;
     public final void rule__Activity__GuidancesAssignment_8_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4082:1: ( ( ( RULE_ID ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4083:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4215:1: ( ( ( RULE_ID ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4216:1: ( ( RULE_ID ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4083:1: ( ( RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4084:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4216:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4217:1: ( RULE_ID )
             {
              before(grammarAccess.getActivityAccess().getGuidancesGuidanceCrossReference_8_1_0()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4085:1: ( RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4086:1: RULE_ID
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4218:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4219:1: RULE_ID
             {
              before(grammarAccess.getActivityAccess().getGuidancesGuidanceIDTerminalRuleCall_8_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Activity__GuidancesAssignment_8_18158); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Activity__GuidancesAssignment_8_18432); 
              after(grammarAccess.getActivityAccess().getGuidancesGuidanceIDTerminalRuleCall_8_1_0_1()); 
 
             }
@@ -10746,24 +11098,24 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__GuidancesAssignment_8_2_1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4097:1: rule__Activity__GuidancesAssignment_8_2_1 : ( ( RULE_ID ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4230:1: rule__Activity__GuidancesAssignment_8_2_1 : ( ( RULE_ID ) ) ;
     public final void rule__Activity__GuidancesAssignment_8_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4101:1: ( ( ( RULE_ID ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4102:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4234:1: ( ( ( RULE_ID ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4235:1: ( ( RULE_ID ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4102:1: ( ( RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4103:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4235:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4236:1: ( RULE_ID )
             {
              before(grammarAccess.getActivityAccess().getGuidancesGuidanceCrossReference_8_2_1_0()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4104:1: ( RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4105:1: RULE_ID
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4237:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4238:1: RULE_ID
             {
              before(grammarAccess.getActivityAccess().getGuidancesGuidanceIDTerminalRuleCall_8_2_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Activity__GuidancesAssignment_8_2_18197); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Activity__GuidancesAssignment_8_2_18471); 
              after(grammarAccess.getActivityAccess().getGuidancesGuidanceIDTerminalRuleCall_8_2_1_0_1()); 
 
             }
@@ -10791,20 +11143,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__StepsAssignment_9_2_0"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4116:1: rule__Activity__StepsAssignment_9_2_0 : ( ruleStep ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4249:1: rule__Activity__StepsAssignment_9_2_0 : ( ruleStep ) ;
     public final void rule__Activity__StepsAssignment_9_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4120:1: ( ( ruleStep ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4121:1: ( ruleStep )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4253:1: ( ( ruleStep ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4254:1: ( ruleStep )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4121:1: ( ruleStep )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4122:1: ruleStep
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4254:1: ( ruleStep )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4255:1: ruleStep
             {
              before(grammarAccess.getActivityAccess().getStepsStepParserRuleCall_9_2_0_0()); 
-            pushFollow(FOLLOW_ruleStep_in_rule__Activity__StepsAssignment_9_2_08232);
+            pushFollow(FOLLOW_ruleStep_in_rule__Activity__StepsAssignment_9_2_08506);
             ruleStep();
 
             state._fsp--;
@@ -10832,20 +11184,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__DecisionsAssignment_9_2_1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4131:1: rule__Activity__DecisionsAssignment_9_2_1 : ( ruleDecision ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4264:1: rule__Activity__DecisionsAssignment_9_2_1 : ( ruleDecision ) ;
     public final void rule__Activity__DecisionsAssignment_9_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4135:1: ( ( ruleDecision ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4136:1: ( ruleDecision )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4268:1: ( ( ruleDecision ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4269:1: ( ruleDecision )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4136:1: ( ruleDecision )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4137:1: ruleDecision
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4269:1: ( ruleDecision )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4270:1: ruleDecision
             {
              before(grammarAccess.getActivityAccess().getDecisionsDecisionParserRuleCall_9_2_1_0()); 
-            pushFollow(FOLLOW_ruleDecision_in_rule__Activity__DecisionsAssignment_9_2_18263);
+            pushFollow(FOLLOW_ruleDecision_in_rule__Activity__DecisionsAssignment_9_2_18537);
             ruleDecision();
 
             state._fsp--;
@@ -10873,20 +11225,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Activity__TransitionsAssignment_9_2_2"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4146:1: rule__Activity__TransitionsAssignment_9_2_2 : ( ruleTransition ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4279:1: rule__Activity__TransitionsAssignment_9_2_2 : ( ruleTransition ) ;
     public final void rule__Activity__TransitionsAssignment_9_2_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4150:1: ( ( ruleTransition ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4151:1: ( ruleTransition )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4283:1: ( ( ruleTransition ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4284:1: ( ruleTransition )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4151:1: ( ruleTransition )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4152:1: ruleTransition
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4284:1: ( ruleTransition )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4285:1: ruleTransition
             {
              before(grammarAccess.getActivityAccess().getTransitionsTransitionParserRuleCall_9_2_2_0()); 
-            pushFollow(FOLLOW_ruleTransition_in_rule__Activity__TransitionsAssignment_9_2_28294);
+            pushFollow(FOLLOW_ruleTransition_in_rule__Activity__TransitionsAssignment_9_2_28568);
             ruleTransition();
 
             state._fsp--;
@@ -10913,22 +11265,30 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Activity__TransitionsAssignment_9_2_2"
 
 
-    // $ANTLR start "rule__ActivityRef__NameAssignment_0"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4161:1: rule__ActivityRef__NameAssignment_0 : ( RULE_ID ) ;
-    public final void rule__ActivityRef__NameAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__ActivityRef__TypeAssignment"
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4294:1: rule__ActivityRef__TypeAssignment : ( ( RULE_ID ) ) ;
+    public final void rule__ActivityRef__TypeAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4165:1: ( ( RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4166:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4298:1: ( ( ( RULE_ID ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4299:1: ( ( RULE_ID ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4166:1: ( RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4167:1: RULE_ID
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4299:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4300:1: ( RULE_ID )
             {
-             before(grammarAccess.getActivityRefAccess().getNameIDTerminalRuleCall_0_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ActivityRef__NameAssignment_08325); 
-             after(grammarAccess.getActivityRefAccess().getNameIDTerminalRuleCall_0_0()); 
+             before(grammarAccess.getActivityRefAccess().getTypeActivityCrossReference_0()); 
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4301:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4302:1: RULE_ID
+            {
+             before(grammarAccess.getActivityRefAccess().getTypeActivityIDTerminalRuleCall_0_1()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ActivityRef__TypeAssignment8603); 
+             after(grammarAccess.getActivityRefAccess().getTypeActivityIDTerminalRuleCall_0_1()); 
+
+            }
+
+             after(grammarAccess.getActivityRefAccess().getTypeActivityCrossReference_0()); 
 
             }
 
@@ -10947,69 +11307,24 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ActivityRef__NameAssignment_0"
-
-
-    // $ANTLR start "rule__ActivityRef__TypeAssignment_2"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4176:1: rule__ActivityRef__TypeAssignment_2 : ( ( RULE_ID ) ) ;
-    public final void rule__ActivityRef__TypeAssignment_2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4180:1: ( ( ( RULE_ID ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4181:1: ( ( RULE_ID ) )
-            {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4181:1: ( ( RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4182:1: ( RULE_ID )
-            {
-             before(grammarAccess.getActivityRefAccess().getTypeActivityCrossReference_2_0()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4183:1: ( RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4184:1: RULE_ID
-            {
-             before(grammarAccess.getActivityRefAccess().getTypeActivityIDTerminalRuleCall_2_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ActivityRef__TypeAssignment_28360); 
-             after(grammarAccess.getActivityRefAccess().getTypeActivityIDTerminalRuleCall_2_0_1()); 
-
-            }
-
-             after(grammarAccess.getActivityRefAccess().getTypeActivityCrossReference_2_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ActivityRef__TypeAssignment_2"
+    // $ANTLR end "rule__ActivityRef__TypeAssignment"
 
 
     // $ANTLR start "rule__Decision__NameAssignment_1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4195:1: rule__Decision__NameAssignment_1 : ( RULE_ID ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4313:1: rule__Decision__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Decision__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4199:1: ( ( RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4200:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4317:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4318:1: ( RULE_ID )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4200:1: ( RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4201:1: RULE_ID
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4318:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4319:1: RULE_ID
             {
              before(grammarAccess.getDecisionAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Decision__NameAssignment_18395); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Decision__NameAssignment_18638); 
              after(grammarAccess.getDecisionAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -11033,20 +11348,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Step__NameAssignment_1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4210:1: rule__Step__NameAssignment_1 : ( RULE_ID ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4328:1: rule__Step__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Step__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4214:1: ( ( RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4215:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4332:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4333:1: ( RULE_ID )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4215:1: ( RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4216:1: RULE_ID
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4333:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4334:1: RULE_ID
             {
              before(grammarAccess.getStepAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Step__NameAssignment_18426); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Step__NameAssignment_18669); 
              after(grammarAccess.getStepAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -11070,24 +11385,24 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InitialTransition__ToAssignment_3"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4225:1: rule__InitialTransition__ToAssignment_3 : ( ( RULE_ID ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4343:1: rule__InitialTransition__ToAssignment_3 : ( ( RULE_ID ) ) ;
     public final void rule__InitialTransition__ToAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4229:1: ( ( ( RULE_ID ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4230:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4347:1: ( ( ( RULE_ID ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4348:1: ( ( RULE_ID ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4230:1: ( ( RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4231:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4348:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4349:1: ( RULE_ID )
             {
              before(grammarAccess.getInitialTransitionAccess().getToNodeCrossReference_3_0()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4232:1: ( RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4233:1: RULE_ID
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4350:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4351:1: RULE_ID
             {
              before(grammarAccess.getInitialTransitionAccess().getToNodeIDTerminalRuleCall_3_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__InitialTransition__ToAssignment_38461); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__InitialTransition__ToAssignment_38704); 
              after(grammarAccess.getInitialTransitionAccess().getToNodeIDTerminalRuleCall_3_0_1()); 
 
             }
@@ -11115,24 +11430,24 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FinalTransition__FromAssignment_1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4244:1: rule__FinalTransition__FromAssignment_1 : ( ( RULE_ID ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4362:1: rule__FinalTransition__FromAssignment_1 : ( ( RULE_ID ) ) ;
     public final void rule__FinalTransition__FromAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4248:1: ( ( ( RULE_ID ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4249:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4366:1: ( ( ( RULE_ID ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4367:1: ( ( RULE_ID ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4249:1: ( ( RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4250:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4367:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4368:1: ( RULE_ID )
             {
              before(grammarAccess.getFinalTransitionAccess().getFromNodeCrossReference_1_0()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4251:1: ( RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4252:1: RULE_ID
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4369:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4370:1: RULE_ID
             {
              before(grammarAccess.getFinalTransitionAccess().getFromNodeIDTerminalRuleCall_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__FinalTransition__FromAssignment_18500); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__FinalTransition__FromAssignment_18743); 
              after(grammarAccess.getFinalTransitionAccess().getFromNodeIDTerminalRuleCall_1_0_1()); 
 
             }
@@ -11160,24 +11475,24 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecisionTransition__FromAssignment_1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4263:1: rule__DecisionTransition__FromAssignment_1 : ( ( RULE_ID ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4381:1: rule__DecisionTransition__FromAssignment_1 : ( ( RULE_ID ) ) ;
     public final void rule__DecisionTransition__FromAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4267:1: ( ( ( RULE_ID ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4268:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4385:1: ( ( ( RULE_ID ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4386:1: ( ( RULE_ID ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4268:1: ( ( RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4269:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4386:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4387:1: ( RULE_ID )
             {
              before(grammarAccess.getDecisionTransitionAccess().getFromDecisionCrossReference_1_0()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4270:1: ( RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4271:1: RULE_ID
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4388:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4389:1: RULE_ID
             {
              before(grammarAccess.getDecisionTransitionAccess().getFromDecisionIDTerminalRuleCall_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DecisionTransition__FromAssignment_18539); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DecisionTransition__FromAssignment_18782); 
              after(grammarAccess.getDecisionTransitionAccess().getFromDecisionIDTerminalRuleCall_1_0_1()); 
 
             }
@@ -11205,24 +11520,24 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecisionTransition__ToAssignment_3"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4282:1: rule__DecisionTransition__ToAssignment_3 : ( ( RULE_ID ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4400:1: rule__DecisionTransition__ToAssignment_3 : ( ( RULE_ID ) ) ;
     public final void rule__DecisionTransition__ToAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4286:1: ( ( ( RULE_ID ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4287:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4404:1: ( ( ( RULE_ID ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4405:1: ( ( RULE_ID ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4287:1: ( ( RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4288:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4405:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4406:1: ( RULE_ID )
             {
              before(grammarAccess.getDecisionTransitionAccess().getToNodeCrossReference_3_0()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4289:1: ( RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4290:1: RULE_ID
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4407:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4408:1: RULE_ID
             {
              before(grammarAccess.getDecisionTransitionAccess().getToNodeIDTerminalRuleCall_3_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DecisionTransition__ToAssignment_38578); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DecisionTransition__ToAssignment_38821); 
              after(grammarAccess.getDecisionTransitionAccess().getToNodeIDTerminalRuleCall_3_0_1()); 
 
             }
@@ -11250,20 +11565,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecisionTransition__GuardAssignment_4"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4301:1: rule__DecisionTransition__GuardAssignment_4 : ( RULE_STRING ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4419:1: rule__DecisionTransition__GuardAssignment_4 : ( RULE_STRING ) ;
     public final void rule__DecisionTransition__GuardAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4305:1: ( ( RULE_STRING ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4306:1: ( RULE_STRING )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4423:1: ( ( RULE_STRING ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4424:1: ( RULE_STRING )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4306:1: ( RULE_STRING )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4307:1: RULE_STRING
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4424:1: ( RULE_STRING )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4425:1: RULE_STRING
             {
              before(grammarAccess.getDecisionTransitionAccess().getGuardSTRINGTerminalRuleCall_4_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__DecisionTransition__GuardAssignment_48613); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__DecisionTransition__GuardAssignment_48856); 
              after(grammarAccess.getDecisionTransitionAccess().getGuardSTRINGTerminalRuleCall_4_0()); 
 
             }
@@ -11287,24 +11602,24 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NonInitialTransition__FromAssignment_1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4316:1: rule__NonInitialTransition__FromAssignment_1 : ( ( RULE_ID ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4434:1: rule__NonInitialTransition__FromAssignment_1 : ( ( RULE_ID ) ) ;
     public final void rule__NonInitialTransition__FromAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4320:1: ( ( ( RULE_ID ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4321:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4438:1: ( ( ( RULE_ID ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4439:1: ( ( RULE_ID ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4321:1: ( ( RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4322:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4439:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4440:1: ( RULE_ID )
             {
              before(grammarAccess.getNonInitialTransitionAccess().getFromNodeCrossReference_1_0()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4323:1: ( RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4324:1: RULE_ID
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4441:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4442:1: RULE_ID
             {
              before(grammarAccess.getNonInitialTransitionAccess().getFromNodeIDTerminalRuleCall_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__NonInitialTransition__FromAssignment_18648); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__NonInitialTransition__FromAssignment_18891); 
              after(grammarAccess.getNonInitialTransitionAccess().getFromNodeIDTerminalRuleCall_1_0_1()); 
 
             }
@@ -11332,24 +11647,24 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NonInitialTransition__ToAssignment_3"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4335:1: rule__NonInitialTransition__ToAssignment_3 : ( ( RULE_ID ) ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4453:1: rule__NonInitialTransition__ToAssignment_3 : ( ( RULE_ID ) ) ;
     public final void rule__NonInitialTransition__ToAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4339:1: ( ( ( RULE_ID ) ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4340:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4457:1: ( ( ( RULE_ID ) ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4458:1: ( ( RULE_ID ) )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4340:1: ( ( RULE_ID ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4341:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4458:1: ( ( RULE_ID ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4459:1: ( RULE_ID )
             {
              before(grammarAccess.getNonInitialTransitionAccess().getToNodeCrossReference_3_0()); 
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4342:1: ( RULE_ID )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4343:1: RULE_ID
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4460:1: ( RULE_ID )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4461:1: RULE_ID
             {
              before(grammarAccess.getNonInitialTransitionAccess().getToNodeIDTerminalRuleCall_3_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__NonInitialTransition__ToAssignment_38687); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__NonInitialTransition__ToAssignment_38930); 
              after(grammarAccess.getNonInitialTransitionAccess().getToNodeIDTerminalRuleCall_3_0_1()); 
 
             }
@@ -11377,20 +11692,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Textfield__LabelAssignment_0_1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4354:1: rule__Textfield__LabelAssignment_0_1 : ( RULE_STRING ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4472:1: rule__Textfield__LabelAssignment_0_1 : ( RULE_STRING ) ;
     public final void rule__Textfield__LabelAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4358:1: ( ( RULE_STRING ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4359:1: ( RULE_STRING )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4476:1: ( ( RULE_STRING ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4477:1: ( RULE_STRING )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4359:1: ( RULE_STRING )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4360:1: RULE_STRING
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4477:1: ( RULE_STRING )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4478:1: RULE_STRING
             {
              before(grammarAccess.getTextfieldAccess().getLabelSTRINGTerminalRuleCall_0_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Textfield__LabelAssignment_0_18722); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Textfield__LabelAssignment_0_18965); 
              after(grammarAccess.getTextfieldAccess().getLabelSTRINGTerminalRuleCall_0_1_0()); 
 
             }
@@ -11414,20 +11729,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Textfield__SummaryAssignment_2"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4369:1: rule__Textfield__SummaryAssignment_2 : ( RULE_STRING ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4487:1: rule__Textfield__SummaryAssignment_2 : ( RULE_STRING ) ;
     public final void rule__Textfield__SummaryAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4373:1: ( ( RULE_STRING ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4374:1: ( RULE_STRING )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4491:1: ( ( RULE_STRING ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4492:1: ( RULE_STRING )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4374:1: ( RULE_STRING )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4375:1: RULE_STRING
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4492:1: ( RULE_STRING )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4493:1: RULE_STRING
             {
              before(grammarAccess.getTextfieldAccess().getSummarySTRINGTerminalRuleCall_2_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Textfield__SummaryAssignment_28753); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Textfield__SummaryAssignment_28996); 
              after(grammarAccess.getTextfieldAccess().getSummarySTRINGTerminalRuleCall_2_0()); 
 
             }
@@ -11451,20 +11766,20 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Textfield__DescriptionAssignment_3_1"
-    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4384:1: rule__Textfield__DescriptionAssignment_3_1 : ( RULE_STRING ) ;
+    // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4502:1: rule__Textfield__DescriptionAssignment_3_1 : ( RULE_STRING ) ;
     public final void rule__Textfield__DescriptionAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4388:1: ( ( RULE_STRING ) )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4389:1: ( RULE_STRING )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4506:1: ( ( RULE_STRING ) )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4507:1: ( RULE_STRING )
             {
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4389:1: ( RULE_STRING )
-            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4390:1: RULE_STRING
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4507:1: ( RULE_STRING )
+            // ../de.protos.FlowOfWork.core.fow.ui/src-gen/de/protos/FlowOfWork/core/fow/ui/contentassist/antlr/internal/InternalFoW.g:4508:1: RULE_STRING
             {
              before(grammarAccess.getTextfieldAccess().getDescriptionSTRINGTerminalRuleCall_3_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Textfield__DescriptionAssignment_3_18784); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Textfield__DescriptionAssignment_3_19027); 
              after(grammarAccess.getTextfieldAccess().getDescriptionSTRINGTerminalRuleCall_3_1_0()); 
 
             }
@@ -11493,7 +11808,7 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
 
     public static final BitSet FOLLOW_ruleModel_in_entryRuleModel61 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleModel68 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Alternatives_in_ruleModel94 = new BitSet(new long[]{0x0000000000076802L});
+    public static final BitSet FOLLOW_rule__Model__Alternatives_in_ruleModel94 = new BitSet(new long[]{0x0000000000276802L});
     public static final BitSet FOLLOW_ruleRole_in_entryRuleRole124 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleRole131 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Role__Group__0_in_ruleRole157 = new BitSet(new long[]{0x0000000000000002L});
@@ -11509,355 +11824,365 @@ public class InternalFoWParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_ruleGuidance_in_entryRuleGuidance364 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleGuidance371 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Guidance__Group__0_in_ruleGuidance397 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePort_in_entryRulePort424 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePort431 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Port__Group__0_in_rulePort457 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleActivity_in_entryRuleActivity484 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleActivity491 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group__0_in_ruleActivity517 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleActivityRef_in_entryRuleActivityRef544 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleActivityRef551 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ActivityRef__Group__0_in_ruleActivityRef577 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDecision_in_entryRuleDecision606 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDecision613 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Decision__Group__0_in_ruleDecision639 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStep_in_entryRuleStep666 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleStep673 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Step__Group__0_in_ruleStep699 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTransition_in_entryRuleTransition726 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTransition733 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Transition__Alternatives_in_ruleTransition759 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInitialTransition_in_entryRuleInitialTransition786 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleInitialTransition793 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__InitialTransition__Group__0_in_ruleInitialTransition819 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFinalTransition_in_entryRuleFinalTransition846 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFinalTransition853 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FinalTransition__Group__0_in_ruleFinalTransition879 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDecisionTransition_in_entryRuleDecisionTransition906 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDecisionTransition913 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DecisionTransition__Group__0_in_ruleDecisionTransition939 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNonInitialTransition_in_entryRuleNonInitialTransition966 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNonInitialTransition973 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NonInitialTransition__Group__0_in_ruleNonInitialTransition999 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTextfield_in_entryRuleTextfield1026 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTextfield1033 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Textfield__Group__0_in_ruleTextfield1059 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__ActivitiesAssignment_0_in_rule__Model__Alternatives1095 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__RolesAssignment_1_in_rule__Model__Alternatives1113 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__WorkProductsAssignment_2_in_rule__Model__Alternatives1131 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__WorkProductTypesAssignment_3_in_rule__Model__Alternatives1149 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__GuidancesAssignment_4_in_rule__Model__Alternatives1167 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__GuidanceTypesAssignment_5_in_rule__Model__Alternatives1185 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__StepsAssignment_9_2_0_in_rule__Activity__Alternatives_9_21219 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__DecisionsAssignment_9_2_1_in_rule__Activity__Alternatives_9_21237 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__TransitionsAssignment_9_2_2_in_rule__Activity__Alternatives_9_21255 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInitialTransition_in_rule__Transition__Alternatives1289 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFinalTransition_in_rule__Transition__Alternatives1306 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNonInitialTransition_in_rule__Transition__Alternatives1323 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDecisionTransition_in_rule__Transition__Alternatives1340 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Role__Group__0__Impl_in_rule__Role__Group__01370 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Role__Group__1_in_rule__Role__Group__01373 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_rule__Role__Group__0__Impl1401 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Role__Group__1__Impl_in_rule__Role__Group__11432 = new BitSet(new long[]{0x0000000C00000000L});
-    public static final BitSet FOLLOW_rule__Role__Group__2_in_rule__Role__Group__11435 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Role__NameAssignment_1_in_rule__Role__Group__1__Impl1462 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Role__Group__2__Impl_in_rule__Role__Group__21492 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_rule__Role__Group__3_in_rule__Role__Group__21495 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Role__TextfieldAssignment_2_in_rule__Role__Group__2__Impl1522 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Role__Group__3__Impl_in_rule__Role__Group__31552 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__Role__Group__3__Impl1580 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__WorkProductType__Group__0__Impl_in_rule__WorkProductType__Group__01619 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__WorkProductType__Group__1_in_rule__WorkProductType__Group__01622 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__WorkProductType__Group__0__Impl1650 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__WorkProductType__Group__1__Impl_in_rule__WorkProductType__Group__11681 = new BitSet(new long[]{0x0000000C00000000L});
-    public static final BitSet FOLLOW_rule__WorkProductType__Group__2_in_rule__WorkProductType__Group__11684 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__WorkProductType__NameAssignment_1_in_rule__WorkProductType__Group__1__Impl1711 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__WorkProductType__Group__2__Impl_in_rule__WorkProductType__Group__21741 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_rule__WorkProductType__Group__3_in_rule__WorkProductType__Group__21744 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__WorkProductType__TextfieldAssignment_2_in_rule__WorkProductType__Group__2__Impl1771 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__WorkProductType__Group__3__Impl_in_rule__WorkProductType__Group__31801 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__WorkProductType__Group__3__Impl1829 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__WorkProduct__Group__0__Impl_in_rule__WorkProduct__Group__01868 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__WorkProduct__Group__1_in_rule__WorkProduct__Group__01871 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__WorkProduct__Group__0__Impl1899 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__WorkProduct__Group__1__Impl_in_rule__WorkProduct__Group__11930 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_rule__WorkProduct__Group__2_in_rule__WorkProduct__Group__11933 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__WorkProduct__NameAssignment_1_in_rule__WorkProduct__Group__1__Impl1960 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__WorkProduct__Group__2__Impl_in_rule__WorkProduct__Group__21990 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__WorkProduct__Group__3_in_rule__WorkProduct__Group__21993 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__WorkProduct__Group__2__Impl2021 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__WorkProduct__Group__3__Impl_in_rule__WorkProduct__Group__32052 = new BitSet(new long[]{0x0000000C00000000L});
-    public static final BitSet FOLLOW_rule__WorkProduct__Group__4_in_rule__WorkProduct__Group__32055 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__WorkProduct__TypeAssignment_3_in_rule__WorkProduct__Group__3__Impl2082 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__WorkProduct__Group__4__Impl_in_rule__WorkProduct__Group__42112 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_rule__WorkProduct__Group__5_in_rule__WorkProduct__Group__42115 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__WorkProduct__TextfieldAssignment_4_in_rule__WorkProduct__Group__4__Impl2142 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__WorkProduct__Group__5__Impl_in_rule__WorkProduct__Group__52172 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__WorkProduct__Group__5__Impl2200 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GuidanceType__Group__0__Impl_in_rule__GuidanceType__Group__02243 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__GuidanceType__Group__1_in_rule__GuidanceType__Group__02246 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__GuidanceType__Group__0__Impl2274 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GuidanceType__Group__1__Impl_in_rule__GuidanceType__Group__12305 = new BitSet(new long[]{0x0000000C00000000L});
-    public static final BitSet FOLLOW_rule__GuidanceType__Group__2_in_rule__GuidanceType__Group__12308 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GuidanceType__NameAssignment_1_in_rule__GuidanceType__Group__1__Impl2335 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GuidanceType__Group__2__Impl_in_rule__GuidanceType__Group__22365 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_rule__GuidanceType__Group__3_in_rule__GuidanceType__Group__22368 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GuidanceType__TextfieldAssignment_2_in_rule__GuidanceType__Group__2__Impl2395 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GuidanceType__Group__3__Impl_in_rule__GuidanceType__Group__32425 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__GuidanceType__Group__3__Impl2453 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Guidance__Group__0__Impl_in_rule__Guidance__Group__02492 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Guidance__Group__1_in_rule__Guidance__Group__02495 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__Guidance__Group__0__Impl2523 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Guidance__Group__1__Impl_in_rule__Guidance__Group__12554 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_rule__Guidance__Group__2_in_rule__Guidance__Group__12557 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Guidance__NameAssignment_1_in_rule__Guidance__Group__1__Impl2584 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Guidance__Group__2__Impl_in_rule__Guidance__Group__22614 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Guidance__Group__3_in_rule__Guidance__Group__22617 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__Guidance__Group__2__Impl2645 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Guidance__Group__3__Impl_in_rule__Guidance__Group__32676 = new BitSet(new long[]{0x0000000C00000000L});
-    public static final BitSet FOLLOW_rule__Guidance__Group__4_in_rule__Guidance__Group__32679 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Guidance__TypeAssignment_3_in_rule__Guidance__Group__3__Impl2706 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Guidance__Group__4__Impl_in_rule__Guidance__Group__42736 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_rule__Guidance__Group__5_in_rule__Guidance__Group__42739 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Guidance__TextfieldAssignment_4_in_rule__Guidance__Group__4__Impl2766 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Guidance__Group__5__Impl_in_rule__Guidance__Group__52796 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__Guidance__Group__5__Impl2824 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Port__Group__0__Impl_in_rule__Port__Group__02867 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_rule__Port__Group__1_in_rule__Port__Group__02870 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Port__NameAssignment_0_in_rule__Port__Group__0__Impl2897 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Port__Group__1__Impl_in_rule__Port__Group__12927 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Port__Group__2_in_rule__Port__Group__12930 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__Port__Group__1__Impl2958 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Port__Group__2__Impl_in_rule__Port__Group__22989 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Port__TypeAssignment_2_in_rule__Port__Group__2__Impl3016 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group__0__Impl_in_rule__Activity__Group__03052 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Activity__Group__1_in_rule__Activity__Group__03055 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__Activity__Group__0__Impl3083 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group__1__Impl_in_rule__Activity__Group__13114 = new BitSet(new long[]{0x0000000C00000000L});
-    public static final BitSet FOLLOW_rule__Activity__Group__2_in_rule__Activity__Group__13117 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__NameAssignment_1_in_rule__Activity__Group__1__Impl3144 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group__2__Impl_in_rule__Activity__Group__23174 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__Activity__Group__3_in_rule__Activity__Group__23177 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__TextfieldAssignment_2_in_rule__Activity__Group__2__Impl3204 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group__3__Impl_in_rule__Activity__Group__33234 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Activity__Group__4_in_rule__Activity__Group__33237 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__Activity__Group__3__Impl3265 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group__4__Impl_in_rule__Activity__Group__43296 = new BitSet(new long[]{0x0000000003D01000L});
-    public static final BitSet FOLLOW_rule__Activity__Group__5_in_rule__Activity__Group__43299 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__RoleAssignment_4_in_rule__Activity__Group__4__Impl3326 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group__5__Impl_in_rule__Activity__Group__53356 = new BitSet(new long[]{0x0000000003D01000L});
-    public static final BitSet FOLLOW_rule__Activity__Group__6_in_rule__Activity__Group__53359 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_5__0_in_rule__Activity__Group__5__Impl3386 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group__6__Impl_in_rule__Activity__Group__63417 = new BitSet(new long[]{0x0000000003D01000L});
-    public static final BitSet FOLLOW_rule__Activity__Group__7_in_rule__Activity__Group__63420 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_6__0_in_rule__Activity__Group__6__Impl3447 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group__7__Impl_in_rule__Activity__Group__73478 = new BitSet(new long[]{0x0000000003D01000L});
-    public static final BitSet FOLLOW_rule__Activity__Group__8_in_rule__Activity__Group__73481 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_7__0_in_rule__Activity__Group__7__Impl3508 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group__8__Impl_in_rule__Activity__Group__83539 = new BitSet(new long[]{0x0000000003D01000L});
-    public static final BitSet FOLLOW_rule__Activity__Group__9_in_rule__Activity__Group__83542 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_8__0_in_rule__Activity__Group__8__Impl3569 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group__9__Impl_in_rule__Activity__Group__93600 = new BitSet(new long[]{0x0000000003D01000L});
-    public static final BitSet FOLLOW_rule__Activity__Group__10_in_rule__Activity__Group__93603 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_9__0_in_rule__Activity__Group__9__Impl3630 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group__10__Impl_in_rule__Activity__Group__103661 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__Activity__Group__10__Impl3689 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_5__0__Impl_in_rule__Activity__Group_5__03742 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Activity__Group_5__1_in_rule__Activity__Group_5__03745 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__Activity__Group_5__0__Impl3773 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_5__1__Impl_in_rule__Activity__Group_5__13804 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_rule__Activity__Group_5__2_in_rule__Activity__Group_5__13807 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__InPortsAssignment_5_1_in_rule__Activity__Group_5__1__Impl3834 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_5__2__Impl_in_rule__Activity__Group_5__23864 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_5_2__0_in_rule__Activity__Group_5__2__Impl3891 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_5_2__0__Impl_in_rule__Activity__Group_5_2__03928 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Activity__Group_5_2__1_in_rule__Activity__Group_5_2__03931 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__Activity__Group_5_2__0__Impl3959 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_5_2__1__Impl_in_rule__Activity__Group_5_2__13990 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__InPortsAssignment_5_2_1_in_rule__Activity__Group_5_2__1__Impl4017 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_6__0__Impl_in_rule__Activity__Group_6__04051 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Activity__Group_6__1_in_rule__Activity__Group_6__04054 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__Activity__Group_6__0__Impl4082 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_6__1__Impl_in_rule__Activity__Group_6__14113 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_rule__Activity__Group_6__2_in_rule__Activity__Group_6__14116 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__OutPortsAssignment_6_1_in_rule__Activity__Group_6__1__Impl4143 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_6__2__Impl_in_rule__Activity__Group_6__24173 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_6_2__0_in_rule__Activity__Group_6__2__Impl4200 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_6_2__0__Impl_in_rule__Activity__Group_6_2__04237 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Activity__Group_6_2__1_in_rule__Activity__Group_6_2__04240 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__Activity__Group_6_2__0__Impl4268 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_6_2__1__Impl_in_rule__Activity__Group_6_2__14299 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__OutPortsAssignment_6_2_1_in_rule__Activity__Group_6_2__1__Impl4326 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_7__0__Impl_in_rule__Activity__Group_7__04360 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Activity__Group_7__1_in_rule__Activity__Group_7__04363 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__Activity__Group_7__0__Impl4391 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_7__1__Impl_in_rule__Activity__Group_7__14422 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_rule__Activity__Group_7__2_in_rule__Activity__Group_7__14425 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__SubActivitiesAssignment_7_1_in_rule__Activity__Group_7__1__Impl4452 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_7__2__Impl_in_rule__Activity__Group_7__24482 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_7_2__0_in_rule__Activity__Group_7__2__Impl4509 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_7_2__0__Impl_in_rule__Activity__Group_7_2__04546 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Activity__Group_7_2__1_in_rule__Activity__Group_7_2__04549 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__Activity__Group_7_2__0__Impl4577 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_7_2__1__Impl_in_rule__Activity__Group_7_2__14608 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__SubActivitiesAssignment_7_2_1_in_rule__Activity__Group_7_2__1__Impl4635 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_8__0__Impl_in_rule__Activity__Group_8__04669 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Activity__Group_8__1_in_rule__Activity__Group_8__04672 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__Activity__Group_8__0__Impl4700 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_8__1__Impl_in_rule__Activity__Group_8__14731 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_rule__Activity__Group_8__2_in_rule__Activity__Group_8__14734 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__GuidancesAssignment_8_1_in_rule__Activity__Group_8__1__Impl4761 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_8__2__Impl_in_rule__Activity__Group_8__24791 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_8_2__0_in_rule__Activity__Group_8__2__Impl4818 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_8_2__0__Impl_in_rule__Activity__Group_8_2__04855 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Activity__Group_8_2__1_in_rule__Activity__Group_8_2__04858 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__Activity__Group_8_2__0__Impl4886 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_8_2__1__Impl_in_rule__Activity__Group_8_2__14917 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__GuidancesAssignment_8_2_1_in_rule__Activity__Group_8_2__1__Impl4944 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_9__0__Impl_in_rule__Activity__Group_9__04978 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_rule__Activity__Group_9__1_in_rule__Activity__Group_9__04981 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__Activity__Group_9__0__Impl5009 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_9__1__Impl_in_rule__Activity__Group_9__15040 = new BitSet(new long[]{0x0000000078000000L});
-    public static final BitSet FOLLOW_rule__Activity__Group_9__2_in_rule__Activity__Group_9__15043 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__Activity__Group_9__1__Impl5071 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_9__2__Impl_in_rule__Activity__Group_9__25102 = new BitSet(new long[]{0x0000000078000000L});
-    public static final BitSet FOLLOW_rule__Activity__Group_9__3_in_rule__Activity__Group_9__25105 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Activity__Alternatives_9_2_in_rule__Activity__Group_9__2__Impl5132 = new BitSet(new long[]{0x0000000070000002L});
-    public static final BitSet FOLLOW_rule__Activity__Group_9__3__Impl_in_rule__Activity__Group_9__35163 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__Activity__Group_9__3__Impl5191 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ActivityRef__Group__0__Impl_in_rule__ActivityRef__Group__05230 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_rule__ActivityRef__Group__1_in_rule__ActivityRef__Group__05233 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ActivityRef__NameAssignment_0_in_rule__ActivityRef__Group__0__Impl5260 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ActivityRef__Group__1__Impl_in_rule__ActivityRef__Group__15290 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__ActivityRef__Group__2_in_rule__ActivityRef__Group__15293 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__ActivityRef__Group__1__Impl5321 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ActivityRef__Group__2__Impl_in_rule__ActivityRef__Group__25352 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ActivityRef__TypeAssignment_2_in_rule__ActivityRef__Group__2__Impl5379 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Decision__Group__0__Impl_in_rule__Decision__Group__05415 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Decision__Group__1_in_rule__Decision__Group__05418 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__Decision__Group__0__Impl5446 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Decision__Group__1__Impl_in_rule__Decision__Group__15477 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Decision__NameAssignment_1_in_rule__Decision__Group__1__Impl5504 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Step__Group__0__Impl_in_rule__Step__Group__05538 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Step__Group__1_in_rule__Step__Group__05541 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rule__Step__Group__0__Impl5569 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Step__Group__1__Impl_in_rule__Step__Group__15600 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Step__NameAssignment_1_in_rule__Step__Group__1__Impl5627 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__InitialTransition__Group__0__Impl_in_rule__InitialTransition__Group__05661 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_rule__InitialTransition__Group__1_in_rule__InitialTransition__Group__05664 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__InitialTransition__Group__0__Impl5692 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__InitialTransition__Group__1__Impl_in_rule__InitialTransition__Group__15723 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__InitialTransition__Group__2_in_rule__InitialTransition__Group__15726 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rule__InitialTransition__Group__1__Impl5754 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__InitialTransition__Group__2__Impl_in_rule__InitialTransition__Group__25785 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__InitialTransition__Group__3_in_rule__InitialTransition__Group__25788 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__InitialTransition__Group__2__Impl5816 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__InitialTransition__Group__3__Impl_in_rule__InitialTransition__Group__35847 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__InitialTransition__ToAssignment_3_in_rule__InitialTransition__Group__3__Impl5874 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FinalTransition__Group__0__Impl_in_rule__FinalTransition__Group__05912 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__FinalTransition__Group__1_in_rule__FinalTransition__Group__05915 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__FinalTransition__Group__0__Impl5943 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FinalTransition__Group__1__Impl_in_rule__FinalTransition__Group__15974 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__FinalTransition__Group__2_in_rule__FinalTransition__Group__15977 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FinalTransition__FromAssignment_1_in_rule__FinalTransition__Group__1__Impl6004 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FinalTransition__Group__2__Impl_in_rule__FinalTransition__Group__26034 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_rule__FinalTransition__Group__3_in_rule__FinalTransition__Group__26037 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__FinalTransition__Group__2__Impl6065 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FinalTransition__Group__3__Impl_in_rule__FinalTransition__Group__36096 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__FinalTransition__Group__3__Impl6124 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DecisionTransition__Group__0__Impl_in_rule__DecisionTransition__Group__06163 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__DecisionTransition__Group__1_in_rule__DecisionTransition__Group__06166 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__DecisionTransition__Group__0__Impl6194 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DecisionTransition__Group__1__Impl_in_rule__DecisionTransition__Group__16225 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__DecisionTransition__Group__2_in_rule__DecisionTransition__Group__16228 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DecisionTransition__FromAssignment_1_in_rule__DecisionTransition__Group__1__Impl6255 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DecisionTransition__Group__2__Impl_in_rule__DecisionTransition__Group__26285 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__DecisionTransition__Group__3_in_rule__DecisionTransition__Group__26288 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__DecisionTransition__Group__2__Impl6316 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DecisionTransition__Group__3__Impl_in_rule__DecisionTransition__Group__36347 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__DecisionTransition__Group__4_in_rule__DecisionTransition__Group__36350 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DecisionTransition__ToAssignment_3_in_rule__DecisionTransition__Group__3__Impl6377 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DecisionTransition__Group__4__Impl_in_rule__DecisionTransition__Group__46407 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DecisionTransition__GuardAssignment_4_in_rule__DecisionTransition__Group__4__Impl6434 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NonInitialTransition__Group__0__Impl_in_rule__NonInitialTransition__Group__06474 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__NonInitialTransition__Group__1_in_rule__NonInitialTransition__Group__06477 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__NonInitialTransition__Group__0__Impl6505 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NonInitialTransition__Group__1__Impl_in_rule__NonInitialTransition__Group__16536 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__NonInitialTransition__Group__2_in_rule__NonInitialTransition__Group__16539 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NonInitialTransition__FromAssignment_1_in_rule__NonInitialTransition__Group__1__Impl6566 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NonInitialTransition__Group__2__Impl_in_rule__NonInitialTransition__Group__26596 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__NonInitialTransition__Group__3_in_rule__NonInitialTransition__Group__26599 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__NonInitialTransition__Group__2__Impl6627 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NonInitialTransition__Group__3__Impl_in_rule__NonInitialTransition__Group__36658 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NonInitialTransition__ToAssignment_3_in_rule__NonInitialTransition__Group__3__Impl6685 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Textfield__Group__0__Impl_in_rule__Textfield__Group__06723 = new BitSet(new long[]{0x0000000C00000000L});
-    public static final BitSet FOLLOW_rule__Textfield__Group__1_in_rule__Textfield__Group__06726 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Textfield__Group_0__0_in_rule__Textfield__Group__0__Impl6753 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Textfield__Group__1__Impl_in_rule__Textfield__Group__16784 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Textfield__Group__2_in_rule__Textfield__Group__16787 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__Textfield__Group__1__Impl6815 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Textfield__Group__2__Impl_in_rule__Textfield__Group__26846 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_rule__Textfield__Group__3_in_rule__Textfield__Group__26849 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Textfield__SummaryAssignment_2_in_rule__Textfield__Group__2__Impl6876 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Textfield__Group__3__Impl_in_rule__Textfield__Group__36906 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Textfield__Group_3__0_in_rule__Textfield__Group__3__Impl6933 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Textfield__Group_0__0__Impl_in_rule__Textfield__Group_0__06972 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Textfield__Group_0__1_in_rule__Textfield__Group_0__06975 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__Textfield__Group_0__0__Impl7003 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Textfield__Group_0__1__Impl_in_rule__Textfield__Group_0__17034 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Textfield__LabelAssignment_0_1_in_rule__Textfield__Group_0__1__Impl7061 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Textfield__Group_3__0__Impl_in_rule__Textfield__Group_3__07095 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Textfield__Group_3__1_in_rule__Textfield__Group_3__07098 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__Textfield__Group_3__0__Impl7126 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Textfield__Group_3__1__Impl_in_rule__Textfield__Group_3__17157 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Textfield__DescriptionAssignment_3_1_in_rule__Textfield__Group_3__1__Impl7184 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleActivity_in_rule__Model__ActivitiesAssignment_07223 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRole_in_rule__Model__RolesAssignment_17254 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWorkProduct_in_rule__Model__WorkProductsAssignment_27285 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWorkProductType_in_rule__Model__WorkProductTypesAssignment_37316 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGuidance_in_rule__Model__GuidancesAssignment_47347 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGuidanceType_in_rule__Model__GuidanceTypesAssignment_57378 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Role__NameAssignment_17409 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTextfield_in_rule__Role__TextfieldAssignment_27440 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__WorkProductType__NameAssignment_17471 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTextfield_in_rule__WorkProductType__TextfieldAssignment_27502 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__WorkProduct__NameAssignment_17533 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__WorkProduct__TypeAssignment_37568 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTextfield_in_rule__WorkProduct__TextfieldAssignment_47603 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__GuidanceType__NameAssignment_17634 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTextfield_in_rule__GuidanceType__TextfieldAssignment_27665 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Guidance__NameAssignment_17696 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Guidance__TypeAssignment_37731 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTextfield_in_rule__Guidance__TextfieldAssignment_47766 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Port__NameAssignment_07797 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Port__TypeAssignment_27832 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Activity__NameAssignment_17867 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTextfield_in_rule__Activity__TextfieldAssignment_27898 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Activity__RoleAssignment_47933 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePort_in_rule__Activity__InPortsAssignment_5_17968 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePort_in_rule__Activity__InPortsAssignment_5_2_17999 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePort_in_rule__Activity__OutPortsAssignment_6_18030 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePort_in_rule__Activity__OutPortsAssignment_6_2_18061 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleActivityRef_in_rule__Activity__SubActivitiesAssignment_7_18092 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleActivityRef_in_rule__Activity__SubActivitiesAssignment_7_2_18123 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Activity__GuidancesAssignment_8_18158 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Activity__GuidancesAssignment_8_2_18197 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStep_in_rule__Activity__StepsAssignment_9_2_08232 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDecision_in_rule__Activity__DecisionsAssignment_9_2_18263 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTransition_in_rule__Activity__TransitionsAssignment_9_2_28294 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__ActivityRef__NameAssignment_08325 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__ActivityRef__TypeAssignment_28360 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Decision__NameAssignment_18395 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Step__NameAssignment_18426 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__InitialTransition__ToAssignment_38461 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__FinalTransition__FromAssignment_18500 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__DecisionTransition__FromAssignment_18539 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__DecisionTransition__ToAssignment_38578 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__DecisionTransition__GuardAssignment_48613 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__NonInitialTransition__FromAssignment_18648 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__NonInitialTransition__ToAssignment_38687 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Textfield__LabelAssignment_0_18722 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Textfield__SummaryAssignment_28753 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Textfield__DescriptionAssignment_3_18784 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleState_in_entryRuleState424 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleState431 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__State__Group__0_in_ruleState457 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePort_in_entryRulePort484 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePort491 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Port__Group__0_in_rulePort517 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleActivity_in_entryRuleActivity544 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleActivity551 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group__0_in_ruleActivity577 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleActivityRef_in_entryRuleActivityRef604 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleActivityRef611 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ActivityRef__TypeAssignment_in_ruleActivityRef637 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDecision_in_entryRuleDecision666 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDecision673 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Decision__Group__0_in_ruleDecision699 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStep_in_entryRuleStep726 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleStep733 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Step__Group__0_in_ruleStep759 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTransition_in_entryRuleTransition786 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTransition793 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Transition__Alternatives_in_ruleTransition819 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInitialTransition_in_entryRuleInitialTransition846 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleInitialTransition853 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__InitialTransition__Group__0_in_ruleInitialTransition879 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFinalTransition_in_entryRuleFinalTransition906 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFinalTransition913 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FinalTransition__Group__0_in_ruleFinalTransition939 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDecisionTransition_in_entryRuleDecisionTransition966 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDecisionTransition973 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DecisionTransition__Group__0_in_ruleDecisionTransition999 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNonInitialTransition_in_entryRuleNonInitialTransition1026 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNonInitialTransition1033 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NonInitialTransition__Group__0_in_ruleNonInitialTransition1059 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTextfield_in_entryRuleTextfield1086 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTextfield1093 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Textfield__Group__0_in_ruleTextfield1119 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__ActivitiesAssignment_0_in_rule__Model__Alternatives1155 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__RolesAssignment_1_in_rule__Model__Alternatives1173 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__WorkProductsAssignment_2_in_rule__Model__Alternatives1191 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__WorkProductTypesAssignment_3_in_rule__Model__Alternatives1209 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__GuidancesAssignment_4_in_rule__Model__Alternatives1227 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__GuidanceTypesAssignment_5_in_rule__Model__Alternatives1245 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__StatesAssignment_6_in_rule__Model__Alternatives1263 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__StepsAssignment_9_2_0_in_rule__Activity__Alternatives_9_21297 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__DecisionsAssignment_9_2_1_in_rule__Activity__Alternatives_9_21315 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__TransitionsAssignment_9_2_2_in_rule__Activity__Alternatives_9_21333 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInitialTransition_in_rule__Transition__Alternatives1367 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFinalTransition_in_rule__Transition__Alternatives1384 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNonInitialTransition_in_rule__Transition__Alternatives1401 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDecisionTransition_in_rule__Transition__Alternatives1418 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Role__Group__0__Impl_in_rule__Role__Group__01448 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Role__Group__1_in_rule__Role__Group__01451 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_11_in_rule__Role__Group__0__Impl1479 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Role__Group__1__Impl_in_rule__Role__Group__11510 = new BitSet(new long[]{0x0000006000000000L});
+    public static final BitSet FOLLOW_rule__Role__Group__2_in_rule__Role__Group__11513 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Role__NameAssignment_1_in_rule__Role__Group__1__Impl1540 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Role__Group__2__Impl_in_rule__Role__Group__21570 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_rule__Role__Group__3_in_rule__Role__Group__21573 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Role__TextfieldAssignment_2_in_rule__Role__Group__2__Impl1600 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Role__Group__3__Impl_in_rule__Role__Group__31630 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__Role__Group__3__Impl1658 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WorkProductType__Group__0__Impl_in_rule__WorkProductType__Group__01697 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__WorkProductType__Group__1_in_rule__WorkProductType__Group__01700 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__WorkProductType__Group__0__Impl1728 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WorkProductType__Group__1__Impl_in_rule__WorkProductType__Group__11759 = new BitSet(new long[]{0x0000006000000000L});
+    public static final BitSet FOLLOW_rule__WorkProductType__Group__2_in_rule__WorkProductType__Group__11762 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WorkProductType__NameAssignment_1_in_rule__WorkProductType__Group__1__Impl1789 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WorkProductType__Group__2__Impl_in_rule__WorkProductType__Group__21819 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_rule__WorkProductType__Group__3_in_rule__WorkProductType__Group__21822 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WorkProductType__TextfieldAssignment_2_in_rule__WorkProductType__Group__2__Impl1849 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WorkProductType__Group__3__Impl_in_rule__WorkProductType__Group__31879 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__WorkProductType__Group__3__Impl1907 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WorkProduct__Group__0__Impl_in_rule__WorkProduct__Group__01946 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__WorkProduct__Group__1_in_rule__WorkProduct__Group__01949 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__WorkProduct__Group__0__Impl1977 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WorkProduct__Group__1__Impl_in_rule__WorkProduct__Group__12008 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_rule__WorkProduct__Group__2_in_rule__WorkProduct__Group__12011 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WorkProduct__NameAssignment_1_in_rule__WorkProduct__Group__1__Impl2038 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WorkProduct__Group__2__Impl_in_rule__WorkProduct__Group__22068 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__WorkProduct__Group__3_in_rule__WorkProduct__Group__22071 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__WorkProduct__Group__2__Impl2099 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WorkProduct__Group__3__Impl_in_rule__WorkProduct__Group__32130 = new BitSet(new long[]{0x0000006000000000L});
+    public static final BitSet FOLLOW_rule__WorkProduct__Group__4_in_rule__WorkProduct__Group__32133 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WorkProduct__TypeAssignment_3_in_rule__WorkProduct__Group__3__Impl2160 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WorkProduct__Group__4__Impl_in_rule__WorkProduct__Group__42190 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_rule__WorkProduct__Group__5_in_rule__WorkProduct__Group__42193 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WorkProduct__TextfieldAssignment_4_in_rule__WorkProduct__Group__4__Impl2220 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WorkProduct__Group__5__Impl_in_rule__WorkProduct__Group__52250 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__WorkProduct__Group__5__Impl2278 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GuidanceType__Group__0__Impl_in_rule__GuidanceType__Group__02321 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__GuidanceType__Group__1_in_rule__GuidanceType__Group__02324 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__GuidanceType__Group__0__Impl2352 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GuidanceType__Group__1__Impl_in_rule__GuidanceType__Group__12383 = new BitSet(new long[]{0x0000006000000000L});
+    public static final BitSet FOLLOW_rule__GuidanceType__Group__2_in_rule__GuidanceType__Group__12386 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GuidanceType__NameAssignment_1_in_rule__GuidanceType__Group__1__Impl2413 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GuidanceType__Group__2__Impl_in_rule__GuidanceType__Group__22443 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_rule__GuidanceType__Group__3_in_rule__GuidanceType__Group__22446 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GuidanceType__TextfieldAssignment_2_in_rule__GuidanceType__Group__2__Impl2473 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GuidanceType__Group__3__Impl_in_rule__GuidanceType__Group__32503 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__GuidanceType__Group__3__Impl2531 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Guidance__Group__0__Impl_in_rule__Guidance__Group__02570 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Guidance__Group__1_in_rule__Guidance__Group__02573 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__Guidance__Group__0__Impl2601 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Guidance__Group__1__Impl_in_rule__Guidance__Group__12632 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_rule__Guidance__Group__2_in_rule__Guidance__Group__12635 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Guidance__NameAssignment_1_in_rule__Guidance__Group__1__Impl2662 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Guidance__Group__2__Impl_in_rule__Guidance__Group__22692 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Guidance__Group__3_in_rule__Guidance__Group__22695 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__Guidance__Group__2__Impl2723 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Guidance__Group__3__Impl_in_rule__Guidance__Group__32754 = new BitSet(new long[]{0x0000006000000000L});
+    public static final BitSet FOLLOW_rule__Guidance__Group__4_in_rule__Guidance__Group__32757 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Guidance__TypeAssignment_3_in_rule__Guidance__Group__3__Impl2784 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Guidance__Group__4__Impl_in_rule__Guidance__Group__42814 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_rule__Guidance__Group__5_in_rule__Guidance__Group__42817 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Guidance__TextfieldAssignment_4_in_rule__Guidance__Group__4__Impl2844 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Guidance__Group__5__Impl_in_rule__Guidance__Group__52874 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__Guidance__Group__5__Impl2902 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__State__Group__0__Impl_in_rule__State__Group__02945 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__State__Group__1_in_rule__State__Group__02948 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__State__Group__0__Impl2976 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__State__Group__1__Impl_in_rule__State__Group__13007 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_rule__State__Group__2_in_rule__State__Group__13010 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__State__NameAssignment_1_in_rule__State__Group__1__Impl3037 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__State__Group__2__Impl_in_rule__State__Group__23067 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__State__Group__2__Impl3095 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Port__Group__0__Impl_in_rule__Port__Group__03132 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_rule__Port__Group__1_in_rule__Port__Group__03135 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Port__TypeAssignment_0_in_rule__Port__Group__0__Impl3162 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Port__Group__1__Impl_in_rule__Port__Group__13192 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Port__Group_1__0_in_rule__Port__Group__1__Impl3219 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Port__Group_1__0__Impl_in_rule__Port__Group_1__03254 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Port__Group_1__1_in_rule__Port__Group_1__03257 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__Port__Group_1__0__Impl3285 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Port__Group_1__1__Impl_in_rule__Port__Group_1__13316 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_rule__Port__Group_1__2_in_rule__Port__Group_1__13319 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Port__StateAssignment_1_1_in_rule__Port__Group_1__1__Impl3346 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Port__Group_1__2__Impl_in_rule__Port__Group_1__23376 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__Port__Group_1__2__Impl3404 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group__0__Impl_in_rule__Activity__Group__03441 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Activity__Group__1_in_rule__Activity__Group__03444 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__Activity__Group__0__Impl3472 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group__1__Impl_in_rule__Activity__Group__13503 = new BitSet(new long[]{0x0000006000000000L});
+    public static final BitSet FOLLOW_rule__Activity__Group__2_in_rule__Activity__Group__13506 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__NameAssignment_1_in_rule__Activity__Group__1__Impl3533 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group__2__Impl_in_rule__Activity__Group__23563 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_rule__Activity__Group__3_in_rule__Activity__Group__23566 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__TextfieldAssignment_2_in_rule__Activity__Group__2__Impl3593 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group__3__Impl_in_rule__Activity__Group__33623 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Activity__Group__4_in_rule__Activity__Group__33626 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__Activity__Group__3__Impl3654 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group__4__Impl_in_rule__Activity__Group__43685 = new BitSet(new long[]{0x000000001E801000L});
+    public static final BitSet FOLLOW_rule__Activity__Group__5_in_rule__Activity__Group__43688 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__RoleAssignment_4_in_rule__Activity__Group__4__Impl3715 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group__5__Impl_in_rule__Activity__Group__53745 = new BitSet(new long[]{0x000000001E801000L});
+    public static final BitSet FOLLOW_rule__Activity__Group__6_in_rule__Activity__Group__53748 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_5__0_in_rule__Activity__Group__5__Impl3775 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group__6__Impl_in_rule__Activity__Group__63806 = new BitSet(new long[]{0x000000001E801000L});
+    public static final BitSet FOLLOW_rule__Activity__Group__7_in_rule__Activity__Group__63809 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_6__0_in_rule__Activity__Group__6__Impl3836 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group__7__Impl_in_rule__Activity__Group__73867 = new BitSet(new long[]{0x000000001E801000L});
+    public static final BitSet FOLLOW_rule__Activity__Group__8_in_rule__Activity__Group__73870 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_7__0_in_rule__Activity__Group__7__Impl3897 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group__8__Impl_in_rule__Activity__Group__83928 = new BitSet(new long[]{0x000000001E801000L});
+    public static final BitSet FOLLOW_rule__Activity__Group__9_in_rule__Activity__Group__83931 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_8__0_in_rule__Activity__Group__8__Impl3958 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group__9__Impl_in_rule__Activity__Group__93989 = new BitSet(new long[]{0x000000001E801000L});
+    public static final BitSet FOLLOW_rule__Activity__Group__10_in_rule__Activity__Group__93992 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_9__0_in_rule__Activity__Group__9__Impl4019 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group__10__Impl_in_rule__Activity__Group__104050 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__Activity__Group__10__Impl4078 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_5__0__Impl_in_rule__Activity__Group_5__04131 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Activity__Group_5__1_in_rule__Activity__Group_5__04134 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__Activity__Group_5__0__Impl4162 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_5__1__Impl_in_rule__Activity__Group_5__14193 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__Activity__Group_5__2_in_rule__Activity__Group_5__14196 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__InPortsAssignment_5_1_in_rule__Activity__Group_5__1__Impl4223 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_5__2__Impl_in_rule__Activity__Group_5__24253 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_5_2__0_in_rule__Activity__Group_5__2__Impl4280 = new BitSet(new long[]{0x0000000001000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_5_2__0__Impl_in_rule__Activity__Group_5_2__04317 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Activity__Group_5_2__1_in_rule__Activity__Group_5_2__04320 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__Activity__Group_5_2__0__Impl4348 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_5_2__1__Impl_in_rule__Activity__Group_5_2__14379 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__InPortsAssignment_5_2_1_in_rule__Activity__Group_5_2__1__Impl4406 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_6__0__Impl_in_rule__Activity__Group_6__04440 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Activity__Group_6__1_in_rule__Activity__Group_6__04443 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__Activity__Group_6__0__Impl4471 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_6__1__Impl_in_rule__Activity__Group_6__14502 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__Activity__Group_6__2_in_rule__Activity__Group_6__14505 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__OutPortsAssignment_6_1_in_rule__Activity__Group_6__1__Impl4532 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_6__2__Impl_in_rule__Activity__Group_6__24562 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_6_2__0_in_rule__Activity__Group_6__2__Impl4589 = new BitSet(new long[]{0x0000000001000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_6_2__0__Impl_in_rule__Activity__Group_6_2__04626 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Activity__Group_6_2__1_in_rule__Activity__Group_6_2__04629 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__Activity__Group_6_2__0__Impl4657 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_6_2__1__Impl_in_rule__Activity__Group_6_2__14688 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__OutPortsAssignment_6_2_1_in_rule__Activity__Group_6_2__1__Impl4715 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_7__0__Impl_in_rule__Activity__Group_7__04749 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Activity__Group_7__1_in_rule__Activity__Group_7__04752 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__Activity__Group_7__0__Impl4780 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_7__1__Impl_in_rule__Activity__Group_7__14811 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__Activity__Group_7__2_in_rule__Activity__Group_7__14814 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__SubActivitiesAssignment_7_1_in_rule__Activity__Group_7__1__Impl4841 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_7__2__Impl_in_rule__Activity__Group_7__24871 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_7_2__0_in_rule__Activity__Group_7__2__Impl4898 = new BitSet(new long[]{0x0000000001000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_7_2__0__Impl_in_rule__Activity__Group_7_2__04935 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Activity__Group_7_2__1_in_rule__Activity__Group_7_2__04938 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__Activity__Group_7_2__0__Impl4966 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_7_2__1__Impl_in_rule__Activity__Group_7_2__14997 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__SubActivitiesAssignment_7_2_1_in_rule__Activity__Group_7_2__1__Impl5024 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_8__0__Impl_in_rule__Activity__Group_8__05058 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Activity__Group_8__1_in_rule__Activity__Group_8__05061 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__Activity__Group_8__0__Impl5089 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_8__1__Impl_in_rule__Activity__Group_8__15120 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__Activity__Group_8__2_in_rule__Activity__Group_8__15123 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__GuidancesAssignment_8_1_in_rule__Activity__Group_8__1__Impl5150 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_8__2__Impl_in_rule__Activity__Group_8__25180 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_8_2__0_in_rule__Activity__Group_8__2__Impl5207 = new BitSet(new long[]{0x0000000001000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_8_2__0__Impl_in_rule__Activity__Group_8_2__05244 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Activity__Group_8_2__1_in_rule__Activity__Group_8_2__05247 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__Activity__Group_8_2__0__Impl5275 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_8_2__1__Impl_in_rule__Activity__Group_8_2__15306 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__GuidancesAssignment_8_2_1_in_rule__Activity__Group_8_2__1__Impl5333 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_9__0__Impl_in_rule__Activity__Group_9__05367 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_rule__Activity__Group_9__1_in_rule__Activity__Group_9__05370 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__Activity__Group_9__0__Impl5398 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_9__1__Impl_in_rule__Activity__Group_9__15429 = new BitSet(new long[]{0x00000003C0000000L});
+    public static final BitSet FOLLOW_rule__Activity__Group_9__2_in_rule__Activity__Group_9__15432 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_rule__Activity__Group_9__1__Impl5460 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_9__2__Impl_in_rule__Activity__Group_9__25491 = new BitSet(new long[]{0x00000003C0000000L});
+    public static final BitSet FOLLOW_rule__Activity__Group_9__3_in_rule__Activity__Group_9__25494 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Activity__Alternatives_9_2_in_rule__Activity__Group_9__2__Impl5521 = new BitSet(new long[]{0x0000000380000002L});
+    public static final BitSet FOLLOW_rule__Activity__Group_9__3__Impl_in_rule__Activity__Group_9__35552 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__Activity__Group_9__3__Impl5580 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Decision__Group__0__Impl_in_rule__Decision__Group__05619 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Decision__Group__1_in_rule__Decision__Group__05622 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rule__Decision__Group__0__Impl5650 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Decision__Group__1__Impl_in_rule__Decision__Group__15681 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Decision__NameAssignment_1_in_rule__Decision__Group__1__Impl5708 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Step__Group__0__Impl_in_rule__Step__Group__05742 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Step__Group__1_in_rule__Step__Group__05745 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Step__Group__0__Impl5773 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Step__Group__1__Impl_in_rule__Step__Group__15804 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Step__NameAssignment_1_in_rule__Step__Group__1__Impl5831 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__InitialTransition__Group__0__Impl_in_rule__InitialTransition__Group__05865 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_rule__InitialTransition__Group__1_in_rule__InitialTransition__Group__05868 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__InitialTransition__Group__0__Impl5896 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__InitialTransition__Group__1__Impl_in_rule__InitialTransition__Group__15927 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_rule__InitialTransition__Group__2_in_rule__InitialTransition__Group__15930 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rule__InitialTransition__Group__1__Impl5958 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__InitialTransition__Group__2__Impl_in_rule__InitialTransition__Group__25989 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__InitialTransition__Group__3_in_rule__InitialTransition__Group__25992 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__InitialTransition__Group__2__Impl6020 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__InitialTransition__Group__3__Impl_in_rule__InitialTransition__Group__36051 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__InitialTransition__ToAssignment_3_in_rule__InitialTransition__Group__3__Impl6078 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FinalTransition__Group__0__Impl_in_rule__FinalTransition__Group__06116 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__FinalTransition__Group__1_in_rule__FinalTransition__Group__06119 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__FinalTransition__Group__0__Impl6147 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FinalTransition__Group__1__Impl_in_rule__FinalTransition__Group__16178 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_rule__FinalTransition__Group__2_in_rule__FinalTransition__Group__16181 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FinalTransition__FromAssignment_1_in_rule__FinalTransition__Group__1__Impl6208 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FinalTransition__Group__2__Impl_in_rule__FinalTransition__Group__26238 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_rule__FinalTransition__Group__3_in_rule__FinalTransition__Group__26241 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__FinalTransition__Group__2__Impl6269 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FinalTransition__Group__3__Impl_in_rule__FinalTransition__Group__36300 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__FinalTransition__Group__3__Impl6328 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DecisionTransition__Group__0__Impl_in_rule__DecisionTransition__Group__06367 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__DecisionTransition__Group__1_in_rule__DecisionTransition__Group__06370 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__DecisionTransition__Group__0__Impl6398 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DecisionTransition__Group__1__Impl_in_rule__DecisionTransition__Group__16429 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_rule__DecisionTransition__Group__2_in_rule__DecisionTransition__Group__16432 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DecisionTransition__FromAssignment_1_in_rule__DecisionTransition__Group__1__Impl6459 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DecisionTransition__Group__2__Impl_in_rule__DecisionTransition__Group__26489 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__DecisionTransition__Group__3_in_rule__DecisionTransition__Group__26492 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__DecisionTransition__Group__2__Impl6520 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DecisionTransition__Group__3__Impl_in_rule__DecisionTransition__Group__36551 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__DecisionTransition__Group__4_in_rule__DecisionTransition__Group__36554 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DecisionTransition__ToAssignment_3_in_rule__DecisionTransition__Group__3__Impl6581 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DecisionTransition__Group__4__Impl_in_rule__DecisionTransition__Group__46611 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DecisionTransition__GuardAssignment_4_in_rule__DecisionTransition__Group__4__Impl6638 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NonInitialTransition__Group__0__Impl_in_rule__NonInitialTransition__Group__06678 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__NonInitialTransition__Group__1_in_rule__NonInitialTransition__Group__06681 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__NonInitialTransition__Group__0__Impl6709 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NonInitialTransition__Group__1__Impl_in_rule__NonInitialTransition__Group__16740 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_rule__NonInitialTransition__Group__2_in_rule__NonInitialTransition__Group__16743 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NonInitialTransition__FromAssignment_1_in_rule__NonInitialTransition__Group__1__Impl6770 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NonInitialTransition__Group__2__Impl_in_rule__NonInitialTransition__Group__26800 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__NonInitialTransition__Group__3_in_rule__NonInitialTransition__Group__26803 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__NonInitialTransition__Group__2__Impl6831 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NonInitialTransition__Group__3__Impl_in_rule__NonInitialTransition__Group__36862 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NonInitialTransition__ToAssignment_3_in_rule__NonInitialTransition__Group__3__Impl6889 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Textfield__Group__0__Impl_in_rule__Textfield__Group__06927 = new BitSet(new long[]{0x0000006000000000L});
+    public static final BitSet FOLLOW_rule__Textfield__Group__1_in_rule__Textfield__Group__06930 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Textfield__Group_0__0_in_rule__Textfield__Group__0__Impl6957 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Textfield__Group__1__Impl_in_rule__Textfield__Group__16988 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Textfield__Group__2_in_rule__Textfield__Group__16991 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_rule__Textfield__Group__1__Impl7019 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Textfield__Group__2__Impl_in_rule__Textfield__Group__27050 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_rule__Textfield__Group__3_in_rule__Textfield__Group__27053 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Textfield__SummaryAssignment_2_in_rule__Textfield__Group__2__Impl7080 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Textfield__Group__3__Impl_in_rule__Textfield__Group__37110 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Textfield__Group_3__0_in_rule__Textfield__Group__3__Impl7137 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Textfield__Group_0__0__Impl_in_rule__Textfield__Group_0__07176 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Textfield__Group_0__1_in_rule__Textfield__Group_0__07179 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_rule__Textfield__Group_0__0__Impl7207 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Textfield__Group_0__1__Impl_in_rule__Textfield__Group_0__17238 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Textfield__LabelAssignment_0_1_in_rule__Textfield__Group_0__1__Impl7265 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Textfield__Group_3__0__Impl_in_rule__Textfield__Group_3__07299 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Textfield__Group_3__1_in_rule__Textfield__Group_3__07302 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_rule__Textfield__Group_3__0__Impl7330 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Textfield__Group_3__1__Impl_in_rule__Textfield__Group_3__17361 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Textfield__DescriptionAssignment_3_1_in_rule__Textfield__Group_3__1__Impl7388 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleActivity_in_rule__Model__ActivitiesAssignment_07427 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRole_in_rule__Model__RolesAssignment_17458 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWorkProduct_in_rule__Model__WorkProductsAssignment_27489 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWorkProductType_in_rule__Model__WorkProductTypesAssignment_37520 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGuidance_in_rule__Model__GuidancesAssignment_47551 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGuidanceType_in_rule__Model__GuidanceTypesAssignment_57582 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleState_in_rule__Model__StatesAssignment_67613 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Role__NameAssignment_17644 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTextfield_in_rule__Role__TextfieldAssignment_27675 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__WorkProductType__NameAssignment_17706 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTextfield_in_rule__WorkProductType__TextfieldAssignment_27737 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__WorkProduct__NameAssignment_17768 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__WorkProduct__TypeAssignment_37803 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTextfield_in_rule__WorkProduct__TextfieldAssignment_47838 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__GuidanceType__NameAssignment_17869 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTextfield_in_rule__GuidanceType__TextfieldAssignment_27900 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Guidance__NameAssignment_17931 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Guidance__TypeAssignment_37966 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTextfield_in_rule__Guidance__TextfieldAssignment_48001 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__State__NameAssignment_18032 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Port__TypeAssignment_08067 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Port__StateAssignment_1_18106 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Activity__NameAssignment_18141 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTextfield_in_rule__Activity__TextfieldAssignment_28172 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Activity__RoleAssignment_48207 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePort_in_rule__Activity__InPortsAssignment_5_18242 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePort_in_rule__Activity__InPortsAssignment_5_2_18273 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePort_in_rule__Activity__OutPortsAssignment_6_18304 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePort_in_rule__Activity__OutPortsAssignment_6_2_18335 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleActivityRef_in_rule__Activity__SubActivitiesAssignment_7_18366 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleActivityRef_in_rule__Activity__SubActivitiesAssignment_7_2_18397 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Activity__GuidancesAssignment_8_18432 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Activity__GuidancesAssignment_8_2_18471 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStep_in_rule__Activity__StepsAssignment_9_2_08506 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDecision_in_rule__Activity__DecisionsAssignment_9_2_18537 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTransition_in_rule__Activity__TransitionsAssignment_9_2_28568 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__ActivityRef__TypeAssignment8603 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Decision__NameAssignment_18638 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Step__NameAssignment_18669 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__InitialTransition__ToAssignment_38704 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__FinalTransition__FromAssignment_18743 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__DecisionTransition__FromAssignment_18782 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__DecisionTransition__ToAssignment_38821 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__DecisionTransition__GuardAssignment_48856 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__NonInitialTransition__FromAssignment_18891 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__NonInitialTransition__ToAssignment_38930 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Textfield__LabelAssignment_0_18965 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Textfield__SummaryAssignment_28996 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Textfield__DescriptionAssignment_3_19027 = new BitSet(new long[]{0x0000000000000002L});
 
 }

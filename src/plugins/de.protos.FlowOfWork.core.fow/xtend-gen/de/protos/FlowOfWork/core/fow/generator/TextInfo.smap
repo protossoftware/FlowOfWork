@@ -1,0 +1,14 @@
+SMAP
+TextInfo.java
+Xtend
+*S Xtend
+*F
++ 0 TextInfo.xtend
+src/de/protos/FlowOfWork/core/fow/generator/TextInfo.xtend
+*L
+9:12,4
+10:16
+9:17
+13:18,2
+9:20
+*E

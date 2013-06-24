@@ -1,0 +1,19 @@
+SMAP
+MetamodelHelpers.java
+Xtend
+*S Xtend
+*F
++ 0 MetamodelHelpers.xtend
+src/de/protos/FlowOfWork/core/fow/generator/MetamodelHelpers.xtend
+*L
+10:11,3
+13:17,2
+14:19
+13:20
+15:21,2
+16:23
+15:24
+18:25
+15:26
+13:27
+*E

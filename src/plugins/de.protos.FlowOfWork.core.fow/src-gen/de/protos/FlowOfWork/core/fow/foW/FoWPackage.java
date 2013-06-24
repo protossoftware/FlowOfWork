@@ -121,13 +121,22 @@ public interface FoWPackage extends EPackage
   int MODEL__GUIDANCE_TYPES = 5;
 
   /**
+   * The feature id for the '<em><b>States</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MODEL__STATES = 6;
+
+  /**
    * The number of structural features of the '<em>Model</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODEL_FEATURE_COUNT = 6;
+  int MODEL_FEATURE_COUNT = 7;
 
   /**
    * The meta object id for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.NamedElementImpl <em>Named Element</em>}' class.
@@ -370,14 +379,14 @@ public interface FoWPackage extends EPackage
   int GUIDANCE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.PortImpl <em>Port</em>}' class.
+   * The meta object id for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.StateImpl <em>State</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see de.protos.FlowOfWork.core.fow.foW.impl.PortImpl
-   * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getPort()
+   * @see de.protos.FlowOfWork.core.fow.foW.impl.StateImpl
+   * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getState()
    * @generated
    */
-  int PORT = 7;
+  int STATE = 7;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -386,7 +395,26 @@ public interface FoWPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PORT__NAME = 0;
+  int STATE__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>State</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STATE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.PortImpl <em>Port</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.protos.FlowOfWork.core.fow.foW.impl.PortImpl
+   * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getPort()
+   * @generated
+   */
+  int PORT = 8;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' reference.
@@ -395,7 +423,16 @@ public interface FoWPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PORT__TYPE = 1;
+  int PORT__TYPE = 0;
+
+  /**
+   * The feature id for the '<em><b>State</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PORT__STATE = 1;
 
   /**
    * The number of structural features of the '<em>Port</em>' class.
@@ -414,7 +451,7 @@ public interface FoWPackage extends EPackage
    * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getActivity()
    * @generated
    */
-  int ACTIVITY = 8;
+  int ACTIVITY = 9;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -523,16 +560,7 @@ public interface FoWPackage extends EPackage
    * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getActivityRef()
    * @generated
    */
-  int ACTIVITY_REF = 9;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ACTIVITY_REF__NAME = 0;
+  int ACTIVITY_REF = 10;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' reference.
@@ -541,7 +569,7 @@ public interface FoWPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ACTIVITY_REF__TYPE = 1;
+  int ACTIVITY_REF__TYPE = 0;
 
   /**
    * The number of structural features of the '<em>Activity Ref</em>' class.
@@ -550,7 +578,7 @@ public interface FoWPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ACTIVITY_REF_FEATURE_COUNT = 2;
+  int ACTIVITY_REF_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.NodeImpl <em>Node</em>}' class.
@@ -560,7 +588,7 @@ public interface FoWPackage extends EPackage
    * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getNode()
    * @generated
    */
-  int NODE = 10;
+  int NODE = 11;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -588,7 +616,7 @@ public interface FoWPackage extends EPackage
    * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getDecision()
    * @generated
    */
-  int DECISION = 11;
+  int DECISION = 12;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -616,7 +644,7 @@ public interface FoWPackage extends EPackage
    * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getStep()
    * @generated
    */
-  int STEP = 12;
+  int STEP = 13;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -644,7 +672,7 @@ public interface FoWPackage extends EPackage
    * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getTransition()
    * @generated
    */
-  int TRANSITION = 13;
+  int TRANSITION = 14;
 
   /**
    * The number of structural features of the '<em>Transition</em>' class.
@@ -663,7 +691,7 @@ public interface FoWPackage extends EPackage
    * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getInitialTransition()
    * @generated
    */
-  int INITIAL_TRANSITION = 14;
+  int INITIAL_TRANSITION = 15;
 
   /**
    * The feature id for the '<em><b>To</b></em>' reference.
@@ -691,7 +719,7 @@ public interface FoWPackage extends EPackage
    * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getFinalTransition()
    * @generated
    */
-  int FINAL_TRANSITION = 15;
+  int FINAL_TRANSITION = 16;
 
   /**
    * The feature id for the '<em><b>From</b></em>' reference.
@@ -719,7 +747,7 @@ public interface FoWPackage extends EPackage
    * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getDecisionTransition()
    * @generated
    */
-  int DECISION_TRANSITION = 16;
+  int DECISION_TRANSITION = 17;
 
   /**
    * The feature id for the '<em><b>From</b></em>' reference.
@@ -765,7 +793,7 @@ public interface FoWPackage extends EPackage
    * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getNonInitialTransition()
    * @generated
    */
-  int NON_INITIAL_TRANSITION = 17;
+  int NON_INITIAL_TRANSITION = 18;
 
   /**
    * The feature id for the '<em><b>From</b></em>' reference.
@@ -802,7 +830,7 @@ public interface FoWPackage extends EPackage
    * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getTextfield()
    * @generated
    */
-  int TEXTFIELD = 18;
+  int TEXTFIELD = 19;
 
   /**
    * The feature id for the '<em><b>Label</b></em>' attribute.
@@ -918,6 +946,17 @@ public interface FoWPackage extends EPackage
   EReference getModel_GuidanceTypes();
 
   /**
+   * Returns the meta object for the containment reference list '{@link de.protos.FlowOfWork.core.fow.foW.Model#getStates <em>States</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>States</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.Model#getStates()
+   * @see #getModel()
+   * @generated
+   */
+  EReference getModel_States();
+
+  /**
    * Returns the meta object for class '{@link de.protos.FlowOfWork.core.fow.foW.NamedElement <em>Named Element</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1022,6 +1061,27 @@ public interface FoWPackage extends EPackage
   EReference getGuidance_Type();
 
   /**
+   * Returns the meta object for class '{@link de.protos.FlowOfWork.core.fow.foW.State <em>State</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>State</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.State
+   * @generated
+   */
+  EClass getState();
+
+  /**
+   * Returns the meta object for the attribute '{@link de.protos.FlowOfWork.core.fow.foW.State#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.State#getName()
+   * @see #getState()
+   * @generated
+   */
+  EAttribute getState_Name();
+
+  /**
    * Returns the meta object for class '{@link de.protos.FlowOfWork.core.fow.foW.Port <em>Port</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1030,17 +1090,6 @@ public interface FoWPackage extends EPackage
    * @generated
    */
   EClass getPort();
-
-  /**
-   * Returns the meta object for the attribute '{@link de.protos.FlowOfWork.core.fow.foW.Port#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see de.protos.FlowOfWork.core.fow.foW.Port#getName()
-   * @see #getPort()
-   * @generated
-   */
-  EAttribute getPort_Name();
 
   /**
    * Returns the meta object for the reference '{@link de.protos.FlowOfWork.core.fow.foW.Port#getType <em>Type</em>}'.
@@ -1052,6 +1101,17 @@ public interface FoWPackage extends EPackage
    * @generated
    */
   EReference getPort_Type();
+
+  /**
+   * Returns the meta object for the reference '{@link de.protos.FlowOfWork.core.fow.foW.Port#getState <em>State</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>State</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.Port#getState()
+   * @see #getPort()
+   * @generated
+   */
+  EReference getPort_State();
 
   /**
    * Returns the meta object for class '{@link de.protos.FlowOfWork.core.fow.foW.Activity <em>Activity</em>}'.
@@ -1160,17 +1220,6 @@ public interface FoWPackage extends EPackage
    * @generated
    */
   EClass getActivityRef();
-
-  /**
-   * Returns the meta object for the attribute '{@link de.protos.FlowOfWork.core.fow.foW.ActivityRef#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see de.protos.FlowOfWork.core.fow.foW.ActivityRef#getName()
-   * @see #getActivityRef()
-   * @generated
-   */
-  EAttribute getActivityRef_Name();
 
   /**
    * Returns the meta object for the reference '{@link de.protos.FlowOfWork.core.fow.foW.ActivityRef#getType <em>Type</em>}'.
@@ -1476,6 +1525,14 @@ public interface FoWPackage extends EPackage
     EReference MODEL__GUIDANCE_TYPES = eINSTANCE.getModel_GuidanceTypes();
 
     /**
+     * The meta object literal for the '<em><b>States</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MODEL__STATES = eINSTANCE.getModel_States();
+
+    /**
      * The meta object literal for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.NamedElementImpl <em>Named Element</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1568,6 +1625,24 @@ public interface FoWPackage extends EPackage
     EReference GUIDANCE__TYPE = eINSTANCE.getGuidance_Type();
 
     /**
+     * The meta object literal for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.StateImpl <em>State</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.protos.FlowOfWork.core.fow.foW.impl.StateImpl
+     * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getState()
+     * @generated
+     */
+    EClass STATE = eINSTANCE.getState();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute STATE__NAME = eINSTANCE.getState_Name();
+
+    /**
      * The meta object literal for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.PortImpl <em>Port</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1578,20 +1653,20 @@ public interface FoWPackage extends EPackage
     EClass PORT = eINSTANCE.getPort();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute PORT__NAME = eINSTANCE.getPort_Name();
-
-    /**
      * The meta object literal for the '<em><b>Type</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference PORT__TYPE = eINSTANCE.getPort_Type();
+
+    /**
+     * The meta object literal for the '<em><b>State</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PORT__STATE = eINSTANCE.getPort_State();
 
     /**
      * The meta object literal for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.ActivityImpl <em>Activity</em>}' class.
@@ -1676,14 +1751,6 @@ public interface FoWPackage extends EPackage
      * @generated
      */
     EClass ACTIVITY_REF = eINSTANCE.getActivityRef();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute ACTIVITY_REF__NAME = eINSTANCE.getActivityRef_Name();
 
     /**
      * The meta object literal for the '<em><b>Type</b></em>' reference feature.

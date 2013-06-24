@@ -147,7 +147,7 @@ class HtmlGenerator {
 						«IF activity.inPorts.size() > 0»
 							<ul>
 							«FOR inPort : activity.inPorts»
-								<li>«inPort.name» : «generateHTML_HRef(inPort.type)»</li>
+								<li>«generateHTML_HRef(inPort.type)»</li>
 							«ENDFOR»
 							</ul>
 						«ELSE»
@@ -161,7 +161,7 @@ class HtmlGenerator {
 						«IF activity.outPorts.size() > 0»
 							<ul>
 							«FOR outPort : activity.outPorts»
-								<li>«outPort.name» : «generateHTML_HRef(outPort.type)»</a> </li>
+								<li>«generateHTML_HRef(outPort.type)»</a> </li>
 							«ENDFOR»
 							</ul>
 						«ELSE»
@@ -205,16 +205,26 @@ class HtmlGenerator {
 		«IF activity.subActivities.emptyList»
 			<p><em>no sub activities</em></p>
 		«ELSE»
-			<ul>
+			<table border="1" width="100%">
+			  	<tr>
+					<td>
+						<b>Activity</b>
+					</td>
+					<td>
+						<b>Role</b>
+					</td>
+				</tr>
 				«FOR subActivity : activity.subActivities»
-					<li>Activity Reference: «subActivity.name» 
-						<ul>
-							<li>Activity Type: «generateHTML_HRef(subActivity.type)»</li>
-							<li>Role: «generateHTML_HRef(subActivity.type.role)»</li>
-						</ul> 
-					</li>
+					<tr>
+						<td>
+							«generateHTML_HRef(subActivity.type)»
+						</td>
+						<td>
+							«generateHTML_HRef(subActivity.type.role)»
+						</td>
+					</tr>
 				«ENDFOR»
-			</ul>
+			</table>
 		«ENDIF»
 		
 		<h2>Guidances</h2>

@@ -47,7 +47,9 @@ public class FoWParser extends AbstractContentAssistParser {
 					put(grammarAccess.getWorkProductAccess().getGroup(), "rule__WorkProduct__Group__0");
 					put(grammarAccess.getGuidanceTypeAccess().getGroup(), "rule__GuidanceType__Group__0");
 					put(grammarAccess.getGuidanceAccess().getGroup(), "rule__Guidance__Group__0");
+					put(grammarAccess.getStateAccess().getGroup(), "rule__State__Group__0");
 					put(grammarAccess.getPortAccess().getGroup(), "rule__Port__Group__0");
+					put(grammarAccess.getPortAccess().getGroup_1(), "rule__Port__Group_1__0");
 					put(grammarAccess.getActivityAccess().getGroup(), "rule__Activity__Group__0");
 					put(grammarAccess.getActivityAccess().getGroup_5(), "rule__Activity__Group_5__0");
 					put(grammarAccess.getActivityAccess().getGroup_5_2(), "rule__Activity__Group_5_2__0");
@@ -58,7 +60,6 @@ public class FoWParser extends AbstractContentAssistParser {
 					put(grammarAccess.getActivityAccess().getGroup_8(), "rule__Activity__Group_8__0");
 					put(grammarAccess.getActivityAccess().getGroup_8_2(), "rule__Activity__Group_8_2__0");
 					put(grammarAccess.getActivityAccess().getGroup_9(), "rule__Activity__Group_9__0");
-					put(grammarAccess.getActivityRefAccess().getGroup(), "rule__ActivityRef__Group__0");
 					put(grammarAccess.getDecisionAccess().getGroup(), "rule__Decision__Group__0");
 					put(grammarAccess.getStepAccess().getGroup(), "rule__Step__Group__0");
 					put(grammarAccess.getInitialTransitionAccess().getGroup(), "rule__InitialTransition__Group__0");
@@ -74,6 +75,7 @@ public class FoWParser extends AbstractContentAssistParser {
 					put(grammarAccess.getModelAccess().getWorkProductTypesAssignment_3(), "rule__Model__WorkProductTypesAssignment_3");
 					put(grammarAccess.getModelAccess().getGuidancesAssignment_4(), "rule__Model__GuidancesAssignment_4");
 					put(grammarAccess.getModelAccess().getGuidanceTypesAssignment_5(), "rule__Model__GuidanceTypesAssignment_5");
+					put(grammarAccess.getModelAccess().getStatesAssignment_6(), "rule__Model__StatesAssignment_6");
 					put(grammarAccess.getRoleAccess().getNameAssignment_1(), "rule__Role__NameAssignment_1");
 					put(grammarAccess.getRoleAccess().getTextfieldAssignment_2(), "rule__Role__TextfieldAssignment_2");
 					put(grammarAccess.getWorkProductTypeAccess().getNameAssignment_1(), "rule__WorkProductType__NameAssignment_1");
@@ -86,8 +88,9 @@ public class FoWParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGuidanceAccess().getNameAssignment_1(), "rule__Guidance__NameAssignment_1");
 					put(grammarAccess.getGuidanceAccess().getTypeAssignment_3(), "rule__Guidance__TypeAssignment_3");
 					put(grammarAccess.getGuidanceAccess().getTextfieldAssignment_4(), "rule__Guidance__TextfieldAssignment_4");
-					put(grammarAccess.getPortAccess().getNameAssignment_0(), "rule__Port__NameAssignment_0");
-					put(grammarAccess.getPortAccess().getTypeAssignment_2(), "rule__Port__TypeAssignment_2");
+					put(grammarAccess.getStateAccess().getNameAssignment_1(), "rule__State__NameAssignment_1");
+					put(grammarAccess.getPortAccess().getTypeAssignment_0(), "rule__Port__TypeAssignment_0");
+					put(grammarAccess.getPortAccess().getStateAssignment_1_1(), "rule__Port__StateAssignment_1_1");
 					put(grammarAccess.getActivityAccess().getNameAssignment_1(), "rule__Activity__NameAssignment_1");
 					put(grammarAccess.getActivityAccess().getTextfieldAssignment_2(), "rule__Activity__TextfieldAssignment_2");
 					put(grammarAccess.getActivityAccess().getRoleAssignment_4(), "rule__Activity__RoleAssignment_4");
@@ -102,8 +105,7 @@ public class FoWParser extends AbstractContentAssistParser {
 					put(grammarAccess.getActivityAccess().getStepsAssignment_9_2_0(), "rule__Activity__StepsAssignment_9_2_0");
 					put(grammarAccess.getActivityAccess().getDecisionsAssignment_9_2_1(), "rule__Activity__DecisionsAssignment_9_2_1");
 					put(grammarAccess.getActivityAccess().getTransitionsAssignment_9_2_2(), "rule__Activity__TransitionsAssignment_9_2_2");
-					put(grammarAccess.getActivityRefAccess().getNameAssignment_0(), "rule__ActivityRef__NameAssignment_0");
-					put(grammarAccess.getActivityRefAccess().getTypeAssignment_2(), "rule__ActivityRef__TypeAssignment_2");
+					put(grammarAccess.getActivityRefAccess().getTypeAssignment(), "rule__ActivityRef__TypeAssignment");
 					put(grammarAccess.getDecisionAccess().getNameAssignment_1(), "rule__Decision__NameAssignment_1");
 					put(grammarAccess.getStepAccess().getNameAssignment_1(), "rule__Step__NameAssignment_1");
 					put(grammarAccess.getInitialTransitionAccess().getToAssignment_3(), "rule__InitialTransition__ToAssignment_3");
