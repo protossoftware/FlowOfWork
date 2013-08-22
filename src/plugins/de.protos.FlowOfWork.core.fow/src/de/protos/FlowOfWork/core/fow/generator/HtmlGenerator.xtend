@@ -136,7 +136,7 @@ class HtmlGenerator {
 						<b>Scope:</b>
 					</td>
 					<td colspan="3">
-						<em>Where does the scope come from?</em>
+						<em></em>
 					</td>
 				</tr>
 			  	<tr>
@@ -167,20 +167,6 @@ class HtmlGenerator {
 						«ELSE»
 							<em>no outputs</em>
 						«ENDIF»
-					</td>
-				</tr>
-			  	<tr>
-					<td colspan="1">
-						<b>Entry Criteria:</b>
-					</td>
-					<td colspan="1">
-						<em>really needed???</em>
-					</td>
-					<td colspan="1">
-						<b>Exit Criteria:</b>
-					</td>
-					<td colspan="1">
-						<em>really needed???</em>
 					</td>
 				</tr>
 			  	<tr>
@@ -227,22 +213,23 @@ class HtmlGenerator {
 			</table>
 		«ENDIF»
 		
-		<h2>Guidances</h2>
-		«IF activity.guidances.emptyList»
-			<p><em>no guidances</em></p>
-		«ELSE»
-			«generateHTMLForGuidanceList(activity.guidances)»
-		«ENDIF»
-		
 		<h2>Structure Diagram</h2>
-		<img src="../dot/«activity.name».jpg" alt="Activity Diagram: «activity.name»"> 
-
+		<img src="../dot/«activity.name».jpg" alt="Activity Diagram: «activity.name»">
+		 
 		<h2>Behavior Diagram</h2>
 		«IF activity.hasBehavior»		
 			<img src="../dot/«activity.name»_Behavior.jpg" alt="Behavior Diagram: «activity.name»_Behavior"> 
 		«ELSE»
 			<p><em>no behavior</em></p>
 		«ENDIF»
+
+		<h2>Guidances</h2>
+		«IF activity.guidances.emptyList»
+			<p><em>no guidances</em></p>
+		«ELSE»
+			«generateHTMLForGuidanceList(activity.guidances)»
+		«ENDIF»
+
 		
 		</html>
 	'''

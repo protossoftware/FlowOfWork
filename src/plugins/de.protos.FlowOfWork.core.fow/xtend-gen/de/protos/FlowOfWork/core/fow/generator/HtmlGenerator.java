@@ -330,7 +330,7 @@ public class HtmlGenerator {
     _builder.append("<td colspan=\"3\">");
     _builder.newLine();
     _builder.append("\t\t\t\t");
-    _builder.append("<em>Where does the scope come from?</em>");
+    _builder.append("<em></em>");
     _builder.newLine();
     _builder.append("\t\t\t");
     _builder.append("</td>");
@@ -426,48 +426,6 @@ public class HtmlGenerator {
         _builder.newLine();
       }
     }
-    _builder.append("\t\t\t");
-    _builder.append("</td>");
-    _builder.newLine();
-    _builder.append("\t\t");
-    _builder.append("</tr>");
-    _builder.newLine();
-    _builder.append("\t  \t");
-    _builder.append("<tr>");
-    _builder.newLine();
-    _builder.append("\t\t\t");
-    _builder.append("<td colspan=\"1\">");
-    _builder.newLine();
-    _builder.append("\t\t\t\t");
-    _builder.append("<b>Entry Criteria:</b>");
-    _builder.newLine();
-    _builder.append("\t\t\t");
-    _builder.append("</td>");
-    _builder.newLine();
-    _builder.append("\t\t\t");
-    _builder.append("<td colspan=\"1\">");
-    _builder.newLine();
-    _builder.append("\t\t\t\t");
-    _builder.append("<em>really needed???</em>");
-    _builder.newLine();
-    _builder.append("\t\t\t");
-    _builder.append("</td>");
-    _builder.newLine();
-    _builder.append("\t\t\t");
-    _builder.append("<td colspan=\"1\">");
-    _builder.newLine();
-    _builder.append("\t\t\t\t");
-    _builder.append("<b>Exit Criteria:</b>");
-    _builder.newLine();
-    _builder.append("\t\t\t");
-    _builder.append("</td>");
-    _builder.newLine();
-    _builder.append("\t\t\t");
-    _builder.append("<td colspan=\"1\">");
-    _builder.newLine();
-    _builder.append("\t\t\t\t");
-    _builder.append("<em>really needed???</em>");
-    _builder.newLine();
     _builder.append("\t\t\t");
     _builder.append("</td>");
     _builder.newLine();
@@ -610,22 +568,6 @@ public class HtmlGenerator {
       }
     }
     _builder.newLine();
-    _builder.append("<h2>Guidances</h2>");
-    _builder.newLine();
-    {
-      EList<Guidance> _guidances = activity.getGuidances();
-      boolean _emptyList_1 = MetamodelHelpers.emptyList(_guidances);
-      if (_emptyList_1) {
-        _builder.append("<p><em>no guidances</em></p>");
-        _builder.newLine();
-      } else {
-        EList<Guidance> _guidances_1 = activity.getGuidances();
-        CharSequence _generateHTMLForGuidanceList = this.generateHTMLForGuidanceList(_guidances_1);
-        _builder.append(_generateHTMLForGuidanceList, "");
-        _builder.newLineIfNotEmpty();
-      }
-    }
-    _builder.newLine();
     _builder.append("<h2>Structure Diagram</h2>");
     _builder.newLine();
     _builder.append("<img src=\"../dot/");
@@ -634,8 +576,9 @@ public class HtmlGenerator {
     _builder.append(".jpg\" alt=\"Activity Diagram: ");
     String _name_1 = activity.getName();
     _builder.append(_name_1, "");
-    _builder.append("\"> ");
+    _builder.append("\">");
     _builder.newLineIfNotEmpty();
+    _builder.append(" ");
     _builder.newLine();
     _builder.append("<h2>Behavior Diagram</h2>");
     _builder.newLine();
@@ -655,6 +598,23 @@ public class HtmlGenerator {
         _builder.newLine();
       }
     }
+    _builder.newLine();
+    _builder.append("<h2>Guidances</h2>");
+    _builder.newLine();
+    {
+      EList<Guidance> _guidances = activity.getGuidances();
+      boolean _emptyList_1 = MetamodelHelpers.emptyList(_guidances);
+      if (_emptyList_1) {
+        _builder.append("<p><em>no guidances</em></p>");
+        _builder.newLine();
+      } else {
+        EList<Guidance> _guidances_1 = activity.getGuidances();
+        CharSequence _generateHTMLForGuidanceList = this.generateHTMLForGuidanceList(_guidances_1);
+        _builder.append(_generateHTMLForGuidanceList, "");
+        _builder.newLineIfNotEmpty();
+      }
+    }
+    _builder.newLine();
     _builder.newLine();
     _builder.append("</html>");
     _builder.newLine();
