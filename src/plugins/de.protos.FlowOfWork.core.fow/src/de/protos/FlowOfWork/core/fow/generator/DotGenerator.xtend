@@ -60,7 +60,7 @@ class DotGenerator {
 
 	def generateDot(Model model, IFileSystemAccess fsa) {
 		generateActivityDiagramsForAllActivities(model, fsa)
-		generateDotMakefile(fsa)
+		generateAntBuildfile(fsa)
 	}
 	
 	def private generateActivityDiagramsForAllActivities(Model model, IFileSystemAccess fsa) {
@@ -255,22 +255,38 @@ class DotGenerator {
 		«transition.from.name» -> «transition.to.name» [label="[«transition.guard»]"]
 	'''
 
-	// makefile generator for dot
-	def private generateDotMakefile(IFileSystemAccess fsa) {
-		fsa.generateFile("../doc-gen/dot/Makefile", generateDotMakefileContent())
-	}	
-	def private generateDotMakefileContent() '''
-		DOTFILELIST = $(wildcard *.dot)
-		JPGFILELIST = $(patsubst %.dot, %.jpg, $(DOTFILELIST))
+	// ant buildfile generator for dot	
+	def private generateDotBuildfileContent() '''
+		<?xml version="1.0" encoding="UTF-8"?>
+		<!-- ====================================================================== 
+		     Generates bitmap images from DOT files for process documentation
+		     ====================================================================== -->
+		<project name="builddotfiles" default="build">
+			<description>
+		    	Generates bitmap images from DOT files for process documentation
+		    </description>
 		
-		# make jpg out of dot files
-		%.jpg: %.dot 
-			dot -Tjpg $*.dot -o $*.jpg
-«««			$DOT_HOME/dot $*.dot
+			<target name="build" description="description" depends="init">
+				<apply executable="${dot.binpath}/dot">
+					<arg value="-Tjpg" />
+					<srcfile />
+					<arg value="-o" />
+					<targetfile />
+					<fileset dir="./" includes="*.dot" />
+					<mapper type="glob" from="*.dot" to="*.jpg" />
+				</apply>
+			</target>
 		
-		dot2jpg: $(JPGFILELIST)
+			<target name="init">
+				<property name="dot.binpath" value="${env.DOT_PATH}" />
+				<property name="dot.sourcepath" value="" />
+			</target>
+		
+		</project>
 	'''
 
-	
+	def private generateAntBuildfile(IFileSystemAccess fsa) {
+		fsa.generateFile("../doc-gen/dot/build.xml", generateDotBuildfileContent())
+	}
 	
 }

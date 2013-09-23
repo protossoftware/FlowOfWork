@@ -42,7 +42,7 @@ public class DotGenerator {
   
   public void generateDot(final Model model, final IFileSystemAccess fsa) {
     this.generateActivityDiagramsForAllActivities(model, fsa);
-    this.generateDotMakefile(fsa);
+    this.generateAntBuildfile(fsa);
   }
   
   private void generateActivityDiagramsForAllActivities(final Model model, final IFileSystemAccess fsa) {
@@ -560,29 +560,82 @@ public class DotGenerator {
     return _builder;
   }
   
-  private void generateDotMakefile(final IFileSystemAccess fsa) {
-    CharSequence _generateDotMakefileContent = this.generateDotMakefileContent();
-    fsa.generateFile("../doc-gen/dot/Makefile", _generateDotMakefileContent);
-  }
-  
-  private CharSequence generateDotMakefileContent() {
+  private CharSequence generateDotBuildfileContent() {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("DOTFILELIST = $(wildcard *.dot)");
+    _builder.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
     _builder.newLine();
-    _builder.append("JPGFILELIST = $(patsubst %.dot, %.jpg, $(DOTFILELIST))");
+    _builder.append("<!-- ====================================================================== ");
     _builder.newLine();
+    _builder.append("     ");
+    _builder.append("Generates bitmap images from DOT files for process documentation");
     _builder.newLine();
-    _builder.append("# make jpg out of dot files");
+    _builder.append("     ");
+    _builder.append("====================================================================== -->");
     _builder.newLine();
-    _builder.append("%.jpg: %.dot ");
+    _builder.append("<project name=\"builddotfiles\" default=\"build\">");
     _builder.newLine();
     _builder.append("\t");
-    _builder.append("dot -Tjpg $*.dot -o $*.jpg");
+    _builder.append("<description>");
+    _builder.newLine();
+    _builder.append("    \t");
+    _builder.append("Generates bitmap images from DOT files for process documentation");
+    _builder.newLine();
+    _builder.append("    ");
+    _builder.append("</description>");
     _builder.newLine();
     _builder.newLine();
-    _builder.append("dot2jpg: $(JPGFILELIST)");
+    _builder.append("\t");
+    _builder.append("<target name=\"build\" description=\"description\" depends=\"init\">");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("<apply executable=\"${dot.binpath}/dot\">");
+    _builder.newLine();
+    _builder.append("\t\t\t");
+    _builder.append("<arg value=\"-Tjpg\" />");
+    _builder.newLine();
+    _builder.append("\t\t\t");
+    _builder.append("<srcfile />");
+    _builder.newLine();
+    _builder.append("\t\t\t");
+    _builder.append("<arg value=\"-o\" />");
+    _builder.newLine();
+    _builder.append("\t\t\t");
+    _builder.append("<targetfile />");
+    _builder.newLine();
+    _builder.append("\t\t\t");
+    _builder.append("<fileset dir=\"./\" includes=\"*.dot\" />");
+    _builder.newLine();
+    _builder.append("\t\t\t");
+    _builder.append("<mapper type=\"glob\" from=\"*.dot\" to=\"*.jpg\" />");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("</apply>");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("</target>");
+    _builder.newLine();
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("<target name=\"init\">");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("<property name=\"dot.binpath\" value=\"${env.DOT_PATH}\" />");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("<property name=\"dot.sourcepath\" value=\"\" />");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("</target>");
+    _builder.newLine();
+    _builder.newLine();
+    _builder.append("</project>");
     _builder.newLine();
     return _builder;
+  }
+  
+  private void generateAntBuildfile(final IFileSystemAccess fsa) {
+    CharSequence _generateDotBuildfileContent = this.generateDotBuildfileContent();
+    fsa.generateFile("../doc-gen/dot/build.xml", _generateDotBuildfileContent);
   }
   
   private CharSequence generateTransition(final Transition transition) {
