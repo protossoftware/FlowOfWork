@@ -619,6 +619,9 @@ public class DotGenerator {
     _builder.append("<target name=\"init\">");
     _builder.newLine();
     _builder.append("\t\t");
+    _builder.append("<property environment=\"env\" />");
+    _builder.newLine();
+    _builder.append("\t\t");
     _builder.append("<property name=\"dot.binpath\" value=\"${env.DOT_PATH}\" />");
     _builder.newLine();
     _builder.append("\t\t");

@@ -278,6 +278,7 @@ class DotGenerator {
 			</target>
 		
 			<target name="init">
+				<property environment="env" />
 				<property name="dot.binpath" value="${env.DOT_PATH}" />
 				<property name="dot.sourcepath" value="" />
 			</target>
