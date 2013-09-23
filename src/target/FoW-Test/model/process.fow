@@ -14,7 +14,7 @@ Guidance Compiler : Tool
 	description "description Compiler"
 ;
 
-Guidance RequirmentEngineeringTool : Tool
+Guidance RequirementEngineeringTool : Tool
 	label "Requirement Engineering Tool"
 	summary "summary RequirementEngineeringTool"
 ;
@@ -40,6 +40,11 @@ Role SWDeveloper
 	summary "The SW Developer is responsible for software development"
 ;
 
+Role Manager
+	label "Manager"
+	summary "The Manager is responsible for managing"
+;
+
 Role SWTester
 	label "SW Tester"
 	summary "The SW Tester is responsible for software tests"
@@ -52,6 +57,12 @@ WorkProductType Artifact
 WorkProductType Outcome
 	summary "An Outcome is a Work Product that is an external result"
 ;
+
+WorkProduct InputDocument : Artifact
+	label "Input Document"
+	summary "summary Input Document"
+;
+
 
 WorkProduct RequirementDocument : Artifact
 	label "Requirement Document"
@@ -68,10 +79,16 @@ WorkProduct SWCode : Artifact
 	summary "summary SW Code"
 ;
 
-WorkProduct SWTest : Artifact
-	label "SW Test"
-	summary "summary SW Test"
-	description "description of SW Test"
+WorkProduct SWTestReport : Artifact
+	label "SW Test Report"
+	summary "summary SW Test Report"
+	description "description of SW Test Report"
+;
+
+Activity ToplevelActivity
+	summary "summary ToplevelActivity"
+	responsible Manager
+	subActivities SWDevelopment
 ;
 
 Activity SWDevelopment
@@ -79,6 +96,8 @@ Activity SWDevelopment
 	summary "summary SW Development"
 	description "description SW Development"
 	responsible SWDeveloper
+	inputs InputDocument(new)
+	outputs SWTestReport, SWCode(verified)
 	subActivities RequirementEngineering , DevelopSWArchitecture , DevelopSW , DevelopSWTest
 ;
 
@@ -87,9 +106,10 @@ Activity RequirementEngineering
 	summary "summary Requirement Engineering"
 	description "description Requirement Engineering"
 	responsible RequirementEngineer
-	outputs RequirementDocument(reviewed)
+	inputs InputDocument(new)
+	outputs RequirementDocument(accepted)
 	subActivities CreateRequirements , ReviewRequirements
-	guidances RequirmentEngineeringTool
+	guidances RequirementEngineeringTool
 ;
 
 Activity CreateRequirements
@@ -107,7 +127,7 @@ Activity ReviewRequirements
 	responsible RequirementEngineer
 	inputs RequirementDocument(new)
 	outputs RequirementDocument(reviewed)
-	guidances RequirmentEngineeringTool
+	guidances RequirementEngineeringTool
 ;
 
 State new;
@@ -166,7 +186,7 @@ Activity DevelopSWTest
 	description "description Develop SW Test"
 	responsible SWTester
 	inputs SWCode
-	outputs SWTest
+	outputs SWTestReport, SWCode(verified)
 	guidances TestChecklist
 ;
 
