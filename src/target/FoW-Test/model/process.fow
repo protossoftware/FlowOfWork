@@ -50,7 +50,7 @@ WorkProductType Artifact
 ;
 
 WorkProductType Outcome
-	summary "An Outcome is a Work Product that is a result external"
+	summary "An Outcome is a Work Product that is an external result"
 ;
 
 WorkProduct RequirementDocument : Artifact
@@ -79,8 +79,7 @@ Activity SWDevelopment
 	summary "summary SW Development"
 	description "description SW Development"
 	responsible SWDeveloper
-	subActivities req : RequirementEngineering , arch : DevelopSWArchitecture , develop : DevelopSW , test :
-	DevelopSWTest
+	subActivities RequirementEngineering , DevelopSWArchitecture , DevelopSW , DevelopSWTest
 ;
 
 Activity RequirementEngineering
@@ -88,8 +87,8 @@ Activity RequirementEngineering
 	summary "summary Requirement Engineering"
 	description "description Requirement Engineering"
 	responsible RequirementEngineer
-	outputs requirements : RequirementDocument
-	subActivities create : CreateRequirements , review : ReviewRequirements
+	outputs RequirementDocument(reviewed)
+	subActivities CreateRequirements , ReviewRequirements
 	guidances RequirmentEngineeringTool
 ;
 
@@ -98,6 +97,7 @@ Activity CreateRequirements
 	summary "summary Create Requirements"
 	description "description Create Requirements"
 	responsible RequirementEngineer
+	outputs RequirementDocument(new)
 ;
 
 Activity ReviewRequirements
@@ -105,16 +105,26 @@ Activity ReviewRequirements
 	summary "summary Review Requirements"
 	description "description Review Requirements"
 	responsible RequirementEngineer
+	inputs RequirementDocument(new)
+	outputs RequirementDocument(reviewed)
 	guidances RequirmentEngineeringTool
 ;
+
+State new;
+State accepted;
+State reviewed;
+State implemented;
+State verified;
+State validated;
+
 
 Activity DevelopSWArchitecture
 	label "Develop SW Architecture"
 	summary "summary Develop SW Architecture"
 	description "description Develop SW Architecture"
 	responsible SWArchitect
-	inputs requirements : RequirementDocument
-	outputs architecture : SWArchitecture
+	inputs RequirementDocument(accepted)
+	outputs SWArchitecture
 ;
 
 Activity DevelopSW
@@ -122,8 +132,8 @@ Activity DevelopSW
 	summary "summary Develop SW"
 	description "description Develop SW"
 	responsible SWDeveloper
-	inputs architecture : SWArchitecture
-	outputs code : SWCode
+	inputs SWArchitecture
+	outputs SWCode
 	Behavior {
 		Step Step1
 		Step Step2
@@ -155,8 +165,8 @@ Activity DevelopSWTest
 	summary "summary Develop SW Test"
 	description "description Develop SW Test"
 	responsible SWTester
-	inputs code : SWCode
-	outputs test : SWTest
+	inputs SWCode
+	outputs SWTest
 	guidances TestChecklist
 ;
 
