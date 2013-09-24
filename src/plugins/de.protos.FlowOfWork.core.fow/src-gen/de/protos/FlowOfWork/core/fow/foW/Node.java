@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link de.protos.FlowOfWork.core.fow.foW.Node#getName <em>Name</em>}</li>
+ *   <li>{@link de.protos.FlowOfWork.core.fow.foW.Node#getLabel <em>Label</em>}</li>
  * </ul>
  * </p>
  *
@@ -47,5 +48,31 @@ public interface Node extends EObject
    * @generated
    */
   void setName(String value);
+
+  /**
+   * Returns the value of the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Label</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Label</em>' attribute.
+   * @see #setLabel(String)
+   * @see de.protos.FlowOfWork.core.fow.foW.FoWPackage#getNode_Label()
+   * @model
+   * @generated
+   */
+  String getLabel();
+
+  /**
+   * Sets the value of the '{@link de.protos.FlowOfWork.core.fow.foW.Node#getLabel <em>Label</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Label</em>' attribute.
+   * @see #getLabel()
+   * @generated
+   */
+  void setLabel(String value);
 
 } // Node

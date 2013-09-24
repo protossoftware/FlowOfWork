@@ -547,7 +547,19 @@ public class DotGenerator {
       for(final Decision decision : decisions) {
         String _name = decision.getName();
         _builder.append(_name, "");
-        _builder.append(" [shape=diamond]");
+        _builder.append(" [shape=diamond");
+        {
+          String _label = decision.getLabel();
+          boolean _isNullOrEmpty = StringExtensions.isNullOrEmpty(_label);
+          boolean _not = (!_isNullOrEmpty);
+          if (_not) {
+            _builder.append(" label=\"");
+            String _label_1 = decision.getLabel();
+            _builder.append(_label_1, "");
+            _builder.append("\"");
+          }
+        }
+        _builder.append("]");
         _builder.newLineIfNotEmpty();
       }
     }

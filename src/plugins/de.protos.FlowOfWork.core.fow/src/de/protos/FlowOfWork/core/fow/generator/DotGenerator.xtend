@@ -243,7 +243,7 @@ class DotGenerator {
 	
 	def private generateAllDecisions(EList<Decision> decisions)'''
 		«FOR decision : decisions»
-			«decision.name» [shape=diamond]
+			«decision.name» [shape=diamond«IF !decision.label.nullOrEmpty» label="«decision.label»"«ENDIF»]
 		«ENDFOR»
 	'''
 	

@@ -153,8 +153,8 @@ Activity DevelopSW
 		Step Step4 "Step4 bla bla"
 		Step Step5
 		Step Step6
-		Decision d1
-		Decision d2
+		Decision d1 "Decision1 ?"
+		Decision d2 "Decision2 ?"
 		Transition initial to Step1
 		Transition Step1 to d1
 		Transition d1 to Step2 "OK"

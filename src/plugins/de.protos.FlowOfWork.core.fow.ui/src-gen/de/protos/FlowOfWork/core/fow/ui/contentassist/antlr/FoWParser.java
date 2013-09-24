@@ -107,6 +107,7 @@ public class FoWParser extends AbstractContentAssistParser {
 					put(grammarAccess.getActivityAccess().getTransitionsAssignment_9_2_2(), "rule__Activity__TransitionsAssignment_9_2_2");
 					put(grammarAccess.getActivityRefAccess().getTypeAssignment(), "rule__ActivityRef__TypeAssignment");
 					put(grammarAccess.getDecisionAccess().getNameAssignment_1(), "rule__Decision__NameAssignment_1");
+					put(grammarAccess.getDecisionAccess().getLabelAssignment_2(), "rule__Decision__LabelAssignment_2");
 					put(grammarAccess.getStepAccess().getNameAssignment_1(), "rule__Step__NameAssignment_1");
 					put(grammarAccess.getStepAccess().getLabelAssignment_2(), "rule__Step__LabelAssignment_2");
 					put(grammarAccess.getInitialTransitionAccess().getToAssignment_3(), "rule__InitialTransition__ToAssignment_3");

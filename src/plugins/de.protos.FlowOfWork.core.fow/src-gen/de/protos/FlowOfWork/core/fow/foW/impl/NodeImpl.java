@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link de.protos.FlowOfWork.core.fow.foW.impl.NodeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link de.protos.FlowOfWork.core.fow.foW.impl.NodeImpl#getLabel <em>Label</em>}</li>
  * </ul>
  * </p>
  *
@@ -46,6 +47,26 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getLabel() <em>Label</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLabel()
+   * @generated
+   * @ordered
+   */
+  protected static final String LABEL_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getLabel() <em>Label</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLabel()
+   * @generated
+   * @ordered
+   */
+  protected String label = LABEL_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -96,6 +117,29 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getLabel()
+  {
+    return label;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setLabel(String newLabel)
+  {
+    String oldLabel = label;
+    label = newLabel;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, FoWPackage.NODE__LABEL, oldLabel, label));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -103,6 +147,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
     {
       case FoWPackage.NODE__NAME:
         return getName();
+      case FoWPackage.NODE__LABEL:
+        return getLabel();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,6 +165,9 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
     {
       case FoWPackage.NODE__NAME:
         setName((String)newValue);
+        return;
+      case FoWPackage.NODE__LABEL:
+        setLabel((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -137,6 +186,9 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
       case FoWPackage.NODE__NAME:
         setName(NAME_EDEFAULT);
         return;
+      case FoWPackage.NODE__LABEL:
+        setLabel(LABEL_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -153,6 +205,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
     {
       case FoWPackage.NODE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case FoWPackage.NODE__LABEL:
+        return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
     }
     return super.eIsSet(featureID);
   }
@@ -170,6 +224,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
+    result.append(", label: ");
+    result.append(label);
     result.append(')');
     return result.toString();
   }

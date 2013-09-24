@@ -722,13 +722,15 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cDecisionKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Assignment cLabelAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cLabelSTRINGTerminalRuleCall_2_0 = (RuleCall)cLabelAssignment_2.eContents().get(0);
 		
 		//Decision:
 		//
-		//	"Decision" name=ID;
+		//	"Decision" name=ID label=STRING?;
 		public ParserRule getRule() { return rule; }
 
-		//"Decision" name=ID
+		//"Decision" name=ID label=STRING?
 		public Group getGroup() { return cGroup; }
 
 		//"Decision"
@@ -739,6 +741,12 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//label=STRING?
+		public Assignment getLabelAssignment_2() { return cLabelAssignment_2; }
+
+		//STRING
+		public RuleCall getLabelSTRINGTerminalRuleCall_2_0() { return cLabelSTRINGTerminalRuleCall_2_0; }
 	}
 
 	public class StepElements extends AbstractParserRuleElementFinder {
@@ -1236,7 +1244,7 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 
 	//Decision:
 	//
-	//	"Decision" name=ID;
+	//	"Decision" name=ID label=STRING?;
 	public DecisionElements getDecisionAccess() {
 		return (pDecision != null) ? pDecision : (pDecision = new DecisionElements());
 	}

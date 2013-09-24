@@ -2839,6 +2839,7 @@ rule__Decision__Group__1
     }
 :
 	rule__Decision__Group__1__Impl
+	rule__Decision__Group__2
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -2859,6 +2860,36 @@ rule__Decision__Group__1__Impl
 finally {
 	restoreStackSize(stackSize);
 }
+
+
+rule__Decision__Group__2
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__Decision__Group__2__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Decision__Group__2__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getDecisionAccess().getLabelAssignment_2()); }
+(rule__Decision__LabelAssignment_2)?
+{ after(grammarAccess.getDecisionAccess().getLabelAssignment_2()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
 
 
 
@@ -4349,6 +4380,21 @@ rule__Decision__NameAssignment_1
 (
 { before(grammarAccess.getDecisionAccess().getNameIDTerminalRuleCall_1_0()); }
 	RULE_ID{ after(grammarAccess.getDecisionAccess().getNameIDTerminalRuleCall_1_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Decision__LabelAssignment_2
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getDecisionAccess().getLabelSTRINGTerminalRuleCall_2_0()); }
+	RULE_STRING{ after(grammarAccess.getDecisionAccess().getLabelSTRINGTerminalRuleCall_2_0()); }
 )
 
 ;

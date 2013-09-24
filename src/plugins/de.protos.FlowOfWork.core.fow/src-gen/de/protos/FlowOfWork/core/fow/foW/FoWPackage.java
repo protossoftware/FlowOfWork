@@ -600,13 +600,22 @@ public interface FoWPackage extends EPackage
   int NODE__NAME = 0;
 
   /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NODE__LABEL = 1;
+
+  /**
    * The number of structural features of the '<em>Node</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NODE_FEATURE_COUNT = 1;
+  int NODE_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.DecisionImpl <em>Decision</em>}' class.
@@ -626,6 +635,15 @@ public interface FoWPackage extends EPackage
    * @ordered
    */
   int DECISION__NAME = NODE__NAME;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DECISION__LABEL = NODE__LABEL;
 
   /**
    * The number of structural features of the '<em>Decision</em>' class.
@@ -662,7 +680,7 @@ public interface FoWPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STEP__LABEL = NODE_FEATURE_COUNT + 0;
+  int STEP__LABEL = NODE__LABEL;
 
   /**
    * The number of structural features of the '<em>Step</em>' class.
@@ -671,7 +689,7 @@ public interface FoWPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STEP_FEATURE_COUNT = NODE_FEATURE_COUNT + 1;
+  int STEP_FEATURE_COUNT = NODE_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.TransitionImpl <em>Transition</em>}' class.
@@ -1263,6 +1281,17 @@ public interface FoWPackage extends EPackage
   EAttribute getNode_Name();
 
   /**
+   * Returns the meta object for the attribute '{@link de.protos.FlowOfWork.core.fow.foW.Node#getLabel <em>Label</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Label</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.Node#getLabel()
+   * @see #getNode()
+   * @generated
+   */
+  EAttribute getNode_Label();
+
+  /**
    * Returns the meta object for class '{@link de.protos.FlowOfWork.core.fow.foW.Decision <em>Decision</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1281,17 +1310,6 @@ public interface FoWPackage extends EPackage
    * @generated
    */
   EClass getStep();
-
-  /**
-   * Returns the meta object for the attribute '{@link de.protos.FlowOfWork.core.fow.foW.Step#getLabel <em>Label</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Label</em>'.
-   * @see de.protos.FlowOfWork.core.fow.foW.Step#getLabel()
-   * @see #getStep()
-   * @generated
-   */
-  EAttribute getStep_Label();
 
   /**
    * Returns the meta object for class '{@link de.protos.FlowOfWork.core.fow.foW.Transition <em>Transition</em>}'.
@@ -1799,6 +1817,14 @@ public interface FoWPackage extends EPackage
     EAttribute NODE__NAME = eINSTANCE.getNode_Name();
 
     /**
+     * The meta object literal for the '<em><b>Label</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute NODE__LABEL = eINSTANCE.getNode_Label();
+
+    /**
      * The meta object literal for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.DecisionImpl <em>Decision</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1817,14 +1843,6 @@ public interface FoWPackage extends EPackage
      * @generated
      */
     EClass STEP = eINSTANCE.getStep();
-
-    /**
-     * The meta object literal for the '<em><b>Label</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute STEP__LABEL = eINSTANCE.getStep_Label();
 
     /**
      * The meta object literal for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.TransitionImpl <em>Transition</em>}' class.

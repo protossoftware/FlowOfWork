@@ -608,6 +608,16 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getNode_Label()
+  {
+    return (EAttribute)nodeEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getDecision()
   {
     return decisionEClass;
@@ -621,16 +631,6 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
   public EClass getStep()
   {
     return stepEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getStep_Label()
-  {
-    return (EAttribute)stepEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -870,11 +870,11 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
 
     nodeEClass = createEClass(NODE);
     createEAttribute(nodeEClass, NODE__NAME);
+    createEAttribute(nodeEClass, NODE__LABEL);
 
     decisionEClass = createEClass(DECISION);
 
     stepEClass = createEClass(STEP);
-    createEAttribute(stepEClass, STEP__LABEL);
 
     transitionEClass = createEClass(TRANSITION);
 
@@ -989,11 +989,11 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
 
     initEClass(nodeEClass, Node.class, "Node", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getNode_Name(), ecorePackage.getEString(), "name", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getNode_Label(), ecorePackage.getEString(), "label", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(decisionEClass, Decision.class, "Decision", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(stepEClass, Step.class, "Step", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getStep_Label(), ecorePackage.getEString(), "label", null, 0, 1, Step.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(transitionEClass, Transition.class, "Transition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
