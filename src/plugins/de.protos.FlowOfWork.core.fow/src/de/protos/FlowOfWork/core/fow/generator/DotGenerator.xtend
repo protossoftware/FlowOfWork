@@ -280,8 +280,8 @@ class DotGenerator {
 		    	Generates bitmap images from DOT files for process documentation
 		    </description>
 		
-			<target name="build" description="description" depends="init">
-				<apply executable="${dot.binpath}/dot">
+			<target name="build" description="description" depends="init-dot.binpath">
+				<apply executable="${dot.binpath}" dest="./">
 					<arg value="-Tjpg" />
 					<srcfile />
 					<arg value="-o" />
@@ -291,10 +291,11 @@ class DotGenerator {
 				</apply>
 			</target>
 		
-			<target name="init">
+			<target name="init-dot.binpath" unless="dot.binpath">
 				<property environment="env" />
-				<property name="dot.binpath" value="${env.DOT_PATH}" />
-				<property name="dot.sourcepath" value="" />
+				<condition property="dot.binpath" value="${env.DOT_PATH}/dot" else="dot">
+					<isset property="env.DOT_PATH" />
+				</condition>
 			</target>
 		
 		</project>

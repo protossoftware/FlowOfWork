@@ -319,5 +319,16 @@
             extensions="fow">
     </provider>
   </extension>
+  <extension
+        id="fow.builder.problemmarker"
+        name="FoW Builder Problem"
+        point="org.eclipse.core.resources.markers">
+     <super
+           type="org.eclipse.core.resources.problemmarker">
+     </super>
+     <persistent
+           value="false">
+     </persistent>
+  </extension>
 
 </plugin>
