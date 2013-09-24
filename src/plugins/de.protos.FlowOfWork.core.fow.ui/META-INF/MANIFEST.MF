@@ -16,7 +16,8 @@ Require-Bundle: de.protos.FlowOfWork.core.fow;visibility:=reexport,
  org.eclipse.xtext.common.types.ui,
  org.eclipse.xtext.ui.codetemplates.ui,
  org.eclipse.compare
-Import-Package: org.apache.log4j
+Import-Package: org.apache.log4j,
+ org.eclipse.ant.core
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: de.protos.FlowOfWork.core.fow.ui.contentassist,
  de.protos.FlowOfWork.core.fow.ui.contentassist.antlr,

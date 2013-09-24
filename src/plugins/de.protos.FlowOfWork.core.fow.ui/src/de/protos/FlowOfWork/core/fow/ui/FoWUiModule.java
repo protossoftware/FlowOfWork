@@ -4,6 +4,7 @@
 package de.protos.FlowOfWork.core.fow.ui;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
+import org.eclipse.xtext.builder.IXtextBuilderParticipant;
 
 /**
  * Use this class to register components to be used within the IDE.
@@ -11,5 +12,13 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 public class FoWUiModule extends de.protos.FlowOfWork.core.fow.ui.AbstractFoWUiModule {
 	public FoWUiModule(AbstractUIPlugin plugin) {
 		super(plugin);
+	}
+	
+	/**
+	 * Bind XtextBuilderParticipant that runs the Ant buildfile for creating images from the DOT files
+	 */
+	@Override
+	public Class<? extends IXtextBuilderParticipant> bindIXtextBuilderParticipant() {
+		return de.protos.FlowOfWork.core.fow.ui.builder.FoWAntBuilderParticipant.class;
 	}
 }
