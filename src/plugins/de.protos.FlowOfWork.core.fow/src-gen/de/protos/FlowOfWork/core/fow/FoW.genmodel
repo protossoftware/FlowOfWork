@@ -4,7 +4,7 @@
     editorDirectory="/de.protos.FlowOfWork.core.fow.editor/src" modelPluginID="de.protos.FlowOfWork.core.fow"
     forceOverwrite="true" modelName="FoW" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     complianceLevel="5.0" copyrightFields="false" editPluginID="de.protos.FlowOfWork.core.fow.edit"
-    editorPluginID="de.protos.FlowOfWork.core.fow.editor" runtimeVersion="2.8">
+    editorPluginID="de.protos.FlowOfWork.core.fow.editor" runtimeVersion="2.9">
   <genPackages prefix="FoW" basePackage="de.protos.FlowOfWork.core.fow" disposableProviderFactory="true"
       ecorePackage="FoW.ecore#/">
     <genClasses ecoreClass="FoW.ecore#//Model">
@@ -53,7 +53,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FoW.ecore#//Node/name"/>
     </genClasses>
     <genClasses ecoreClass="FoW.ecore#//Decision"/>
-    <genClasses ecoreClass="FoW.ecore#//Step"/>
+    <genClasses ecoreClass="FoW.ecore#//Step">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FoW.ecore#//Step/label"/>
+    </genClasses>
     <genClasses ecoreClass="FoW.ecore#//Transition"/>
     <genClasses ecoreClass="FoW.ecore#//InitialTransition">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FoW.ecore#//InitialTransition/to"/>

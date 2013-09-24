@@ -85,6 +85,7 @@ Decision:
 
 Step:
 	'Step' name=ID
+	(label=STRING)?
 ;
 
 Transition: InitialTransition | FinalTransition | NonInitialTransition | DecisionTransition;

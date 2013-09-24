@@ -1110,7 +1110,25 @@ ruleStep returns [EObject current=null]
 	    }
 
 )
-))
+)(
+(
+		lv_label_2_0=RULE_STRING
+		{
+			newLeafNode(lv_label_2_0, grammarAccess.getStepAccess().getLabelSTRINGTerminalRuleCall_2_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getStepRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"label",
+        		lv_label_2_0, 
+        		"STRING");
+	    }
+
+)
+)?)
 ;
 
 

@@ -21,5 +21,6 @@ Import-Package: org.apache.log4j,
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: de.protos.FlowOfWork.core.fow.ui.contentassist,
  de.protos.FlowOfWork.core.fow.ui.contentassist.antlr,
- de.protos.FlowOfWork.core.fow.ui.internal
+ de.protos.FlowOfWork.core.fow.ui.internal,
+ de.protos.FlowOfWork.core.fow.ui.quickfix
 Bundle-Activator: de.protos.FlowOfWork.core.fow.ui.internal.FoWActivator

@@ -57,6 +57,7 @@ public class FoWFormatter extends AbstractDeclarativeFormatter {
 		c.setLinewrap(2).around(grammarAccess.getWorkProductTypeRule());
 		c.setLinewrap(2).around(grammarAccess.getActivityRule());
 		c.setLinewrap(2).around(grammarAccess.getRoleRule());
+		c.setLinewrap(2).around(grammarAccess.getStateRule());
 
 
 	}

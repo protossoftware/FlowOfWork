@@ -30,7 +30,7 @@ public class FoWFactoryImpl extends EFactoryImpl implements FoWFactory
   {
     try
     {
-      FoWFactory theFoWFactory = (FoWFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.protos.de/FlowOfWork/core/fow/FoW"); 
+      FoWFactory theFoWFactory = (FoWFactory)EPackage.Registry.INSTANCE.getEFactory(FoWPackage.eNS_URI);
       if (theFoWFactory != null)
       {
         return theFoWFactory;

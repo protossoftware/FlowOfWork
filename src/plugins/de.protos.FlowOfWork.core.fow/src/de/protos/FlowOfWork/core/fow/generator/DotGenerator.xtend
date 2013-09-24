@@ -237,7 +237,7 @@ class DotGenerator {
 	
 	def private generateAllSteps(EList<Step> steps)'''
 		«FOR step : steps»
-			«step.name» [shape=ellipse]
+			«step.name» [shape=ellipse«IF !step.label.nullOrEmpty» label="«step.label»"«ENDIF»]
 		«ENDFOR»
 	'''
 	

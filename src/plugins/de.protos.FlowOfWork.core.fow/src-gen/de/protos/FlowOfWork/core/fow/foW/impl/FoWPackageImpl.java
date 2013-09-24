@@ -628,6 +628,16 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getStep_Label()
+  {
+    return (EAttribute)stepEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getTransition()
   {
     return transitionEClass;
@@ -864,6 +874,7 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
     decisionEClass = createEClass(DECISION);
 
     stepEClass = createEClass(STEP);
+    createEAttribute(stepEClass, STEP__LABEL);
 
     transitionEClass = createEClass(TRANSITION);
 
@@ -982,6 +993,7 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
     initEClass(decisionEClass, Decision.class, "Decision", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(stepEClass, Step.class, "Step", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getStep_Label(), ecorePackage.getEString(), "label", null, 0, 1, Step.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(transitionEClass, Transition.class, "Transition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

@@ -133,14 +133,6 @@ class HtmlGenerator {
 				</tr>
 			  	<tr>
 					<td colspan="1">
-						<b>Scope:</b>
-					</td>
-					<td colspan="3">
-						<em></em>
-					</td>
-				</tr>
-			  	<tr>
-					<td colspan="1">
 						<b>Inputs:</b>
 					</td>
 					<td colspan="1">

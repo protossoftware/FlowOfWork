@@ -2902,6 +2902,7 @@ rule__Step__Group__1
     }
 :
 	rule__Step__Group__1__Impl
+	rule__Step__Group__2
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -2922,6 +2923,36 @@ rule__Step__Group__1__Impl
 finally {
 	restoreStackSize(stackSize);
 }
+
+
+rule__Step__Group__2
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__Step__Group__2__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Step__Group__2__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getStepAccess().getLabelAssignment_2()); }
+(rule__Step__LabelAssignment_2)?
+{ after(grammarAccess.getStepAccess().getLabelAssignment_2()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
 
 
 
@@ -4333,6 +4364,21 @@ rule__Step__NameAssignment_1
 (
 { before(grammarAccess.getStepAccess().getNameIDTerminalRuleCall_1_0()); }
 	RULE_ID{ after(grammarAccess.getStepAccess().getNameIDTerminalRuleCall_1_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Step__LabelAssignment_2
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getStepAccess().getLabelSTRINGTerminalRuleCall_2_0()); }
+	RULE_STRING{ after(grammarAccess.getStepAccess().getLabelSTRINGTerminalRuleCall_2_0()); }
 )
 
 ;

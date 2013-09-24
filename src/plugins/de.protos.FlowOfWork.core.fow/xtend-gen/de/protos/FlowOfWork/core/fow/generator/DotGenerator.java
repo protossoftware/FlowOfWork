@@ -33,6 +33,7 @@ import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.ObjectExtensions;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
+import org.eclipse.xtext.xbase.lib.StringExtensions;
 
 @Singleton
 @SuppressWarnings("all")
@@ -521,7 +522,19 @@ public class DotGenerator {
       for(final Step step : steps) {
         String _name = step.getName();
         _builder.append(_name, "");
-        _builder.append(" [shape=ellipse]");
+        _builder.append(" [shape=ellipse");
+        {
+          String _label = step.getLabel();
+          boolean _isNullOrEmpty = StringExtensions.isNullOrEmpty(_label);
+          boolean _not = (!_isNullOrEmpty);
+          if (_not) {
+            _builder.append(" label=\"");
+            String _label_1 = step.getLabel();
+            _builder.append(_label_1, "");
+            _builder.append("\"");
+          }
+        }
+        _builder.append("]");
         _builder.newLineIfNotEmpty();
       }
     }

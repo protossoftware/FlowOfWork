@@ -62,7 +62,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Decision" eSuperTypes="#//Node"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Step" eSuperTypes="#//Node"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Step" eSuperTypes="#//Node">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Transition"/>
   <eClassifiers xsi:type="ecore:EClass" name="InitialTransition" eSuperTypes="#//Transition">
     <eStructuralFeatures xsi:type="ecore:EReference" name="to" eType="#//Node"/>

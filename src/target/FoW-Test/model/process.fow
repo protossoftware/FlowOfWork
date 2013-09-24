@@ -63,7 +63,6 @@ WorkProduct InputDocument : Artifact
 	summary "summary Input Document"
 ;
 
-
 WorkProduct RequirementDocument : Artifact
 	label "Requirement Document"
 	summary "summary Requirement Document"
@@ -87,6 +86,7 @@ WorkProduct SWTestReport : Artifact
 
 Activity ToplevelActivity
 	summary "summary ToplevelActivity"
+	description "description ToplevelActivity"
 	responsible Manager
 	subActivities SWDevelopment
 ;
@@ -96,8 +96,8 @@ Activity SWDevelopment
 	summary "summary SW Development"
 	description "description SW Development"
 	responsible SWDeveloper
-	inputs InputDocument(new)
-	outputs SWTestReport, SWCode(verified)
+	inputs InputDocument ( new )
+	outputs SWTestReport , SWCode ( verified )
 	subActivities RequirementEngineering , DevelopSWArchitecture , DevelopSW , DevelopSWTest
 ;
 
@@ -106,8 +106,8 @@ Activity RequirementEngineering
 	summary "summary Requirement Engineering"
 	description "description Requirement Engineering"
 	responsible RequirementEngineer
-	inputs InputDocument(new)
-	outputs RequirementDocument(accepted)
+	inputs InputDocument ( new )
+	outputs RequirementDocument ( accepted )
 	subActivities CreateRequirements , ReviewRequirements
 	guidances RequirementEngineeringTool
 ;
@@ -117,7 +117,7 @@ Activity CreateRequirements
 	summary "summary Create Requirements"
 	description "description Create Requirements"
 	responsible RequirementEngineer
-	outputs RequirementDocument(new)
+	outputs RequirementDocument ( new )
 ;
 
 Activity ReviewRequirements
@@ -125,25 +125,17 @@ Activity ReviewRequirements
 	summary "summary Review Requirements"
 	description "description Review Requirements"
 	responsible RequirementEngineer
-	inputs RequirementDocument(new)
-	outputs RequirementDocument(reviewed)
+	inputs RequirementDocument ( new )
+	outputs RequirementDocument ( reviewed )
 	guidances RequirementEngineeringTool
 ;
-
-State new;
-State accepted;
-State reviewed;
-State implemented;
-State verified;
-State validated;
-
 
 Activity DevelopSWArchitecture
 	label "Develop SW Architecture"
 	summary "summary Develop SW Architecture"
 	description "description Develop SW Architecture"
 	responsible SWArchitect
-	inputs RequirementDocument(accepted)
+	inputs RequirementDocument ( accepted )
 	outputs SWArchitecture
 ;
 
@@ -155,10 +147,10 @@ Activity DevelopSW
 	inputs SWArchitecture
 	outputs SWCode
 	Behavior {
-		Step Step1
+		Step Step1 "Step1 bla bla"
 		Step Step2
 		Step Step3
-		Step Step4
+		Step Step4 "Step4 bla bla"
 		Step Step5
 		Step Step6
 		Decision d1
@@ -186,9 +178,26 @@ Activity DevelopSWTest
 	description "description Develop SW Test"
 	responsible SWTester
 	inputs SWCode
-	outputs SWTestReport, SWCode(verified)
+	outputs SWTestReport , SWCode ( verified )
 	guidances TestChecklist
 ;
 
+State new
+;
+
+State accepted
+;
+
+State reviewed
+;
+
+State implemented
+;
+
+State verified
+;
+
+State validated
+;
 
 
