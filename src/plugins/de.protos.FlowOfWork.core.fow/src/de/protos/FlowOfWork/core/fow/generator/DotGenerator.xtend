@@ -97,9 +97,13 @@ class DotGenerator {
 	
 	def private generateActivityDiagram(Activity activity) {
 		// 0. map by WorkProductType+State (out/insub/outsub)
+		val Map<WorkProductState, Port> inPortMappings = new HashMap<WorkProductState, Port>
 		val Map<WorkProductState, Port> outPortMappings = new HashMap<WorkProductState, Port>
 		val inputSubMappings = new HashMap<WorkProductState, List<ActivityRef>>
 		val outputSubMappings = new HashMap<WorkProductState, List<ActivityRef>>
+		activity.inPorts.forEach[p|
+			inPortMappings.put(new WorkProductState(p.type, p.state), p)
+		]
 		activity.outPorts.forEach[p|
 			outPortMappings.put(new WorkProductState(p.type, p.state), p)
 		]
@@ -148,7 +152,7 @@ class DotGenerator {
 				«FOR subactivity : activity.subActivities»
 					«subactivity.label» [shape=pentagon,color=sandybrown,style=filled,orientation=-90]
 				«ENDFOR»
-				«generateSubActivityEdges(outPortMappings, inputSubMappings, outputSubMappings)»
+				«generateSubActivityEdges(inPortMappings, outPortMappings, inputSubMappings, outputSubMappings)»
 			}
 		«ENDIF»
 		
@@ -181,9 +185,19 @@ class DotGenerator {
 	}
 	
 	def private generateSubActivityEdges(
+					Map<WorkProductState, Port> inPortMappings,
 					Map<WorkProductState, Port> outPortMappings,
 					Map<WorkProductState, List<ActivityRef>> inputSubMappings, 
 					Map<WorkProductState, List<ActivityRef>> outputSubMappings) '''
+		«FOR id : inputSubMappings.keySet»
+			«IF !inPortMappings.containsKey(id) && !outputSubMappings.containsKey(id)»
+				«val inActRefs = inputSubMappings.get(id)»
+				«id.label» [shape=rectangle,color=skyblue2,style=filled,forcelabels=true]
+				«FOR tgt : inActRefs»
+					«id.label» -> «tgt.label»
+				«ENDFOR»
+			«ENDIF»
+		«ENDFOR»
 		«FOR id : outputSubMappings.keySet»
 			«val outActRefs = outputSubMappings.get(id)»
 			«val inActRefs = inputSubMappings.get(id)?:emptyList»

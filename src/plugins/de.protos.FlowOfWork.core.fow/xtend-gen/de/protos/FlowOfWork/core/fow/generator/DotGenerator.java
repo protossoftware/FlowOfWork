@@ -118,13 +118,25 @@ public class DotGenerator {
     CharSequence _xblockexpression = null;
     {
       HashMap<WorkProductState,Port> _hashMap = new HashMap<WorkProductState,Port>();
-      final Map<WorkProductState,Port> outPortMappings = _hashMap;
-      HashMap<WorkProductState,List<ActivityRef>> _hashMap_1 = new HashMap<WorkProductState,List<ActivityRef>>();
-      final HashMap<WorkProductState,List<ActivityRef>> inputSubMappings = _hashMap_1;
+      final Map<WorkProductState,Port> inPortMappings = _hashMap;
+      HashMap<WorkProductState,Port> _hashMap_1 = new HashMap<WorkProductState,Port>();
+      final Map<WorkProductState,Port> outPortMappings = _hashMap_1;
       HashMap<WorkProductState,List<ActivityRef>> _hashMap_2 = new HashMap<WorkProductState,List<ActivityRef>>();
-      final HashMap<WorkProductState,List<ActivityRef>> outputSubMappings = _hashMap_2;
-      EList<Port> _outPorts = activity.getOutPorts();
+      final HashMap<WorkProductState,List<ActivityRef>> inputSubMappings = _hashMap_2;
+      HashMap<WorkProductState,List<ActivityRef>> _hashMap_3 = new HashMap<WorkProductState,List<ActivityRef>>();
+      final HashMap<WorkProductState,List<ActivityRef>> outputSubMappings = _hashMap_3;
+      EList<Port> _inPorts = activity.getInPorts();
       final Procedure1<Port> _function = new Procedure1<Port>() {
+          public void apply(final Port p) {
+            WorkProduct _type = p.getType();
+            State _state = p.getState();
+            WorkProductState _workProductState = new WorkProductState(_type, _state);
+            inPortMappings.put(_workProductState, p);
+          }
+        };
+      IterableExtensions.<Port>forEach(_inPorts, _function);
+      EList<Port> _outPorts = activity.getOutPorts();
+      final Procedure1<Port> _function_1 = new Procedure1<Port>() {
           public void apply(final Port p) {
             WorkProduct _type = p.getType();
             State _state = p.getState();
@@ -132,9 +144,9 @@ public class DotGenerator {
             outPortMappings.put(_workProductState, p);
           }
         };
-      IterableExtensions.<Port>forEach(_outPorts, _function);
+      IterableExtensions.<Port>forEach(_outPorts, _function_1);
       EList<ActivityRef> _subActivities = activity.getSubActivities();
-      final Procedure1<ActivityRef> _function_1 = new Procedure1<ActivityRef>() {
+      final Procedure1<ActivityRef> _function_2 = new Procedure1<ActivityRef>() {
           public void apply(final ActivityRef a) {
             Activity _type = a.getType();
             EList<Port> _inPorts = _type.getInPorts();
@@ -188,7 +200,7 @@ public class DotGenerator {
             IterableExtensions.<Port>forEach(_outPorts, _function_1);
           }
         };
-      IterableExtensions.<ActivityRef>forEach(_subActivities, _function_1);
+      IterableExtensions.<ActivityRef>forEach(_subActivities, _function_2);
       StringConcatenation _builder = new StringConcatenation();
       _builder.append("\t\t");
       _builder.append("subgraph cluster_inputs_");
@@ -200,8 +212,8 @@ public class DotGenerator {
       _builder.append("color=none");
       _builder.newLine();
       {
-        EList<Port> _inPorts = activity.getInPorts();
-        for(final Port p : _inPorts) {
+        EList<Port> _inPorts_1 = activity.getInPorts();
+        for(final Port p : _inPorts_1) {
           _builder.append("\t");
           String _label = this.getLabel(p);
           _builder.append(_label, "	");
@@ -266,7 +278,7 @@ public class DotGenerator {
             }
           }
           _builder.append("\t");
-          CharSequence _generateSubActivityEdges = this.generateSubActivityEdges(outPortMappings, inputSubMappings, outputSubMappings);
+          CharSequence _generateSubActivityEdges = this.generateSubActivityEdges(inPortMappings, outPortMappings, inputSubMappings, outputSubMappings);
           _builder.append(_generateSubActivityEdges, "	");
           _builder.newLineIfNotEmpty();
           _builder.append("}");
@@ -275,8 +287,8 @@ public class DotGenerator {
       }
       _builder.newLine();
       {
-        EList<Port> _inPorts_1 = activity.getInPorts();
-        for(final Port p_2 : _inPorts_1) {
+        EList<Port> _inPorts_2 = activity.getInPorts();
+        for(final Port p_2 : _inPorts_2) {
           WorkProduct _type = p_2.getType();
           State _state = p_2.getState();
           WorkProductState _workProductState = new WorkProductState(_type, _state);
@@ -367,50 +379,85 @@ public class DotGenerator {
     return _xblockexpression;
   }
   
-  private CharSequence generateSubActivityEdges(final Map<WorkProductState,Port> outPortMappings, final Map<WorkProductState,List<ActivityRef>> inputSubMappings, final Map<WorkProductState,List<ActivityRef>> outputSubMappings) {
+  private CharSequence generateSubActivityEdges(final Map<WorkProductState,Port> inPortMappings, final Map<WorkProductState,Port> outPortMappings, final Map<WorkProductState,List<ActivityRef>> inputSubMappings, final Map<WorkProductState,List<ActivityRef>> outputSubMappings) {
     StringConcatenation _builder = new StringConcatenation();
     {
-      Set<WorkProductState> _keySet = outputSubMappings.keySet();
+      Set<WorkProductState> _keySet = inputSubMappings.keySet();
       for(final WorkProductState id : _keySet) {
-        final List<ActivityRef> outActRefs = outputSubMappings.get(id);
-        _builder.newLineIfNotEmpty();
-        List<ActivityRef> _elvis = null;
-        List<ActivityRef> _get = inputSubMappings.get(id);
-        if (_get != null) {
-          _elvis = _get;
-        } else {
-          List<ActivityRef> _emptyList = CollectionLiterals.<ActivityRef>emptyList();
-          _elvis = ObjectExtensions.<List<ActivityRef>>operator_elvis(_get, _emptyList);
-        }
-        final List<ActivityRef> inActRefs = _elvis;
-        _builder.newLineIfNotEmpty();
         {
-          boolean _containsKey = outPortMappings.containsKey(id);
+          boolean _and = false;
+          boolean _containsKey = inPortMappings.containsKey(id);
           boolean _not = (!_containsKey);
-          if (_not) {
+          if (!_not) {
+            _and = false;
+          } else {
+            boolean _containsKey_1 = outputSubMappings.containsKey(id);
+            boolean _not_1 = (!_containsKey_1);
+            _and = (_not && _not_1);
+          }
+          if (_and) {
+            final List<ActivityRef> inActRefs = inputSubMappings.get(id);
+            _builder.newLineIfNotEmpty();
             String _label = this.getLabel(id);
             _builder.append(_label, "");
             _builder.append(" [shape=rectangle,color=skyblue2,style=filled,forcelabels=true]");
             _builder.newLineIfNotEmpty();
             {
-              for(final ActivityRef src : outActRefs) {
-                String _label_1 = this.getLabel(src);
+              for(final ActivityRef tgt : inActRefs) {
+                String _label_1 = this.getLabel(id);
                 _builder.append(_label_1, "");
                 _builder.append(" -> ");
-                String _label_2 = this.getLabel(id);
+                String _label_2 = this.getLabel(tgt);
                 _builder.append(_label_2, "");
                 _builder.newLineIfNotEmpty();
               }
             }
           }
         }
+      }
+    }
+    {
+      Set<WorkProductState> _keySet_1 = outputSubMappings.keySet();
+      for(final WorkProductState id_1 : _keySet_1) {
+        final List<ActivityRef> outActRefs = outputSubMappings.get(id_1);
+        _builder.newLineIfNotEmpty();
+        List<ActivityRef> _elvis = null;
+        List<ActivityRef> _get = inputSubMappings.get(id_1);
+        if (_get != null) {
+          _elvis = _get;
+        } else {
+          List<ActivityRef> _emptyList = CollectionLiterals.<ActivityRef>emptyList();
+          _elvis = ObjectExtensions.<List<ActivityRef>>operator_elvis(_get, _emptyList);
+        }
+        final List<ActivityRef> inActRefs_1 = _elvis;
+        _builder.newLineIfNotEmpty();
         {
-          for(final ActivityRef tgt : inActRefs) {
-            String _label_3 = this.getLabel(id);
+          boolean _containsKey_2 = outPortMappings.containsKey(id_1);
+          boolean _not_2 = (!_containsKey_2);
+          if (_not_2) {
+            String _label_3 = this.getLabel(id_1);
             _builder.append(_label_3, "");
+            _builder.append(" [shape=rectangle,color=skyblue2,style=filled,forcelabels=true]");
+            _builder.newLineIfNotEmpty();
+            {
+              for(final ActivityRef src : outActRefs) {
+                String _label_4 = this.getLabel(src);
+                _builder.append(_label_4, "");
+                _builder.append(" -> ");
+                String _label_5 = this.getLabel(id_1);
+                _builder.append(_label_5, "");
+                _builder.newLineIfNotEmpty();
+              }
+            }
+          }
+        }
+        {
+          for(final ActivityRef tgt_1 : inActRefs_1) {
+            String _label_6 = this.getLabel(id_1);
+            _builder.append(_label_6, "");
             _builder.append(" -> ");
-            String _label_4 = this.getLabel(tgt);
-            _builder.append(_label_4, "");
+            String _label_7 = this.getLabel(tgt_1);
+            _builder.append(_label_7, "");
             _builder.newLineIfNotEmpty();
           }
         }
