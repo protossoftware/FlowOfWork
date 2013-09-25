@@ -26,15 +26,17 @@ Export can be done with the plugin : </br>
 	Behavior {
 		Step PerformSmokeTest "perform smoke test: \\n open the FoW-Test project, \\n change something to regenerate \\n and have look at some generated html pages"
 		Step CloseFinishedMilestoneIssues "close all finished issues \\n for the release milestone"
-		Step MoveOpenMilestoneIssues "move all open issues \\n for the release milestone \\n to another milestone or remove the milestone"
+		Step MoveOpenMilestoneIssues "move all open issues \\n for the release milestone \\n to another milestone or remove the milestone from the issue"
 		Step BuildRelease "build release to release path \\n (git repo: FlowOfWork/releases/release-tag) \\n do not export the test plugin"
+		Step CommitAndPush "commit and push release to github global repository"
 		Step CloseMilestone "close the milestone \\n in the issue tracker"
 		Step CreateGitTag "create a git tag \\n for this release"
 		Transition initial to PerformSmokeTest
 		Transition PerformSmokeTest to CloseFinishedMilestoneIssues
 		Transition CloseFinishedMilestoneIssues to MoveOpenMilestoneIssues
 		Transition MoveOpenMilestoneIssues to BuildRelease
-		Transition BuildRelease to CloseMilestone
+		Transition BuildRelease to CommitAndPush
+		Transition CommitAndPush to CloseMilestone
 		Transition CloseMilestone to CreateGitTag
 		Transition CreateGitTag to final
 	}
