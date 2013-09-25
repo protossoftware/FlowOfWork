@@ -1,17 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<feature id="de.protos.FlowOfWork.core.fow.sdk"
-	label="FoW SDK Feature "
-	version="1.0.0.qualifier">
-	<plugin
-			id="de.protos.FlowOfWork.core.fow"
-			download-size="0"
-			install-size="0"
-			version="0.0.0"
-			unpack="false"/>
-	<plugin
-			id="de.protos.FlowOfWork.core.fow.ui"
-			download-size="0"
-			install-size="0"
-			version="0.0.0"
-			unpack="false"/>
+<feature
+      id="de.protos.FlowOfWork.core.fow.sdk"
+      label="FoW SDK Feature "
+      version="1.0.0.qualifier"
+      provider-name="%providerName"
+      license-feature="org.eclipse.license"
+      license-feature-version="1.0.0.qualifier">
+
+   <description url="https://github.com/protossoftware/FlowOfWork/">
+      %description
+   </description>
+
+   <copyright url="http://www.eclipse.org/legal/epl-v10.html">
+      (c) 2013 Protos Software GmbH.
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License
+v1.0 which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+   </copyright>
+
+   <plugin
+         id="de.protos.FlowOfWork.core.fow"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.protos.FlowOfWork.core.fow.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
 </feature>
