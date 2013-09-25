@@ -61,11 +61,13 @@ WorkProductType Outcome
 WorkProduct InputDocument : Artifact
 	label "Input Document"
 	summary "summary Input Document"
+	states new
 ;
 
 WorkProduct RequirementDocument : Artifact
 	label "Requirement Document"
 	summary "summary Requirement Document"
+	states new , accepted , reviewed
 ;
 
 WorkProduct SWArchitecture : Artifact
@@ -76,6 +78,7 @@ WorkProduct SWArchitecture : Artifact
 WorkProduct SWCode : Artifact
 	label "SW Code"
 	summary "summary SW Code"
+	states new , verified
 ;
 
 WorkProduct SWTestReport : Artifact
@@ -181,23 +184,4 @@ Activity DevelopSWTest
 	outputs SWTestReport , SWCode ( verified )
 	guidances TestChecklist
 ;
-
-State new
-;
-
-State accepted
-;
-
-State reviewed
-;
-
-State implemented
-;
-
-State verified
-;
-
-State validated
-;
-
 
