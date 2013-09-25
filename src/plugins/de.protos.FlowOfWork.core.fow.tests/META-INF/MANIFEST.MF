@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: de.protos.FlowOfWork.core.fow.tests
-Bundle-Vendor: My Company
+Bundle-Vendor: protos Software GmbH
 Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: de.protos.FlowOfWork.core.fow.tests; singleton:=true
 Bundle-ActivationPolicy: lazy
