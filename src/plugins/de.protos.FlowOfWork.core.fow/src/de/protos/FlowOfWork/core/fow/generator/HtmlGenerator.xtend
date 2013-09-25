@@ -24,6 +24,7 @@ import org.eclipse.emf.common.util.EList
 import org.eclipse.emf.common.util.BasicEList
 
 import static extension de.protos.FlowOfWork.core.fow.generator.MetamodelHelpers.*
+import de.protos.FlowOfWork.core.fow.foW.Port
 
 @Singleton
 class HtmlGenerator {
@@ -42,7 +43,6 @@ class HtmlGenerator {
 		generateHTMLForAllRoles(model, fsa)
 		generateHTMLForAllWorkProducts(model, fsa)		
 		generateHTMLForAllGuidances(model, fsa)
-
 	}
 
 	def generateHTMLIndexPageFile(Model model, IFileSystemAccess fsa){
@@ -149,7 +149,7 @@ class HtmlGenerator {
 						«IF activity.inPorts.size() > 0»
 							<ul>
 							«FOR inPort : activity.inPorts»
-								<li>«generateHTML_HRef(inPort.type)»</li>
+								<li>«generateHTMLForPort(inPort)»</li>
 							«ENDFOR»
 							</ul>
 						«ELSE»
@@ -163,7 +163,7 @@ class HtmlGenerator {
 						«IF activity.outPorts.size() > 0»
 							<ul>
 							«FOR outPort : activity.outPorts»
-								<li>«generateHTML_HRef(outPort.type)»</a> </li>
+								<li>«generateHTMLForPort(outPort)»</a> </li>
 							«ENDFOR»
 							</ul>
 						«ELSE»
@@ -234,6 +234,10 @@ class HtmlGenerator {
 
 		
 		</html>
+	'''
+	
+	def private generateHTMLForPort(Port p) '''
+		«generateHTML_HRef(p.type)»«IF p.state != null» («p.state.name»)«ENDIF»
 	'''
 	
 	def private generateHTMLForAllRoles(Model model, IFileSystemAccess fsa) {

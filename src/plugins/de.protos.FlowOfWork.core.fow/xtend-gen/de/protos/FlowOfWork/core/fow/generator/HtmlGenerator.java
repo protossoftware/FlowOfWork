@@ -10,6 +10,7 @@
  */
 package de.protos.FlowOfWork.core.fow.generator;
 
+import com.google.common.base.Objects;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import de.protos.FlowOfWork.core.fow.foW.Activity;
@@ -20,6 +21,7 @@ import de.protos.FlowOfWork.core.fow.foW.Model;
 import de.protos.FlowOfWork.core.fow.foW.NamedElement;
 import de.protos.FlowOfWork.core.fow.foW.Port;
 import de.protos.FlowOfWork.core.fow.foW.Role;
+import de.protos.FlowOfWork.core.fow.foW.State;
 import de.protos.FlowOfWork.core.fow.foW.Textfield;
 import de.protos.FlowOfWork.core.fow.foW.WorkProduct;
 import de.protos.FlowOfWork.core.fow.foW.WorkProductType;
@@ -352,9 +354,8 @@ public class HtmlGenerator {
           for(final Port inPort : _inPorts_1) {
             _builder.append("\t\t\t\t");
             _builder.append("<li>");
-            WorkProduct _type = inPort.getType();
-            CharSequence _generateHTML_HRef = this.generateHTML_HRef(_type);
-            _builder.append(_generateHTML_HRef, "				");
+            CharSequence _generateHTMLForPort = this.generateHTMLForPort(inPort);
+            _builder.append(_generateHTMLForPort, "				");
             _builder.append("</li>");
             _builder.newLineIfNotEmpty();
           }
@@ -396,9 +397,8 @@ public class HtmlGenerator {
           for(final Port outPort : _outPorts_1) {
             _builder.append("\t\t\t\t");
             _builder.append("<li>");
-            WorkProduct _type_1 = outPort.getType();
-            CharSequence _generateHTML_HRef_1 = this.generateHTML_HRef(_type_1);
-            _builder.append(_generateHTML_HRef_1, "				");
+            CharSequence _generateHTMLForPort_1 = this.generateHTMLForPort(outPort);
+            _builder.append(_generateHTMLForPort_1, "				");
             _builder.append("</a> </li>");
             _builder.newLineIfNotEmpty();
           }
@@ -435,8 +435,8 @@ public class HtmlGenerator {
     _builder.newLine();
     _builder.append("\t\t\t\t");
     Role _role = activity.getRole();
-    CharSequence _generateHTML_HRef_2 = this.generateHTML_HRef(_role);
-    _builder.append(_generateHTML_HRef_2, "				");
+    CharSequence _generateHTML_HRef = this.generateHTML_HRef(_role);
+    _builder.append(_generateHTML_HRef, "				");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t\t");
     _builder.append("</td>");
@@ -521,9 +521,9 @@ public class HtmlGenerator {
             _builder.newLine();
             _builder.append("\t");
             _builder.append("\t\t");
-            Activity _type_2 = subActivity.getType();
-            CharSequence _generateHTML_HRef_3 = this.generateHTML_HRef(_type_2);
-            _builder.append(_generateHTML_HRef_3, "			");
+            Activity _type = subActivity.getType();
+            CharSequence _generateHTML_HRef_1 = this.generateHTML_HRef(_type);
+            _builder.append(_generateHTML_HRef_1, "			");
             _builder.newLineIfNotEmpty();
             _builder.append("\t");
             _builder.append("\t");
@@ -535,10 +535,10 @@ public class HtmlGenerator {
             _builder.newLine();
             _builder.append("\t");
             _builder.append("\t\t");
-            Activity _type_3 = subActivity.getType();
-            Role _role_1 = _type_3.getRole();
-            CharSequence _generateHTML_HRef_4 = this.generateHTML_HRef(_role_1);
-            _builder.append(_generateHTML_HRef_4, "			");
+            Activity _type_1 = subActivity.getType();
+            Role _role_1 = _type_1.getRole();
+            CharSequence _generateHTML_HRef_2 = this.generateHTML_HRef(_role_1);
+            _builder.append(_generateHTML_HRef_2, "			");
             _builder.newLineIfNotEmpty();
             _builder.append("\t");
             _builder.append("\t");
@@ -604,6 +604,26 @@ public class HtmlGenerator {
     _builder.newLine();
     _builder.append("</html>");
     _builder.newLine();
+    return _builder;
+  }
+  
+  private CharSequence generateHTMLForPort(final Port p) {
+    StringConcatenation _builder = new StringConcatenation();
+    WorkProduct _type = p.getType();
+    CharSequence _generateHTML_HRef = this.generateHTML_HRef(_type);
+    _builder.append(_generateHTML_HRef, "");
+    {
+      State _state = p.getState();
+      boolean _notEquals = (!Objects.equal(_state, null));
+      if (_notEquals) {
+        _builder.append(" (");
+        State _state_1 = p.getState();
+        String _name = _state_1.getName();
+        _builder.append(_name, "");
+        _builder.append(")");
+      }
+    }
+    _builder.newLineIfNotEmpty();
     return _builder;
   }
   
