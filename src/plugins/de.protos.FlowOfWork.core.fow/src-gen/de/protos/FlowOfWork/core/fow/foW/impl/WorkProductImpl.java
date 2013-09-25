@@ -3,15 +3,24 @@
 package de.protos.FlowOfWork.core.fow.foW.impl;
 
 import de.protos.FlowOfWork.core.fow.foW.FoWPackage;
+import de.protos.FlowOfWork.core.fow.foW.State;
 import de.protos.FlowOfWork.core.fow.foW.WorkProduct;
 import de.protos.FlowOfWork.core.fow.foW.WorkProductType;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,6 +30,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link de.protos.FlowOfWork.core.fow.foW.impl.WorkProductImpl#getType <em>Type</em>}</li>
+ *   <li>{@link de.protos.FlowOfWork.core.fow.foW.impl.WorkProductImpl#getStates <em>States</em>}</li>
  * </ul>
  * </p>
  *
@@ -37,6 +47,16 @@ public class WorkProductImpl extends NamedElementImpl implements WorkProduct
    * @ordered
    */
   protected WorkProductType type;
+
+  /**
+   * The cached value of the '{@link #getStates() <em>States</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getStates()
+   * @generated
+   * @ordered
+   */
+  protected EList<State> states;
 
   /**
    * <!-- begin-user-doc -->
@@ -107,6 +127,36 @@ public class WorkProductImpl extends NamedElementImpl implements WorkProduct
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<State> getStates()
+  {
+    if (states == null)
+    {
+      states = new EObjectContainmentEList<State>(State.class, this, FoWPackage.WORK_PRODUCT__STATES);
+    }
+    return states;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case FoWPackage.WORK_PRODUCT__STATES:
+        return ((InternalEList<?>)getStates()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -115,6 +165,8 @@ public class WorkProductImpl extends NamedElementImpl implements WorkProduct
       case FoWPackage.WORK_PRODUCT__TYPE:
         if (resolve) return getType();
         return basicGetType();
+      case FoWPackage.WORK_PRODUCT__STATES:
+        return getStates();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -124,6 +176,7 @@ public class WorkProductImpl extends NamedElementImpl implements WorkProduct
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -131,6 +184,10 @@ public class WorkProductImpl extends NamedElementImpl implements WorkProduct
     {
       case FoWPackage.WORK_PRODUCT__TYPE:
         setType((WorkProductType)newValue);
+        return;
+      case FoWPackage.WORK_PRODUCT__STATES:
+        getStates().clear();
+        getStates().addAll((Collection<? extends State>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -149,6 +206,9 @@ public class WorkProductImpl extends NamedElementImpl implements WorkProduct
       case FoWPackage.WORK_PRODUCT__TYPE:
         setType((WorkProductType)null);
         return;
+      case FoWPackage.WORK_PRODUCT__STATES:
+        getStates().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -165,6 +225,8 @@ public class WorkProductImpl extends NamedElementImpl implements WorkProduct
     {
       case FoWPackage.WORK_PRODUCT__TYPE:
         return type != null;
+      case FoWPackage.WORK_PRODUCT__STATES:
+        return states != null && !states.isEmpty();
     }
     return super.eIsSet(featureID);
   }

@@ -14,7 +14,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FoW.ecore#//Model/workProductTypes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FoW.ecore#//Model/guidances"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FoW.ecore#//Model/guidanceTypes"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FoW.ecore#//Model/states"/>
     </genClasses>
     <genClasses ecoreClass="FoW.ecore#//NamedElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FoW.ecore#//NamedElement/name"/>
@@ -24,6 +23,7 @@
     <genClasses ecoreClass="FoW.ecore#//WorkProductType"/>
     <genClasses ecoreClass="FoW.ecore#//WorkProduct">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference FoW.ecore#//WorkProduct/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FoW.ecore#//WorkProduct/states"/>
     </genClasses>
     <genClasses ecoreClass="FoW.ecore#//GuidanceType"/>
     <genClasses ecoreClass="FoW.ecore#//Guidance">

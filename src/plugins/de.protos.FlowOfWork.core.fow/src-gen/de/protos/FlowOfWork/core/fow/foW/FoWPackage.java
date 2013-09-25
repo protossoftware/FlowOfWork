@@ -121,22 +121,13 @@ public interface FoWPackage extends EPackage
   int MODEL__GUIDANCE_TYPES = 5;
 
   /**
-   * The feature id for the '<em><b>States</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MODEL__STATES = 6;
-
-  /**
    * The number of structural features of the '<em>Model</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODEL_FEATURE_COUNT = 7;
+  int MODEL_FEATURE_COUNT = 6;
 
   /**
    * The meta object id for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.NamedElementImpl <em>Named Element</em>}' class.
@@ -287,13 +278,22 @@ public interface FoWPackage extends EPackage
   int WORK_PRODUCT__TYPE = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>States</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WORK_PRODUCT__STATES = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
    * The number of structural features of the '<em>Work Product</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int WORK_PRODUCT_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
+  int WORK_PRODUCT_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.GuidanceTypeImpl <em>Guidance Type</em>}' class.
@@ -973,17 +973,6 @@ public interface FoWPackage extends EPackage
   EReference getModel_GuidanceTypes();
 
   /**
-   * Returns the meta object for the containment reference list '{@link de.protos.FlowOfWork.core.fow.foW.Model#getStates <em>States</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>States</em>'.
-   * @see de.protos.FlowOfWork.core.fow.foW.Model#getStates()
-   * @see #getModel()
-   * @generated
-   */
-  EReference getModel_States();
-
-  /**
    * Returns the meta object for class '{@link de.protos.FlowOfWork.core.fow.foW.NamedElement <em>Named Element</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1055,6 +1044,17 @@ public interface FoWPackage extends EPackage
    * @generated
    */
   EReference getWorkProduct_Type();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link de.protos.FlowOfWork.core.fow.foW.WorkProduct#getStates <em>States</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>States</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.WorkProduct#getStates()
+   * @see #getWorkProduct()
+   * @generated
+   */
+  EReference getWorkProduct_States();
 
   /**
    * Returns the meta object for class '{@link de.protos.FlowOfWork.core.fow.foW.GuidanceType <em>Guidance Type</em>}'.
@@ -1563,14 +1563,6 @@ public interface FoWPackage extends EPackage
     EReference MODEL__GUIDANCE_TYPES = eINSTANCE.getModel_GuidanceTypes();
 
     /**
-     * The meta object literal for the '<em><b>States</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference MODEL__STATES = eINSTANCE.getModel_States();
-
-    /**
      * The meta object literal for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.NamedElementImpl <em>Named Element</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1633,6 +1625,14 @@ public interface FoWPackage extends EPackage
      * @generated
      */
     EReference WORK_PRODUCT__TYPE = eINSTANCE.getWorkProduct_Type();
+
+    /**
+     * The meta object literal for the '<em><b>States</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference WORK_PRODUCT__STATES = eINSTANCE.getWorkProduct_States();
 
     /**
      * The meta object literal for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.GuidanceTypeImpl <em>Guidance Type</em>}' class.

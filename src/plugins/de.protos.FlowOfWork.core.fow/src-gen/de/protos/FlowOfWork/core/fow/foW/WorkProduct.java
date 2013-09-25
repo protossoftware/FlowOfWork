@@ -2,6 +2,7 @@
  */
 package de.protos.FlowOfWork.core.fow.foW;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,6 +13,7 @@ package de.protos.FlowOfWork.core.fow.foW;
  * The following features are supported:
  * <ul>
  *   <li>{@link de.protos.FlowOfWork.core.fow.foW.WorkProduct#getType <em>Type</em>}</li>
+ *   <li>{@link de.protos.FlowOfWork.core.fow.foW.WorkProduct#getStates <em>States</em>}</li>
  * </ul>
  * </p>
  *
@@ -46,5 +48,21 @@ public interface WorkProduct extends NamedElement
    * @generated
    */
   void setType(WorkProductType value);
+
+  /**
+   * Returns the value of the '<em><b>States</b></em>' containment reference list.
+   * The list contents are of type {@link de.protos.FlowOfWork.core.fow.foW.State}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>States</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>States</em>' containment reference list.
+   * @see de.protos.FlowOfWork.core.fow.foW.FoWPackage#getWorkProduct_States()
+   * @model containment="true"
+   * @generated
+   */
+  EList<State> getStates();
 
 } // WorkProduct

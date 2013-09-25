@@ -190,25 +190,6 @@ ruleModel returns [EObject current=null]
 	    }
 
 )
-)
-    |(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getModelAccess().getStatesStateParserRuleCall_6_0()); 
-	    }
-		lv_states_6_0=ruleState		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getModelRule());
-	        }
-       		add(
-       			$current, 
-       			"states",
-        		lv_states_6_0, 
-        		"State");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
 ))*
 ;
 
@@ -419,9 +400,53 @@ ruleWorkProduct returns [EObject current=null]
 	    }
 
 )
-)	otherlv_5=';' 
+)(	otherlv_5='states' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getWorkProductAccess().getSemicolonKeyword_5());
+    	newLeafNode(otherlv_5, grammarAccess.getWorkProductAccess().getStatesKeyword_5_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getWorkProductAccess().getStatesStateParserRuleCall_5_1_0()); 
+	    }
+		lv_states_6_0=ruleState		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getWorkProductRule());
+	        }
+       		add(
+       			$current, 
+       			"states",
+        		lv_states_6_0, 
+        		"State");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(	otherlv_7=',' 
+    {
+    	newLeafNode(otherlv_7, grammarAccess.getWorkProductAccess().getCommaKeyword_5_2_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getWorkProductAccess().getStatesStateParserRuleCall_5_2_1_0()); 
+	    }
+		lv_states_8_0=ruleState		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getWorkProductRule());
+	        }
+       		add(
+       			$current, 
+       			"states",
+        		lv_states_8_0, 
+        		"State");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))*)?	otherlv_9=';' 
+    {
+    	newLeafNode(otherlv_9, grammarAccess.getWorkProductAccess().getSemicolonKeyword_6());
     }
 )
 ;
@@ -591,15 +616,11 @@ ruleState returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='State' 
-    {
-    	newLeafNode(otherlv_0, grammarAccess.getStateAccess().getStateKeyword_0());
-    }
 (
 (
-		lv_name_1_0=RULE_ID
+		lv_name_0_0=RULE_ID
 		{
-			newLeafNode(lv_name_1_0, grammarAccess.getStateAccess().getNameIDTerminalRuleCall_1_0()); 
+			newLeafNode(lv_name_0_0, grammarAccess.getStateAccess().getNameIDTerminalRuleCall_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -608,15 +629,11 @@ ruleState returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"name",
-        		lv_name_1_0, 
+        		lv_name_0_0, 
         		"ID");
 	    }
 
 )
-)	otherlv_2=';' 
-    {
-    	newLeafNode(otherlv_2, grammarAccess.getStateAccess().getSemicolonKeyword_2());
-    }
 )
 ;
 

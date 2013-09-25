@@ -27,8 +27,8 @@ public class InternalFoWLexer extends Lexer {
     public static final int EOF=-1;
     public static final int RULE_SL_COMMENT=8;
     public static final int RULE_ML_COMMENT=7;
-    public static final int T__30=30;
     public static final int T__19=19;
+    public static final int T__30=30;
     public static final int T__31=31;
     public static final int T__32=32;
     public static final int RULE_STRING=5;
@@ -171,10 +171,10 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:16:7: ( 'GuidanceType' )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:16:9: 'GuidanceType'
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:16:7: ( 'states' )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:16:9: 'states'
             {
-            match("GuidanceType"); 
+            match("states"); 
 
 
             }
@@ -192,11 +192,10 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:17:7: ( 'Guidance' )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:17:9: 'Guidance'
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:17:7: ( ',' )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:17:9: ','
             {
-            match("Guidance"); 
-
+            match(','); 
 
             }
 
@@ -213,10 +212,10 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:18:7: ( 'State' )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:18:9: 'State'
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:18:7: ( 'GuidanceType' )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:18:9: 'GuidanceType'
             {
-            match("State"); 
+            match("GuidanceType"); 
 
 
             }
@@ -234,10 +233,11 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:19:7: ( '(' )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:19:9: '('
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:19:7: ( 'Guidance' )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:19:9: 'Guidance'
             {
-            match('('); 
+            match("Guidance"); 
+
 
             }
 
@@ -254,10 +254,10 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:20:7: ( ')' )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:20:9: ')'
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:20:7: ( '(' )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:20:9: '('
             {
-            match(')'); 
+            match('('); 
 
             }
 
@@ -274,11 +274,10 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:21:7: ( 'Activity' )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:21:9: 'Activity'
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:21:7: ( ')' )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:21:9: ')'
             {
-            match("Activity"); 
-
+            match(')'); 
 
             }
 
@@ -295,10 +294,10 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:22:7: ( 'responsible' )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:22:9: 'responsible'
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:22:7: ( 'Activity' )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:22:9: 'Activity'
             {
-            match("responsible"); 
+            match("Activity"); 
 
 
             }
@@ -316,10 +315,10 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:23:7: ( 'inputs' )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:23:9: 'inputs'
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:23:7: ( 'responsible' )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:23:9: 'responsible'
             {
-            match("inputs"); 
+            match("responsible"); 
 
 
             }
@@ -337,10 +336,11 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:24:7: ( ',' )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:24:9: ','
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:24:7: ( 'inputs' )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:24:9: 'inputs'
             {
-            match(','); 
+            match("inputs"); 
+
 
             }
 
@@ -670,10 +670,10 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1523:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1523:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1540:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1540:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1523:11: ( '^' )?
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1540:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -682,7 +682,7 @@ public class InternalFoWLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1523:11: '^'
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1540:11: '^'
                     {
                     match('^'); 
 
@@ -700,7 +700,7 @@ public class InternalFoWLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1523:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1540:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -749,10 +749,10 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1525:10: ( ( '0' .. '9' )+ )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1525:12: ( '0' .. '9' )+
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1542:10: ( ( '0' .. '9' )+ )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1542:12: ( '0' .. '9' )+
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1525:12: ( '0' .. '9' )+
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1542:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -766,7 +766,7 @@ public class InternalFoWLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1525:13: '0' .. '9'
+            	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1542:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -798,10 +798,10 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1527:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1527:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1544:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1544:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1527:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1544:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -819,10 +819,10 @@ public class InternalFoWLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1527:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1544:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1527:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1544:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -838,7 +838,7 @@ public class InternalFoWLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1527:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1544:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -854,7 +854,7 @@ public class InternalFoWLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1527:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1544:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -879,10 +879,10 @@ public class InternalFoWLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1527:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1544:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1527:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1544:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -898,7 +898,7 @@ public class InternalFoWLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1527:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1544:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -914,7 +914,7 @@ public class InternalFoWLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1527:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1544:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -957,12 +957,12 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1529:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1529:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1546:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1546:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1529:24: ( options {greedy=false; } : . )*
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1546:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -987,7 +987,7 @@ public class InternalFoWLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1529:52: .
+            	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1546:52: .
             	    {
             	    matchAny(); 
 
@@ -1017,12 +1017,12 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1531:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1531:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1548:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1548:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1531:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1548:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -1035,7 +1035,7 @@ public class InternalFoWLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1531:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1548:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1055,7 +1055,7 @@ public class InternalFoWLexer extends Lexer {
                 }
             } while (true);
 
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1531:40: ( ( '\\r' )? '\\n' )?
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1548:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1064,9 +1064,9 @@ public class InternalFoWLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1531:41: ( '\\r' )? '\\n'
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1548:41: ( '\\r' )? '\\n'
                     {
-                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1531:41: ( '\\r' )?
+                    // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1548:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -1075,7 +1075,7 @@ public class InternalFoWLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1531:41: '\\r'
+                            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1548:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1107,10 +1107,10 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1533:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1533:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1550:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1550:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1533:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1550:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -1164,8 +1164,8 @@ public class InternalFoWLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1535:16: ( . )
-            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1535:18: .
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1552:16: ( . )
+            // ../de.protos.FlowOfWork.core.fow/src-gen/de/protos/FlowOfWork/core/fow/parser/antlr/internal/InternalFoW.g:1552:18: .
             {
             matchAny(); 
 
@@ -1444,84 +1444,84 @@ public class InternalFoWLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\1\42\1\uffff\1\42\1\uffff\2\42\2\uffff\3\42\1\uffff\4"+
-        "\42\2\uffff\6\42\1\40\2\uffff\3\40\2\uffff\1\42\2\uffff\1\42\1\uffff"+
-        "\2\42\2\uffff\3\42\1\uffff\4\42\2\uffff\2\42\1\117\3\42\5\uffff"+
-        "\20\42\1\uffff\3\42\1\146\3\42\1\152\16\42\1\uffff\2\42\1\173\1"+
-        "\uffff\13\42\1\u0087\1\u0088\3\42\1\uffff\2\42\1\u008e\10\42\2\uffff"+
-        "\5\42\1\uffff\1\u009c\1\u009d\1\42\1\u009f\6\42\1\u00a7\1\u00a8"+
-        "\1\42\2\uffff\1\42\1\uffff\1\42\1\u00ac\1\u00ad\4\42\2\uffff\2\42"+
-        "\1\u00b4\2\uffff\6\42\1\uffff\1\u00bb\1\42\1\u00be\1\42\1\u00c0"+
-        "\1\42\1\uffff\1\u00c2\1\42\1\uffff\1\u00c4\1\uffff\1\42\1\uffff"+
-        "\1\42\1\uffff\1\u00c7\1\42\1\uffff\1\u00c9\1\uffff";
+        "\1\uffff\1\42\1\uffff\1\42\1\uffff\1\42\1\uffff\1\42\2\uffff\6"+
+        "\42\2\uffff\7\42\1\40\2\uffff\3\40\2\uffff\1\42\2\uffff\1\42\1\uffff"+
+        "\2\42\1\uffff\1\42\2\uffff\6\42\2\uffff\3\42\1\120\3\42\5\uffff"+
+        "\20\42\1\uffff\3\42\1\147\15\42\1\165\4\42\1\uffff\15\42\1\uffff"+
+        "\1\42\1\u0088\1\u0089\2\42\1\u008c\5\42\1\u0092\6\42\2\uffff\2\42"+
+        "\1\uffff\1\42\1\u009c\3\42\1\uffff\1\u00a0\1\u00a1\7\42\1\uffff"+
+        "\1\u00aa\1\u00ab\1\42\2\uffff\1\42\1\u00ae\1\u00af\5\42\2\uffff"+
+        "\1\42\1\u00b6\2\uffff\6\42\1\uffff\1\u00bd\1\42\1\u00c0\2\42\1\u00c3"+
+        "\1\uffff\1\u00c4\1\42\1\uffff\1\42\1\u00c7\2\uffff\1\42\1\u00c9"+
+        "\1\uffff\1\42\1\uffff\1\u00cb\1\uffff";
     static final String DFA12_eofS =
-        "\u00ca\uffff";
+        "\u00cc\uffff";
     static final String DFA12_minS =
-        "\1\0\1\157\1\uffff\1\157\1\uffff\1\165\1\164\2\uffff\1\143\1\145"+
-        "\1\156\1\uffff\3\165\1\145\2\uffff\1\145\1\162\1\157\1\151\1\141"+
-        "\1\145\1\101\2\uffff\2\0\1\52\2\uffff\1\154\2\uffff\1\162\1\uffff"+
-        "\1\151\1\141\2\uffff\1\164\1\163\1\151\1\uffff\1\164\1\142\1\151"+
-        "\1\150\2\uffff\1\143\1\141\1\60\1\156\1\142\1\163\5\uffff\1\145"+
-        "\1\153\1\144\1\164\1\160\1\151\1\160\1\165\1\164\1\160\1\101\1\155"+
-        "\1\144\1\141\1\151\1\156\1\uffff\1\141\1\145\1\143\1\60\1\120\1"+
-        "\141\1\145\1\60\1\166\1\157\1\164\1\151\1\165\1\143\2\141\1\166"+
-        "\2\163\2\154\1\162\1\uffff\1\162\1\156\1\60\1\uffff\1\151\1\156"+
-        "\1\163\1\141\2\164\1\162\1\156\3\151\2\60\1\151\1\157\1\143\1\uffff"+
-        "\1\164\1\163\1\60\1\154\1\163\1\151\1\171\1\143\2\157\1\164\2\uffff"+
-        "\1\160\1\144\1\145\1\171\1\151\1\uffff\2\60\1\166\1\60\1\145\1\162"+
-        "\1\156\1\151\1\164\1\165\2\60\1\142\2\uffff\1\151\1\uffff\1\163"+
-        "\2\60\1\157\1\151\1\143\1\171\2\uffff\1\154\1\164\1\60\2\uffff\1"+
-        "\156\1\157\1\164\1\160\1\145\1\151\1\uffff\1\60\1\156\1\60\1\145"+
-        "\1\60\1\145\1\uffff\1\60\1\171\1\uffff\1\60\1\uffff\1\163\1\uffff"+
-        "\1\160\1\uffff\1\60\1\145\1\uffff\1\60\1\uffff";
+        "\1\0\1\157\1\uffff\1\157\1\uffff\1\164\1\uffff\1\165\2\uffff\1"+
+        "\143\1\145\1\156\2\165\1\145\2\uffff\1\145\1\164\1\162\1\157\1\151"+
+        "\1\141\1\145\1\101\2\uffff\2\0\1\52\2\uffff\1\154\2\uffff\1\162"+
+        "\1\uffff\1\141\1\142\1\uffff\1\151\2\uffff\1\164\1\163\1\151\1\164"+
+        "\1\151\1\150\2\uffff\1\143\1\145\1\141\1\60\1\156\1\142\1\163\5"+
+        "\uffff\1\145\1\153\1\164\1\101\1\155\1\144\1\151\1\160\1\165\1\164"+
+        "\1\160\1\144\1\141\1\151\1\160\1\156\1\uffff\1\141\1\145\1\143\1"+
+        "\60\1\120\1\145\1\143\2\141\1\166\1\157\1\164\1\151\1\165\1\141"+
+        "\1\166\1\163\1\60\1\163\2\154\1\162\1\uffff\1\162\1\163\1\164\1"+
+        "\162\1\156\1\151\1\156\1\163\1\141\1\164\1\156\2\151\1\uffff\1\151"+
+        "\2\60\1\151\1\157\1\60\1\151\1\171\1\143\1\164\1\163\1\60\1\154"+
+        "\1\163\1\143\2\157\1\164\2\uffff\1\160\1\144\1\uffff\1\166\1\60"+
+        "\1\145\1\171\1\151\1\uffff\2\60\1\145\1\162\1\156\1\151\1\164\1"+
+        "\165\1\151\1\uffff\2\60\1\142\2\uffff\1\163\2\60\1\157\1\151\1\143"+
+        "\1\164\1\171\2\uffff\1\154\1\60\2\uffff\1\156\1\157\1\164\1\151"+
+        "\1\160\1\145\1\uffff\1\60\1\156\1\60\2\145\1\60\1\uffff\1\60\1\171"+
+        "\1\uffff\1\163\1\60\2\uffff\1\160\1\60\1\uffff\1\145\1\uffff\1\60"+
+        "\1\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\157\1\uffff\1\157\1\uffff\1\165\1\164\2\uffff\1\143"+
-        "\1\145\1\156\1\uffff\3\165\1\145\2\uffff\1\145\1\162\1\157\1\151"+
-        "\1\141\1\145\1\172\2\uffff\2\uffff\1\57\2\uffff\1\154\2\uffff\1"+
-        "\162\1\uffff\1\151\1\145\2\uffff\1\164\1\163\1\160\1\uffff\1\164"+
-        "\1\155\1\151\1\150\2\uffff\1\143\1\141\1\172\1\156\1\142\1\163\5"+
-        "\uffff\1\145\1\153\1\144\1\164\1\160\1\151\1\160\1\165\1\164\1\160"+
-        "\1\101\1\155\1\144\1\141\1\151\1\156\1\uffff\1\141\1\145\1\143\1"+
-        "\172\1\120\1\141\1\145\1\172\1\166\1\157\1\164\1\151\1\165\1\143"+
-        "\2\141\1\166\2\163\2\154\1\162\1\uffff\1\162\1\156\1\172\1\uffff"+
-        "\1\151\1\156\1\163\1\141\2\164\1\162\1\156\3\151\2\172\1\151\1\157"+
-        "\1\143\1\uffff\1\164\1\163\1\172\1\154\1\163\1\151\1\171\1\143\2"+
-        "\157\1\164\2\uffff\1\160\1\144\1\145\1\171\1\151\1\uffff\2\172\1"+
-        "\166\1\172\1\145\1\162\1\156\1\151\1\164\1\165\2\172\1\142\2\uffff"+
-        "\1\151\1\uffff\1\163\2\172\1\157\1\151\1\143\1\171\2\uffff\1\154"+
-        "\1\164\1\172\2\uffff\1\156\1\157\1\164\1\160\1\145\1\151\1\uffff"+
-        "\1\172\1\156\1\172\1\145\1\172\1\145\1\uffff\1\172\1\171\1\uffff"+
-        "\1\172\1\uffff\1\163\1\uffff\1\160\1\uffff\1\172\1\145\1\uffff\1"+
-        "\172\1\uffff";
+        "\1\uffff\1\157\1\uffff\1\157\1\uffff\1\165\1\uffff\1\165\2\uffff"+
+        "\1\143\1\145\1\156\2\165\1\145\2\uffff\1\145\1\164\1\162\1\157\1"+
+        "\151\1\141\1\145\1\172\2\uffff\2\uffff\1\57\2\uffff\1\154\2\uffff"+
+        "\1\162\1\uffff\1\141\1\155\1\uffff\1\151\2\uffff\1\164\1\163\1\160"+
+        "\1\164\1\151\1\150\2\uffff\1\143\1\145\1\141\1\172\1\156\1\142\1"+
+        "\163\5\uffff\1\145\1\153\1\164\1\101\1\155\1\144\1\151\1\160\1\165"+
+        "\1\164\1\160\1\144\1\141\1\151\1\160\1\156\1\uffff\1\141\1\145\1"+
+        "\143\1\172\1\120\1\145\1\143\2\141\1\166\1\157\1\164\1\151\1\165"+
+        "\1\141\1\166\1\163\1\172\1\163\2\154\1\162\1\uffff\1\162\1\163\1"+
+        "\164\1\162\1\156\1\151\1\156\1\163\1\141\1\164\1\156\2\151\1\uffff"+
+        "\1\151\2\172\1\151\1\157\1\172\1\151\1\171\1\143\1\164\1\163\1\172"+
+        "\1\154\1\163\1\143\2\157\1\164\2\uffff\1\160\1\144\1\uffff\1\166"+
+        "\1\172\1\145\1\171\1\151\1\uffff\2\172\1\145\1\162\1\156\1\151\1"+
+        "\164\1\165\1\151\1\uffff\2\172\1\142\2\uffff\1\163\2\172\1\157\1"+
+        "\151\1\143\1\164\1\171\2\uffff\1\154\1\172\2\uffff\1\156\1\157\1"+
+        "\164\1\151\1\160\1\145\1\uffff\1\172\1\156\1\172\2\145\1\172\1\uffff"+
+        "\1\172\1\171\1\uffff\1\163\1\172\2\uffff\1\160\1\172\1\uffff\1\145"+
+        "\1\uffff\1\172\1\uffff";
     static final String DFA12_acceptS =
-        "\2\uffff\1\2\1\uffff\1\5\2\uffff\1\11\1\12\3\uffff\1\16\4\uffff"+
-        "\1\23\1\24\7\uffff\1\36\1\37\3\uffff\1\43\1\44\1\uffff\1\36\1\2"+
-        "\1\uffff\1\5\2\uffff\1\11\1\12\3\uffff\1\16\4\uffff\1\23\1\24\6"+
-        "\uffff\1\37\1\40\1\41\1\42\1\43\20\uffff\1\31\26\uffff\1\1\3\uffff"+
-        "\1\26\20\uffff\1\10\13\uffff\1\32\1\33\5\uffff\1\15\15\uffff\1\30"+
-        "\1\17\1\uffff\1\34\7\uffff\1\7\1\13\3\uffff\1\22\1\25\6\uffff\1"+
-        "\21\6\uffff\1\27\2\uffff\1\4\1\uffff\1\14\1\uffff\1\35\1\uffff\1"+
-        "\6\2\uffff\1\20\1\uffff\1\3";
+        "\2\uffff\1\2\1\uffff\1\5\1\uffff\1\7\1\uffff\1\12\1\13\6\uffff"+
+        "\1\23\1\24\10\uffff\1\36\1\37\3\uffff\1\43\1\44\1\uffff\1\36\1\2"+
+        "\1\uffff\1\5\2\uffff\1\7\1\uffff\1\12\1\13\6\uffff\1\23\1\24\7\uffff"+
+        "\1\37\1\40\1\41\1\42\1\43\20\uffff\1\31\26\uffff\1\1\15\uffff\1"+
+        "\26\22\uffff\1\32\1\33\2\uffff\1\6\5\uffff\1\16\11\uffff\1\34\3"+
+        "\uffff\1\30\1\17\10\uffff\1\11\1\14\2\uffff\1\22\1\25\6\uffff\1"+
+        "\21\6\uffff\1\27\2\uffff\1\4\2\uffff\1\15\1\35\2\uffff\1\10\1\uffff"+
+        "\1\20\1\uffff\1\3";
     static final String DFA12_specialS =
-        "\1\1\33\uffff\1\2\1\0\u00ac\uffff}>";
+        "\1\1\33\uffff\1\2\1\0\u00ae\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\40\2\37\2\40\1\37\22\40\1\37\1\40\1\34\4\40\1\35\1\7\1"+
-            "\10\2\40\1\14\2\40\1\36\12\33\1\4\1\2\5\40\1\11\1\20\1\32\1"+
-            "\23\2\32\1\5\12\32\1\1\1\6\1\24\2\32\1\3\3\32\3\40\1\31\1\32"+
-            "\1\40\3\32\1\30\1\32\1\26\1\17\1\32\1\13\2\32\1\27\2\32\1\15"+
-            "\2\32\1\12\1\16\1\25\6\32\1\21\1\40\1\22\uff82\40",
+            "\11\40\2\37\2\40\1\37\22\40\1\37\1\40\1\34\4\40\1\35\1\10\1"+
+            "\11\2\40\1\6\2\40\1\36\12\33\1\4\1\2\5\40\1\12\1\17\1\32\1\22"+
+            "\2\32\1\7\12\32\1\1\1\23\1\24\2\32\1\3\3\32\3\40\1\31\1\32\1"+
+            "\40\3\32\1\30\1\32\1\26\1\16\1\32\1\14\2\32\1\27\2\32\1\15\2"+
+            "\32\1\13\1\5\1\25\6\32\1\20\1\40\1\21\uff82\40",
             "\1\41",
             "",
             "\1\44",
             "",
-            "\1\46",
-            "\1\47",
+            "\1\46\1\47",
+            "",
+            "\1\51",
             "",
             "",
-            "\1\52",
-            "\1\53",
             "\1\54",
-            "",
+            "\1\55",
             "\1\56",
             "\1\57",
             "\1\60",
@@ -1534,45 +1534,46 @@ public class InternalFoWLexer extends Lexer {
             "\1\67",
             "\1\70",
             "\1\71",
+            "\1\72",
             "\32\42\4\uffff\1\42\1\uffff\32\42",
             "",
             "",
-            "\0\73",
-            "\0\73",
-            "\1\74\4\uffff\1\75",
-            "",
-            "",
-            "\1\77",
+            "\0\74",
+            "\0\74",
+            "\1\75\4\uffff\1\76",
             "",
             "",
             "\1\100",
             "",
+            "",
             "\1\101",
-            "\1\102\3\uffff\1\103",
             "",
+            "\1\102",
+            "\1\103\12\uffff\1\104",
             "",
-            "\1\104",
             "\1\105",
-            "\1\107\6\uffff\1\106",
             "",
-            "\1\110",
-            "\1\111\12\uffff\1\112",
+            "",
+            "\1\106",
+            "\1\107",
+            "\1\111\6\uffff\1\110",
+            "\1\112",
             "\1\113",
             "\1\114",
             "",
             "",
             "\1\115",
             "\1\116",
+            "\1\117",
             "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
-            "\1\120",
             "\1\121",
             "\1\122",
-            "",
-            "",
-            "",
-            "",
-            "",
             "\1\123",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\124",
             "\1\125",
             "\1\126",
@@ -1588,15 +1589,15 @@ public class InternalFoWLexer extends Lexer {
             "\1\140",
             "\1\141",
             "\1\142",
-            "",
             "\1\143",
+            "",
             "\1\144",
             "\1\145",
+            "\1\146",
             "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
-            "\1\147",
             "\1\150",
             "\1\151",
-            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\152",
             "\1\153",
             "\1\154",
             "\1\155",
@@ -1607,15 +1608,14 @@ public class InternalFoWLexer extends Lexer {
             "\1\162",
             "\1\163",
             "\1\164",
-            "\1\165",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\166",
             "\1\167",
             "\1\170",
-            "",
             "\1\171",
-            "\1\172",
-            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "",
+            "\1\172",
+            "\1\173",
             "\1\174",
             "\1\175",
             "\1\176",
@@ -1627,89 +1627,92 @@ public class InternalFoWLexer extends Lexer {
             "\1\u0084",
             "\1\u0085",
             "\1\u0086",
+            "",
+            "\1\u0087",
             "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
-            "\1\u0089",
             "\1\u008a",
             "\1\u008b",
-            "",
-            "\1\u008c",
-            "\1\u008d",
             "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\u008d",
+            "\1\u008e",
             "\1\u008f",
             "\1\u0090",
             "\1\u0091",
-            "\1\u0092",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\u0093",
             "\1\u0094",
             "\1\u0095",
             "\1\u0096",
-            "",
-            "",
             "\1\u0097",
             "\1\u0098",
+            "",
+            "",
             "\1\u0099",
             "\1\u009a",
+            "",
             "\1\u009b",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\u009d",
+            "\1\u009e",
+            "\1\u009f",
             "",
             "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
-            "\1\u009e",
-            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
-            "\1\u00a0",
-            "\1\u00a1",
             "\1\u00a2",
             "\1\u00a3",
             "\1\u00a4",
             "\1\u00a5",
-            "\12\42\7\uffff\23\42\1\u00a6\6\42\4\uffff\1\42\1\uffff\32"+
+            "\1\u00a6",
+            "\1\u00a7",
+            "\1\u00a8",
+            "",
+            "\12\42\7\uffff\23\42\1\u00a9\6\42\4\uffff\1\42\1\uffff\32"+
             "\42",
             "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
-            "\1\u00a9",
+            "\1\u00ac",
             "",
             "",
-            "\1\u00aa",
-            "",
-            "\1\u00ab",
+            "\1\u00ad",
             "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
-            "\1\u00ae",
-            "\1\u00af",
             "\1\u00b0",
             "\1\u00b1",
-            "",
-            "",
             "\1\u00b2",
             "\1\u00b3",
-            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\u00b4",
             "",
             "",
             "\1\u00b5",
-            "\1\u00b6",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "",
+            "",
             "\1\u00b7",
             "\1\u00b8",
             "\1\u00b9",
             "\1\u00ba",
-            "",
-            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\u00bb",
             "\1\u00bc",
-            "\12\42\7\uffff\23\42\1\u00bd\6\42\4\uffff\1\42\1\uffff\32"+
+            "",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\u00be",
+            "\12\42\7\uffff\23\42\1\u00bf\6\42\4\uffff\1\42\1\uffff\32"+
             "\42",
-            "\1\u00bf",
-            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\u00c1",
-            "",
-            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
-            "\1\u00c3",
-            "",
+            "\1\u00c2",
             "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             "\1\u00c5",
             "",
             "\1\u00c6",
-            "",
             "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "",
+            "",
             "\1\u00c8",
+            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "",
+            "\1\u00ca",
             "",
             "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
             ""
@@ -1755,7 +1758,7 @@ public class InternalFoWLexer extends Lexer {
                         int LA12_29 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_29>='\u0000' && LA12_29<='\uFFFF')) ) {s = 59;}
+                        if ( ((LA12_29>='\u0000' && LA12_29<='\uFFFF')) ) {s = 60;}
 
                         else s = 32;
 
@@ -1773,35 +1776,35 @@ public class InternalFoWLexer extends Lexer {
 
                         else if ( (LA12_0==':') ) {s = 4;}
 
-                        else if ( (LA12_0=='G') ) {s = 5;}
+                        else if ( (LA12_0=='s') ) {s = 5;}
 
-                        else if ( (LA12_0=='S') ) {s = 6;}
+                        else if ( (LA12_0==',') ) {s = 6;}
 
-                        else if ( (LA12_0=='(') ) {s = 7;}
+                        else if ( (LA12_0=='G') ) {s = 7;}
 
-                        else if ( (LA12_0==')') ) {s = 8;}
+                        else if ( (LA12_0=='(') ) {s = 8;}
 
-                        else if ( (LA12_0=='A') ) {s = 9;}
+                        else if ( (LA12_0==')') ) {s = 9;}
 
-                        else if ( (LA12_0=='r') ) {s = 10;}
+                        else if ( (LA12_0=='A') ) {s = 10;}
 
-                        else if ( (LA12_0=='i') ) {s = 11;}
+                        else if ( (LA12_0=='r') ) {s = 11;}
 
-                        else if ( (LA12_0==',') ) {s = 12;}
+                        else if ( (LA12_0=='i') ) {s = 12;}
 
                         else if ( (LA12_0=='o') ) {s = 13;}
 
-                        else if ( (LA12_0=='s') ) {s = 14;}
+                        else if ( (LA12_0=='g') ) {s = 14;}
 
-                        else if ( (LA12_0=='g') ) {s = 15;}
+                        else if ( (LA12_0=='B') ) {s = 15;}
 
-                        else if ( (LA12_0=='B') ) {s = 16;}
+                        else if ( (LA12_0=='{') ) {s = 16;}
 
-                        else if ( (LA12_0=='{') ) {s = 17;}
+                        else if ( (LA12_0=='}') ) {s = 17;}
 
-                        else if ( (LA12_0=='}') ) {s = 18;}
+                        else if ( (LA12_0=='D') ) {s = 18;}
 
-                        else if ( (LA12_0=='D') ) {s = 19;}
+                        else if ( (LA12_0=='S') ) {s = 19;}
 
                         else if ( (LA12_0=='T') ) {s = 20;}
 
@@ -1835,7 +1838,7 @@ public class InternalFoWLexer extends Lexer {
                         int LA12_28 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_28>='\u0000' && LA12_28<='\uFFFF')) ) {s = 59;}
+                        if ( ((LA12_28>='\u0000' && LA12_28<='\uFFFF')) ) {s = 60;}
 
                         else s = 32;
 

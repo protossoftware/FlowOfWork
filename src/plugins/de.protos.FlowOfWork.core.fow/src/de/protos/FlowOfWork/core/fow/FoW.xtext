@@ -7,6 +7,7 @@
  * 
  * CONTRIBUTORS:
  * 		Thomas Schuetz (initial contribution)
+ * 		Eyrak Paen
  * 
  *******************************************************************************/
 grammar de.protos.FlowOfWork.core.fow.FoW with org.eclipse.xtext.common.Terminals
@@ -20,12 +21,11 @@ Model:
 		workProducts+=WorkProduct |
 		workProductTypes+=WorkProductType |
 		guidances+=Guidance |
-		guidanceTypes+=GuidanceType |
-		states+=State
+		guidanceTypes+=GuidanceType
 	)*
 	;
 	
-NamedElement: Role | WorkProductType | WorkProduct | GuidanceType | Guidance | Activity ;
+NamedElement: Role | WorkProductType | WorkProduct | GuidanceType | Guidance | Activity;
 	
 Role:
 	'Role' name=ID 
@@ -42,7 +42,7 @@ WorkProductType:
 WorkProduct:
 	'WorkProduct' name=ID ':' type=[WorkProductType]
 	textfield=Textfield
-	//('States' states+=State (',' states+=State)*)? 
+	('states' states+=State (',' states+=State)*)? 
 	';'
 ;
 
@@ -59,7 +59,7 @@ Guidance:
 ;
 
 State:
-	'State' name=ID ';'
+	name=ID
 ;
 
 Port:

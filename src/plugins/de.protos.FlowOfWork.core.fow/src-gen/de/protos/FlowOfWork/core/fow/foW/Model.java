@@ -20,7 +20,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.protos.FlowOfWork.core.fow.foW.Model#getWorkProductTypes <em>Work Product Types</em>}</li>
  *   <li>{@link de.protos.FlowOfWork.core.fow.foW.Model#getGuidances <em>Guidances</em>}</li>
  *   <li>{@link de.protos.FlowOfWork.core.fow.foW.Model#getGuidanceTypes <em>Guidance Types</em>}</li>
- *   <li>{@link de.protos.FlowOfWork.core.fow.foW.Model#getStates <em>States</em>}</li>
  * </ul>
  * </p>
  *
@@ -125,21 +124,5 @@ public interface Model extends EObject
    * @generated
    */
   EList<GuidanceType> getGuidanceTypes();
-
-  /**
-   * Returns the value of the '<em><b>States</b></em>' containment reference list.
-   * The list contents are of type {@link de.protos.FlowOfWork.core.fow.foW.State}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>States</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>States</em>' containment reference list.
-   * @see de.protos.FlowOfWork.core.fow.foW.FoWPackage#getModel_States()
-   * @model containment="true"
-   * @generated
-   */
-  EList<State> getStates();
 
 } // Model

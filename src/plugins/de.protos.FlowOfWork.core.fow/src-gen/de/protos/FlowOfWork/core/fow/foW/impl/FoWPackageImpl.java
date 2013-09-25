@@ -318,16 +318,6 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_States()
-  {
-    return (EReference)modelEClass.getEStructuralFeatures().get(6);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getNamedElement()
   {
     return namedElementEClass;
@@ -391,6 +381,16 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
   public EReference getWorkProduct_Type()
   {
     return (EReference)workProductEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getWorkProduct_States()
+  {
+    return (EReference)workProductEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -830,7 +830,6 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
     createEReference(modelEClass, MODEL__WORK_PRODUCT_TYPES);
     createEReference(modelEClass, MODEL__GUIDANCES);
     createEReference(modelEClass, MODEL__GUIDANCE_TYPES);
-    createEReference(modelEClass, MODEL__STATES);
 
     namedElementEClass = createEClass(NAMED_ELEMENT);
     createEAttribute(namedElementEClass, NAMED_ELEMENT__NAME);
@@ -842,6 +841,7 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
 
     workProductEClass = createEClass(WORK_PRODUCT);
     createEReference(workProductEClass, WORK_PRODUCT__TYPE);
+    createEReference(workProductEClass, WORK_PRODUCT__STATES);
 
     guidanceTypeEClass = createEClass(GUIDANCE_TYPE);
 
@@ -949,7 +949,6 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
     initEReference(getModel_WorkProductTypes(), this.getWorkProductType(), null, "workProductTypes", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModel_Guidances(), this.getGuidance(), null, "guidances", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModel_GuidanceTypes(), this.getGuidanceType(), null, "guidanceTypes", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getModel_States(), this.getState(), null, "states", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(namedElementEClass, NamedElement.class, "NamedElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -961,6 +960,7 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
 
     initEClass(workProductEClass, WorkProduct.class, "WorkProduct", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getWorkProduct_Type(), this.getWorkProductType(), null, "type", null, 0, 1, WorkProduct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getWorkProduct_States(), this.getState(), null, "states", null, 0, -1, WorkProduct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(guidanceTypeEClass, GuidanceType.class, "GuidanceType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

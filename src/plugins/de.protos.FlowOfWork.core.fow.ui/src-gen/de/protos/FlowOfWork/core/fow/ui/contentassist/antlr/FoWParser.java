@@ -45,9 +45,10 @@ public class FoWParser extends AbstractContentAssistParser {
 					put(grammarAccess.getRoleAccess().getGroup(), "rule__Role__Group__0");
 					put(grammarAccess.getWorkProductTypeAccess().getGroup(), "rule__WorkProductType__Group__0");
 					put(grammarAccess.getWorkProductAccess().getGroup(), "rule__WorkProduct__Group__0");
+					put(grammarAccess.getWorkProductAccess().getGroup_5(), "rule__WorkProduct__Group_5__0");
+					put(grammarAccess.getWorkProductAccess().getGroup_5_2(), "rule__WorkProduct__Group_5_2__0");
 					put(grammarAccess.getGuidanceTypeAccess().getGroup(), "rule__GuidanceType__Group__0");
 					put(grammarAccess.getGuidanceAccess().getGroup(), "rule__Guidance__Group__0");
-					put(grammarAccess.getStateAccess().getGroup(), "rule__State__Group__0");
 					put(grammarAccess.getPortAccess().getGroup(), "rule__Port__Group__0");
 					put(grammarAccess.getPortAccess().getGroup_1(), "rule__Port__Group_1__0");
 					put(grammarAccess.getActivityAccess().getGroup(), "rule__Activity__Group__0");
@@ -75,7 +76,6 @@ public class FoWParser extends AbstractContentAssistParser {
 					put(grammarAccess.getModelAccess().getWorkProductTypesAssignment_3(), "rule__Model__WorkProductTypesAssignment_3");
 					put(grammarAccess.getModelAccess().getGuidancesAssignment_4(), "rule__Model__GuidancesAssignment_4");
 					put(grammarAccess.getModelAccess().getGuidanceTypesAssignment_5(), "rule__Model__GuidanceTypesAssignment_5");
-					put(grammarAccess.getModelAccess().getStatesAssignment_6(), "rule__Model__StatesAssignment_6");
 					put(grammarAccess.getRoleAccess().getNameAssignment_1(), "rule__Role__NameAssignment_1");
 					put(grammarAccess.getRoleAccess().getTextfieldAssignment_2(), "rule__Role__TextfieldAssignment_2");
 					put(grammarAccess.getWorkProductTypeAccess().getNameAssignment_1(), "rule__WorkProductType__NameAssignment_1");
@@ -83,12 +83,14 @@ public class FoWParser extends AbstractContentAssistParser {
 					put(grammarAccess.getWorkProductAccess().getNameAssignment_1(), "rule__WorkProduct__NameAssignment_1");
 					put(grammarAccess.getWorkProductAccess().getTypeAssignment_3(), "rule__WorkProduct__TypeAssignment_3");
 					put(grammarAccess.getWorkProductAccess().getTextfieldAssignment_4(), "rule__WorkProduct__TextfieldAssignment_4");
+					put(grammarAccess.getWorkProductAccess().getStatesAssignment_5_1(), "rule__WorkProduct__StatesAssignment_5_1");
+					put(grammarAccess.getWorkProductAccess().getStatesAssignment_5_2_1(), "rule__WorkProduct__StatesAssignment_5_2_1");
 					put(grammarAccess.getGuidanceTypeAccess().getNameAssignment_1(), "rule__GuidanceType__NameAssignment_1");
 					put(grammarAccess.getGuidanceTypeAccess().getTextfieldAssignment_2(), "rule__GuidanceType__TextfieldAssignment_2");
 					put(grammarAccess.getGuidanceAccess().getNameAssignment_1(), "rule__Guidance__NameAssignment_1");
 					put(grammarAccess.getGuidanceAccess().getTypeAssignment_3(), "rule__Guidance__TypeAssignment_3");
 					put(grammarAccess.getGuidanceAccess().getTextfieldAssignment_4(), "rule__Guidance__TextfieldAssignment_4");
-					put(grammarAccess.getStateAccess().getNameAssignment_1(), "rule__State__NameAssignment_1");
+					put(grammarAccess.getStateAccess().getNameAssignment(), "rule__State__NameAssignment");
 					put(grammarAccess.getPortAccess().getTypeAssignment_0(), "rule__Port__TypeAssignment_0");
 					put(grammarAccess.getPortAccess().getStateAssignment_1_1(), "rule__Port__StateAssignment_1_1");
 					put(grammarAccess.getActivityAccess().getNameAssignment_1(), "rule__Activity__NameAssignment_1");
