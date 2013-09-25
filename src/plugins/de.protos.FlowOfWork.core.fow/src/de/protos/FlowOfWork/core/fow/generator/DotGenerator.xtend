@@ -103,7 +103,7 @@ class DotGenerator {
 		if(wps.state != null) {
 			stateString = '(' + wps.state.name + ')'
 		}
-		return '"' + wps.prod.type.name + '::' + wps.prod.name + stateString + '"'
+		return '"' + wps.prod.name + stateString + '"'
 	}
 	
 	def private generateActivityDiagram(Activity activity) {

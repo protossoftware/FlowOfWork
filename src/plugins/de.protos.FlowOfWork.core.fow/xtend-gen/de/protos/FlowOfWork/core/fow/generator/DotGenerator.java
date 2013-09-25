@@ -27,7 +27,6 @@ import de.protos.FlowOfWork.core.fow.foW.State;
 import de.protos.FlowOfWork.core.fow.foW.Step;
 import de.protos.FlowOfWork.core.fow.foW.Transition;
 import de.protos.FlowOfWork.core.fow.foW.WorkProduct;
-import de.protos.FlowOfWork.core.fow.foW.WorkProductType;
 import de.protos.FlowOfWork.core.fow.generator.PathInfo;
 import de.protos.FlowOfWork.core.fow.generator.WorkProductState;
 import java.util.ArrayList;
@@ -115,14 +114,10 @@ public class DotGenerator {
       String _plus_1 = (_plus + ")");
       stateString = _plus_1;
     }
-    WorkProductType _type = wps.prod.getType();
-    String _name_1 = _type.getName();
+    String _name_1 = wps.prod.getName();
     String _plus_2 = ("\"" + _name_1);
-    String _plus_3 = (_plus_2 + "::");
-    String _name_2 = wps.prod.getName();
-    String _plus_4 = (_plus_3 + _name_2);
-    String _plus_5 = (_plus_4 + stateString);
-    return (_plus_5 + "\"");
+    String _plus_3 = (_plus_2 + stateString);
+    return (_plus_3 + "\"");
   }
   
   private CharSequence generateActivityDiagram(final Activity activity) {
