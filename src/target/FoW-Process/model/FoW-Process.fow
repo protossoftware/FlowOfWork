@@ -1,0 +1,41 @@
+WorkProductType Deliverable
+	summary "a deliverable is a work product that is interesting for world outside the project"
+;
+
+WorkProduct SoftwareRelease: Deliverable
+	summary "A SoftwareRelease contains a fixed version of a software, including documentation and is tagged with a unique release number."
+;
+
+Role Committer
+	summary "committer of the project has full read/write access"
+;
+
+Activity MakeFoWRelease
+	summary "make a release of the Flow of Work Project"
+	description "
+Rules for release tags: </br>
+<ul>
+<li>milestone release <em>major.minor</em>MR<em>milestonenumber</em> - example: 0.1MR2</li> 
+<li>release <em>major.minor</em>R - example: 0.1R</li>
+<li>service (bugfix) release <em>major.minor</em>SR<em>servicenumber</em> - example: 0.1SR3</li>
+</ul>
+Export can be done with the plugin : </br>
+"
+	responsible Committer
+	outputs SoftwareRelease
+	Behavior {
+		Step PerformSmokeTest "perform smoke test: \\n open the FoW-Test project, \\n change something to regenerate \\n and have look at some generated html pages"
+		Step CloseFinishedMilestoneIssues "close all finished issues \\n for the release milestone"
+		Step MoveOpenMilestoneIssues "move all open issues \\n for the release milestone \\n to another milestone or remove the milestone"
+		Step BuildRelease "build release to release path \\n (git repo: FlowOfWork/releases/release-tag) \\n do not export the test plugin"
+		Step CloseMilestone "close the milestone \\n in the issue tracker"
+		Step CreateGitTag "create a git tag \\n for this release"
+		Transition initial to PerformSmokeTest
+		Transition PerformSmokeTest to CloseFinishedMilestoneIssues
+		Transition CloseFinishedMilestoneIssues to MoveOpenMilestoneIssues
+		Transition MoveOpenMilestoneIssues to BuildRelease
+		Transition BuildRelease to CloseMilestone
+		Transition CloseMilestone to CreateGitTag
+		Transition CreateGitTag to final
+	}
+; 
