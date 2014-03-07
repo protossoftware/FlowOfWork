@@ -25,6 +25,7 @@ import org.eclipse.emf.common.util.BasicEList
 
 import static extension de.protos.FlowOfWork.core.fow.generator.MetamodelHelpers.*
 import de.protos.FlowOfWork.core.fow.foW.Port
+import de.protos.FlowOfWork.core.fow.foW.Textfield
 
 @Singleton
 class HtmlGenerator {
@@ -249,14 +250,15 @@ class HtmlGenerator {
 	def private generateHTML_HRef(NamedElement element) '''
 		<a href="«element.name».html">«textInfo.getLabel(element)»</a>
 	'''
+
+	def private generateHTML_HRef(String description, String url) '''
+		<a href="«url»">«description»</a>
+	'''
 	 
 	def private generateHTMLForOneRole(Role role) '''
 		<html>
 			<h1>Role: «textInfo.getLabel(role)»</h1>
-			<h2>Summary</h2>
-			«role.textfield.summary»
-			<h2>Description</h2>
-			«role.textfield.description»
+			«generateHTMLTextfield(role.textfield)»
 		</html>
 	'''
 
@@ -271,10 +273,7 @@ class HtmlGenerator {
 			<h1>WorkProduct: «textInfo.getLabel(workProduct)»</h1>
 			<h2>WorkProductType</h2>
 			«workProduct.type.name»
-			<h2>Summary</h2>
-			«workProduct.textfield.summary»
-			<h2>Description</h2>
-			«workProduct.textfield.description»
+			«generateHTMLTextfield(workProduct.textfield)»
 		</html>
 	'''
 
@@ -289,10 +288,18 @@ class HtmlGenerator {
 			<h1>Guidance: «textInfo.getLabel(guidance)»</h1>
 			<h2>GuidanceType</h2>
 			«guidance.type.name»
-			<h2>Summary</h2>
-			«guidance.textfield.summary»
-			<h2>Description</h2>
-			«guidance.textfield.description»
+
+			«generateHTMLTextfield(guidance.textfield)»
+
+			«IF (guidance.links.empty)==false»
+			<h2>Links</h2>
+			<ul>
+				«FOR link : guidance.links»
+					<li>«generateHTML_HRef(link.description, link.url)»</li>
+				«ENDFOR»
+			
+			</ul>
+			«ENDIF»
 		</html>
 	'''
 
@@ -321,5 +328,16 @@ class HtmlGenerator {
 				</tr>
 			«ENDFOR»
 		</table>
+	'''
+	
+	def private generateHTMLTextfield(Textfield textfield) '''
+			«IF (textfield.summary != null)»
+			<h2>Summary</h2>
+			«textfield.summary»
+			«ENDIF»
+			«IF (textfield.description != null)»
+			<h2>Description</h2>
+			«textfield.description»
+			«ENDIF»
 	'''
 }

@@ -591,9 +591,27 @@ ruleGuidance returns [EObject current=null]
 	    }
 
 )
-)	otherlv_5=';' 
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getGuidanceAccess().getLinksLinkParserRuleCall_5_0()); 
+	    }
+		lv_links_5_0=ruleLink		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getGuidanceRule());
+	        }
+       		add(
+       			$current, 
+       			"links",
+        		lv_links_5_0, 
+        		"Link");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)*	otherlv_6=';' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getGuidanceAccess().getSemicolonKeyword_5());
+    	newLeafNode(otherlv_6, grammarAccess.getGuidanceAccess().getSemicolonKeyword_6());
     }
 )
 ;
@@ -1531,6 +1549,67 @@ ruleTextfield returns [EObject current=null]
 
 )
 ))?)
+;
+
+
+
+
+
+// Entry rule entryRuleLink
+entryRuleLink returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getLinkRule()); }
+	 iv_ruleLink=ruleLink 
+	 { $current=$iv_ruleLink.current; } 
+	 EOF 
+;
+
+// Rule Link
+ruleLink returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='link' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getLinkAccess().getLinkKeyword_0());
+    }
+(
+(
+		lv_description_1_0=RULE_STRING
+		{
+			newLeafNode(lv_description_1_0, grammarAccess.getLinkAccess().getDescriptionSTRINGTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getLinkRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"description",
+        		lv_description_1_0, 
+        		"STRING");
+	    }
+
+)
+)(
+(
+		lv_url_2_0=RULE_STRING
+		{
+			newLeafNode(lv_url_2_0, grammarAccess.getLinkAccess().getUrlSTRINGTerminalRuleCall_2_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getLinkRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"url",
+        		lv_url_2_0, 
+        		"STRING");
+	    }
+
+)
+))
 ;
 
 

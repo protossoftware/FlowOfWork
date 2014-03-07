@@ -35,14 +35,11 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cGuidanceTypesGuidanceTypeParserRuleCall_5_0 = (RuleCall)cGuidanceTypesAssignment_5.eContents().get(0);
 		
 		//Model:
-		//
 		//	(activities+=Activity | roles+=Role | workProducts+=WorkProduct | workProductTypes+=WorkProductType |
-		//
 		//	guidances+=Guidance | guidanceTypes+=GuidanceType)*;
 		public ParserRule getRule() { return rule; }
 
 		//(activities+=Activity | roles+=Role | workProducts+=WorkProduct | workProductTypes+=WorkProductType |
-		//
 		//guidances+=Guidance | guidanceTypes+=GuidanceType)*
 		public Alternatives getAlternatives() { return cAlternatives; }
 
@@ -94,7 +91,6 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cActivityParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
 		
 		//NamedElement:
-		//
 		//	Role | WorkProductType | WorkProduct | GuidanceType | Guidance | Activity;
 		public ParserRule getRule() { return rule; }
 
@@ -131,7 +127,6 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//Role:
-		//
 		//	"Role" name=ID textfield=Textfield ";";
 		public ParserRule getRule() { return rule; }
 
@@ -168,7 +163,6 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//WorkProductType:
-		//
 		//	"WorkProductType" name=ID textfield=Textfield ";";
 		public ParserRule getRule() { return rule; }
 
@@ -217,9 +211,7 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//WorkProduct:
-		//
 		//	"WorkProduct" name=ID ":" type=[WorkProductType] textfield=Textfield ("states" states+=State ("," states+=State)*)?
-		//
 		//	";";
 		public ParserRule getRule() { return rule; }
 
@@ -292,7 +284,6 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//GuidanceType:
-		//
 		//	"GuidanceType" name=ID textfield=Textfield ";";
 		public ParserRule getRule() { return rule; }
 
@@ -330,14 +321,15 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cTypeGuidanceTypeIDTerminalRuleCall_3_0_1 = (RuleCall)cTypeGuidanceTypeCrossReference_3_0.eContents().get(1);
 		private final Assignment cTextfieldAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cTextfieldTextfieldParserRuleCall_4_0 = (RuleCall)cTextfieldAssignment_4.eContents().get(0);
-		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cLinksAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cLinksLinkParserRuleCall_5_0 = (RuleCall)cLinksAssignment_5.eContents().get(0);
+		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Guidance:
-		//
-		//	"Guidance" name=ID ":" type=[GuidanceType] textfield=Textfield ";";
+		//	"Guidance" name=ID ":" type=[GuidanceType] textfield=Textfield links+=Link* ";";
 		public ParserRule getRule() { return rule; }
 
-		//"Guidance" name=ID ":" type=[GuidanceType] textfield=Textfield ";"
+		//"Guidance" name=ID ":" type=[GuidanceType] textfield=Textfield links+=Link* ";"
 		public Group getGroup() { return cGroup; }
 
 		//"Guidance"
@@ -367,8 +359,14 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 		//Textfield
 		public RuleCall getTextfieldTextfieldParserRuleCall_4_0() { return cTextfieldTextfieldParserRuleCall_4_0; }
 
+		//links+=Link*
+		public Assignment getLinksAssignment_5() { return cLinksAssignment_5; }
+
+		//Link
+		public RuleCall getLinksLinkParserRuleCall_5_0() { return cLinksLinkParserRuleCall_5_0; }
+
 		//";"
-		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
+		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
 	}
 
 	public class StateElements extends AbstractParserRuleElementFinder {
@@ -377,7 +375,6 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameIDTerminalRuleCall_0 = (RuleCall)cNameAssignment.eContents().get(0);
 		
 		//State:
-		//
 		//	name=ID;
 		public ParserRule getRule() { return rule; }
 
@@ -402,7 +399,6 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightParenthesisKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
 		
 		//Port:
-		//
 		//	type=[WorkProduct] ("(" state=[State] ")")?;
 		public ParserRule getRule() { return rule; }
 
@@ -497,22 +493,15 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
 		//Activity:
-		//
 		//	"Activity" name=ID textfield=Textfield "responsible" role=[Role] ("inputs" inPorts+=Port ("," inPorts+=Port)*)?
-		//
 		//	("outputs" outPorts+=Port ("," outPorts+=Port)*)? ("subActivities" subActivities+=ActivityRef (","
-		//
 		//	subActivities+=ActivityRef)*)? ("guidances" guidances+=[Guidance] ("," guidances+=[Guidance])*)? ("Behavior" "{"
-		//
 		//	(steps+=Step | decisions+=Decision | transitions+=Transition)* "}")? ";";
 		public ParserRule getRule() { return rule; }
 
 		//"Activity" name=ID textfield=Textfield "responsible" role=[Role] ("inputs" inPorts+=Port ("," inPorts+=Port)*)?
-		//
 		//("outputs" outPorts+=Port ("," outPorts+=Port)*)? ("subActivities" subActivities+=ActivityRef (","
-		//
 		//subActivities+=ActivityRef)*)? ("guidances" guidances+=[Guidance] ("," guidances+=[Guidance])*)? ("Behavior" "{"
-		//
 		//(steps+=Step | decisions+=Decision | transitions+=Transition)* "}")? ";"
 		public Group getGroup() { return cGroup; }
 
@@ -689,7 +678,6 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cTypeActivityIDTerminalRuleCall_0_1 = (RuleCall)cTypeActivityCrossReference_0.eContents().get(1);
 		
 		//ActivityRef:
-		//
 		//	type=[Activity];
 		public ParserRule getRule() { return rule; }
 
@@ -710,7 +698,6 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cDecisionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//Node:
-		//
 		//	Step | Decision;
 		public ParserRule getRule() { return rule; }
 
@@ -734,7 +721,6 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cLabelSTRINGTerminalRuleCall_2_0 = (RuleCall)cLabelAssignment_2.eContents().get(0);
 		
 		//Decision:
-		//
 		//	"Decision" name=ID label=STRING?;
 		public ParserRule getRule() { return rule; }
 
@@ -767,7 +753,6 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cLabelSTRINGTerminalRuleCall_2_0 = (RuleCall)cLabelAssignment_2.eContents().get(0);
 		
 		//Step:
-		//
 		//	"Step" name=ID label=STRING?;
 		public ParserRule getRule() { return rule; }
 
@@ -799,7 +784,6 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cDecisionTransitionParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
 		//Transition:
-		//
 		//	InitialTransition | FinalTransition | NonInitialTransition | DecisionTransition;
 		public ParserRule getRule() { return rule; }
 
@@ -830,7 +814,6 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cToNodeIDTerminalRuleCall_3_0_1 = (RuleCall)cToNodeCrossReference_3_0.eContents().get(1);
 		
 		//InitialTransition:
-		//
 		//	"Transition" "initial" "to" to=[Node];
 		public ParserRule getRule() { return rule; }
 
@@ -867,7 +850,6 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cFinalKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//FinalTransition:
-		//
 		//	"Transition" from=[Node] "to" "final";
 		public ParserRule getRule() { return rule; }
 
@@ -908,7 +890,6 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cGuardSTRINGTerminalRuleCall_4_0 = (RuleCall)cGuardAssignment_4.eContents().get(0);
 		
 		//DecisionTransition:
-		//
 		//	"Transition" from=[Decision] "to" to=[Node] guard=STRING;
 		public ParserRule getRule() { return rule; }
 
@@ -959,7 +940,6 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cToNodeIDTerminalRuleCall_3_0_1 = (RuleCall)cToNodeCrossReference_3_0.eContents().get(1);
 		
 		//NonInitialTransition:
-		//
 		//	"Transition" from=[Node] "to" to=[Node];
 		public ParserRule getRule() { return rule; }
 
@@ -1007,7 +987,6 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cDescriptionSTRINGTerminalRuleCall_3_1_0 = (RuleCall)cDescriptionAssignment_3_1.eContents().get(0);
 		
 		//Textfield:
-		//
 		//	("label" label=STRING)? "summary" summary=STRING ("description" description=STRING)?;
 		public ParserRule getRule() { return rule; }
 
@@ -1047,6 +1026,38 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getDescriptionSTRINGTerminalRuleCall_3_1_0() { return cDescriptionSTRINGTerminalRuleCall_3_1_0; }
 	}
+
+	public class LinkElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Link");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cLinkKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cDescriptionAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cDescriptionSTRINGTerminalRuleCall_1_0 = (RuleCall)cDescriptionAssignment_1.eContents().get(0);
+		private final Assignment cUrlAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cUrlSTRINGTerminalRuleCall_2_0 = (RuleCall)cUrlAssignment_2.eContents().get(0);
+		
+		//Link:
+		//	"link" description=STRING url=STRING;
+		public ParserRule getRule() { return rule; }
+
+		//"link" description=STRING url=STRING
+		public Group getGroup() { return cGroup; }
+
+		//"link"
+		public Keyword getLinkKeyword_0() { return cLinkKeyword_0; }
+
+		//description=STRING
+		public Assignment getDescriptionAssignment_1() { return cDescriptionAssignment_1; }
+
+		//STRING
+		public RuleCall getDescriptionSTRINGTerminalRuleCall_1_0() { return cDescriptionSTRINGTerminalRuleCall_1_0; }
+
+		//url=STRING
+		public Assignment getUrlAssignment_2() { return cUrlAssignment_2; }
+
+		//STRING
+		public RuleCall getUrlSTRINGTerminalRuleCall_2_0() { return cUrlSTRINGTerminalRuleCall_2_0; }
+	}
 	
 	
 	private ModelElements pModel;
@@ -1069,6 +1080,7 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 	private DecisionTransitionElements pDecisionTransition;
 	private NonInitialTransitionElements pNonInitialTransition;
 	private TextfieldElements pTextfield;
+	private LinkElements pLink;
 	
 	private final Grammar grammar;
 
@@ -1109,9 +1121,7 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Model:
-	//
 	//	(activities+=Activity | roles+=Role | workProducts+=WorkProduct | workProductTypes+=WorkProductType |
-	//
 	//	guidances+=Guidance | guidanceTypes+=GuidanceType)*;
 	public ModelElements getModelAccess() {
 		return (pModel != null) ? pModel : (pModel = new ModelElements());
@@ -1122,7 +1132,6 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//NamedElement:
-	//
 	//	Role | WorkProductType | WorkProduct | GuidanceType | Guidance | Activity;
 	public NamedElementElements getNamedElementAccess() {
 		return (pNamedElement != null) ? pNamedElement : (pNamedElement = new NamedElementElements());
@@ -1133,7 +1142,6 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Role:
-	//
 	//	"Role" name=ID textfield=Textfield ";";
 	public RoleElements getRoleAccess() {
 		return (pRole != null) ? pRole : (pRole = new RoleElements());
@@ -1144,7 +1152,6 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//WorkProductType:
-	//
 	//	"WorkProductType" name=ID textfield=Textfield ";";
 	public WorkProductTypeElements getWorkProductTypeAccess() {
 		return (pWorkProductType != null) ? pWorkProductType : (pWorkProductType = new WorkProductTypeElements());
@@ -1155,9 +1162,7 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//WorkProduct:
-	//
 	//	"WorkProduct" name=ID ":" type=[WorkProductType] textfield=Textfield ("states" states+=State ("," states+=State)*)?
-	//
 	//	";";
 	public WorkProductElements getWorkProductAccess() {
 		return (pWorkProduct != null) ? pWorkProduct : (pWorkProduct = new WorkProductElements());
@@ -1168,7 +1173,6 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//GuidanceType:
-	//
 	//	"GuidanceType" name=ID textfield=Textfield ";";
 	public GuidanceTypeElements getGuidanceTypeAccess() {
 		return (pGuidanceType != null) ? pGuidanceType : (pGuidanceType = new GuidanceTypeElements());
@@ -1179,8 +1183,7 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Guidance:
-	//
-	//	"Guidance" name=ID ":" type=[GuidanceType] textfield=Textfield ";";
+	//	"Guidance" name=ID ":" type=[GuidanceType] textfield=Textfield links+=Link* ";";
 	public GuidanceElements getGuidanceAccess() {
 		return (pGuidance != null) ? pGuidance : (pGuidance = new GuidanceElements());
 	}
@@ -1190,7 +1193,6 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//State:
-	//
 	//	name=ID;
 	public StateElements getStateAccess() {
 		return (pState != null) ? pState : (pState = new StateElements());
@@ -1201,7 +1203,6 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Port:
-	//
 	//	type=[WorkProduct] ("(" state=[State] ")")?;
 	public PortElements getPortAccess() {
 		return (pPort != null) ? pPort : (pPort = new PortElements());
@@ -1212,13 +1213,9 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Activity:
-	//
 	//	"Activity" name=ID textfield=Textfield "responsible" role=[Role] ("inputs" inPorts+=Port ("," inPorts+=Port)*)?
-	//
 	//	("outputs" outPorts+=Port ("," outPorts+=Port)*)? ("subActivities" subActivities+=ActivityRef (","
-	//
 	//	subActivities+=ActivityRef)*)? ("guidances" guidances+=[Guidance] ("," guidances+=[Guidance])*)? ("Behavior" "{"
-	//
 	//	(steps+=Step | decisions+=Decision | transitions+=Transition)* "}")? ";";
 	public ActivityElements getActivityAccess() {
 		return (pActivity != null) ? pActivity : (pActivity = new ActivityElements());
@@ -1229,7 +1226,6 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ActivityRef:
-	//
 	//	type=[Activity];
 	public ActivityRefElements getActivityRefAccess() {
 		return (pActivityRef != null) ? pActivityRef : (pActivityRef = new ActivityRefElements());
@@ -1240,7 +1236,6 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Node:
-	//
 	//	Step | Decision;
 	public NodeElements getNodeAccess() {
 		return (pNode != null) ? pNode : (pNode = new NodeElements());
@@ -1251,7 +1246,6 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Decision:
-	//
 	//	"Decision" name=ID label=STRING?;
 	public DecisionElements getDecisionAccess() {
 		return (pDecision != null) ? pDecision : (pDecision = new DecisionElements());
@@ -1262,7 +1256,6 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Step:
-	//
 	//	"Step" name=ID label=STRING?;
 	public StepElements getStepAccess() {
 		return (pStep != null) ? pStep : (pStep = new StepElements());
@@ -1273,7 +1266,6 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Transition:
-	//
 	//	InitialTransition | FinalTransition | NonInitialTransition | DecisionTransition;
 	public TransitionElements getTransitionAccess() {
 		return (pTransition != null) ? pTransition : (pTransition = new TransitionElements());
@@ -1284,7 +1276,6 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//InitialTransition:
-	//
 	//	"Transition" "initial" "to" to=[Node];
 	public InitialTransitionElements getInitialTransitionAccess() {
 		return (pInitialTransition != null) ? pInitialTransition : (pInitialTransition = new InitialTransitionElements());
@@ -1295,7 +1286,6 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//FinalTransition:
-	//
 	//	"Transition" from=[Node] "to" "final";
 	public FinalTransitionElements getFinalTransitionAccess() {
 		return (pFinalTransition != null) ? pFinalTransition : (pFinalTransition = new FinalTransitionElements());
@@ -1306,7 +1296,6 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//DecisionTransition:
-	//
 	//	"Transition" from=[Decision] "to" to=[Node] guard=STRING;
 	public DecisionTransitionElements getDecisionTransitionAccess() {
 		return (pDecisionTransition != null) ? pDecisionTransition : (pDecisionTransition = new DecisionTransitionElements());
@@ -1317,7 +1306,6 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//NonInitialTransition:
-	//
 	//	"Transition" from=[Node] "to" to=[Node];
 	public NonInitialTransitionElements getNonInitialTransitionAccess() {
 		return (pNonInitialTransition != null) ? pNonInitialTransition : (pNonInitialTransition = new NonInitialTransitionElements());
@@ -1328,7 +1316,6 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Textfield:
-	//
 	//	("label" label=STRING)? "summary" summary=STRING ("description" description=STRING)?;
 	public TextfieldElements getTextfieldAccess() {
 		return (pTextfield != null) ? pTextfield : (pTextfield = new TextfieldElements());
@@ -1338,52 +1325,54 @@ public class FoWGrammarAccess extends AbstractGrammarElementFinder {
 		return getTextfieldAccess().getRule();
 	}
 
+	//Link:
+	//	"link" description=STRING url=STRING;
+	public LinkElements getLinkAccess() {
+		return (pLink != null) ? pLink : (pLink = new LinkElements());
+	}
+	
+	public ParserRule getLinkRule() {
+		return getLinkAccess().getRule();
+	}
+
 	//terminal ID:
-	//
 	//	"^"? ("a".."z" | "A".."Z" | "_") ("a".."z" | "A".."Z" | "_" | "0".."9")*;
 	public TerminalRule getIDRule() {
 		return gaTerminals.getIDRule();
 	} 
 
 	//terminal INT returns ecore::EInt:
-	//
 	//	"0".."9"+;
 	public TerminalRule getINTRule() {
 		return gaTerminals.getINTRule();
 	} 
 
 	//terminal STRING:
-	//
 	//	"\"" ("\\" ("b" | "t" | "n" | "f" | "r" | "u" | "\"" | "\'" | "\\") | !("\\" | "\""))* "\"" | "\'" ("\\" ("b" | "t" |
-	//
 	//	"n" | "f" | "r" | "u" | "\"" | "\'" | "\\") | !("\\" | "\'"))* "\'";
 	public TerminalRule getSTRINGRule() {
 		return gaTerminals.getSTRINGRule();
 	} 
 
 	//terminal ML_COMMENT:
-	//
 	//	"/ *"->"* /";
 	public TerminalRule getML_COMMENTRule() {
 		return gaTerminals.getML_COMMENTRule();
 	} 
 
 	//terminal SL_COMMENT:
-	//
 	//	"//" !("\n" | "\r")* ("\r"? "\n")?;
 	public TerminalRule getSL_COMMENTRule() {
 		return gaTerminals.getSL_COMMENTRule();
 	} 
 
 	//terminal WS:
-	//
 	//	(" " | "\t" | "\r" | "\n")+;
 	public TerminalRule getWSRule() {
 		return gaTerminals.getWSRule();
 	} 
 
 	//terminal ANY_OTHER:
-	//
 	//	.;
 	public TerminalRule getANY_OTHERRule() {
 		return gaTerminals.getANY_OTHERRule();

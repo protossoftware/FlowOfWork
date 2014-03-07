@@ -70,6 +70,7 @@ public class FoWParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTextfieldAccess().getGroup(), "rule__Textfield__Group__0");
 					put(grammarAccess.getTextfieldAccess().getGroup_0(), "rule__Textfield__Group_0__0");
 					put(grammarAccess.getTextfieldAccess().getGroup_3(), "rule__Textfield__Group_3__0");
+					put(grammarAccess.getLinkAccess().getGroup(), "rule__Link__Group__0");
 					put(grammarAccess.getModelAccess().getActivitiesAssignment_0(), "rule__Model__ActivitiesAssignment_0");
 					put(grammarAccess.getModelAccess().getRolesAssignment_1(), "rule__Model__RolesAssignment_1");
 					put(grammarAccess.getModelAccess().getWorkProductsAssignment_2(), "rule__Model__WorkProductsAssignment_2");
@@ -90,6 +91,7 @@ public class FoWParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGuidanceAccess().getNameAssignment_1(), "rule__Guidance__NameAssignment_1");
 					put(grammarAccess.getGuidanceAccess().getTypeAssignment_3(), "rule__Guidance__TypeAssignment_3");
 					put(grammarAccess.getGuidanceAccess().getTextfieldAssignment_4(), "rule__Guidance__TextfieldAssignment_4");
+					put(grammarAccess.getGuidanceAccess().getLinksAssignment_5(), "rule__Guidance__LinksAssignment_5");
 					put(grammarAccess.getStateAccess().getNameAssignment(), "rule__State__NameAssignment");
 					put(grammarAccess.getPortAccess().getTypeAssignment_0(), "rule__Port__TypeAssignment_0");
 					put(grammarAccess.getPortAccess().getStateAssignment_1_1(), "rule__Port__StateAssignment_1_1");
@@ -122,6 +124,8 @@ public class FoWParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTextfieldAccess().getLabelAssignment_0_1(), "rule__Textfield__LabelAssignment_0_1");
 					put(grammarAccess.getTextfieldAccess().getSummaryAssignment_2(), "rule__Textfield__SummaryAssignment_2");
 					put(grammarAccess.getTextfieldAccess().getDescriptionAssignment_3_1(), "rule__Textfield__DescriptionAssignment_3_1");
+					put(grammarAccess.getLinkAccess().getDescriptionAssignment_1(), "rule__Link__DescriptionAssignment_1");
+					put(grammarAccess.getLinkAccess().getUrlAssignment_2(), "rule__Link__UrlAssignment_2");
 				}
 			};
 		}

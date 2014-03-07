@@ -370,13 +370,22 @@ public interface FoWPackage extends EPackage
   int GUIDANCE__TYPE = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>Links</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GUIDANCE__LINKS = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
    * The number of structural features of the '<em>Guidance</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GUIDANCE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
+  int GUIDANCE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.StateImpl <em>State</em>}' class.
@@ -895,6 +904,43 @@ public interface FoWPackage extends EPackage
    */
   int TEXTFIELD_FEATURE_COUNT = 3;
 
+  /**
+   * The meta object id for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.LinkImpl <em>Link</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.protos.FlowOfWork.core.fow.foW.impl.LinkImpl
+   * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getLink()
+   * @generated
+   */
+  int LINK = 20;
+
+  /**
+   * The feature id for the '<em><b>Description</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LINK__DESCRIPTION = 0;
+
+  /**
+   * The feature id for the '<em><b>Url</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LINK__URL = 1;
+
+  /**
+   * The number of structural features of the '<em>Link</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LINK_FEATURE_COUNT = 2;
+
 
   /**
    * Returns the meta object for class '{@link de.protos.FlowOfWork.core.fow.foW.Model <em>Model</em>}'.
@@ -1086,6 +1132,17 @@ public interface FoWPackage extends EPackage
    * @generated
    */
   EReference getGuidance_Type();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link de.protos.FlowOfWork.core.fow.foW.Guidance#getLinks <em>Links</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Links</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.Guidance#getLinks()
+   * @see #getGuidance()
+   * @generated
+   */
+  EReference getGuidance_Links();
 
   /**
    * Returns the meta object for class '{@link de.protos.FlowOfWork.core.fow.foW.State <em>State</em>}'.
@@ -1482,6 +1539,38 @@ public interface FoWPackage extends EPackage
   EAttribute getTextfield_Description();
 
   /**
+   * Returns the meta object for class '{@link de.protos.FlowOfWork.core.fow.foW.Link <em>Link</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Link</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.Link
+   * @generated
+   */
+  EClass getLink();
+
+  /**
+   * Returns the meta object for the attribute '{@link de.protos.FlowOfWork.core.fow.foW.Link#getDescription <em>Description</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Description</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.Link#getDescription()
+   * @see #getLink()
+   * @generated
+   */
+  EAttribute getLink_Description();
+
+  /**
+   * Returns the meta object for the attribute '{@link de.protos.FlowOfWork.core.fow.foW.Link#getUrl <em>Url</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Url</em>'.
+   * @see de.protos.FlowOfWork.core.fow.foW.Link#getUrl()
+   * @see #getLink()
+   * @generated
+   */
+  EAttribute getLink_Url();
+
+  /**
    * Returns the factory that creates the instances of the model.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1661,6 +1750,14 @@ public interface FoWPackage extends EPackage
      * @generated
      */
     EReference GUIDANCE__TYPE = eINSTANCE.getGuidance_Type();
+
+    /**
+     * The meta object literal for the '<em><b>Links</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference GUIDANCE__LINKS = eINSTANCE.getGuidance_Links();
 
     /**
      * The meta object literal for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.StateImpl <em>State</em>}' class.
@@ -1983,6 +2080,32 @@ public interface FoWPackage extends EPackage
      * @generated
      */
     EAttribute TEXTFIELD__DESCRIPTION = eINSTANCE.getTextfield_Description();
+
+    /**
+     * The meta object literal for the '{@link de.protos.FlowOfWork.core.fow.foW.impl.LinkImpl <em>Link</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.protos.FlowOfWork.core.fow.foW.impl.LinkImpl
+     * @see de.protos.FlowOfWork.core.fow.foW.impl.FoWPackageImpl#getLink()
+     * @generated
+     */
+    EClass LINK = eINSTANCE.getLink();
+
+    /**
+     * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LINK__DESCRIPTION = eINSTANCE.getLink_Description();
+
+    /**
+     * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LINK__URL = eINSTANCE.getLink_Url();
 
   }
 

@@ -84,6 +84,7 @@ public class FoWFactoryImpl extends EFactoryImpl implements FoWFactory
       case FoWPackage.DECISION_TRANSITION: return createDecisionTransition();
       case FoWPackage.NON_INITIAL_TRANSITION: return createNonInitialTransition();
       case FoWPackage.TEXTFIELD: return createTextfield();
+      case FoWPackage.LINK: return createLink();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -307,6 +308,17 @@ public class FoWFactoryImpl extends EFactoryImpl implements FoWFactory
   {
     TextfieldImpl textfield = new TextfieldImpl();
     return textfield;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Link createLink()
+  {
+    LinkImpl link = new LinkImpl();
+    return link;
   }
 
   /**

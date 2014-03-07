@@ -123,89 +123,89 @@ public class DotGenerator {
   private CharSequence generateActivityDiagram(final Activity activity) {
     CharSequence _xblockexpression = null;
     {
-      HashMap<WorkProductState,Port> _hashMap = new HashMap<WorkProductState,Port>();
+      HashMap<WorkProductState,Port> _hashMap = new HashMap<WorkProductState, Port>();
       final Map<WorkProductState,Port> inPortMappings = _hashMap;
-      HashMap<WorkProductState,Port> _hashMap_1 = new HashMap<WorkProductState,Port>();
+      HashMap<WorkProductState,Port> _hashMap_1 = new HashMap<WorkProductState, Port>();
       final Map<WorkProductState,Port> outPortMappings = _hashMap_1;
-      HashMap<WorkProductState,List<ActivityRef>> _hashMap_2 = new HashMap<WorkProductState,List<ActivityRef>>();
+      HashMap<WorkProductState,List<ActivityRef>> _hashMap_2 = new HashMap<WorkProductState, List<ActivityRef>>();
       final HashMap<WorkProductState,List<ActivityRef>> inputSubMappings = _hashMap_2;
-      HashMap<WorkProductState,List<ActivityRef>> _hashMap_3 = new HashMap<WorkProductState,List<ActivityRef>>();
+      HashMap<WorkProductState,List<ActivityRef>> _hashMap_3 = new HashMap<WorkProductState, List<ActivityRef>>();
       final HashMap<WorkProductState,List<ActivityRef>> outputSubMappings = _hashMap_3;
       EList<Port> _inPorts = activity.getInPorts();
       final Procedure1<Port> _function = new Procedure1<Port>() {
-          public void apply(final Port p) {
-            WorkProduct _type = p.getType();
-            State _state = p.getState();
-            WorkProductState _workProductState = new WorkProductState(_type, _state);
-            inPortMappings.put(_workProductState, p);
-          }
-        };
+        public void apply(final Port p) {
+          WorkProduct _type = p.getType();
+          State _state = p.getState();
+          WorkProductState _workProductState = new WorkProductState(_type, _state);
+          inPortMappings.put(_workProductState, p);
+        }
+      };
       IterableExtensions.<Port>forEach(_inPorts, _function);
       EList<Port> _outPorts = activity.getOutPorts();
       final Procedure1<Port> _function_1 = new Procedure1<Port>() {
-          public void apply(final Port p) {
-            WorkProduct _type = p.getType();
-            State _state = p.getState();
-            WorkProductState _workProductState = new WorkProductState(_type, _state);
-            outPortMappings.put(_workProductState, p);
-          }
-        };
+        public void apply(final Port p) {
+          WorkProduct _type = p.getType();
+          State _state = p.getState();
+          WorkProductState _workProductState = new WorkProductState(_type, _state);
+          outPortMappings.put(_workProductState, p);
+        }
+      };
       IterableExtensions.<Port>forEach(_outPorts, _function_1);
       EList<ActivityRef> _subActivities = activity.getSubActivities();
       final Procedure1<ActivityRef> _function_2 = new Procedure1<ActivityRef>() {
-          public void apply(final ActivityRef a) {
-            Activity _type = a.getType();
-            EList<Port> _inPorts = _type.getInPorts();
-            final Procedure1<Port> _function = new Procedure1<Port>() {
-                public void apply(final Port p) {
-                  WorkProduct _type = p.getType();
-                  State _state = p.getState();
-                  WorkProductState _workProductState = new WorkProductState(_type, _state);
-                  final WorkProductState id = _workProductState;
-                  boolean _containsKey = inputSubMappings.containsKey(id);
-                  if (_containsKey) {
-                    List<ActivityRef> _get = inputSubMappings.get(id);
-                    _get.add(a);
-                  } else {
-                    ArrayList<ActivityRef> _arrayList = new ArrayList<ActivityRef>();
-                    final Procedure1<ArrayList<ActivityRef>> _function = new Procedure1<ArrayList<ActivityRef>>() {
-                        public void apply(final ArrayList<ActivityRef> it) {
-                          it.add(a);
-                        }
-                      };
-                    ArrayList<ActivityRef> _doubleArrow = ObjectExtensions.<ArrayList<ActivityRef>>operator_doubleArrow(_arrayList, _function);
-                    inputSubMappings.put(id, _doubleArrow);
+        public void apply(final ActivityRef a) {
+          Activity _type = a.getType();
+          EList<Port> _inPorts = _type.getInPorts();
+          final Procedure1<Port> _function = new Procedure1<Port>() {
+            public void apply(final Port p) {
+              WorkProduct _type = p.getType();
+              State _state = p.getState();
+              WorkProductState _workProductState = new WorkProductState(_type, _state);
+              final WorkProductState id = _workProductState;
+              boolean _containsKey = inputSubMappings.containsKey(id);
+              if (_containsKey) {
+                List<ActivityRef> _get = inputSubMappings.get(id);
+                _get.add(a);
+              } else {
+                ArrayList<ActivityRef> _arrayList = new ArrayList<ActivityRef>();
+                final Procedure1<ArrayList<ActivityRef>> _function = new Procedure1<ArrayList<ActivityRef>>() {
+                  public void apply(final ArrayList<ActivityRef> it) {
+                    it.add(a);
                   }
-                }
-              };
-            IterableExtensions.<Port>forEach(_inPorts, _function);
-            Activity _type_1 = a.getType();
-            EList<Port> _outPorts = _type_1.getOutPorts();
-            final Procedure1<Port> _function_1 = new Procedure1<Port>() {
-                public void apply(final Port p) {
-                  WorkProduct _type = p.getType();
-                  State _state = p.getState();
-                  WorkProductState _workProductState = new WorkProductState(_type, _state);
-                  final WorkProductState id = _workProductState;
-                  boolean _containsKey = outputSubMappings.containsKey(id);
-                  if (_containsKey) {
-                    List<ActivityRef> _get = outputSubMappings.get(id);
-                    _get.add(a);
-                  } else {
-                    ArrayList<ActivityRef> _arrayList = new ArrayList<ActivityRef>();
-                    final Procedure1<ArrayList<ActivityRef>> _function = new Procedure1<ArrayList<ActivityRef>>() {
-                        public void apply(final ArrayList<ActivityRef> it) {
-                          it.add(a);
-                        }
-                      };
-                    ArrayList<ActivityRef> _doubleArrow = ObjectExtensions.<ArrayList<ActivityRef>>operator_doubleArrow(_arrayList, _function);
-                    outputSubMappings.put(id, _doubleArrow);
+                };
+                ArrayList<ActivityRef> _doubleArrow = ObjectExtensions.<ArrayList<ActivityRef>>operator_doubleArrow(_arrayList, _function);
+                inputSubMappings.put(id, _doubleArrow);
+              }
+            }
+          };
+          IterableExtensions.<Port>forEach(_inPorts, _function);
+          Activity _type_1 = a.getType();
+          EList<Port> _outPorts = _type_1.getOutPorts();
+          final Procedure1<Port> _function_1 = new Procedure1<Port>() {
+            public void apply(final Port p) {
+              WorkProduct _type = p.getType();
+              State _state = p.getState();
+              WorkProductState _workProductState = new WorkProductState(_type, _state);
+              final WorkProductState id = _workProductState;
+              boolean _containsKey = outputSubMappings.containsKey(id);
+              if (_containsKey) {
+                List<ActivityRef> _get = outputSubMappings.get(id);
+                _get.add(a);
+              } else {
+                ArrayList<ActivityRef> _arrayList = new ArrayList<ActivityRef>();
+                final Procedure1<ArrayList<ActivityRef>> _function = new Procedure1<ArrayList<ActivityRef>>() {
+                  public void apply(final ArrayList<ActivityRef> it) {
+                    it.add(a);
                   }
-                }
-              };
-            IterableExtensions.<Port>forEach(_outPorts, _function_1);
-          }
-        };
+                };
+                ArrayList<ActivityRef> _doubleArrow = ObjectExtensions.<ArrayList<ActivityRef>>operator_doubleArrow(_arrayList, _function);
+                outputSubMappings.put(id, _doubleArrow);
+              }
+            }
+          };
+          IterableExtensions.<Port>forEach(_outPorts, _function_1);
+        }
+      };
       IterableExtensions.<ActivityRef>forEach(_subActivities, _function_2);
       StringConcatenation _builder = new StringConcatenation();
       _builder.append("\t\t");

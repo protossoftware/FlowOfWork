@@ -12,6 +12,7 @@ import de.protos.FlowOfWork.core.fow.foW.FoWPackage;
 import de.protos.FlowOfWork.core.fow.foW.Guidance;
 import de.protos.FlowOfWork.core.fow.foW.GuidanceType;
 import de.protos.FlowOfWork.core.fow.foW.InitialTransition;
+import de.protos.FlowOfWork.core.fow.foW.Link;
 import de.protos.FlowOfWork.core.fow.foW.Model;
 import de.protos.FlowOfWork.core.fow.foW.NamedElement;
 import de.protos.FlowOfWork.core.fow.foW.Node;
@@ -179,6 +180,13 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
    * @generated
    */
   private EClass textfieldEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass linkEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -421,6 +429,16 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
   public EReference getGuidance_Type()
   {
     return (EReference)guidanceEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getGuidance_Links()
+  {
+    return (EReference)guidanceEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -798,6 +816,36 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getLink()
+  {
+    return linkEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLink_Description()
+  {
+    return (EAttribute)linkEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLink_Url()
+  {
+    return (EAttribute)linkEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public FoWFactory getFoWFactory()
   {
     return (FoWFactory)getEFactoryInstance();
@@ -847,6 +895,7 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
 
     guidanceEClass = createEClass(GUIDANCE);
     createEReference(guidanceEClass, GUIDANCE__TYPE);
+    createEReference(guidanceEClass, GUIDANCE__LINKS);
 
     stateEClass = createEClass(STATE);
     createEAttribute(stateEClass, STATE__NAME);
@@ -897,6 +946,10 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
     createEAttribute(textfieldEClass, TEXTFIELD__LABEL);
     createEAttribute(textfieldEClass, TEXTFIELD__SUMMARY);
     createEAttribute(textfieldEClass, TEXTFIELD__DESCRIPTION);
+
+    linkEClass = createEClass(LINK);
+    createEAttribute(linkEClass, LINK__DESCRIPTION);
+    createEAttribute(linkEClass, LINK__URL);
   }
 
   /**
@@ -966,6 +1019,7 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
 
     initEClass(guidanceEClass, Guidance.class, "Guidance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getGuidance_Type(), this.getGuidanceType(), null, "type", null, 0, 1, Guidance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getGuidance_Links(), this.getLink(), null, "links", null, 0, -1, Guidance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(stateEClass, State.class, "State", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getState_Name(), ecorePackage.getEString(), "name", null, 0, 1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1016,6 +1070,10 @@ public class FoWPackageImpl extends EPackageImpl implements FoWPackage
     initEAttribute(getTextfield_Label(), ecorePackage.getEString(), "label", null, 0, 1, Textfield.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTextfield_Summary(), ecorePackage.getEString(), "summary", null, 0, 1, Textfield.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTextfield_Description(), ecorePackage.getEString(), "description", null, 0, 1, Textfield.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(linkEClass, Link.class, "Link", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getLink_Description(), ecorePackage.getEString(), "description", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getLink_Url(), ecorePackage.getEString(), "url", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

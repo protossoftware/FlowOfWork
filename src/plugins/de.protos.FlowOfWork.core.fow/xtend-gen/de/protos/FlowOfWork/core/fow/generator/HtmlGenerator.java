@@ -17,6 +17,7 @@ import de.protos.FlowOfWork.core.fow.foW.Activity;
 import de.protos.FlowOfWork.core.fow.foW.ActivityRef;
 import de.protos.FlowOfWork.core.fow.foW.Guidance;
 import de.protos.FlowOfWork.core.fow.foW.GuidanceType;
+import de.protos.FlowOfWork.core.fow.foW.Link;
 import de.protos.FlowOfWork.core.fow.foW.Model;
 import de.protos.FlowOfWork.core.fow.foW.NamedElement;
 import de.protos.FlowOfWork.core.fow.foW.Port;
@@ -134,11 +135,11 @@ public class HtmlGenerator {
     CharSequence _xblockexpression = null;
     {
       final Function1<NamedElement,String> _function = new Function1<NamedElement,String>() {
-          public String apply(final NamedElement e) {
-            String _name = e.getName();
-            return _name;
-          }
-        };
+        public String apply(final NamedElement e) {
+          String _name = e.getName();
+          return _name;
+        }
+      };
       List<NamedElement> sortedElements = IterableExtensions.<NamedElement, String>sortBy(elements, _function);
       StringConcatenation _builder = new StringConcatenation();
       _builder.append("<html>");
@@ -172,11 +173,11 @@ public class HtmlGenerator {
     CharSequence _xblockexpression = null;
     {
       final Function1<NamedElement,String> _function = new Function1<NamedElement,String>() {
-          public String apply(final NamedElement e) {
-            String _name = e.getName();
-            return _name;
-          }
-        };
+        public String apply(final NamedElement e) {
+          String _name = e.getName();
+          return _name;
+        }
+      };
       List<NamedElement> sortedElements = IterableExtensions.<NamedElement, String>sortBy(elements, _function);
       StringConcatenation _builder = new StringConcatenation();
       _builder.append("<html>");
@@ -649,6 +650,17 @@ public class HtmlGenerator {
     return _builder;
   }
   
+  private CharSequence generateHTML_HRef(final String description, final String url) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("<a href=\"");
+    _builder.append(url, "");
+    _builder.append("\">");
+    _builder.append(description, "");
+    _builder.append("</a>");
+    _builder.newLineIfNotEmpty();
+    return _builder;
+  }
+  
   private CharSequence generateHTMLForOneRole(final Role role) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("<html>");
@@ -660,20 +672,9 @@ public class HtmlGenerator {
     _builder.append("</h1>");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
-    _builder.append("<h2>Summary</h2>");
-    _builder.newLine();
-    _builder.append("\t");
     Textfield _textfield = role.getTextfield();
-    String _summary = _textfield.getSummary();
-    _builder.append(_summary, "	");
-    _builder.newLineIfNotEmpty();
-    _builder.append("\t");
-    _builder.append("<h2>Description</h2>");
-    _builder.newLine();
-    _builder.append("\t");
-    Textfield _textfield_1 = role.getTextfield();
-    String _description = _textfield_1.getDescription();
-    _builder.append(_description, "	");
+    CharSequence _generateHTMLTextfield = this.generateHTMLTextfield(_textfield);
+    _builder.append(_generateHTMLTextfield, "	");
     _builder.newLineIfNotEmpty();
     _builder.append("</html>");
     _builder.newLine();
@@ -708,20 +709,9 @@ public class HtmlGenerator {
     _builder.append(_name, "	");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
-    _builder.append("<h2>Summary</h2>");
-    _builder.newLine();
-    _builder.append("\t");
     Textfield _textfield = workProduct.getTextfield();
-    String _summary = _textfield.getSummary();
-    _builder.append(_summary, "	");
-    _builder.newLineIfNotEmpty();
-    _builder.append("\t");
-    _builder.append("<h2>Description</h2>");
-    _builder.newLine();
-    _builder.append("\t");
-    Textfield _textfield_1 = workProduct.getTextfield();
-    String _description = _textfield_1.getDescription();
-    _builder.append(_description, "	");
+    CharSequence _generateHTMLTextfield = this.generateHTMLTextfield(_textfield);
+    _builder.append(_generateHTMLTextfield, "	");
     _builder.newLineIfNotEmpty();
     _builder.append("</html>");
     _builder.newLine();
@@ -755,22 +745,45 @@ public class HtmlGenerator {
     String _name = _type.getName();
     _builder.append(_name, "	");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t");
-    _builder.append("<h2>Summary</h2>");
     _builder.newLine();
     _builder.append("\t");
     Textfield _textfield = guidance.getTextfield();
-    String _summary = _textfield.getSummary();
-    _builder.append(_summary, "	");
+    CharSequence _generateHTMLTextfield = this.generateHTMLTextfield(_textfield);
+    _builder.append(_generateHTMLTextfield, "	");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t");
-    _builder.append("<h2>Description</h2>");
     _builder.newLine();
-    _builder.append("\t");
-    Textfield _textfield_1 = guidance.getTextfield();
-    String _description = _textfield_1.getDescription();
-    _builder.append(_description, "	");
-    _builder.newLineIfNotEmpty();
+    {
+      EList<Link> _links = guidance.getLinks();
+      boolean _isEmpty = _links.isEmpty();
+      boolean _equals = (_isEmpty == false);
+      if (_equals) {
+        _builder.append("\t");
+        _builder.append("<h2>Links</h2>");
+        _builder.newLine();
+        _builder.append("\t");
+        _builder.append("<ul>");
+        _builder.newLine();
+        {
+          EList<Link> _links_1 = guidance.getLinks();
+          for(final Link link : _links_1) {
+            _builder.append("\t");
+            _builder.append("\t");
+            _builder.append("<li>");
+            String _description = link.getDescription();
+            String _url = link.getUrl();
+            CharSequence _generateHTML_HRef = this.generateHTML_HRef(_description, _url);
+            _builder.append(_generateHTML_HRef, "		");
+            _builder.append("</li>");
+            _builder.newLineIfNotEmpty();
+          }
+        }
+        _builder.append("\t");
+        _builder.newLine();
+        _builder.append("\t");
+        _builder.append("</ul>");
+        _builder.newLine();
+      }
+    }
     _builder.append("</html>");
     _builder.newLine();
     return _builder;
@@ -855,6 +868,33 @@ public class HtmlGenerator {
     }
     _builder.append("</table>");
     _builder.newLine();
+    return _builder;
+  }
+  
+  private CharSequence generateHTMLTextfield(final Textfield textfield) {
+    StringConcatenation _builder = new StringConcatenation();
+    {
+      String _summary = textfield.getSummary();
+      boolean _notEquals = (!Objects.equal(_summary, null));
+      if (_notEquals) {
+        _builder.append("<h2>Summary</h2>");
+        _builder.newLine();
+        String _summary_1 = textfield.getSummary();
+        _builder.append(_summary_1, "");
+        _builder.newLineIfNotEmpty();
+      }
+    }
+    {
+      String _description = textfield.getDescription();
+      boolean _notEquals_1 = (!Objects.equal(_description, null));
+      if (_notEquals_1) {
+        _builder.append("<h2>Description</h2>");
+        _builder.newLine();
+        String _description_1 = textfield.getDescription();
+        _builder.append(_description_1, "");
+        _builder.newLineIfNotEmpty();
+      }
+    }
     return _builder;
   }
 }

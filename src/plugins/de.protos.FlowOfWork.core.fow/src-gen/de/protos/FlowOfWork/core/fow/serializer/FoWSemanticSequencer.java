@@ -11,6 +11,7 @@ import de.protos.FlowOfWork.core.fow.foW.FoWPackage;
 import de.protos.FlowOfWork.core.fow.foW.Guidance;
 import de.protos.FlowOfWork.core.fow.foW.GuidanceType;
 import de.protos.FlowOfWork.core.fow.foW.InitialTransition;
+import de.protos.FlowOfWork.core.fow.foW.Link;
 import de.protos.FlowOfWork.core.fow.foW.Model;
 import de.protos.FlowOfWork.core.fow.foW.NonInitialTransition;
 import de.protos.FlowOfWork.core.fow.foW.Port;
@@ -93,6 +94,12 @@ public class FoWSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				if(context == grammarAccess.getInitialTransitionRule() ||
 				   context == grammarAccess.getTransitionRule()) {
 					sequence_InitialTransition(context, (InitialTransition) semanticObject); 
+					return; 
+				}
+				else break;
+			case FoWPackage.LINK:
+				if(context == grammarAccess.getLinkRule()) {
+					sequence_Link(context, (Link) semanticObject); 
 					return; 
 				}
 				else break;
@@ -261,23 +268,10 @@ public class FoWSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID type=[GuidanceType|ID] textfield=Textfield)
+	 *     (name=ID type=[GuidanceType|ID] textfield=Textfield links+=Link*)
 	 */
 	protected void sequence_Guidance(EObject context, Guidance semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, FoWPackage.Literals.NAMED_ELEMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FoWPackage.Literals.NAMED_ELEMENT__NAME));
-			if(transientValues.isValueTransient(semanticObject, FoWPackage.Literals.NAMED_ELEMENT__TEXTFIELD) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FoWPackage.Literals.NAMED_ELEMENT__TEXTFIELD));
-			if(transientValues.isValueTransient(semanticObject, FoWPackage.Literals.GUIDANCE__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FoWPackage.Literals.GUIDANCE__TYPE));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getGuidanceAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getGuidanceAccess().getTypeGuidanceTypeIDTerminalRuleCall_3_0_1(), semanticObject.getType());
-		feeder.accept(grammarAccess.getGuidanceAccess().getTextfieldTextfieldParserRuleCall_4_0(), semanticObject.getTextfield());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -293,6 +287,25 @@ public class FoWSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getInitialTransitionAccess().getToNodeIDTerminalRuleCall_3_0_1(), semanticObject.getTo());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (description=STRING url=STRING)
+	 */
+	protected void sequence_Link(EObject context, Link semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, FoWPackage.Literals.LINK__DESCRIPTION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FoWPackage.Literals.LINK__DESCRIPTION));
+			if(transientValues.isValueTransient(semanticObject, FoWPackage.Literals.LINK__URL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FoWPackage.Literals.LINK__URL));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getLinkAccess().getDescriptionSTRINGTerminalRuleCall_1_0(), semanticObject.getDescription());
+		feeder.accept(grammarAccess.getLinkAccess().getUrlSTRINGTerminalRuleCall_2_0(), semanticObject.getUrl());
 		feeder.finish();
 	}
 	

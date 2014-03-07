@@ -5,13 +5,22 @@ package de.protos.FlowOfWork.core.fow.foW.impl;
 import de.protos.FlowOfWork.core.fow.foW.FoWPackage;
 import de.protos.FlowOfWork.core.fow.foW.Guidance;
 import de.protos.FlowOfWork.core.fow.foW.GuidanceType;
+import de.protos.FlowOfWork.core.fow.foW.Link;
+
+import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,6 +30,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link de.protos.FlowOfWork.core.fow.foW.impl.GuidanceImpl#getType <em>Type</em>}</li>
+ *   <li>{@link de.protos.FlowOfWork.core.fow.foW.impl.GuidanceImpl#getLinks <em>Links</em>}</li>
  * </ul>
  * </p>
  *
@@ -37,6 +47,16 @@ public class GuidanceImpl extends NamedElementImpl implements Guidance
    * @ordered
    */
   protected GuidanceType type;
+
+  /**
+   * The cached value of the '{@link #getLinks() <em>Links</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLinks()
+   * @generated
+   * @ordered
+   */
+  protected EList<Link> links;
 
   /**
    * <!-- begin-user-doc -->
@@ -107,6 +127,36 @@ public class GuidanceImpl extends NamedElementImpl implements Guidance
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Link> getLinks()
+  {
+    if (links == null)
+    {
+      links = new EObjectContainmentEList<Link>(Link.class, this, FoWPackage.GUIDANCE__LINKS);
+    }
+    return links;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case FoWPackage.GUIDANCE__LINKS:
+        return ((InternalEList<?>)getLinks()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -115,6 +165,8 @@ public class GuidanceImpl extends NamedElementImpl implements Guidance
       case FoWPackage.GUIDANCE__TYPE:
         if (resolve) return getType();
         return basicGetType();
+      case FoWPackage.GUIDANCE__LINKS:
+        return getLinks();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -124,6 +176,7 @@ public class GuidanceImpl extends NamedElementImpl implements Guidance
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -131,6 +184,10 @@ public class GuidanceImpl extends NamedElementImpl implements Guidance
     {
       case FoWPackage.GUIDANCE__TYPE:
         setType((GuidanceType)newValue);
+        return;
+      case FoWPackage.GUIDANCE__LINKS:
+        getLinks().clear();
+        getLinks().addAll((Collection<? extends Link>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -149,6 +206,9 @@ public class GuidanceImpl extends NamedElementImpl implements Guidance
       case FoWPackage.GUIDANCE__TYPE:
         setType((GuidanceType)null);
         return;
+      case FoWPackage.GUIDANCE__LINKS:
+        getLinks().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -165,6 +225,8 @@ public class GuidanceImpl extends NamedElementImpl implements Guidance
     {
       case FoWPackage.GUIDANCE__TYPE:
         return type != null;
+      case FoWPackage.GUIDANCE__LINKS:
+        return links != null && !links.isEmpty();
     }
     return super.eIsSet(featureID);
   }

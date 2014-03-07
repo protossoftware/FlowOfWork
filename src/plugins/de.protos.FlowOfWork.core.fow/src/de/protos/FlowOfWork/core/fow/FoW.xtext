@@ -55,6 +55,7 @@ GuidanceType:
 Guidance:
 	'Guidance' name=ID ':' type=[GuidanceType]
 	textfield=Textfield
+	links+=Link*
 	';'
 ;
 
@@ -126,3 +127,6 @@ Textfield:
 	('description' description=STRING)?
 ;
 
+Link:
+	'link' description=STRING url=STRING
+;
