@@ -24,6 +24,16 @@ Guidance TestChecklist : Checklist
 	summary "summary Test Checklist"
 ;
 
+Guidance SomeToolToDemonstrateLinks : Tool
+	label "Some Tool To Demonstrate Links"
+	summary "SomeToolToDemonstrateLinks demonstrates various link types"
+	link "some web url" "https://github.com/protossoftware/FlowOfWork"
+	link "a relative link in the same folder" "Index.html"
+	link "a relative link in another folder" "../../doc/ADocumentAsLinkTarget.odt"
+	link "an absolute file url" "file:///c:/eula.3082.txt"
+	link "a relative folder url" "../dot"
+;
+
 Role RequirementEngineer
 	label "Requirement Engineer"
 	summary "The Requirement Engineer is responsible for requirement engineering"
@@ -33,6 +43,7 @@ Role RequirementEngineer
 Role SWArchitect
 	label "SW Architect"
 	summary "The SW Architect is responsible for software architecture"
+	description "description SWArchitect"
 ;
 
 Role SWDeveloper
@@ -61,6 +72,7 @@ WorkProductType Outcome
 WorkProduct InputDocument : Artifact
 	label "Input Document"
 	summary "summary Input Document"
+	description "description"
 	states new
 ;
 
